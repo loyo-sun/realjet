@@ -321,16 +321,19 @@ Closing 转化
 
 ```text
 website/
+├── package.json
+├── vite.config.js
 ├── DESIGN_TOKENS.md
+├── src/
+│   ├── assets/image/
+│   │   ├── realjet-logo.webp
+│   │   └── precast-beam-factory-hero.webp
+│   ├── styles/tailwind.css
+│   └── pages/precast-beam-factory/zh-cn/
+│       ├── App.jsx
+│       └── main.jsx
 └── marketing/
     └── precast-beam-factory/
-        ├── zh-cn/
-        │   └── index.html
-        └── assets/
-            ├── css/landing-page.css
-            ├── js/landing-page.js
-            └── image/
-                ├── realjet-logo.webp
-                └── precast-beam-factory-hero.webp
+        └── zh-cn/
+            └── index.html
 ```
-
