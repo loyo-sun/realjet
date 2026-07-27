@@ -10,9 +10,13 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(process.cwd(), "index.html"),
-        "precast-beam-factory-zh-cn": resolve(
+        "precast-beam-factory-cn": resolve(
           process.cwd(),
-          "marketing/precast-beam-factory/zh-cn/index.html",
+          "marketing/precast-beam-factory/cn/index.html",
+        ),
+        "precast-beam-factory-en": resolve(
+          process.cwd(),
+          "marketing/precast-beam-factory/en/index.html",
         ),
       },
     },

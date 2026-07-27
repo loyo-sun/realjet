@@ -6,6 +6,7 @@ import {
   Cable,
   Check,
   CheckCircle,
+  ChevronDown,
   Clock,
   CloudSun,
   Compass,
@@ -280,6 +281,26 @@ function VisualPanel({ icon: Icon, label, index }) {
   );
 }
 
+function LanguageSwitcher() {
+  return (
+    <details className="group relative shrink-0 max-[720px]:ml-auto">
+      <summary className="flex min-h-9 cursor-pointer list-none items-center gap-1.5 rounded-lg border border-white/15 px-2.5 text-[11px] font-[750] text-white/80 transition hover:border-white/30 hover:text-white [&::-webkit-details-marker]:hidden">
+        <span aria-hidden="true">🇨🇳</span>
+        <span>中文</span>
+        <ChevronDown size={13} className="transition group-open:rotate-180" aria-hidden="true" />
+      </summary>
+      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[138px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating">
+        <a href="../cn/" lang="zh-CN" aria-current="page" className="flex items-center gap-2 rounded-md bg-white/8 px-3 py-2 text-[12px] text-white">
+          <span aria-hidden="true">🇨🇳</span> 中文
+        </a>
+        <a href="../en/" lang="en" className="flex items-center gap-2 rounded-md px-3 py-2 text-[12px] text-white/70 transition hover:bg-white/5 hover:text-white">
+          <span aria-hidden="true">🇬🇧</span> English
+        </a>
+      </div>
+    </details>
+  );
+}
+
 function Header({ onLead }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const nav = [
@@ -300,12 +321,13 @@ function Header({ onLead }) {
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
         <button onClick={onLead} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">提交项目需求</button>
+        <LanguageSwitcher />
         <button
           type="button"
           aria-label="打开导航"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
-          className="hidden rounded-lg border border-white/15 p-2 text-white max-[1000px]:ml-auto max-[1000px]:block"
+          className="hidden rounded-lg border border-white/15 p-2 text-white max-[1000px]:ml-0 max-[1000px]:block"
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>

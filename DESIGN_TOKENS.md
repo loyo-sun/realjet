@@ -329,11 +329,15 @@ website/
 │   │   ├── realjet-logo.webp
 │   │   └── precast-beam-factory-hero.webp
 │   ├── styles/tailwind.css
-│   └── pages/precast-beam-factory/zh-cn/
-│       ├── App.jsx
-│       └── main.jsx
+│   └── pages/precast-beam-factory/
+│       ├── cn/
+│       │   ├── App.jsx
+│       │   └── main.jsx
+│       └── en/
+│           ├── App.jsx
+│           └── main.jsx
 └── marketing/
     └── precast-beam-factory/
-        └── zh-cn/
-            └── index.html
+        ├── cn/index.html
+        └── en/index.html
 ```
