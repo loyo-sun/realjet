@@ -5,15 +5,12 @@ import {
   ArrowRight,
   ArrowUp,
   Building2,
-  Check,
   CheckCircle,
-  Clock,
   CloudSun,
   Compass,
   FileCheck,
   HardHat,
   LoaderCircle,
-  Map,
   MapPin,
   Menu,
   Package,
@@ -21,7 +18,6 @@ import {
   Send,
   Settings,
   User,
-  Users,
   Workflow,
   Wrench,
   X,
@@ -46,110 +42,116 @@ import researchDesignImage from "../../../assets/image/research-design-capabilit
 import manufacturingCapabilityImage from "../../../assets/image/manufacturing-capability.webp";
 import projectDeliveryCapabilityImage from "../../../assets/image/project-delivery-capability.webp";
 
-const challenges = [
-  {
-    icon: Clock,
-    title: "Tight Schedule",
-    text: "Fixed delivery milestones leave little time for production ramp-up, while conventional labor-heavy operations struggle to maintain a stable takt.",
-    impact: "Unstable output puts delivery dates at risk",
-  },
-  {
-    icon: Map,
-    title: "Limited Space",
-    text: "Long, narrow, irregular, or divided sites demand careful planning of workstations, logistics routes, and beam storage.",
-    impact: "Poor layout wastes valuable site area",
-  },
-  {
-    icon: Users,
-    title: "Labor Shortage",
-    text: "Critical operations such as formwork, vibration, and curing rely on skilled workers, increasing training and quality-control pressure.",
-    impact: "Workforce changes affect consistent quality",
-  },
-];
-
 const inputs = [
-  { icon: Package, title: "Production Targets", text: "Beam types, quantities, schedule, and target daily output" },
-  { icon: MapPin, title: "Site Conditions", text: "Area, geometry, access roads, lifting, and storage zones" },
-  { icon: CloudSun, title: "Operating Environment", text: "Climate, utilities, concrete supply, and maintenance conditions" },
-  { icon: FileCheck, title: "Project Standards", text: "Design documents, local codes, and acceptance criteria" },
+  {
+    icon: Package,
+    title: "Production Brief",
+    text: "Beam types, quantities, schedule, and target daily output, including start-up and capacity ramp-up milestones",
+  },
+  {
+    icon: MapPin,
+    title: "Site Constraints",
+    text: "Area, geometry, access roads, lifting, and storage conditions that shape layout and material flow",
+  },
+  {
+    icon: CloudSun,
+    title: "Workforce & Resources",
+    text: "Skilled labor, climate, utilities, concrete supply, and local maintenance capability",
+  },
+  {
+    icon: FileCheck,
+    title: "Project Standards",
+    text: "Design documents, local codes, acceptance criteria, and multidisciplinary engineering interfaces",
+  },
 ];
 
 const methods = [
-  { icon: Search, title: "Requirement Review", text: "Clarify production targets, site constraints, and project priorities.", output: "Project requirement brief" },
-  { icon: Workflow, title: "Process Planning", text: "Define takt time, workstations, logistics, and plant layout.", output: "Process and layout plan" },
-  { icon: Settings, title: "System Configuration", text: "Match core equipment, control systems, and engineering interfaces.", output: "Integrated line configuration" },
-  { icon: CheckCircle, title: "Delivery Validation", text: "Complete installation, commissioning, trial production, training, and issue closure.", output: "Production-ready line" },
+  {
+    icon: Search,
+    title: "Needs Analysis",
+    text: "Translate “We need a precast beam line” into “Produce Y box girders within X months to meet the project schedule,” then define the project scale, schedule, component specifications, and operating constraints.",
+    output: "Defined production brief",
+  },
+  {
+    icon: Workflow,
+    title: "Process Engineering",
+    text: "Optimize the layout, balance takt times, remove bottlenecks, and build in flexibility to maximize line efficiency without sacrificing production adaptability.",
+    output: "Process and layout design",
+  },
+  {
+    icon: Settings,
+    title: "Equipment Selection",
+    text: "Select equipment that fits the process: nothing beyond the process requirement, nothing incompatible with local conditions, and nothing that cannot be maintained locally.",
+    output: "Project-fit equipment package",
+  },
+  {
+    icon: CheckCircle,
+    title: "Capacity Optimization",
+    text: "Equipment arrival is the starting point. We continue through installation, standalone commissioning, integrated line commissioning, trial production, capacity validation, and ongoing optimization.",
+    output: "Stable, validated capacity",
+  },
 ];
 
 const lines = [
   {
     image: lineV1Image,
-    kicker: "Proven Base Configuration",
+    kicker: "Proven Base Process",
     title: "Smart Precast Beam Line V1.0",
-    visual: "Fixed Formwork · Mobile Carriage · Single-stage Tensioning",
-    text: "For projects with defined beam types and stable demand, the casting beds, formwork, and curing cycle are configured around the production plan.",
-    metrics: ["Approx. 1–2 beams/day/line*", "Approx. 2–3-day cycle*"],
+    visual: "Daily Capacity: 1 Beam",
+    text: "For projects with defined beam types and stable demand, the line combines hydraulic formwork opening and closing, casting-bed circulation, external vibration, and single-stage prestressing, with casting beds, formwork, and curing cycles configured around the production plan.",
   },
   {
     image: lineV2Image,
-    kicker: "High-throughput Configuration",
+    kicker: "High-throughput Process",
     title: "Smart Precast Beam Line V2.0",
-    visual: "Flow Stations · Two-stage Tensioning · Automated Transfer",
-    text: "For high-output, schedule-driven, or space-constrained projects, dedicated stations and staged tensioning improve throughput and land use.",
-    metrics: ["Approx. 2–4 beams/day/line*", "More compact footprint*"],
+    visual: "Daily Capacity: 2–4 Beams",
+    text: "For schedule-driven, high-output, or space-constrained projects, the line combines in-form steam curing, two-stage prestressing, and formwork opening and closing at any workstation with dedicated stations and automated transfer to improve throughput and production flexibility.",
   },
   {
     image: segmentalLineImage,
-    kicker: "Segmental Beam Configuration",
+    kicker: "Segmental Beam Process",
     title: "Smart Segmental Beam Line",
-    visual: "Match-cast Positioning · Segment Formwork · Smart Steam Curing",
-    text: "For segmental box-girder projects, match-cast positioning, formwork, and curing are defined around segment geometry and erection schedules.",
-    metrics: ["Approx. 2–3 segments/day*", "Flexible multi-size production*"],
+    visual: "Daily Capacity: 2–3 Segments",
+    text: "For segmental box-girder projects and flexible multi-size production, the line combines match-cast positioning, dedicated segment formwork, and intelligent steam curing, with takt time optimized around segment geometry and erection schedules for stable, efficient turnover.",
   },
 ];
 
 const products = [
   {
     image: hydraulicFormworkImage,
-    code: "FORMING",
-    title: "High-precision Hydraulic Formwork",
-    text: "Custom-engineered for each beam type with hydraulic closing, opening, and critical dimensional adjustment.",
-    value: "Less manual handling and more consistent geometry",
+    title: "High-Precision Hydraulic Formwork",
+    text: "Hydraulically synchronized formwork opening and closing supports adaptable beam geometry. Repeat positioning accuracy remains ≤0.3 mm after 5,000 cycles, while the closed-form gap remains ≤0.5 mm for consistent dimensions across batch production.",
+    features: ["Synchronized Hydraulic Operation", "Multi-Geometry Compatibility", "Common Form for Interior & Exterior Beams"],
   },
   {
     image: castingBedSystemImage,
-    code: "FLOW",
-    title: "Mobile Casting Bed Circulation System",
-    text: "Moves the beam between dedicated stations so formwork and casting beds can enter the next cycle sooner.",
-    value: "Faster circulation and better site organization",
+    title: "Casting Bed Circulation System",
+    text: "Lithium iron phosphate battery power moves casting beds between workstations with ±1 mm positioning accuracy and an 80–120 t maximum load. Battery life exceeds 5,000 charge cycles, while casting-bed turnover can be reduced from five days to one.",
+    features: ["Lithium Battery Drive", "Automatic Station Recognition", "Precision Positioning"],
   },
   {
     image: concreteDistributionImage,
-    code: "CONCRETE",
     title: "Concrete Conveying & Distribution System",
-    text: "Connects the batching plant to casting stations for concrete conveying, weighing, and zoned distribution.",
-    value: "Shorter supply routes and less manual coordination",
+    text: "An overhead concrete skip and rail-mounted remote-controlled distributor deliver concrete in approximately one minute with ±5 mm layer-thickness accuracy, reducing labor by 37%, casting time per beam by 40%, and concrete loss by 20%.",
+    features: ["Overhead Concrete Skip", "Rail-Mounted Distribution", "Continuous Uniform Casting"],
   },
   {
     image: vibrationSystemImage,
-    code: "COMPACTION",
     title: "Combined Vibration System",
-    text: "Combines external and internal vibration methods to suit the component and centrally control key parameters.",
-    value: "Higher concrete density and process consistency",
+    text: "External automatic vibrators cover at least 80% of the form surface, while guided internal vibration covers 100% of critical deep sections. Only one to two operators are required for supplementary vibration.",
+    features: ["Automatic External Vibration", "Guided Internal Vibration", "Automatic Parameter Records"],
   },
   {
     image: curingKilnImage,
-    code: "CURING",
-    title: "Smart Steam-curing Kiln",
-    text: "Controls steam-curing temperature, humidity, and time profiles according to climate and strength requirements.",
-    value: "Consistent curing and faster production turnover",
+    title: "Intelligent Steam Curing Chamber",
+    text: "In-form curing with complementary solar and air-source heat maintains heating and cooling ramp accuracy within ±2 °C/h and chamber temperature variation within 3 °C. Prestressing strength can be reached in 8–14 hours, with operating costs 49.6% below natural gas and 30.1% below biomass pellets.",
+    features: ["Full-Cycle In-Form Curing", "Solar + Air-Source Heat", "Intelligent Temperature & Humidity Control"],
   },
   {
     image: lineManagementImage,
-    code: "MANAGEMENT",
     title: "Production Line Management System",
-    text: "Centralizes production plans, equipment status, operation progress, and critical process data.",
-    value: "Greater visibility, coordination, and traceability",
+    text: "The system coordinates production plans, equipment status, and process data with ≤1-second operation-linkage response and a data collection frequency of at least once per second. It supports at least 200 I/O points and creates a dedicated digital record for every beam.",
+    features: ["Unified Process Scheduling", "One Beam, One Record", "Remote Diagnostics & Support"],
   },
 ];
 
@@ -159,7 +161,7 @@ const projects = [
     category: "Expressway",
     title: "G15 Shenhai Expressway Ningbo South Section, TJ05",
     line: "2 T-beam lines",
-    process: "In-form steam curing · Two-stage tensioning",
+    coreProducts: "Casting Bed Circulation System · Intelligent Steam Curing Chamber",
     product: "30 m T-beams",
     output: "6 beams/day",
   },
@@ -168,7 +170,7 @@ const projects = [
     category: "Industrial Base",
     title: "Industrialized Transportation & Urban Construction Base",
     line: "4 T-beam lines",
-    process: "In-form steam curing · Two-stage tensioning",
+    coreProducts: "High-Precision Hydraulic Formwork · Production Line Management System",
     product: "30 / 40 m T-beams",
     output: "8–12 beams/day",
   },
@@ -177,7 +179,7 @@ const projects = [
     category: "Expressway Link",
     title: "Yongguan Expressway Dongtou Branch Project",
     line: "2 segmental beam lines",
-    process: "In-form steam curing",
+    coreProducts: "High-Precision Hydraulic Formwork · Intelligent Steam Curing Chamber",
     product: "Segmental beams",
     output: "6 segments/day",
   },
@@ -186,7 +188,7 @@ const projects = [
     category: "Expressway Expansion",
     title: "Guang'ao Expressway Guangzhu Section Expansion, TJ5",
     line: "7 T-beam lines",
-    process: "In-form steam curing",
+    coreProducts: "Concrete Conveying & Distribution System · Combined Vibration System",
     product: "30 m T-beams",
     output: "12 beams/day",
   },
@@ -197,27 +199,48 @@ const capabilities = [
     icon: Compass,
     image: researchDesignImage,
     title: "Engineering & R&D",
-    text: "Continuous development in precast beam formwork, mobile carriages, smart curing, and control software supports project-specific engineering.",
-    points: [
-      "Software copyrights covering smart beam factory formwork control systems",
-      "Patents for smart curing chambers, mobile in-form carriages, and end-form removal devices",
-      "Recognized as a Hunan Specialized and Innovative SME (2025–2028)",
+    headline: "Translate project requirements into an integrated line design",
+    text: "Our R&D team covers mechanical design, electrical control, hydraulics, software algorithms, and process engineering. We engineer around beam type, capacity, schedule, and site constraints, and can jointly develop new processes and equipment for special projects.",
+    stats: [
+      { value: "40+", label: "R&D engineers" },
+      { value: "50%+", label: "With master's degrees" },
+      { value: "5%", label: "Annual revenue invested in R&D" },
+      { value: "150+", label: "Granted patents" },
     ],
   },
   {
     icon: Wrench,
     image: manufacturingCapabilityImage,
     title: "In-house Manufacturing",
-    text: "Our own manufacturing base covers the critical stages required to build large, custom-engineered equipment.",
-    points: ["Cutting, bending, machining, welding, and surface treatment", "Mechanical, hydraulic, and electrical integration with final assembly", "In-process inspection, factory testing, and traceable quality records"],
+    headline: "Critical equipment manufactured in-house with end-to-end quality control",
+    text: "Sixty-six sets of large-scale production equipment cover cutting, bending, machining, welding, surface treatment, assembly, and testing, supporting in-house production and full quality traceability for large custom-engineered systems.",
+    stats: [
+      { value: "66 sets", label: "Large production machines" },
+      { value: "±0.005 mm", label: "Machining positioning accuracy" },
+      { value: "12", label: "Welding robots" },
+      { value: "Dual certified", label: "ISO 9001 / ISO 3834-2" },
+    ],
   },
   {
     icon: HardHat,
     image: projectDeliveryCapabilityImage,
     title: "Project Delivery",
-    text: "A dedicated project manager coordinates engineering, manufacturing, and site teams from installation through stable line operation.",
-    points: ["Define civil works, power, lifting, and client-side interfaces", "Complete installation, standalone tests, line commissioning, and trial production", "Provide operation and maintenance training plus ongoing support"],
+    headline: "Beyond equipment delivery, we support the line through stable operation",
+    text: "Our scope extends from solution coordination and manufacturing to installation, integrated commissioning, trial production, training, and operating support, with one project team coordinating civil, power, lifting, and control interfaces.",
+    stats: [
+      { value: "1 year", label: "Equipment warranty" },
+      { value: "24/7", label: "Online response" },
+      { value: "60 days", label: "Installation and commissioning" },
+      { value: "2 hours", label: "Downtime solution response" },
+    ],
   },
+];
+
+const companyProofs = [
+  { value: "Since 2008", label: "Continuous industry focus" },
+  { value: "100,000+ m²", label: "Company-owned production base" },
+  { value: "60,000+ m²", label: "Equipment manufacturing floor" },
+  { value: "832867", label: "NEEQ stock code" },
 ];
 
 function PrimaryButton({ children, onClick, dark = false, className = "" }) {
@@ -535,53 +558,19 @@ export default function App() {
       <main>
         <Hero onLead={openLead} />
 
-        <Section id="challenges">
+        <Section id="method">
           <SectionHeader
-            kicker="Project Challenges"
-            title="Building a Beam Factory Takes More Than Buying Equipment"
-            text="From project targets to stable production, these four challenges often occur together. They are why every production line must be engineered around actual project conditions."
-          />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {challenges.map(({ icon: Icon, title, text, impact }, index) => (
-              <article
-                key={title}
-                className="group relative flex min-h-[278px] flex-col overflow-hidden rounded-card border border-line bg-white p-6 transition duration-200 hover:-translate-y-1.5 hover:border-brand-blue/35 hover:shadow-card"
-              >
-                <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-brand-blue to-brand-cyan transition duration-200 group-hover:scale-x-100" />
-                <span className="absolute top-2 right-4 text-[62px] leading-none font-[900] tracking-[-0.08em] text-brand-blue/[0.055]">
-                  0{index + 1}
-                </span>
-                <div className="relative mb-6 flex h-12 w-12 items-center justify-center rounded-[14px] border border-brand-blue/10 bg-[#eaf4f7] text-brand-blue transition duration-200 group-hover:bg-brand-blue group-hover:text-white">
-                  <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
-                </div>
-                <h3 className="relative text-[19px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h3>
-                <p className="relative mt-2.5 text-[14px] leading-[1.7] text-muted">{text}</p>
-                <div className="relative mt-auto border-t border-line pt-4">
-                  <span className="mb-1 block text-[10px] font-[900] tracking-[0.13em] text-brand-blue/65">PROJECT IMPACT</span>
-                  <p className="flex items-center gap-1.5 text-[12px] font-[850] text-brand-navy">
-                    {impact}
-                    <ArrowRight size={13} className="text-brand-cyan transition group-hover:translate-x-1" aria-hidden="true" />
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <SectionCta onClick={openLead}>Request a Project Assessment</SectionCta>
-        </Section>
-
-        <Section id="method" soft>
-          <SectionHeader
-            kicker="How the Solution Is Developed"
+            kicker="Solution Development Process"
             title="From Project Inputs to a Production-ready Line"
-            text="We do not begin with an equipment list. We first define production targets and site conditions, then develop the process, system configuration, and delivery plan."
+            text="We first define the production brief, schedule pressure, site constraints, workforce, resources, and local conditions. Our four-step line design method then converts those inputs into stable production capacity."
           />
 
           <div className="solution-journey">
             <aside className="solution-input-panel">
               <div className="solution-panel-header">
                 <span className="section-index">01 · PROJECT INPUTS</span>
-                <h3>Define the Project<br />Before the Line</h3>
-                <p className="solution-panel-description is-dark">Four groups of inputs determine the layout, takt time, and equipment combination.</p>
+                <h3>Define the Production Brief<br />and Project Constraints</h3>
+                <p className="solution-panel-description is-dark">The production brief, site constraints, workforce and resources, and project standards jointly determine the process, layout, and equipment package.</p>
               </div>
               <div className="solution-input-list">
                 {inputs.map(({ icon: Icon, title, text }, index) => (
@@ -604,9 +593,9 @@ export default function App() {
             <div className="solution-process-panel">
               <div className="journey-arrow" aria-hidden="true"><ArrowRight size={18} /></div>
               <div className="solution-panel-header">
-                <span className="section-index text-brand-blue">02 · REALJET DELIVERY PROCESS</span>
-                <h3>Turn Project Inputs into<br />a Working Production System</h3>
-                <p className="solution-panel-description">Requirement review, process planning, system configuration, and delivery validation progressively turn the concept into production capacity.</p>
+                <span className="section-index text-brand-blue">02 · REALJET WORKFLOW</span>
+                <h3>Four Steps to Design the Line</h3>
+                <p className="solution-panel-description">Needs analysis, process engineering, equipment selection, and capacity optimization keep every decision focused on the required final output.</p>
               </div>
               <div className="delivery-flow">
                 {methods.map(({ icon: Icon, title, text, output }, index) => (
@@ -625,17 +614,17 @@ export default function App() {
               </div>
             </div>
           </div>
-          <SectionCta onClick={openLead}>Share Your Project Inputs</SectionCta>
+          <SectionCta onClick={openLead}>Share Your Project Inputs for an Initial Plan</SectionCta>
         </Section>
 
-        <Section id="lines">
+        <Section id="lines" soft>
           <SectionHeader
             kicker="Production Process Engineering"
             title="Proven Technology, Adapted and Advanced for Your Project"
             text="Our mature precast beam production processes provide a reliable starting point. For special requirements, we work with your team on process studies, solution engineering, equipment development, and production validation."
           />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {lines.map(({ image, kicker, title, visual, text, metrics }) => (
+            {lines.map(({ image, kicker, title, visual, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -643,7 +632,7 @@ export default function App() {
                     alt={`${title} overview`}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
                   />
-                  <span className="absolute inset-x-4 bottom-4 rounded-md border border-white/10 bg-brand-navy/50 px-3 py-2 text-center text-[11px] font-[750] text-white/90 backdrop-blur-[3px]">
+                  <span className="absolute top-3 right-3 rounded-md border border-white/15 bg-brand-navy/60 px-2.5 py-1.5 text-[11px] font-[850] text-white/95 shadow-sm backdrop-blur-[3px]">
                     {visual}
                   </span>
                 </div>
@@ -651,9 +640,6 @@ export default function App() {
                   <span className="text-[11px] font-[850] tracking-[0.08em] text-brand-blue uppercase">{kicker}</span>
                   <h3 className="mt-1.5 text-lg font-[850] text-brand-navy">{title}</h3>
                   <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {metrics.map((metric) => <span key={metric} className="rounded-md bg-soft px-2.5 py-1.5 text-[11px] font-[850] text-brand-navy">{metric}</span>)}
-                  </div>
                 </div>
               </article>
             ))}
@@ -661,10 +647,10 @@ export default function App() {
           <SectionCta onClick={openLead}>Discuss the Production Process</SectionCta>
         </Section>
 
-        <Section id="products" soft>
+        <Section id="products">
           <SectionHeader kicker="Six Core Product Systems" title="Configured Around the Operations That Matter" text="Equipment is not simply added to a list. Each system is selected and combined according to beam type, takt time, and site conditions." />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {products.map(({ image, code, title, text, value }) => (
+            {products.map(({ image, title, text, features }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -674,10 +660,15 @@ export default function App() {
                   />
                 </div>
                 <div className="p-5.5">
-                  <span className="text-[10px] font-[900] tracking-[0.1em] text-brand-blue">{code}</span>
-                  <h3 className="mt-1.5 font-[850] text-brand-navy">{title}</h3>
+                  <h3 className="font-[850] text-brand-navy">{title}</h3>
                   <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
-                  <p className="mt-3 border-t border-line pt-3 text-[12px] font-[850] text-brand-navy">Project value: {value}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {features.map((feature) => (
+                      <span key={feature} className="rounded-md border border-brand-blue/10 bg-soft px-2.5 py-1.5 text-[11px] font-[800] text-brand-navy">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </article>
             ))}
@@ -685,14 +676,14 @@ export default function App() {
           <SectionCta onClick={openLead}>Get Product Details</SectionCta>
         </Section>
 
-        <Section id="projects">
+        <Section id="projects" soft>
           <SectionHeader
             kicker="Project References"
             title="Different Projects Require Different Production Lines"
-            text="These references are based on Realjet projects under contract or already delivered. Line capacity, production process, and equipment configuration were defined for each project's conditions."
+            text="These references are based on Realjet projects under contract or already delivered. Line scale, precast products, and core equipment combinations were defined around the conditions of each project."
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {projects.map(({ image, category, title, line, process, product, output }) => (
+            {projects.map(({ image, category, title, line, coreProducts, product, output }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -723,11 +714,11 @@ export default function App() {
                   </dl>
                   <div className="mt-3 flex items-center gap-2.5 rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-2.5">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white text-brand-blue shadow-[0_5px_16px_rgba(8,37,63,.08)]">
-                      <Workflow size={14} aria-hidden="true" />
+                      <Settings size={14} aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="block text-[9px] font-[850] text-brand-blue">CORE PROCESS</span>
-                      <strong className="mt-0.5 block text-[11px] font-[850] text-brand-navy">{process}</strong>
+                      <span className="block text-[9px] font-[850] text-brand-blue">CORE PRODUCTS</span>
+                      <strong className="mt-0.5 block text-[11px] font-[850] leading-[1.45] text-brand-navy">{coreProducts}</strong>
                     </div>
                   </div>
                 </div>
@@ -737,13 +728,25 @@ export default function App() {
           <SectionCta onClick={openLead}>Explore More Project References</SectionCta>
         </Section>
 
-        <Section id="capabilities" soft>
-          <SectionHeader kicker="Why Realjet" title="Three Capabilities That Turn Plans into Production Capacity" text="From initial project inputs to site production, our engineering, manufacturing, and delivery teams share responsibility for the outcome." />
+        <Section id="capabilities">
+          <SectionHeader
+            kicker="Why Realjet"
+            title="Three Capabilities That Turn Ideas into Production Capacity"
+            text="Founded in 2008, Realjet provides integrated smart precast beam factory solutions covering line planning, equipment engineering and manufacturing, installation, trial production, and operating support."
+          />
+          <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white shadow-card max-[720px]:grid-cols-2">
+            {companyProofs.map(({ value, label }) => (
+              <div key={label} className="border-r border-line px-5 py-4 last:border-r-0 max-[720px]:border-b max-[720px]:nth-[2n]:border-r-0 max-[720px]:nth-[n+3]:border-b-0">
+                <strong className="block text-[20px] font-[900] tracking-[-0.025em] text-brand-navy">{value}</strong>
+                <span className="mt-1 block text-[11px] text-muted">{label}</span>
+              </div>
+            ))}
+          </div>
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {capabilities.map(({ icon, image, title, text, points }, index) => (
-              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
+            {capabilities.map(({ icon, image, title, headline, text, stats }, index) => (
+              <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
-                  <div className="aspect-video overflow-hidden bg-[#e4edf2]">
+                  <div className="aspect-video shrink-0 overflow-hidden bg-[#e4edf2] max-[1000px]:aspect-auto max-[1000px]:h-full max-[720px]:aspect-video max-[720px]:h-auto">
                     <img
                       src={image}
                       alt={title}
@@ -753,14 +756,18 @@ export default function App() {
                 ) : (
                   <VisualPanel icon={icon} index={`0${index + 1}`} />
                 )}
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-lg font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
-                  <ul className="mt-4 space-y-2 border-t border-line pt-4">
-                    {points.map((point) => (
-                      <li key={point} className="flex gap-2 text-[12px] leading-[1.65] text-muted"><Check size={14} className="mt-0.5 shrink-0 text-brand-cyan" />{point}</li>
+                  <p className="mt-1.5 text-[14px] font-[850] leading-[1.5] text-brand-blue">{headline}</p>
+                  <p className="mt-3 text-[13px] leading-[1.7] text-muted">{text}</p>
+                  <div className="mt-auto grid grid-cols-2 gap-2 border-t border-line pt-4">
+                    {stats.map(({ value, label }) => (
+                      <div key={label} className="rounded-lg bg-soft px-3 py-2.5">
+                        <strong className="block text-[15px] font-[900] text-brand-navy">{value}</strong>
+                        <span className="mt-0.5 block text-[10px] leading-[1.35] text-muted">{label}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               </article>
             ))}
@@ -780,7 +787,7 @@ export default function App() {
 
       <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
-          <span>© 2026 Changsha Realjet Machinery Technology Co., Ltd. All rights reserved.</span>
+          <span>© 2026 Changsha ruijie machinary technology co.LTD. All rights reserved.</span>
           <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
             <span>Turnkey precast beam factory solutions</span>
             <ContactEmail />
