@@ -262,8 +262,8 @@ function PrimaryButton({ children, onClick, dark = false, className = "" }) {
 function SectionHeader({ kicker, title, text }) {
   return (
     <div className="mb-6 max-w-[760px]">
-      <p className="mb-2 text-[11px] font-[850] tracking-[0.12em] text-brand-blue uppercase">{kicker}</p>
-      <h2 className="text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em] text-ink">{title}</h2>
+      <p className="mb-1.5 text-[16px] font-[850] tracking-[0.08em] text-brand-blue uppercase">{kicker}</p>
+      <h2 className="text-[clamp(22px,2.6vw,30px)] leading-[1.18] font-[850] tracking-[-0.025em] text-ink">{title}</h2>
       <p className="mt-3 max-w-[710px] text-[16px] leading-[1.6] text-muted">{text}</p>
     </div>
   );
@@ -777,8 +777,8 @@ export default function App() {
 
         <section className="hero-gradient py-[72px] text-white">
           <div className="site-container flex flex-col items-center text-center">
-            <p className="mb-3 text-[11px] font-[850] tracking-[0.12em] text-[#8ce2e8] uppercase">开始您的项目</p>
-            <h2 className="max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em]">获取专属于您的解决方案</h2>
+            <p className="mb-2 text-[13px] font-[850] tracking-[0.1em] text-[#8ce2e8] uppercase">开始您的项目</p>
+            <h2 className="max-w-[760px] text-[clamp(28px,3.4vw,40px)] leading-[1.16] font-[850] tracking-[-0.03em]">获取专属于您的解决方案</h2>
             <p className="mt-3 max-w-[670px] text-[15px] text-white/68">告诉我们生产任务，开始规划你的预制梁产线</p>
             <PrimaryButton onClick={openLead} className="mt-6 max-[720px]:hidden">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
           </div>
