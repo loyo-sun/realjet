@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  ArrowLeft,
   ArrowRight,
   Building2,
   Cable,
@@ -10,6 +11,7 @@ import {
   Compass,
   FileCheck,
   HardHat,
+  LoaderCircle,
   Map,
   MapPin,
   Menu,
@@ -401,13 +403,14 @@ function LeadModal({ open, onClose }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
+    const body = new URLSearchParams(new FormData(form)).toString();
     setSubmissionState("submitting");
 
     try {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(new FormData(form)).toString(),
+        body,
       });
 
       if (!response.ok) throw new Error("Submission failed");
@@ -428,41 +431,54 @@ function LeadModal({ open, onClose }) {
             <CheckCircle className="mx-auto mb-4 text-brand-cyan" size={48} />
             <strong className="block text-xl font-[850] text-brand-navy">项目需求已提交</strong>
             <p className="mt-2 text-xs text-muted">感谢您的信任，瑞捷团队将根据所留联系方式与您沟通。</p>
+            <button
+              type="button"
+              onClick={onClose}
+              className="mx-auto mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white"
+            >
+              <ArrowLeft size={15} /> 返回页面
+            </button>
           </div>
         ) : (
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">提交项目需求</h3>
             <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
-            <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+            <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
               <input type="hidden" name="bot-field" />
-              <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
-                <Field id="company" name="company" label="公司名称 *" placeholder="公司全称" icon={Building2} required />
-                <Field id="contact-name" name="contact_name" label="联系人 *" placeholder="您的姓名" icon={User} required />
-                <Field id="country" name="country" label="国家 / 地区（选填）" placeholder="项目所在国家或地区" icon={MapPin} />
-                <Field id="email" name="email" label="商务邮箱 *" placeholder="name@company.com" icon={Send} type="email" required />
-                <label className="col-span-2 block max-[720px]:col-span-1">
-                  <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">项目说明</span>
-                  <textarea
-                    name="project_details"
-                    rows="4"
-                    className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink"
-                    placeholder="请简要说明梁型、数量、目标产能或工期、场地与现场条件，以及当前项目阶段；暂不明确的内容可留空。"
-                  />
-                </label>
-                <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
-                  <input type="checkbox" name="contact_consent" value="同意联系" className="mt-1 accent-brand-blue" />
-                  <span>我同意瑞捷机械就该项目与我联系。</span>
-                </label>
-              </div>
-              {submissionState === "error" && (
-                <p role="alert" className="mt-4 text-[12px] text-red-600">提交未成功，请检查网络后重试，或稍后与我们联系。</p>
-              )}
-              <div className="mt-5 flex justify-end">
-                <button type="submit" disabled={submissionState === "submitting"} className="inline-flex min-h-12 items-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-65">
-                  {submissionState === "submitting" ? "提交中…" : "提交"} <Send size={15} />
-                </button>
-              </div>
+              <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
+                <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
+                  <Field id="company" name="company" label="公司名称 *" placeholder="公司全称" icon={Building2} required />
+                  <Field id="contact-name" name="contact_name" label="联系人 *" placeholder="您的姓名" icon={User} required />
+                  <Field id="country" name="country" label="国家 / 地区（选填）" placeholder="项目所在国家或地区" icon={MapPin} />
+                  <Field id="email" name="email" label="商务邮箱 *" placeholder="name@company.com" icon={Send} type="email" required />
+                  <label className="col-span-2 block max-[720px]:col-span-1">
+                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">项目说明</span>
+                    <textarea
+                      name="project_details"
+                      rows="4"
+                      className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted"
+                      placeholder="请简要说明梁型、数量、目标产能或工期、场地与现场条件，以及当前项目阶段；暂不明确的内容可留空。"
+                    />
+                  </label>
+                  <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
+                    <input type="checkbox" name="contact_consent" value="同意联系" className="mt-1 accent-brand-blue disabled:cursor-wait" />
+                    <span>我同意瑞捷机械就该项目与我联系。</span>
+                  </label>
+                </div>
+                {submissionState === "error" && (
+                  <p role="alert" className="mt-4 text-[12px] text-red-600">提交未成功，请检查网络后重试，或稍后与我们联系。</p>
+                )}
+                <div className="mt-5 flex justify-end">
+                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75">
+                    {submissionState === "submitting" ? (
+                      <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> 提交中…</>
+                    ) : (
+                      <>提交 <Send size={15} /></>
+                    )}
+                  </button>
+                </div>
+              </fieldset>
             </form>
           </>
         )}
@@ -477,9 +493,24 @@ function Field({ id, label, icon: Icon, ...props }) {
       <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{label}</span>
       <span className="relative block">
         <Icon size={15} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted" />
-        <input id={id} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink" {...props} />
+        <input id={id} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" {...props} />
       </span>
     </label>
+  );
+}
+
+function ContactEmail() {
+  const openEmail = () => {
+    const address = [108, 111, 121, 111, 115, 117, 110, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109]
+      .map((code) => String.fromCharCode(code))
+      .join("");
+    window.location.href = `mailto:${address}`;
+  };
+
+  return (
+    <button type="button" onClick={openEmail} className="text-left underline decoration-white/20 underline-offset-4 transition hover:text-white">
+      联系邮箱：loyosun [at] gmail [dot] com
+    </button>
   );
 }
 
@@ -755,7 +786,10 @@ export default function App() {
       <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
           <span>© 2026 长沙瑞捷机械科技股份有限公司 版权所有</span>
-          <span>装配式梁板智慧生产线交钥匙解决方案</span>
+          <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
+            <span>装配式梁板智慧生产线交钥匙解决方案</span>
+            <ContactEmail />
+          </div>
         </div>
       </footer>
 
