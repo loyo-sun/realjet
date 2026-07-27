@@ -360,7 +360,7 @@ function Hero({ onLead }) {
       <div className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-            {[["50%", "Less Construction Footprint", "down"], ["30%", "Fewer On-site Workers", "down"], ["3×", "Faster Trolley Turnover", "up"], ["50%", "Shorter Steam-curing Time", "down"]].map(([value, label, direction]) => (
+            {[["50%", "Construction Footprint", "down"], ["30%", "On-site Workers", "down"], ["3×", "Casting Bed Cycle Rate", "up"], ["50%", "Steam-curing Time", "down"]].map(([value, label, direction]) => (
               <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
                 <strong className="flex items-center justify-center gap-1 text-[21px] font-[900] text-brand-navy">
                   {direction === "up" ? <ArrowUp size={19} strokeWidth={2.8} aria-hidden="true" /> : <ArrowDown size={19} strokeWidth={2.8} aria-hidden="true" />}
