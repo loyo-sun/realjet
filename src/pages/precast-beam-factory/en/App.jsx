@@ -5,7 +5,6 @@ import {
   ArrowRight,
   ArrowUp,
   Building2,
-  Cable,
   Check,
   CheckCircle,
   Clock,
@@ -65,12 +64,6 @@ const challenges = [
     title: "Labor Shortage",
     text: "Critical operations such as formwork, vibration, and curing rely on skilled workers, increasing training and quality-control pressure.",
     impact: "Workforce changes affect consistent quality",
-  },
-  {
-    icon: Cable,
-    title: "Complex Coordination",
-    text: "Civil works, equipment, utilities, lifting, and controls involve multiple parties. Without unified planning, interface gaps are likely.",
-    impact: "Unclear ownership causes rework and delays",
   },
 ];
 
@@ -548,7 +541,7 @@ export default function App() {
             title="Building a Beam Factory Takes More Than Buying Equipment"
             text="From project targets to stable production, these four challenges often occur together. They are why every production line must be engineered around actual project conditions."
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {challenges.map(({ icon: Icon, title, text, impact }, index) => (
               <article
                 key={title}
