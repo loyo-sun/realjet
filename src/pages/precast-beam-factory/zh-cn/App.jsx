@@ -509,8 +509,8 @@ function ContactEmail() {
   };
 
   return (
-    <a href="#contact-email" onClick={openEmail} className="text-left underline decoration-white/20 underline-offset-4 transition hover:text-white">
-      联系邮箱：loyosun [at] gmail [dot] com
+    <a id="contact-email" href="#contact-email" onClick={openEmail} className="text-left underline decoration-white/20 underline-offset-4 transition hover:text-white">
+      联系邮箱
     </a>
   );
 }
@@ -787,7 +787,10 @@ export default function App() {
       <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
           <span>© 2026 长沙瑞捷机械科技股份有限公司 版权所有</span>
-          <ContactEmail />
+          <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
+            <span>装配式梁板智慧生产线交钥匙解决方案</span>
+            <ContactEmail />
+          </div>
         </div>
       </footer>
 
