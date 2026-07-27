@@ -258,7 +258,7 @@ function Section({ id, soft = false, children }) {
 
 function SectionCta({ children, onClick }) {
   return (
-    <div className="mt-7 flex justify-center">
+    <div className="mt-7 flex justify-center max-[720px]:hidden">
       <PrimaryButton dark onClick={onClick}>{children}</PrimaryButton>
     </div>
   );
@@ -281,11 +281,11 @@ function VisualPanel({ icon: Icon, label, index }) {
 function Header({ onLead }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const nav = [
-    ["项目难题", "#challenges"],
-    ["设计方法", "#method"],
-    ["典型产线", "#lines"],
+    ["解决方案", "#method"],
+    ["产线工艺", "#lines"],
     ["核心产品", "#products"],
     ["项目案例", "#projects"],
+    ["企业能力", "#capabilities"],
   ];
 
   return (
@@ -303,7 +303,7 @@ function Header({ onLead }) {
           aria-label="打开导航"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
-          className="hidden rounded-lg border border-white/15 p-2 text-white max-[1000px]:ml-0 max-[1000px]:block max-[720px]:ml-auto"
+          className="hidden rounded-lg border border-white/15 p-2 text-white max-[1000px]:ml-auto max-[1000px]:block"
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -314,7 +314,6 @@ function Header({ onLead }) {
             {nav.map(([label, href]) => (
               <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>
             ))}
-            <button onClick={onLead} className="mt-2 rounded-lg bg-brand-cyan px-3 py-3 text-sm font-[850] text-brand-navy">提交项目需求</button>
           </div>
         </nav>
       )}
@@ -325,15 +324,15 @@ function Header({ onLead }) {
 function Hero({ onLead }) {
   return (
     <>
-      <section id="top" className="hero-gradient relative isolate h-[calc(100vh-124px)] min-h-[610px] overflow-hidden text-white max-[720px]:h-auto max-[720px]:min-h-[780px]">
+      <section id="top" className="hero-gradient relative isolate h-[calc(100vh-124px)] min-h-[610px] overflow-hidden text-white max-[720px]:h-auto max-[720px]:min-h-[610px]">
         <img
           src={heroImage}
           alt=""
           aria-hidden="true"
-          className="hero-image-mask absolute inset-y-0 right-0 z-0 h-full w-[72%] object-cover object-right max-[1000px]:w-[78%] max-[720px]:top-auto max-[720px]:bottom-0 max-[720px]:h-[54%] max-[720px]:w-full max-[720px]:object-[68%_center]"
+          className="hero-image-mask absolute inset-y-0 right-0 z-0 h-full w-[72%] object-cover object-right max-[1000px]:w-[78%] max-[720px]:hidden"
         />
         <div className="hero-overlay absolute inset-0 z-10" />
-        <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[780px] max-[720px]:items-start max-[720px]:pt-12 max-[720px]:pb-[250px]">
+        <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[610px] max-[720px]:items-center max-[720px]:py-16">
           <div className="w-[min(610px,51%)] max-[1000px]:w-[60%] max-[720px]:w-full">
             <p className="mb-4 flex items-center gap-3 text-[14px] font-[850] tracking-[0.08em] text-[#8ce2e8] before:h-0.5 before:w-7 before:bg-brand-cyan max-[720px]:text-[13px]">
               装配式梁板智慧生产线交钥匙解决方案服务商
@@ -344,10 +343,10 @@ function Hero({ onLead }) {
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
               从产线规划、装备制造到安装试生产，由我们统筹交付。
             </p>
-            <div className="mt-7.5">
-              <PrimaryButton onClick={onLead} className="max-[720px]:w-full">提交项目需求 <ArrowRight size={16} /></PrimaryButton>
+            <div className="mt-7.5 max-[720px]:hidden">
+              <PrimaryButton onClick={onLead}>提交项目需求 <ArrowRight size={16} /></PrimaryButton>
             </div>
-            <div className="mt-5 flex flex-wrap gap-2">
+            <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
               {["高速桥梁", "轨道交通", "市政工程"].map((tag) => (
                 <span key={tag} className="rounded-full border border-brand-cyan/35 bg-brand-navy/30 px-2.5 py-1.5 text-[12px] text-white/75 backdrop-blur-sm">{tag}</span>
               ))}
@@ -356,13 +355,18 @@ function Hero({ onLead }) {
         </div>
       </section>
       <div className="relative z-30 -mt-6">
-        <div className="site-container grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-          {[["2008", "成立年份"], ["150+ 亩", "生产基地"], ["6 万+㎡", "自有厂房"], ["150+ 项", "授权专利"]].map(([value, label]) => (
-            <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b">
-              <strong className="block text-[21px] font-[900] text-brand-navy">{value}</strong>
-              <span className="text-[11px] text-muted">{label}</span>
-            </div>
-          ))}
+        <div className="site-container">
+          <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
+            {[["2008 年", "成立并持续深耕"], ["150+ 亩", "自有生产基地"], ["6 万+㎡", "装备制造厂房"], ["150+ 项", "授权专利积累"]].map(([value, label]) => (
+              <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
+                <strong className="block text-[21px] font-[900] text-brand-navy">{value}</strong>
+                <span className="text-[11px] text-muted">{label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-center text-[13px] font-[650] text-[#526b7d] max-[720px]:px-5 max-[720px]:text-[12px]">
+            瑞捷机械是一家拥有 10 年以上行业经验，并具备自主研发与生产能力的产线解决方案提供商。
+          </p>
         </div>
       </div>
     </>
@@ -371,12 +375,14 @@ function Hero({ onLead }) {
 
 function LeadModal({ open, onClose }) {
   const [submitted, setSubmitted] = useState(false);
+  const [submissionState, setSubmissionState] = useState("idle");
   const closeRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.toggle("modal-open", open);
     if (open) {
       setSubmitted(false);
+      setSubmissionState("idle");
       requestAnimationFrame(() => closeRef.current?.focus());
     }
     return () => document.body.classList.remove("modal-open");
@@ -392,6 +398,27 @@ function LeadModal({ open, onClose }) {
 
   if (!open) return null;
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    setSubmissionState("submitting");
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      });
+
+      if (!response.ok) throw new Error("Submission failed");
+      form.reset();
+      setSubmitted(true);
+      setSubmissionState("success");
+    } catch {
+      setSubmissionState("error");
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#03111d]/75 p-5 backdrop-blur-lg" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <div role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100vh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
@@ -399,34 +426,42 @@ function LeadModal({ open, onClose }) {
         {submitted ? (
           <div className="py-10 text-center">
             <CheckCircle className="mx-auto mb-4 text-brand-cyan" size={48} />
-            <strong className="block text-xl font-[850] text-brand-navy">项目信息已模拟提交</strong>
-            <p className="mt-2 text-xs text-muted">这是结构原型，不会发送真实数据。</p>
+            <strong className="block text-xl font-[850] text-brand-navy">项目需求已提交</strong>
+            <p className="mt-2 text-xs text-muted">感谢您的信任，瑞捷团队将根据所留联系方式与您沟通。</p>
           </div>
         ) : (
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">提交项目需求</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">公司、联系人和邮箱为必填项。其他项目条件可统一写在项目说明中。</p>
-            <form onSubmit={(event) => { event.preventDefault(); setSubmitted(true); }}>
+            <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
+            <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
+              <input type="hidden" name="bot-field" />
               <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
-                <Field id="company" label="公司名称 *" placeholder="公司全称" icon={Building2} required />
-                <Field id="name" label="联系人 *" placeholder="您的姓名" icon={User} required />
-                <Field id="country" label="国家 / 地区（选填）" placeholder="项目所在国家或地区" icon={MapPin} />
-                <Field id="email" label="商务邮箱 *" placeholder="name@company.com" icon={Send} type="email" required />
+                <Field id="company" name="company" label="公司名称 *" placeholder="公司全称" icon={Building2} required />
+                <Field id="contact-name" name="contact_name" label="联系人 *" placeholder="您的姓名" icon={User} required />
+                <Field id="country" name="country" label="国家 / 地区（选填）" placeholder="项目所在国家或地区" icon={MapPin} />
+                <Field id="email" name="email" label="商务邮箱 *" placeholder="name@company.com" icon={Send} type="email" required />
                 <label className="col-span-2 block max-[720px]:col-span-1">
                   <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">项目说明</span>
                   <textarea
-                    className="focus-control min-h-32 w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink"
-                    placeholder={"建议填写：\n1. 梁型、梁长与预计数量\n2. 目标生产周期或日产量\n3. 可用场地面积、形状和起重条件\n4. 混凝土、能源与现场环境\n5. 现有设备、项目阶段和主要难题"}
+                    name="project_details"
+                    rows="4"
+                    className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink"
+                    placeholder="请简要说明梁型、数量、目标产能或工期、场地与现场条件，以及当前项目阶段；暂不明确的内容可留空。"
                   />
-                  <span className="mt-1 block text-[10px] text-[#8696a2]">不知道的内容可以留空，也可以说明“待确认”。</span>
                 </label>
                 <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
-                  <input type="checkbox" className="mt-1 accent-brand-blue" />
+                  <input type="checkbox" name="contact_consent" value="同意联系" className="mt-1 accent-brand-blue" />
                   <span>我同意瑞捷机械就该项目与我联系。</span>
                 </label>
               </div>
+              {submissionState === "error" && (
+                <p role="alert" className="mt-4 text-[12px] text-red-600">提交未成功，请检查网络后重试，或稍后与我们联系。</p>
+              )}
               <div className="mt-5 flex justify-end">
-                <button type="submit" className="inline-flex min-h-12 items-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white">模拟提交项目 <Send size={15} /></button>
+                <button type="submit" disabled={submissionState === "submitting"} className="inline-flex min-h-12 items-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-65">
+                  {submissionState === "submitting" ? "提交中…" : "提交"} <Send size={15} />
+                </button>
               </div>
             </form>
           </>
@@ -710,17 +745,17 @@ export default function App() {
         <section className="hero-gradient py-[72px] text-white">
           <div className="site-container flex flex-col items-center text-center">
             <p className="mb-3 text-[11px] font-[850] tracking-[0.12em] text-[#8ce2e8] uppercase">开始您的项目</p>
-            <h2 className="max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em]">告诉我们生产任务，开始规划你的预制梁产线</h2>
-            <p className="mt-3 max-w-[670px] text-[15px] text-white/68">只需填写基础信息和联系方式，其他项目条件可统一写在备注中。</p>
-            <PrimaryButton onClick={openLead} className="mt-6">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
+            <h2 className="max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em]">获取专属于您的解决方案</h2>
+            <p className="mt-3 max-w-[670px] text-[15px] text-white/68">告诉我们生产任务，开始规划你的预制梁产线</p>
+            <PrimaryButton onClick={openLead} className="mt-6 max-[720px]:hidden">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
           </div>
         </section>
       </main>
 
       <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
-        <div className="site-container flex justify-between gap-5 max-[720px]:flex-col">
-          <span>瑞捷机械｜交钥匙智慧梁厂结构原型</span>
-          <span>图片、项目名称与数据均为占位，正式发布前须复核。</span>
+        <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
+          <span>© 2026 长沙瑞捷机械科技股份有限公司 版权所有</span>
+          <span>装配式梁板智慧生产线交钥匙解决方案</span>
         </div>
       </footer>
 
