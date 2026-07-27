@@ -6,7 +6,6 @@ import {
   Cable,
   Check,
   CheckCircle,
-  ChevronDown,
   Clock,
   CloudSun,
   Compass,
@@ -26,6 +25,7 @@ import {
   Wrench,
   X,
 } from "lucide-react";
+import LanguageSwitcher from "../shared/LanguageSwitcher";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -281,26 +281,6 @@ function VisualPanel({ icon: Icon, label, index }) {
   );
 }
 
-function LanguageSwitcher() {
-  return (
-    <details className="group relative shrink-0 max-[720px]:ml-auto">
-      <summary className="flex min-h-9 cursor-pointer list-none items-center gap-1.5 rounded-lg border border-white/15 px-2.5 text-[11px] font-[750] text-white/80 transition hover:border-white/30 hover:text-white [&::-webkit-details-marker]:hidden">
-        <span aria-hidden="true">🇨🇳</span>
-        <span>中文</span>
-        <ChevronDown size={13} className="transition group-open:rotate-180" aria-hidden="true" />
-      </summary>
-      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[138px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating">
-        <a href="../cn/" lang="zh-CN" aria-current="page" className="flex items-center gap-2 rounded-md bg-white/8 px-3 py-2 text-[12px] text-white">
-          <span aria-hidden="true">🇨🇳</span> 中文
-        </a>
-        <a href="../en/" lang="en" className="flex items-center gap-2 rounded-md px-3 py-2 text-[12px] text-white/70 transition hover:bg-white/5 hover:text-white">
-          <span aria-hidden="true">🇬🇧</span> English
-        </a>
-      </div>
-    </details>
-  );
-}
-
 function Header({ onLead }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const nav = [
@@ -320,8 +300,8 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1000px]:hidden" aria-label="主导航">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button onClick={onLead} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">提交项目需求</button>
-        <LanguageSwitcher />
+        <button onClick={onLead} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">免费获取产线定制方案</button>
+        <LanguageSwitcher current="cn" />
         <button
           type="button"
           aria-label="打开导航"
@@ -358,17 +338,14 @@ function Hero({ onLead }) {
         <div className="hero-overlay absolute inset-0 z-10" />
         <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[610px] max-[720px]:items-center max-[720px]:py-16">
           <div className="w-[min(610px,51%)] max-[1000px]:w-[60%] max-[720px]:w-full">
-            <p className="mb-4 flex items-center gap-3 text-[14px] font-[850] tracking-[0.08em] text-[#8ce2e8] before:h-0.5 before:w-7 before:bg-brand-cyan max-[720px]:text-[13px]">
-              装配式梁板智慧生产线交钥匙解决方案服务商
-            </p>
             <h1 className="max-w-[610px] text-[clamp(40px,3.65vw,58px)] leading-[1.18] font-[900] tracking-[-0.05em] max-[1000px]:text-[clamp(38px,5.2vw,50px)] max-[720px]:text-[34px]">
-              根据您的场地与生产计划，定制按期投产的智慧梁厂
+              一站式预制梁场智能产线解决方案
             </h1>
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
               从产线规划、装备制造到安装试生产，由我们统筹交付。
             </p>
             <div className="mt-7.5 max-[720px]:hidden">
-              <PrimaryButton onClick={onLead}>提交项目需求 <ArrowRight size={16} /></PrimaryButton>
+              <PrimaryButton onClick={onLead}>免费获取产线定制方案 <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
               {["高速桥梁", "轨道交通", "市政工程"].map((tag) => (
@@ -463,7 +440,7 @@ function LeadModal({ open, onClose }) {
           </div>
         ) : (
           <>
-            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">提交项目需求</h3>
+            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">免费获取产线定制方案</h3>
             <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
@@ -817,7 +794,7 @@ export default function App() {
       </footer>
 
       <button onClick={openLead} className="fixed right-3.5 bottom-3.5 left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex">
-        提交项目需求 <ArrowRight size={16} />
+        免费获取产线定制方案 <ArrowRight size={16} />
       </button>
 
       <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
