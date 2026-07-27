@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
-  Boxes,
   Building2,
   Cable,
   Check,
@@ -9,57 +8,84 @@ import {
   Clock,
   CloudSun,
   Compass,
-  Factory,
   FileCheck,
-  Globe,
   HardHat,
-  LayoutTemplate,
   Map,
   MapPin,
   Menu,
-  Monitor,
   Package,
-  Repeat,
-  Route,
   Search,
   Send,
   Settings,
-  Thermometer,
-  Truck,
   User,
   Users,
-  Waves,
   Workflow,
   Wrench,
   X,
 } from "lucide-react";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
+import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
+import lineV2Image from "../../../assets/image/intelligent-precast-beam-line-v2.webp";
+import segmentalLineImage from "../../../assets/image/intelligent-segmental-beam-line.webp";
+import hydraulicFormworkImage from "../../../assets/image/high-precision-hydraulic-formwork.webp";
+import castingBedSystemImage from "../../../assets/image/mobile-casting-bed-circulation-system.webp";
+import concreteDistributionImage from "../../../assets/image/concrete-conveying-distribution-system.webp";
+import vibrationSystemImage from "../../../assets/image/combined-vibration-system.webp";
+import curingKilnImage from "../../../assets/image/intelligent-steam-curing-kiln.webp";
+import lineManagementImage from "../../../assets/image/production-line-management-system.webp";
+import shenhaiTj05Image from "../../../assets/image/g15-shenhai-expressway-ningbo-tj05.webp";
+import wenzhouBayBaseImage from "../../../assets/image/wenzhou-bay-prefab-industrial-base.webp";
+import yongguanDongtouImage from "../../../assets/image/yongguan-expressway-dongtou-branch.webp";
+import guangaoTj5Image from "../../../assets/image/guangao-expressway-guangzhu-tj5.webp";
+import researchDesignImage from "../../../assets/image/research-design-capability.webp";
+import manufacturingCapabilityImage from "../../../assets/image/manufacturing-capability.webp";
+import projectDeliveryCapabilityImage from "../../../assets/image/project-delivery-capability.webp";
 
 const challenges = [
-  { icon: Clock, title: "工期紧", text: "产量目标高，人工协调难以形成稳定节拍。" },
-  { icon: Map, title: "场地受限", text: "标准布局无法适配狭长或不规则场地。" },
-  { icon: Users, title: "熟练工不足", text: "关键工序依赖经验，培训和管理压力大。" },
-  { icon: Cable, title: "接口复杂", text: "设备、土建和能源之间容易出现责任空白。" },
+  {
+    icon: Clock,
+    title: "工期紧",
+    text: "交付节点明确，产量爬坡时间短，传统人工组织难以形成稳定节拍。",
+    impact: "节拍不稳，影响按期交付",
+  },
+  {
+    icon: Map,
+    title: "场地受限",
+    text: "狭长、不规则或分区场地，对工位布局、物流路线和存梁组织提出更高要求。",
+    impact: "布局不当，造成场地浪费",
+  },
+  {
+    icon: Users,
+    title: "熟练工不足",
+    text: "模板、振捣、养护等关键工序依赖经验，人员培训与质量管理压力持续增加。",
+    impact: "人员波动，影响质量稳定",
+  },
+  {
+    icon: Cable,
+    title: "协同困难",
+    text: "土建、设备、能源、起重和控制涉及多方，缺少统一规划容易出现衔接空档。",
+    impact: "责任不清，引发返工延期",
+  },
 ];
 
 const inputs = [
-  { icon: Package, title: "产品任务", text: "梁型、数量、工期、目标日产量" },
+  { icon: Package, title: "生产目标", text: "梁型、数量、工期、目标日产量" },
   { icon: MapPin, title: "场地条件", text: "面积、形状、道路、起重与存梁区" },
   { icon: CloudSun, title: "现场环境", text: "气候、能源、混凝土供应与维护条件" },
   { icon: FileCheck, title: "项目标准", text: "设计文件、当地规范与验收要求" },
 ];
 
 const methods = [
-  { icon: Search, title: "需求诊断", text: "明确梁型、总量、工期和现场约束。", output: "需求清单" },
-  { icon: Workflow, title: "工艺规划", text: "优化物流、节拍、瓶颈与缓冲区。", output: "流程与布局" },
-  { icon: Settings, title: "系统配置", text: "匹配模板、台座、养护和控制系统。", output: "配置与接口" },
-  { icon: CheckCircle, title: "生产验证", text: "联调、试生产、培训并闭环问题。", output: "交接与验证" },
+  { icon: Search, title: "需求诊断", text: "明确生产目标、现场限制和项目优先级。", output: "项目需求清单" },
+  { icon: Workflow, title: "工艺规划", text: "定义生产节拍、工位、物流和场地布局。", output: "工艺与布局方案" },
+  { icon: Settings, title: "系统配置", text: "匹配关键装备、控制系统和工程接口。", output: "整线配置方案" },
+  { icon: CheckCircle, title: "交付验证", text: "完成安装联调、试生产、培训和问题闭环。", output: "可运行生产线" },
 ];
 
 const lines = [
   {
-    icon: LayoutTemplate,
+    image: lineV1Image,
     kicker: "基础工艺架构",
     title: "智能预制梁生产线 V1.0",
     visual: "固定模板 · 移动台车 · 一次张拉",
@@ -67,7 +93,7 @@ const lines = [
     metrics: ["日产约 1–2 片/线*", "周期约 2–3 天*"],
   },
   {
-    icon: Repeat,
+    image: lineV2Image,
     kicker: "高周转工艺架构",
     title: "智能预制梁生产线 V2.0",
     visual: "流水工位 · 二次张拉 · 自动摆渡",
@@ -75,7 +101,7 @@ const lines = [
     metrics: ["日产约 2–4 片/线*", "用地更紧凑*"],
   },
   {
-    icon: Boxes,
+    image: segmentalLineImage,
     kicker: "节段梁工艺架构",
     title: "智能节段梁生产线",
     visual: "匹配段定位 · 节段模板 · 智能蒸养",
@@ -86,42 +112,42 @@ const lines = [
 
 const products = [
   {
-    icon: LayoutTemplate,
+    image: hydraulicFormworkImage,
     code: "FORMING",
     title: "高精度液压模板",
     text: "按梁型进行非标设计，实现液压合模、开模和关键尺寸调整。",
     value: "减少人工拆装，提高成型一致性",
   },
   {
-    icon: Repeat,
+    image: castingBedSystemImage,
     code: "FLOW",
     title: "移动台座流转系统",
     text: "承载梁体在专业工位间流转，让模板和台座更快进入下一循环。",
     value: "改善周转节拍和场地组织",
   },
   {
-    icon: Truck,
+    image: concreteDistributionImage,
     code: "CONCRETE",
     title: "混凝土输布料系统",
     text: "衔接拌合站与浇筑工位，完成混凝土输送、称重与分区布料。",
     value: "缩短供料路径，减少人工配合",
   },
   {
-    icon: Waves,
+    image: vibrationSystemImage,
     code: "COMPACTION",
     title: "组合振捣系统",
     text: "根据构件特点组合附着式与插入式振捣，统一控制关键参数。",
     value: "提升混凝土密实度与过程稳定性",
   },
   {
-    icon: Thermometer,
+    image: curingKilnImage,
     code: "CURING",
     title: "智能蒸养窑",
     text: "根据气候与强度要求控制蒸养温度、湿度和时间曲线。",
     value: "改善养护一致性和生产周转",
   },
   {
-    icon: Monitor,
+    image: lineManagementImage,
     code: "MANAGEMENT",
     title: "产线管理系统",
     text: "集中管理生产计划、设备状态、工序进度和关键过程数据。",
@@ -131,50 +157,65 @@ const products = [
 
 const projects = [
   {
-    icon: Route,
-    title: "苏台高速 TJ03 智慧梁厂",
-    feature: "移动台座 + 专业工位",
-    product: "T 梁",
-    output: "约 4–5 片/日*",
+    image: shenhaiTj05Image,
+    category: "高速公路",
+    title: "G15 沈海高速宁波南段 TJ05 标",
+    line: "2 条 T 梁产线",
+    process: "带模蒸养 · 二次张拉",
+    product: "30 米 T 梁",
+    output: "6 片/天",
   },
   {
-    icon: Factory,
-    title: "某高速 TJ04 三线梁场",
-    feature: "3 条生产线 + 回程线",
-    product: "30m / 40m T 梁",
-    output: "约 5 片/日*",
+    image: wenzhouBayBaseImage,
+    category: "产业基地",
+    title: "新型交通城建工业化基地",
+    line: "4 条 T 梁产线",
+    process: "带模蒸养 · 二次张拉",
+    product: "30 / 40 米 T 梁",
+    output: "8–12 片/天",
   },
   {
-    icon: Building2,
-    title: "某城市高架节段梁项目",
-    feature: "匹配段定位 + 智能蒸养",
-    product: "节段箱梁",
-    output: "约 2–3 节段/日*",
+    image: yongguanDongtouImage,
+    category: "高速支线",
+    title: "甬莞高速洞头支线项目",
+    line: "2 条节段梁产线",
+    process: "带模蒸养",
+    product: "节段梁",
+    output: "6 片/天",
   },
   {
-    icon: Globe,
-    title: "某海外预制基地",
-    feature: "高温高湿适配 + 柔性模板",
-    product: "箱梁 / U 梁",
-    output: "约 3 片/日*",
+    image: guangaoTj5Image,
+    category: "高速改扩建",
+    title: "广澳高速改扩建广珠段 TJ5 标",
+    line: "7 条 T 梁产线",
+    process: "带模蒸养",
+    product: "30 米 T 梁",
+    output: "12 片/天",
   },
 ];
 
 const capabilities = [
   {
     icon: Compass,
+    image: researchDesignImage,
     title: "研发设计能力",
-    text: "从梁型、产量、工期和场地出发，多专业协同定义产线工艺与装备。",
-    points: ["机械、电气、液压、软件与工艺联合设计", "完成布局、节拍、非标装备与控制逻辑", "通过设计评审和现场反馈持续迭代"],
+    text: "围绕预制梁模板、移动台车、智能蒸养与控制软件持续研发，以知识产权和专业化创新能力支撑项目设计。",
+    points: [
+      "拥有智慧梁场模板控制系统等软件著作权",
+      "拥有智能蒸养房、带模移动台车和端模拆除装置等专利",
+      "获评湖南省专精特新中小企业（2025–2028）",
+    ],
   },
   {
     icon: Wrench,
+    image: manufacturingCapabilityImage,
     title: "自主制造能力",
     text: "自有制造基地覆盖大型非标装备从原材料到整机测试的关键环节。",
     points: ["下料、折弯、机加工、焊接与表面处理", "机械、液压、电气集成及整机装配", "过程检验、厂内测试和质量记录追溯"],
   },
   {
     icon: HardHat,
+    image: projectDeliveryCapabilityImage,
     title: "项目交付能力",
     text: "项目经理统筹技术、制造和现场团队，把设备安装推进到整线顺利运行。",
     points: ["明确土建、动力、起重与客户配合接口", "完成安装、单机调试、整线联动和试生产", "提供操作维护培训及后续运行支持"],
@@ -199,10 +240,10 @@ function PrimaryButton({ children, onClick, dark = false, className = "" }) {
 
 function SectionHeader({ kicker, title, text }) {
   return (
-    <div className="mb-8 max-w-[760px]">
+    <div className="mb-6 max-w-[760px]">
       <p className="mb-2 text-[11px] font-[850] tracking-[0.12em] text-brand-blue uppercase">{kicker}</p>
       <h2 className="text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em] text-ink">{title}</h2>
-      <p className="mt-3.5 max-w-[710px] text-[15px] text-muted">{text}</p>
+      <p className="mt-3 max-w-[710px] text-[16px] leading-[1.6] text-muted">{text}</p>
     </div>
   );
 }
@@ -294,21 +335,21 @@ function Hero({ onLead }) {
         <div className="hero-overlay absolute inset-0 z-10" />
         <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[780px] max-[720px]:items-start max-[720px]:pt-12 max-[720px]:pb-[250px]">
           <div className="w-[min(610px,51%)] max-[1000px]:w-[60%] max-[720px]:w-full">
-            <p className="mb-4 flex items-center gap-2.5 text-[11px] font-[850] tracking-[0.12em] text-[#8ce2e8] uppercase before:h-0.5 before:w-6 before:bg-brand-cyan">
-              装配式梁板智慧生产线整体解决方案
+            <p className="mb-4 flex items-center gap-3 text-[14px] font-[850] tracking-[0.08em] text-[#8ce2e8] before:h-0.5 before:w-7 before:bg-brand-cyan max-[720px]:text-[13px]">
+              装配式梁板智慧生产线交钥匙解决方案服务商
             </p>
-            <h1 className="max-w-[610px] text-[clamp(44px,4.2vw,68px)] leading-[1.16] font-[900] tracking-[-0.055em] max-[1000px]:text-[clamp(42px,6vw,58px)] max-[720px]:text-[40px]">
-              根据您的场地与生产计划，定制一座真正能投产的智慧梁厂
+            <h1 className="max-w-[610px] text-[clamp(40px,3.65vw,58px)] leading-[1.18] font-[900] tracking-[-0.05em] max-[1000px]:text-[clamp(38px,5.2vw,50px)] max-[720px]:text-[34px]">
+              根据您的场地与生产计划，定制按期投产的智慧梁厂
             </h1>
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
-              从梁型、产量和工期出发，统一规划布局、工艺、装备、安装调试与试生产。
+              从产线规划、装备制造到安装试生产，由我们统筹交付。
             </p>
             <div className="mt-7.5">
               <PrimaryButton onClick={onLead} className="max-[720px]:w-full">提交项目需求 <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2">
-              {["新建智慧梁厂", "传统梁场升级", "公路 · 铁路 · 城市高架"].map((tag) => (
-                <span key={tag} className="rounded-full border border-brand-cyan/35 bg-brand-navy/30 px-2.5 py-1.5 text-[11px] text-white/75 backdrop-blur-sm">{tag}</span>
+              {["高速桥梁", "轨道交通", "市政工程"].map((tag) => (
+                <span key={tag} className="rounded-full border border-brand-cyan/35 bg-brand-navy/30 px-2.5 py-1.5 text-[12px] text-white/75 backdrop-blur-sm">{tag}</span>
               ))}
             </div>
           </div>
@@ -319,7 +360,7 @@ function Hero({ onLead }) {
           {[["2008", "成立年份"], ["150+ 亩", "生产基地"], ["6 万+㎡", "自有厂房"], ["150+ 项", "授权专利"]].map(([value, label]) => (
             <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b">
               <strong className="block text-[21px] font-[900] text-brand-navy">{value}</strong>
-              <span className="text-[10px] text-muted">{label}</span>
+              <span className="text-[11px] text-muted">{label}</span>
             </div>
           ))}
         </div>
@@ -434,143 +475,249 @@ export default function App() {
         <Hero onLead={openLead} />
 
         <Section id="challenges">
-          <SectionHeader kicker="项目难题" title="建一座梁厂，难点不只是买设备" text="真正影响项目结果的是工期、场地、用工、质量和多方接口。" />
+          <SectionHeader
+            kicker="项目难题"
+            title="建一座梁厂，难点不只是买设备"
+            text="从项目目标到稳定投产，以下四个问题往往同时发生，也决定了产线必须按项目条件进行整体设计。"
+          />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {challenges.map(({ icon: Icon, title, text }, index) => (
-              <article key={title} className="rounded-card border border-line bg-white p-6 transition duration-180 hover:-translate-y-1 hover:shadow-card">
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-[#e8f3f7] text-brand-blue"><Icon size={21} /></div>
-                <span className="mb-1 block text-[10px] font-[850] tracking-[0.14em] text-brand-blue/55">0{index + 1}</span>
-                <h3 className="text-[17px] font-[850] text-brand-navy">{title}</h3>
-                <p className="mt-2 text-xs text-muted">{text}</p>
+            {challenges.map(({ icon: Icon, title, text, impact }, index) => (
+              <article
+                key={title}
+                className="group relative flex min-h-[278px] flex-col overflow-hidden rounded-card border border-line bg-white p-6 transition duration-200 hover:-translate-y-1.5 hover:border-brand-blue/35 hover:shadow-card"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-brand-blue to-brand-cyan transition duration-200 group-hover:scale-x-100" />
+                <span className="absolute top-2 right-4 text-[62px] leading-none font-[900] tracking-[-0.08em] text-brand-blue/[0.055]">
+                  0{index + 1}
+                </span>
+                <div className="relative mb-6 flex h-12 w-12 items-center justify-center rounded-[14px] border border-brand-blue/10 bg-[#eaf4f7] text-brand-blue transition duration-200 group-hover:bg-brand-blue group-hover:text-white">
+                  <Icon size={22} strokeWidth={1.8} aria-hidden="true" />
+                </div>
+                <h3 className="relative text-[19px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h3>
+                <p className="relative mt-2.5 text-[14px] leading-[1.7] text-muted">{text}</p>
+                <div className="relative mt-auto border-t border-line pt-4">
+                  <span className="mb-1 block text-[10px] font-[900] tracking-[0.13em] text-brand-blue/65">项目影响</span>
+                  <p className="flex items-center gap-1.5 text-[12px] font-[850] text-brand-navy">
+                    {impact}
+                    <ArrowRight size={13} className="text-brand-cyan transition group-hover:translate-x-1" aria-hidden="true" />
+                  </p>
+                </div>
               </article>
             ))}
           </div>
           <SectionCta onClick={openLead}>让工程师评估我的项目</SectionCta>
         </Section>
 
-        <Section id="inputs" soft>
-          <SectionHeader kicker="方案输入" title="每一套方案，都从项目条件开始" text="四类输入共同决定布局、节拍和设备组合。" />
-          <div className="grid grid-cols-4 gap-3.5 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {inputs.map(({ icon: Icon, title, text }, index) => (
-              <article key={title} className="rounded-[14px] border border-line bg-white p-5.5">
-                <div className="mb-4 flex items-center justify-between">
-                  <Icon size={22} className="text-brand-blue" />
-                  <span className="text-[10px] font-[850] text-brand-blue/45">0{index + 1}</span>
-                </div>
-                <h3 className="font-[850] text-brand-navy">{title}</h3>
-                <p className="mt-1.5 text-xs text-muted">{text}</p>
-              </article>
-            ))}
+        <Section id="method" soft>
+          <SectionHeader
+            kicker="方案形成流程"
+            title="从项目条件到可运行的整线方案"
+            text="我们不是从设备清单开始，而是先明确生产目标和现场条件，再完成工艺规划、系统配置与交付验证。"
+          />
+
+          <div className="solution-journey">
+            <aside className="solution-input-panel">
+              <div className="solution-panel-header">
+                <span className="section-index">01 · 项目输入</span>
+                <h3>先把项目条件<br />定义清楚</h3>
+                <p className="solution-panel-description is-dark">四类条件共同决定产线布局、生产节拍和装备组合。</p>
+              </div>
+              <div className="solution-input-list">
+                {inputs.map(({ icon: Icon, title, text }, index) => (
+                  <article key={title} className="solution-input-item">
+                    <div className="solution-input-icon">
+                      <Icon size={18} strokeWidth={1.8} aria-hidden="true" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h4>{title}</h4>
+                        <span>0{index + 1}</span>
+                      </div>
+                      <p>{text}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </aside>
+
+            <div className="solution-process-panel">
+              <div className="journey-arrow" aria-hidden="true"><ArrowRight size={18} /></div>
+              <div className="solution-panel-header">
+                <span className="section-index text-brand-blue">02 · 瑞捷工作流程</span>
+                <h3>把项目条件转化为<br />可运行的生产系统</h3>
+                <p className="solution-panel-description">通过需求诊断、工艺规划、系统配置和交付验证，让方案逐步落地到生产。</p>
+              </div>
+              <div className="delivery-flow">
+                {methods.map(({ icon: Icon, title, text, output }, index) => (
+                  <article key={title} className="delivery-step">
+                    <div className="delivery-marker">
+                      <Icon size={19} strokeWidth={1.8} aria-hidden="true" />
+                      <span>0{index + 1}</span>
+                    </div>
+                    <div className="delivery-copy">
+                      <h4>{title}</h4>
+                      <p>{text}</p>
+                    </div>
+                    <span className="delivery-output">输出 · {output}</span>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
-          <SectionCta onClick={openLead}>提交项目条件</SectionCta>
+          <SectionCta onClick={openLead}>提交项目条件，获取初步方案</SectionCta>
         </Section>
 
-        <Section id="method">
-          <SectionHeader kicker="设计方法" title="先优化工艺，再配置设备" text="从生产目标反推产线，而不是按设备清单报价。" />
-          <div className="grid grid-cols-4 gap-3.5 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {methods.map(({ icon: Icon, title, text, output }, index) => (
-              <article key={title} className="relative overflow-hidden rounded-[14px] border border-line bg-white p-5.5">
-                <span className="absolute top-4 right-4 text-4xl font-[900] text-brand-blue/6">0{index + 1}</span>
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-brand-blue text-white"><Icon size={20} /></div>
-                <h3 className="font-[850] text-brand-navy">{title}</h3>
-                <p className="mt-1.5 text-xs text-muted">{text}</p>
-                <p className="mt-3 border-t border-line pt-3 text-[10px] font-[850] text-brand-blue">输出：{output}</p>
-              </article>
-            ))}
-          </div>
-          <SectionCta onClick={openLead}>申请初步产线规划</SectionCta>
-        </Section>
-
-        <Section id="lines" soft>
-          <SectionHeader kicker="产线工艺设计" title="基于您的生产需求，定义适合项目的产线工艺" text="以三种成熟工艺为技术基础，根据梁型、产量、工期、场地和环境，重新确定工位组织、张拉方式与设备组合。" />
+        <Section id="lines">
+          <SectionHeader
+            kicker="产线工艺设计"
+            title="以成熟技术为基础，共同定义适合项目的新工艺"
+            text="我们已有成熟的预制梁产线工艺，对于特殊项目需求，与您共同完成工艺研究、方案设计、装备开发和生产验证。"
+          />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {lines.map(({ icon, kicker, title, visual, text, metrics }, index) => (
-              <article key={title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
-                <VisualPanel icon={icon} label={visual} index={`0${index + 1}`} />
+            {lines.map(({ image, kicker, title, visual, text, metrics }) => (
+              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
+                <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
+                  <img
+                    src={image}
+                    alt={`${title}示意图`}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
+                  />
+                  <span className="absolute inset-x-4 bottom-4 rounded-md border border-white/10 bg-brand-navy/50 px-3 py-2 text-center text-[11px] font-[750] text-white/90 backdrop-blur-[3px]">
+                    {visual}
+                  </span>
+                </div>
                 <div className="p-6">
-                  <span className="text-[10px] font-[850] tracking-[0.08em] text-brand-blue uppercase">{kicker}</span>
+                  <span className="text-[11px] font-[850] tracking-[0.08em] text-brand-blue uppercase">{kicker}</span>
                   <h3 className="mt-1.5 text-lg font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-xs text-muted">{text}</p>
+                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {metrics.map((metric) => <span key={metric} className="rounded-md bg-soft px-2.5 py-1.5 text-[10px] font-[850] text-brand-navy">{metric}</span>)}
+                    {metrics.map((metric) => <span key={metric} className="rounded-md bg-soft px-2.5 py-1.5 text-[11px] font-[850] text-brand-navy">{metric}</span>)}
                   </div>
                 </div>
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>让工程师定义我的产线工艺</SectionCta>
+          <SectionCta onClick={openLead}>与工程师沟通生产工艺</SectionCta>
         </Section>
 
-        <Section id="products">
+        <Section id="products" soft>
           <SectionHeader kicker="六款核心产品" title="围绕关键工序，组成适合项目的产线" text="产品不是独立堆叠，而是依据梁型、节拍和场地进行组合。" />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {products.map(({ icon, code, title, text, value }, index) => (
-              <article key={title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
-                <VisualPanel icon={icon} index={`0${index + 1}`} />
+            {products.map(({ image, code, title, text, value }) => (
+              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
+                <div className="aspect-video overflow-hidden bg-[#e4edf2]">
+                  <img
+                    src={image}
+                    alt={`${title}产品图`}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
+                  />
+                </div>
                 <div className="p-5.5">
-                  <span className="text-[9px] font-[900] tracking-[0.1em] text-brand-blue">{code}</span>
+                  <span className="text-[10px] font-[900] tracking-[0.1em] text-brand-blue">{code}</span>
                   <h3 className="mt-1.5 font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-[11px] text-muted">{text}</p>
-                  <p className="mt-3 border-t border-line pt-3 text-[10px] font-[850] text-brand-navy">客户价值：{value}</p>
+                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
+                  <p className="mt-3 border-t border-line pt-3 text-[12px] font-[850] text-brand-navy">客户价值：{value}</p>
                 </div>
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>获取产品组合建议</SectionCta>
+          <SectionCta onClick={openLead}>获取产品详情</SectionCta>
         </Section>
 
-        <Section id="projects" soft>
-          <SectionHeader kicker="项目案例" title="不同项目，得到不同的产线答案" text="以下内容为结构占位，用于观察四个项目卡片的整体布局。" />
+        <Section id="projects">
+          <SectionHeader
+            kicker="项目案例"
+            title="不同项目，得到不同的产线答案"
+            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产工艺和装备配置均根据项目条件确定。"
+          />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {projects.map(({ icon, title, feature, product, output }, index) => (
-              <article key={title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
-                <VisualPanel icon={icon} index={`0${index + 1}`} />
-                <div className="p-5">
-                  <h3 className="font-[850] text-brand-navy">{title}</h3>
-                  <dl className="mt-3 grid grid-cols-[44px_1fr] gap-x-2 gap-y-1.5 text-[10px]">
-                    <dt className="text-muted">特色</dt><dd className="font-[750] text-ink">{feature}</dd>
-                    <dt className="text-muted">构件</dt><dd className="font-[750] text-ink">{product}</dd>
-                    <dt className="text-muted">产能</dt><dd className="font-[750] text-ink">{output}</dd>
+            {projects.map(({ image, category, title, line, process, product, output }) => (
+              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
+                <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
+                  <img
+                    src={image}
+                    alt={`${title}项目图`}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/55 via-transparent to-transparent" />
+                  <span className="absolute top-3 left-3 rounded-full border border-white/20 bg-brand-navy/55 px-2.5 py-1 text-[10px] font-[850] text-white backdrop-blur-sm">
+                    {category}
+                  </span>
+                  <div className="absolute right-3 bottom-3 flex items-center gap-1.5 rounded-lg border border-white/15 bg-brand-navy/55 px-2.5 py-1.5 text-white backdrop-blur-sm">
+                    <span className="text-[9px] text-white/60">日产能</span>
+                    <strong className="text-[13px] font-[900]">{output}</strong>
+                  </div>
+                </div>
+                <div className="p-4.5">
+                  <h3 className="text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy">{title}</h3>
+                  <dl className="mt-3 flex flex-wrap gap-2">
+                    <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
+                      <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">产线规模</dt>
+                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{line}</dd>
+                    </div>
+                    <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
+                      <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">生产构件</dt>
+                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{product}</dd>
+                    </div>
                   </dl>
+                  <div className="mt-3 flex items-center gap-2.5 rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-2.5">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white text-brand-blue shadow-[0_5px_16px_rgba(8,37,63,.08)]">
+                      <Workflow size={14} aria-hidden="true" />
+                    </div>
+                    <div>
+                      <span className="block text-[9px] font-[850] text-brand-blue">核心工艺</span>
+                      <strong className="mt-0.5 block text-[11px] font-[850] text-brand-navy">{process}</strong>
+                    </div>
+                  </div>
                 </div>
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>获取类似项目建议</SectionCta>
+          <SectionCta onClick={openLead}>了解更多案例</SectionCta>
         </Section>
 
-        <Section id="capabilities">
-          <SectionHeader kicker="为什么选择瑞捷" title="三种能力，把方案变成可运行的生产系统" text="从项目输入到现场投产，研发、制造和交付团队共同对结果负责。" />
+        <Section id="capabilities" soft>
+          <SectionHeader kicker="为什么选择瑞捷" title="三种能力，把想法变成产能" text="从项目输入到现场投产，研发、制造和交付团队共同对结果负责。" />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {capabilities.map(({ icon, title, text, points }, index) => (
-              <article key={title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
-                <VisualPanel icon={icon} index={`0${index + 1}`} />
+            {capabilities.map(({ icon, image, title, text, points }, index) => (
+              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
+                {image ? (
+                  <div className="aspect-video overflow-hidden bg-[#e4edf2]">
+                    <img
+                      src={image}
+                      alt={`${title}配图`}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
+                    />
+                  </div>
+                ) : (
+                  <VisualPanel icon={icon} index={`0${index + 1}`} />
+                )}
                 <div className="p-6">
                   <h3 className="text-lg font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-xs text-muted">{text}</p>
+                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
                   <ul className="mt-4 space-y-2 border-t border-line pt-4">
                     {points.map((point) => (
-                      <li key={point} className="flex gap-2 text-[11px] text-muted"><Check size={14} className="mt-0.5 shrink-0 text-brand-cyan" />{point}</li>
+                      <li key={point} className="flex gap-2 text-[12px] leading-[1.65] text-muted"><Check size={14} className="mt-0.5 shrink-0 text-brand-cyan" />{point}</li>
                     ))}
                   </ul>
                 </div>
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>预约项目技术沟通</SectionCta>
+          <SectionCta onClick={openLead}>预约专家沟通项目</SectionCta>
         </Section>
 
         <section className="hero-gradient py-[72px] text-white">
           <div className="site-container flex flex-col items-center text-center">
             <p className="mb-3 text-[11px] font-[850] tracking-[0.12em] text-[#8ce2e8] uppercase">开始您的项目</p>
-            <h2 className="max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em]">告诉我们生产任务，开始规划适合项目的智慧梁厂</h2>
-            <p className="mt-3 max-w-[670px] text-sm text-white/68">只需填写基础信息和联系方式，其他项目条件可统一写在备注中。</p>
+            <h2 className="max-w-[760px] text-[clamp(30px,4vw,44px)] leading-[1.13] font-[850] tracking-[-0.03em]">告诉我们生产任务，开始规划你的预制梁产线</h2>
+            <p className="mt-3 max-w-[670px] text-[15px] text-white/68">只需填写基础信息和联系方式，其他项目条件可统一写在备注中。</p>
             <PrimaryButton onClick={openLead} className="mt-6">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
           </div>
         </section>
       </main>
 
-      <footer className="bg-[#051a2c] py-6 text-[10px] text-[#89a0b0]">
+      <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
         <div className="site-container flex justify-between gap-5 max-[720px]:flex-col">
           <span>瑞捷机械｜交钥匙智慧梁厂结构原型</span>
           <span>图片、项目名称与数据均为占位，正式发布前须复核。</span>
