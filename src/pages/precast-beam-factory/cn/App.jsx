@@ -161,7 +161,7 @@ const projects = [
     category: "高速公路",
     title: "G15 沈海高速宁波南段 TJ05 标",
     line: "2 条 T 梁产线",
-    process: "带模蒸养 · 二次张拉",
+    coreProducts: "移动台座流转系统 · 智能蒸养窑",
     product: "30 米 T 梁",
     output: "6 片/天",
   },
@@ -170,7 +170,7 @@ const projects = [
     category: "产业基地",
     title: "新型交通城建工业化基地",
     line: "4 条 T 梁产线",
-    process: "带模蒸养 · 二次张拉",
+    coreProducts: "高精度液压模板 · 产线管理系统",
     product: "30 / 40 米 T 梁",
     output: "8–12 片/天",
   },
@@ -179,7 +179,7 @@ const projects = [
     category: "高速支线",
     title: "甬莞高速洞头支线项目",
     line: "2 条节段梁产线",
-    process: "带模蒸养",
+    coreProducts: "高精度液压模板 · 智能蒸养窑",
     product: "节段梁",
     output: "6 片/天",
   },
@@ -188,7 +188,7 @@ const projects = [
     category: "高速改扩建",
     title: "广澳高速改扩建广珠段 TJ5 标",
     line: "7 条 T 梁产线",
-    process: "带模蒸养",
+    coreProducts: "混凝土输布料系统 · 组合振捣系统",
     product: "30 米 T 梁",
     output: "12 片/天",
   },
@@ -558,7 +558,7 @@ export default function App() {
       <main>
         <Hero onLead={openLead} />
 
-        <Section id="method" soft>
+        <Section id="method">
           <SectionHeader
             kicker="方案形成流程"
             title="从项目条件到可运行的整线方案"
@@ -617,7 +617,7 @@ export default function App() {
           <SectionCta onClick={openLead}>提交项目条件，获取初步方案</SectionCta>
         </Section>
 
-        <Section id="lines">
+        <Section id="lines" soft>
           <SectionHeader
             kicker="产线工艺设计"
             title="以成熟技术为基础，共同定义适合项目的新工艺"
@@ -647,7 +647,7 @@ export default function App() {
           <SectionCta onClick={openLead}>与工程师沟通生产工艺</SectionCta>
         </Section>
 
-        <Section id="products" soft>
+        <Section id="products">
           <SectionHeader kicker="六款核心产品" title="围绕关键工序，组成适合项目的产线" text="产品不是独立堆叠，而是依据梁型、节拍和场地进行组合。" />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, title, text, features }) => (
@@ -676,14 +676,14 @@ export default function App() {
           <SectionCta onClick={openLead}>获取产品详情</SectionCta>
         </Section>
 
-        <Section id="projects">
+        <Section id="projects" soft>
           <SectionHeader
             kicker="项目案例"
             title="不同项目，得到不同的产线答案"
-            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产工艺和装备配置均根据项目条件确定。"
+            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产构件和核心产品组合均根据项目条件确定。"
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {projects.map(({ image, category, title, line, process, product, output }) => (
+            {projects.map(({ image, category, title, line, coreProducts, product, output }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -714,11 +714,11 @@ export default function App() {
                   </dl>
                   <div className="mt-3 flex items-center gap-2.5 rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-2.5">
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white text-brand-blue shadow-[0_5px_16px_rgba(8,37,63,.08)]">
-                      <Workflow size={14} aria-hidden="true" />
+                      <Settings size={14} aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="block text-[9px] font-[850] text-brand-blue">核心工艺</span>
-                      <strong className="mt-0.5 block text-[11px] font-[850] text-brand-navy">{process}</strong>
+                      <span className="block text-[9px] font-[850] text-brand-blue">核心产品</span>
+                      <strong className="mt-0.5 block text-[11px] font-[850] leading-[1.45] text-brand-navy">{coreProducts}</strong>
                     </div>
                   </div>
                 </div>
@@ -728,7 +728,7 @@ export default function App() {
           <SectionCta onClick={openLead}>了解更多案例</SectionCta>
         </Section>
 
-        <Section id="capabilities" soft>
+        <Section id="capabilities">
           <SectionHeader
             kicker="为什么选择瑞捷"
             title="三种能力，把想法变成产能"
