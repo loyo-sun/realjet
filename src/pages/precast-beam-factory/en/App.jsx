@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  ArrowDown,
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   Building2,
   Cable,
   Check,
@@ -358,16 +360,16 @@ function Hero({ onLead }) {
       <div className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-            {[["Since 2008", "Industry experience"], ["100,000+ m²", "Production base"], ["60,000+ m²", "Manufacturing facilities"], ["150+", "Granted patents"]].map(([value, label]) => (
+            {[["50%", "Less Construction Footprint", "down"], ["30%", "Fewer On-site Workers", "down"], ["3×", "Faster Trolley Turnover", "up"], ["50%", "Shorter Steam-curing Time", "down"]].map(([value, label, direction]) => (
               <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
-                <strong className="block text-[21px] font-[900] text-brand-navy">{value}</strong>
+                <strong className="flex items-center justify-center gap-1 text-[21px] font-[900] text-brand-navy">
+                  {direction === "up" ? <ArrowUp size={19} strokeWidth={2.8} aria-hidden="true" /> : <ArrowDown size={19} strokeWidth={2.8} aria-hidden="true" />}
+                  {value}
+                </strong>
                 <span className="text-[11px] text-muted">{label}</span>
               </div>
             ))}
           </div>
-          <p className="mt-3 text-center text-[13px] font-[650] text-[#526b7d] max-[720px]:px-5 max-[720px]:text-[12px]">
-            Realjet is an integrated production-line solution provider with over a decade of experience and in-house engineering and manufacturing capabilities.
-          </p>
         </div>
       </div>
     </>

@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import {
+  ArrowDown,
   ArrowLeft,
   ArrowRight,
+  ArrowUp,
   Building2,
   Cable,
   Check,
@@ -358,16 +360,16 @@ function Hero({ onLead }) {
       <div className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-            {[["2008 年", "成立并持续深耕"], ["150+ 亩", "自有生产基地"], ["6 万+㎡", "装备制造厂房"], ["150+ 项", "授权专利积累"]].map(([value, label]) => (
+            {[["50%", "施工场地减少", "down"], ["30%", "现场工人减少", "down"], ["3 倍", "台车周转提升", "up"], ["50%", "蒸养时间缩短", "down"]].map(([value, label, direction]) => (
               <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
-                <strong className="block text-[21px] font-[900] text-brand-navy">{value}</strong>
+                <strong className="flex items-center justify-center gap-1 text-[21px] font-[900] text-brand-navy">
+                  {direction === "up" ? <ArrowUp size={19} strokeWidth={2.8} aria-hidden="true" /> : <ArrowDown size={19} strokeWidth={2.8} aria-hidden="true" />}
+                  {value}
+                </strong>
                 <span className="text-[11px] text-muted">{label}</span>
               </div>
             ))}
           </div>
-          <p className="mt-3 text-center text-[13px] font-[650] text-[#526b7d] max-[720px]:px-5 max-[720px]:text-[12px]">
-            瑞捷机械是一家拥有 10 年以上行业经验，并具备自主研发与生产能力的产线解决方案提供商。
-          </p>
         </div>
       </div>
     </>
