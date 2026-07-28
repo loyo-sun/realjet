@@ -41,6 +41,25 @@ import guangaoTj5Image from "../../../assets/image/guangao-expressway-guangzhu-t
 import researchDesignImage from "../../../assets/image/research-design-capability.webp";
 import manufacturingCapabilityImage from "../../../assets/image/manufacturing-capability.webp";
 import projectDeliveryCapabilityImage from "../../../assets/image/project-delivery-capability.webp";
+import smallBoxGirderImage from "../../../assets/image/precast-types/small-box-girder.webp";
+import tBeamImage from "../../../assets/image/precast-types/t-beam.webp";
+import segmentalBoxGirderImage from "../../../assets/image/precast-types/segmental-box-girder.webp";
+import uBeamImage from "../../../assets/image/precast-types/u-beam.webp";
+import hollowCoreSlabImage from "../../../assets/image/precast-types/hollow-core-slab.webp";
+import iGirderImage from "../../../assets/image/precast-types/i-girder.webp";
+import fullSpanBoxGirderImage from "../../../assets/image/precast-types/full-span-box-girder.webp";
+import doubleTSlabImage from "../../../assets/image/precast-types/double-t-slab.webp";
+import troughGirderImage from "../../../assets/image/precast-types/trough-girder.webp";
+import compositeBridgeDeckImage from "../../../assets/image/precast-types/composite-bridge-deck.webp";
+import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier.webp";
+import noiseBarrierImage from "../../../assets/image/precast-types/noise-barrier.webp";
+import precastCapBeamImage from "../../../assets/image/precast-types/precast-cap-beam.webp";
+import precastPierImage from "../../../assets/image/precast-types/precast-pier.webp";
+import precastPileImage from "../../../assets/image/precast-types/precast-pile.webp";
+import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
+import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
+import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
+import utilityTunnelImage from "../../../assets/image/precast-types/utility-tunnel.webp";
 
 const inputs = [
   {
@@ -91,6 +110,149 @@ const methods = [
     output: "稳定可验证的产能",
   },
 ];
+
+const precastTypes = [
+  {
+    image: smallBoxGirderImage,
+    category: "桥梁上部主梁",
+    title: "小箱梁",
+    scene: "高架 / 桥梁 / 市政道路",
+    text: "中空箱形截面，抗扭刚度高，适用于城市高架、互通立交以及曲线桥和斜桥。",
+  },
+  {
+    image: tBeamImage,
+    category: "桥梁上部主梁",
+    title: "T梁",
+    scene: "高速公路 / 跨线桥",
+    text: "技术成熟、造价经济，常用于20–50米跨径的公路、高速桥梁和跨线桥项目。",
+  },
+  {
+    image: segmentalBoxGirderImage,
+    category: "桥梁上部主梁",
+    title: "节段箱梁",
+    scene: "城市高架 / 跨海大桥",
+    text: "将主梁分节段工厂预制、现场拼装，适用于交通影响敏感和曲线线形复杂的桥梁。",
+  },
+  {
+    image: uBeamImage,
+    category: "桥梁上部主梁",
+    title: "U型梁",
+    scene: "城市轨道交通",
+    text: "建筑高度低，两侧腹板可兼顾防护与降噪，适合地铁和轻轨高架区间。",
+  },
+  {
+    image: hollowCoreSlabImage,
+    category: "桥梁上部主梁",
+    title: "空心板梁",
+    scene: "市政道路 / 中小桥梁",
+    text: "结构高度小、自重较轻，适用于10–25米中小跨径桥梁及净空受限项目。",
+  },
+  {
+    image: iGirderImage,
+    category: "桥梁上部主梁",
+    title: "I梁 / 工字梁",
+    scene: "高架 / 桥梁 / 组合桥",
+    text: "受力效率高，可与现浇叠合板组合使用，常用于25–45米跨径桥梁。",
+  },
+  {
+    image: fullSpanBoxGirderImage,
+    category: "桥梁上部主梁",
+    title: "整孔箱梁",
+    scene: "高铁 / 城市快速路",
+    text: "整跨预制、整体架设，抗弯抗扭能力强，适合高铁及大型城市快速路工程。",
+  },
+  {
+    image: doubleTSlabImage,
+    category: "桥梁上部主梁",
+    title: "双T梁",
+    scene: "道路下穿 / 地铁站房",
+    text: "梁板合一，吊装后可直接形成顶板或行车面，适用于大跨度下穿和盖挖结构。",
+  },
+  {
+    image: troughGirderImage,
+    category: "桥梁上部主梁",
+    title: "槽形梁",
+    scene: "轨道交通 / 人行天桥",
+    text: "平底直腹板结构，适用于地铁高架段和跨度较大的装配式人行天桥。",
+  },
+  {
+    image: compositeBridgeDeckImage,
+    category: "桥面及辅助结构",
+    title: "叠合桥面板",
+    scene: "高架 / 桥梁",
+    text: "作为钢梁、T梁或工字梁上方的永久底模，可减少高空支模和现场湿作业。",
+  },
+  {
+    image: crashBarrierImage,
+    category: "桥面及辅助结构",
+    title: "防撞护栏",
+    scene: "高架 / 高速 / 桥梁",
+    text: "用于桥梁边缘或道路中央分隔带，承担车辆防护、导向和道路隔离功能。",
+  },
+  {
+    image: noiseBarrierImage,
+    category: "桥面及辅助结构",
+    title: "声屏障板 / 柱",
+    scene: "高架 / 高速",
+    text: "用于固定吸隔声材料，降低高架道路和高速公路沿线的交通噪声影响。",
+  },
+  {
+    image: precastCapBeamImage,
+    category: "桥梁下部支撑",
+    title: "预制盖梁",
+    scene: "高架 / 桥梁",
+    text: "在墩柱顶部承托主梁，采用预制吊装可减少高空现浇作业并提高施工效率。",
+  },
+  {
+    image: precastPierImage,
+    category: "桥梁下部支撑",
+    title: "预制墩柱",
+    scene: "高架 / 桥梁",
+    text: "承担桥梁上部荷载，可通过灌浆套筒等连接方式实现现场快速装配。",
+  },
+  {
+    image: precastPileImage,
+    category: "桥梁下部支撑",
+    title: "预制管桩 / 方桩",
+    scene: "高架 / 道路基底处理",
+    text: "为桥墩或软弱地基提供深层承载力，适用于高架基础与道路地基处理。",
+  },
+  {
+    image: tunnelSegmentImage,
+    category: "地下与隧道结构",
+    title: "盾构管片",
+    scene: "地铁 / 过江及山岭隧道",
+    text: "拼装形成隧道永久承重外壳，对尺寸精度、结构强度和抗渗性能要求高。",
+  },
+  {
+    image: boxCulvertImage,
+    category: "地下与隧道结构",
+    title: "预制箱涵",
+    scene: "道路下穿 / 暗渠 / 管廊",
+    text: "闭合箱体分节预制并现场拼装，适用于道路下穿、大型暗渠和综合管廊。",
+  },
+  {
+    image: stationElementsImage,
+    category: "地下与隧道结构",
+    title: "装配式车站构件",
+    scene: "地铁车站 / 地下枢纽",
+    text: "通过预制梁、柱、楼板和侧墙拼装地下车站结构，缩短深基坑施工周期。",
+  },
+  {
+    image: utilityTunnelImage,
+    category: "地下与隧道结构",
+    title: "预制管廊",
+    scene: "城市地下综合管线",
+    text: "单舱或多舱箱体集中容纳电力、给排水、通信和燃气等市政管线。",
+  },
+];
+
+const precastCategoryConfig = {
+  桥梁上部主梁: { icon: Workflow, tone: "bg-[#e8f3f7] text-brand-blue" },
+  桥面及辅助结构: { icon: Package, tone: "bg-[#edf5ef] text-[#397354]" },
+  桥梁下部支撑: { icon: HardHat, tone: "bg-[#fff3e8] text-[#a85a18]" },
+  地下与隧道结构: { icon: Building2, tone: "bg-[#f0eef8] text-[#62528e]" },
+};
 
 const lines = [
   {
@@ -281,6 +443,106 @@ function SectionCta({ children, onClick }) {
   return (
     <div className="mt-7 flex justify-center max-[720px]:hidden">
       <PrimaryButton dark onClick={onClick}>{children}</PrimaryButton>
+    </div>
+  );
+}
+
+function PrecastTypeCarousel() {
+  const trackRef = useRef(null);
+  const [paused, setPaused] = useState(false);
+
+  const moveCarousel = (direction) => {
+    const track = trackRef.current;
+    const card = track?.querySelector("[data-precast-card]");
+    if (!track || !card) return;
+
+    const gap = 16;
+    const distance = card.getBoundingClientRect().width + gap;
+    const atStart = track.scrollLeft <= 8;
+    const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 8;
+
+    if (direction > 0 && atEnd) {
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else if (direction < 0 && atStart) {
+      track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+    } else {
+      track.scrollBy({ left: direction * distance, behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const timer = window.setInterval(() => moveCarousel(1), 5200);
+    return () => window.clearInterval(timer);
+  }, [paused]);
+
+  return (
+    <div
+      className="mt-9 border-t border-line pt-8"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocusCapture={() => setPaused(true)}
+      onBlurCapture={() => setPaused(false)}
+    >
+      <div className="mb-5">
+        <h3 className="text-[clamp(20px,2.2vw,26px)] font-[850] tracking-[-0.025em] text-brand-navy">预制构件适用类型</h3>
+        <p className="mt-2 max-w-[720px] text-[13px] leading-[1.65] text-muted">覆盖桥梁上部结构、桥面辅助结构、桥梁下部支撑以及地下与隧道结构，实际产线根据构件特点和生产任务进行设计。</p>
+      </div>
+
+      <div className="precast-carousel-shell">
+        <button
+          type="button"
+          onClick={() => moveCarousel(-1)}
+          aria-label="查看上一组预制构件"
+          className="precast-carousel-control precast-carousel-control-left"
+        >
+          <ArrowLeft size={18} aria-hidden="true" />
+        </button>
+        <div
+          ref={trackRef}
+          className="precast-type-track"
+          aria-label="预制构件适用类型轮播"
+        >
+          {precastTypes.map(({ image, category, title, scene, text }) => {
+            const { icon: Icon, tone } = precastCategoryConfig[category];
+            return (
+              <article
+                key={title}
+                data-precast-card
+                className="precast-type-card snap-start rounded-card border border-[#e6edf1] bg-white/90 p-5 shadow-[0_10px_28px_rgba(8,37,63,.045)]"
+              >
+                <div className="relative -mx-5 -mt-5 aspect-video overflow-hidden rounded-t-card bg-[#edf2f5]">
+                  <img
+                    src={image}
+                    alt={`${title}预制构件`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-500 hover:scale-[1.025]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/45 via-transparent to-transparent" />
+                  <div className={`absolute bottom-3 left-3 flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] font-[850] shadow-sm backdrop-blur-sm ${tone}`}>
+                    <Icon size={13} strokeWidth={1.9} aria-hidden="true" />
+                    <span>{category}</span>
+                  </div>
+                </div>
+                <h4 className="mt-4 text-[18px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h4>
+                <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[10px] font-[750] leading-[1.45] text-[#456072]">
+                  <MapPin size={12} className="mt-0.5 shrink-0 text-brand-blue" aria-hidden="true" />
+                  <span>{scene}</span>
+                </div>
+                <p className="mt-3 line-clamp-3 text-[12px] leading-[1.65] text-muted">{text}</p>
+              </article>
+            );
+          })}
+        </div>
+        <button
+          type="button"
+          onClick={() => moveCarousel(1)}
+          aria-label="查看下一组预制构件"
+          className="precast-carousel-control precast-carousel-control-right"
+        >
+          <ArrowRight size={18} aria-hidden="true" />
+        </button>
+      </div>
     </div>
   );
 }
@@ -615,6 +877,7 @@ export default function App() {
             </div>
           </div>
           <SectionCta onClick={openLead}>提交项目条件，获取初步方案</SectionCta>
+          <PrecastTypeCarousel />
         </Section>
 
         <Section id="lines" soft>

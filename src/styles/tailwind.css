@@ -332,6 +332,70 @@ section {
   border-radius: 7px;
 }
 
+.precast-carousel-shell {
+  position: relative;
+}
+
+.precast-type-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 2px 2px 18px;
+  background: transparent;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+}
+
+.precast-type-track::-webkit-scrollbar {
+  display: none;
+}
+
+.precast-carousel-control {
+  position: absolute;
+  top: 76px;
+  z-index: 4;
+  display: flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  color: #08253f;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 227, 233, 0.9);
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(8, 37, 63, 0.1);
+  backdrop-filter: blur(8px);
+  transform: translateY(-50%);
+  transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.precast-carousel-control:hover {
+  color: #1678aa;
+  border-color: rgba(22, 120, 170, 0.35);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.precast-carousel-control-left {
+  left: -20px;
+}
+
+.precast-carousel-control-right {
+  right: -20px;
+}
+
+.precast-type-card {
+  flex: 0 0 calc((100% - 48px) / 4);
+  min-height: 382px;
+}
+
+@media (max-width: 1000px) {
+  .precast-type-card {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
 @media (max-width: 720px) {
   .site-container {
     width: calc(100% - 28px);
@@ -387,6 +451,25 @@ section {
     grid-column: 2;
     width: fit-content;
     margin-top: -5px;
+  }
+
+  .precast-type-card {
+    flex-basis: 86%;
+    min-height: 370px;
+  }
+
+  .precast-carousel-control {
+    top: 82px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .precast-carousel-control-left {
+    left: 6px;
+  }
+
+  .precast-carousel-control-right {
+    right: 6px;
   }
 }
 
