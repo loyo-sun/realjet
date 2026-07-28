@@ -431,9 +431,12 @@ function SectionHeader({ kicker, title, text }) {
   );
 }
 
-function Section({ id, soft = false, children }) {
+function Section({ id, soft = false, compactBottom = false, children }) {
   return (
-    <section id={id} className={`py-[78px] max-[720px]:py-[62px] ${soft ? "bg-soft" : "bg-white"}`}>
+    <section
+      id={id}
+      className={`${compactBottom ? "pt-[78px] pb-[34px] max-[720px]:pt-[62px] max-[720px]:pb-[28px]" : "py-[78px] max-[720px]:py-[62px]"} ${soft ? "bg-soft" : "bg-white"}`}
+    >
       <div className="site-container">{children}</div>
     </section>
   );
@@ -484,9 +487,9 @@ function PrecastTypeCarousel() {
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
     >
-      <div className="mb-5">
+      <div className="mb-2.5">
         <h3 className="text-[clamp(20px,2.2vw,26px)] font-[850] tracking-[-0.025em] text-brand-navy">预制构件适用类型</h3>
-        <p className="mt-2 max-w-[720px] text-[13px] leading-[1.65] text-muted">覆盖桥梁上部结构、桥面辅助结构、桥梁下部支撑以及地下与隧道结构，实际产线根据构件特点和生产任务进行设计。</p>
+        <p className="mt-1.5 max-w-[760px] text-[13px] leading-[1.6] text-muted">根据不同的项目需求，可以通过产线生产不同的预制件。</p>
       </div>
 
       <div className="precast-carousel-shell">
@@ -820,7 +823,7 @@ export default function App() {
       <main>
         <Hero onLead={openLead} />
 
-        <Section id="method">
+        <Section id="method" compactBottom>
           <SectionHeader
             kicker="方案形成流程"
             title="从项目条件到可运行的整线方案"

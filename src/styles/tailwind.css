@@ -340,7 +340,7 @@ section {
   display: flex;
   gap: 16px;
   overflow-x: auto;
-  padding: 2px 2px 18px;
+  padding: 2px 2px 6px;
   background: transparent;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
@@ -387,7 +387,6 @@ section {
 
 .precast-type-card {
   flex: 0 0 calc((100% - 48px) / 4);
-  min-height: 382px;
 }
 
 @media (max-width: 1000px) {
@@ -455,7 +454,6 @@ section {
 
   .precast-type-card {
     flex-basis: 86%;
-    min-height: 370px;
   }
 
   .precast-carousel-control {
