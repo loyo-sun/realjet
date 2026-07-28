@@ -52,10 +52,10 @@ import doubleTSlabImage from "../../../assets/image/precast-types/double-t-slab.
 import troughGirderImage from "../../../assets/image/precast-types/trough-girder.webp";
 import compositeBridgeDeckImage from "../../../assets/image/precast-types/composite-bridge-deck.webp";
 import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier.webp";
-import noiseBarrierImage from "../../../assets/image/precast-types/noise-barrier.webp";
 import precastCapBeamImage from "../../../assets/image/precast-types/precast-cap-beam.webp";
 import precastPierImage from "../../../assets/image/precast-types/precast-pier.webp";
 import precastPileImage from "../../../assets/image/precast-types/precast-pile.webp";
+import pretensionedSpunConcretePilesImage from "../../../assets/image/precast-types/pretensioned-spun-concrete-piles.webp";
 import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
@@ -191,13 +191,6 @@ const precastTypes = [
     text: "用于桥梁边缘或道路中央分隔带，承担车辆防护、导向和道路隔离功能。",
   },
   {
-    image: noiseBarrierImage,
-    category: "桥面及辅助结构",
-    title: "声屏障板 / 柱",
-    scene: "高架 / 高速",
-    text: "用于固定吸隔声材料，降低高架道路和高速公路沿线的交通噪声影响。",
-  },
-  {
     image: precastCapBeamImage,
     category: "桥梁下部支撑",
     title: "预制盖梁",
@@ -214,9 +207,16 @@ const precastTypes = [
   {
     image: precastPileImage,
     category: "桥梁下部支撑",
-    title: "预制管桩 / 方桩",
-    scene: "高架 / 道路基底处理",
-    text: "为桥墩或软弱地基提供深层承载力，适用于高架基础与道路地基处理。",
+    title: "预制方桩",
+    scene: "桥梁基础 / 道路地基",
+    text: "实心方形截面，便于工厂标准化预制，为桥墩及软弱地基提供深层承载力。",
+  },
+  {
+    image: pretensionedSpunConcretePilesImage,
+    category: "桥梁下部支撑",
+    title: "预应力管桩",
+    scene: "桥梁 / 港口 / 市政基础",
+    text: "采用先张预应力与离心成型工艺，具有较高轴向承载能力，适用于桥梁、港口和市政工程基础。",
   },
   {
     image: tunnelSegmentImage,
@@ -463,30 +463,59 @@ function PrecastTypeCarousel() {
   const trackRef = useRef(null);
   const [paused, setPaused] = useState(false);
 
+  const getCardStep = (track) => {
+    const card = track?.querySelector("[data-precast-card]");
+    return card ? card.getBoundingClientRect().width + 16 : 0;
+  };
+
+  const jumpWithoutAnimation = (track, left) => {
+    track.style.scrollBehavior = "auto";
+    track.scrollLeft = left;
+    window.requestAnimationFrame(() => track.style.removeProperty("scroll-behavior"));
+  };
+
   const moveCarousel = (direction) => {
     const track = trackRef.current;
-    const card = track?.querySelector("[data-precast-card]");
-    if (!track || !card) return;
-
-    const gap = 16;
-    const distance = card.getBoundingClientRect().width + gap;
-    const atStart = track.scrollLeft <= 8;
-    const atEnd = track.scrollLeft >= track.scrollWidth - track.clientWidth - 8;
-
-    if (direction > 0 && atEnd) {
-      track.scrollTo({ left: 0, behavior: "smooth" });
-    } else if (direction < 0 && atStart) {
-      track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
-    } else {
-      track.scrollBy({ left: direction * distance, behavior: "smooth" });
-    }
+    const distance = getCardStep(track);
+    if (!track || !distance) return;
+    track.scrollBy({ left: direction * distance, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return undefined;
+
+    const moveToMiddleSet = () => {
+      const step = getCardStep(track);
+      if (step) jumpWithoutAnimation(track, step * precastTypes.length);
+    };
+
+    const frame = window.requestAnimationFrame(moveToMiddleSet);
+    window.addEventListener("resize", moveToMiddleSet);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("resize", moveToMiddleSet);
+    };
+  }, []);
 
   useEffect(() => {
     if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
     const timer = window.setInterval(() => moveCarousel(1), 5200);
     return () => window.clearInterval(timer);
   }, [paused]);
+
+  const handleLoopScroll = () => {
+    const track = trackRef.current;
+    const step = getCardStep(track);
+    if (!track || !step) return;
+
+    const setWidth = step * precastTypes.length;
+    if (track.scrollLeft >= setWidth * 2) {
+      jumpWithoutAnimation(track, track.scrollLeft - setWidth);
+    } else if (track.scrollLeft <= setWidth * 0.25) {
+      jumpWithoutAnimation(track, track.scrollLeft + setWidth);
+    }
+  };
 
   return (
     <div
@@ -514,37 +543,41 @@ function PrecastTypeCarousel() {
           ref={trackRef}
           className="precast-type-track"
           aria-label="预制构件适用类型轮播"
+          onScroll={handleLoopScroll}
         >
-          {precastTypes.map(({ image, category, title, scene, text }) => {
-            const { icon: Icon, tone } = precastCategoryConfig[category];
-            return (
-              <article
-                key={title}
-                data-precast-card
-                className="precast-type-card snap-start rounded-card border border-[#e6edf1] bg-white/90 p-5 shadow-[0_10px_28px_rgba(8,37,63,.045)]"
-              >
-                <div className="relative -mx-5 -mt-5 aspect-video overflow-hidden rounded-t-card bg-[#edf2f5]">
-                  <img
-                    src={image}
-                    alt={`${title}预制构件`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-500 hover:scale-[1.025]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/45 via-transparent to-transparent" />
-                  <div className={`absolute bottom-3 left-3 flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] font-[850] shadow-sm backdrop-blur-sm ${tone}`}>
-                    <Icon size={13} strokeWidth={1.9} aria-hidden="true" />
-                    <span>{category}</span>
+          {[0, 1, 2].map((setIndex) =>
+            precastTypes.map(({ image, category, title, scene, text }) => {
+              const { icon: Icon, tone } = precastCategoryConfig[category];
+              return (
+                <article
+                  key={`${setIndex}-${title}`}
+                  data-precast-card
+                  aria-hidden={setIndex !== 1}
+                  className="precast-type-card snap-start rounded-card border border-[#e6edf1] bg-white/90 p-5 shadow-[0_10px_28px_rgba(8,37,63,.045)]"
+                >
+                  <div className="relative -mx-5 -mt-5 aspect-video overflow-hidden rounded-t-card bg-[#edf2f5]">
+                    <img
+                      src={image}
+                      alt={`${title}预制构件`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-500 hover:scale-[1.025]"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/45 via-transparent to-transparent" />
+                    <div className={`absolute bottom-3 left-3 flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] font-[850] shadow-sm backdrop-blur-sm ${tone}`}>
+                      <Icon size={13} strokeWidth={1.9} aria-hidden="true" />
+                      <span>{category}</span>
+                    </div>
                   </div>
-                </div>
-                <h4 className="mt-4 text-[18px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h4>
-                <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[10px] font-[750] leading-[1.45] text-[#456072]">
-                  <MapPin size={12} className="mt-0.5 shrink-0 text-brand-blue" aria-hidden="true" />
-                  <span>{scene}</span>
-                </div>
-                <p className="mt-3 line-clamp-3 text-[12px] leading-[1.65] text-muted">{text}</p>
-              </article>
-            );
-          })}
+                  <h4 className="mt-4 text-[18px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h4>
+                  <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[10px] font-[750] leading-[1.45] text-[#456072]">
+                    <MapPin size={12} className="mt-0.5 shrink-0 text-brand-blue" aria-hidden="true" />
+                    <span>{scene}</span>
+                  </div>
+                  <p className="mt-3 line-clamp-3 text-[12px] leading-[1.65] text-muted">{text}</p>
+                </article>
+              );
+            }),
+          )}
         </div>
         <button
           type="button"
