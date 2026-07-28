@@ -255,14 +255,6 @@ const precastTypes = [
   },
 ];
 
-const precastCategoryConfig = {
-  桥梁上部主梁: { icon: Workflow, tone: "bg-[#e8f3f7] text-brand-blue" },
-  桥面及辅助结构: { icon: Package, tone: "bg-[#edf5ef] text-[#397354]" },
-  桥梁下部支撑: { icon: HardHat, tone: "bg-[#fff3e8] text-[#a85a18]" },
-  地下与隧道结构: { icon: Building2, tone: "bg-[#f0eef8] text-[#62528e]" },
-  港口与海岸防护: { icon: Package, tone: "bg-[#e6f5f5] text-[#197985]" },
-};
-
 const lines = [
   {
     image: lineV1Image,
@@ -546,9 +538,7 @@ function PrecastTypeCarousel() {
           onScroll={handleLoopScroll}
         >
           {[0, 1, 2].map((setIndex) =>
-            precastTypes.map(({ image, category, title, scene, text }) => {
-              const { icon: Icon, tone } = precastCategoryConfig[category];
-              return (
+            precastTypes.map(({ image, title, scene, text }) => (
                 <article
                   key={`${setIndex}-${title}`}
                   data-precast-card
@@ -562,11 +552,6 @@ function PrecastTypeCarousel() {
                       loading="lazy"
                       className="h-full w-full object-cover transition duration-500 hover:scale-[1.025]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/45 via-transparent to-transparent" />
-                    <div className={`absolute bottom-3 left-3 flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[10px] font-[850] shadow-sm backdrop-blur-sm ${tone}`}>
-                      <Icon size={13} strokeWidth={1.9} aria-hidden="true" />
-                      <span>{category}</span>
-                    </div>
                   </div>
                   <h4 className="mt-4 text-[18px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h4>
                   <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[10px] font-[750] leading-[1.45] text-[#456072]">
@@ -575,8 +560,7 @@ function PrecastTypeCarousel() {
                   </div>
                   <p className="mt-3 line-clamp-3 text-[12px] leading-[1.65] text-muted">{text}</p>
                 </article>
-              );
-            }),
+            )),
           )}
         </div>
         <button
