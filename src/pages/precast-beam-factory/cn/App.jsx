@@ -143,7 +143,7 @@ const products = [
   },
   {
     image: curingKilnImage,
-    title: "智能蒸养窑",
+    title: "智能蒸养系统",
     text: "采用带模养护与太阳能、空气能互补热源，将升降温速率控制精度保持在±2 ℃/h、窑内温差控制在≤3 ℃，养护8～14小时即可达到张拉强度，综合成本比天然气低49.6%、比生物颗粒低30.1%。",
     features: ["全程带模养护", "太阳能＋空气能", "智能温湿度控制"],
   },
@@ -366,7 +366,7 @@ function Hero({ onLead }) {
               <PrimaryButton onClick={onLead}>免费获取产线定制方案 <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
-              {["高速桥梁", "轨道交通", "市政工程"].map((tag) => (
+              {["高速公路", "桥梁", "轨道", "水利工程", "市政工程"].map((tag) => (
                 <span key={tag} className="rounded-full border border-brand-cyan/35 bg-brand-navy/30 px-2.5 py-1.5 text-[12px] text-white/75 backdrop-blur-sm">{tag}</span>
               ))}
             </div>
@@ -679,8 +679,8 @@ export default function App() {
         <Section id="projects" soft>
           <SectionHeader
             kicker="项目案例"
-            title="头部总包合作完成产线量产交付投产"
-            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产构件和核心设备组合均根据项目条件确定。"
+            title="不同项目，得到不同的产线答案"
+            text="已与国内头部施工总包单位合作，在多个项目上完成产线量产验证。"
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, category, title, line, coreEquipment, product, output }) => (
