@@ -711,7 +711,14 @@ function LeadModal({ open, onClose, title }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const body = new URLSearchParams(new FormData(form)).toString();
+    const company = form.elements.company.value.trim();
+    const country = form.elements.country.value.trim() || "国家未填写";
+    const contactName = form.elements.contact_name.value.trim();
+    const submissionTitle = `【${title}】${company}-${country}-${contactName}`;
+    const formData = new FormData(form);
+    formData.set("title", submissionTitle);
+    formData.set("subject", submissionTitle);
+    const body = new URLSearchParams(formData).toString();
     setSubmissionState("submitting");
 
     try {
@@ -754,6 +761,8 @@ function LeadModal({ open, onClose, title }) {
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
               <input type="hidden" name="inquiry_topic" value={title} />
+              <input type="text" name="title" defaultValue="" readOnly tabIndex="-1" aria-hidden="true" className="sr-only" />
+              <input type="hidden" name="subject" defaultValue="" />
               <input type="hidden" name="bot-field" />
               <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
                 <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
