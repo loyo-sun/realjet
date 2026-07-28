@@ -8,7 +8,6 @@ V1 中文版已定稿，并在此基础上建立中英文双语体系。
 - 核心客户：需要按场地、梁型、产量和工期定制预制梁产线的基础设施项目业主、总包方及生产单位
 - 中文路径：`/marketing/precast-beam-factory/cn/`
 - 英文路径：`/marketing/precast-beam-factory/en/`
-- 旧中文路径：`/marketing/precast-beam-factory/zh-cn/`，在 Netlify 上会自动跳转至新版中文路径
 
 ## V1 页面结构
 

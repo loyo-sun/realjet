@@ -679,7 +679,7 @@ export default function App() {
         <Section id="projects" soft>
           <SectionHeader
             kicker="项目案例"
-            title="已与国内头部施工总包单位合作，在多个项目上完成产线量产验证"
+            title="头部总包合作完成产线量产交付投产"
             text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产构件和核心设备组合均根据项目条件确定。"
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
@@ -695,8 +695,7 @@ export default function App() {
                   <span className="absolute top-3 left-3 rounded-full border border-white/20 bg-brand-navy/55 px-2.5 py-1 text-[10px] font-[850] text-white backdrop-blur-sm">
                     {category}
                   </span>
-                  <div className="absolute right-3 bottom-3 flex items-center gap-1.5 rounded-lg border border-white/15 bg-brand-navy/55 px-2.5 py-1.5 text-white backdrop-blur-sm">
-                    <span className="text-[9px] text-white/60">构件类型</span>
+                  <div className="absolute right-3 bottom-3 rounded-lg border border-white/15 bg-brand-navy/55 px-2.5 py-1.5 text-white backdrop-blur-sm">
                     <strong className="text-[13px] font-[900]">{product}</strong>
                   </div>
                 </div>
@@ -734,7 +733,7 @@ export default function App() {
             title="三种能力，把想法变成产能"
             text="瑞捷机械成立于2008年，是一家集产线规划、装备研发制造、安装调试、试生产和运行支持于一体的智慧梁厂解决方案提供商。"
           />
-          <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white shadow-card max-[720px]:grid-cols-2">
+          <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white text-center shadow-card max-[720px]:grid-cols-2">
             {companyProofs.map(({ value, label }) => (
               <div key={label} className="border-r border-line px-5 py-4 last:border-r-0 max-[720px]:border-b max-[720px]:nth-[2n]:border-r-0 max-[720px]:nth-[n+3]:border-b-0">
                 <strong className="block text-[20px] font-[900] tracking-[-0.025em] text-brand-navy">{value}</strong>

@@ -4,8 +4,3 @@
 
 [build.environment]
   NODE_VERSION = "22"
-
-[[redirects]]
-  from = "/marketing/precast-beam-factory/zh-cn/*"
-  to = "/marketing/precast-beam-factory/cn/:splat"
-  status = 301

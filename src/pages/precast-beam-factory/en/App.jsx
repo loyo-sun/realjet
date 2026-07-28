@@ -734,7 +734,7 @@ export default function App() {
             title="Three Capabilities That Turn Ideas into Production Capacity"
             text="Founded in 2008, Realjet provides integrated smart precast beam factory solutions covering line planning, equipment engineering and manufacturing, installation, trial production, and operating support."
           />
-          <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white shadow-card max-[720px]:grid-cols-2">
+          <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white text-center shadow-card max-[720px]:grid-cols-2">
             {companyProofs.map(({ value, label }) => (
               <div key={label} className="border-r border-line px-5 py-4 last:border-r-0 max-[720px]:border-b max-[720px]:nth-[2n]:border-r-0 max-[720px]:nth-[n+3]:border-b-0">
                 <strong className="block text-[20px] font-[900] tracking-[-0.025em] text-brand-navy">{value}</strong>
