@@ -159,18 +159,18 @@ const projects = [
   {
     image: shenhaiTj05Image,
     category: "高速公路",
-    title: "G15 沈海高速宁波南段 TJ05 标",
+    title: "G15沈海高速宁波南段TJ05标",
     line: "2 条 T 梁产线",
-    coreProducts: "移动台座流转系统 · 智能蒸养窑",
+    coreEquipment: "30米T梁带模台车&产线流转系统，鱼雷罐、布料机、高频振捣系统、天然气蒸汽蒸养系统，智能张拉机器人",
     product: "30 米 T 梁",
     output: "6 片/天",
   },
   {
     image: wenzhouBayBaseImage,
     category: "产业基地",
-    title: "新型交通城建工业化基地",
+    title: "温州湾新区新型交通城建工业化基地",
     line: "4 条 T 梁产线",
-    coreProducts: "高精度液压模板 · 产线管理系统",
+    coreEquipment: "30米/40米T梁带模台车&产线流转系统，液压开合模系统，附着式振捣系统，智能输布料系统，太阳能&空气能蒸养系统",
     product: "30 / 40 米 T 梁",
     output: "8–12 片/天",
   },
@@ -179,18 +179,18 @@ const projects = [
     category: "高速支线",
     title: "甬莞高速洞头支线项目",
     line: "2 条节段梁产线",
-    coreProducts: "高精度液压模板 · 智能蒸养窑",
+    coreEquipment: "300吨带模台车&产线流转系统，液压开合模系统，附着式振捣系统，智能输布料系统，太阳能&空气能蒸养系统",
     product: "节段梁",
     output: "6 片/天",
   },
   {
     image: guangaoTj5Image,
-    category: "高速改扩建",
-    title: "广澳高速改扩建广珠段 TJ5 标",
-    line: "7 条 T 梁产线",
-    coreProducts: "混凝土输布料系统 · 组合振捣系统",
-    product: "30 米 T 梁",
-    output: "12 片/天",
+    category: "产线升级",
+    title: "川主寺至红原高速项目（产线升级）",
+    line: "既有产线升级",
+    coreEquipment: "智能输布料系统（2套皮带机＋4套布料机）",
+    product: "20 米 T 梁",
+    output: "20 片/天",
   },
 ];
 
@@ -304,7 +304,7 @@ function Header({ onLead }) {
   const nav = [
     ["解决方案", "#method"],
     ["产线工艺", "#lines"],
-    ["核心产品", "#products"],
+    ["核心设备", "#products"],
     ["项目案例", "#projects"],
     ["企业能力", "#capabilities"],
   ];
@@ -679,11 +679,11 @@ export default function App() {
         <Section id="projects" soft>
           <SectionHeader
             kicker="项目案例"
-            title="不同项目，得到不同的产线答案"
-            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产构件和核心产品组合均根据项目条件确定。"
+            title="已与国内头部施工总包单位合作，在多个项目上完成产线量产验证"
+            text="以下案例来自瑞捷已签单及已交付项目，产线规模、生产构件和核心设备组合均根据项目条件确定。"
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {projects.map(({ image, category, title, line, coreProducts, product, output }) => (
+            {projects.map(({ image, category, title, line, coreEquipment, product, output }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -696,8 +696,8 @@ export default function App() {
                     {category}
                   </span>
                   <div className="absolute right-3 bottom-3 flex items-center gap-1.5 rounded-lg border border-white/15 bg-brand-navy/55 px-2.5 py-1.5 text-white backdrop-blur-sm">
-                    <span className="text-[9px] text-white/60">日产能</span>
-                    <strong className="text-[13px] font-[900]">{output}</strong>
+                    <span className="text-[9px] text-white/60">构件类型</span>
+                    <strong className="text-[13px] font-[900]">{product}</strong>
                   </div>
                 </div>
                 <div className="p-4.5">
@@ -708,8 +708,8 @@ export default function App() {
                       <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{line}</dd>
                     </div>
                     <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
-                      <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">生产构件</dt>
-                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{product}</dd>
+                      <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">日产能</dt>
+                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{output}</dd>
                     </div>
                   </dl>
                   <div className="mt-3 flex items-center gap-2.5 rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-2.5">
@@ -717,8 +717,8 @@ export default function App() {
                       <Settings size={14} aria-hidden="true" />
                     </div>
                     <div>
-                      <span className="block text-[9px] font-[850] text-brand-blue">核心产品</span>
-                      <strong className="mt-0.5 block text-[11px] font-[850] leading-[1.45] text-brand-navy">{coreProducts}</strong>
+                      <span className="block text-[9px] font-[850] text-brand-blue">核心设备</span>
+                      <strong className="mt-0.5 block text-[11px] font-[850] leading-[1.45] text-brand-navy">{coreEquipment}</strong>
                     </div>
                   </div>
                 </div>
