@@ -60,6 +60,7 @@ import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segme
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
 import utilityTunnelImage from "../../../assets/image/precast-types/utility-tunnel.webp";
+import accropodeImage from "../../../assets/image/precast-types/accropode.webp";
 
 const inputs = [
   {
@@ -245,6 +246,13 @@ const precastTypes = [
     scene: "城市地下综合管线",
     text: "单舱或多舱箱体集中容纳电力、给排水、通信和燃气等市政管线。",
   },
+  {
+    image: accropodeImage,
+    category: "港口与海岸防护",
+    title: "扭王字块",
+    scene: "港口防波堤 / 海岸防护",
+    text: "依靠特殊外形和块体间咬合形成稳定护面，适用于港口防波堤、海岸防护及其他受浪结构。",
+  },
 ];
 
 const precastCategoryConfig = {
@@ -252,6 +260,7 @@ const precastCategoryConfig = {
   桥面及辅助结构: { icon: Package, tone: "bg-[#edf5ef] text-[#397354]" },
   桥梁下部支撑: { icon: HardHat, tone: "bg-[#fff3e8] text-[#a85a18]" },
   地下与隧道结构: { icon: Building2, tone: "bg-[#f0eef8] text-[#62528e]" },
+  港口与海岸防护: { icon: Package, tone: "bg-[#e6f5f5] text-[#197985]" },
 };
 
 const lines = [
@@ -350,7 +359,7 @@ const projects = [
     category: "产线升级",
     title: "川主寺至红原高速项目（产线升级）",
     line: "既有产线升级",
-    coreEquipment: ["智能输布料", "2 套皮带机", "4 套布料机"],
+    coreEquipment: ["智能输布料", "皮带机", "布料机"],
     product: "20 米 T 梁",
     output: "20 片/天",
   },
@@ -445,7 +454,7 @@ function Section({ id, soft = false, compactBottom = false, children }) {
 function SectionCta({ children, onClick }) {
   return (
     <div className="mt-7 flex justify-center max-[720px]:hidden">
-      <PrimaryButton dark onClick={onClick}>{children}</PrimaryButton>
+      <PrimaryButton dark onClick={() => onClick(children)}>{children}</PrimaryButton>
     </div>
   );
 }
@@ -583,7 +592,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1000px]:hidden" aria-label="主导航">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button onClick={onLead} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">免费获取产线定制方案</button>
+        <button onClick={() => onLead("免费获取产线定制方案")} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">免费获取产线定制方案</button>
         <LanguageSwitcher current="cn" />
         <button
           type="button"
@@ -628,7 +637,7 @@ function Hero({ onLead }) {
               从产线规划、设备选型和定制，到安装及产能调优，由我们统筹交付。
             </p>
             <div className="mt-7.5 max-[720px]:hidden">
-              <PrimaryButton onClick={onLead}>免费获取产线定制方案 <ArrowRight size={16} /></PrimaryButton>
+              <PrimaryButton onClick={() => onLead("免费获取产线定制方案")}>免费获取产线定制方案 <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
               {["高速公路", "桥梁", "轨道", "水利工程", "市政工程"].map((tag) => (
@@ -657,7 +666,7 @@ function Hero({ onLead }) {
   );
 }
 
-function LeadModal({ open, onClose }) {
+function LeadModal({ open, onClose, title }) {
   const [submitted, setSubmitted] = useState(false);
   const [submissionState, setSubmissionState] = useState("idle");
   const closeRef = useRef(null);
@@ -723,10 +732,11 @@ function LeadModal({ open, onClose }) {
           </div>
         ) : (
           <>
-            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">免费获取产线定制方案</h3>
+            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
             <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
+              <input type="hidden" name="inquiry_topic" value={title} />
               <input type="hidden" name="bot-field" />
               <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
                 <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
@@ -799,8 +809,12 @@ function ContactEmail() {
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [leadTitle, setLeadTitle] = useState("免费获取产线定制方案");
   const [progress, setProgress] = useState(0);
-  const openLead = () => setModalOpen(true);
+  const openLead = (title = "免费获取产线定制方案") => {
+    setLeadTitle(title);
+    setModalOpen(true);
+  };
 
   useEffect(() => {
     const update = () => {
@@ -1052,7 +1066,7 @@ export default function App() {
             <p className="mb-2 text-[13px] font-[850] tracking-[0.1em] text-[#8ce2e8] uppercase">开始您的项目</p>
             <h2 className="max-w-[760px] text-[clamp(28px,3.4vw,40px)] leading-[1.16] font-[850] tracking-[-0.03em]">获取专属于您的解决方案</h2>
             <p className="mt-3 max-w-[670px] text-[15px] text-white/68">告诉我们生产任务，开始规划你的预制梁产线</p>
-            <PrimaryButton onClick={openLead} className="mt-6 max-[720px]:hidden">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
+            <PrimaryButton onClick={() => openLead("打开项目需求表")} className="mt-6 max-[720px]:hidden">打开项目需求表 <ArrowRight size={16} /></PrimaryButton>
           </div>
         </section>
       </main>
@@ -1066,11 +1080,11 @@ export default function App() {
         </div>
       </footer>
 
-      <button onClick={openLead} className="fixed right-3.5 bottom-3.5 left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex">
+      <button onClick={() => openLead("免费获取产线定制方案")} className="fixed right-3.5 bottom-3.5 left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex">
         免费获取产线定制方案 <ArrowRight size={16} />
       </button>
 
-      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} title={leadTitle} />
     </>
   );
 }
