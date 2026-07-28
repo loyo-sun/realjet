@@ -161,7 +161,7 @@ const projects = [
     category: "高速公路",
     title: "G15沈海高速宁波南段TJ05标",
     line: "2 条 T 梁产线",
-    coreEquipment: "30米T梁带模台车&产线流转系统，鱼雷罐、布料机、高频振捣系统、天然气蒸汽蒸养系统，智能张拉机器人",
+    coreEquipment: ["带模台车流转", "智能输布料", "高频振捣", "蒸汽蒸养", "智能张拉"],
     product: "30 米 T 梁",
     output: "6 片/天",
   },
@@ -170,7 +170,7 @@ const projects = [
     category: "产业基地",
     title: "温州湾新区新型交通城建工业化基地",
     line: "4 条 T 梁产线",
-    coreEquipment: "30米/40米T梁带模台车&产线流转系统，液压开合模系统，附着式振捣系统，智能输布料系统，太阳能&空气能蒸养系统",
+    coreEquipment: ["带模台车流转", "液压开合模", "附着式振捣", "智能输布料", "复合能源蒸养"],
     product: "30 / 40 米 T 梁",
     output: "8–12 片/天",
   },
@@ -179,7 +179,7 @@ const projects = [
     category: "高速支线",
     title: "甬莞高速洞头支线项目",
     line: "2 条节段梁产线",
-    coreEquipment: "300吨带模台车&产线流转系统，液压开合模系统，附着式振捣系统，智能输布料系统，太阳能&空气能蒸养系统",
+    coreEquipment: ["300 吨带模台车", "液压开合模", "附着式振捣", "智能输布料", "复合能源蒸养"],
     product: "节段梁",
     output: "6 片/天",
   },
@@ -188,7 +188,7 @@ const projects = [
     category: "产线升级",
     title: "川主寺至红原高速项目（产线升级）",
     line: "既有产线升级",
-    coreEquipment: "智能输布料系统（2套皮带机＋4套布料机）",
+    coreEquipment: ["智能输布料", "2 套皮带机", "4 套布料机"],
     product: "20 米 T 梁",
     output: "20 片/天",
   },
@@ -684,7 +684,7 @@ export default function App() {
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, category, title, line, coreEquipment, product, output }) => (
-              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
+              <article key={title} className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
                     src={image}
@@ -699,8 +699,8 @@ export default function App() {
                     <strong className="text-[13px] font-[900]">{product}</strong>
                   </div>
                 </div>
-                <div className="p-4.5">
-                  <h3 className="text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy">{title}</h3>
+                <div className="flex flex-1 flex-col p-4.5">
+                  <h3 className="line-clamp-2 min-h-[44px] text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy max-[720px]:min-h-0">{title}</h3>
                   <dl className="mt-3 flex flex-wrap gap-2">
                     <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
                       <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">产线规模</dt>
@@ -711,13 +711,20 @@ export default function App() {
                       <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{output}</dd>
                     </div>
                   </dl>
-                  <div className="mt-3 flex items-center gap-2.5 rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-2.5">
-                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white text-brand-blue shadow-[0_5px_16px_rgba(8,37,63,.08)]">
-                      <Settings size={14} aria-hidden="true" />
+                  <div className="mt-3 min-h-[152px] rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-3 max-[720px]:min-h-0">
+                    <div className="flex items-center gap-1.5 text-brand-blue">
+                      <Settings size={13} aria-hidden="true" />
+                      <span className="text-[10px] font-[850] tracking-[0.04em]">核心设备</span>
                     </div>
-                    <div>
-                      <span className="block text-[9px] font-[850] text-brand-blue">核心设备</span>
-                      <strong className="mt-0.5 block text-[11px] font-[850] leading-[1.45] text-brand-navy">{coreEquipment}</strong>
+                    <div className="mt-2 grid grid-cols-2 gap-1.5">
+                      {coreEquipment.map((equipment) => (
+                        <span
+                          key={equipment}
+                          className="flex min-h-8 items-center rounded-md border border-brand-blue/10 bg-white px-2 py-1 text-[10px] font-[750] leading-[1.3] text-brand-navy"
+                        >
+                          {equipment}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
