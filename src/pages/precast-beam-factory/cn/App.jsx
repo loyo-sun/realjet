@@ -324,7 +324,7 @@ const projects = [
     category: "高速公路",
     title: "G15沈海高速宁波南段TJ05标",
     line: "2 条 T 梁产线",
-    coreEquipment: ["带模台车流转", "智能输布料", "高频振捣", "蒸汽蒸养", "智能张拉"],
+    coreEquipment: ["带模台车流转", "智能输布料", "附着式振捣", "蒸汽蒸养", "智能张拉"],
     product: "30 米 T 梁",
     output: "6 片/天",
   },
