@@ -1058,7 +1058,6 @@ export default function App() {
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
           <span>© 2026 长沙瑞捷机械科技股份有限公司 版权所有</span>
           <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
-            <span>装配式梁板智慧生产线交钥匙解决方案</span>
             <ContactEmail />
           </div>
         </div>
