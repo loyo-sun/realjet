@@ -46,12 +46,12 @@ const inputs = [
   {
     icon: Package,
     title: "生产任务",
-    text: "梁型、数量、工期与目标日产量，明确投产节点和产能爬坡要求",
+    text: "产品类型、数量、工期与目标日产量，明确投产节点和产能爬坡要求",
   },
   {
     icon: MapPin,
-    title: "场地边界",
-    text: "面积、形状、道路、起重与存梁条件，识别布局和物流限制",
+    title: "场地条件",
+    text: "面积、形状、道路、起重与存放条件，识别布局和物流限制",
   },
   {
     icon: CloudSun,
@@ -357,10 +357,10 @@ function Hero({ onLead }) {
         <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[610px] max-[720px]:items-center max-[720px]:py-16">
           <div className="w-[min(610px,51%)] max-[1000px]:w-[60%] max-[720px]:w-full">
             <h1 className="max-w-[610px] text-[clamp(40px,3.65vw,58px)] leading-[1.18] font-[900] tracking-[-0.05em] max-[1000px]:text-[clamp(38px,5.2vw,50px)] max-[720px]:text-[34px]">
-              一站式预制梁场智能产线解决方案
+              一站式预制件智能产线解决方案
             </h1>
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
-              从产线规划、装备制造到安装试生产，由我们统筹交付。
+              从产线规划、设备选型和定制，到安装及产能调优，由我们统筹交付。
             </p>
             <div className="mt-7.5 max-[720px]:hidden">
               <PrimaryButton onClick={onLead}>免费获取产线定制方案 <ArrowRight size={16} /></PrimaryButton>
@@ -570,7 +570,7 @@ export default function App() {
               <div className="solution-panel-header">
                 <span className="section-index">01 · 项目输入</span>
                 <h3>先把生产任务与<br />项目约束定义清楚</h3>
-                <p className="solution-panel-description is-dark">生产任务、场地边界、人员资源和项目标准，共同决定产线工艺、布局和装备组合。</p>
+                <p className="solution-panel-description is-dark">生产任务、场地条件、人员资源和项目标准，共同决定产线工艺、布局和装备组合。</p>
               </div>
               <div className="solution-input-list">
                 {inputs.map(({ icon: Icon, title, text }, index) => (
@@ -595,7 +595,7 @@ export default function App() {
               <div className="solution-panel-header">
                 <span className="section-index text-brand-blue">02 · 瑞捷工作流程</span>
                 <h3>产线设计四步法</h3>
-                <p className="solution-panel-description">从需求诊断、工艺规划、设备选型到产能调优，每一步都围绕项目最终产能展开。</p>
+                <p className="solution-panel-description">从需求诊断、工艺规划、设备选型到产能调优，<br />每一步都围绕项目最终产能展开。</p>
               </div>
               <div className="delivery-flow">
                 {methods.map(({ icon: Icon, title, text, output }, index) => (
@@ -619,9 +619,9 @@ export default function App() {
 
         <Section id="lines" soft>
           <SectionHeader
-            kicker="产线工艺设计"
+            kicker="典型产线工艺"
             title="以成熟技术为基础，共同定义适合项目的新工艺"
-            text="我们已有成熟的预制梁产线工艺，对于特殊项目需求，与您共同完成工艺研究、方案设计、装备开发和生产验证。"
+            text="我们已积累各类型预制件产线成熟工艺，对于特殊项目要求，与您共同完成工艺研究、方案设计、装备开发和生产验证。"
           />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, kicker, title, visual, text }) => (
@@ -648,7 +648,7 @@ export default function App() {
         </Section>
 
         <Section id="products">
-          <SectionHeader kicker="六款核心产品" title="围绕关键工序，组成适合项目的产线" text="产品不是独立堆叠，而是依据梁型、节拍和场地进行组合。" />
+          <SectionHeader kicker="产线核心设备" title="围绕关键工序，组成适合项目的产线" text="不是简单地堆叠设备，而是根据产品、节拍和场地进行最佳组合。" />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, title, text, features }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
@@ -673,7 +673,7 @@ export default function App() {
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>获取产品详情</SectionCta>
+          <SectionCta onClick={openLead}>获取更多设备信息</SectionCta>
         </Section>
 
         <Section id="projects" soft>
