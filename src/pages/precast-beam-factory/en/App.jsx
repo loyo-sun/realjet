@@ -45,21 +45,14 @@ import smallBoxGirderImage from "../../../assets/image/precast-types/small-box-g
 import tBeamImage from "../../../assets/image/precast-types/t-beam.webp";
 import segmentalBoxGirderImage from "../../../assets/image/precast-types/segmental-box-girder.webp";
 import uBeamImage from "../../../assets/image/precast-types/u-beam.webp";
-import hollowCoreSlabImage from "../../../assets/image/precast-types/hollow-core-slab.webp";
 import iGirderImage from "../../../assets/image/precast-types/i-girder.webp";
 import fullSpanBoxGirderImage from "../../../assets/image/precast-types/full-span-box-girder.webp";
 import doubleTSlabImage from "../../../assets/image/precast-types/double-t-slab.webp";
 import troughGirderImage from "../../../assets/image/precast-types/trough-girder.webp";
-import compositeBridgeDeckImage from "../../../assets/image/precast-types/composite-bridge-deck.webp";
 import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier.webp";
-import precastCapBeamImage from "../../../assets/image/precast-types/precast-cap-beam.webp";
-import precastPierImage from "../../../assets/image/precast-types/precast-pier.webp";
-import precastPileImage from "../../../assets/image/precast-types/precast-pile.webp";
-import pretensionedSpunConcretePilesImage from "../../../assets/image/precast-types/pretensioned-spun-concrete-piles.webp";
 import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
-import utilityTunnelImage from "../../../assets/image/precast-types/utility-tunnel.webp";
 import accropodeImage from "../../../assets/image/precast-types/accropode.webp";
 
 const inputs = [
@@ -76,7 +69,7 @@ const inputs = [
   {
     icon: CloudSun,
     title: "Workforce & Resources",
-    text: "Skilled labor, climate, utilities, concrete supply, and local maintenance capability",
+    text: "Skilled labour, climate, utilities, concrete supply, and local maintenance capability",
   },
   {
     icon: FileCheck,
@@ -89,30 +82,37 @@ const methods = [
   {
     icon: Search,
     title: "Needs Analysis",
-    text: "Translate “We need a precast production line” into “Produce Y box girders within X months to meet the project schedule,” then define the project scale, schedule, product specifications, and operating constraints.",
+    text: "Define the required products, quantities, schedule, specifications and operating constraints, then translate them into a clear production brief.",
     output: "Defined production brief",
   },
   {
     icon: Workflow,
     title: "Process Engineering",
-    text: "Optimize the layout, balance takt times, remove bottlenecks, and build in flexibility to maximize line efficiency without sacrificing production adaptability.",
+    text: "Optimise the layout, balance takt times, remove bottlenecks and build in the flexibility required for efficient production.",
     output: "Process and layout design",
   },
   {
     icon: Settings,
     title: "Equipment Selection",
-    text: "Select equipment that fits the process: nothing beyond the process requirement, nothing incompatible with local conditions, and nothing that cannot be maintained locally.",
+    text: "Select equipment that fits the process, local conditions and available maintenance capability.",
     output: "Project-fit equipment package",
   },
   {
     icon: CheckCircle,
-    title: "Capacity Optimization",
-    text: "Equipment arrival is the starting point. We continue through installation, standalone commissioning, integrated line commissioning, trial production, capacity validation, and ongoing optimization.",
+    title: "Capacity Optimisation",
+    text: "Continue from installation through commissioning, trial production and capacity validation until the line reaches stable output.",
     output: "Stable, validated capacity",
   },
 ];
 
 const precastTypes = [
+  {
+    image: tBeamImage,
+    title: "T-Girder",
+    fullName: "Precast concrete T-girder",
+    scene: "Expressways / Overpasses",
+    text: "A mature, cost-effective solution commonly used for highway and overpass projects with spans of 20–50 m.",
+  },
   {
     image: smallBoxGirderImage,
     title: "Box Girder",
@@ -121,67 +121,46 @@ const precastTypes = [
     text: "Its hollow box section provides high torsional stiffness for urban viaducts, interchanges, curved bridges, and skew bridges.",
   },
   {
-    image: tBeamImage,
-    title: "T-girder",
-    fullName: "Precast concrete T-girder",
-    scene: "Expressways / Overpasses",
-    text: "A mature, cost-effective solution commonly used for highway and overpass projects with spans of 20–50 m.",
-  },
-  {
     image: segmentalBoxGirderImage,
     title: "Segmental Box Girder",
     fullName: "Precast segmental box girder",
     scene: "Urban Viaducts / Sea-crossing Bridges",
-    text: "Factory-cast segments are assembled on site, suiting complex bridge geometry and projects where traffic disruption must be minimized.",
+    text: "Factory-cast segments are assembled on site, suiting complex bridge geometry and projects where traffic disruption must be minimised.",
   },
   {
     image: uBeamImage,
-    title: "U-girder",
+    title: "U-Girder",
     fullName: "Precast concrete U-girder",
     scene: "Urban Rail",
     text: "Its low structural depth and side webs provide protection and noise shielding for elevated metro and light-rail sections.",
   },
   {
-    image: hollowCoreSlabImage,
-    title: "Voided Slab",
-    fullName: "Precast prestressed voided slab",
-    scene: "Municipal Roads / Small and Medium Bridges",
-    text: "Low structural depth and reduced self-weight suit bridges with spans of 10–25 m and projects with restricted clearance.",
-  },
-  {
     image: iGirderImage,
-    title: "I-girder",
+    title: "I-Girder",
     fullName: "Precast concrete I-girder",
     scene: "Viaducts / Bridges / Composite Bridges",
     text: "Its efficient section works with a cast-in-place composite deck and is commonly used for bridge spans of 25–45 m.",
   },
   {
     image: fullSpanBoxGirderImage,
-    title: "Full-span Box Girder",
+    title: "Full-Span Box Girder",
     fullName: "Full-span precast box girder",
     scene: "High-speed Rail / Urban Expressways",
     text: "Cast as a complete span and erected as one unit, it provides high flexural and torsional capacity for major transport projects.",
   },
   {
     image: doubleTSlabImage,
-    title: "Double-tee",
+    title: "Double-Tee",
     fullName: "Precast concrete double-tee",
     scene: "Road Underpasses / Metro Stations",
     text: "Its integrated beam-and-slab section can directly form a roof slab or traffic surface after erection.",
   },
   {
     image: troughGirderImage,
-    title: "Channel Girder",
-    fullName: "Precast concrete channel girder",
+    title: "Trough Girder",
+    fullName: "Precast concrete trough girder",
     scene: "Rail / Pedestrian Bridges",
     text: "Its flat bottom slab and straight webs suit elevated metro sections and long-span prefabricated pedestrian bridges.",
-  },
-  {
-    image: compositeBridgeDeckImage,
-    title: "Deck Panel",
-    fullName: "Partial-depth precast concrete deck panel",
-    scene: "Viaducts / Bridges",
-    text: "Used as stay-in-place formwork over steel, T-, or I-girders, it reduces elevated formwork and on-site wet construction.",
   },
   {
     image: crashBarrierImage,
@@ -189,34 +168,6 @@ const precastTypes = [
     fullName: "Precast concrete traffic barrier",
     scene: "Viaducts / Expressways / Bridges",
     text: "Installed along bridge edges or road medians to provide vehicle containment, guidance, and traffic separation.",
-  },
-  {
-    image: precastCapBeamImage,
-    title: "Pier Cap",
-    fullName: "Precast concrete pier cap",
-    scene: "Viaducts / Bridges",
-    text: "Installed on pier columns to support the main girders, reducing elevated cast-in-place work and improving efficiency.",
-  },
-  {
-    image: precastPierImage,
-    title: "Pier Column",
-    fullName: "Precast concrete pier column",
-    scene: "Viaducts / Bridges",
-    text: "Carries superstructure loads and can be rapidly assembled using grouted splice couplers or other connection systems.",
-  },
-  {
-    image: precastPileImage,
-    title: "Square Pile",
-    fullName: "Precast concrete square pile",
-    scene: "Bridge Foundations / Road Foundations",
-    text: "Its solid square section supports standardized production and provides deep bearing capacity for bridge piers and weak ground.",
-  },
-  {
-    image: pretensionedSpunConcretePilesImage,
-    title: "Spun Concrete Pile",
-    fullName: "Prestressed spun concrete pile",
-    scene: "Bridges / Ports / Municipal Foundations",
-    text: "Pretensioning and centrifugal casting provide high axial load capacity for bridge, port, and municipal foundations.",
   },
   {
     image: tunnelSegmentImage,
@@ -234,129 +185,135 @@ const precastTypes = [
   },
   {
     image: stationElementsImage,
-    title: "Station Elements",
+    title: "Station Structural Elements",
     fullName: "Precast station structural elements",
     scene: "Metro Stations / Underground Hubs",
     text: "Beams, columns, slabs, and side walls are assembled into underground station structures to shorten construction schedules.",
   },
   {
-    image: utilityTunnelImage,
-    title: "Utility Tunnel",
-    fullName: "Precast concrete utility-tunnel unit",
-    scene: "Urban Underground Utilities",
-    text: "Single- or multi-cell units accommodate power, water, communications, gas, and other municipal utilities.",
-  },
-  {
     image: accropodeImage,
-    title: "Tetrapod",
-    fullName: "Concrete tetrapod armor unit",
+    title: "Accropode Armour Unit",
+    fullName: "Concrete Accropode armour unit",
     scene: "Port Breakwaters / Coastal Protection",
-    text: "Its interlocking geometry forms a stable armor layer for breakwaters, coastal protection, and other wave-exposed structures.",
+    text: "Its interlocking geometry forms a stable armour layer for breakwaters, coastal protection and other wave-exposed structures.",
   },
 ];
 
 const lines = [
   {
     image: lineV1Image,
-    kicker: "Baseline Process Configuration",
+    alt: "Realjet automated precast girder production line V1.0",
+    kicker: "Standard Process Configuration",
     title: "Automated Precast Girder Production Line V1.0",
-    visual: "1/day",
+    visual: "1 girder/day",
     visualLabel: "Daily output: 1 girder",
-    text: "Designed for projects with defined girder types and stable output requirements, the line combines hydraulic mould opening and closing, mobile casting beds, external form vibration, and single-stage prestressing. Casting beds, moulds, and curing cycles are configured around the production requirements.",
+    text: "Designed for projects with standardised girder types and stable output targets, the line integrates hydraulic mould opening and closing, rail-mounted mould transfer, external form vibration and single-stage prestressing. Moulds, workstations and curing cycles are configured to match the production plan.",
   },
   {
     image: lineV2Image,
-    kicker: "High-turnover Process Configuration",
+    alt: "Realjet automated precast girder production line V2.0",
+    kicker: "High-Output Process Configuration",
     title: "Automated Precast Girder Production Line V2.0",
-    visual: "2–4/day",
+    visual: "2–4 girders/day",
     visualLabel: "Daily output: 2–4 girders",
-    text: "Designed for schedule-critical, high-output, or space-constrained projects, the line combines steam curing in the mould, two-stage prestressing, and mould opening and closing at any workstation. Dedicated workstations and automated transfer improve turnover efficiency and production flexibility.",
+    text: "Designed for schedule-critical, high-output or space-constrained projects, the line integrates in-mould steam curing, two-stage prestressing and mould opening and closing at any workstation. Dedicated workstations and automated transfer improve throughput and production flexibility.",
   },
   {
     image: segmentalLineImage,
+    alt: "Realjet automated segmental girder production line",
     kicker: "Segmental Girder Process Configuration",
     title: "Automated Segmental Girder Production Line",
-    visual: "2–3/day",
+    visual: "2–3 segments/day",
     visualLabel: "Daily output: 2–3 segments",
-    text: "Designed for segmental box girders and flexible multi-size production, the line combines match-cast positioning, dedicated segment moulds, and automated steam curing. Production takt time is optimized around segment geometry and the erection schedule for stable, efficient turnover.",
+    text: "Designed for segmental box girders and flexible production across multiple sizes, the line integrates match-cast positioning, dedicated segment moulds and automated steam curing. Takt time is optimised for the segment geometry and erection schedule to maintain stable output and efficient mould utilisation.",
   },
 ];
 
 const products = [
   {
     image: hydraulicFormworkImage,
-    title: "High-precision Hydraulic Moulds",
-    text: "Synchronized hydraulic opening and closing supports flexible girder geometry. Repeat positioning accuracy remains ≤0.3 mm after 5,000 cycles, while the closed-mould gap remains ≤0.5 mm for consistent dimensions across batch production.",
-    features: ["Synchronized Operation", "Flexible Geometry", "Shared Interior / Exterior Mould"],
+    alt: "Realjet high-precision hydraulic girder moulds",
+    title: "High-Precision Hydraulic Moulds",
+    text: "Synchronised hydraulic opening and closing supports multiple girder geometries. Repeat positioning accuracy remains within 0.3 mm after 5,000 cycles, while the mould joint gap remains within 0.5 mm, supporting consistent dimensions in batch production.",
+    features: ["Synchronised Operation", "Flexible Geometry", "Shared Mould for Interior / Exterior Girders"],
   },
   {
     image: castingBedSystemImage,
-    title: "Mobile Casting-bed Transfer System",
-    text: "Lithium iron phosphate battery power moves casting beds between workstations with ±1 mm positioning accuracy and an 80–120 t maximum load. Battery life exceeds 5,000 charge cycles, while casting-bed turnover can be reduced from five days to one.",
-    features: ["Lithium Battery Drive", "Automatic Station Recognition", "Precision Positioning"],
+    alt: "Realjet rail-mounted mould transfer system",
+    title: "Rail-Mounted Mould Transfer System",
+    text: "A lithium iron phosphate battery-powered trolley transfers girder moulds between workstations on floor-mounted rails. Positioning accuracy is ±1 mm, load capacity is 80–120 t depending on configuration, and battery life exceeds 5,000 charge cycles. The system reduces mould turnaround time from five days to one.",
+    features: ["Battery-Powered Transfer", "Automatic Workstation Recognition", "±1 mm Positioning"],
   },
   {
     image: concreteDistributionImage,
-    title: "Concrete Conveying & Distribution System",
-    text: "An overhead concrete skip and rail-mounted remote-controlled distributor deliver concrete in approximately one minute with ±5 mm layer-thickness accuracy, reducing labor by 37%, casting time per girder by 40%, and concrete loss by 20%.",
-    features: ["Overhead Concrete Skip", "Rail-Mounted Distribution", "Continuous Uniform Casting"],
+    alt: "Realjet concrete conveying and placing system",
+    title: "Concrete Conveying & Placing System",
+    text: "An overhead concrete skip and a rail-mounted, remote-controlled distributor deliver concrete in approximately one minute, with layer thickness controlled to within ±5 mm. The system reduces labour requirements by 37%, casting time per girder by 40% and concrete loss by 20%.",
+    features: ["Overhead Concrete Skip", "Rail-Mounted Concrete Distributor", "Continuous, Uniform Concrete Placement"],
   },
   {
     image: vibrationSystemImage,
+    alt: "Realjet combined external and internal vibration system",
     title: "Combined Vibration System",
-    text: "External automatic vibrators cover at least 80% of the form surface, while guided internal vibration covers 100% of critical deep sections. Only one to two operators are required for supplementary vibration.",
-    features: ["Automatic External Vibration", "Guided Internal Vibration", "Automatic Parameter Records"],
+    text: "Automated external vibration covers at least 80% of the mould surface, while guided internal vibration provides 100% coverage of identified deep sections. Only one or two operators are required for manual touch-up vibration.",
+    features: ["Automated External Vibration", "Guided Internal Vibration", "Automatic Process Logging"],
   },
   {
     image: curingKilnImage,
+    alt: "Realjet automated steam curing system",
     title: "Automated Steam Curing System",
-    text: "In-form curing with complementary solar and air-source heat maintains heating and cooling ramp accuracy within ±2 °C/h and chamber temperature variation within 3 °C. Prestressing strength can be reached in 8–14 hours, with operating costs 49.6% below natural gas and 30.1% below biomass pellets.",
-    features: ["Full-Cycle In-Mould Curing", "Solar + Air-Source Heat", "Automated Temperature & Humidity Control"],
+    text: "In-mould curing powered by complementary solar energy and air-source heat pumps controls heating and cooling rates within ±2 °C/h and chamber temperature variation within 3 °C. The required concrete strength for prestressing can be reached in 8–14 hours. Operating costs are 49.6% lower than natural gas and 30.1% lower than biomass pellets.",
+    features: ["Full-Cycle Curing in the Mould", "Solar + Air-Source Heat Pumps", "Automated Temperature & Humidity Control"],
   },
   {
     image: lineManagementImage,
+    alt: "Realjet production line management system",
     title: "Production Line Management System",
-    text: "The system coordinates production plans, equipment status, and process data with ≤1-second operation-linkage response and a data collection frequency of at least once per second. It supports at least 200 I/O points and creates a dedicated digital record for every girder.",
-    features: ["Unified Process Scheduling", "One Girder, One Record", "Remote Diagnostics & Support"],
+    text: "The system coordinates production plans, equipment status and process data, with a process interlock response within one second and data acquisition at least once per second. It supports at least 200 I/O points and creates a dedicated digital record for every girder.",
+    features: ["Unified Process Scheduling", "Digital Record for Every Girder", "Remote Diagnostics & Support"],
   },
 ];
 
 const projects = [
   {
     image: shenhaiTj05Image,
+    alt: "G15 Shenhai Expressway Ningbo South Section Contract TJ05 precast production line",
     category: "Expressway",
     title: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
     line: "2 T-girder Lines",
-    coreEquipment: ["Bed Transfer", "Concrete Delivery", "Vibration", "Steam Curing", "Prestressing"],
+    coreEquipment: ["Mould Transfer", "Concrete Placing", "Vibration", "Steam Curing", "Prestressing"],
     product: "30 m T-girders",
-    output: "6 Girders/day",
+    output: "6 girders/day",
   },
   {
     image: wenzhouBayBaseImage,
+    alt: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base precast production line",
     category: "Industrial Base",
-    title: "Wenzhou Bay New Area Industrialized Transport and Urban Construction Base",
+    title: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
     line: "4 T-girder Lines",
-    coreEquipment: ["Bed Transfer", "Hydraulic Moulds", "Vibration", "Concrete Delivery", "Hybrid Curing"],
+    coreEquipment: ["Mould Transfer", "Hydraulic Moulds", "Vibration", "Concrete Placing", "Hybrid Curing"],
     product: "30 / 40 m T-girders",
-    output: "8–12 Girders/day",
+    output: "8–12 girders/day",
   },
   {
     image: yongguanDongtouImage,
-    category: "Expressway Branch",
-    title: "Yongguan Expressway Dongtou Branch Project",
+    alt: "Yongguan Expressway Dongtou Spur Project precast production line",
+    category: "Expressway Spur",
+    title: "Yongguan Expressway Dongtou Spur Project",
     line: "2 Segmental Girder Lines",
-    coreEquipment: ["300 t Casting Bed", "Hydraulic Moulds", "Vibration", "Concrete Delivery", "Hybrid Curing"],
+    coreEquipment: ["300 t Mould Transfer System", "Hydraulic Moulds", "Vibration", "Concrete Placing", "Hybrid Curing"],
     product: "Segmental Girders",
-    output: "6 Segments/day",
+    output: "6 segments/day",
   },
   {
     image: guangaoTj5Image,
+    alt: "Chuanzhusi–Hongyuan Expressway Project precast production line",
     category: "Line Upgrade",
     title: "Chuanzhusi–Hongyuan Expressway Project",
     line: "Existing Line Upgrade",
-    coreEquipment: ["Concrete Delivery", "Belt Conveyor", "Distributor"],
+    coreEquipment: ["Concrete Placing", "Belt Conveyor", "Distributor"],
     product: "20 m T-girders",
-    output: "20 Girders/day",
+    output: "20 girders/day",
   },
 ];
 
@@ -364,12 +321,13 @@ const capabilities = [
   {
     icon: Compass,
     image: researchDesignImage,
+    alt: "Realjet engineering and R&D capability",
     title: "Engineering & R&D",
     headline: "Translate project requirements into an integrated line design",
     text: "Our R&D team covers mechanical design, electrical control, hydraulics, software algorithms, and process engineering. We engineer around product type, capacity, schedule, and site constraints, and can jointly develop new processes and equipment for special projects.",
     stats: [
       { value: "40+", label: "R&D engineers" },
-      { value: "50%+", label: "With master's degrees" },
+      { value: "50%+", label: "R&D Staff with Master’s Degrees" },
       { value: "5%", label: "Annual revenue invested in R&D" },
       { value: "150+", label: "Granted patents" },
     ],
@@ -377,27 +335,29 @@ const capabilities = [
   {
     icon: Wrench,
     image: manufacturingCapabilityImage,
-    title: "In-house Manufacturing",
+    alt: "Realjet in-house manufacturing facility",
+    title: "In-House Manufacturing",
     headline: "Critical equipment manufactured in-house with end-to-end quality control",
-    text: "Sixty-six large machines cover cutting, bending, machining, welding, surface treatment, assembly, and testing, supporting in-house production and full quality traceability for large custom-engineered systems.",
+    text: "Sixty-six large machines cover cutting, bending, machining, welding, surface treatment, assembly, and testing, supporting in-house manufacturing and full quality traceability for large custom-engineered systems.",
     stats: [
-      { value: "66", label: "Large production machines" },
-      { value: "±0.005 mm", label: "Machining positioning accuracy" },
-      { value: "12", label: "Welding robots" },
-      { value: "Dual certified", label: "ISO 9001 / ISO 3834-2" },
+      { value: "66", label: "Major Production Machines" },
+      { value: "±0.005 mm", label: "Machining Positioning Accuracy" },
+      { value: "12", label: "Welding Robots" },
+      { value: "Dual Certification", label: "ISO 9001 / ISO 3834-2" },
     ],
   },
   {
     icon: HardHat,
     image: projectDeliveryCapabilityImage,
+    alt: "Realjet precast production line project delivery",
     title: "Project Delivery",
     headline: "Beyond equipment delivery, we support the line through stable operation",
     text: "Our scope extends from solution coordination and manufacturing to installation, integrated commissioning, trial production, training, and operating support, with one project team coordinating civil, power, lifting, and control interfaces.",
     stats: [
       { value: "1 year", label: "Equipment warranty" },
-      { value: "24/7", label: "Online response" },
-      { value: "60 days", label: "Installation and commissioning" },
-      { value: "2 hours", label: "Downtime solution response" },
+      { value: "24/7", label: "Remote Support" },
+      { value: "60 days", label: "Installation & Commissioning" },
+      { value: "2 hours", label: "Production Stoppage Response Time" },
     ],
   },
 ];
@@ -406,7 +366,7 @@ const companyProofs = [
   { value: "Since 2008", label: "Continuous industry focus" },
   { value: "100,000+ m²", label: "Company-owned production base" },
   { value: "60,000+ m²", label: "Equipment manufacturing facilities" },
-  { value: "832867", label: "NEEQ stock code" },
+  { value: "NEEQ Listed", label: "Stock Code 832867" },
 ];
 
 function PrimaryButton({ children, onClick, dark = false, className = "" }) {
@@ -455,8 +415,11 @@ function SectionCta({ children, onClick }) {
 }
 
 function PrecastTypeCarousel() {
+  const carouselRef = useRef(null);
   const trackRef = useRef(null);
   const [paused, setPaused] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [cycleVersion, setCycleVersion] = useState(0);
 
   const getCardStep = (track) => {
     const card = track?.querySelector("[data-precast-card]");
@@ -474,6 +437,11 @@ function PrecastTypeCarousel() {
     const distance = getCardStep(track);
     if (!track || !distance) return;
     track.scrollBy({ left: direction * distance, behavior: "smooth" });
+  };
+
+  const handleManualMove = (direction) => {
+    moveCarousel(direction);
+    setCycleVersion((version) => version + 1);
   };
 
   useEffect(() => {
@@ -494,10 +462,21 @@ function PrecastTypeCarousel() {
   }, []);
 
   useEffect(() => {
-    if (paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
+    const carousel = carouselRef.current;
+    if (!carousel) return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting && entry.intersectionRatio >= 0.35),
+      { threshold: [0, 0.35] },
+    );
+    observer.observe(carousel);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible || paused || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return undefined;
     const timer = window.setInterval(() => moveCarousel(1), 5200);
     return () => window.clearInterval(timer);
-  }, [paused]);
+  }, [cycleVersion, isVisible, paused]);
 
   const handleLoopScroll = () => {
     const track = trackRef.current;
@@ -514,6 +493,7 @@ function PrecastTypeCarousel() {
 
   return (
     <div
+      ref={carouselRef}
       className="mt-9 border-t border-line pt-8"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -526,7 +506,7 @@ function PrecastTypeCarousel() {
       </div>
 
       <div className="precast-carousel-shell">
-        <button type="button" onClick={() => moveCarousel(-1)} aria-label="Previous precast products" className="precast-carousel-control precast-carousel-control-left">
+        <button type="button" onClick={() => handleManualMove(-1)} aria-label="Previous precast products" className="precast-carousel-control precast-carousel-control-left">
           <ArrowLeft size={18} aria-hidden="true" />
         </button>
         <div ref={trackRef} className="precast-type-track" aria-label="Precast concrete product carousel" onScroll={handleLoopScroll}>
@@ -546,12 +526,12 @@ function PrecastTypeCarousel() {
                   <MapPin size={12} className="mt-0.5 shrink-0 text-brand-blue" aria-hidden="true" />
                   <span>{scene}</span>
                 </div>
-                <p className="mt-3 line-clamp-3 text-[12px] leading-[1.65] text-muted">{text}</p>
+                <p className="mt-3 text-[13px] leading-[1.65] text-muted">{text}</p>
               </article>
             )),
           )}
         </div>
-        <button type="button" onClick={() => moveCarousel(1)} aria-label="Next precast products" className="precast-carousel-control precast-carousel-control-right">
+        <button type="button" onClick={() => handleManualMove(1)} aria-label="Next precast products" className="precast-carousel-control precast-carousel-control-right">
           <ArrowRight size={18} aria-hidden="true" />
         </button>
       </div>
@@ -585,9 +565,9 @@ function Header({ onLead }) {
 
   return (
     <header className="sticky top-0 z-40 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
-      <div className="site-container flex h-full items-center gap-6">
+      <div className="site-container flex h-full items-center gap-6 max-[720px]:gap-2">
         <a href="#top" aria-label="Realjet" className="shrink-0">
-          <img src={logoImage} alt="Realjet logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[27px]" />
+          <img src={logoImage} alt="Realjet logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
         </a>
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1100px]:hidden" aria-label="Main navigation">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
@@ -634,7 +614,7 @@ function Hero({ onLead }) {
               Turnkey Precast Production Lines
             </h1>
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
-              From line planning, equipment selection, and customization to installation and capacity optimization, Realjet coordinates the complete delivery.
+              From line planning, equipment selection, and customisation to installation and capacity optimisation, Realjet coordinates the complete delivery.
             </p>
             <div className="mt-7.5 max-[720px]:hidden">
               <PrimaryButton onClick={() => onLead("Get a Free Custom Plan")}>Get a Free Custom Plan <ArrowRight size={16} /></PrimaryButton>
@@ -650,7 +630,7 @@ function Hero({ onLead }) {
       <div className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-            {[["50%", "Construction Footprint", "down"], ["30%", "On-site Workers", "down"], ["3×", "Casting-bed Turnover", "up"], ["50%", "Steam-curing Time", "down"]].map(([value, label, direction]) => (
+            {[["50%", "Site Footprint", "down"], ["30%", "On-Site Workforce", "down"], ["3×", "Mould Transfer Efficiency", "up"], ["50%", "Steam Curing Time", "down"]].map(([value, label, direction]) => (
               <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
                 <strong className="flex items-center justify-center gap-1 text-[21px] font-[900] text-brand-navy">
                   {direction === "up" ? <ArrowUp size={19} strokeWidth={2.8} aria-hidden="true" /> : <ArrowDown size={19} strokeWidth={2.8} aria-hidden="true" />}
@@ -740,7 +720,7 @@ function LeadModal({ open, onClose, title }) {
         ) : (
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">Company, contact name, and email are required. Add any available project details below.</p>
+            <p className="mt-1.5 mb-5 text-xs text-muted">Company, contact name and business email are required. Add any available project details below.</p>
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
               <input type="hidden" name="inquiry_topic" value={title} />
@@ -775,7 +755,7 @@ function LeadModal({ open, onClose, title }) {
                     {submissionState === "submitting" ? (
                       <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> Submitting…</>
                     ) : (
-                      <>Submit <Send size={15} /></>
+                      <>Submit Project Details <Send size={15} /></>
                     )}
                   </button>
                 </div>
@@ -820,6 +800,12 @@ export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
   const [leadTitle, setLeadTitle] = useState("Get a Free Custom Plan");
   const [progress, setProgress] = useState(0);
+  const [showAllEquipment, setShowAllEquipment] = useState(false);
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const [finalCtaVisible, setFinalCtaVisible] = useState(false);
+  const [mobileCtaVisible, setMobileCtaVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
+  const scrollStopTimerRef = useRef(null);
   const openLead = (title = "Get a Free Custom Plan") => {
     setLeadTitle(title);
     setModalOpen(true);
@@ -829,6 +815,16 @@ export default function App() {
     const update = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+      if (window.innerWidth <= 720) {
+        const delta = window.scrollY - lastScrollYRef.current;
+        if (delta > 3) setMobileCtaVisible(false);
+        if (delta < -3) setMobileCtaVisible(true);
+        window.clearTimeout(scrollStopTimerRef.current);
+        scrollStopTimerRef.current = window.setTimeout(() => setMobileCtaVisible(true), 260);
+      } else {
+        setMobileCtaVisible(true);
+      }
+      lastScrollYRef.current = window.scrollY;
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -836,8 +832,22 @@ export default function App() {
     return () => {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
+      window.clearTimeout(scrollStopTimerRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    const finalCta = document.getElementById("final-cta");
+    if (!finalCta) return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => setFinalCtaVisible(entry.isIntersecting),
+      { threshold: 0.15 },
+    );
+    observer.observe(finalCta);
+    return () => observer.disconnect();
+  }, []);
+
+  const hideMobileCta = finalCtaVisible || modalOpen || !mobileCtaVisible;
 
   return (
     <>
@@ -849,7 +859,7 @@ export default function App() {
         <Section id="method" compactBottom>
           <SectionHeader
             kicker="Solution Development Process"
-            title="From Project Inputs to a Production-ready Line"
+            title="From Project Inputs to a Production-Ready Line"
             text="We first define the production brief, schedule pressure, site constraints, workforce, resources, and local conditions. Our four-step line design method then converts those inputs into stable production capacity."
           />
 
@@ -857,7 +867,7 @@ export default function App() {
             <aside className="solution-input-panel">
               <div className="solution-panel-header">
                 <span className="section-index">01 · PROJECT INPUTS</span>
-                <h3>Define the Production Brief<br />and Project Constraints</h3>
+                <h3>Define the Production Brief &amp; Constraints</h3>
                 <p className="solution-panel-description is-dark">The production brief, site constraints, workforce and resources, and project standards jointly determine the process, layout, and equipment package.</p>
               </div>
               <div className="solution-input-list">
@@ -883,7 +893,7 @@ export default function App() {
               <div className="solution-panel-header">
                 <span className="section-index text-brand-blue">02 · REALJET WORKFLOW</span>
                 <h3>Four Steps to Design the Line</h3>
-                <p className="solution-panel-description">Needs analysis, process engineering, equipment selection, and capacity optimization keep every decision focused on the required final output.</p>
+                <p className="solution-panel-description">Needs analysis, process engineering, equipment selection, and capacity optimisation keep every decision focused on the required final output.</p>
               </div>
               <div className="delivery-flow">
                 {methods.map(({ icon: Icon, title, text, output }, index) => (
@@ -902,23 +912,23 @@ export default function App() {
               </div>
             </div>
           </div>
-          <SectionCta onClick={openLead}>Share Your Project Inputs for an Initial Plan</SectionCta>
+          <SectionCta onClick={openLead}>Get an Initial Line Plan</SectionCta>
           <PrecastTypeCarousel />
         </Section>
 
         <Section id="lines" soft>
           <SectionHeader
-            kicker="Typical Production-line Processes"
+            kicker="Typical Production Line Configurations"
             title="Build on Proven Technology to Define the Right Process for Each Project"
             text="We have developed proven production processes for a wide range of precast concrete products. For special requirements, we work with the customer on process research, solution design, equipment development, and production validation."
           />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {lines.map(({ image, kicker, title, visual, visualLabel, text }) => (
+            {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
                     src={image}
-                    alt={`${title} overview`}
+                    alt={alt}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
                   />
                   <span aria-label={visualLabel} className="absolute top-3 right-3 rounded-md border border-white/15 bg-brand-navy/60 px-2.5 py-1.5 text-[11px] font-[850] text-white/95 shadow-sm backdrop-blur-[3px]">
@@ -928,29 +938,29 @@ export default function App() {
                 <div className="p-6">
                   <span className="text-[11px] font-[850] tracking-[0.08em] text-brand-blue uppercase">{kicker}</span>
                   <h3 className="mt-1.5 text-lg font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
+                  <p className="mt-2 text-[14px] leading-[1.7] text-muted">{text}</p>
                 </div>
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>Discuss Your Production Process with an Engineer</SectionCta>
+          <SectionCta onClick={openLead}>Discuss Your Production Process</SectionCta>
         </Section>
 
         <Section id="products">
           <SectionHeader kicker="Core Production Equipment" title="Configure the Line Around Its Critical Operations" text="Equipment is not simply added to a list. Each system is selected and combined according to product type, takt time, and site conditions." />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {products.map(({ image, title, text, features }) => (
-              <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
+            {products.map(({ image, alt, title, text, features }, index) => (
+              <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
                     src={image}
-                    alt={title}
+                    alt={alt}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
                   />
                 </div>
                 <div className="p-5.5">
                   <h3 className="font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 text-[13px] leading-[1.7] text-muted">{text}</p>
+                  <p className="mt-2 text-[14px] leading-[1.7] text-muted">{text}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {features.map((feature) => (
                       <span key={feature} className="rounded-md border border-brand-blue/10 bg-soft px-2.5 py-1.5 text-[11px] font-[800] text-brand-navy">
@@ -962,22 +972,27 @@ export default function App() {
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>Get More Equipment Information</SectionCta>
+          {!showAllEquipment && (
+            <button type="button" onClick={() => setShowAllEquipment(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
+              View All Equipment
+            </button>
+          )}
+          <SectionCta onClick={openLead}>Request Equipment Details</SectionCta>
         </Section>
 
         <Section id="projects" soft>
           <SectionHeader
             kicker="Project References"
             title="Different Projects Require Different Production Lines"
-            text="Realjet has worked with leading Chinese general contractors and validated mass production across multiple projects."
+            text="Realjet has delivered production lines for major transport and infrastructure projects and achieved stable production across multiple sites."
           />
           <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {projects.map(({ image, category, title, line, coreEquipment, product, output }) => (
-              <article key={title} className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
+            {projects.map(({ image, alt, category, title, line, coreEquipment, product, output }, index) => (
+              <article key={title} className={`group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30 ${index >= 2 && !showAllProjects ? "max-[720px]:hidden" : ""}`}>
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
                     src={image}
-                    alt={`${title} project`}
+                    alt={alt}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/55 via-transparent to-transparent" />
@@ -989,7 +1004,7 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col p-4.5">
-                  <h3 className="line-clamp-2 min-h-[44px] text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy max-[720px]:min-h-0">{title}</h3>
+                  <h3 className="min-h-[66px] text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy max-[720px]:min-h-0">{title}</h3>
                   <dl className="mt-3 flex flex-wrap gap-2">
                     <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
                       <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">LINE CONFIGURATION</dt>
@@ -1017,7 +1032,12 @@ export default function App() {
               </article>
             ))}
           </div>
-          <SectionCta onClick={openLead}>View More Project References</SectionCta>
+          {!showAllProjects && (
+            <button type="button" onClick={() => setShowAllProjects(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
+              View All Projects
+            </button>
+          )}
+          <SectionCta onClick={openLead}>Request More Project References</SectionCta>
         </Section>
 
         <Section id="capabilities">
@@ -1035,13 +1055,13 @@ export default function App() {
             ))}
           </div>
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
-            {capabilities.map(({ icon, image, title, headline, text, stats }, index) => (
+            {capabilities.map(({ icon, image, alt, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
                   <div className="aspect-video shrink-0 overflow-hidden bg-[#e4edf2] max-[1000px]:aspect-auto max-[1000px]:h-full max-[720px]:aspect-video max-[720px]:h-auto">
                     <img
                       src={image}
-                      alt={title}
+                      alt={alt}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]"
                     />
                   </div>
@@ -1051,7 +1071,7 @@ export default function App() {
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="text-lg font-[850] text-brand-navy">{title}</h3>
                   <p className="mt-1.5 text-[14px] font-[850] leading-[1.5] text-brand-blue">{headline}</p>
-                  <p className="mt-3 text-[13px] leading-[1.7] text-muted">{text}</p>
+                  <p className="mt-3 text-[14px] leading-[1.7] text-muted">{text}</p>
                   <div className="mt-auto grid grid-cols-2 gap-2 border-t border-line pt-4">
                     {stats.map(({ value, label }) => (
                       <div key={label} className="rounded-lg bg-soft px-3 py-2.5">
@@ -1067,26 +1087,35 @@ export default function App() {
           <SectionCta onClick={openLead}>Book a Technical Consultation</SectionCta>
         </Section>
 
-        <section className="hero-gradient py-[72px] text-white">
+        <section id="final-cta" className="hero-gradient py-[72px] text-white">
           <div className="site-container flex flex-col items-center text-center">
             <p className="mb-2 text-[13px] font-[850] tracking-[0.1em] text-[#8ce2e8] uppercase">Start Your Project</p>
             <h2 className="max-w-[760px] text-[clamp(28px,3.4vw,40px)] leading-[1.16] font-[850] tracking-[-0.03em]">Get a Solution Engineered for Your Project</h2>
             <p className="mt-3 max-w-[670px] text-[15px] text-white/68">Tell us what you need to produce, and we will start planning your precast production line.</p>
-            <PrimaryButton onClick={() => openLead("Open Project Requirements Form")} className="mt-6 max-[720px]:hidden">Open Project Requirements Form <ArrowRight size={16} /></PrimaryButton>
+            <PrimaryButton onClick={() => openLead("Tell Us About Your Project")} className="mt-6 max-[720px]:w-full max-[720px]:max-w-[320px]">Tell Us About Your Project <ArrowRight size={16} /></PrimaryButton>
           </div>
         </section>
       </main>
 
-      <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0]">
+      <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0] max-[720px]:pb-[calc(24px+env(safe-area-inset-bottom))]">
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
-          <span>© 2026 Changsha Ruijie Mechanical Technology Co., Ltd. All rights reserved.</span>
+          <span>© 2026 Changsha Ruijie Machinery Technology Co., Ltd. All rights reserved.</span>
           <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
             <ContactEmail />
           </div>
         </div>
       </footer>
 
-      <button onClick={() => openLead("Get a Free Custom Plan")} className="fixed right-3.5 bottom-3.5 left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex">
+      <button
+        onClick={() => openLead("Get a Free Custom Plan")}
+        aria-hidden={hideMobileCta}
+        tabIndex={hideMobileCta ? -1 : 0}
+        className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
+          hideMobileCta
+            ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
+            : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
+        }`}
+      >
         Get a Free Custom Plan <ArrowRight size={16} />
       </button>
 

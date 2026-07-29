@@ -130,6 +130,8 @@ section {
 
 .solution-input-panel {
   position: relative;
+  display: grid;
+  grid-template-rows: 160px minmax(0, 1fr);
   padding: 34px;
   color: #ffffff;
   background:
@@ -147,7 +149,7 @@ section {
 }
 
 .solution-panel-header {
-  min-height: 142px;
+  min-height: 0;
 }
 
 .solution-panel-header > h3 {
@@ -172,6 +174,8 @@ section {
 }
 
 .solution-input-list {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
   margin-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -216,6 +220,8 @@ section {
 
 .solution-process-panel {
   position: relative;
+  display: grid;
+  grid-template-rows: 160px minmax(0, 1fr);
   padding: 34px;
 }
 
@@ -243,6 +249,8 @@ section {
 
 .delivery-flow {
   position: relative;
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
   margin-top: 24px;
 }
 
@@ -390,6 +398,11 @@ section {
 }
 
 @media (max-width: 1000px) {
+  .solution-input-panel,
+  .solution-process-panel {
+    grid-template-rows: 220px minmax(0, 1fr);
+  }
+
   .precast-type-card {
     flex-basis: calc((100% - 16px) / 2);
   }
@@ -431,7 +444,13 @@ section {
 
   .solution-input-panel,
   .solution-process-panel {
+    display: block;
     padding: 26px 22px;
+  }
+
+  .solution-input-list,
+  .delivery-flow {
+    display: block;
   }
 
   .journey-arrow {

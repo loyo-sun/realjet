@@ -45,21 +45,14 @@ import smallBoxGirderImage from "../../../assets/image/precast-types/small-box-g
 import tBeamImage from "../../../assets/image/precast-types/t-beam.webp";
 import segmentalBoxGirderImage from "../../../assets/image/precast-types/segmental-box-girder.webp";
 import uBeamImage from "../../../assets/image/precast-types/u-beam.webp";
-import hollowCoreSlabImage from "../../../assets/image/precast-types/hollow-core-slab.webp";
 import iGirderImage from "../../../assets/image/precast-types/i-girder.webp";
 import fullSpanBoxGirderImage from "../../../assets/image/precast-types/full-span-box-girder.webp";
 import doubleTSlabImage from "../../../assets/image/precast-types/double-t-slab.webp";
 import troughGirderImage from "../../../assets/image/precast-types/trough-girder.webp";
-import compositeBridgeDeckImage from "../../../assets/image/precast-types/composite-bridge-deck.webp";
 import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier.webp";
-import precastCapBeamImage from "../../../assets/image/precast-types/precast-cap-beam.webp";
-import precastPierImage from "../../../assets/image/precast-types/precast-pier.webp";
-import precastPileImage from "../../../assets/image/precast-types/precast-pile.webp";
-import pretensionedSpunConcretePilesImage from "../../../assets/image/precast-types/pretensioned-spun-concrete-piles.webp";
 import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
-import utilityTunnelImage from "../../../assets/image/precast-types/utility-tunnel.webp";
 import accropodeImage from "../../../assets/image/precast-types/accropode.webp";
 
 const inputs = [
@@ -114,18 +107,18 @@ const methods = [
 
 const precastTypes = [
   {
-    image: smallBoxGirderImage,
-    category: "桥梁上部主梁",
-    title: "小箱梁",
-    scene: "高架 / 桥梁 / 市政道路",
-    text: "中空箱形截面，抗扭刚度高，适用于城市高架、互通立交以及曲线桥和斜桥。",
-  },
-  {
     image: tBeamImage,
     category: "桥梁上部主梁",
     title: "T梁",
     scene: "高速公路 / 跨线桥",
     text: "技术成熟、造价经济，常用于20–50米跨径的公路、高速桥梁和跨线桥项目。",
+  },
+  {
+    image: smallBoxGirderImage,
+    category: "桥梁上部主梁",
+    title: "小箱梁",
+    scene: "高架 / 桥梁 / 市政道路",
+    text: "中空箱形截面，抗扭刚度高，适用于城市高架、互通立交以及曲线桥和斜桥。",
   },
   {
     image: segmentalBoxGirderImage,
@@ -140,13 +133,6 @@ const precastTypes = [
     title: "U型梁",
     scene: "城市轨道交通",
     text: "建筑高度低，两侧腹板可兼顾防护与降噪，适合地铁和轻轨高架区间。",
-  },
-  {
-    image: hollowCoreSlabImage,
-    category: "桥梁上部主梁",
-    title: "空心板梁",
-    scene: "市政道路 / 中小桥梁",
-    text: "结构高度小、自重较轻，适用于10–25米中小跨径桥梁及净空受限项目。",
   },
   {
     image: iGirderImage,
@@ -177,46 +163,11 @@ const precastTypes = [
     text: "平底直腹板结构，适用于地铁高架段和跨度较大的装配式人行天桥。",
   },
   {
-    image: compositeBridgeDeckImage,
-    category: "桥面及辅助结构",
-    title: "叠合桥面板",
-    scene: "高架 / 桥梁",
-    text: "作为钢梁、T梁或工字梁上方的永久底模，可减少高空支模和现场湿作业。",
-  },
-  {
     image: crashBarrierImage,
     category: "桥面及辅助结构",
     title: "防撞护栏",
     scene: "高架 / 高速 / 桥梁",
     text: "用于桥梁边缘或道路中央分隔带，承担车辆防护、导向和道路隔离功能。",
-  },
-  {
-    image: precastCapBeamImage,
-    category: "桥梁下部支撑",
-    title: "预制盖梁",
-    scene: "高架 / 桥梁",
-    text: "在墩柱顶部承托主梁，采用预制吊装可减少高空现浇作业并提高施工效率。",
-  },
-  {
-    image: precastPierImage,
-    category: "桥梁下部支撑",
-    title: "预制墩柱",
-    scene: "高架 / 桥梁",
-    text: "承担桥梁上部荷载，可通过灌浆套筒等连接方式实现现场快速装配。",
-  },
-  {
-    image: precastPileImage,
-    category: "桥梁下部支撑",
-    title: "预制方桩",
-    scene: "桥梁基础 / 道路地基",
-    text: "实心方形截面，便于工厂标准化预制，为桥墩及软弱地基提供深层承载力。",
-  },
-  {
-    image: pretensionedSpunConcretePilesImage,
-    category: "桥梁下部支撑",
-    title: "预应力管桩",
-    scene: "桥梁 / 港口 / 市政基础",
-    text: "采用先张预应力与离心成型工艺，具有较高轴向承载能力，适用于桥梁、港口和市政工程基础。",
   },
   {
     image: tunnelSegmentImage,
@@ -238,13 +189,6 @@ const precastTypes = [
     title: "装配式车站构件",
     scene: "地铁车站 / 地下枢纽",
     text: "通过预制梁、柱、楼板和侧墙拼装地下车站结构，缩短深基坑施工周期。",
-  },
-  {
-    image: utilityTunnelImage,
-    category: "地下与隧道结构",
-    title: "预制管廊",
-    scene: "城市地下综合管线",
-    text: "单舱或多舱箱体集中容纳电力、给排水、通信和燃气等市政管线。",
   },
   {
     image: accropodeImage,
