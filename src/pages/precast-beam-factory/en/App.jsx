@@ -501,15 +501,15 @@ function PrecastTypeCarousel() {
       onBlurCapture={() => setPaused(false)}
     >
       <div className="mb-2.5">
-        <h3 className="text-[clamp(20px,2.2vw,26px)] font-[850] tracking-[-0.025em] text-brand-navy">Precast Concrete Products</h3>
-        <p className="mt-1.5 max-w-[760px] text-[13px] leading-[1.6] text-muted">The production line can be configured for different precast concrete products according to project requirements.</p>
+        <h3 className="text-[clamp(20px,2.2vw,26px)] font-[850] tracking-[-0.025em] text-brand-navy">Components the Line Can Produce</h3>
+        <p className="mt-1.5 max-w-[760px] text-[13px] leading-[1.6] text-muted">Each production line can be configured to manufacture different precast concrete components according to project requirements.</p>
       </div>
 
       <div className="precast-carousel-shell">
-        <button type="button" onClick={() => handleManualMove(-1)} aria-label="Previous precast products" className="precast-carousel-control precast-carousel-control-left">
+        <button type="button" onClick={() => handleManualMove(-1)} aria-label="Previous precast components" className="precast-carousel-control precast-carousel-control-left">
           <ArrowLeft size={18} aria-hidden="true" />
         </button>
-        <div ref={trackRef} className="precast-type-track" aria-label="Precast concrete product carousel" onScroll={handleLoopScroll}>
+        <div ref={trackRef} className="precast-type-track" aria-label="Precast concrete component carousel" onScroll={handleLoopScroll}>
           {[0, 1, 2].map((setIndex) =>
             precastTypes.map(({ image, title, fullName, scene, text }) => (
               <article
@@ -531,7 +531,7 @@ function PrecastTypeCarousel() {
             )),
           )}
         </div>
-        <button type="button" onClick={() => handleManualMove(1)} aria-label="Next precast products" className="precast-carousel-control precast-carousel-control-right">
+        <button type="button" onClick={() => handleManualMove(1)} aria-label="Next precast components" className="precast-carousel-control precast-carousel-control-right">
           <ArrowRight size={18} aria-hidden="true" />
         </button>
       </div>
@@ -610,8 +610,9 @@ function Hero({ onLead }) {
         <div className="hero-overlay absolute inset-0 z-10" />
         <div className="site-container relative z-20 flex h-full min-h-[610px] items-center py-12 pb-[60px] max-[720px]:min-h-[610px] max-[720px]:items-center max-[720px]:py-16">
           <div className="w-[min(610px,51%)] max-[1000px]:w-[60%] max-[720px]:w-full">
-            <h1 className="max-w-[650px] text-[clamp(38px,3.5vw,56px)] leading-[1.13] font-[900] tracking-[-0.045em] max-[1000px]:text-[clamp(36px,5vw,48px)] max-[720px]:text-[33px]">
-              Turnkey Precast Production Lines
+            <h1 className="max-w-[650px] text-[clamp(38px,3.5vw,48px)] leading-[1.13] font-[900] tracking-[-0.045em] max-[1000px]:text-[clamp(36px,5vw,44px)] max-[720px]:text-[33px]">
+              <span className="block">Turnkey Production Lines for</span>{" "}
+              <span className="block">Precast Concrete Components</span>
             </h1>
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
               From line planning, equipment selection, and customisation to installation and capacity optimisation, Realjet coordinates the complete delivery.
