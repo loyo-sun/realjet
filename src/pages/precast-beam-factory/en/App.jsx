@@ -53,7 +53,7 @@ import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier
 import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
-import accropodeImage from "../../../assets/image/precast-types/accropode.webp";
+import interlockingConcreteArmourUnitImage from "../../../assets/image/precast-types/interlocking-concrete-armour-unit.webp";
 
 const inputs = [
   {
@@ -95,7 +95,7 @@ const methods = [
     icon: Settings,
     title: "Equipment Selection",
     text: "Select equipment that fits the process, local conditions and available maintenance capability.",
-    output: "Project-fit equipment package",
+    output: "Project-specific equipment package",
   },
   {
     icon: CheckCircle,
@@ -150,8 +150,8 @@ const precastTypes = [
   },
   {
     image: doubleTSlabImage,
-    title: "Double-Tee",
-    fullName: "Precast concrete double-tee",
+    title: "Double Tee",
+    fullName: "Precast concrete double tee",
     scene: "Road Underpasses / Metro Stations",
     text: "Its integrated beam-and-slab section can directly form a roof slab or traffic surface after erection.",
   },
@@ -191,9 +191,9 @@ const precastTypes = [
     text: "Beams, columns, slabs, and side walls are assembled into underground station structures to shorten construction schedules.",
   },
   {
-    image: accropodeImage,
-    title: "Accropode Armour Unit",
-    fullName: "Concrete Accropode armour unit",
+    image: interlockingConcreteArmourUnitImage,
+    title: "Interlocking Concrete Armour Unit",
+    fullName: "Interlocking concrete armour unit",
     scene: "Port Breakwaters / Coastal Protection",
     text: "Its interlocking geometry forms a stable armour layer for breakwaters, coastal protection and other wave-exposed structures.",
   },
@@ -207,7 +207,7 @@ const lines = [
     title: "Automated Precast Girder Production Line V1.0",
     visual: "1 girder/day",
     visualLabel: "Daily output: 1 girder",
-    text: "Designed for projects with standardised girder types and stable output targets, the line integrates hydraulic mould opening and closing, rail-mounted mould transfer, external form vibration and single-stage prestressing. Moulds, workstations and curing cycles are configured to match the production plan.",
+    text: "Designed for projects with standardised girder types and stable output targets, the line integrates hydraulic mould opening and closing, rail-mounted mould transfer, external mould vibration and single-stage prestressing. Moulds, workstations and curing cycles are configured to match the production plan.",
   },
   {
     image: lineV2Image,
@@ -292,7 +292,7 @@ const projects = [
     title: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
     line: "4 T-girder Lines",
     coreEquipment: ["Mould Transfer", "Hydraulic Moulds", "Vibration", "Concrete Placing", "Hybrid Curing"],
-    product: "30 / 40 m T-girders",
+    product: "30 m and 40 m T-girders",
     output: "8–12 girders/day",
   },
   {
@@ -340,8 +340,8 @@ const capabilities = [
     headline: "Critical equipment manufactured in-house with end-to-end quality control",
     text: "Sixty-six large machines cover cutting, bending, machining, welding, surface treatment, assembly, and testing, supporting in-house manufacturing and full quality traceability for large custom-engineered systems.",
     stats: [
-      { value: "66", label: "Major Production Machines" },
-      { value: "±0.005 mm", label: "Machining Positioning Accuracy" },
+      { value: "66", label: "Major Manufacturing Equipment" },
+      { value: "±0.005 mm", label: "Positioning Accuracy" },
       { value: "12", label: "Welding Robots" },
       { value: "Dual Certification", label: "ISO 9001 / ISO 3834-2" },
     ],
@@ -366,7 +366,7 @@ const companyProofs = [
   { value: "Since 2008", label: "Continuous industry focus" },
   { value: "100,000+ m²", label: "Company-owned production base" },
   { value: "60,000+ m²", label: "Equipment manufacturing facilities" },
-  { value: "NEEQ Listed", label: "Stock Code 832867" },
+  { value: "NEEQ-Listed Company", label: "Stock Code 832867" },
 ];
 
 function PrimaryButton({ children, onClick, dark = false, className = "" }) {
@@ -522,7 +522,7 @@ function PrecastTypeCarousel() {
                   <img src={image} alt={fullName} loading="lazy" className="h-full w-full object-cover transition duration-500 hover:scale-[1.025]" />
                 </div>
                 <h4 className="mt-4 text-[18px] font-[850] tracking-[-0.02em] text-brand-navy">{title}</h4>
-                <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[10px] font-[750] leading-[1.45] text-[#456072]">
+                <div className="mt-3 flex min-h-8 items-start gap-1.5 rounded-lg bg-soft/75 px-2.5 py-2 text-[11px] font-[750] leading-[1.45] text-[#456072]">
                   <MapPin size={12} className="mt-0.5 shrink-0 text-brand-blue" aria-hidden="true" />
                   <span>{scene}</span>
                 </div>
@@ -576,7 +576,7 @@ function Header({ onLead }) {
         <LanguageSwitcher current="en" />
         <button
           type="button"
-          aria-label="Open navigation"
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((value) => !value)}
           className="hidden rounded-lg border border-white/15 p-2 text-white max-[1100px]:ml-0 max-[1100px]:block"
@@ -616,8 +616,8 @@ function Hero({ onLead }) {
             <p className="mt-8 max-w-[570px] text-lg font-normal text-white/72 max-[720px]:text-[15px]">
               From line planning, equipment selection, and customisation to installation and capacity optimisation, Realjet coordinates the complete delivery.
             </p>
-            <div className="mt-7.5 max-[720px]:hidden">
-              <PrimaryButton onClick={() => onLead("Get a Free Custom Plan")}>Get a Free Custom Plan <ArrowRight size={16} /></PrimaryButton>
+            <div className="mt-7.5">
+              <PrimaryButton onClick={() => onLead("Get a Free Custom Plan")} className="max-[720px]:w-full max-[720px]:max-w-[320px]">Get a Free Custom Plan <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
               {["Expressways", "Bridges", "Rail", "Water", "Municipal"].map((tag) => (
@@ -627,7 +627,7 @@ function Hero({ onLead }) {
           </div>
         </div>
       </section>
-      <div className="relative z-30 -mt-6">
+      <div id="hero-metrics" className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
             {[["50%", "Site Footprint", "down"], ["30%", "On-Site Workforce", "down"], ["3×", "Mould Transfer Efficiency", "up"], ["50%", "Steam Curing Time", "down"]].map(([value, label, direction]) => (
@@ -650,20 +650,60 @@ function LeadModal({ open, onClose, title }) {
   const [submitted, setSubmitted] = useState(false);
   const [submissionState, setSubmissionState] = useState("idle");
   const closeRef = useRef(null);
+  const dialogRef = useRef(null);
 
   useEffect(() => {
     document.body.classList.toggle("modal-open", open);
+    const siteShell = document.getElementById("site-shell");
+    if (siteShell) {
+      siteShell.inert = open;
+      if (open) siteShell.setAttribute("aria-hidden", "true");
+      else siteShell.removeAttribute("aria-hidden");
+    }
     if (open) {
       setSubmitted(false);
       setSubmissionState("idle");
       requestAnimationFrame(() => closeRef.current?.focus());
     }
-    return () => document.body.classList.remove("modal-open");
+    return () => {
+      document.body.classList.remove("modal-open");
+      if (siteShell) {
+        siteShell.inert = false;
+        siteShell.removeAttribute("aria-hidden");
+      }
+    };
   }, [open]);
 
   useEffect(() => {
     const onKey = (event) => {
-      if (event.key === "Escape" && open) onClose();
+      if (!open) return;
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+      const focusable = Array.from(
+        dialog.querySelectorAll(
+          'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((element) => element.getAttribute("aria-hidden") !== "true" && element.offsetParent !== null);
+      if (!focusable.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (!dialog.contains(document.activeElement)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -702,7 +742,7 @@ function LeadModal({ open, onClose, title }) {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#03111d]/75 p-5 backdrop-blur-lg" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <div role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100vh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100vh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
         <button ref={closeRef} onClick={onClose} aria-label="Close" className="absolute top-3.5 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-soft text-brand-navy"><X size={20} /></button>
         {submitted ? (
           <div className="py-10 text-center">
@@ -724,7 +764,7 @@ function LeadModal({ open, onClose, title }) {
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
               <input type="hidden" name="inquiry_topic" value={title} />
-              <input type="text" name="title" defaultValue="" readOnly tabIndex="-1" aria-hidden="true" className="sr-only" />
+              <input type="hidden" name="title" defaultValue="" />
               <input type="hidden" name="subject" defaultValue="" />
               <input type="hidden" name="bot-field" />
               <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
@@ -742,10 +782,16 @@ function LeadModal({ open, onClose, title }) {
                       placeholder="Briefly describe the product type, quantity, target output or schedule, site conditions, and current project stage. Leave unknown items blank."
                     />
                   </label>
-                  <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
-                    <input type="checkbox" name="contact_consent" value="Contact permitted" className="mt-1 accent-brand-blue disabled:cursor-wait" />
-                    <span>I agree that Realjet may contact me regarding this project.</span>
-                  </label>
+                  <div className="col-span-2 flex items-start gap-2 text-[12px] leading-[1.5] text-muted max-[720px]:col-span-1">
+                    <input id="privacy-acknowledgement" type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
+                    <label htmlFor="privacy-acknowledgement">
+                      I have read the{" "}
+                      <a href="../../privacy/en/" target="_blank" rel="noopener noreferrer" className="font-[750] text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:text-brand-navy">
+                        Privacy Policy
+                      </a>{" "}
+                      and understand that Realjet will use my information to respond to this enquiry.
+                    </label>
+                  </div>
                 </div>
                 {submissionState === "error" && (
                   <p role="alert" className="mt-4 text-[12px] text-red-600">Submission failed. Please check your connection and try again, or contact us later.</p>
@@ -803,12 +849,19 @@ export default function App() {
   const [showAllEquipment, setShowAllEquipment] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
   const [finalCtaVisible, setFinalCtaVisible] = useState(false);
+  const [heroMetricsVisible, setHeroMetricsVisible] = useState(true);
   const [mobileCtaVisible, setMobileCtaVisible] = useState(true);
   const lastScrollYRef = useRef(0);
   const scrollStopTimerRef = useRef(null);
+  const leadTriggerRef = useRef(null);
   const openLead = (title = "Get a Free Custom Plan") => {
+    leadTriggerRef.current = document.activeElement;
     setLeadTitle(title);
     setModalOpen(true);
+  };
+  const closeLead = () => {
+    setModalOpen(false);
+    window.requestAnimationFrame(() => leadTriggerRef.current?.focus?.());
   };
 
   useEffect(() => {
@@ -847,13 +900,25 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
 
-  const hideMobileCta = finalCtaVisible || modalOpen || !mobileCtaVisible;
+  useEffect(() => {
+    const heroMetrics = document.getElementById("hero-metrics");
+    if (!heroMetrics) return undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroMetricsVisible(entry.isIntersecting),
+      { threshold: 0 },
+    );
+    observer.observe(heroMetrics);
+    return () => observer.disconnect();
+  }, []);
+
+  const hideMobileCta = heroMetricsVisible || finalCtaVisible || modalOpen || !mobileCtaVisible;
 
   return (
     <>
-      <Header onLead={openLead} />
-      <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
-      <main>
+      <div id="site-shell">
+        <Header onLead={openLead} />
+        <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
+        <main>
         <Hero onLead={openLead} />
 
         <Section id="method" compactBottom>
@@ -920,7 +985,7 @@ export default function App() {
           <SectionHeader
             kicker="Typical Production Line Configurations"
             title="Build on Proven Technology to Define the Right Process for Each Project"
-            text="We have developed proven production processes for a wide range of precast concrete products. For special requirements, we work with the customer on process research, solution design, equipment development, and production validation."
+            text="We have developed proven production processes for a wide range of precast concrete products. For special requirements, we work with customers on process development, solution design, equipment development, and production validation."
           />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
@@ -1095,31 +1160,33 @@ export default function App() {
             <PrimaryButton onClick={() => openLead("Tell Us About Your Project")} className="mt-6 max-[720px]:w-full max-[720px]:max-w-[320px]">Tell Us About Your Project <ArrowRight size={16} /></PrimaryButton>
           </div>
         </section>
-      </main>
+        </main>
 
-      <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0] max-[720px]:pb-[calc(24px+env(safe-area-inset-bottom))]">
-        <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
-          <span>© 2026 Changsha Ruijie Machinery Technology Co., Ltd. All rights reserved.</span>
-          <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
-            <ContactEmail />
+        <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0] max-[720px]:pb-[calc(24px+env(safe-area-inset-bottom))]">
+          <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
+            <span>© 2026 Changsha Ruijie Machinery Technology Co., Ltd. All rights reserved.</span>
+            <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
+              <a href="../../privacy/en/" className="underline decoration-white/20 underline-offset-4 transition hover:text-white">Privacy Policy</a>
+              <ContactEmail />
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
 
-      <button
-        onClick={() => openLead("Get a Free Custom Plan")}
-        aria-hidden={hideMobileCta}
-        tabIndex={hideMobileCta ? -1 : 0}
-        className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
-          hideMobileCta
-            ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
-            : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
-        }`}
-      >
-        Get a Free Custom Plan <ArrowRight size={16} />
-      </button>
+        <button
+          onClick={() => openLead("Get a Free Custom Plan")}
+          aria-hidden={hideMobileCta}
+          tabIndex={hideMobileCta ? -1 : 0}
+          className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
+            hideMobileCta
+              ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
+              : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
+          }`}
+        >
+          Get a Free Custom Plan <ArrowRight size={16} />
+        </button>
+      </div>
 
-      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} title={leadTitle} />
+      <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />
     </>
   );
 }

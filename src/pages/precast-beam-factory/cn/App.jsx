@@ -53,7 +53,7 @@ import crashBarrierImage from "../../../assets/image/precast-types/crash-barrier
 import tunnelSegmentImage from "../../../assets/image/precast-types/tunnel-segment.webp";
 import boxCulvertImage from "../../../assets/image/precast-types/box-culvert.webp";
 import stationElementsImage from "../../../assets/image/precast-types/station-elements.webp";
-import accropodeImage from "../../../assets/image/precast-types/accropode.webp";
+import interlockingConcreteArmourUnitImage from "../../../assets/image/precast-types/interlocking-concrete-armour-unit.webp";
 
 const inputs = [
   {
@@ -191,7 +191,7 @@ const precastTypes = [
     text: "通过预制梁、柱、楼板和侧墙拼装地下车站结构，缩短深基坑施工周期。",
   },
   {
-    image: accropodeImage,
+    image: interlockingConcreteArmourUnitImage,
     category: "港口与海岸防护",
     title: "扭王字块",
     scene: "港口防波堤 / 海岸防护",

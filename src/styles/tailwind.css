@@ -118,6 +118,20 @@ section {
   box-shadow: 0 0 0 3px rgba(22, 120, 170, 0.1);
 }
 
+.policy-copy ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.policy-copy li + li {
+  margin-top: 0.45rem;
+}
+
+.policy-copy strong {
+  font-weight: 800;
+  color: #172a3c;
+}
+
 .solution-journey {
   display: grid;
   grid-template-columns: minmax(310px, 0.88fr) minmax(0, 1.42fr);
@@ -214,7 +228,8 @@ section {
 
 .solution-input-item p {
   margin-top: 2px;
-  font-size: 11px;
+  font-size: 13px;
+  line-height: 1.55;
   color: rgba(255, 255, 255, 0.54);
 }
 
@@ -325,14 +340,14 @@ section {
 
 .delivery-copy p {
   margin-top: 3px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.6;
   color: #627486;
 }
 
 .delivery-output {
   padding: 6px 9px;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 850;
   white-space: nowrap;
   color: #1678aa;
@@ -463,6 +478,11 @@ section {
     grid-template-columns: 46px minmax(0, 1fr);
     gap: 12px;
     padding: 13px 0;
+  }
+
+  .solution-input-item p,
+  .delivery-copy p {
+    font-size: 12px;
   }
 
   .delivery-output {
