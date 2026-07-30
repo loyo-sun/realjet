@@ -18,9 +18,17 @@ export default defineConfig({
           process.cwd(),
           "marketing/precast-beam-factory/en/index.html",
         ),
+        "precast-beam-factory-id": resolve(
+          process.cwd(),
+          "marketing/precast-beam-factory/id/index.html",
+        ),
         "privacy-en": resolve(
           process.cwd(),
           "marketing/privacy/en/index.html",
+        ),
+        "privacy-id": resolve(
+          process.cwd(),
+          "marketing/privacy/id/index.html",
         ),
       },
     },

@@ -423,6 +423,29 @@ section {
   }
 }
 
+@media (min-width: 721px) and (max-width: 900px) {
+  #site-shell[data-locale="id"] .solution-journey {
+    grid-template-columns: 1fr;
+  }
+
+  #site-shell[data-locale="id"] .solution-input-panel,
+  #site-shell[data-locale="id"] .solution-process-panel {
+    display: block;
+    padding: 30px;
+  }
+
+  #site-shell[data-locale="id"] .solution-input-list,
+  #site-shell[data-locale="id"] .delivery-flow {
+    display: block;
+  }
+
+  #site-shell[data-locale="id"] .journey-arrow {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+
 @media (max-width: 720px) {
   .site-container {
     width: calc(100% - 28px);
@@ -488,7 +511,10 @@ section {
   .delivery-output {
     grid-column: 2;
     width: fit-content;
+    max-width: 100%;
     margin-top: -5px;
+    line-height: 1.35;
+    white-space: normal;
   }
 
   .precast-type-card {
