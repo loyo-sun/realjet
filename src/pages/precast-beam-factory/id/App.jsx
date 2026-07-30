@@ -213,36 +213,40 @@ const products = [{
 }];
 const projects = [{
   image: shenhaiTj05Image,
-  alt: "Lini produksi pracetak Proyek G15 Shenhai Expressway Ningbo South Section Contract TJ05",
+  alt: "Lini produksi pracetak untuk Proyek Ruas Selatan Jalan Tol Shenhai G15 di Ningbo, Kontrak TJ05",
   category: "Jalan Tol",
-  title: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
+  title: "Proyek Ruas Selatan Jalan Tol Shenhai G15 di Ningbo – Kontrak TJ05",
+  englishTitle: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
   line: "2 lini produksi T-Girder",
   coreEquipment: ["Pemindahan Cetakan", "Pengecoran Beton", "Vibrasi", "Perawatan Uap", "Prategang"],
   product: "T-Girder 30 m",
   output: "6 girder/hari"
 }, {
   image: wenzhouBayBaseImage,
-  alt: "Lini produksi pracetak Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
+  alt: "Lini produksi pracetak di Basis Industri Transportasi dan Konstruksi Perkotaan Kawasan Baru Teluk Wenzhou",
   category: "Basis Produksi Industri",
-  title: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
+  title: "Basis Industri Transportasi dan Konstruksi Perkotaan Kawasan Baru Teluk Wenzhou",
+  englishTitle: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
   line: "4 lini produksi T-Girder",
   coreEquipment: ["Pemindahan Cetakan", "Cetakan Hidraulik", "Vibrasi", "Pengecoran Beton", "Perawatan Hibrida"],
   product: "T-Girder 30 m dan 40 m",
   output: "8–12 girder/hari"
 }, {
   image: yongguanDongtouImage,
-  alt: "Lini produksi pracetak Yongguan Expressway Dongtou Spur Project",
+  alt: "Lini produksi pracetak untuk Proyek Jalan Tol Yongguan Cabang Dongtou",
   category: "Jalan Tol Cabang",
-  title: "Yongguan Expressway Dongtou Spur Project",
+  title: "Proyek Jalan Tol Yongguan Cabang Dongtou",
+  englishTitle: "Yongguan Expressway Dongtou Spur Project",
   line: "2 lini produksi Segmental Box Girder",
   coreEquipment: ["Sistem Transfer Cetakan 300 t", "Cetakan Hidraulik", "Vibrasi", "Pengecoran Beton", "Perawatan Hibrida"],
   product: "Segmental Box Girder",
   output: "6 segmen/hari"
 }, {
   image: guangaoTj5Image,
-  alt: "Lini produksi pracetak Chuanzhusi–Hongyuan Expressway Project",
+  alt: "Modernisasi lini produksi untuk Proyek Jalan Tol Chuanzhusi–Hongyuan",
   category: "Modernisasi Lini Eksisting",
-  title: "Chuanzhusi–Hongyuan Expressway Project",
+  title: "Proyek Jalan Tol Chuanzhusi–Hongyuan",
+  englishTitle: "Chuanzhusi–Hongyuan Expressway Project",
   line: "Modernisasi lini produksi eksisting",
   coreEquipment: ["Pengecoran Beton", "Konveyor Sabuk", "Distributor Beton"],
   product: "T-Girder 20 m",
@@ -909,6 +913,7 @@ export default function App() {
               alt,
               category,
               title,
+              englishTitle,
               line,
               coreEquipment,
               product,
@@ -925,7 +930,10 @@ export default function App() {
                   </div>
                 </div>
                 <div className="flex flex-1 flex-col p-4.5">
-                  <h3 className="min-h-[66px] text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy max-[720px]:min-h-0">{title}</h3>
+                  <div className="min-h-[138px] max-[720px]:min-h-0">
+                    <h3 className="text-[15px] font-[850] leading-[1.45] tracking-[-0.02em] text-brand-navy">{title}</h3>
+                    <p lang="en" className="mt-2 text-[10px] leading-[1.45] text-muted">{englishTitle}</p>
+                  </div>
                   <dl className="mt-3 flex min-h-[92px] flex-wrap gap-2 max-[720px]:min-h-0">
                     <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
                       <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">KONFIGURASI LINI</dt>

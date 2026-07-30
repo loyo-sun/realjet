@@ -4,6 +4,8 @@ const languages = [
   { code: "cn", flag: "🇨🇳", label: "中文", lang: "zh-CN" },
   { code: "en", flag: "🇬🇧", label: "English", lang: "en" },
   { code: "id", flag: "🇮🇩", label: "Bahasa Indonesia", lang: "id" },
+  { code: "ar", flag: "🇸🇦", label: "العربية", lang: "ar" },
+  { code: "es", flag: "🇪🇸", label: "Español", lang: "es" },
 ];
 
 export default function LanguageSwitcher({ current }) {
@@ -16,7 +18,7 @@ export default function LanguageSwitcher({ current }) {
         <span>{active.label}</span>
         <ChevronDown size={13} className="transition group-open:rotate-180" aria-hidden="true" />
       </summary>
-      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[184px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating">
+      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[184px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating rtl:right-auto rtl:left-0">
         {languages.map(({ code, flag, label, lang }) => (
           <a
             key={code}

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  --font-sans: Inter, "Noto Sans Arabic", Tahoma, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
 
   --color-brand-navy: #08253f;
   --color-brand-navy-light: #0f405f;
@@ -130,6 +130,66 @@ section {
 .policy-copy strong {
   font-weight: 800;
   color: #172a3c;
+}
+
+[dir="rtl"] .policy-copy ul {
+  padding-right: 1.25rem;
+  padding-left: 0;
+}
+
+#site-shell[data-locale="ar"] {
+  text-align: right;
+}
+
+#site-shell[data-locale="ar"] .hero-image-mask {
+  right: auto;
+  left: 0;
+  -webkit-mask-image: linear-gradient(
+    270deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.18) 13%,
+    #000 38%
+  );
+  mask-image: linear-gradient(
+    270deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.18) 13%,
+    #000 38%
+  );
+  object-position: left;
+}
+
+#site-shell[data-locale="ar"] .hero-overlay {
+  background: linear-gradient(
+    270deg,
+    rgba(6, 30, 52, 1) 0%,
+    rgba(7, 36, 59, 0.97) 31%,
+    rgba(9, 47, 74, 0.7) 49%,
+    rgba(11, 56, 85, 0.2) 70%,
+    rgba(13, 75, 104, 0) 100%
+  );
+}
+
+#site-shell[data-locale="ar"] .journey-arrow {
+  right: 0;
+  left: auto;
+  transform: translate(50%, -50%);
+}
+
+#site-shell[data-locale="ar"] .delivery-flow::before {
+  right: 23px;
+  left: auto;
+}
+
+#site-shell[data-locale="ar"] .delivery-marker span {
+  right: auto;
+  left: -5px;
+}
+
+#site-shell[data-locale="ar"] .precast-type-card,
+#site-shell[data-locale="ar"] input,
+#site-shell[data-locale="ar"] textarea {
+  text-align: right;
 }
 
 .solution-journey {
@@ -493,6 +553,13 @@ section {
 
   .journey-arrow {
     top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #site-shell[data-locale="ar"] .journey-arrow {
+    top: 0;
+    right: auto;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
   }

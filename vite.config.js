@@ -22,6 +22,14 @@ export default defineConfig({
           process.cwd(),
           "marketing/precast-beam-factory/id/index.html",
         ),
+        "precast-beam-factory-ar": resolve(
+          process.cwd(),
+          "marketing/precast-beam-factory/ar/index.html",
+        ),
+        "precast-beam-factory-es": resolve(
+          process.cwd(),
+          "marketing/precast-beam-factory/es/index.html",
+        ),
         "privacy-en": resolve(
           process.cwd(),
           "marketing/privacy/en/index.html",
@@ -29,6 +37,14 @@ export default defineConfig({
         "privacy-id": resolve(
           process.cwd(),
           "marketing/privacy/id/index.html",
+        ),
+        "privacy-ar": resolve(
+          process.cwd(),
+          "marketing/privacy/ar/index.html",
+        ),
+        "privacy-es": resolve(
+          process.cwd(),
+          "marketing/privacy/es/index.html",
         ),
       },
     },
