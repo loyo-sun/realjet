@@ -99,17 +99,17 @@ const methods = [
   },
   {
     icon: CheckCircle,
-    title: "Оптимизация мощности",
+    title: "Выход на проектную мощность",
     text: "Сопровождаем монтаж, пусконаладочные работы, пробный выпуск и подтверждение мощности до достижения стабильной производительности.",
-    output: "Стабильная подтверждённая мощность",
+    output: "Подтверждённая проектная производительность",
   },
 ];
 
 const precastTypes = [
   {
     image: tBeamImage,
-    title: "Т-образная балка",
-    fullName: "Сборная железобетонная Т-образная балка",
+    title: "Тавровая балка",
+    fullName: "Сборная железобетонная балка таврового сечения",
     scene: "Автомагистрали / Путепроводы",
     text: "Отработанное и экономичное решение для автомагистралей и путепроводов с пролётами 20–50 м.",
   },
@@ -136,29 +136,29 @@ const precastTypes = [
   },
   {
     image: iGirderImage,
-    title: "I-образная балка",
-    fullName: "Сборная железобетонная I-образная балка",
+    title: "Двутавровая балка",
+    fullName: "Сборная железобетонная балка двутаврового сечения",
     scene: "Эстакады / Мосты / Сталежелезобетонные мосты",
     text: "Эффективное сечение работает совместно с монолитной плитой и широко применяется для мостовых пролётов 25–45 м.",
   },
   {
     image: fullSpanBoxGirderImage,
-    title: "Балка на полный пролёт",
-    fullName: "Сборная коробчатая балка на полный пролёт",
+    title: "Цельнопролётная коробчатая балка",
+    fullName: "Сборная железобетонная цельнопролётная коробчатая балка",
     scene: "Высокоскоростные железные дороги / Городские магистрали",
     text: "Изготавливается на полную длину пролёта и монтируется одним элементом, обеспечивая высокую несущую способность при изгибе и кручении.",
   },
   {
     image: doubleTSlabImage,
-    title: "Двойной Т-элемент",
-    fullName: "Сборный железобетонный элемент двойного Т-сечения",
+    title: "Плита типа 2Т",
+    fullName: "Сборная железобетонная ребристая плита типа 2Т",
     scene: "Транспортные тоннели / Станции метро",
     text: "Интегрированная ребристая секция после монтажа может непосредственно образовывать покрытие или проезжую часть.",
   },
   {
     image: troughGirderImage,
-    title: "Лотковая балка",
-    fullName: "Сборная железобетонная лотковая балка",
+    title: "Корытообразная балка",
+    fullName: "Сборная железобетонная балка корытообразного сечения",
     scene: "Железные дороги / Пешеходные мосты",
     text: "Плоская нижняя плита и прямые стенки подходят для эстакадных линий метро и сборных пешеходных мостов большой длины.",
   },
@@ -239,8 +239,8 @@ const products = [
   },
   {
     image: castingBedSystemImage,
-    alt: "Рельсовая система Realjet для перемещения форм",
-    title: "Рельсовая система перемещения форм",
+    alt: "Система Realjet для перемещения форм по рельсам",
+    title: "Система перемещения форм по рельсам",
     text: "Тележка с литий-железо-фосфатной батареей перемещает формы между постами по напольным рельсам. Точность позиционирования составляет ±1 мм, грузоподъёмность — 80–120 т, ресурс батареи превышает 5 000 циклов.",
     features: ["Аккумуляторный привод", "Автораспознавание постов", "Позиционирование ±1 мм"],
   },
@@ -281,9 +281,9 @@ const projects = [
     category: "Автомагистраль",
     title: "Южный участок автомагистрали G15 Шэньхай в Нинбо — контракт TJ05",
     englishTitle: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
-    line: "2 линии Т-балок",
+    line: "2 линии тавровых балок",
     coreEquipment: ["Перемещение форм", "Подача бетона", "Вибрирование", "Тепловлажностная обработка", "Предварительное напряжение"],
-    product: "Т-балки 30 м",
+    product: "Тавровые балки 30 м",
     output: "6 балок/сут.",
   },
   {
@@ -292,9 +292,9 @@ const projects = [
     category: "Индустриальная база",
     title: "Индустриальная база транспорта и городского строительства нового района залива Вэньчжоу",
     englishTitle: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
-    line: "4 линии Т-балок",
-    coreEquipment: ["Перемещение форм", "Гидравлические формы", "Вибрирование", "Подача бетона", "Комбинированная обработка"],
-    product: "Т-балки 30 и 40 м",
+    line: "4 линии тавровых балок",
+    coreEquipment: ["Перемещение форм", "Гидравлические формы", "Вибрирование", "Подача бетона", "Комбинированная тепловлажностная обработка"],
+    product: "Тавровые балки 30 и 40 м",
     output: "8–12 балок/сут.",
   },
   {
@@ -304,7 +304,7 @@ const projects = [
     title: "Проект ответвления Дунтоу автомагистрали Юнгуань",
     englishTitle: "Yongguan Expressway Dongtou Spur Project",
     line: "2 линии сегментов",
-    coreEquipment: ["Перемещение форм 300 т", "Гидравлические формы", "Вибрирование", "Подача бетона", "Комбинированная обработка"],
+    coreEquipment: ["Перемещение форм 300 т", "Гидравлические формы", "Вибрирование", "Подача бетона", "Комбинированная тепловлажностная обработка"],
     product: "Сегменты коробчатых балок",
     output: "6 сегментов/сут.",
   },
@@ -316,7 +316,7 @@ const projects = [
     englishTitle: "Chuanzhusi–Hongyuan Expressway Project",
     line: "Модернизация действующей линии",
     coreEquipment: ["Подача бетона", "Ленточный конвейер", "Распределитель"],
-    product: "Т-балки 20 м",
+    product: "Тавровые балки 20 м",
     output: "20 балок/сут.",
   },
 ];
@@ -333,7 +333,7 @@ const capabilities = [
       { value: "40+", label: "Инженеров НИОКР" },
       { value: "50%+", label: "Сотрудников НИОКР со степенью магистра" },
       { value: "5%", label: "Годовой выручки направляется на НИОКР" },
-      { value: "150+", label: "Выданных патентов" },
+      { value: "150+", label: "Полученных патентов" },
     ],
   },
   {
@@ -345,7 +345,7 @@ const capabilities = [
     text: "Шестьдесят шесть крупных станков обеспечивают резку, гибку, мехобработку, сварку, обработку поверхности, сборку и испытания, а также полную прослеживаемость крупных систем.",
     stats: [
       { value: "66", label: "Единиц основного оборудования" },
-      { value: "±0.005 mm", label: "Точность позиционирования" },
+      { value: "±0,005 мм", label: "Точность позиционирования" },
       { value: "12", label: "Сварочных роботов" },
       { value: "Двойная сертификация", label: "ISO 9001 / ISO 3834-2" },
     ],
@@ -370,7 +370,7 @@ const companyProofs = [
   { value: "С 2008 года", label: "Непрерывная специализация в отрасли" },
   { value: "100 000+ м²", label: "Собственная производственная база" },
   { value: "60 000+ м²", label: "Производственные цеха" },
-  { value: "Компания NEEQ", label: "Биржевой код 832867" },
+  { value: "Листинг на NEEQ", label: "Биржевой код 832867" },
 ];
 
 function PrimaryButton({ children, onClick, dark = false, className = "" }) {
@@ -576,7 +576,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1100px]:hidden" aria-label="Основная навигация">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button onClick={() => onLead("Бесплатный индивидуальный проект")} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1100px]:ml-auto max-[720px]:hidden">Бесплатный индивидуальный проект</button>
+        <button onClick={() => onLead("Бесплатная схема линии под проект")} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1100px]:ml-auto max-[720px]:hidden">Бесплатная схема линии под проект</button>
         <LanguageSwitcher current="ru" />
         <button
           type="button"
@@ -622,7 +622,7 @@ function Hero({ onLead }) {
               Realjet координирует весь проект: от планирования линии и подбора оборудования до его адаптации, монтажа и выхода на проектную мощность.
             </p>
             <div className="mt-7.5">
-              <PrimaryButton onClick={() => onLead("Бесплатный индивидуальный проект")} className="max-[720px]:w-full max-[720px]:max-w-[320px]">Бесплатный индивидуальный проект <ArrowRight size={16} /></PrimaryButton>
+              <PrimaryButton onClick={() => onLead("Бесплатная схема линии под проект")} className="max-[720px]:w-full max-[720px]:max-w-[320px]">Бесплатная схема линии под проект <ArrowRight size={16} /></PrimaryButton>
             </div>
             <div className="mt-5 flex flex-wrap gap-2 max-[720px]:mt-7">
               {["Автомагистрали", "Мосты", "Железные дороги", "Гидротехника", "Городская инфраструктура"].map((tag) => (
@@ -849,7 +849,7 @@ function ContactEmail() {
 
 export default function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [leadTitle, setLeadTitle] = useState("Бесплатный индивидуальный проект");
+  const [leadTitle, setLeadTitle] = useState("Бесплатная схема линии под проект");
   const [progress, setProgress] = useState(0);
   const [showAllEquipment, setShowAllEquipment] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -859,7 +859,7 @@ export default function App() {
   const lastScrollYRef = useRef(0);
   const scrollStopTimerRef = useRef(null);
   const leadTriggerRef = useRef(null);
-  const openLead = (title = "Бесплатный индивидуальный проект") => {
+  const openLead = (title = "Бесплатная схема линии под проект") => {
     leadTriggerRef.current = document.activeElement;
     setLeadTitle(title);
     setModalOpen(true);
@@ -963,7 +963,7 @@ export default function App() {
               <div className="solution-panel-header">
                 <span className="section-index text-brand-blue">02 · МЕТОД REALJET</span>
                 <h3>Четыре этапа проектирования линии</h3>
-                <p className="solution-panel-description">Анализ требований, разработка технологии, подбор оборудования и оптимизация мощности связывают каждое решение с требуемым результатом.</p>
+                <p className="solution-panel-description">Анализ требований, разработка технологии, подбор оборудования и выход на проектную мощность связывают каждое решение с требуемым результатом.</p>
               </div>
               <div className="delivery-flow">
                 {methods.map(({ icon: Icon, title, text, output }, index) => (
@@ -1181,7 +1181,7 @@ export default function App() {
         </footer>
 
         <button
-          onClick={() => openLead("Бесплатный индивидуальный проект")}
+          onClick={() => openLead("Бесплатная схема линии под проект")}
           aria-hidden={hideMobileCta}
           tabIndex={hideMobileCta ? -1 : 0}
           className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
@@ -1190,7 +1190,7 @@ export default function App() {
               : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
           }`}
         >
-          Бесплатный индивидуальный проект <ArrowRight size={16} />
+          Бесплатная схема линии под проект <ArrowRight size={16} />
         </button>
       </div>
 

@@ -527,7 +527,7 @@ section {
     top: 0;
     right: auto;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 
   #site-shell[data-locale="ru"] .journey-arrow {
@@ -592,7 +592,7 @@ section {
     top: 0;
     right: auto;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 
   .delivery-step {

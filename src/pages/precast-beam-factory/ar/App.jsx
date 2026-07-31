@@ -979,7 +979,7 @@ export default function App() {
             </aside>
 
             <div className="solution-process-panel">
-              <div className="journey-arrow" aria-hidden="true"><ArrowRight size={18} /></div>
+              <div className="journey-arrow" aria-hidden="true"><ArrowLeft size={18} /></div>
               <div className="solution-panel-header">
                 <span className="section-index text-brand-blue">02 · منهجية REALJET</span>
                 <h3>أربع خطوات لتصميم الخط</h3>
