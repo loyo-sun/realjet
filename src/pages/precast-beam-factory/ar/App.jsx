@@ -122,10 +122,10 @@ const precastTypes = [
   },
   {
     image: segmentalBoxGirderImage,
-    title: "عارضة صندوقية قطاعية",
-    fullName: "عارضة صندوقية قطاعية مسبقة الصب",
+    title: "عارضة صندوقية مكوّنة من قطاعات",
+    fullName: "عارضة صندوقية مسبقة الصب مكوّنة من قطاعات",
     scene: "الجسور الحضرية المرتفعة / الجسور البحرية",
-    text: "تُجمع القطاعات المصبوبة في المصنع داخل الموقع، ما يلائم الأشكال الهندسية المعقدة للجسور والمشاريع التي تتطلب الحد من تعطيل حركة المرور.",
+    text: "تُجمع القطاعات المصبوبة في المصنع في موقع المشروع، ما يلائم الأشكال الهندسية المعقدة للجسور والمشاريع التي تتطلب الحد من تعطيل حركة المرور.",
   },
   {
     image: uBeamImage,
@@ -160,7 +160,7 @@ const precastTypes = [
     title: "عارضة حوضية",
     fullName: "عارضة حوضية خرسانية مسبقة الصب",
     scene: "السكك الحديدية / جسور المشاة",
-    text: "تلائم بلاطتها السفلية المسطحة وجدرانها المستقيمة قطاعات المترو المرتفعة وجسور المشاة مسبقة الصنع طويلة البحر.",
+    text: "تلائم بلاطتها السفلية المسطحة وجدرانها المستقيمة قطاعات المترو المرتفعة وجسور المشاة مسبقة الصب طويلة البحر.",
   },
   {
     image: crashBarrierImage,
@@ -171,10 +171,10 @@ const precastTypes = [
   },
   {
     image: tunnelSegmentImage,
-    title: "قطاع نفق",
-    fullName: "قطاع تبطين نفق خرساني مسبق الصب",
+    title: "قطعة تبطين نفق",
+    fullName: "قطعة خرسانية مسبقة الصب لتبطين النفق",
     scene: "المترو / أنفاق عبور الأنهار والجبال",
-    text: "تُكوّن القطاعات بطانة النفق الدائمة الحاملة، وتتطلب دقة أبعاد ومقاومة وعزلًا مائيًا عاليًا.",
+    text: "تُكوّن قطع التبطين الغلاف الدائم الحامل للنفق، وتتطلب دقة عالية في الأبعاد ومقاومة إنشائية وعزلًا مائيًا محكمًا.",
   },
   {
     image: boxCulvertImage,
@@ -220,12 +220,12 @@ const lines = [
   },
   {
     image: segmentalLineImage,
-    alt: "خط Realjet الآلي لإنتاج العوارض القطاعية",
-    kicker: "تكوين عملية العوارض القطاعية",
-    title: "خط إنتاج العوارض القطاعية الآلي",
+    alt: "خط Realjet الآلي لإنتاج قطاعات العوارض الصندوقية مسبقة الصب",
+    kicker: "تكوين عملية قطاعات العوارض الصندوقية",
+    title: "خط آلي لإنتاج قطاعات العوارض الصندوقية",
     visual: "2–3 قطاعات/يوم",
     visualLabel: "القدرة اليومية: 2–3 قطاعات",
-    text: "صُمم للعوارض الصندوقية القطاعية والإنتاج المرن بمقاسات متعددة، ويجمع بين تحديد موضع الصب المتطابق وقوالب القطاعات المخصصة والمعالجة الآلية بالبخار. ويُحسّن زمن التتابع وفق هندسة القطاع وبرنامج التركيب للحفاظ على إنتاج مستقر وكفاءة استخدام القوالب.",
+    text: "صُمم لإنتاج قطاعات العوارض الصندوقية بمقاسات متعددة، ويجمع بين تموضع الصب المتطابق وقوالب القطاعات المخصصة والمعالجة الآلية بالبخار. ويُحسّن زمن التتابع وفق هندسة القطاع وبرنامج التركيب للحفاظ على إنتاج مستقر وكفاءة استخدام القوالب.",
   },
 ];
 
@@ -281,7 +281,7 @@ const projects = [
     category: "طريق سريع",
     title: "مشروع القطاع الجنوبي من طريق شِنهاي السريع G15 في نينغبو – العقد TJ05",
     englishTitle: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
-    line: "خطا إنتاج لعوارض T",
+    line: "خطان لإنتاج عوارض T",
     coreEquipment: ["نقل القوالب", "صب الخرسانة", "الاهتزاز", "المعالجة بالبخار", "الإجهاد المسبق"],
     product: "عوارض T بطول 30 م",
     output: "6 عوارض/يوم",
@@ -294,7 +294,7 @@ const projects = [
     englishTitle: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
     line: "4 خطوط لإنتاج عوارض T",
     coreEquipment: ["نقل القوالب", "قوالب هيدروليكية", "الاهتزاز", "صب الخرسانة", "معالجة هجينة"],
-    product: "عوارض T بطولي 30 و40 م",
+    product: "عوارض T بطول 30 و40 م",
     output: "8–12 عارضة/يوم",
   },
   {
@@ -303,9 +303,9 @@ const projects = [
     category: "فرع طريق سريع",
     title: "مشروع فرع دونغتو من طريق يونغقوان السريع",
     englishTitle: "Yongguan Expressway Dongtou Spur Project",
-    line: "خطا إنتاج للعوارض القطاعية",
+    line: "خطان لإنتاج قطاعات العوارض الصندوقية",
     coreEquipment: ["نظام نقل قوالب بسعة 300 طن", "قوالب هيدروليكية", "الاهتزاز", "صب الخرسانة", "معالجة هجينة"],
-    product: "عوارض قطاعية",
+    product: "قطاعات عوارض صندوقية",
     output: "6 قطاعات/يوم",
   },
   {
@@ -353,7 +353,7 @@ const capabilities = [
   {
     icon: HardHat,
     image: projectDeliveryCapabilityImage,
-    alt: "تنفيذ Realjet لمشاريع خطوط إنتاج الخرسانة مسبقة الصب",
+    alt: "تنفيذ Realjet لمشاريع خطوط إنتاج العناصر الخرسانية مسبقة الصب",
     title: "تنفيذ المشروع",
     headline: "لا نكتفي بتوريد المعدات، بل ندعم الخط حتى التشغيل المستقر",
     text: "يمتد نطاقنا من تنسيق الحل والتصنيع إلى التركيب والتشغيل المتكامل والإنتاج التجريبي والتدريب ودعم التشغيل، مع فريق مشروع واحد ينسق واجهات الأعمال المدنية والطاقة والرفع والتحكم.",
@@ -372,6 +372,25 @@ const companyProofs = [
   { value: "60,000+ m²", label: "منشآت تصنيع المعدات" },
   { value: "شركة مدرجة في NEEQ", label: "رمز السهم 832867" },
 ];
+
+function BidiMetric({ value }) {
+  const text = String(value);
+  const match = text.match(/^([0-9.,+%×±/–-]+)(\s*)(.*)$/u);
+  if (!match) return text;
+
+  const [, numericPart, spacing, remainder] = match;
+  if (!remainder || !/[\u0600-\u06ff]/u.test(remainder)) {
+    return <bdi dir="ltr">{text}</bdi>;
+  }
+
+  return (
+    <>
+      <bdi dir="ltr">{numericPart}</bdi>
+      {spacing}
+      {remainder}
+    </>
+  );
+}
 
 function PrimaryButton({ children, onClick, dark = false, className = "" }) {
   return (
@@ -636,11 +655,11 @@ function Hero({ onLead }) {
       <div id="hero-metrics" className="relative z-30 -mt-6">
         <div className="site-container">
           <div className="grid grid-cols-4 overflow-hidden rounded-[13px] border border-line bg-white shadow-card max-[720px]:grid-cols-2">
-            {[["50%", "مساحة الموقع", "down"], ["30%", "العمالة في الموقع", "down"], ["3×", "كفاءة نقل القوالب", "up"], ["50%", "مدة المعالجة بالبخار", "down"]].map(([value, label, direction]) => (
+            {[["50%", "المساحة المطلوبة", "down"], ["30%", "العمالة في الموقع", "down"], ["3×", "كفاءة نقل القوالب", "up"], ["50%", "مدة المعالجة بالبخار", "down"]].map(([value, label, direction]) => (
               <div key={label} className="border-r border-line px-3.5 py-4 text-center last:border-r-0 max-[720px]:border-b max-[720px]:even:border-r-0">
                 <strong className="flex items-center justify-center gap-1 text-[21px] font-[900] text-brand-navy">
                   {direction === "up" ? <ArrowUp size={19} strokeWidth={2.8} aria-hidden="true" /> : <ArrowDown size={19} strokeWidth={2.8} aria-hidden="true" />}
-                  {value}
+                  <BidiMetric value={value} />
                 </strong>
                 <span className="text-[11px] text-muted">{label}</span>
               </div>
@@ -1003,7 +1022,7 @@ export default function App() {
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.025]"
                   />
                   <span aria-label={visualLabel} className="absolute top-3 right-3 rounded-md border border-white/15 bg-brand-navy/60 px-2.5 py-1.5 text-[11px] font-[850] text-white/95 shadow-sm backdrop-blur-[3px]">
-                    {visual}
+                    <BidiMetric value={visual} />
                   </span>
                 </div>
                 <div className="p-6">
@@ -1086,7 +1105,7 @@ export default function App() {
                     </div>
                     <div className="min-w-[108px] flex-1 rounded-[9px] border border-line bg-soft px-3 py-2.5">
                       <dt className="text-[9px] font-[850] tracking-[0.06em] text-muted">الإنتاج اليومي</dt>
-                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy">{output}</dd>
+                      <dd className="mt-1 text-[11px] font-[850] text-brand-navy"><BidiMetric value={output} /></dd>
                     </div>
                   </dl>
                   <div className="mt-3 min-h-[152px] rounded-[9px] border border-brand-blue/10 bg-[#eef6f8] px-3 py-3 max-[720px]:min-h-0">
@@ -1123,7 +1142,7 @@ export default function App() {
           <div className="mb-5 grid grid-cols-4 overflow-hidden rounded-card border border-line bg-white text-center shadow-card max-[720px]:grid-cols-2">
             {companyProofs.map(({ value, label }) => (
               <div key={label} className="border-r border-line px-5 py-4 last:border-r-0 max-[720px]:border-b max-[720px]:nth-[2n]:border-r-0 max-[720px]:nth-[n+3]:border-b-0">
-                <strong className="block text-[20px] font-[900] tracking-[-0.025em] text-brand-navy">{value}</strong>
+                <strong className="block text-[20px] font-[900] tracking-[-0.025em] text-brand-navy"><BidiMetric value={value} /></strong>
                 <span className="mt-1 block text-[11px] text-muted">{label}</span>
               </div>
             ))}
@@ -1149,7 +1168,7 @@ export default function App() {
                   <div className="mt-auto grid grid-cols-2 gap-2 border-t border-line pt-4">
                     {stats.map(({ value, label }) => (
                       <div key={label} className="rounded-lg bg-soft px-3 py-2.5">
-                        <strong className="block text-[15px] font-[900] text-brand-navy">{value}</strong>
+                        <strong className="block text-[15px] font-[900] text-brand-navy"><BidiMetric value={value} /></strong>
                         <span className="mt-0.5 block text-[10px] leading-[1.35] text-muted">{label}</span>
                       </div>
                     ))}
@@ -1165,7 +1184,7 @@ export default function App() {
           <div className="site-container flex flex-col items-center text-center">
             <p className="mb-2 text-[13px] font-[850] tracking-[0.1em] text-[#8ce2e8] uppercase">ابدأ مشروعك</p>
             <h2 className="max-w-[760px] text-[clamp(28px,3.4vw,40px)] leading-[1.16] font-[850] tracking-[-0.03em]">احصل على حل مصمم هندسيًا لمشروعك</h2>
-            <p className="mt-3 max-w-[670px] text-[15px] text-white/68">أخبرنا بما تحتاج إلى إنتاجه، وسنبدأ تخطيط خط إنتاج الخرسانة مسبقة الصب الخاص بك.</p>
+            <p className="mt-3 max-w-[670px] text-[15px] text-white/68">أخبرنا بالعناصر التي تحتاج إلى إنتاجها، وسنبدأ تخطيط خط إنتاج العناصر الخرسانية مسبقة الصب المناسب لمشروعك.</p>
             <PrimaryButton onClick={() => openLead("ناقش مشروعك معنا")} className="mt-6 max-[720px]:w-full max-[720px]:max-w-[320px]">ناقش مشروعك معنا <ArrowLeft size={16} /></PrimaryButton>
           </div>
         </section>

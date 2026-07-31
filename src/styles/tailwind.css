@@ -137,6 +137,14 @@ section {
   padding-left: 0;
 }
 
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] .section-index {
+  letter-spacing: normal;
+}
+
 #site-shell[data-locale="ar"] {
   text-align: right;
 }
@@ -484,23 +492,35 @@ section {
 }
 
 @media (min-width: 721px) and (max-width: 900px) {
-  #site-shell[data-locale="id"] .solution-journey {
+  #site-shell[data-locale="id"] .solution-journey,
+  #site-shell[data-locale="ar"] .solution-journey {
     grid-template-columns: 1fr;
   }
 
   #site-shell[data-locale="id"] .solution-input-panel,
-  #site-shell[data-locale="id"] .solution-process-panel {
+  #site-shell[data-locale="id"] .solution-process-panel,
+  #site-shell[data-locale="ar"] .solution-input-panel,
+  #site-shell[data-locale="ar"] .solution-process-panel {
     display: block;
     padding: 30px;
   }
 
   #site-shell[data-locale="id"] .solution-input-list,
-  #site-shell[data-locale="id"] .delivery-flow {
+  #site-shell[data-locale="id"] .delivery-flow,
+  #site-shell[data-locale="ar"] .solution-input-list,
+  #site-shell[data-locale="ar"] .delivery-flow {
     display: block;
   }
 
   #site-shell[data-locale="id"] .journey-arrow {
     top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #site-shell[data-locale="ar"] .journey-arrow {
+    top: 0;
+    right: auto;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
   }
