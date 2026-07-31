@@ -1,15 +1,17 @@
 import { ChevronDown } from "lucide-react";
 
 const languages = [
-  { code: "cn", flag: "🇨🇳", label: "中文", lang: "zh-CN" },
   { code: "en", flag: "🇬🇧", label: "English", lang: "en" },
   { code: "id", flag: "🇮🇩", label: "Bahasa Indonesia", lang: "id" },
   { code: "ar", flag: "🇸🇦", label: "العربية", lang: "ar" },
+  { code: "ru", flag: "🇷🇺", label: "Русский", lang: "ru" },
+  { code: "cn", flag: "🇨🇳", label: "中文", lang: "zh-CN" },
+  { code: "fr", flag: "🇫🇷", label: "Français", lang: "fr" },
   { code: "es", flag: "🇪🇸", label: "Español", lang: "es" },
 ];
 
 export default function LanguageSwitcher({ current }) {
-  const active = languages.find(({ code }) => code === current) ?? languages[1];
+  const active = languages.find(({ code }) => code === current) ?? languages[0];
 
   return (
     <details className="group relative shrink-0 max-[720px]:ml-auto">

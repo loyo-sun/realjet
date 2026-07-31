@@ -493,14 +493,17 @@ section {
 
 @media (min-width: 721px) and (max-width: 900px) {
   #site-shell[data-locale="id"] .solution-journey,
-  #site-shell[data-locale="ar"] .solution-journey {
+  #site-shell[data-locale="ar"] .solution-journey,
+  #site-shell[data-locale="ru"] .solution-journey {
     grid-template-columns: 1fr;
   }
 
   #site-shell[data-locale="id"] .solution-input-panel,
   #site-shell[data-locale="id"] .solution-process-panel,
   #site-shell[data-locale="ar"] .solution-input-panel,
-  #site-shell[data-locale="ar"] .solution-process-panel {
+  #site-shell[data-locale="ar"] .solution-process-panel,
+  #site-shell[data-locale="ru"] .solution-input-panel,
+  #site-shell[data-locale="ru"] .solution-process-panel {
     display: block;
     padding: 30px;
   }
@@ -508,7 +511,9 @@ section {
   #site-shell[data-locale="id"] .solution-input-list,
   #site-shell[data-locale="id"] .delivery-flow,
   #site-shell[data-locale="ar"] .solution-input-list,
-  #site-shell[data-locale="ar"] .delivery-flow {
+  #site-shell[data-locale="ar"] .delivery-flow,
+  #site-shell[data-locale="ru"] .solution-input-list,
+  #site-shell[data-locale="ru"] .delivery-flow {
     display: block;
   }
 
@@ -521,6 +526,12 @@ section {
   #site-shell[data-locale="ar"] .journey-arrow {
     top: 0;
     right: auto;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #site-shell[data-locale="ru"] .journey-arrow {
+    top: 0;
     left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
   }
