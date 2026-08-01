@@ -42,6 +42,10 @@ export default defineConfig({
           process.cwd(),
           "marketing/privacy/en/index.html",
         ),
+        "privacy-cn": resolve(
+          process.cwd(),
+          "marketing/privacy/cn/index.html",
+        ),
         "privacy-id": resolve(
           process.cwd(),
           "marketing/privacy/id/index.html",

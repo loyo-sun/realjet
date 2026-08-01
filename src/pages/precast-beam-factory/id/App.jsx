@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Building2, CheckCircle, CloudSun, Compass, FileCheck, HardHat, LoaderCircle, MapPin, Menu, Package, Search, Send, Settings, User, Workflow, Wrench, X } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -628,10 +629,12 @@ function LeadModal({
         body
       });
       if (!response.ok) throw new Error("Submission failed");
+      trackLeadSuccess();
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
+      trackLeadError();
       setSubmissionState("error");
     }
   };

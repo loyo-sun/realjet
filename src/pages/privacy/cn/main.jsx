@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
-import { initLandingAnalytics } from "../shared/analytics";
+import { initAnalyticsConsent } from "../../precast-beam-factory/shared/analytics";
 import "../../../styles/tailwind.css";
 
-initLandingAnalytics("fr");
+document.body.classList.add("privacy-page");
+initAnalyticsConsent("cn");
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

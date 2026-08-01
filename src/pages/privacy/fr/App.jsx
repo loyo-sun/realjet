@@ -1,5 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
+import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
 
 const sections = [
   ["who-we-are", "1. Qui sommes-nous"],
@@ -74,7 +75,7 @@ export default function App() {
                 <p className="mt-5 max-w-[760px] text-[17px] leading-[1.7] text-white/72 max-[720px]:text-[15px]">
                   La présente politique explique comment Realjet collecte, utilise, conserve, partage et protège les données personnelles transmises par l’intermédiaire de notre site web et de nos formulaires de demande de projet.
                 </p>
-                <p className="mt-5 text-[12px] font-[750] text-white/55">Date d’entrée en vigueur : 31 juillet 2026</p>
+                <p className="mt-5 text-[12px] font-[750] text-white/55">Date d’entrée en vigueur : 1er août 2026</p>
               </div>
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function App() {
                 <li>date et heure d’accès ;</li>
                 <li>informations élémentaires de sécurité, de diagnostic et journaux du serveur.</li>
               </ul>
-              <p>À l’heure actuelle, le site n’utilise ni pixels publicitaires ni outils de suivi analytique. Si nous ajoutons à l’avenir des outils d’analyse, de publicité ou des cookies non essentiels, nous mettrons à jour la présente Politique de confidentialité et appliquerons le mécanisme de consentement requis par la législation applicable avant leur activation.</p>
+              <p>Avec votre consentement, nous utilisons Google Analytics 4 pour comprendre l’utilisation de la page et améliorer le parcours de demande de projet. Nous enregistrons des événements d’utilisation pseudonymisés, tels que l’affichage de la page, l’emplacement du bouton d’action sélectionné, la progression du formulaire par nom de champ, les tentatives d’envoi et leur résultat. Les valeurs saisies dans le formulaire — notamment l’entreprise, le nom du contact, l’adresse e-mail, le pays et les détails du projet — ne sont pas transmises à Google Analytics.</p>
             </PolicySection>
 
             <PolicySection id="how-we-use-information" title="3. Utilisation des données personnelles">
@@ -209,15 +210,16 @@ export default function App() {
             </PolicySection>
 
             <PolicySection id="cookies" title="10. Cookies et technologies similaires">
-              <p>À l’heure actuelle, le site n’utilise ni cookies publicitaires, ni pixels publicitaires, ni outils de suivi analytique.</p>
               <p>Le site ou son hébergeur peut utiliser des fonctions techniques ou des mécanismes de sécurité strictement nécessaires à l’affichage des pages, au traitement des demandes, à la prévention des abus ou à la fiabilité du service.</p>
-              <p>Si nous ajoutons ultérieurement des outils d’analyse, de publicité ou d’autres technologies non essentielles :</p>
+              <p>Google Analytics 4 est un service d’analyse facultatif fourni par Google. Le stockage des données d’analyse est refusé par défaut et n’est activé qu’après avoir sélectionné « Accepter l’analyse ». Le stockage publicitaire, les données utilisateur à des fins publicitaires et la personnalisation des annonces restent désactivés.</p>
+              <p>Vous pouvez accepter ou refuser l’analyse, puis modifier votre choix à tout moment dans les paramètres d’analyse.</p>
               <ul>
-                <li>nous mettrons à jour la présente Politique de confidentialité ;</li>
-                <li>nous identifierons les prestataires et les finalités concernés ;</li>
-                <li>nous expliquerons les durées de conservation et les transferts applicables ;</li>
-                <li>nous fournirons un outil de contrôle des cookies ou de consentement lorsque la loi l’exige.</li>
+                <li>Finalité : mesurer l’utilisation des pages et l’efficacité du parcours de demande ;</li>
+                <li>Prestataire : Google LLC (Google Analytics 4) ;</li>
+                <li>Données : informations pseudonymisées sur l’appareil, le navigateur, la page et les interactions, sans le contenu du formulaire ;</li>
+                <li>Contrôle : le consentement peut être accordé, refusé ou retiré à tout moment.</li>
               </ul>
+              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Gérer les préférences d’analyse</button>
             </PolicySection>
 
             <PolicySection id="children" title="11. Données relatives aux mineurs">

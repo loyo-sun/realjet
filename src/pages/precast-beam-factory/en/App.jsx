@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -733,10 +734,12 @@ function LeadModal({ open, onClose, title }) {
       });
 
       if (!response.ok) throw new Error("Submission failed");
+      trackLeadSuccess();
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
+      trackLeadError();
       setSubmissionState("error");
     }
   };

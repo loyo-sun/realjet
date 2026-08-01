@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -58,7 +59,7 @@ import interlockingConcreteArmourUnitImage from "../../../assets/image/precast-t
 const inputs = [
   {
     icon: Package,
-    title: "Cahier de production",
+    title: "Programme de production",
     text: "Types de produits, quantités, calendrier et production journalière cible, y compris les jalons de démarrage et de montée en cadence",
   },
   {
@@ -82,8 +83,8 @@ const methods = [
   {
     icon: Search,
     title: "Analyse des besoins",
-    text: "Nous définissons les produits, les quantités, le calendrier, les spécifications et les contraintes d’exploitation, puis les traduisons en un cahier de production précis.",
-    output: "Cahier de production défini",
+    text: "Nous définissons les produits, les quantités, le calendrier, les spécifications et les contraintes d’exploitation, puis les traduisons en un programme de production précis.",
+    output: "Programme de production défini",
   },
   {
     icon: Workflow,
@@ -99,9 +100,9 @@ const methods = [
   },
   {
     icon: CheckCircle,
-    title: "Optimisation de la capacité",
-    text: "Nous accompagnons l’installation, la mise en service, la production d’essai et la validation de capacité jusqu’à l’obtention d’une production stable.",
-    output: "Capacité stable et validée",
+    title: "Montée en cadence",
+    text: "Nous accompagnons l’installation, la mise en service, la production d’essai et la validation des performances jusqu’à l’atteinte d’une cadence stable.",
+    output: "Cadence nominale validée",
   },
 ];
 
@@ -143,17 +144,17 @@ const precastTypes = [
   },
   {
     image: fullSpanBoxGirderImage,
-    title: "Poutre-caisson pleine travée",
-    fullName: "Poutre-caisson préfabriquée pleine travée",
+    title: "Poutre-caisson en travée entière",
+    fullName: "Poutre-caisson préfabriquée en travée entière",
     scene: "Grande vitesse / Voies rapides urbaines",
     text: "Fabriquée sur toute la longueur d’une travée et posée en un seul élément, elle offre une forte capacité en flexion et en torsion pour les grandes infrastructures de transport.",
   },
   {
     image: doubleTSlabImage,
-    title: "Élément double T",
-    fullName: "Élément double T préfabriqué en béton",
+    title: "Dalle nervurée double T",
+    fullName: "Dalle nervurée double T préfabriquée en béton",
     scene: "Passages inférieurs / Stations de métro",
-    text: "Sa section intégrée nervures-dalle peut former directement une couverture ou une surface de circulation après la pose.",
+    text: "Ses deux nervures porteuses et sa dalle intégrée permettent de former directement une couverture ou une surface de circulation après la pose.",
   },
   {
     image: troughGirderImage,
@@ -192,10 +193,10 @@ const precastTypes = [
   },
   {
     image: interlockingConcreteArmourUnitImage,
-    title: "Bloc de carapace à emboîtement",
-    fullName: "Bloc de carapace en béton à emboîtement",
+    title: "Bloc artificiel en béton pour carapace",
+    fullName: "Bloc artificiel préfabriqué en béton pour carapace",
     scene: "Digues portuaires / Protection côtière",
-    text: "Sa géométrie imbriquée forme une carapace stable pour les digues, les ouvrages de protection côtière et les structures exposées à la houle.",
+    text: "Sa géométrie imbriquée permet de constituer une carapace stable pour les digues, les ouvrages de protection côtière et les structures exposées à la houle.",
   },
 ];
 
@@ -225,7 +226,7 @@ const lines = [
     title: "Ligne automatisée de production de voussoirs de poutres-caissons",
     visual: "2–3 voussoirs/jour",
     visualLabel: "Production journalière : 2–3 voussoirs",
-    text: "Conçue pour les poutres-caissons à voussoirs et la production flexible de plusieurs dimensions, la ligne intègre le positionnement pour préfabrication par conjugaison, des moules dédiés et une cure automatisée à la vapeur. Le temps de cycle est optimisé selon la géométrie des voussoirs et le calendrier de pose.",
+    text: "Conçue pour les poutres-caissons à voussoirs et la production flexible de plusieurs dimensions, la ligne intègre le positionnement pour la préfabrication par voussoirs conjugués, des moules dédiés et une cure automatisée à la vapeur. Le temps de cycle est optimisé selon la géométrie des voussoirs et le calendrier de pose.",
   },
 ];
 
@@ -260,8 +261,8 @@ const products = [
   },
   {
     image: curingKilnImage,
-    alt: "Système automatisé Realjet de cure à la vapeur",
-    title: "Système automatisé de cure à la vapeur",
+    alt: "Système automatisé Realjet de traitement thermique à la vapeur",
+    title: "Système automatisé de traitement thermique à la vapeur",
     text: "La cure dans le moule, alimentée par un complément d’énergie solaire et des pompes à chaleur aérothermiques, maintient les vitesses de chauffe et de refroidissement dans une plage de ±2 °C/h et l’écart de température de l’enceinte dans une plage de 3 °C. La résistance requise pour la mise en précontrainte est atteinte en 8 à 14 heures. Les coûts d’exploitation sont inférieurs de 49,6 % au gaz naturel et de 30,1 % aux granulés de biomasse.",
     features: ["Cycle complet dans le moule", "Solaire + pompes à chaleur aérothermiques", "Contrôle automatisé de la température et de l’humidité"],
   },
@@ -282,7 +283,7 @@ const projects = [
     title: "Section sud de l’autoroute Shenhai G15 à Ningbo — Lot TJ05",
     englishTitle: "G15 Shenhai Expressway, Ningbo South Section, Contract TJ05",
     line: "2 lignes pour poutres en T",
-    coreEquipment: ["Transfert des moules", "Distribution du béton", "Vibration", "Cure à la vapeur", "Précontrainte"],
+    coreEquipment: ["Transfert des moules", "Distribution du béton", "Vibration", "Traitement thermique", "Précontrainte"],
     product: "Poutres en T de 30 m",
     output: "6 poutres/jour",
   },
@@ -293,7 +294,7 @@ const projects = [
     title: "Base industrielle de transport et de construction urbaine de la nouvelle zone de la baie de Wenzhou",
     englishTitle: "Wenzhou Bay New Area Industrialised Transport and Urban Construction Base",
     line: "4 lignes pour poutres en T",
-    coreEquipment: ["Transfert des moules", "Moules hydrauliques", "Vibration", "Distribution du béton", "Cure hybride"],
+    coreEquipment: ["Transfert des moules", "Moules hydrauliques", "Vibration", "Distribution du béton", "Traitement thermique hybride"],
     product: "Poutres en T de 30 et 40 m",
     output: "8–12 poutres/jour",
   },
@@ -304,7 +305,7 @@ const projects = [
     title: "Projet de la bretelle Dongtou de l’autoroute Yongguan",
     englishTitle: "Yongguan Expressway Dongtou Spur Project",
     line: "2 lignes de voussoirs",
-    coreEquipment: ["Transfert de moules 300 t", "Moules hydrauliques", "Vibration", "Distribution du béton", "Cure hybride"],
+    coreEquipment: ["Transfert de moules 300 t", "Moules hydrauliques", "Vibration", "Distribution du béton", "Traitement thermique hybride"],
     product: "Voussoirs de poutres-caissons",
     output: "6 voussoirs/jour",
   },
@@ -333,19 +334,19 @@ const capabilities = [
       { value: "40+", label: "Ingénieurs R&D" },
       { value: "50%+", label: "Personnel R&D titulaire d’un master" },
       { value: "5%", label: "Chiffre d’affaires annuel investi en R&D" },
-      { value: "150+", label: "Brevets accordés" },
+      { value: "150+", label: "Brevets obtenus" },
     ],
   },
   {
     icon: Wrench,
     image: manufacturingCapabilityImage,
-    alt: "Site de fabrication intégré de Realjet",
-    title: "Fabrication intégrée",
+    alt: "Site de fabrication interne de Realjet",
+    title: "Fabrication en interne",
     headline: "Équipements critiques fabriqués en interne avec un contrôle qualité de bout en bout",
     text: "Soixante-six machines de grande capacité couvrent la découpe, le pliage, l’usinage, le soudage, le traitement de surface, l’assemblage et les essais, avec une traçabilité complète pour les grands systèmes sur mesure.",
     stats: [
       { value: "66", label: "Équipements majeurs de fabrication" },
-      { value: "±0.005 mm", label: "Précision de positionnement" },
+      { value: "±0,005 mm", label: "Précision de positionnement" },
       { value: "12", label: "Robots de soudage" },
       { value: "Double certification", label: "ISO 9001 / ISO 3834-2" },
     ],
@@ -571,7 +572,7 @@ function Header({ onLead }) {
     <header className="sticky top-0 z-40 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
       <div className="site-container flex h-full items-center gap-6 max-[720px]:gap-2">
         <a href="#top" aria-label="Realjet" className="shrink-0">
-          <img src={logoImage} alt="Realjet logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
+          <img src={logoImage} alt="Logo Realjet" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
         </a>
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1100px]:hidden" aria-label="Navigation principale">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
@@ -737,10 +738,12 @@ function LeadModal({ open, onClose, title }) {
       });
 
       if (!response.ok) throw new Error("Échec de l’envoi");
+      trackLeadSuccess();
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
+      trackLeadError();
       setSubmissionState("error");
     }
   };
@@ -920,7 +923,7 @@ export default function App() {
 
   return (
     <>
-      <div id="site-shell">
+      <div id="site-shell" data-locale="fr">
         <Header onLead={openLead} />
         <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
         <main>

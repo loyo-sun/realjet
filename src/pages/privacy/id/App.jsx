@@ -1,5 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
+import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
 
 const sections = [
   ["who-we-are", "1. Tentang Kami"],
@@ -74,7 +75,7 @@ export default function App() {
                 <p className="mt-5 max-w-[760px] text-[17px] leading-[1.7] text-white/72 max-[720px]:text-[15px]">
                   Kebijakan ini menjelaskan cara Realjet mengumpulkan, menggunakan, menyimpan, membagikan, dan melindungi data pribadi yang disampaikan melalui situs web dan formulir pertanyaan proyek kami.
                 </p>
-                <p className="mt-5 text-[12px] font-[750] text-white/55">Tanggal berlaku: 30 Juli 2026</p>
+                <p className="mt-5 text-[12px] font-[750] text-white/55">Tanggal berlaku: 1 Agustus 2026</p>
               </div>
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function App() {
                 <li>tanggal dan waktu akses;</li>
                 <li>informasi dasar mengenai keamanan, diagnostik, dan log server.</li>
               </ul>
-              <p>Situs web saat ini tidak menggunakan piksel iklan atau pelacak analitik. Jika kami memperkenalkan analitik, iklan, atau cookie yang tidak esensial di masa mendatang, kami akan memperbarui Kebijakan Privasi ini dan menyediakan mekanisme persetujuan yang diwajibkan oleh hukum yang berlaku sebelum teknologi tersebut diaktifkan.</p>
+              <p>Dengan persetujuan Anda, kami menggunakan Google Analytics 4 untuk memahami penggunaan halaman dan meningkatkan alur permintaan proyek. Kami mencatat peristiwa penggunaan pseudonim, seperti tampilan halaman, posisi tombol ajakan bertindak yang dipilih, progres formulir berdasarkan nama kolom, percobaan pengiriman, dan status pengiriman. Nilai yang dimasukkan ke dalam formulir—termasuk nama perusahaan, nama kontak, alamat email, negara, dan rincian proyek—tidak dikirim ke Google Analytics.</p>
             </PolicySection>
 
             <PolicySection id="how-we-use-information" title="3. Cara Kami Menggunakan Data Pribadi">
@@ -209,15 +210,16 @@ export default function App() {
             </PolicySection>
 
             <PolicySection id="cookies" title="10. Cookie dan Teknologi Serupa">
-              <p>Situs web saat ini tidak menggunakan cookie iklan, piksel iklan, atau pelacak analitik.</p>
               <p>Situs web atau penyedia hostingnya dapat menggunakan fungsi teknis yang benar-benar diperlukan atau mekanisme keamanan untuk menampilkan halaman, memproses pertanyaan, mencegah penyalahgunaan, atau menjaga keandalan layanan.</p>
-              <p>Jika di kemudian hari kami menambahkan analitik, iklan, atau teknologi lain yang tidak esensial, kami akan:</p>
+              <p>Google Analytics 4 adalah layanan analitik opsional dari Google. Penyimpanan analitik ditolak secara bawaan dan hanya diaktifkan setelah Anda memilih “Terima analitik”. Penyimpanan iklan, data pengguna untuk iklan, dan personalisasi iklan tetap dinonaktifkan.</p>
+              <p>Anda dapat menerima atau menolak analitik dan mengubah pilihan kapan saja melalui pengaturan analitik.</p>
               <ul>
-                <li>memperbarui Kebijakan Privasi ini;</li>
-                <li>mengidentifikasi penyedia dan tujuan terkait;</li>
-                <li>menjelaskan pengaturan penyimpanan dan transfer yang berlaku;</li>
-                <li>menyediakan kontrol cookie atau persetujuan jika diwajibkan oleh hukum.</li>
+                <li>Tujuan: mengukur penggunaan halaman dan efektivitas alur permintaan;</li>
+                <li>Penyedia: Google LLC (Google Analytics 4);</li>
+                <li>Data: informasi pseudonim mengenai perangkat, peramban, halaman, dan interaksi—bukan isi formulir;</li>
+                <li>Kontrol: persetujuan dapat diberikan, ditolak, atau ditarik kapan saja.</li>
               </ul>
+              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Kelola preferensi analitik</button>
             </PolicySection>
 
             <PolicySection id="children" title="11. Data Anak">

@@ -1,5 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
+import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
 
 const sections = [
   ["who-we-are", "1. Who We Are"],
@@ -74,7 +75,7 @@ export default function App() {
                 <p className="mt-5 max-w-[760px] text-[17px] leading-[1.7] text-white/72 max-[720px]:text-[15px]">
                   This policy explains how Realjet collects, uses, stores, shares and protects personal information submitted through our website and project enquiry forms.
                 </p>
-                <p className="mt-5 text-[12px] font-[750] text-white/55">Effective date: 30 July 2026</p>
+                <p className="mt-5 text-[12px] font-[750] text-white/55">Effective date: 1 August 2026</p>
               </div>
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function App() {
                 <li>date and time of access;</li>
                 <li>basic security, diagnostic and server-log information.</li>
               </ul>
-              <p>The current website does not use advertising pixels or analytics trackers. If we introduce analytics, advertising or non-essential cookies in the future, we will update this Privacy Policy and provide any consent mechanism required by applicable law before those technologies are activated.</p>
+              <p>With your consent, we use Google Analytics 4 to understand page use and improve the project-enquiry journey. We record pseudonymous usage events such as page views, the location of a selected call-to-action, form progress by field name, submission attempts and submission status. We do not send the values entered in form fields—such as company name, contact name, email address, country or project details—to Google Analytics.</p>
             </PolicySection>
 
             <PolicySection id="how-we-use-information" title="3. How We Use Personal Information">
@@ -209,15 +210,16 @@ export default function App() {
             </PolicySection>
 
             <PolicySection id="cookies" title="10. Cookies and Similar Technologies">
-              <p>The current website does not use advertising cookies, advertising pixels or analytics trackers.</p>
               <p>The website or its hosting provider may use strictly necessary technical functions or security mechanisms required to deliver the page, process an enquiry, prevent abuse or maintain service reliability.</p>
-              <p>If we later add analytics, advertising or other non-essential technologies, we will:</p>
+              <p>Google Analytics 4 is an optional analytics service provided by Google. Analytics storage is denied by default and is enabled only after you select “Accept analytics”. Advertising storage, advertising user data and ad personalisation remain disabled.</p>
+              <p>You may accept or reject analytics and later change your choice using the analytics settings control. When analytics is accepted, Google may set analytics cookies and process pseudonymous usage information in accordance with its own terms and privacy practices.</p>
               <ul>
-                <li>update this Privacy Policy;</li>
-                <li>identify the relevant providers and purposes;</li>
-                <li>explain applicable retention and transfer arrangements;</li>
-                <li>provide a cookie or consent control where required by law.</li>
+                <li>Purpose: measure page use and the effectiveness of the enquiry journey;</li>
+                <li>Provider: Google LLC (Google Analytics 4);</li>
+                <li>Data: pseudonymous device, browser, page and interaction information—never the contents entered into the enquiry form;</li>
+                <li>Control: consent can be granted, refused or withdrawn at any time.</li>
               </ul>
+              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Manage analytics preferences</button>
             </PolicySection>
 
             <PolicySection id="children" title="11. Children’s Information">

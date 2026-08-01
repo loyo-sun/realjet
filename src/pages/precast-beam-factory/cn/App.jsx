@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -673,10 +674,12 @@ function LeadModal({ open, onClose, title }) {
       });
 
       if (!response.ok) throw new Error("Submission failed");
+      trackLeadSuccess();
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
+      trackLeadError();
       setSubmissionState("error");
     }
   };
@@ -724,8 +727,8 @@ function LeadModal({ open, onClose, title }) {
                     />
                   </label>
                   <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
-                    <input type="checkbox" name="contact_consent" value="同意联系" className="mt-1 accent-brand-blue disabled:cursor-wait" />
-                    <span>我同意瑞捷机械就该项目与我联系。</span>
+                    <input type="checkbox" name="privacy_acknowledgement" value="已阅读隐私政策并同意联系" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
+                    <span>我已阅读<a href="../../privacy/cn/" className="mx-1 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3" target="_blank" rel="noreferrer">《隐私政策》</a>，并同意瑞捷使用我的信息回复本次询盘。</span>
                   </label>
                 </div>
                 {submissionState === "error" && (
@@ -1045,6 +1048,7 @@ export default function App() {
         <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
           <span>© 2026 长沙瑞捷机械科技股份有限公司 版权所有</span>
           <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
+            <a href="../../privacy/cn/" className="underline decoration-white/20 underline-offset-4 transition hover:text-white">隐私政策</a>
             <ContactEmail />
           </div>
         </div>
