@@ -1,7 +1,6 @@
 ---
 title: Inside the G15 Ningbo South TJ05 T-Girder Line
-description: See how two coordinated production lines turn a six-girder daily
-  target into practical decisions on flow, curing and process control.
+description: "See how two coordinated production lines turn a six-girder daily target into practical decisions on flow, curing and process control."
 date: 2026-08-01
 updated: 2026-08-01
 slug: g15-ningbo-south-tj05-t-girder-line
