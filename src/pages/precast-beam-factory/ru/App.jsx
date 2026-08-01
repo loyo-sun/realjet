@@ -738,12 +738,12 @@ function LeadModal({ open, onClose, title }) {
       });
 
       if (!response.ok) throw new Error("Ошибка отправки");
-      trackLeadSuccess();
+      trackLeadSuccess(form);
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
-      trackLeadError();
+      trackLeadError(form);
       setSubmissionState("error");
     }
   };

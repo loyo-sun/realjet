@@ -758,12 +758,12 @@ function LeadModal({ open, onClose, title }) {
       });
 
       if (!response.ok) throw new Error("Submission failed");
-      trackLeadSuccess();
+      trackLeadSuccess(form);
       form.reset();
       setSubmitted(true);
       setSubmissionState("success");
     } catch {
-      trackLeadError();
+      trackLeadError(form);
       setSubmissionState("error");
     }
   };

@@ -256,8 +256,7 @@ function observeAbandonment() {
   runtime.observer.observe(document.body, { childList: true, subtree: true });
 }
 
-export function trackLeadSuccess() {
-  const form = document.querySelector(`form[name="${FORM_NAME}"]`);
+export function trackLeadSuccess(form) {
   const state = form ? getFormState(form) : null;
   if (state) state.success = true;
   trackEvent("generate_lead", {
@@ -268,8 +267,7 @@ export function trackLeadSuccess() {
   });
 }
 
-export function trackLeadError(errorType = "submission_failed") {
-  const form = document.querySelector(`form[name="${FORM_NAME}"]`);
+export function trackLeadError(form, errorType = "submission_failed") {
   const state = form ? getFormState(form) : null;
   trackEvent("lead_form_submit_error", {
     form_id: FORM_NAME,
