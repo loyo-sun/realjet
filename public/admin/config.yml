@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: loyo-sun/realjet
+  branch: main
+  site_domain: realjetech.com
+
+publish_mode: editorial_workflow
+site_url: https://realjetech.com
+display_url: https://realjetech.com
+logo_url: https://realjetech.com/images/realjet-logo.webp
+media_folder: public/images/insights
+public_folder: /images/insights
+
+collections:
+  - name: insights
+    label: Insights
+    label_singular: Insight
+    folder: content/insights
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields:
+      fields: [date, title, updated]
+      default: { field: date, direction: Descending }
+    fields:
+      - { label: Title, name: title, widget: string, required: true, hint: "Use one clear buyer-oriented title." }
+      - { label: SEO Description, name: description, widget: text, required: true, hint: "Write one or two accurate sentences; do not repeat the title." }
+      - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: URL Slug, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Do not change after publication without adding a 301 redirect." }
+      - { label: Hero Image, name: image, widget: image, required: true, hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
+      - { label: Image Alt, name: imageAlt, widget: string, required: true, hint: "Describe the actual image in natural English." }
+      - label: Article CTA
+        name: ctaType
+        widget: select
+        required: true
+        default: precast-line
+        options:
+          - { label: Precast Production Line, value: precast-line }
+          - { label: Machinery Component Manufacturing, value: manufacturing }
+      - { label: Draft, name: draft, widget: boolean, default: true, required: true, hint: "Keep enabled until the article is approved." }
+      - { label: Body, name: body, widget: markdown, required: true, hint: "The page already has an H1. Start body sections with H2." }

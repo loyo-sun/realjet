@@ -5,11 +5,13 @@ import { resolve } from "node:path";
 
 export default defineConfig({
   base: "./",
+  publicDir: false,
   plugins: [react(), tailwindcss()],
   build: {
+    outDir: ".build/vite",
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        home: resolve(process.cwd(), "index.html"),
         "precast-beam-factory-cn": resolve(
           process.cwd(),
           "marketing/precast-beam-factory/cn/index.html",

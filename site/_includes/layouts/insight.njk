@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+<article class="article-page">
+  <header class="article-hero">
+    <div class="article-shell">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/insights/">Insights</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+      <h1>{{ title }}</h1>
+      <p class="article-deck">{{ description }}</p>
+      <div class="article-meta">
+        <span>Published <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time></span>
+        {% if updated and (updated | isoDate) != (date | isoDate) %}<span>Updated <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time></span>{% endif %}
+      </div>
+    </div>
+  </header>
+  <div class="article-image container">{% responsiveImage image, imageAlt, "eager", "(max-width: 1180px) 100vw, 1180px" %}</div>
+  <div class="article-layout container">
+    <div class="article-body">{{ content | safe }}</div>
+    <aside class="article-aside" aria-label="Related solution">
+      {% if ctaType == "manufacturing" %}
+      <span class="eyebrow">Contract Manufacturing</span><h2>Discuss a Machinery Component Project</h2><p>Share your drawings, specifications and delivery requirements with Realjet.</p>
+      <a class="button button-dark" href="mailto:{{ site.email }}?subject=Custom%20Machinery%20Component%20Manufacturing%20Enquiry" data-insight-cta data-cta-type="manufacturing">Contact Realjet</a>
+      {% else %}
+      <span class="eyebrow">Turnkey Production Lines</span><h2>Planning a Precast Production Line?</h2><p>Review Realjet's project-specific approach to line engineering, equipment and delivery.</p>
+      <a class="button button-dark" href="/marketing/precast-beam-factory/en/" data-insight-cta data-cta-type="precast-line">Explore Production Lines</a>
+      {% endif %}
+    </aside>
+  </div>
+</article>

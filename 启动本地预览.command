@@ -28,9 +28,10 @@ if [[ ! -d "node_modules" ]]; then
   npm install
 fi
 
-echo "正在启动瑞捷机械多语言网站本地预览……"
-echo "中文：http://127.0.0.1:5173/marketing/precast-beam-factory/cn/"
-echo "英文：http://127.0.0.1:5173/marketing/precast-beam-factory/en/"
+echo "正在启动瑞捷机械英文官网与多语言落地页本地预览……"
+echo "官网首页：http://127.0.0.1:5173/"
+echo "Insights：http://127.0.0.1:5173/insights/"
+echo "英文落地页：http://127.0.0.1:5173/marketing/precast-beam-factory/en/"
 echo "停止预览时，请在此窗口按 Control + C。"
 
-npm run dev -- --host 127.0.0.1 --open /marketing/precast-beam-factory/cn/
+npm run dev -- --host 127.0.0.1 --open /

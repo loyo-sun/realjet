@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+permalink: /index.html
+pageType: home
+title: Custom Machinery Components & Precast Production Lines | Realjet
+seoTitle: Custom Machinery Components & Precast Production Lines | Realjet
+description: Realjet provides custom machinery component manufacturing and turnkey production lines for precast concrete components, from engineering and equipment manufacturing to installation and commissioning.
+canonical: https://realjetech.com/
+robots: index, follow
+---
+<section class="home-hero">
+  <div class="container hero-copy">
+    <span class="eyebrow">Realjet Engineering & Manufacturing</span>
+    <h1>Engineering and Manufacturing Solutions for Infrastructure Production</h1>
+    <p>From custom machinery components to turnkey production lines for precast concrete components, Realjet supports project-specific engineering, manufacturing and delivery.</p>
+  </div>
+</section>
+
+<section id="services" class="service-section" aria-labelledby="services-title">
+  <div class="container">
+    <h2 id="services-title" class="sr-only">Realjet Services</h2>
+    <div class="service-grid">
+      <article class="service-card">
+        <img src="/images/home/manufacturing-capability.webp" alt="Realjet machinery component manufacturing facility" width="756" height="428" loading="eager" decoding="async" />
+        <div class="service-overlay"></div>
+        <div class="service-content">
+          <span>Contract Manufacturing</span>
+          <h3>Custom Machinery Component Manufacturing</h3>
+          <p>Project-based manufacturing of machinery components to customer drawings, specifications and delivery requirements.</p>
+          <a class="service-link" href="/manufacturing/" data-business-entry data-business-type="manufacturing" data-cta-id="home_manufacturing">Explore Manufacturing <b aria-hidden="true">→</b></a>
+        </div>
+      </article>
+      <article class="service-card">
+        <img src="/images/home/precast-production-line.webp" alt="Realjet production line for precast concrete components" width="1920" height="1079" loading="eager" decoding="async" />
+        <div class="service-overlay"></div>
+        <div class="service-content">
+          <span>Turnkey Production Lines</span>
+          <h3>Production Lines for Precast Concrete Components</h3>
+          <p>Project-specific line engineering, equipment manufacturing, installation and commissioning for precast concrete components.</p>
+          <a class="service-link" href="/marketing/precast-beam-factory/en/" data-business-entry data-business-type="precast_line" data-cta-id="home_precast_line">Explore Production Lines <b aria-hidden="true">→</b></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section latest-insights" aria-labelledby="latest-insights-title">
+  <div class="container">
+    <div class="section-heading heading-row">
+      <div><span class="eyebrow">Engineering Knowledge</span><h2 id="latest-insights-title">Latest Insights</h2></div>
+      {% if collections.publishedInsights.length %}<a class="text-link view-all" href="/insights/">View All Insights <span aria-hidden="true">→</span></a>{% endif %}
+    </div>
+    {% if collections.publishedInsights.length %}
+      <div class="insight-grid">{% for post in collections.publishedInsights | limit(3) %}{% include "components/insight-card.njk" %}{% endfor %}</div>
+    {% else %}
+      <div class="empty-insights"><span>Insights are being prepared</span><h3>Practical engineering knowledge is coming next.</h3><p>Realjet will publish project-based guidance on machinery manufacturing and precast concrete production-line planning.</p></div>
+    {% endif %}
+  </div>
+</section>

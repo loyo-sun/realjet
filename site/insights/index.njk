@@ -1,0 +1,24 @@
+---
+layout: layouts/base.njk
+permalink: /insights/index.html
+pageType: insights
+title: Engineering Insights | Realjet
+seoTitle: Engineering Insights for Manufacturing & Precast Production | Realjet
+description: Practical Realjet insights for custom machinery component manufacturing and production-line planning for precast concrete components.
+canonical: https://realjetech.com/insights/
+robots: index, follow
+---
+<header class="listing-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Insights</span></nav>
+    <span class="eyebrow">Engineering Knowledge</span><h1>Insights</h1>
+    <p>Practical guidance for machinery component manufacturing and project-specific production lines for precast concrete components.</p>
+  </div>
+</header>
+<section class="section listing-section"><div class="container">
+  {% if collections.publishedInsights.length %}
+    <div class="insight-grid">{% for post in collections.publishedInsights %}{% include "components/insight-card.njk" %}{% endfor %}</div>
+  {% else %}
+    <div class="empty-insights"><span>Insights are being prepared</span><h2>Our first engineering articles are in development.</h2><p>Return soon for project-based guidance on production-line planning, equipment and manufacturing.</p><a class="button button-dark" href="/">Return to Realjet</a></div>
+  {% endif %}
+</div></section>

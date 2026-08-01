@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="{{ robots or 'index, follow' }}" />
+    <meta name="description" content="{{ description or site.defaultDescription }}" />
+    <link rel="canonical" href="{{ canonical }}" />
+    <link rel="icon" type="image/png" href="/icons/realjet-site-icon.png" />
+    <link rel="apple-touch-icon" href="/icons/realjet-site-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title="Realjet Insights" href="/feed.xml" />
+    <meta property="og:type" content="{% if pageType == 'insight' %}article{% else %}website{% endif %}" />
+    <meta property="og:site_name" content="Realjet" />
+    <meta property="og:title" content="{{ seoTitle or title }}" />
+    <meta property="og:description" content="{{ description or site.defaultDescription }}" />
+    <meta property="og:url" content="{{ canonical }}" />
+    <meta property="og:image" content="{{ socialImage or site.socialImage }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ seoTitle or title }}" />
+    <meta name="twitter:description" content="{{ description or site.defaultDescription }}" />
+    <meta name="twitter:image" content="{{ socialImage or site.socialImage }}" />
+    <title>{{ seoTitle or title }}</title>
+    <link rel="stylesheet" href="/assets/site/site.css" />
+    {% if pageType == "home" %}
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@graph":[
+          {"@type":"Organization","@id":"https://realjetech.com/#organization","name":"{{ site.legalName }}","alternateName":"Realjet","url":"{{ site.url }}","logo":"https://realjetech.com/images/realjet-logo.webp","email":"mailto:{{ site.email }}"},
+          {"@type":"WebSite","@id":"https://realjetech.com/#website","url":"{{ site.url }}","name":"Realjet","publisher":{"@id":"https://realjetech.com/#organization"},"inLanguage":"en"}
+        ]
+      }
+    </script>
+    {% endif %}
+    {% if pageType == "insight" %}
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@graph":[
+          {"@type":"Article","headline":{{ title | json | safe }},"description":{{ description | json | safe }},"datePublished":"{{ date | isoDate }}","dateModified":"{{ (updated or date) | isoDate }}","mainEntityOfPage":{{ canonical | json | safe }},"image":{{ socialImage | json | safe }},"author":{"@type":"Organization","name":"{{ site.legalName }}"},"publisher":{"@type":"Organization","name":"{{ site.legalName }}","logo":{"@type":"ImageObject","url":"https://realjetech.com/images/realjet-logo.webp"}},"inLanguage":"en"},
+          {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://realjetech.com/insights/"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":{{ canonical | json | safe }}}]}
+        ]
+      }
+    </script>
+    {% endif %}
+  </head>
+  <body data-page-type="{{ pageType or 'page' }}"{% if slug %} data-article-slug="{{ slug }}"{% endif %}>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include "components/header.njk" %}
+    <main id="main-content">{{ content | safe }}</main>
+    {% include "components/footer.njk" %}
+    <script src="/assets/site/site.js" defer></script>
+  </body>
+</html>
