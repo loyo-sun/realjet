@@ -1,10 +1,22 @@
 import { access, readFile, readdir } from "node:fs/promises";
 import { dirname, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { load as loadYaml } from "js-yaml";
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputRoot = join(projectRoot, "dist");
 const failures = [];
+
+const cmsConfig = loadYaml(
+  await readFile(join(projectRoot, "public/admin/config.yml"), "utf8"),
+);
+for (const collection of cmsConfig.collections || []) {
+  if (collection.sortable_fields && !Array.isArray(collection.sortable_fields)) {
+    failures.push(
+      `CMS collection ${collection.name}: sortable_fields must be an array`,
+    );
+  }
+}
 
 async function walk(directory) {
   const files = [];

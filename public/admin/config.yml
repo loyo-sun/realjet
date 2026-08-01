@@ -22,9 +22,7 @@ collections:
     format: frontmatter
     slug: "{{fields.slug}}"
     summary: "{{title}} — {{date}}"
-    sortable_fields:
-      fields: [date, title, updated]
-      default: { field: date, direction: Descending }
+    sortable_fields: [date, title, updated]
     fields:
       - { label: Title, name: title, widget: string, required: true, hint: "Use one clear buyer-oriented title." }
       - { label: SEO Description, name: description, widget: text, required: true, hint: "Write one or two accurate sentences; do not repeat the title." }
