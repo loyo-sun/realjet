@@ -144,7 +144,8 @@ if (floatingEnquiry) {
 
   const setMinimized = (minimized, remember = true) => {
     floatingEnquiry.classList.toggle("is-minimized", minimized);
-    content.hidden = minimized;
+    content.setAttribute("aria-hidden", String(minimized));
+    content.inert = minimized;
     toggle.setAttribute("aria-expanded", String(!minimized));
     toggle.setAttribute("aria-label", minimized ? "Expand quick enquiry" : "Minimize quick enquiry");
     toggle.textContent = minimized ? "+" : "−";

@@ -1,6 +1,17 @@
 #!/bin/zsh
 
-set -e
+set -u
+
+handle_error() {
+  local status=$?
+  echo ""
+  echo "本地预览启动失败（错误码：${status}）。"
+  echo "请保留此窗口并检查上方错误信息。"
+  read "?按回车键关闭窗口。"
+  exit "$status"
+}
+
+trap handle_error ZERR
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
@@ -28,10 +39,25 @@ if [[ ! -d "node_modules" ]]; then
   npm install
 fi
 
+PREVIEW_PORT=5173
+while lsof -nP -iTCP:"$PREVIEW_PORT" -sTCP:LISTEN >/dev/null 2>&1; do
+  (( PREVIEW_PORT += 1 ))
+  if (( PREVIEW_PORT > 5183 )); then
+    echo "5173–5183 端口均被占用，请关闭旧的本地预览后重试。"
+    exit 1
+  fi
+done
+
 echo "正在启动瑞捷机械英文官网与多语言落地页本地预览……"
-echo "官网首页：http://127.0.0.1:5173/"
-echo "Insights：http://127.0.0.1:5173/insights/"
-echo "英文落地页：http://127.0.0.1:5173/marketing/precast-beam-factory/en/"
+echo "使用端口：${PREVIEW_PORT}"
+echo "官网首页：http://127.0.0.1:${PREVIEW_PORT}/"
+echo "Insights：http://127.0.0.1:${PREVIEW_PORT}/insights/"
+echo "英文落地页：http://127.0.0.1:${PREVIEW_PORT}/marketing/precast-beam-factory/en/"
 echo "停止预览时，请在此窗口按 Control + C。"
 
-npm run dev -- --host 127.0.0.1 --open /
+OPEN_ARGS=(--open /)
+if [[ "${REALJET_NO_OPEN:-0}" == "1" ]]; then
+  OPEN_ARGS=()
+fi
+
+npm run dev -- --host 127.0.0.1 --port "$PREVIEW_PORT" --strictPort "${OPEN_ARGS[@]}"
