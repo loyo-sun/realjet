@@ -8,7 +8,7 @@ slug: g15-ningbo-south-tj05-t-girder-line
 image: /images/insights/g15-ningbo-south-tj05-t-girder-line.webp
 imageAlt: 30 m T-girder mould beneath a gantry at the G15 Ningbo South TJ05 precast yard
 ctaType: precast-line
-draft: true
+draft: false
 ---
 
 ## The production target is the starting point
