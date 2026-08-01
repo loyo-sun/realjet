@@ -17,7 +17,7 @@ layout: layouts/base.njk
   </header>
   <div class="article-layout container">
     <div class="article-body">{{ content | safe }}</div>
-    <aside class="article-aside" aria-label="Solutions and quick enquiry">
+    <aside class="article-aside" aria-label="Related solutions">
       <section class="article-aside-card" aria-labelledby="article-solutions-title">
         <span class="eyebrow">Realjet Solutions</span>
         <h2 id="article-solutions-title">Choose Your Project Path</h2>
@@ -26,9 +26,15 @@ layout: layouts/base.njk
           <a href="/manufacturing/" data-insight-cta data-cta-type="manufacturing"><strong>Contract Manufacturing</strong><span>Machinery components made to drawings and specifications</span></a>
         </nav>
       </section>
-      <section class="article-aside-card article-quick-enquiry">
+    </aside>
+  </div>
+  <section class="article-quick-enquiry floating-enquiry" data-floating-enquiry hidden aria-label="Quick enquiry">
+    <header class="floating-enquiry-header">
+      <span class="eyebrow">Quick Enquiry</span>
+      <button type="button" class="floating-enquiry-toggle" data-floating-enquiry-toggle aria-expanded="true" aria-controls="floating-enquiry-content" aria-label="Minimize quick enquiry">−</button>
+    </header>
+    <div id="floating-enquiry-content" class="floating-enquiry-content" data-floating-enquiry-content>
         <div data-contact-form-shell>
-          <span class="eyebrow">Quick Enquiry</span>
           <h2>Tell Us What You Need</h2>
           <p>Send the essentials now. Our team can clarify technical details with you.</p>
           <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
@@ -64,7 +70,6 @@ layout: layouts/base.njk
           <h2>Enquiry Submitted</h2>
           <p>Thank you. A Realjet specialist will contact you.</p>
         </div>
-      </section>
-    </aside>
-  </div>
+    </div>
+  </section>
 </article>

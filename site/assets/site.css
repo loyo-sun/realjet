@@ -178,6 +178,15 @@ button, input, textarea, select { font: inherit; }
 .article-quick-enquiry .contact-submit { width: 100%; margin-top: 18px; }
 .article-contact-success { min-height: 340px; padding: 24px 4px; }
 .article-contact-success h2 { font-size: 22px; }
+.floating-enquiry { position: fixed; right: 22px; bottom: 22px; z-index: 120; width: min(370px, calc(100vw - 44px)); max-height: min(720px, calc(100vh - 110px)); overflow: auto; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 24px 70px rgba(5,26,44,.24); opacity: 0; transform: translateY(22px); transition: opacity 220ms ease, transform 220ms ease, width 220ms ease; }
+.floating-enquiry.is-visible { opacity: 1; transform: translateY(0); }
+.floating-enquiry.is-minimized { width: 230px; overflow: hidden; }
+.floating-enquiry-header { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 16px; border-bottom: 1px solid var(--line); background: var(--soft); }
+.floating-enquiry-toggle { display: grid; flex: 0 0 auto; width: 30px; height: 30px; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 8px; color: var(--navy); background: var(--white); font-size: 19px; font-weight: 800; line-height: 1; cursor: pointer; }
+.floating-enquiry-content { padding: 20px; }
+.floating-enquiry-content h2 { margin: 0; color: var(--navy); font-size: 24px; line-height: 1.2; }
+.floating-enquiry-content > [data-contact-form-shell] > p { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.floating-enquiry.is-minimized .floating-enquiry-header { border-bottom: 0; }
 
 .site-footer { padding: 56px 0 24px; color: rgba(255,255,255,.62); background: var(--navy-dark); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
@@ -246,6 +255,8 @@ button, input, textarea, select { font: inherit; }
   .article-deck { font-size: 16px; }
   .article-layout { width: calc(100% - 32px); gap: 38px; padding-block: 42px 62px; }
   .article-body { font-size: 16px; }
+  .floating-enquiry { right: 12px; bottom: 12px; left: 12px; width: auto; max-height: calc(100vh - 88px); }
+  .floating-enquiry.is-minimized { right: 12px; left: auto; width: 210px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-grid > :first-child { grid-column: auto; }
   .analytics-consent-panel { align-items: stretch; flex-direction: column; }

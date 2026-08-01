@@ -135,6 +135,56 @@ if (document.body.dataset.pageType === "insight") {
   trackEvent("insight_view", { article_slug: document.body.dataset.articleSlug });
 }
 
+const floatingEnquiry = document.querySelector("[data-floating-enquiry]");
+if (floatingEnquiry) {
+  const toggle = floatingEnquiry.querySelector("[data-floating-enquiry-toggle]");
+  const content = floatingEnquiry.querySelector("[data-floating-enquiry-content]");
+  const storageKey = `realjet_quick_enquiry_minimized_${document.body.dataset.articleSlug || "insight"}`;
+  let revealed = false;
+
+  const setMinimized = (minimized, remember = true) => {
+    floatingEnquiry.classList.toggle("is-minimized", minimized);
+    content.hidden = minimized;
+    toggle.setAttribute("aria-expanded", String(!minimized));
+    toggle.setAttribute("aria-label", minimized ? "Expand quick enquiry" : "Minimize quick enquiry");
+    toggle.textContent = minimized ? "+" : "−";
+    if (remember) {
+      try {
+        sessionStorage.setItem(storageKey, minimized ? "true" : "false");
+      } catch {
+        // The control still works when session storage is unavailable.
+      }
+    }
+  };
+
+  try {
+    setMinimized(sessionStorage.getItem(storageKey) === "true", false);
+  } catch {
+    setMinimized(false, false);
+  }
+
+  const revealAfterFirstScreen = () => {
+    if (revealed || window.scrollY < window.innerHeight * 0.9) return;
+    revealed = true;
+    floatingEnquiry.hidden = false;
+    requestAnimationFrame(() => floatingEnquiry.classList.add("is-visible"));
+    window.removeEventListener("scroll", revealAfterFirstScreen);
+    trackEvent("quick_enquiry_reveal", { article_slug: document.body.dataset.articleSlug });
+  };
+
+  toggle.addEventListener("click", () => {
+    const minimized = !floatingEnquiry.classList.contains("is-minimized");
+    setMinimized(minimized);
+    trackEvent("quick_enquiry_toggle", {
+      article_slug: document.body.dataset.articleSlug,
+      state: minimized ? "minimized" : "expanded",
+    });
+  });
+
+  window.addEventListener("scroll", revealAfterFirstScreen, { passive: true });
+  revealAfterFirstScreen();
+}
+
 const contactForm = document.querySelector("[data-contact-form]");
 if (contactForm) {
   const formId = contactForm.getAttribute("name");
