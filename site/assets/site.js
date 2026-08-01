@@ -1,6 +1,6 @@
 const CONSENT_KEY = "realjet_analytics_consent_v1";
 
-function gtag(...args) {
+function sendGtag(...args) {
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function gtagQueue() {
     window.dataLayer.push(arguments);
@@ -9,7 +9,7 @@ function gtag(...args) {
 }
 
 function trackEvent(name, parameters = {}) {
-  gtag("event", name, {
+  sendGtag("event", name, {
     page_path: window.location.pathname,
     page_type: document.body.dataset.pageType || "page",
     ...parameters,
@@ -26,7 +26,7 @@ function readConsent() {
 }
 
 function updateConsent(value, trackChoice = false) {
-  gtag("consent", "update", {
+  sendGtag("consent", "update", {
     analytics_storage: value,
     ad_storage: "denied",
     ad_user_data: "denied",

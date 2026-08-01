@@ -3,6 +3,8 @@ layout: layouts/base.njk
 ---
 <article class="article-page">
   <header class="article-hero">
+    <div class="article-hero-media" aria-hidden="true">{% responsiveImage image, "", "eager", "100vw" %}</div>
+    <div class="article-hero-overlay"></div>
     <div class="article-shell">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/insights/">Insights</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
       <h1>{{ title }}</h1>
@@ -13,17 +15,56 @@ layout: layouts/base.njk
       </div>
     </div>
   </header>
-  <div class="article-image container">{% responsiveImage image, imageAlt, "eager", "(max-width: 1180px) 100vw, 1180px" %}</div>
   <div class="article-layout container">
     <div class="article-body">{{ content | safe }}</div>
-    <aside class="article-aside" aria-label="Related solution">
-      {% if ctaType == "manufacturing" %}
-      <span class="eyebrow">Contract Manufacturing</span><h2>Discuss a Machinery Component Project</h2><p>Share your drawings, specifications and delivery requirements with Realjet.</p>
-      <a class="button button-dark" href="/contact/?topic=manufacturing" data-insight-cta data-cta-type="manufacturing">Contact Realjet</a>
-      {% else %}
-      <span class="eyebrow">Turnkey Production Lines</span><h2>Planning a Precast Production Line?</h2><p>Review Realjet's project-specific approach to line engineering, equipment and delivery.</p>
-      <a class="button button-dark" href="/marketing/precast-beam-factory/en/" data-insight-cta data-cta-type="precast-line">Explore Production Lines</a>
-      {% endif %}
+    <aside class="article-aside" aria-label="Solutions and quick enquiry">
+      <section class="article-aside-card" aria-labelledby="article-solutions-title">
+        <span class="eyebrow">Realjet Solutions</span>
+        <h2 id="article-solutions-title">Choose Your Project Path</h2>
+        <nav class="article-solution-links" aria-label="Related solutions">
+          <a href="/marketing/precast-beam-factory/en/" data-insight-cta data-cta-type="precast-line"><strong>Precast Production Lines</strong><span>Line engineering, equipment and project delivery</span></a>
+          <a href="/manufacturing/" data-insight-cta data-cta-type="manufacturing"><strong>Contract Manufacturing</strong><span>Machinery components made to drawings and specifications</span></a>
+        </nav>
+      </section>
+      <section class="article-aside-card article-quick-enquiry">
+        <div data-contact-form-shell>
+          <span class="eyebrow">Quick Enquiry</span>
+          <h2>Tell Us What You Need</h2>
+          <p>Send the essentials now. Our team can clarify technical details with you.</p>
+          <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
+            <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
+            <input type="hidden" name="title" value="" />
+            <input type="hidden" name="subject" value="" />
+            <input type="hidden" name="country" value="" />
+            <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
+            <fieldset>
+              <div class="form-grid article-form-grid">
+                <label><span>Company *</span><input name="company" type="text" autocomplete="organization" placeholder="Company name" required /></label>
+                <label><span>Contact Name *</span><input name="contact_name" type="text" autocomplete="name" placeholder="Your name" required /></label>
+                <label><span>Business Email *</span><input name="email" type="email" autocomplete="email" placeholder="name@company.com" required /></label>
+                <label><span>Enquiry Type *</span><select name="inquiry_topic" required>
+                  {% if ctaType == "manufacturing" %}
+                  <option value="Custom Machinery Component Manufacturing" selected>Contract Manufacturing</option>
+                  <option value="Precast Concrete Component Production Line">Precast Production Line</option>
+                  {% else %}
+                  <option value="Precast Concrete Component Production Line" selected>Precast Production Line</option>
+                  <option value="Custom Machinery Component Manufacturing">Contract Manufacturing</option>
+                  {% endif %}
+                </select></label>
+                <label class="form-span"><span>Project Details</span><textarea name="project_details" rows="4" placeholder="Product, quantity, target output or schedule"></textarea></label>
+                <label class="privacy-field form-span"><input type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required /><span>I have read the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</span></label>
+              </div>
+              <p class="form-error" role="alert" data-contact-error hidden>Submission failed. Please check your connection and try again.</p>
+              <button class="button button-dark contact-submit" type="submit" data-contact-submit>Send Enquiry <span aria-hidden="true">→</span></button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="contact-success article-contact-success" data-contact-success hidden tabindex="-1">
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <h2>Enquiry Submitted</h2>
+          <p>Thank you. A Realjet specialist will contact you.</p>
+        </div>
+      </section>
     </aside>
   </div>
 </article>
