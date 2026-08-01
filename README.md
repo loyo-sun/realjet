@@ -6,6 +6,7 @@ Realjet 英文官网、SEO Insights 内容系统和 7 语种预制构件生产�
 
 - 英文官网：`/`
 - 机械件代加工（建设中）：`/manufacturing/`
+- 联系与项目询盘：`/contact/`
 - Insights 列表：`/insights/`
 - 内容管理：`/admin/`
 - 预制构件生产线：`/marketing/precast-beam-factory/{language}/`

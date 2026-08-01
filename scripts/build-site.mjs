@@ -59,6 +59,7 @@ await copyWithoutCollisions(join(buildRoot, "eleventy"), finalOutput);
 for (const expectedPath of [
   "index.html",
   "manufacturing/index.html",
+  "contact/index.html",
   "insights/index.html",
   "admin/index.html",
   "admin/config.yml",
@@ -82,6 +83,7 @@ const manufacturingPage = await readFile(
   join(finalOutput, "manufacturing/index.html"),
   "utf8",
 );
+const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf8");
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
@@ -100,6 +102,17 @@ if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"'))
 }
 if (!manufacturingPage.includes("data-manufacturing-inquiry")) {
   throw new Error("Manufacturing construction page is missing its enquiry CTA.");
+}
+for (const requiredContactContent of [
+  'name="precast-beam-factory-inquiry"',
+  'name="inquiry_topic"',
+  'name="privacy_acknowledgement"',
+  "data-contact-form",
+  "data-contact-submit",
+]) {
+  if (!contactPage.includes(requiredContactContent)) {
+    throw new Error(`Contact page validation failed: ${requiredContactContent}`);
+  }
 }
 
 await run(process.execPath, ["scripts/validate-site.mjs"]);

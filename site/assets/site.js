@@ -104,7 +104,10 @@ document.addEventListener("click", (event) => {
       article_slug: document.body.dataset.articleSlug,
       cta_type: insightCta.dataset.ctaType,
     });
-    if (insightCta.getAttribute("href")?.startsWith("mailto:")) {
+    if (
+      insightCta.getAttribute("href")?.startsWith("mailto:") ||
+      insightCta.getAttribute("href")?.startsWith("/contact/")
+    ) {
       trackEvent("article_inquiry_click", {
         article_slug: document.body.dataset.articleSlug,
         cta_type: insightCta.dataset.ctaType,
@@ -117,9 +120,170 @@ document.addEventListener("click", (event) => {
       cta_id: "manufacturing_coming_soon",
     });
   }
+
+  if (event.target.closest("[data-contact-submit]")) {
+    const form = event.target.closest("form");
+    trackEvent("lead_form_submit_click", {
+      form_id: form?.name || "precast-beam-factory-inquiry",
+      cta_id: "contact_page_form",
+    });
+  }
 });
 
 if (document.body.dataset.pageType === "home") trackEvent("home_page_view");
 if (document.body.dataset.pageType === "insight") {
   trackEvent("insight_view", { article_slug: document.body.dataset.articleSlug });
+}
+
+const contactForm = document.querySelector("[data-contact-form]");
+if (contactForm) {
+  const formId = contactForm.getAttribute("name");
+  const formShell = document.querySelector("[data-contact-form-shell]");
+  const successPanel = document.querySelector("[data-contact-success]");
+  const errorMessage = document.querySelector("[data-contact-error]");
+  const fieldset = contactForm.querySelector("fieldset");
+  const submitButton = contactForm.querySelector("[data-contact-submit]");
+  const completedFields = new Set();
+  let started = false;
+  let submitted = false;
+  let succeeded = false;
+
+  const fields = Array.from(contactForm.elements).filter(
+    (field) =>
+      field.name &&
+      !["hidden", "submit", "button"].includes(field.type) &&
+      field.name !== "bot-field",
+  );
+  const complete = (field) =>
+    ["checkbox", "radio"].includes(field.type)
+      ? field.checked
+      : Boolean(String(field.value || "").trim());
+  const progress = () => {
+    const required = fields.filter((field) => field.required);
+    return {
+      field_count: fields.length,
+      completed_fields: fields.filter(complete).length,
+      required_field_count: required.length,
+      required_fields_completed: required.filter(complete).length,
+      progress_percent: fields.length
+        ? Math.round((completedFields.size / fields.length) * 100)
+        : 0,
+    };
+  };
+  const start = () => {
+    if (started) return;
+    started = true;
+    trackEvent("lead_form_start", {
+      form_id: formId,
+      cta_id: "contact_page_form",
+    });
+  };
+
+  const topic = new URLSearchParams(window.location.search).get("topic");
+  const topicValues = {
+    manufacturing: "Custom Machinery Component Manufacturing",
+    "precast-line": "Precast Concrete Component Production Line",
+  };
+  const topicField = contactForm.elements.namedItem("inquiry_topic");
+  if (topicValues[topic] && topicField) topicField.value = topicValues[topic];
+
+  contactForm.addEventListener("focusin", (event) => {
+    if (fields.includes(event.target)) start();
+  });
+  const recordCompletion = (event) => {
+    const field = event.target;
+    if (!fields.includes(field) || !complete(field) || completedFields.has(field.name)) return;
+    start();
+    completedFields.add(field.name);
+    trackEvent("lead_form_field_complete", {
+      form_id: formId,
+      cta_id: "contact_page_form",
+      field_name: field.name,
+      field_order: fields.indexOf(field) + 1,
+      is_required: field.required ? "yes" : "no",
+      ...progress(),
+    });
+  };
+  contactForm.addEventListener("change", recordCompletion);
+  contactForm.addEventListener("focusout", recordCompletion);
+  contactForm.addEventListener(
+    "invalid",
+    (event) => {
+      start();
+      trackEvent("lead_form_validation_error", {
+        form_id: formId,
+        cta_id: "contact_page_form",
+        field_name: event.target.name,
+      });
+    },
+    true,
+  );
+
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    start();
+    submitted = true;
+    errorMessage.hidden = true;
+    const company = contactForm.elements.namedItem("company").value.trim();
+    const country = contactForm.elements.namedItem("country").value.trim() || "Country not provided";
+    const contactName = contactForm.elements.namedItem("contact_name").value.trim();
+    const selectedTopic = topicField.value;
+    const submissionTitle = `[${selectedTopic}] ${company} - ${country} - ${contactName}`;
+    contactForm.elements.namedItem("title").value = submissionTitle;
+    contactForm.elements.namedItem("subject").value = submissionTitle;
+    trackEvent("lead_form_submit_attempt", {
+      form_id: formId,
+      cta_id: "contact_page_form",
+      ...progress(),
+    });
+    fieldset.disabled = true;
+    contactForm.setAttribute("aria-busy", "true");
+    submitButton.textContent = "Submitting…";
+
+    try {
+      const body = new URLSearchParams(new FormData(contactForm)).toString();
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      succeeded = true;
+      trackEvent("generate_lead", {
+        form_id: formId,
+        lead_source: "website_form",
+        cta_id: "contact_page_form",
+        inquiry_topic: selectedTopic,
+        ...progress(),
+      });
+      contactForm.reset();
+      formShell.hidden = true;
+      successPanel.hidden = false;
+      successPanel.focus();
+    } catch {
+      submitted = false;
+      errorMessage.hidden = false;
+      fieldset.disabled = false;
+      contactForm.removeAttribute("aria-busy");
+      submitButton.innerHTML = 'Submit Project Details <span aria-hidden="true">→</span>';
+      trackEvent("lead_form_submit_error", {
+        form_id: formId,
+        cta_id: "contact_page_form",
+        error_type: "submission_failed",
+        ...progress(),
+      });
+    }
+  });
+
+  window.addEventListener("pagehide", () => {
+    if (!started || succeeded) return;
+    trackEvent("lead_form_abandon", {
+      form_id: formId,
+      cta_id: "contact_page_form",
+      submitted: submitted ? "yes" : "no",
+      ...progress(),
+    });
+  });
+
+  trackEvent("contact_page_view");
 }

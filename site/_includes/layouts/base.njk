@@ -32,6 +32,31 @@
       }
     </script>
     {% endif %}
+    {% if pageType == "contact" %}
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"ContactPage",
+        "name":"Contact Realjet",
+        "url":"https://realjetech.com/contact/",
+        "mainEntity":{
+          "@type":"Organization",
+          "name":"{{ site.legalName }}",
+          "alternateName":"Realjet",
+          "url":"{{ site.url }}",
+          "email":"mailto:{{ site.email }}",
+          "address":{
+            "@type":"PostalAddress",
+            "streetAddress":"{{ site.addressDetails.streetAddress }}",
+            "addressLocality":"{{ site.addressDetails.addressLocality }}",
+            "addressRegion":"{{ site.addressDetails.addressRegion }}",
+            "postalCode":"{{ site.addressDetails.postalCode }}",
+            "addressCountry":"{{ site.addressDetails.addressCountry }}"
+          }
+        }
+      }
+    </script>
+    {% endif %}
     {% if pageType == "insight" %}
     <script type="application/ld+json">
       {

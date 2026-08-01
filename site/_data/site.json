@@ -3,6 +3,14 @@
   "legalName": "Changsha Ruijie Machinery Technology Co., Ltd",
   "url": "https://realjetech.com/",
   "email": "loyosun@gmail.com",
+  "address": "No. 48, Jinzhou New District, Ningxiang, Changsha, Hunan 410600, China",
+  "addressDetails": {
+    "streetAddress": "No. 48, Jinzhou New District",
+    "addressLocality": "Ningxiang, Changsha",
+    "addressRegion": "Hunan",
+    "postalCode": "410600",
+    "addressCountry": "CN"
+  },
   "defaultDescription": "Realjet provides custom machinery component manufacturing and turnkey production lines for precast concrete components.",
   "socialImage": "https://realjetech.com/og/precast-production-lines-en.png"
 }
