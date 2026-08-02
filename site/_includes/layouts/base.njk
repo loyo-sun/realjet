@@ -6,8 +6,13 @@
     <meta name="robots" content="{{ robots or 'index, follow' }}" />
     <meta name="description" content="{{ description or site.defaultDescription }}" />
     <link rel="canonical" href="{{ canonical }}" />
-    <link rel="icon" type="image/png" href="/icons/realjet-site-icon.png" />
-    <link rel="apple-touch-icon" href="/icons/realjet-site-icon.png" />
+    <meta name="theme-color" content="#08253f" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/icons/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="alternate" type="application/rss+xml" title="Realjet Insights" href="/feed.xml" />
     <meta property="og:type" content="{% if pageType == 'insight' %}article{% else %}website{% endif %}" />
     <meta property="og:site_name" content="Realjet" />
@@ -26,7 +31,7 @@
       {
         "@context":"https://schema.org",
         "@graph":[
-          {"@type":"Organization","@id":"https://realjetech.com/#organization","name":"{{ site.legalName }}","alternateName":"Realjet","url":"{{ site.url }}","logo":"https://realjetech.com/images/realjet-logo.webp","email":"mailto:{{ site.email }}"},
+          {"@type":"Organization","@id":"https://realjetech.com/#organization","name":"{{ site.legalName }}","alternateName":"Realjet","url":"{{ site.url }}","logo":"https://realjetech.com/images/realjet-logo.webp","email":"mailto:{{ site.email }}","description":{{ site.defaultDescription | json | safe }},"knowsAbout":["Precast concrete production lines","Precast concrete equipment","Custom machinery component manufacturing","Bridge girder production"]},
           {"@type":"WebSite","@id":"https://realjetech.com/#website","url":"{{ site.url }}","name":"Realjet","publisher":{"@id":"https://realjetech.com/#organization"},"inLanguage":"en"}
         ]
       }

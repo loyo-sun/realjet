@@ -37,7 +37,7 @@ collections:
         required: true
         default: precast-line
         options:
-          - { label: Precast Production Line, value: precast-line }
+          - { label: Precast Concrete Line, value: precast-line }
           - { label: Machinery Component Manufacturing, value: manufacturing }
       - { label: Draft, name: draft, widget: boolean, default: true, required: true, hint: "Keep enabled until the article is approved." }
       - { label: Body, name: body, widget: markdown, required: true, hint: "The page already has an H1. Start body sections with H2." }
