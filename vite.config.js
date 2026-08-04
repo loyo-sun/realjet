@@ -12,6 +12,10 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
+        "contract-manufacturing": resolve(
+          process.cwd(),
+          "marketing/contract_manufacturing/index.html",
+        ),
         "precast-beam-factory-cn": resolve(
           process.cwd(),
           "marketing/precast-beam-factory/cn/index.html",

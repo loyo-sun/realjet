@@ -67,6 +67,7 @@ for (const expectedPath of [
   "robots.txt",
   "feed.xml",
   "marketing/precast-beam-factory/en/index.html",
+  "marketing/contract_manufacturing/index.html",
   "marketing/precast-beam-factory/id/index.html",
   "marketing/precast-beam-factory/ar/index.html",
   "marketing/precast-beam-factory/ru/index.html",
@@ -84,6 +85,10 @@ const manufacturingPage = await readFile(
   "utf8",
 );
 const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf8");
+const contractManufacturingPage = await readFile(
+  join(finalOutput, "marketing/contract_manufacturing/index.html"),
+  "utf8",
+);
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
@@ -102,6 +107,15 @@ if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"'))
 }
 if (!manufacturingPage.includes("data-manufacturing-inquiry")) {
   throw new Error("Manufacturing construction page is missing its enquiry CTA.");
+}
+for (const requiredContent of [
+  '<link rel="canonical" href="https://realjetech.com/marketing/contract_manufacturing/"',
+  'meta name="robots" content="index, follow"',
+  "Custom Machinery Component Manufacturing",
+]) {
+  if (!contractManufacturingPage.includes(requiredContent)) {
+    throw new Error(`Contract manufacturing page validation failed: ${requiredContent}`);
+  }
 }
 for (const requiredContactContent of [
   'name="precast-beam-factory-inquiry"',
