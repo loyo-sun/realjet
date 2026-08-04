@@ -517,13 +517,6 @@ function App() {
           </div>
         </section>
 
-        <section className="bg-white py-20 max-[720px]:py-14">
-          <div className="site-container grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">
-            {["ISO 9001 quality management", "ISO 3834-2 welding quality", "EN 15085-2 CL1 welding", "Helgesen production license"].map((item) => <div key={item} className="flex min-h-24 items-center gap-3 rounded-card border border-line bg-soft p-5 text-sm font-[850] text-brand-navy"><ShieldCheck size={22} className="shrink-0 text-brand-blue" />{item}</div>)}
-          </div>
-          <div className="site-container mt-8 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Quality Requirements")} ctaId="quality_credentials">Discuss Quality Requirements</PrimaryButton></div>
-        </section>
-
         <section id="workflow" className="bg-brand-navy-light py-24 text-white max-[720px]:py-16">
           <div className="site-container">
             <SectionHeading light eyebrow="Project workflow" title="A practical route from requirement to delivery" text="A useful manufacturing review starts with the engineering inputs that shape process, inspection, quotation and schedule." />
