@@ -50,7 +50,7 @@ const companyStats = [
   { value: "2008", label: "Founded in Changsha" },
   { value: "77,000 m²", label: "Manufacturing footprint" },
   { value: "470+", label: "Equipment sets" },
-  { value: "50+", label: "Authorized patents" },
+  { value: "150+", label: "Authorized patents" },
 ];
 
 const capabilities = [
