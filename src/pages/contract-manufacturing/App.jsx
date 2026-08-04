@@ -22,28 +22,28 @@ import {
 import { trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 
 import logoImage from "../../assets/image/realjet-logo.webp";
-import factoryImage from "../../assets/image/contract-manufacturing/realjet-factory.jpeg";
-import weldingImage from "../../assets/image/contract-manufacturing/robotic-welding.jpeg";
-import cuttingImage from "../../assets/image/contract-manufacturing/plate-cutting.jpeg";
-import bendingImage from "../../assets/image/contract-manufacturing/bending.jpeg";
-import machiningImage from "../../assets/image/contract-manufacturing/machining.jpeg";
-import surfaceImage from "../../assets/image/contract-manufacturing/surface-treatment.jpeg";
-import qualityImage from "../../assets/image/contract-manufacturing/quality-inspection.jpeg";
-import chassisImage from "../../assets/image/contract-manufacturing/machinery-chassis.jpeg";
-import turntableImage from "../../assets/image/contract-manufacturing/welded-turntable.jpeg";
-import fuelTankImage from "../../assets/image/contract-manufacturing/fabricated-fuel-tank.jpeg";
-import craneBoomImage from "../../assets/image/contract-manufacturing/crane-boom-real.jpeg";
-import craneJibImage from "../../assets/image/contract-manufacturing/crane-jib-real.jpeg";
-import craneMastImage from "../../assets/image/contract-manufacturing/crane-mast-real.jpeg";
-import oilTankImage from "../../assets/image/contract-manufacturing/oil-tank-real.jpeg";
-import productionLineImage from "../../assets/image/contract-manufacturing/production-line-real.jpeg";
-import tunnelPlatformImage from "../../assets/image/contract-manufacturing/tunnel-platform-real.jpeg";
-import honorSanyImage from "../../assets/image/contract-manufacturing/cases/honor-sany.jpeg";
-import honorZoomlionImage from "../../assets/image/contract-manufacturing/cases/honor-zoomlion.jpeg";
-import honorBoschImage from "../../assets/image/contract-manufacturing/cases/honor-bosch.jpeg";
-import honorHelgesenImage from "../../assets/image/contract-manufacturing/cases/honor-helgesen.jpeg";
-import honorCscmaImage from "../../assets/image/contract-manufacturing/cases/honor-cscma.jpeg";
-import honorWallImage from "../../assets/image/contract-manufacturing/cases/honor-wall.jpeg";
+import factoryImage from "../../assets/image/contract-manufacturing/realjet-factory.webp";
+import weldingImage from "../../assets/image/contract-manufacturing/robotic-welding.webp";
+import cuttingImage from "../../assets/image/contract-manufacturing/plate-cutting.webp";
+import bendingImage from "../../assets/image/contract-manufacturing/bending.webp";
+import machiningImage from "../../assets/image/contract-manufacturing/machining.webp";
+import surfaceImage from "../../assets/image/contract-manufacturing/surface-treatment.webp";
+import qualityImage from "../../assets/image/contract-manufacturing/quality-inspection.webp";
+import chassisImage from "../../assets/image/contract-manufacturing/machinery-chassis.webp";
+import turntableImage from "../../assets/image/contract-manufacturing/welded-turntable.webp";
+import fuelTankImage from "../../assets/image/contract-manufacturing/fabricated-fuel-tank.webp";
+import craneBoomImage from "../../assets/image/contract-manufacturing/crane-boom-real.webp";
+import craneJibImage from "../../assets/image/contract-manufacturing/crane-jib-real.webp";
+import craneMastImage from "../../assets/image/contract-manufacturing/crane-mast-real.webp";
+import oilTankImage from "../../assets/image/contract-manufacturing/oil-tank-real.webp";
+import productionLineImage from "../../assets/image/contract-manufacturing/production-line-real.webp";
+import tunnelPlatformImage from "../../assets/image/contract-manufacturing/tunnel-platform-real.webp";
+import honorSanyImage from "../../assets/image/contract-manufacturing/cases/honor-sany.webp";
+import honorZoomlionImage from "../../assets/image/contract-manufacturing/cases/honor-zoomlion.webp";
+import honorBoschImage from "../../assets/image/contract-manufacturing/cases/honor-bosch.webp";
+import honorHelgesenImage from "../../assets/image/contract-manufacturing/cases/honor-helgesen.webp";
+import honorCscmaImage from "../../assets/image/contract-manufacturing/cases/honor-cscma.webp";
+import honorWallImage from "../../assets/image/contract-manufacturing/cases/honor-wall.webp";
 
 const companyStats = [
   { value: "2008", label: "Founded in Changsha" },
@@ -166,7 +166,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-6 text-xs font-bold text-white/70 max-[980px]:hidden" aria-label="Primary navigation">
           {navItems.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button type="button" onClick={() => onLead("Send Your Drawings")} data-cta-id="header" className="rounded-lg bg-white px-4 py-2.5 text-xs font-[850] text-brand-navy max-[980px]:ml-auto max-[640px]:hidden">Send Drawings</button>
+        <button type="button" onClick={() => onLead("Partnership Enquiry")} data-cta-id="header" className="rounded-lg bg-white px-4 py-2.5 text-xs font-[850] text-brand-navy max-[980px]:ml-auto max-[640px]:hidden">Partnership Enquiry</button>
         <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="hidden rounded-lg border border-white/20 p-2 max-[980px]:block">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -175,7 +175,7 @@ function Header({ onLead }) {
         <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-4 py-4 shadow-floating min-[981px]:hidden" aria-label="Mobile navigation">
           <div className="site-container grid gap-1">
             {navItems.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => { setOpen(false); onLead("Send Your Drawings"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-white px-3 py-3 text-center text-sm font-extrabold text-brand-navy">Send Drawings</button>
+            <button type="button" onClick={() => { setOpen(false); onLead("Partnership Enquiry"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-white px-3 py-3 text-center text-sm font-extrabold text-brand-navy">Partnership Enquiry</button>
           </div>
         </nav>
       )}
@@ -442,6 +442,7 @@ function App() {
           <div className="site-container grid grid-cols-4 gap-px overflow-hidden rounded-card border border-line bg-line max-[820px]:grid-cols-2 max-[480px]:grid-cols-1">
             {companyStats.map((item) => <div key={item.label} className="bg-white px-6 py-5"><strong className="block text-2xl font-[900] tracking-[-0.03em] text-brand-navy">{item.value}</strong><span className="mt-1 block text-xs text-muted">{item.label}</span></div>)}
           </div>
+          <div className="site-container mt-6 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Production Capacity")} ctaId="capacity_stats">Discuss Production Capacity</PrimaryButton></div>
         </section>
 
         <section id="about" className="bg-soft py-24 max-[720px]:py-16">
@@ -457,6 +458,7 @@ function App() {
                 <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Building2 size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">Integrated production site</span></div>
                 <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Award size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">Quality and welding systems</span></div>
               </div>
+              <div className="mt-7"><PrimaryButton dark onClick={() => openLead("Partnership Enquiry")} ctaId="about">Start a Partnership Enquiry</PrimaryButton></div>
             </div>
           </div>
         </section>
@@ -476,6 +478,7 @@ function App() {
                 </article>
               ))}
             </div>
+            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Your Manufacturing Route")} ctaId="capabilities">Discuss Your Manufacturing Route</PrimaryButton></div>
           </div>
         </section>
 
@@ -494,6 +497,7 @@ function App() {
                 </article>
               ))}
             </div>
+            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Request a Component Review")} ctaId="products">Request a Component Review</PrimaryButton></div>
           </div>
         </section>
 
@@ -508,6 +512,7 @@ function App() {
                 </article>
               ))}
             </div>
+            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss a Supply Partnership")} ctaId="cases">Discuss a Supply Partnership</PrimaryButton></div>
           </div>
         </section>
 
@@ -515,6 +520,7 @@ function App() {
           <div className="site-container grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">
             {["ISO 9001 quality management", "ISO 3834-2 welding quality", "EN 15085-2 CL1 welding", "Helgesen production license"].map((item) => <div key={item} className="flex min-h-24 items-center gap-3 rounded-card border border-line bg-soft p-5 text-sm font-[850] text-brand-navy"><ShieldCheck size={22} className="shrink-0 text-brand-blue" />{item}</div>)}
           </div>
+          <div className="site-container mt-8 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Quality Requirements")} ctaId="quality_credentials">Discuss Quality Requirements</PrimaryButton></div>
         </section>
 
         <section id="workflow" className="bg-brand-navy-light py-24 text-white max-[720px]:py-16">
@@ -523,6 +529,7 @@ function App() {
             <div className="mt-12 grid grid-cols-4 gap-px overflow-hidden rounded-card border border-white/12 bg-white/12 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
               {workflow.map((item) => <article key={item.step} className="min-h-[255px] bg-brand-navy p-6"><span className="text-3xl font-[900] text-brand-cyan">{item.step}</span><h3 className="mt-10 mb-0 text-xl font-[850]">{item.title}</h3><p className="mt-3 mb-0 text-sm leading-6 text-white/64">{item.text}</p></article>)}
             </div>
+            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Start a Manufacturing Review")} ctaId="workflow">Start a Manufacturing Review</PrimaryButton></div>
           </div>
         </section>
 
