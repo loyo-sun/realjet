@@ -22,6 +22,7 @@ import {
 import { trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 
 import logoImage from "../../assets/image/realjet-logo.webp";
+import heroImage from "../../assets/image/contract-manufacturing/hero-welding-workshop.webp";
 import factoryImage from "../../assets/image/contract-manufacturing/realjet-factory.webp";
 import weldingImage from "../../assets/image/contract-manufacturing/robotic-welding.webp";
 import cuttingImage from "../../assets/image/contract-manufacturing/plate-cutting.webp";
@@ -420,7 +421,7 @@ function App() {
       <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
       <main id="main-content">
         <section id="top" className="hero-gradient relative isolate min-h-[640px] overflow-hidden text-white">
-          <img src={weldingImage} alt="Robotic and manual welding in the Realjet manufacturing workshop" className="absolute inset-y-0 right-0 h-full w-[62%] object-cover object-center max-[850px]:w-full" />
+          <img src={heroImage} alt="Robotic welding workshop at the Realjet manufacturing facility" className="absolute inset-y-0 right-0 h-full w-[62%] object-cover object-center max-[850px]:w-full" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,30,52,1)_0%,rgba(6,30,52,.96)_40%,rgba(6,30,52,.68)_62%,rgba(6,30,52,.28)_100%)] max-[850px]:bg-brand-navy/88" />
           <div className="site-container relative z-10 flex min-h-[640px] items-center py-20">
             <div className="w-[min(690px,60%)] max-[850px]:w-full">
