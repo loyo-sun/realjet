@@ -1,18 +1,25 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
+  ArrowLeft,
   ArrowRight,
   Award,
   Building2,
   Check,
+  CheckCircle,
   ChevronRight,
   CircleCheckBig,
   FileCheck2,
+  LoaderCircle,
+  MapPin,
   Menu,
+  Send,
   ShieldCheck,
+  User,
   Users,
   Wrench,
   X,
 } from "lucide-react";
+import { trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 
 import logoImage from "../../assets/image/realjet-logo.webp";
 import factoryImage from "../../assets/image/contract-manufacturing/realjet-factory.jpeg";
@@ -133,15 +140,15 @@ const decisionInputs = [
   "Delivery destination and target schedule",
 ];
 
-function PrimaryLink({ children, href = "/contact/?topic=manufacturing", dark = false }) {
+function PrimaryButton({ children, onClick, dark = false, ctaId }) {
   return (
-    <a href={href} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 text-sm font-[850] no-underline transition hover:-translate-y-0.5 ${dark ? "bg-brand-navy text-white hover:bg-brand-navy-light" : "bg-white text-brand-navy hover:bg-soft"}`}>
+    <button type="button" onClick={onClick} data-cta-id={ctaId} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 text-sm font-[850] transition hover:-translate-y-0.5 ${dark ? "bg-brand-navy text-white hover:bg-brand-navy-light" : "bg-white text-brand-navy hover:bg-soft"}`}>
       {children}<ArrowRight size={17} aria-hidden="true" />
-    </a>
+    </button>
   );
 }
 
-function Header() {
+function Header({ onLead }) {
   const [open, setOpen] = useState(false);
   const navItems = [
     ["About", "#about"],
@@ -159,7 +166,7 @@ function Header() {
         <nav className="ml-auto flex items-center gap-6 text-xs font-bold text-white/70 max-[980px]:hidden" aria-label="Primary navigation">
           {navItems.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <a href="/contact/?topic=manufacturing" className="rounded-lg bg-white px-4 py-2.5 text-xs font-[850] text-brand-navy no-underline max-[980px]:ml-auto max-[640px]:hidden">Send Drawings</a>
+        <button type="button" onClick={() => onLead("Send Your Drawings")} data-cta-id="header" className="rounded-lg bg-white px-4 py-2.5 text-xs font-[850] text-brand-navy max-[980px]:ml-auto max-[640px]:hidden">Send Drawings</button>
         <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="hidden rounded-lg border border-white/20 p-2 max-[980px]:block">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -168,11 +175,166 @@ function Header() {
         <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-4 py-4 shadow-floating min-[981px]:hidden" aria-label="Mobile navigation">
           <div className="site-container grid gap-1">
             {navItems.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>)}
-            <a href="/contact/?topic=manufacturing" className="mt-2 rounded-lg bg-white px-3 py-3 text-center text-sm font-extrabold text-brand-navy">Send Drawings</a>
+            <button type="button" onClick={() => { setOpen(false); onLead("Send Your Drawings"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-white px-3 py-3 text-center text-sm font-extrabold text-brand-navy">Send Drawings</button>
           </div>
         </nav>
       )}
     </header>
+  );
+}
+
+function Field({ id, label, icon: Icon, ...props }) {
+  return (
+    <label htmlFor={id} className="block">
+      <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{label}</span>
+      <span className="relative block">
+        <Icon size={15} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted" />
+        <input id={id} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" {...props} />
+      </span>
+    </label>
+  );
+}
+
+function LeadModal({ open, onClose, title }) {
+  const [submitted, setSubmitted] = useState(false);
+  const [submissionState, setSubmissionState] = useState("idle");
+  const closeRef = useRef(null);
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    document.body.classList.toggle("modal-open", open);
+    const siteShell = document.getElementById("site-shell");
+    if (siteShell) {
+      siteShell.inert = open;
+      if (open) siteShell.setAttribute("aria-hidden", "true");
+      else siteShell.removeAttribute("aria-hidden");
+    }
+    if (open) {
+      setSubmitted(false);
+      setSubmissionState("idle");
+      requestAnimationFrame(() => closeRef.current?.focus());
+    }
+    return () => {
+      document.body.classList.remove("modal-open");
+      if (siteShell) {
+        siteShell.inert = false;
+        siteShell.removeAttribute("aria-hidden");
+      }
+    };
+  }, [open]);
+
+  useEffect(() => {
+    const onKey = (event) => {
+      if (!open) return;
+      if (event.key === "Escape") {
+        onClose();
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const dialog = dialogRef.current;
+      if (!dialog) return;
+      const focusable = Array.from(dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter((element) => element.offsetParent !== null);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (!dialog.contains(document.activeElement)) {
+        event.preventDefault();
+        first.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open, onClose]);
+
+  if (!open) return null;
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const company = form.elements.company.value.trim();
+    const country = form.elements.country.value.trim() || "Country not provided";
+    const contactName = form.elements.contact_name.value.trim();
+    const submissionTitle = `[${title}] ${company} - ${country} - ${contactName}`;
+    const formData = new FormData(form);
+    formData.set("title", submissionTitle);
+    formData.set("subject", submissionTitle);
+    setSubmissionState("submitting");
+
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      trackLeadSuccess(form);
+      form.reset();
+      setSubmitted(true);
+      setSubmissionState("success");
+    } catch {
+      trackLeadError(form);
+      setSubmissionState("error");
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#03111d]/75 p-5 backdrop-blur-lg" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100vh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
+        <button ref={closeRef} type="button" onClick={onClose} aria-label="Close" className="absolute top-3.5 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-soft text-brand-navy"><X size={20} /></button>
+        {submitted ? (
+          <div className="py-10 text-center">
+            <CheckCircle className="mx-auto mb-4 text-brand-cyan" size={48} />
+            <strong className="block text-xl font-[850] text-brand-navy">Your Manufacturing Enquiry Has Been Submitted</strong>
+            <p className="mt-2 text-xs text-muted">Thank you. A Realjet specialist will contact you using the details provided.</p>
+            <button type="button" onClick={onClose} className="mx-auto mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white"><ArrowLeft size={15} /> Return to Page</button>
+          </div>
+        ) : (
+          <>
+            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
+            <p className="mt-1.5 mb-5 text-xs text-muted">Company, contact name and business email are required. Add any available drawing and production details below.</p>
+            <form name="contract-manufacturing-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="contract-manufacturing-inquiry" />
+              <input type="hidden" name="inquiry_topic" value={title} />
+              <input type="hidden" name="title" defaultValue="" />
+              <input type="hidden" name="subject" defaultValue="" />
+              <input type="hidden" name="bot-field" />
+              <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
+                <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
+                  <Field id="company" name="company" label="Company *" placeholder="Company name" icon={Building2} required />
+                  <Field id="contact-name" name="contact_name" label="Contact Name *" placeholder="Your name" icon={User} required />
+                  <Field id="country" name="country" label="Country / Region" placeholder="Delivery destination" icon={MapPin} />
+                  <Field id="email" name="email" label="Business Email *" placeholder="name@company.com" icon={Send} type="email" required />
+                  <label htmlFor="component-type" className="col-span-2 block max-[720px]:col-span-1">
+                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">Component Type</span>
+                    <input id="component-type" name="component_type" className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5]" placeholder="e.g. welded frame, tank, chassis or assembly" />
+                  </label>
+                  <label className="col-span-2 block max-[720px]:col-span-1">
+                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">Manufacturing Requirement</span>
+                    <textarea name="project_details" rows="4" className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5]" placeholder="Describe material, dimensions, quantity, standards, inspection, finish and target schedule. Do not submit confidential drawings here." />
+                  </label>
+                  <div className="col-span-2 flex items-start gap-2 text-[12px] leading-[1.5] text-muted max-[720px]:col-span-1">
+                    <input id="manufacturing-privacy-acknowledgement" type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
+                    <label htmlFor="manufacturing-privacy-acknowledgement">I have read the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer" className="font-[750] text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:text-brand-navy">Privacy Policy</a> and understand that Realjet will use my information to respond to this enquiry.</label>
+                  </div>
+                </div>
+                {submissionState === "error" && <p role="alert" className="mt-4 text-[12px] text-red-600">Submission failed. Please check your connection and try again, or contact us later.</p>}
+                <div className="mt-5 flex justify-end">
+                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75">
+                    {submissionState === "submitting" ? <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> Submitting…</> : <>Submit Manufacturing Enquiry <Send size={15} /></>}
+                  </button>
+                </div>
+              </fieldset>
+            </form>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
 
@@ -187,9 +349,75 @@ function SectionHeading({ eyebrow, title, text, light = false, centered = false 
 }
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [leadTitle, setLeadTitle] = useState("Request a Manufacturing Review");
+  const [progress, setProgress] = useState(0);
+  const [finalCtaVisible, setFinalCtaVisible] = useState(false);
+  const [heroStatsVisible, setHeroStatsVisible] = useState(true);
+  const [mobileCtaVisible, setMobileCtaVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
+  const scrollStopTimerRef = useRef(null);
+  const leadTriggerRef = useRef(null);
+
+  const openLead = (title = "Request a Manufacturing Review") => {
+    leadTriggerRef.current = document.activeElement;
+    setLeadTitle(title);
+    setModalOpen(true);
+  };
+
+  const closeLead = () => {
+    setModalOpen(false);
+    window.requestAnimationFrame(() => leadTriggerRef.current?.focus?.());
+  };
+
+  useEffect(() => {
+    const update = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
+      if (window.innerWidth <= 720) {
+        const delta = window.scrollY - lastScrollYRef.current;
+        if (delta > 3) setMobileCtaVisible(false);
+        if (delta < -3) setMobileCtaVisible(true);
+        window.clearTimeout(scrollStopTimerRef.current);
+        scrollStopTimerRef.current = window.setTimeout(() => setMobileCtaVisible(true), 260);
+      } else {
+        setMobileCtaVisible(true);
+      }
+      lastScrollYRef.current = window.scrollY;
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+      window.clearTimeout(scrollStopTimerRef.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    const target = document.getElementById("final-cta");
+    if (!target) return undefined;
+    const observer = new IntersectionObserver(([entry]) => setFinalCtaVisible(entry.isIntersecting), { threshold: 0.15 });
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const target = document.getElementById("hero-stats");
+    if (!target) return undefined;
+    const observer = new IntersectionObserver(([entry]) => setHeroStatsVisible(entry.isIntersecting), { threshold: 0 });
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, []);
+
+  const hideMobileCta = heroStatsVisible || finalCtaVisible || modalOpen || !mobileCtaVisible;
+
   return (
-    <div className="min-h-screen bg-white text-ink">
-      <Header />
+    <>
+    <div id="site-shell" className="min-h-screen bg-white text-ink">
+      <Header onLead={openLead} />
+      <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
       <main id="main-content">
         <section id="top" className="hero-gradient relative isolate min-h-[640px] overflow-hidden text-white">
           <img src={weldingImage} alt="Robotic and manual welding in the Realjet manufacturing workshop" className="absolute inset-y-0 right-0 h-full w-[62%] object-cover object-center max-[850px]:w-full" />
@@ -200,7 +428,7 @@ function App() {
               <h1 className="mt-5 mb-0 text-[clamp(42px,5.2vw,68px)] leading-[1.02] font-[900] tracking-[-0.052em]">Custom Machinery Component Manufacturing</h1>
               <p className="mt-7 max-w-[640px] text-lg leading-8 text-white/76 max-[640px]:text-base max-[640px]:leading-7">From cutting and forming to welding, machining, coating, inspection and delivery, Realjet manufactures machinery components to customer drawings and project requirements.</p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <PrimaryLink>Start a Drawing Review</PrimaryLink>
+                <PrimaryButton onClick={() => openLead("Start a Drawing Review")} ctaId="hero">Start a Drawing Review</PrimaryButton>
                 <a href="#products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/28 px-5 text-sm font-[800] text-white no-underline transition hover:bg-white/8">View Manufacturing Cases <ChevronRight size={17} aria-hidden="true" /></a>
               </div>
               <div className="mt-10 grid max-w-[650px] grid-cols-3 gap-5 border-t border-white/18 pt-6 max-[640px]:grid-cols-1 max-[640px]:gap-3">
@@ -210,7 +438,7 @@ function App() {
           </div>
         </section>
 
-        <section className="border-b border-line bg-white py-8">
+        <section id="hero-stats" className="border-b border-line bg-white py-8">
           <div className="site-container grid grid-cols-4 gap-px overflow-hidden rounded-card border border-line bg-line max-[820px]:grid-cols-2 max-[480px]:grid-cols-1">
             {companyStats.map((item) => <div key={item.label} className="bg-white px-6 py-5"><strong className="block text-2xl font-[900] tracking-[-0.03em] text-brand-navy">{item.value}</strong><span className="mt-1 block text-xs text-muted">{item.label}</span></div>)}
           </div>
@@ -308,15 +536,15 @@ function App() {
             <div>
               <SectionHeading eyebrow="Prepare the enquiry" title="Send the information needed for a useful manufacturing review" />
               <div className="mt-7 grid grid-cols-2 gap-x-5 gap-y-3 max-[580px]:grid-cols-1">{decisionInputs.map((item) => <div key={item} className="flex items-start gap-2.5 text-sm leading-6 text-muted"><FileCheck2 size={18} className="mt-1 shrink-0 text-brand-blue" />{item}</div>)}</div>
-              <div className="mt-8"><PrimaryLink dark>Send a Manufacturing Enquiry</PrimaryLink></div>
+              <div className="mt-8"><PrimaryButton dark onClick={() => openLead("Send a Manufacturing Enquiry")} ctaId="enquiry_preparation">Send a Manufacturing Enquiry</PrimaryButton></div>
             </div>
           </div>
         </section>
 
-        <section className="industrial-grid bg-brand-navy-light py-20 text-white">
+        <section id="final-cta" className="industrial-grid bg-brand-navy-light py-20 text-white">
           <div className="site-container flex items-center justify-between gap-12 max-[800px]:items-start max-[800px]:flex-col">
             <div className="max-w-[720px]"><p className="m-0 text-[11px] font-[850] tracking-[0.16em] text-brand-cyan uppercase">Next step</p><h2 className="mt-3 mb-0 text-[clamp(32px,4vw,50px)] leading-[1.08] font-[900] tracking-[-0.04em]">Have a component ready for supplier review?</h2><p className="mt-5 mb-0 text-base leading-7 text-white/68">Share the drawing package, quantities, standards and delivery requirement. Realjet will review the manufacturing scope and identify the next technical questions.</p></div>
-            <PrimaryLink>Start the Review</PrimaryLink>
+            <PrimaryButton onClick={() => openLead("Start the Manufacturing Review")} ctaId="final_cta">Start the Review</PrimaryButton>
           </div>
         </section>
       </main>
@@ -329,7 +557,19 @@ function App() {
         </div>
         <div className="site-container mt-8 border-t border-white/10 pt-5 text-[11px]">© 2026 Changsha Ruijie Machinery Technology Co., Ltd</div>
       </footer>
+      <button
+        type="button"
+        onClick={() => openLead("Request a Manufacturing Review")}
+        data-cta-id="mobile_sticky"
+        aria-hidden={hideMobileCta}
+        tabIndex={hideMobileCta ? -1 : 0}
+        className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${hideMobileCta ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0" : "max-[720px]:translate-y-0 max-[720px]:opacity-100"}`}
+      >
+        Request a Manufacturing Review <ArrowRight size={16} />
+      </button>
     </div>
+    <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />
+    </>
   );
 }
 

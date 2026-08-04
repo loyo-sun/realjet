@@ -1,6 +1,6 @@
-const FORM_NAME = "precast-beam-factory-inquiry";
+const DEFAULT_FORM_NAME = "precast-beam-factory-inquiry";
 const CONSENT_KEY = "realjet_analytics_consent_v1";
-const PAGE_TYPE = "precast_production_line";
+const DEFAULT_PAGE_TYPE = "precast_production_line";
 
 const consentCopy = {
   en: {
@@ -56,6 +56,8 @@ const consentCopy = {
 
 const runtime = {
   locale: "en",
+  formName: DEFAULT_FORM_NAME,
+  pageType: DEFAULT_PAGE_TYPE,
   initialized: false,
   currentCta: "unknown",
   forms: new Map(),
@@ -73,7 +75,7 @@ function gtag(...args) {
 function commonParameters() {
   return {
     page_locale: runtime.locale,
-    page_type: PAGE_TYPE,
+    page_type: runtime.pageType,
     page_path: window.location.pathname,
   };
 }
@@ -126,7 +128,7 @@ function getFormState(form) {
 
 function trackedField(target) {
   const form = target?.form;
-  if (!form || form.name !== FORM_NAME) return null;
+  if (!form || form.name !== runtime.formName) return null;
   return visibleFormFields(form).includes(target) ? target : null;
 }
 
@@ -134,7 +136,7 @@ function startForm(form, state) {
   if (state.started) return;
   state.started = true;
   trackEvent("lead_form_start", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     cta_id: runtime.currentCta,
   });
 }
@@ -143,6 +145,7 @@ function classifyCta(button) {
   if (!button) return null;
   if (button.closest('[role="dialog"]')) return null;
   if (button.hasAttribute("aria-label") || button.hasAttribute("aria-expanded")) return null;
+  if (button.dataset.ctaId) return button.dataset.ctaId;
   if (button.classList.contains("fixed")) return "mobile_sticky";
   if (button.closest("header")) return "header";
   const section = button.closest("section");
@@ -163,12 +166,12 @@ function onClick(event) {
   if (!button) return;
 
   const form = button.form;
-  if (form?.name === FORM_NAME && button.type === "submit") {
+  if (form?.name === runtime.formName && button.type === "submit") {
     const state = getFormState(form);
     startForm(form, state);
     state.submitClicked = true;
     trackEvent("lead_form_submit_click", {
-      form_id: FORM_NAME,
+      form_id: runtime.formName,
       cta_id: runtime.currentCta,
       ...formProgress(form, state),
     });
@@ -200,7 +203,7 @@ function onChange(event) {
   state.completed.add(field.name);
   const fields = visibleFormFields(form);
   trackEvent("lead_form_field_complete", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     cta_id: runtime.currentCta,
     field_name: field.name,
     field_order: fields.indexOf(field) + 1,
@@ -219,7 +222,7 @@ function onInvalid(event) {
   if (state.invalid.has(field.name)) return;
   state.invalid.add(field.name);
   trackEvent("lead_form_validation_error", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     cta_id: runtime.currentCta,
     field_name: field.name,
   });
@@ -227,12 +230,12 @@ function onInvalid(event) {
 
 function onSubmit(event) {
   const form = event.target;
-  if (form?.name !== FORM_NAME) return;
+  if (form?.name !== runtime.formName) return;
   const state = getFormState(form);
   startForm(form, state);
   state.submitted = true;
   trackEvent("lead_form_submit_attempt", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     cta_id: runtime.currentCta,
     ...formProgress(form, state),
   });
@@ -244,7 +247,7 @@ function observeAbandonment() {
       if (form.isConnected) continue;
       if (state.started && !state.success) {
         trackEvent("lead_form_abandon", {
-          form_id: FORM_NAME,
+          form_id: runtime.formName,
           cta_id: runtime.currentCta,
           last_field_name: state.lastField,
           ...formProgress(form, state),
@@ -260,7 +263,7 @@ export function trackLeadSuccess(form) {
   const state = form ? getFormState(form) : null;
   if (state) state.success = true;
   trackEvent("generate_lead", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     lead_source: "website_form",
     cta_id: runtime.currentCta,
     ...(form && state ? formProgress(form, state) : {}),
@@ -270,7 +273,7 @@ export function trackLeadSuccess(form) {
 export function trackLeadError(form, errorType = "submission_failed") {
   const state = form ? getFormState(form) : null;
   trackEvent("lead_form_submit_error", {
-    form_id: FORM_NAME,
+    form_id: runtime.formName,
     cta_id: runtime.currentCta,
     error_type: errorType,
     ...(form && state ? formProgress(form, state) : {}),
@@ -352,10 +355,12 @@ export function initAnalyticsConsent(locale) {
   else showConsentPanel(locale);
 }
 
-export function initLandingAnalytics(locale) {
+export function initLandingAnalytics(locale, options = {}) {
   if (runtime.initialized) return;
   runtime.initialized = true;
   runtime.locale = locale;
+  runtime.formName = options.formName || DEFAULT_FORM_NAME;
+  runtime.pageType = options.pageType || DEFAULT_PAGE_TYPE;
   initAnalyticsConsent(locale);
   document.addEventListener("click", onClick, true);
   document.addEventListener("focusin", onFocus, true);
