@@ -53,6 +53,29 @@ const companyStats = [
   { value: "150+", label: "Authorized patents" },
 ];
 
+const companyValues = [
+  {
+    icon: Users,
+    title: "Company Philosophy",
+    text: "Build a partnership enterprise that satisfies customer needs, fulfils social responsibilities, displays personal talents and realises personal dreams.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Product Concept",
+    text: "Safe · Efficient · Precise · Durable",
+  },
+  {
+    icon: Wrench,
+    title: "Business Philosophy",
+    text: "Integrity · Innovation · Service · Development",
+  },
+  {
+    icon: Award,
+    title: "Core Values",
+    text: "Customer First · Craftsmanship · Collaboration · Excellence",
+  },
+];
+
 const capabilities = [
   {
     number: "01",
@@ -75,7 +98,7 @@ const capabilities = [
     image: weldingImage,
     alt: "Robotic and manual welding in the Realjet workshop",
     title: "Welding & fabrication",
-    text: "FANUC robotic welding lines and manual welding routes support arc welding, gas-shielded welding and post-weld finishing for machinery and export-oriented structural components.",
+    text: "Multiple FANUC robotic welding lines covering arc welding and GMAW, with post-weld seam finishing. ISO 3834-2 welding quality system certified and EN 15085-2 CL1 international welding certified, meeting rail vehicle and export product standards.",
     tags: ["Robotic welding", "ISO 3834-2", "EN 15085-2 CL1"],
   },
   {
@@ -105,7 +128,7 @@ const capabilities = [
 ];
 
 const productCases = [
-  { image: turntableImage, alt: "Aerial work platform turntable fabricated by Realjet", title: "Aerial Work Platform Turntable", client: "Sinoboom reference", category: "Welded structure" },
+  { image: turntableImage, alt: "Aerial work platform turntable fabricated by Realjet", title: "Aerial Work Platform Turntable", client: "SINOBOOM reference", category: "Welded structure" },
   { image: craneBoomImage, alt: "Crane boom head manufactured by Realjet", title: "Crane Boom Head", client: "SANY reference", category: "Crane component" },
   { image: chassisImage, alt: "Concrete pump chassis manufactured by Realjet", title: "Concrete Pump Chassis", client: "Zoomlion reference", category: "Machine chassis" },
   { image: oilTankImage, alt: "Hydraulic oil tank manufactured under Helgesen authorization", title: "Hydraulic Oil Tank", client: "Helgesen licensed", category: "Fluid system component" },
@@ -433,7 +456,7 @@ function App() {
                 <a href="#products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/28 px-5 text-sm font-[800] text-white no-underline transition hover:bg-white/8">View Manufacturing Cases <ChevronRight size={17} aria-hidden="true" /></a>
               </div>
               <div className="mt-10 grid max-w-[650px] grid-cols-3 gap-5 border-t border-white/18 pt-6 max-[640px]:grid-cols-1 max-[640px]:gap-3">
-                {["Drawing-led review", "Six coordinated processes", "Project-specific inspection"].map((item) => <div key={item} className="flex items-center gap-2 text-xs font-bold text-white/72"><Check size={15} className="shrink-0 text-brand-cyan" />{item}</div>)}
+                {["Drawing-led review", "Six Fabrication Processes", "Project-specific inspection"].map((item) => <div key={item} className="flex items-center gap-2 text-xs font-bold text-white/72"><Check size={15} className="shrink-0 text-brand-cyan" />{item}</div>)}
               </div>
             </div>
           </div>
@@ -447,19 +470,25 @@ function App() {
         </section>
 
         <section id="about" className="bg-soft py-24 max-[720px]:py-16">
-          <div className="site-container grid grid-cols-[.95fr_1.05fr] items-center gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-            <div className="overflow-hidden rounded-card shadow-card"><img src={factoryImage} alt="Realjet manufacturing facility in Ningxiang, Changsha" loading="lazy" className="aspect-[4/3] w-full object-cover" /></div>
-            <div>
-              <SectionHeading eyebrow="About Realjet" title="A manufacturing partner built around long-term industrial supply" />
-              <p className="mt-6 mb-0 text-base leading-7 text-muted">Founded in 2008 in Ningxiang, Changsha, Realjet has developed into a supporting manufacturer for high-end equipment. The company was listed on China&apos;s NEEQ in 2015 under stock code 832867.</p>
-              <p className="mt-4 mb-0 text-base leading-7 text-muted">Its core business covers metal structural components, with coordinated support from engineering and precision processing through assembly and delivery. The original project record includes long-term work for SANY, Zoomlion, CRCHI, Sinoboom, Helgesen and other industrial customers.</p>
-              <div className="mt-7 grid grid-cols-2 gap-3 max-[560px]:grid-cols-1">
-                <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Users size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">500+ employees</span></div>
-                <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Wrench size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">70+ R&amp;D personnel</span></div>
-                <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Building2 size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">Integrated production site</span></div>
-                <div className="flex items-center gap-3 rounded-xl border border-line bg-white p-4"><Award size={21} className="text-brand-blue" /><span className="text-sm font-bold text-brand-navy">Quality and welding systems</span></div>
+          <div className="site-container">
+            <div className="grid grid-cols-[.95fr_1.05fr] items-center gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
+              <div className="overflow-hidden rounded-card shadow-card"><img src={factoryImage} alt="Realjet manufacturing facility in Ningxiang, Changsha" loading="lazy" className="aspect-[4/3] w-full object-cover" /></div>
+              <div>
+                <SectionHeading eyebrow="About Realjet" title="A manufacturing partner built around long-term industrial supply" />
+                <p className="mt-6 mb-0 text-base leading-7 text-muted">Changsha Ruijie Machinery Technology Co., Ltd (“Realjet”, the company&apos;s abbreviated name and trademark) was founded in 2008 in Ningxiang, Changsha. With 18 years of experience in high-end equipment manufacturing, Realjet was listed on China&apos;s NEEQ in 2015 under stock code 832867 and now employs more than 500 people, including over 70 R&amp;D engineers.</p>
+                <p className="mt-4 mb-0 text-base leading-7 text-muted">Realjet&apos;s core business is metal structural component manufacturing, supported by full-process capabilities from R&amp;D and precision machining to final assembly and commissioning. Realjet is a long-term partner of SANY, Zoomlion, CRCHI, SINOBOOM, Helgesen and other renowned enterprises.</p>
+                <p className="mt-4 mb-0 text-base leading-7 text-muted">Guided by the philosophy of “Integrity, Innovation, Service, Development,” Realjet builds on rigorous processes and strict quality control to deliver reliable products and technical solutions. Looking ahead, Realjet will drive industrial upgrades through technological innovation and strive to become a trusted long-term partner for global clients.</p>
+                <div className="mt-7"><PrimaryButton dark onClick={() => openLead("Partnership Enquiry")} ctaId="about">Start a Partnership Enquiry</PrimaryButton></div>
               </div>
-              <div className="mt-7"><PrimaryButton dark onClick={() => openLead("Partnership Enquiry")} ctaId="about">Start a Partnership Enquiry</PrimaryButton></div>
+            </div>
+            <div className="mt-12 grid grid-cols-4 gap-4 max-[960px]:grid-cols-2 max-[560px]:grid-cols-1">
+              {companyValues.map(({ icon: Icon, title, text }) => (
+                <article key={title} className="rounded-card border border-line bg-white p-6 shadow-card">
+                  <Icon size={24} className="text-brand-blue" aria-hidden="true" />
+                  <h3 className="mt-4 mb-0 text-lg font-[850] text-brand-navy">{title}</h3>
+                  <p className="mt-2 mb-0 text-sm leading-6 text-muted">{text}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
