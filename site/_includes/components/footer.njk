@@ -1,17 +1,19 @@
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div><a class="footer-brand" href="/">Realjet</a><p>{{ site.legalName }}</p></div>
-    <div class="footer-links">
-      <a href="/manufacturing/">Custom Machinery Components</a>
-      <a href="/marketing/precast-beam-factory/en/">Precast Concrete Lines</a>
+  <div class="container footer-main">
+    <a class="footer-brand" href="/">Realjet</a>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/marketing/contract_manufacturing/">Contract Manufacturing</a>
+      <a href="/marketing/precast-beam-factory/en/">Precast Production Lines</a>
       <a href="/insights/">Insights</a>
       <a href="/contact/">Contact</a>
-    </div>
-    <div class="footer-links footer-meta">
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 {{ site.legalName }}</span>
+    <div class="footer-meta">
       <a href="/marketing/privacy/en/">Privacy Policy</a>
       <button type="button" data-open-analytics>Analytics Preferences</button>
       <a href="mailto:{{ site.email }}">{{ site.email }}</a>
     </div>
   </div>
-  <div class="container footer-bottom"><span>© 2026 {{ site.legalName }}</span></div>
 </footer>

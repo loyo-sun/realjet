@@ -92,7 +92,7 @@ const contractManufacturingPage = await readFile(
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
-  'href="/manufacturing/"',
+  'href="/marketing/contract_manufacturing/"',
   'href="/marketing/precast-beam-factory/en/"',
   "Custom Machinery Component Manufacturing",
   "Production Lines for Precast Concrete Components",
