@@ -89,6 +89,7 @@ const contractManufacturingPage = await readFile(
   join(finalOutput, "marketing/contract_manufacturing/index.html"),
   "utf8",
 );
+const sitemap = await readFile(join(finalOutput, "sitemap.xml"), "utf8");
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
@@ -126,6 +127,39 @@ for (const requiredContactContent of [
 ]) {
   if (!contactPage.includes(requiredContactContent)) {
     throw new Error(`Contact page validation failed: ${requiredContactContent}`);
+  }
+}
+
+for (const requiredSitemapUrl of [
+  "https://realjetech.com/",
+  "https://realjetech.com/contact/",
+  "https://realjetech.com/insights/",
+  "https://realjetech.com/marketing/contract_manufacturing/",
+  "https://realjetech.com/marketing/precast-beam-factory/en/",
+  "https://realjetech.com/marketing/precast-beam-factory/id/",
+  "https://realjetech.com/marketing/precast-beam-factory/ar/",
+  "https://realjetech.com/marketing/precast-beam-factory/ru/",
+  "https://realjetech.com/marketing/precast-beam-factory/cn/",
+  "https://realjetech.com/marketing/precast-beam-factory/fr/",
+  "https://realjetech.com/marketing/precast-beam-factory/es/",
+  "https://realjetech.com/marketing/privacy/en/",
+  "https://realjetech.com/marketing/privacy/id/",
+  "https://realjetech.com/marketing/privacy/ar/",
+  "https://realjetech.com/marketing/privacy/ru/",
+  "https://realjetech.com/marketing/privacy/cn/",
+  "https://realjetech.com/marketing/privacy/fr/",
+  "https://realjetech.com/marketing/privacy/es/",
+]) {
+  if (!sitemap.includes(`<loc>${requiredSitemapUrl}</loc>`)) {
+    throw new Error(`Sitemap validation failed: ${requiredSitemapUrl}`);
+  }
+}
+for (const excludedSitemapUrl of [
+  "https://realjetech.com/admin/",
+  "https://realjetech.com/manufacturing/",
+]) {
+  if (sitemap.includes(`<loc>${excludedSitemapUrl}</loc>`)) {
+    throw new Error(`Sitemap contains noindex URL: ${excludedSitemapUrl}`);
   }
 }
 

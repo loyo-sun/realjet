@@ -46,19 +46,23 @@ function ContactCard() {
   );
 }
 
+function goBack() {
+  if (document.referrer && window.history.length > 1) window.history.back();
+  else window.location.assign("/");
+}
+
 export default function App() {
   return (
     <>
       <header className="sticky top-0 z-30 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
         <div className="site-container flex h-full items-center justify-between gap-5">
-          <a href="../../precast-beam-factory/en/" aria-label="Realjet precast production lines">
+          <a href="/" aria-label="Realjet home">
             <img src={logoImage} alt="Realjet logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
           </a>
-          <a href="../../precast-beam-factory/en/" className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-white/15 px-3 text-[12px] font-[750] text-white/80 transition hover:border-white/30 hover:text-white">
+          <button type="button" onClick={goBack} className="inline-flex min-h-10 items-center gap-2 rounded-lg border border-white/15 px-3 text-[12px] font-[750] text-white/80 transition hover:border-white/30 hover:text-white">
             <ArrowLeft size={15} aria-hidden="true" />
-            <span className="max-[430px]:hidden">Back to Production Lines</span>
-            <span className="hidden max-[430px]:inline">Back</span>
-          </a>
+            <span>Back</span>
+          </button>
         </div>
       </header>
 

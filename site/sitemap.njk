@@ -4,7 +4,26 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{% set staticUrls = ["https://realjetech.com/","https://realjetech.com/contact/","https://realjetech.com/insights/","https://realjetech.com/marketing/precast-beam-factory/en/","https://realjetech.com/marketing/precast-beam-factory/id/","https://realjetech.com/marketing/precast-beam-factory/ar/","https://realjetech.com/marketing/precast-beam-factory/ru/","https://realjetech.com/marketing/precast-beam-factory/cn/","https://realjetech.com/marketing/precast-beam-factory/fr/","https://realjetech.com/marketing/precast-beam-factory/es/"] %}
+{% set staticUrls = [
+  "https://realjetech.com/",
+  "https://realjetech.com/contact/",
+  "https://realjetech.com/insights/",
+  "https://realjetech.com/marketing/contract_manufacturing/",
+  "https://realjetech.com/marketing/precast-beam-factory/en/",
+  "https://realjetech.com/marketing/precast-beam-factory/id/",
+  "https://realjetech.com/marketing/precast-beam-factory/ar/",
+  "https://realjetech.com/marketing/precast-beam-factory/ru/",
+  "https://realjetech.com/marketing/precast-beam-factory/cn/",
+  "https://realjetech.com/marketing/precast-beam-factory/fr/",
+  "https://realjetech.com/marketing/precast-beam-factory/es/",
+  "https://realjetech.com/marketing/privacy/en/",
+  "https://realjetech.com/marketing/privacy/id/",
+  "https://realjetech.com/marketing/privacy/ar/",
+  "https://realjetech.com/marketing/privacy/ru/",
+  "https://realjetech.com/marketing/privacy/cn/",
+  "https://realjetech.com/marketing/privacy/fr/",
+  "https://realjetech.com/marketing/privacy/es/"
+] %}
 {% for itemUrl in staticUrls %}<url><loc>{{ itemUrl }}</loc></url>{% endfor %}
 {% for post in collections.publishedInsights %}<url><loc>{{ post.url | absoluteUrl(site.url) }}</loc><lastmod>{{ (post.data.updated or post.data.date) | isoDate }}</lastmod></url>{% endfor %}
 </urlset>
