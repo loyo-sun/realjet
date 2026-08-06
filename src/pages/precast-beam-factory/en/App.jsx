@@ -745,9 +745,9 @@ function LeadModal({ open, onClose, title }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#03111d]/75 p-5 backdrop-blur-lg" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100vh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
-        <button ref={closeRef} onClick={onClose} aria-label="Close" className="absolute top-3.5 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-soft text-brand-navy"><X size={20} /></button>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#03111d]/75 p-5 backdrop-blur-lg max-[720px]:p-3" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="lead-title" className="relative max-h-[calc(100dvh-40px)] w-full max-w-[680px] overflow-auto rounded-[18px] bg-white p-7 shadow-[0_30px_90px_rgba(0,0,0,.35)] max-[720px]:max-h-[calc(100dvh-24px)] max-[720px]:rounded-[14px] max-[720px]:p-4">
+        <button ref={closeRef} onClick={onClose} aria-label="Close" className="absolute top-3.5 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-soft text-brand-navy max-[720px]:top-2.5 max-[720px]:right-2.5 max-[720px]:h-8 max-[720px]:w-8"><X size={20} /></button>
         {submitted ? (
           <div className="py-10 text-center">
             <CheckCircle className="mx-auto mb-4 text-brand-cyan" size={48} />
@@ -763,8 +763,8 @@ function LeadModal({ open, onClose, title }) {
           </div>
         ) : (
           <>
-            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">Company, contact name and business email are required. Add any available project details below.</p>
+            <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy max-[720px]:text-xl">{title}</h3>
+            <p className="mt-1.5 mb-5 text-xs text-muted max-[720px]:mb-3 max-[720px]:text-[11px] max-[720px]:leading-[1.4]">Company, contact name and business email are required. Add any available project details below.</p>
             <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
               <input type="hidden" name="inquiry_topic" value={title} />
@@ -772,21 +772,21 @@ function LeadModal({ open, onClose, title }) {
               <input type="hidden" name="subject" defaultValue="" />
               <input type="hidden" name="bot-field" />
               <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
-                <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
+                <div className="grid grid-cols-2 gap-3.5 max-[720px]:gap-2">
                   <Field id="company" name="company" label="Company *" placeholder="Company name" icon={Building2} required />
                   <Field id="contact-name" name="contact_name" label="Contact Name *" placeholder="Your name" icon={User} required />
                   <Field id="country" name="country" label="Country / Region" placeholder="Project location" icon={MapPin} />
                   <Field id="email" name="email" label="Business Email *" placeholder="name@company.com" icon={Send} type="email" required />
-                  <label className="col-span-2 block max-[720px]:col-span-1">
-                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">Project Details</span>
+                  <label className="col-span-2 block">
+                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668] max-[720px]:mb-1 max-[720px]:text-[10px]">Project Details</span>
                     <textarea
                       name="project_details"
                       rows="4"
-                      className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted"
+                      className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted max-[720px]:h-14 max-[720px]:resize-none max-[720px]:py-2 max-[720px]:text-xs"
                       placeholder="Briefly describe the product type, quantity, target output or schedule, site conditions, and current project stage. Leave unknown items blank."
                     />
                   </label>
-                  <div className="col-span-2 flex items-start gap-2 text-[12px] leading-[1.5] text-muted max-[720px]:col-span-1">
+                  <div className="col-span-2 flex items-start gap-2 text-[12px] leading-[1.5] text-muted max-[720px]:text-[10px] max-[720px]:leading-[1.35]">
                     <input id="privacy-acknowledgement" type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
                     <label htmlFor="privacy-acknowledgement">
                       I have read the{" "}
@@ -800,8 +800,8 @@ function LeadModal({ open, onClose, title }) {
                 {submissionState === "error" && (
                   <p role="alert" className="mt-4 text-[12px] text-red-600">Submission failed. Please check your connection and try again, or contact us later.</p>
                 )}
-                <div className="mt-5 flex justify-end">
-                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75">
+                <div className="mt-5 flex justify-end max-[720px]:mt-3">
+                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75 max-[720px]:min-h-10 max-[720px]:w-full max-[720px]:text-xs">
                     {submissionState === "submitting" ? (
                       <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> Submitting…</>
                     ) : (
@@ -821,10 +821,10 @@ function LeadModal({ open, onClose, title }) {
 function Field({ id, label, icon: Icon, ...props }) {
   return (
     <label htmlFor={id} className="block">
-      <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{label}</span>
+      <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668] max-[720px]:mb-1 max-[720px]:text-[10px]">{label}</span>
       <span className="relative block">
         <Icon size={15} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted" />
-        <input id={id} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" {...props} />
+        <input id={id} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted max-[720px]:py-2 max-[720px]:pr-2 max-[720px]:pl-8 max-[720px]:text-xs" {...props} />
       </span>
     </label>
   );
@@ -852,11 +852,6 @@ export default function App() {
   const [progress, setProgress] = useState(0);
   const [showAllEquipment, setShowAllEquipment] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
-  const [finalCtaVisible, setFinalCtaVisible] = useState(false);
-  const [heroMetricsVisible, setHeroMetricsVisible] = useState(true);
-  const [mobileCtaVisible, setMobileCtaVisible] = useState(true);
-  const lastScrollYRef = useRef(0);
-  const scrollStopTimerRef = useRef(null);
   const leadTriggerRef = useRef(null);
   const openLead = (title = "Get a Free Custom Plan") => {
     leadTriggerRef.current = document.activeElement;
@@ -872,16 +867,6 @@ export default function App() {
     const update = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight;
       setProgress(total > 0 ? (window.scrollY / total) * 100 : 0);
-      if (window.innerWidth <= 720) {
-        const delta = window.scrollY - lastScrollYRef.current;
-        if (delta > 3) setMobileCtaVisible(false);
-        if (delta < -3) setMobileCtaVisible(true);
-        window.clearTimeout(scrollStopTimerRef.current);
-        scrollStopTimerRef.current = window.setTimeout(() => setMobileCtaVisible(true), 260);
-      } else {
-        setMobileCtaVisible(true);
-      }
-      lastScrollYRef.current = window.scrollY;
     };
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -889,33 +874,8 @@ export default function App() {
     return () => {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
-      window.clearTimeout(scrollStopTimerRef.current);
     };
   }, []);
-
-  useEffect(() => {
-    const finalCta = document.getElementById("final-cta");
-    if (!finalCta) return undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => setFinalCtaVisible(entry.isIntersecting),
-      { threshold: 0.15 },
-    );
-    observer.observe(finalCta);
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    const heroMetrics = document.getElementById("hero-metrics");
-    if (!heroMetrics) return undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => setHeroMetricsVisible(entry.isIntersecting),
-      { threshold: 0 },
-    );
-    observer.observe(heroMetrics);
-    return () => observer.disconnect();
-  }, []);
-
-  const hideMobileCta = heroMetricsVisible || finalCtaVisible || modalOpen || !mobileCtaVisible;
 
   return (
     <>
@@ -1166,7 +1126,7 @@ export default function App() {
         </section>
         </main>
 
-        <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0] max-[720px]:pb-[calc(24px+env(safe-area-inset-bottom))]">
+        <footer className="bg-[#051a2c] py-6 text-[11px] text-[#89a0b0] max-[720px]:pb-[calc(88px+env(safe-area-inset-bottom))]">
           <div className="site-container flex items-center justify-between gap-5 max-[720px]:flex-col max-[720px]:items-start">
             <span>© 2026 Changsha Ruijie Machinery Technology Co., Ltd. All rights reserved.</span>
             <div className="flex items-center gap-5 max-[720px]:flex-col max-[720px]:items-start max-[720px]:gap-2">
@@ -1178,13 +1138,7 @@ export default function App() {
 
         <button
           onClick={() => openLead("Get a Free Custom Plan")}
-          aria-hidden={hideMobileCta}
-          tabIndex={hideMobileCta ? -1 : 0}
-          className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
-            hideMobileCta
-              ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
-              : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
-          }`}
+          className="fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex"
         >
           Get a Free Custom Plan <ArrowRight size={16} />
         </button>
