@@ -1,13 +1,16 @@
 ---
 title: Integrated U-Girder Formwork for Precast Beam Factory Planning
-description: Integrated U-girder formwork planned with factory layout, curing capacity, material flow and handling equipment for coordinated precast beam production.
+description: Integrated U-girder formwork planned with factory layout, curing
+  capacity, material flow and handling equipment for coordinated precast beam
+  production.
 date: 2026-08-08
 updated: 2026-08-08
 order: 8
-featured: false
+featured: true
 slug: integrated-u-girder-formwork-for-precast-beam-factory-planning
 image: /images/products/b672989850ae88f0862ea9d23a305539.jpg
-imageAlt: Parallel steel U-girder formwork lines with work platforms and central rail routes in a factory
+imageAlt: Parallel steel U-girder formwork lines with work platforms and central
+  rail routes in a factory
 draft: false
 ---
 
