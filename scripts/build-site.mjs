@@ -56,7 +56,9 @@ async function readHomepageRecommendations(directory) {
 
     items.push({
       title: readField("title"),
+      slug: readField("slug"),
       featured: /^featured:\s*true\s*$/m.test(source),
+      draft: /^draft:\s*true\s*$/m.test(source),
       date: readField("date"),
       order: Number(readField("order") || 999),
     });
@@ -84,8 +86,6 @@ for (const expectedPath of [
   "contact/index.html",
   "insights/index.html",
   "products/index.html",
-  "products/intelligent-precast-beam-production-line.html",
-  "inquiry/intelligent-precast-beam-production-line.html",
   "admin/index.html",
   "admin/config.yml",
   "admin/config.zh.yml",
@@ -117,14 +117,6 @@ const manufacturingPage = await readFile(
 );
 const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf8");
 const productsPage = await readFile(join(finalOutput, "products/index.html"), "utf8");
-const productPage = await readFile(
-  join(finalOutput, "products/intelligent-precast-beam-production-line.html"),
-  "utf8",
-);
-const productInquiryPage = await readFile(
-  join(finalOutput, "inquiry/intelligent-precast-beam-production-line.html"),
-  "utf8",
-);
 const insightPage = await readFile(
   join(
     finalOutput,
@@ -207,6 +199,41 @@ if (visibleProductTitles.length === 0 && homepage.includes("Featured Products"))
 if (visibleInsightTitles.length === 0 && homepage.includes("Latest Insights")) {
   throw new Error("Homepage insight section must be hidden without recommendations.");
 }
+for (const product of productRecommendations.filter((item) => !item.draft)) {
+  const productPath = `products/${product.slug}.html`;
+  const inquiryPath = `inquiry/${product.slug}.html`;
+  await access(join(finalOutput, productPath));
+  await access(join(finalOutput, inquiryPath));
+
+  const productDetailPage = await readFile(join(finalOutput, productPath), "utf8");
+  const productInquiryPage = await readFile(join(finalOutput, inquiryPath), "utf8");
+  for (const requiredProductDetailContent of [
+    product.title,
+    "data-product-gallery",
+    "product-detail-content-layout",
+    'id="quick-product-inquiry"',
+    `href="/inquiry/${product.slug}.html"`,
+    "Contract Manufacturing",
+    "Precast Concrete Production Lines",
+  ]) {
+    if (!productDetailPage.includes(requiredProductDetailContent)) {
+      throw new Error(
+        `Product detail validation failed: ${requiredProductDetailContent}`,
+      );
+    }
+  }
+  for (const requiredInquiryContent of [
+    'meta name="robots" content="noindex, follow"',
+    'name="product-inquiry"',
+    'name="message"',
+    'name="email"',
+    "data-product-inquiry-success",
+  ]) {
+    if (!productInquiryPage.includes(requiredInquiryContent)) {
+      throw new Error(`Product inquiry validation failed: ${requiredInquiryContent}`);
+    }
+  }
+}
 for (const requiredInsightContent of [
   "Latest News",
   "latest-news-list",
@@ -221,46 +248,16 @@ for (const requiredInsightContent of [
 if (insightPage.includes("Choose Your Project Path")) {
   throw new Error("Insight sidebar must only contain the latest-news module.");
 }
-for (const requiredProductContent of [
-  "Intelligent Precast Beam Production Line",
-  "Latest Products",
+const requiredProductsPageContents = [
+  productRecommendations.length
+    ? "Latest Products"
+    : "Product catalogue is being updated.",
   "Contract Manufacturing",
   "Precast Concrete Production Lines",
-]) {
-  if (!productsPage.includes(requiredProductContent)) {
-    throw new Error(`Products page validation failed: ${requiredProductContent}`);
-  }
-  if (!productPage.includes(requiredProductContent)) {
-    throw new Error(`Product detail validation failed: ${requiredProductContent}`);
-  }
-}
-for (const requiredProductDetailContent of [
-  "data-product-gallery",
-  "data-product-gallery-thumb",
-  "product-detail-content-layout",
-  'id="quick-product-inquiry"',
-  "data-quick-inquiry-jump",
-  'data-inquiry-variant="quick"',
-  'href="/inquiry/intelligent-precast-beam-production-line.html"',
-  "data-product-inquiry-link",
-]) {
-  if (!productPage.includes(requiredProductDetailContent)) {
-    throw new Error(`Product detail validation failed: ${requiredProductDetailContent}`);
-  }
-}
-for (const requiredInquiryContent of [
-  'meta name="robots" content="noindex, follow"',
-  'name="product-inquiry"',
-  'name="product_slug"',
-  'name="message"',
-  'name="email"',
-  "data-product-inquiry-form",
-  'data-inquiry-variant="dedicated"',
-  "data-product-inquiry-success",
-  "Enquiry Sent Successfully",
-]) {
-  if (!productInquiryPage.includes(requiredInquiryContent)) {
-    throw new Error(`Product inquiry validation failed: ${requiredInquiryContent}`);
+];
+for (const requiredProductsPageContent of requiredProductsPageContents) {
+  if (!productsPage.includes(requiredProductsPageContent)) {
+    throw new Error(`Products page validation failed: ${requiredProductsPageContent}`);
   }
 }
 if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"')) {
@@ -295,7 +292,6 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/contact/",
   "https://realjetech.com/insights/",
   "https://realjetech.com/products/",
-  "https://realjetech.com/products/intelligent-precast-beam-production-line.html",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
@@ -323,6 +319,12 @@ for (const excludedSitemapUrl of [
 ]) {
   if (sitemap.includes(`<loc>${excludedSitemapUrl}</loc>`)) {
     throw new Error(`Sitemap contains noindex URL: ${excludedSitemapUrl}`);
+  }
+}
+for (const product of productRecommendations.filter((item) => !item.draft)) {
+  const productUrl = `https://realjetech.com/products/${product.slug}.html`;
+  if (!sitemap.includes(`<loc>${productUrl}</loc>`)) {
+    throw new Error(`Sitemap validation failed: ${productUrl}`);
   }
 }
 

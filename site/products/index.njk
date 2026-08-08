@@ -16,6 +16,7 @@ robots: index, follow
   </div>
 </header>
 <section class="product-listing-section">
+  {% if collections.publishedProducts.length %}
   <div class="container product-listing-layout">
     <div class="product-listing-main">
       <div class="product-grid">
@@ -24,5 +25,14 @@ robots: index, follow
     </div>
     {% include "components/latest-products.njk" %}
   </div>
+  {% else %}
+  <div class="container">
+    <div class="empty-insights">
+      <span>Product Catalogue</span>
+      <h2>Product catalogue is being updated.</h2>
+      <p>Contact Realjet to discuss equipment requirements for your precast concrete production project.</p>
+    </div>
+  </div>
+  {% endif %}
 </section>
 {% include "components/business-promos.njk" %}
