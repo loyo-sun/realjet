@@ -134,6 +134,9 @@ for (const requiredProductDetailContent of [
   "data-product-gallery",
   "data-product-gallery-thumb",
   "product-detail-content-layout",
+  'id="quick-product-inquiry"',
+  "data-quick-inquiry-jump",
+  'data-inquiry-variant="quick"',
   'href="/inquiry/intelligent-precast-beam-production-line.html"',
   "data-product-inquiry-link",
 ]) {
@@ -148,6 +151,7 @@ for (const requiredInquiryContent of [
   'name="message"',
   'name="email"',
   "data-product-inquiry-form",
+  'data-inquiry-variant="dedicated"',
   "data-product-inquiry-success",
   "Enquiry Sent Successfully",
 ]) {

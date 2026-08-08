@@ -136,11 +136,10 @@ document.addEventListener("click", (event) => {
     });
   }
 
-  if (event.target.closest("[data-product-inquiry-submit]")) {
-    trackEvent("product_inquiry_submit_click", {
-      form_id: "product-inquiry",
+  if (event.target.closest("[data-quick-inquiry-jump]")) {
+    trackEvent("product_inquiry_jump_click", {
       product_slug: document.body.dataset.productSlug,
-      cta_id: "product_inquiry_form",
+      cta_id: "product_quick_inquiry_jump",
     });
   }
 });
@@ -380,33 +379,42 @@ if (contactForm) {
   trackEvent("contact_page_view");
 }
 
-const productInquiryForm = document.querySelector("[data-product-inquiry-form]");
-if (productInquiryForm) {
-  const formShell = document.querySelector("[data-product-inquiry-shell]");
-  const successPanel = document.querySelector("[data-product-inquiry-success]");
-  const errorMessage = document.querySelector("[data-product-inquiry-error]");
+const productInquiryForms = Array.from(
+  document.querySelectorAll("[data-product-inquiry-form]"),
+);
+for (const productInquiryForm of productInquiryForms) {
+  const container = productInquiryForm.closest("[data-product-inquiry-container]");
+  const formShell = container.querySelector("[data-product-inquiry-shell]");
+  const successPanel = container.querySelector("[data-product-inquiry-success]");
+  const errorMessage = productInquiryForm.querySelector("[data-product-inquiry-error]");
   const submitButton = productInquiryForm.querySelector("[data-product-inquiry-submit]");
   const fieldset = productInquiryForm.querySelector("fieldset");
   const messageField = productInquiryForm.querySelector("[data-inquiry-message]");
-  const count = document.querySelector("[data-inquiry-count]");
+  const count = productInquiryForm.querySelector("[data-inquiry-count]");
   const productSlug = document.body.dataset.productSlug;
+  const inquiryVariant = productInquiryForm.dataset.inquiryVariant || "dedicated";
   let started = false;
   let submitted = false;
   let succeeded = false;
 
+  const eventParameters = {
+    form_id: "product-inquiry",
+    product_slug: productSlug,
+    inquiry_variant: inquiryVariant,
+    cta_id: inquiryVariant === "quick" ? "product_quick_inquiry" : "product_inquiry_form",
+  };
   const start = () => {
     if (started) return;
     started = true;
-    trackEvent("product_inquiry_start", {
-      form_id: "product-inquiry",
-      product_slug: productSlug,
-      cta_id: "product_inquiry_form",
-    });
+    trackEvent("product_inquiry_start", eventParameters);
   };
 
   messageField.addEventListener("input", () => {
     count.textContent = String(messageField.value.length);
     start();
+  });
+  submitButton.addEventListener("click", () => {
+    trackEvent("product_inquiry_submit_click", eventParameters);
   });
   productInquiryForm.addEventListener("focusin", start);
   productInquiryForm.addEventListener(
@@ -414,8 +422,7 @@ if (productInquiryForm) {
     (event) => {
       start();
       trackEvent("product_inquiry_validation_error", {
-        form_id: "product-inquiry",
-        product_slug: productSlug,
+        ...eventParameters,
         field_name: event.target.name,
       });
     },
@@ -430,11 +437,7 @@ if (productInquiryForm) {
     fieldset.disabled = true;
     productInquiryForm.setAttribute("aria-busy", "true");
     submitButton.textContent = "Sending…";
-    trackEvent("product_inquiry_submit_attempt", {
-      form_id: "product-inquiry",
-      product_slug: productSlug,
-      cta_id: "product_inquiry_form",
-    });
+    trackEvent("product_inquiry_submit_attempt", eventParameters);
 
     try {
       const body = new URLSearchParams(new FormData(productInquiryForm)).toString();
@@ -446,17 +449,12 @@ if (productInquiryForm) {
       if (!response.ok) throw new Error("Submission failed");
       succeeded = true;
       trackEvent("generate_lead", {
-        form_id: "product-inquiry",
-        lead_source: "product_inquiry",
-        product_slug: productSlug,
-        cta_id: "product_inquiry_form",
+        ...eventParameters,
+        lead_source: inquiryVariant === "quick" ? "product_quick_inquiry" : "product_inquiry",
       });
-      trackEvent("product_inquiry_success", {
-        form_id: "product-inquiry",
-        product_slug: productSlug,
-        cta_id: "product_inquiry_form",
-      });
+      trackEvent("product_inquiry_success", eventParameters);
       productInquiryForm.reset();
+      count.textContent = "0";
       formShell.hidden = true;
       successPanel.hidden = false;
       successPanel.focus();
@@ -467,9 +465,7 @@ if (productInquiryForm) {
       productInquiryForm.removeAttribute("aria-busy");
       submitButton.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
       trackEvent("product_inquiry_submit_error", {
-        form_id: "product-inquiry",
-        product_slug: productSlug,
-        cta_id: "product_inquiry_form",
+        ...eventParameters,
         error_type: "submission_failed",
       });
     }
@@ -478,11 +474,18 @@ if (productInquiryForm) {
   window.addEventListener("pagehide", () => {
     if (!started || succeeded) return;
     trackEvent("product_inquiry_abandon", {
-      form_id: "product-inquiry",
-      product_slug: productSlug,
+      ...eventParameters,
       submitted: submitted ? "yes" : "no",
     });
   });
 
-  trackEvent("product_inquiry_view", { product_slug: productSlug });
+  if (inquiryVariant !== "quick" || window.matchMedia("(min-width: 721px)").matches) {
+    trackEvent("product_inquiry_form_view", eventParameters);
+  }
+}
+
+if (document.body.dataset.pageType === "product-inquiry") {
+  trackEvent("product_inquiry_view", {
+    product_slug: document.body.dataset.productSlug,
+  });
 }

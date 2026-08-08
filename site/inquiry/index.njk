@@ -12,7 +12,7 @@ permalink: "/inquiry/{{ product.data.slug }}.html"
     </div>
   </header>
   <section class="product-inquiry-section">
-    <div class="container product-inquiry-shell">
+    <div class="container product-inquiry-shell" data-product-inquiry-container>
       <div data-product-inquiry-shell>
         <span class="eyebrow">Product Enquiry</span>
         <h1>Tell Us What You Need</h1>
@@ -23,7 +23,7 @@ permalink: "/inquiry/{{ product.data.slug }}.html"
           <span><small>Product</small><strong>{{ product.data.title }}</strong><em>View product details →</em></span>
         </a>
 
-        <form name="product-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-product-inquiry-form>
+        <form name="product-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-product-inquiry-form data-inquiry-variant="dedicated">
           <input type="hidden" name="form-name" value="product-inquiry" />
           <input type="hidden" name="product_title" value="{{ product.data.title }}" />
           <input type="hidden" name="product_slug" value="{{ product.data.slug }}" />
