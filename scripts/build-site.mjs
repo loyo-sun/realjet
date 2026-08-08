@@ -43,6 +43,28 @@ async function copyWithoutCollisions(source, target) {
   }
 }
 
+async function readHomepageRecommendations(directory) {
+  const entries = await readdir(join(projectRoot, directory));
+  const items = [];
+
+  for (const entry of entries.filter((name) => name.endsWith(".md"))) {
+    const source = await readFile(join(projectRoot, directory, entry), "utf8");
+    const readField = (name) => {
+      const match = source.match(new RegExp(`^${name}:\\s*(.+)$`, "m"));
+      return match?.[1]?.trim().replace(/^(["'])(.*)\1$/, "$2") || "";
+    };
+
+    items.push({
+      title: readField("title"),
+      featured: /^featured:\s*true\s*$/m.test(source),
+      date: readField("date"),
+      order: Number(readField("order") || 999),
+    });
+  }
+
+  return items;
+}
+
 await rm(buildRoot, { recursive: true, force: true });
 await rm(finalOutput, { recursive: true, force: true });
 
@@ -124,7 +146,6 @@ const requiredHomepageContent = [
   "Production Lines for Precast Concrete Components",
   'href="/products/"',
   '<a href="/">Home</a>',
-  "Featured Products",
 ];
 for (const requiredAdminContent of [
   'configLink.rel = "cms-config-url"',
@@ -157,25 +178,48 @@ for (const requiredContent of requiredHomepageContent) {
     throw new Error(`Homepage validation failed: ${requiredContent}`);
   }
 }
-for (const excludedHomepageContent of [
-  "Latest Insights",
-  "Concrete Conveying and Distribution System",
-  "Precast Concrete Production Line Commissioning Checklist",
-]) {
-  if (homepage.includes(excludedHomepageContent)) {
-    throw new Error(
-      `Homepage recommendation validation failed: ${excludedHomepageContent}`,
-    );
+const productRecommendations = await readHomepageRecommendations("content/products");
+const insightRecommendations = await readHomepageRecommendations("content/insights");
+const visibleProductTitles = productRecommendations
+  .filter((item) => item.featured)
+  .sort((a, b) => a.order - b.order)
+  .slice(0, 4)
+  .map((item) => item.title);
+const visibleInsightTitles = insightRecommendations
+  .filter((item) => item.featured)
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 3)
+  .map((item) => item.title);
+
+for (const title of [...visibleProductTitles, ...visibleInsightTitles]) {
+  if (!homepage.includes(title)) {
+    throw new Error(`Homepage is missing recommended content: ${title}`);
   }
+}
+for (const item of [...productRecommendations, ...insightRecommendations]) {
+  if (!item.featured && homepage.includes(item.title)) {
+    throw new Error(`Homepage contains non-recommended content: ${item.title}`);
+  }
+}
+if (visibleProductTitles.length === 0 && homepage.includes("Featured Products")) {
+  throw new Error("Homepage product section must be hidden without recommendations.");
+}
+if (visibleInsightTitles.length === 0 && homepage.includes("Latest Insights")) {
+  throw new Error("Homepage insight section must be hidden without recommendations.");
 }
 for (const requiredInsightContent of [
   "Latest News",
   "latest-news-list",
   "Precast Concrete Production Line Commissioning Checklist",
+  "Contract Manufacturing",
+  "Precast Concrete Production Lines",
 ]) {
   if (!insightPage.includes(requiredInsightContent)) {
     throw new Error(`Insight detail validation failed: ${requiredInsightContent}`);
   }
+}
+if (insightPage.includes("Choose Your Project Path")) {
+  throw new Error("Insight sidebar must only contain the latest-news module.");
 }
 for (const requiredProductContent of [
   "Intelligent Precast Beam Production Line",

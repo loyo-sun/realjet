@@ -18,14 +18,6 @@ layout: layouts/base.njk
   <div class="article-layout container">
     <div class="article-body">{{ content | safe }}</div>
     <aside class="article-aside" aria-label="Related content">
-      <section class="article-aside-card" aria-labelledby="article-solutions-title">
-        <span class="eyebrow">Realjet Solutions</span>
-        <h2 id="article-solutions-title">Choose Your Project Path</h2>
-        <nav class="article-solution-links" aria-label="Related solutions">
-          <a href="/marketing/precast-beam-factory/en/" data-insight-cta data-cta-type="precast-line"><strong>Precast Concrete Lines</strong><span>Line engineering, equipment and project delivery</span></a>
-          <a href="/marketing/contract_manufacturing/" data-insight-cta data-cta-type="manufacturing"><strong>Contract Manufacturing</strong><span>Machinery components made to drawings and specifications</span></a>
-        </nav>
-      </section>
       <section class="article-aside-card latest-news-card" aria-labelledby="latest-news-title">
         <span class="eyebrow">Latest News</span>
         <h2 id="latest-news-title">Latest Insights</h2>
@@ -45,6 +37,7 @@ layout: layouts/base.njk
       </section>
     </aside>
   </div>
+  {% include "components/business-promos.njk" %}
   <section class="article-quick-enquiry floating-enquiry" data-floating-enquiry hidden aria-label="Quick enquiry">
     <header class="floating-enquiry-header">
       <span class="eyebrow">Quick Enquiry</span>

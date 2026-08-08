@@ -4,7 +4,7 @@ description: A coordinated solution for repeatable segment casting, geometry con
 date: 2026-08-07
 updated: 2026-08-07
 order: 2
-featured: true
+featured: false
 slug: intelligent-segmental-beam-production-line
 image: /images/products/intelligent-segmental-beam-line.webp
 imageAlt: Segmental bridge beam production line inside an industrial workshop

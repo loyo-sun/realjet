@@ -282,11 +282,6 @@ button, input, textarea, select { font: inherit; }
 .latest-news-list time { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; }
 .latest-news-list strong { display: -webkit-box; overflow: hidden; color: var(--navy); font-size: 13px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .latest-news-list a:hover strong { color: var(--blue); }
-.article-solution-links { display: grid; gap: 10px; margin-top: 18px; }
-.article-solution-links a { display: grid; gap: 4px; padding: 13px; border: 1px solid var(--line); border-radius: 10px; color: var(--navy); background: var(--white); text-decoration: none; transition: border-color 180ms ease, transform 180ms ease; }
-.article-solution-links a:hover { border-color: var(--blue); transform: translateY(-1px); }
-.article-solution-links strong { font-size: 13px; }
-.article-solution-links span { color: var(--muted); font-size: 11px; line-height: 1.45; }
 .article-quick-enquiry { background: var(--white); }
 .article-quick-enquiry fieldset { min-width: 0; padding: 0; border: 0; }
 .article-quick-enquiry fieldset:disabled { opacity: .72; }

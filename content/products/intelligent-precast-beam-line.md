@@ -4,7 +4,7 @@ description: An integrated production line for coordinated beam forming, reinfor
 date: 2026-08-08
 updated: 2026-08-08
 order: 1
-featured: true
+featured: false
 slug: intelligent-precast-beam-production-line
 image: /images/products/intelligent-precast-beam-line.webp
 imageAlt: Automated production equipment arranged along a precast beam production line
