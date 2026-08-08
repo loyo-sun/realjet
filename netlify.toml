@@ -5,6 +5,12 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[[redirects]]
+  from = "/manufacturing/"
+  to = "/marketing/contract_manufacturing/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
