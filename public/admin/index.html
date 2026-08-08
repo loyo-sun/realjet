@@ -8,20 +8,22 @@
     <link rel="icon" type="image/png" href="/icons/realjet-site-icon.png" />
     <style>
       .admin-language-switcher {
-        position: fixed;
-        top: 12px;
-        right: 16px;
-        z-index: 2147483647;
         display: flex;
+        flex: 0 0 auto;
         align-items: center;
         gap: 8px;
+        margin-inline-start: auto;
+        margin-inline-end: 12px;
         padding: 7px 10px;
         border: 1px solid #d7dee5;
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.96);
-        box-shadow: 0 3px 12px rgba(14, 30, 46, 0.12);
+        background: #fff;
         color: #243746;
         font: 600 12px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .admin-language-switcher[hidden] {
+        display: none;
       }
 
       .admin-language-switcher select {
@@ -37,8 +39,9 @@
 
       @media (max-width: 600px) {
         .admin-language-switcher {
-          top: 8px;
-          right: 8px;
+          gap: 0;
+          margin-inline-end: 6px;
+          padding: 4px;
         }
 
         .admin-language-switcher span {
@@ -52,8 +55,6 @@
       }
     </style>
     <script>
-      window.CMS_MANUAL_INIT = true;
-
       (() => {
         const supportedLocales = new Set(["en", "zh_Hans"]);
         const requestedLocale = new URLSearchParams(window.location.search).get("lang");
@@ -72,11 +73,20 @@
             : "en";
         document.documentElement.lang =
           window.REALJET_ADMIN_LOCALE === "zh_Hans" ? "zh-CN" : "en";
+
+        const configLink = document.createElement("link");
+        configLink.rel = "cms-config-url";
+        configLink.type = "text/yaml";
+        configLink.href =
+          window.REALJET_ADMIN_LOCALE === "zh_Hans"
+            ? "/admin/config.zh.yml"
+            : "/admin/config.yml";
+        document.head.appendChild(configLink);
       })();
     </script>
   </head>
   <body>
-    <label class="admin-language-switcher" for="admin-language">
+    <label class="admin-language-switcher" for="admin-language" hidden>
       <span>Interface language / 界面语言</span>
       <select id="admin-language" aria-label="Interface language / 界面语言">
         <option value="en">English</option>
@@ -87,6 +97,7 @@
     <script>
       (() => {
         const languageSelect = document.getElementById("admin-language");
+        const languageSwitcher = document.querySelector(".admin-language-switcher");
         languageSelect.value = window.REALJET_ADMIN_LOCALE;
         languageSelect.addEventListener("change", (event) => {
           const locale = event.target.value;
@@ -102,11 +113,17 @@
           window.location.assign(url.toString());
         });
 
-        window.initCMS({
-          config: {
-            locale: window.REALJET_ADMIN_LOCALE,
-          },
-        });
+        const mountLanguageSwitcher = () => {
+          const cmsHeader = document.querySelector("header");
+          if (!cmsHeader || cmsHeader.contains(languageSwitcher)) return;
+
+          cmsHeader.appendChild(languageSwitcher);
+          languageSwitcher.hidden = false;
+        };
+
+        const headerObserver = new MutationObserver(mountLanguageSwitcher);
+        headerObserver.observe(document.body, { childList: true, subtree: true });
+        mountLanguageSwitcher();
       })();
     </script>
   </body>

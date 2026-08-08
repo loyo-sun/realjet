@@ -1,3 +1,5 @@
+locale: en
+
 backend:
   name: github
   repo: loyo-sun/realjet

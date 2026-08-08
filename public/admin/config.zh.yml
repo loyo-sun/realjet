@@ -1,0 +1,79 @@
+locale: zh_Hans
+
+backend:
+  name: github
+  repo: loyo-sun/realjet
+  branch: main
+  site_domain: realjetech.com
+
+publish_mode: editorial_workflow
+site_url: https://realjetech.com
+display_url: https://realjetech.com
+logo_url: https://realjetech.com/images/realjet-logo.webp
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: products
+    label: 产品
+    label_singular: 产品
+    folder: content/products
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, date, title, updated]
+    fields:
+      - { label: 标题, name: title, widget: string, required: true }
+      - { label: 简短描述, name: description, widget: text, required: true, hint: "用于首页、产品列表和搜索结果预览。" }
+      - { label: 发布日期, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: 更新日期, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: 显示顺序, name: order, widget: number, value_type: int, min: 1, required: true, hint: "数字越小，在产品列表和首页推荐产品中的位置越靠前。" }
+      - { label: 首页推荐, name: featured, widget: boolean, default: false, required: true, hint: "只有启用此项的产品才会显示在首页产品模块。" }
+      - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "将生成 /products/product-name.html。发布后如无重定向，请勿修改。" }
+      - { label: 产品主图, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "用于产品详情页主图和产品卡片。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
+      - { label: 主图替代文本, name: imageAlt, widget: string, required: true }
+      - label: 产品图片集
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        hint: "可添加多张产品辅助图片，产品主图仍单独使用上方设置。"
+        fields:
+          - { label: 图片, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products" }
+          - { label: 图片替代文本, name: alt, widget: string, required: true, hint: "请用自然语言描述图片中实际展示的内容。" }
+      - { label: 草稿, name: draft, widget: boolean, default: true, required: true }
+      - { label: 产品详细介绍, name: body, widget: markdown, required: true, hint: "页面已自动生成 H1 标题，正文请从 H2 二级标题开始。" }
+
+  - name: insights
+    label: 文章
+    label_singular: 文章
+    folder: content/insights
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title, updated]
+    fields:
+      - { label: 标题, name: title, widget: string, required: true, hint: "使用一个清晰、面向买家的标题。" }
+      - { label: SEO 描述, name: description, widget: text, required: true, hint: "准确编写一至两句话，请勿重复标题。" }
+      - { label: 发布日期, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: 更新日期, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: 首页推荐, name: featured, widget: boolean, default: false, required: true, hint: "新文章默认不在首页展示，只有启用此项后才会显示。" }
+      - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "发布后如无 301 重定向，请勿修改。" }
+      - { label: 文章主图, name: image, widget: image, required: true, media_folder: "public/images/insights", public_folder: "/images/insights", hint: "请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
+      - { label: 图片替代文本, name: imageAlt, widget: string, required: true, hint: "请用自然英文描述图片中实际展示的内容。" }
+      - label: 文章转化入口
+        name: ctaType
+        widget: select
+        required: true
+        default: precast-line
+        options:
+          - { label: 混凝土预制产线, value: precast-line }
+          - { label: 机械部件合同制造, value: manufacturing }
+      - { label: 草稿, name: draft, widget: boolean, default: true, required: true, hint: "文章通过审核前请保持启用。" }
+      - { label: 正文, name: body, widget: markdown, required: true, hint: "页面已自动生成 H1 标题，正文请从 H2 二级标题开始。" }

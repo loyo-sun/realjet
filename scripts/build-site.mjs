@@ -66,6 +66,7 @@ for (const expectedPath of [
   "inquiry/intelligent-precast-beam-production-line.html",
   "admin/index.html",
   "admin/config.yml",
+  "admin/config.zh.yml",
   "sitemap.xml",
   "robots.txt",
   "feed.xml",
@@ -83,6 +84,11 @@ for (const expectedPath of [
 }
 
 const homepage = await readFile(join(finalOutput, "index.html"), "utf8");
+const adminPage = await readFile(join(finalOutput, "admin/index.html"), "utf8");
+const chineseAdminConfig = await readFile(
+  join(finalOutput, "admin/config.zh.yml"),
+  "utf8",
+);
 const manufacturingPage = await readFile(
   join(finalOutput, "manufacturing/index.html"),
   "utf8",
@@ -120,6 +126,32 @@ const requiredHomepageContent = [
   '<a href="/">Home</a>',
   "Featured Products",
 ];
+for (const requiredAdminContent of [
+  'configLink.rel = "cms-config-url"',
+  '"/admin/config.zh.yml"',
+  "mountLanguageSwitcher",
+  "cmsHeader.appendChild(languageSwitcher)",
+]) {
+  if (!adminPage.includes(requiredAdminContent)) {
+    throw new Error(`Admin localization validation failed: ${requiredAdminContent}`);
+  }
+}
+if (/\.admin-language-switcher\s*\{[^}]*position:\s*fixed/s.test(adminPage)) {
+  throw new Error("Admin language switcher must remain inside the CMS header flow.");
+}
+for (const requiredChineseLabel of [
+  "label: 产品",
+  "label: 标题",
+  "label: 首页推荐",
+  "label: 产品详细介绍",
+  "label: 文章",
+  "label: SEO 描述",
+  "label: 正文",
+]) {
+  if (!chineseAdminConfig.includes(requiredChineseLabel)) {
+    throw new Error(`Chinese admin config validation failed: ${requiredChineseLabel}`);
+  }
+}
 for (const requiredContent of requiredHomepageContent) {
   if (!homepage.includes(requiredContent)) {
     throw new Error(`Homepage validation failed: ${requiredContent}`);
