@@ -1,13 +1,16 @@
 ---
 title: Fabricated Fuel Tank Contract Manufacturing
-description: Contract manufacturing of fabricated fuel tanks for mobile and industrial machinery, produced to authorised drawings with controlled welding and inspection.
+description: Contract manufacturing of fabricated fuel tanks for mobile and
+  industrial machinery, produced to authorised drawings with controlled welding
+  and inspection.
 date: 2026-08-08
 updated: 2026-08-08
 order: 16
-featured: false
+featured: true
 slug: fabricated-fuel-tank-contract-manufacturing
 image: /images/products/fabricated-fuel-tank-contract-manufacturing.webp
-imageAlt: Rectangular welded fuel tank with lifting and mounting features for machinery installation
+imageAlt: Rectangular welded fuel tank with lifting and mounting features for
+  machinery installation
 draft: false
 ---
 
