@@ -30,8 +30,17 @@ collections:
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first; the first four appear on the homepage." }
       - { label: URL Name, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Creates /products/product-name.html. Do not change after publication without a redirect." }
-      - { label: Product Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
-      - { label: Image Alt, name: imageAlt, widget: string, required: true }
+      - { label: Main Product Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "Used as the main product image and on product cards. Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
+      - { label: Main Image Alt, name: imageAlt, widget: string, required: true }
+      - label: Product Gallery
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.alt}}"
+        hint: "Add as many secondary product images as needed. The main image remains separate above."
+        fields:
+          - { label: Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products" }
+          - { label: Image Alt, name: alt, widget: string, required: true, hint: "Describe what is visible in this image." }
       - { label: Draft, name: draft, widget: boolean, default: true, required: true }
       - { label: Product Description, name: body, widget: markdown, required: true, hint: "The page already has an H1. Start sections with H2." }
 

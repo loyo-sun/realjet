@@ -63,6 +63,7 @@ for (const expectedPath of [
   "insights/index.html",
   "products/index.html",
   "products/intelligent-precast-beam-production-line.html",
+  "inquiry/intelligent-precast-beam-production-line.html",
   "admin/index.html",
   "admin/config.yml",
   "sitemap.xml",
@@ -90,6 +91,10 @@ const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf
 const productsPage = await readFile(join(finalOutput, "products/index.html"), "utf8");
 const productPage = await readFile(
   join(finalOutput, "products/intelligent-precast-beam-production-line.html"),
+  "utf8",
+);
+const productInquiryPage = await readFile(
+  join(finalOutput, "inquiry/intelligent-precast-beam-production-line.html"),
   "utf8",
 );
 const contractManufacturingPage = await readFile(
@@ -123,6 +128,30 @@ for (const requiredProductContent of [
   }
   if (!productPage.includes(requiredProductContent)) {
     throw new Error(`Product detail validation failed: ${requiredProductContent}`);
+  }
+}
+for (const requiredProductDetailContent of [
+  "data-product-gallery",
+  "data-product-gallery-thumb",
+  'href="/inquiry/intelligent-precast-beam-production-line.html"',
+  "data-product-inquiry-link",
+]) {
+  if (!productPage.includes(requiredProductDetailContent)) {
+    throw new Error(`Product detail validation failed: ${requiredProductDetailContent}`);
+  }
+}
+for (const requiredInquiryContent of [
+  'meta name="robots" content="noindex, follow"',
+  'name="product-inquiry"',
+  'name="product_slug"',
+  'name="message"',
+  'name="email"',
+  "data-product-inquiry-form",
+  "data-product-inquiry-success",
+  "Enquiry Sent Successfully",
+]) {
+  if (!productInquiryPage.includes(requiredInquiryContent)) {
+    throw new Error(`Product inquiry validation failed: ${requiredInquiryContent}`);
   }
 }
 if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"')) {
@@ -181,6 +210,7 @@ for (const requiredSitemapUrl of [
 for (const excludedSitemapUrl of [
   "https://realjetech.com/admin/",
   "https://realjetech.com/manufacturing/",
+  "https://realjetech.com/inquiry/intelligent-precast-beam-production-line.html",
 ]) {
   if (sitemap.includes(`<loc>${excludedSitemapUrl}</loc>`)) {
     throw new Error(`Sitemap contains noindex URL: ${excludedSitemapUrl}`);

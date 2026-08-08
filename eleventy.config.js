@@ -19,6 +19,8 @@ export default function (eleventyConfig) {
       "images/home/precast-production-line.webp",
     "src/assets/image/intelligent-precast-beam-line-v1.webp":
       "images/products/intelligent-precast-beam-line.webp",
+    "src/assets/image/intelligent-precast-beam-line-v2.webp":
+      "images/products/intelligent-precast-beam-line-detail.webp",
     "src/assets/image/intelligent-segmental-beam-line.webp":
       "images/products/intelligent-segmental-beam-line.webp",
     "src/assets/image/high-precision-hydraulic-formwork.webp":

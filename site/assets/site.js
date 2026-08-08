@@ -128,11 +128,52 @@ document.addEventListener("click", (event) => {
       cta_id: "contact_page_form",
     });
   }
+
+  if (event.target.closest("[data-product-inquiry-link]")) {
+    trackEvent("product_inquiry_click", {
+      product_slug: document.body.dataset.productSlug,
+      cta_id: "product_detail_enquire",
+    });
+  }
+
+  if (event.target.closest("[data-product-inquiry-submit]")) {
+    trackEvent("product_inquiry_submit_click", {
+      form_id: "product-inquiry",
+      product_slug: document.body.dataset.productSlug,
+      cta_id: "product_inquiry_form",
+    });
+  }
 });
 
 if (document.body.dataset.pageType === "home") trackEvent("home_page_view");
 if (document.body.dataset.pageType === "insight") {
   trackEvent("insight_view", { article_slug: document.body.dataset.articleSlug });
+}
+if (document.body.dataset.pageType === "product") {
+  trackEvent("product_view", { product_slug: document.body.dataset.productSlug });
+}
+
+const productGallery = document.querySelector("[data-product-gallery]");
+if (productGallery) {
+  const mainImage = productGallery.querySelector("[data-product-gallery-main]");
+  const thumbnails = Array.from(
+    productGallery.querySelectorAll("[data-product-gallery-thumb]"),
+  );
+  for (const thumbnail of thumbnails) {
+    thumbnail.addEventListener("click", () => {
+      mainImage.src = thumbnail.dataset.gallerySrc;
+      mainImage.alt = thumbnail.dataset.galleryAlt;
+      for (const item of thumbnails) {
+        const active = item === thumbnail;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", String(active));
+      }
+      trackEvent("product_gallery_image_click", {
+        product_slug: document.body.dataset.productSlug,
+        image_position: Number(thumbnail.dataset.galleryPosition),
+      });
+    });
+  }
 }
 
 const floatingEnquiry = document.querySelector("[data-floating-enquiry]");
@@ -337,4 +378,111 @@ if (contactForm) {
   });
 
   trackEvent("contact_page_view");
+}
+
+const productInquiryForm = document.querySelector("[data-product-inquiry-form]");
+if (productInquiryForm) {
+  const formShell = document.querySelector("[data-product-inquiry-shell]");
+  const successPanel = document.querySelector("[data-product-inquiry-success]");
+  const errorMessage = document.querySelector("[data-product-inquiry-error]");
+  const submitButton = productInquiryForm.querySelector("[data-product-inquiry-submit]");
+  const fieldset = productInquiryForm.querySelector("fieldset");
+  const messageField = productInquiryForm.querySelector("[data-inquiry-message]");
+  const count = document.querySelector("[data-inquiry-count]");
+  const productSlug = document.body.dataset.productSlug;
+  let started = false;
+  let submitted = false;
+  let succeeded = false;
+
+  const start = () => {
+    if (started) return;
+    started = true;
+    trackEvent("product_inquiry_start", {
+      form_id: "product-inquiry",
+      product_slug: productSlug,
+      cta_id: "product_inquiry_form",
+    });
+  };
+
+  messageField.addEventListener("input", () => {
+    count.textContent = String(messageField.value.length);
+    start();
+  });
+  productInquiryForm.addEventListener("focusin", start);
+  productInquiryForm.addEventListener(
+    "invalid",
+    (event) => {
+      start();
+      trackEvent("product_inquiry_validation_error", {
+        form_id: "product-inquiry",
+        product_slug: productSlug,
+        field_name: event.target.name,
+      });
+    },
+    true,
+  );
+
+  productInquiryForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    start();
+    submitted = true;
+    errorMessage.hidden = true;
+    fieldset.disabled = true;
+    productInquiryForm.setAttribute("aria-busy", "true");
+    submitButton.textContent = "Sending…";
+    trackEvent("product_inquiry_submit_attempt", {
+      form_id: "product-inquiry",
+      product_slug: productSlug,
+      cta_id: "product_inquiry_form",
+    });
+
+    try {
+      const body = new URLSearchParams(new FormData(productInquiryForm)).toString();
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      succeeded = true;
+      trackEvent("generate_lead", {
+        form_id: "product-inquiry",
+        lead_source: "product_inquiry",
+        product_slug: productSlug,
+        cta_id: "product_inquiry_form",
+      });
+      trackEvent("product_inquiry_success", {
+        form_id: "product-inquiry",
+        product_slug: productSlug,
+        cta_id: "product_inquiry_form",
+      });
+      productInquiryForm.reset();
+      formShell.hidden = true;
+      successPanel.hidden = false;
+      successPanel.focus();
+    } catch {
+      submitted = false;
+      errorMessage.hidden = false;
+      fieldset.disabled = false;
+      productInquiryForm.removeAttribute("aria-busy");
+      submitButton.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
+      trackEvent("product_inquiry_submit_error", {
+        form_id: "product-inquiry",
+        product_slug: productSlug,
+        cta_id: "product_inquiry_form",
+        error_type: "submission_failed",
+      });
+    }
+  });
+
+  window.addEventListener("pagehide", () => {
+    if (!started || succeeded) return;
+    trackEvent("product_inquiry_abandon", {
+      form_id: "product-inquiry",
+      product_slug: productSlug,
+      submitted: submitted ? "yes" : "no",
+    });
+  });
+
+  trackEvent("product_inquiry_view", { product_slug: productSlug });
 }

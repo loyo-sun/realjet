@@ -7,6 +7,9 @@ order: 1
 slug: intelligent-precast-beam-production-line
 image: /images/products/intelligent-precast-beam-line.webp
 imageAlt: Automated production equipment arranged along a precast beam production line
+gallery:
+  - image: /images/products/intelligent-precast-beam-line-detail.webp
+    alt: Alternative view of the intelligent precast beam production equipment
 draft: false
 ---
 ## Integrated around the beam production cycle
