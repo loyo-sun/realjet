@@ -1,13 +1,15 @@
 ---
 title: Hydraulic Oil Tank Contract Manufacturing for Machinery
-description: Made-to-drawing hydraulic oil tank manufacturing with formed steel panels, controlled welding, port interfaces, surface finishing and inspection.
+description: Made-to-drawing hydraulic oil tank manufacturing with formed steel
+  panels, controlled welding, port interfaces, surface finishing and inspection.
 date: 2026-08-08
 updated: 2026-08-08
 order: 15
-featured: false
+featured: true
 slug: hydraulic-oil-tank-contract-manufacturing
 image: /images/products/hydraulic-oil-tank-contract-manufacturing.webp
-imageAlt: Fabricated hydraulic oil tank with multiple ports for mobile and industrial machinery
+imageAlt: Fabricated hydraulic oil tank with multiple ports for mobile and
+  industrial machinery
 draft: false
 ---
 
