@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+---
+<article class="product-page">
+  <header class="product-page-heading">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+    </div>
+  </header>
+  <div class="container product-detail-layout">
+    <div class="product-detail-main">
+      <section class="product-overview">
+        <div class="product-overview-media"><img src="{{ image }}" alt="{{ imageAlt }}" width="1200" height="675" decoding="async" /></div>
+        <div class="product-overview-copy">
+          <span class="eyebrow">Realjet Equipment</span>
+          <h1>{{ title }}</h1>
+          <p>{{ description }}</p>
+          <a class="button button-dark" href="/contact/?topic=precast-line&amp;product={{ slug }}">Enquire Now <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      <div class="product-description article-body">{{ content | safe }}</div>
+    </div>
+    {% include "components/latest-products.njk" %}
+  </div>
+  {% include "components/business-promos.njk" %}
+</article>

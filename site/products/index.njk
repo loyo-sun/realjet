@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+permalink: /products/index.html
+pageType: products
+title: Precast Concrete Production Equipment | Realjet
+seoTitle: Precast Concrete Production Equipment | Realjet
+description: Explore Realjet equipment for project-specific precast concrete production lines, from forming and circulation to concrete handling, curing and production control.
+canonical: https://realjetech.com/products/
+robots: index, follow
+---
+<header class="listing-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Products</span></nav>
+    <span class="eyebrow">Production Equipment</span><h1>Products</h1>
+    <p>Equipment modules engineered around the component, process, output target and site conditions of each precast concrete project.</p>
+  </div>
+</header>
+<section class="product-listing-section">
+  <div class="container product-listing-layout">
+    <div class="product-listing-main">
+      <div class="product-grid">
+        {% for product in collections.publishedProducts %}{% include "components/product-card.njk" %}{% endfor %}
+      </div>
+    </div>
+    {% include "components/latest-products.njk" %}
+  </div>
+</section>
+{% include "components/business-promos.njk" %}

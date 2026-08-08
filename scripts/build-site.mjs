@@ -61,6 +61,8 @@ for (const expectedPath of [
   "manufacturing/index.html",
   "contact/index.html",
   "insights/index.html",
+  "products/index.html",
+  "products/intelligent-precast-beam-production-line.html",
   "admin/index.html",
   "admin/config.yml",
   "sitemap.xml",
@@ -85,6 +87,11 @@ const manufacturingPage = await readFile(
   "utf8",
 );
 const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf8");
+const productsPage = await readFile(join(finalOutput, "products/index.html"), "utf8");
+const productPage = await readFile(
+  join(finalOutput, "products/intelligent-precast-beam-production-line.html"),
+  "utf8",
+);
 const contractManufacturingPage = await readFile(
   join(finalOutput, "marketing/contract_manufacturing/index.html"),
   "utf8",
@@ -97,10 +104,25 @@ const requiredHomepageContent = [
   'href="/marketing/precast-beam-factory/en/"',
   "Custom Machinery Component Manufacturing",
   "Production Lines for Precast Concrete Components",
+  'href="/products/"',
+  "Featured Products",
 ];
 for (const requiredContent of requiredHomepageContent) {
   if (!homepage.includes(requiredContent)) {
     throw new Error(`Homepage validation failed: ${requiredContent}`);
+  }
+}
+for (const requiredProductContent of [
+  "Intelligent Precast Beam Production Line",
+  "Latest Products",
+  "Contract Manufacturing",
+  "Precast Concrete Production Lines",
+]) {
+  if (!productsPage.includes(requiredProductContent)) {
+    throw new Error(`Products page validation failed: ${requiredProductContent}`);
+  }
+  if (!productPage.includes(requiredProductContent)) {
+    throw new Error(`Product detail validation failed: ${requiredProductContent}`);
   }
 }
 if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"')) {
@@ -134,6 +156,8 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/",
   "https://realjetech.com/contact/",
   "https://realjetech.com/insights/",
+  "https://realjetech.com/products/",
+  "https://realjetech.com/products/intelligent-precast-beam-production-line.html",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",

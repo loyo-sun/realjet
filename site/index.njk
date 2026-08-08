@@ -44,6 +44,18 @@ robots: index, follow
   </div>
 </section>
 
+<section class="section home-products" aria-labelledby="home-products-title">
+  <div class="container">
+    <div class="section-heading heading-row">
+      <div><span class="eyebrow">Production Equipment</span><h2 id="home-products-title">Featured Products</h2></div>
+      <a class="button button-dark view-all" href="/products/">View More Products <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="product-grid product-grid-home">
+      {% for product in collections.publishedProducts | limit(4) %}{% include "components/product-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="section latest-insights" aria-labelledby="latest-insights-title">
   <div class="container">
     <div class="section-heading heading-row">

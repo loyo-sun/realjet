@@ -8,10 +8,33 @@ publish_mode: editorial_workflow
 site_url: https://realjetech.com
 display_url: https://realjetech.com
 logo_url: https://realjetech.com/images/realjet-logo.webp
-media_folder: public/images/insights
-public_folder: /images/insights
+media_folder: public/images
+public_folder: /images
 
 collections:
+  - name: products
+    label: Products
+    label_singular: Product
+    folder: content/products
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: "{{fields.slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, date, title, updated]
+    fields:
+      - { label: Title, name: title, widget: string, required: true }
+      - { label: Short Description, name: description, widget: text, required: true, hint: "Used on the homepage, product list and search previews." }
+      - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first; the first four appear on the homepage." }
+      - { label: URL Name, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Creates /products/product-name.html. Do not change after publication without a redirect." }
+      - { label: Product Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
+      - { label: Image Alt, name: imageAlt, widget: string, required: true }
+      - { label: Draft, name: draft, widget: boolean, default: true, required: true }
+      - { label: Product Description, name: body, widget: markdown, required: true, hint: "The page already has an H1. Start sections with H2." }
+
   - name: insights
     label: Insights
     label_singular: Insight
@@ -29,7 +52,7 @@ collections:
       - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: URL Slug, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Do not change after publication without adding a 301 redirect." }
-      - { label: Hero Image, name: image, widget: image, required: true, hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
+      - { label: Hero Image, name: image, widget: image, required: true, media_folder: "public/images/insights", public_folder: "/images/insights", hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
       - { label: Image Alt, name: imageAlt, widget: string, required: true, hint: "Describe the actual image in natural English." }
       - label: Article CTA
         name: ctaType
