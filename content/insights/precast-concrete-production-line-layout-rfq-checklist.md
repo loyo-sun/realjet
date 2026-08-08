@@ -1,13 +1,16 @@
 ---
 title: "Precast Concrete Production Line Layout: RFQ Checklist"
-description: "A buyer-side guide to product flow, crane coverage, storage, utilities and safety interfaces before approving a precast concrete production line layout."
+description: A buyer-side guide to product flow, crane coverage, storage,
+  utilities and safety interfaces before approving a precast concrete production
+  line layout.
 date: 2026-08-08
 updated: 2026-08-08
-featured: false
-slug: "precast-concrete-production-line-layout-rfq-checklist"
-image: "/images/insights/precast-concrete-production-line-layout.webp"
-imageAlt: "Rail-mounted precast girder mould system arranged across parallel production tracks"
-ctaType: "precast-line"
+featured: true
+slug: precast-concrete-production-line-layout-rfq-checklist
+image: /images/insights/precast-concrete-production-line-layout.webp
+imageAlt: Rail-mounted precast girder mould system arranged across parallel
+  production tracks
+ctaType: precast-line
 draft: false
 ---
 
