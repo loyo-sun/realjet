@@ -44,10 +44,29 @@ export default function (eleventyConfig) {
       .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
   );
 
+  eleventyConfig.addCollection("featuredInsights", (collectionApi) =>
+    collectionApi
+      .getFilteredByGlob("./content/insights/*.md")
+      .filter(
+        (item) =>
+          (!item.data.draft || !isProduction) && item.data.featured === true,
+      )
+      .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
+  );
+
   eleventyConfig.addCollection("publishedProducts", (collectionApi) =>
     collectionApi
       .getFilteredByGlob("./content/products/*.md")
       .filter((item) => !item.data.draft || !isProduction)
+      .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
+  );
+  eleventyConfig.addCollection("featuredProducts", (collectionApi) =>
+    collectionApi
+      .getFilteredByGlob("./content/products/*.md")
+      .filter(
+        (item) =>
+          (!item.data.draft || !isProduction) && item.data.featured === true,
+      )
       .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
   );
   eleventyConfig.addCollection("latestProducts", (collectionApi) =>

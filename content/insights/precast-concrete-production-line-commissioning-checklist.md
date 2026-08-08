@@ -3,6 +3,7 @@ title: "Precast Concrete Production Line Commissioning Checklist"
 description: "A buyer-side checklist for defining FAT, site acceptance, trial production and capacity handover before a precast concrete production line is ordered."
 date: 2026-08-07
 updated: 2026-08-07
+featured: false
 slug: "precast-concrete-production-line-commissioning-checklist"
 image: "/images/insights/precast-production-line-commissioning.webp"
 imageAlt: "Precast girder production line with rail-mounted mould workstations and enclosed curing stations"

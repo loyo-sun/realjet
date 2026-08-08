@@ -3,6 +3,7 @@ title: Inside the G15 Ningbo South TJ05 T-Girder Line
 description: "See how two coordinated production lines turn a six-girder daily target into practical decisions on flow, curing and process control."
 date: 2026-08-01
 updated: 2026-08-01
+featured: false
 slug: g15-ningbo-south-tj05-t-girder-line
 image: /images/insights/g15-ningbo-south-tj05-t-girder-line.webp
 imageAlt: 30 m T-girder mould beneath a gantry at the G15 Ningbo South TJ05 precast yard

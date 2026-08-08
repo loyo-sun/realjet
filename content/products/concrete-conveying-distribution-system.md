@@ -4,6 +4,7 @@ description: Controlled concrete transport and placement equipment linking the b
 date: 2026-08-04
 updated: 2026-08-04
 order: 5
+featured: false
 slug: concrete-conveying-distribution-system
 image: /images/products/concrete-conveying-distribution-system.webp
 imageAlt: Concrete conveying and distribution equipment above a precast production line

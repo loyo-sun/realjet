@@ -4,6 +4,7 @@ description: Project-specific hydraulic formwork for repeatable geometry, effici
 date: 2026-08-06
 updated: 2026-08-06
 order: 3
+featured: true
 slug: high-precision-hydraulic-formwork
 image: /images/products/high-precision-hydraulic-formwork.webp
 imageAlt: Large blue hydraulic steel formwork for precast concrete components

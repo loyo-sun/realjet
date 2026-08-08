@@ -4,6 +4,7 @@ description: A circulation-based system that moves casting beds through defined 
 date: 2026-08-05
 updated: 2026-08-05
 order: 4
+featured: true
 slug: mobile-casting-bed-circulation-system
 image: /images/products/mobile-casting-bed-circulation-system.webp
 imageAlt: Rail-mounted mobile casting beds in a precast concrete production facility

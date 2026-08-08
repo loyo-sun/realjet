@@ -97,6 +97,13 @@ const productInquiryPage = await readFile(
   join(finalOutput, "inquiry/intelligent-precast-beam-production-line.html"),
   "utf8",
 );
+const insightPage = await readFile(
+  join(
+    finalOutput,
+    "insights/precast-concrete-production-line-layout-rfq-checklist/index.html",
+  ),
+  "utf8",
+);
 const contractManufacturingPage = await readFile(
   join(finalOutput, "marketing/contract_manufacturing/index.html"),
   "utf8",
@@ -110,11 +117,32 @@ const requiredHomepageContent = [
   "Custom Machinery Component Manufacturing",
   "Production Lines for Precast Concrete Components",
   'href="/products/"',
+  '<a href="/">Home</a>',
   "Featured Products",
 ];
 for (const requiredContent of requiredHomepageContent) {
   if (!homepage.includes(requiredContent)) {
     throw new Error(`Homepage validation failed: ${requiredContent}`);
+  }
+}
+for (const excludedHomepageContent of [
+  "Latest Insights",
+  "Concrete Conveying and Distribution System",
+  "Precast Concrete Production Line Commissioning Checklist",
+]) {
+  if (homepage.includes(excludedHomepageContent)) {
+    throw new Error(
+      `Homepage recommendation validation failed: ${excludedHomepageContent}`,
+    );
+  }
+}
+for (const requiredInsightContent of [
+  "Latest News",
+  "latest-news-list",
+  "Precast Concrete Production Line Commissioning Checklist",
+]) {
+  if (!insightPage.includes(requiredInsightContent)) {
+    throw new Error(`Insight detail validation failed: ${requiredInsightContent}`);
   }
 }
 for (const requiredProductContent of [

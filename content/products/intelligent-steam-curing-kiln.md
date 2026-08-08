@@ -4,6 +4,7 @@ description: An enclosed curing solution designed to manage temperature, humidit
 date: 2026-08-03
 updated: 2026-08-03
 order: 6
+featured: false
 slug: intelligent-steam-curing-kiln
 image: /images/products/intelligent-steam-curing-kiln.webp
 imageAlt: Enclosed steam curing kiln beside a precast concrete production line

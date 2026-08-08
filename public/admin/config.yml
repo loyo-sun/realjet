@@ -28,7 +28,8 @@ collections:
       - { label: Short Description, name: description, widget: text, required: true, hint: "Used on the homepage, product list and search previews." }
       - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
-      - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first; the first four appear on the homepage." }
+      - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first in product listings and among recommended homepage products." }
+      - { label: Show on Homepage, name: featured, widget: boolean, default: false, required: true, hint: "Only enabled products appear in the homepage product section." }
       - { label: URL Name, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Creates /products/product-name.html. Do not change after publication without a redirect." }
       - { label: Main Product Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "Used as the main product image and on product cards. Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
       - { label: Main Image Alt, name: imageAlt, widget: string, required: true }
@@ -60,6 +61,7 @@ collections:
       - { label: SEO Description, name: description, widget: text, required: true, hint: "Write one or two accurate sentences; do not repeat the title." }
       - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
+      - { label: Show on Homepage, name: featured, widget: boolean, default: false, required: true, hint: "New articles are hidden from the homepage unless this is enabled." }
       - { label: URL Slug, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Do not change after publication without adding a 301 redirect." }
       - { label: Hero Image, name: image, widget: image, required: true, media_folder: "public/images/insights", public_folder: "/images/insights", hint: "Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
       - { label: Image Alt, name: imageAlt, widget: string, required: true, hint: "Describe the actual image in natural English." }

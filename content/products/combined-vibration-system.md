@@ -4,6 +4,7 @@ description: A project-configured vibration solution for concrete consolidation 
 date: 2026-08-01
 updated: 2026-08-01
 order: 8
+featured: false
 slug: combined-vibration-system
 image: /images/products/combined-vibration-system.webp
 imageAlt: Vibration equipment installed beneath a steel mould for precast concrete

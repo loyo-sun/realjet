@@ -6,6 +6,108 @@
     <meta name="robots" content="noindex, nofollow" />
     <title>Realjet Content Manager</title>
     <link rel="icon" type="image/png" href="/icons/realjet-site-icon.png" />
+    <style>
+      .admin-language-switcher {
+        position: fixed;
+        top: 12px;
+        right: 16px;
+        z-index: 2147483647;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 10px;
+        border: 1px solid #d7dee5;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 3px 12px rgba(14, 30, 46, 0.12);
+        color: #243746;
+        font: 600 12px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      .admin-language-switcher select {
+        min-width: 84px;
+        border: 1px solid #b8c4ce;
+        border-radius: 5px;
+        background: #fff;
+        color: #1f2d38;
+        font: inherit;
+        padding: 5px 24px 5px 7px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 600px) {
+        .admin-language-switcher {
+          top: 8px;
+          right: 8px;
+        }
+
+        .admin-language-switcher span {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+          white-space: nowrap;
+        }
+      }
+    </style>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+
+      (() => {
+        const supportedLocales = new Set(["en", "zh_Hans"]);
+        const requestedLocale = new URLSearchParams(window.location.search).get("lang");
+        let savedLocale = "";
+
+        try {
+          savedLocale = window.localStorage.getItem("realjet-admin-locale") || "";
+        } catch (_) {
+          savedLocale = "";
+        }
+
+        window.REALJET_ADMIN_LOCALE = supportedLocales.has(requestedLocale)
+          ? requestedLocale
+          : supportedLocales.has(savedLocale)
+            ? savedLocale
+            : "en";
+        document.documentElement.lang =
+          window.REALJET_ADMIN_LOCALE === "zh_Hans" ? "zh-CN" : "en";
+      })();
+    </script>
   </head>
-  <body><script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script></body>
+  <body>
+    <label class="admin-language-switcher" for="admin-language">
+      <span>Interface language / 界面语言</span>
+      <select id="admin-language" aria-label="Interface language / 界面语言">
+        <option value="en">English</option>
+        <option value="zh_Hans">中文</option>
+      </select>
+    </label>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (() => {
+        const languageSelect = document.getElementById("admin-language");
+        languageSelect.value = window.REALJET_ADMIN_LOCALE;
+        languageSelect.addEventListener("change", (event) => {
+          const locale = event.target.value;
+
+          try {
+            window.localStorage.setItem("realjet-admin-locale", locale);
+          } catch (_) {
+            // The URL parameter still preserves the selection when storage is unavailable.
+          }
+
+          const url = new URL(window.location.href);
+          url.searchParams.set("lang", locale);
+          window.location.assign(url.toString());
+        });
+
+        window.initCMS({
+          config: {
+            locale: window.REALJET_ADMIN_LOCALE,
+          },
+        });
+      })();
+    </script>
+  </body>
 </html>

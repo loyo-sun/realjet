@@ -4,6 +4,7 @@ description: Digital coordination of production status, workstation progress and
 date: 2026-08-02
 updated: 2026-08-02
 order: 7
+featured: false
 slug: production-line-management-system
 image: /images/products/production-line-management-system.webp
 imageAlt: Digital control screens used to monitor a precast concrete production line
