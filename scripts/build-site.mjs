@@ -133,6 +133,7 @@ for (const requiredProductContent of [
 for (const requiredProductDetailContent of [
   "data-product-gallery",
   "data-product-gallery-thumb",
+  "product-detail-content-layout",
   'href="/inquiry/intelligent-precast-beam-production-line.html"',
   "data-product-inquiry-link",
 ]) {

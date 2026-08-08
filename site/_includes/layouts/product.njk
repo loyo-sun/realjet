@@ -7,30 +7,31 @@ layout: layouts/base.njk
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
     </div>
   </header>
-  <div class="container product-detail-layout">
-    <div class="product-detail-main">
-      <section class="product-overview">
-        <div class="product-gallery" data-product-gallery>
-          <div class="product-gallery-stage"><img src="{{ image }}" alt="{{ imageAlt }}" width="1200" height="675" decoding="async" data-product-gallery-main /></div>
-          {% if gallery and gallery.length %}
-          <div class="product-gallery-thumbs" aria-label="Product image gallery">
-            <button type="button" class="is-active" aria-pressed="true" aria-label="View main product image" data-product-gallery-thumb data-gallery-src="{{ image }}" data-gallery-alt="{{ imageAlt }}" data-gallery-position="1"><img src="{{ image }}" alt="" width="120" height="76" loading="lazy" decoding="async" /></button>
-            {% for galleryImage in gallery %}
-            <button type="button" aria-pressed="false" aria-label="View product image {{ loop.index + 1 }}" data-product-gallery-thumb data-gallery-src="{{ galleryImage.image }}" data-gallery-alt="{{ galleryImage.alt }}" data-gallery-position="{{ loop.index + 1 }}"><img src="{{ galleryImage.image }}" alt="" width="120" height="76" loading="lazy" decoding="async" /></button>
-            {% endfor %}
-          </div>
-          {% endif %}
+  <div class="container product-detail-shell">
+    <section class="product-overview">
+      <div class="product-gallery" data-product-gallery>
+        <div class="product-gallery-stage"><img src="{{ image }}" alt="{{ imageAlt }}" width="1200" height="1200" decoding="async" data-product-gallery-main /></div>
+        {% if gallery and gallery.length %}
+        <div class="product-gallery-thumbs" aria-label="Product image gallery">
+          <button type="button" class="is-active" aria-pressed="true" aria-label="View main product image" data-product-gallery-thumb data-gallery-src="{{ image }}" data-gallery-alt="{{ imageAlt }}" data-gallery-position="1"><img src="{{ image }}" alt="" width="120" height="76" loading="lazy" decoding="async" /></button>
+          {% for galleryImage in gallery %}
+          <button type="button" aria-pressed="false" aria-label="View product image {{ loop.index + 1 }}" data-product-gallery-thumb data-gallery-src="{{ galleryImage.image }}" data-gallery-alt="{{ galleryImage.alt }}" data-gallery-position="{{ loop.index + 1 }}"><img src="{{ galleryImage.image }}" alt="" width="120" height="76" loading="lazy" decoding="async" /></button>
+          {% endfor %}
         </div>
-        <div class="product-overview-copy">
-          <span class="eyebrow">Realjet Equipment</span>
-          <h1>{{ title }}</h1>
-          <p>{{ description }}</p>
-          <a class="button button-dark" href="/inquiry/{{ slug }}.html" data-product-inquiry-link>Enquire Now <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
+        {% endif %}
+      </div>
+      <div class="product-overview-copy">
+        <span class="eyebrow">Realjet Equipment</span>
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+        <a class="button button-dark" href="/inquiry/{{ slug }}.html" data-product-inquiry-link>Enquire About This Product <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <div class="product-detail-content-layout">
       <div class="product-description article-body">{{ content | safe }}</div>
+      {% include "components/latest-products.njk" %}
     </div>
-    {% include "components/latest-products.njk" %}
   </div>
   {% include "components/business-promos.njk" %}
 </article>
