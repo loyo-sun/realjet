@@ -142,23 +142,24 @@ button, input, textarea, select { font: inherit; }
 .product-page .product-aside h2 { font-size: 23px; }
 .product-page .latest-product-list a { border-color: #d8e2e8; }
 
-.quick-inquiry-jump { position: fixed; top: 52%; left: 0; z-index: 70; display: flex; align-items: center; gap: 9px; padding: 13px 10px; border-radius: 0 9px 9px 0; color: var(--white); background: var(--blue); box-shadow: 0 12px 30px rgba(8,37,63,.2); font-size: 11px; font-weight: 850; text-decoration: none; writing-mode: vertical-rl; transform: translateY(-50%); }
-.quick-inquiry-jump b { font-size: 15px; }
+.product-aside-inquiry-jump { display: flex; min-height: 45px; align-items: center; justify-content: space-between; gap: 12px; margin: -7px -4px 22px; padding: 10px 13px; border-radius: 8px; color: var(--white); background: var(--blue); font-size: 12px; font-weight: 850; text-decoration: none; }
+.product-aside-inquiry-jump b { font-size: 16px; }
+.product-aside-inquiry-jump:hover, .product-aside-inquiry-jump:focus-visible { background: var(--navy); }
 .product-quick-inquiry { scroll-margin-top: 86px; padding: 70px 0; background: var(--soft); }
-.quick-inquiry-card { display: grid; grid-template-columns: minmax(250px,.72fr) minmax(0,1.28fr); gap: 48px; align-items: center; padding: 42px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: var(--shadow); }
-.quick-inquiry-copy h2 { margin: 12px 0 0; color: var(--navy); font-size: clamp(28px,3vw,38px); line-height: 1.14; letter-spacing: -.035em; }
+.quick-inquiry-card { display: grid; grid-template-columns: minmax(250px,.82fr) minmax(0,1.18fr); gap: 48px; align-items: start; padding: 38px 42px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: var(--shadow); }
+.quick-inquiry-copy h2 { margin: 12px 0 0; color: var(--navy); font-size: clamp(28px,3vw,35px); line-height: 1.14; letter-spacing: -.035em; }
 .quick-inquiry-copy p { margin: 15px 0 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
-.quick-inquiry-form-shell fieldset { display: grid; grid-template-columns: minmax(190px,.8fr) minmax(260px,1.2fr) auto; gap: 14px; align-items: end; min-width: 0; padding: 0; border: 0; }
+.quick-inquiry-form-shell fieldset { display: grid; grid-template-columns: 1fr; gap: 12px; min-width: 0; padding: 0; border: 0; }
 .quick-inquiry-form-shell fieldset:disabled { opacity: .7; }
 .quick-inquiry-field { position: relative; display: block; }
 .quick-inquiry-field > span { display: block; margin-bottom: 7px; color: var(--navy); font-size: 11px; font-weight: 850; }
 .quick-inquiry-field input, .quick-inquiry-field textarea { width: 100%; border: 1px solid #cbd7df; border-radius: 9px; color: var(--ink); background: #fbfcfd; outline: none; }
 .quick-inquiry-field input { min-height: 48px; padding: 10px 12px; }
-.quick-inquiry-field textarea { min-height: 82px; padding: 11px 12px 25px; resize: vertical; line-height: 1.5; }
+.quick-inquiry-field textarea { min-height: 92px; padding: 11px 12px 25px; resize: vertical; line-height: 1.5; }
 .quick-inquiry-field input:focus, .quick-inquiry-field textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,120,170,.12); }
 .quick-message-field > small { position: absolute; right: 10px; bottom: 8px; color: var(--muted); font-size: 10px; }
-.quick-inquiry-form-shell .button { min-height: 48px; white-space: nowrap; cursor: pointer; }
-.quick-inquiry-error { grid-column: 1 / -1; margin: 0; }
+.quick-inquiry-form-shell .button { min-width: 170px; min-height: 46px; justify-self: start; white-space: nowrap; cursor: pointer; }
+.quick-inquiry-error { margin: 0; }
 .quick-inquiry-success { display: flex; grid-column: 2; align-items: center; gap: 18px; }
 .quick-inquiry-success h2 { margin: 0; color: var(--navy); font-size: 25px; }
 .quick-inquiry-success p { margin: 6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
@@ -182,7 +183,7 @@ button, input, textarea, select { font: inherit; }
 .inquiry-field > span { display: block; margin-bottom: 6px; color: var(--navy); font-size: 12px; font-weight: 850; }
 .inquiry-field > span b { color: #b42318; }
 .inquiry-field textarea, .inquiry-field input { width: 100%; border: 1px solid #cbd7df; border-radius: 10px; color: var(--ink); background: #fbfcfd; outline: none; }
-.inquiry-field textarea { min-height: 120px; padding: 12px 13px 30px; resize: vertical; line-height: 1.55; }
+.inquiry-field textarea { min-height: 86px; padding: 11px 13px 28px; resize: vertical; line-height: 1.5; }
 .inquiry-field input { min-height: 44px; padding: 9px 12px; }
 .inquiry-field textarea:focus, .inquiry-field input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,120,170,.12); }
 .inquiry-field > small { position: absolute; right: 12px; bottom: 9px; color: var(--muted); font-size: 10px; }
@@ -336,7 +337,7 @@ button, input, textarea, select { font: inherit; }
   .inquiry-product-summary { margin-top: 8px; padding: 7px; }
   .inquiry-product-summary img { width: 74px; height: 50px; }
   .product-inquiry-shell form { margin-top: 9px; }
-  .inquiry-field textarea { min-height: 88px; }
+  .inquiry-field textarea { min-height: 72px; }
   .inquiry-email-field { margin-top: 8px; }
   .inquiry-privacy { margin-top: 6px; }
   .product-inquiry-submit { min-height: 40px; margin-top: 8px; }
@@ -375,7 +376,7 @@ button, input, textarea, select { font: inherit; }
   .product-detail-content-layout { gap: 36px; margin-top: 48px; padding-top: 40px; }
   .product-page { padding-bottom: 72px; }
   .product-page .product-overview-copy .button[data-product-inquiry-link] { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }
-  .product-quick-inquiry, .quick-inquiry-jump { display: none; }
+  .product-quick-inquiry, .product-aside-inquiry-jump { display: none; }
   .product-inquiry-page .product-page-heading { padding: 10px 0; }
   .product-inquiry-section { min-height: calc(100svh - 102px); padding: 10px 0; }
   .product-inquiry-shell > [data-product-inquiry-shell], .product-inquiry-success { padding: 18px; }
@@ -385,7 +386,7 @@ button, input, textarea, select { font: inherit; }
   .inquiry-product-summary img { width: 70px; height: 54px; }
   .inquiry-product-summary em { display: none; }
   .product-inquiry-shell form { margin-top: 12px; }
-  .inquiry-field textarea { min-height: 130px; }
+  .inquiry-field textarea { min-height: 96px; }
   .product-inquiry-submit { width: 100%; }
   .business-promos { padding: 56px 0 62px; }
   .business-promo-grid > a { min-height: 230px; padding: 25px; }
