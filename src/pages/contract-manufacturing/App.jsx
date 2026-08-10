@@ -583,7 +583,7 @@ function App() {
         <div className="site-container grid grid-cols-[1.4fr_1fr_1fr] gap-10 max-[800px]:grid-cols-1">
           <div><a href="/" className="text-2xl font-black text-white no-underline">Realjet</a><p className="mt-3 max-w-sm text-xs leading-6">Changsha Ruijie Machinery Technology Co., Ltd</p></div>
           <div className="grid content-start gap-3 text-xs"><a href="/marketing/contract_manufacturing/">Custom Machinery Components</a><a href="/marketing/precast-beam-factory/en/">Precast Concrete Lines</a><a href="/insights/">Insights</a></div>
-          <div className="grid content-start gap-3 text-xs"><a href="/contact/?topic=manufacturing">Contact</a><a href="/marketing/privacy/en/">Privacy Policy</a><a href="mailto:loyosun@gmail.com">loyosun@gmail.com</a></div>
+          <div className="grid content-start gap-3 text-xs"><a href="/contact/?topic=manufacturing">Contact</a><a href="/marketing/privacy/en/">Privacy Policy</a><a href="mailto:sales@realjetech.com">sales@realjetech.com</a></div>
         </div>
         <div className="site-container mt-8 border-t border-white/10 pt-5 text-[11px]">© 2026 Changsha Ruijie Machinery Technology Co., Ltd</div>
       </footer>

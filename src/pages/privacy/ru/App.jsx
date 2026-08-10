@@ -37,9 +37,9 @@ function ContactCard() {
           <MapPin className="mt-0.5 shrink-0 text-brand-blue" size={17} aria-hidden="true" />
           <span>Китай, провинция Хунань, г. Чанша, Нинсян, новый район Цзиньчжоу (зона развития Цзиньчжоу), № 48</span>
         </div>
-        <a href="mailto:loyosun@gmail.com" className="flex items-center gap-2.5 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3 hover:text-brand-navy">
+        <a href="mailto:sales@realjetech.com" className="flex items-center gap-2.5 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3 hover:text-brand-navy">
           <Mail size={17} aria-hidden="true" />
-          loyosun@gmail.com
+          sales@realjetech.com
         </a>
       </div>
     </div>

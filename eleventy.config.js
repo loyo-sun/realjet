@@ -118,7 +118,7 @@ export default function (eleventyConfig) {
       base: "https://realjetech.com/",
       author: {
         name: "Changsha Ruijie Machinery Technology Co., Ltd",
-        email: "loyosun@gmail.com",
+        email: "sales@realjetech.com",
       },
     },
   });

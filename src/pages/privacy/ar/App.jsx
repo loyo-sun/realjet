@@ -37,9 +37,9 @@ function ContactCard() {
           <MapPin className="mt-0.5 shrink-0 text-brand-blue" size={17} aria-hidden="true" />
           <span>رقم 48، منطقة جينتشو الجديدة (منطقة جينتشو للتنمية)، نينغشيانغ، تشانغشا، هونان، الصين</span>
         </div>
-        <a href="mailto:loyosun@gmail.com" dir="ltr" className="flex items-center justify-end gap-2.5 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3 hover:text-brand-navy">
+        <a href="mailto:sales@realjetech.com" dir="ltr" className="flex items-center justify-end gap-2.5 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3 hover:text-brand-navy">
           <Mail size={17} aria-hidden="true" />
-          loyosun@gmail.com
+          sales@realjetech.com
         </a>
       </div>
     </div>
