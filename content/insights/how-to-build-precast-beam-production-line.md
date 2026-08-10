@@ -1,12 +1,15 @@
 ---
 title: "How to Build a Precast Beam Production Line: 8 Stages"
-description: "A buyer-side roadmap for turning girder drawings, output targets, site data and acceptance requirements into a production-ready precast beam production line."
+description: A buyer-side roadmap for turning girder drawings, output targets,
+  site data and acceptance requirements into a production-ready precast beam
+  production line.
 date: 2026-08-10
 updated: 2026-08-10
-slug: "how-to-build-precast-beam-production-line"
-image: "/images/insights/how-to-build-precast-beam-production-line.webp"
-imageAlt: "Rail-mounted precast girder production tracks facing enclosed curing stations"
-ctaType: "precast-line"
+featured: true
+slug: how-to-build-precast-beam-production-line
+image: /images/insights/how-to-build-precast-beam-production-line.webp
+imageAlt: Rail-mounted precast girder production tracks facing enclosed curing stations
+ctaType: precast-line
 draft: false
 ---
 
