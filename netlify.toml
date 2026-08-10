@@ -6,6 +6,18 @@
   NODE_VERSION = "22"
 
 [[redirects]]
+  from = "http://www.realjetech.com/*"
+  to = "https://realjetech.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.realjetech.com/*"
+  to = "https://realjetech.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/manufacturing/"
   to = "/marketing/contract_manufacturing/"
   status = 301
