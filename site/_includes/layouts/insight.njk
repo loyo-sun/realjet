@@ -38,48 +38,15 @@ layout: layouts/base.njk
     </aside>
   </div>
   {% include "components/business-promos.njk" %}
-  <section class="article-quick-enquiry floating-enquiry" data-floating-enquiry hidden aria-label="Quick enquiry">
-    <header class="floating-enquiry-header">
-      <span class="eyebrow">Quick Enquiry</span>
-      <button type="button" class="floating-enquiry-toggle" data-floating-enquiry-toggle aria-expanded="true" aria-controls="floating-enquiry-content" aria-label="Minimize quick enquiry">−</button>
-    </header>
-    <div id="floating-enquiry-content" class="floating-enquiry-content" data-floating-enquiry-content>
-        <div data-contact-form-shell>
-          <h2>Tell Us What You Need</h2>
-          <p>Send the essentials now. Our team can clarify technical details with you.</p>
-          <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-contact-form>
-            <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
-            <input type="hidden" name="title" value="" />
-            <input type="hidden" name="subject" value="" />
-            <input type="hidden" name="country" value="" />
-            <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
-            <fieldset>
-              <div class="form-grid article-form-grid">
-                <label><span>Company *</span><input name="company" type="text" autocomplete="organization" placeholder="Company name" required /></label>
-                <label><span>Contact Name *</span><input name="contact_name" type="text" autocomplete="name" placeholder="Your name" required /></label>
-                <label><span>Business Email *</span><input name="email" type="email" autocomplete="email" placeholder="name@company.com" required /></label>
-                <label><span>Enquiry Type *</span><select name="inquiry_topic" required>
-                  {% if ctaType == "manufacturing" %}
-                  <option value="Custom Machinery Component Manufacturing" selected>Contract Manufacturing</option>
-                  <option value="Precast Concrete Component Production Line">Precast Concrete Line</option>
-                  {% else %}
-                  <option value="Precast Concrete Component Production Line" selected>Precast Concrete Line</option>
-                  <option value="Custom Machinery Component Manufacturing">Contract Manufacturing</option>
-                  {% endif %}
-                </select></label>
-                <label class="form-span"><span>Project Details</span><textarea name="project_details" rows="4" placeholder="Product, quantity, target output or schedule"></textarea></label>
-                <label class="privacy-field form-span"><input type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required /><span>I have read the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</span></label>
-              </div>
-              <p class="form-error" role="alert" data-contact-error hidden>Submission failed. Please check your connection and try again.</p>
-              <button class="button button-dark contact-submit" type="submit" data-contact-submit>Send Enquiry <span aria-hidden="true">→</span></button>
-            </fieldset>
-          </form>
-        </div>
-        <div class="contact-success article-contact-success" data-contact-success hidden tabindex="-1">
-          <span class="success-mark" aria-hidden="true">✓</span>
-          <h2>Enquiry Submitted</h2>
-          <p>Thank you. A Realjet specialist will contact you.</p>
-        </div>
-    </div>
-  </section>
+  <nav class="insight-contact-actions" aria-label="Contact Realjet">
+    <a href="https://realjetech.com/contact/" data-insight-cta data-cta-type="inquiry" data-channel="website" aria-label="Inquiry" title="Inquiry">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/><path d="M8 9h8M8 13h5"/></svg>
+    </a>
+    <a href="https://wa.me/8619310090600?text=Hello%2C%20I%20would%20like%20to%20revise%20the%20content%20for%20further%20discussion%3A%20{{ canonical }}%0AChannel%3A%20website" target="_blank" rel="noopener noreferrer" data-insight-cta data-cta-type="whatsapp" data-channel="website" aria-label="WhatsApp" title="WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.6a8.5 8.5 0 0 1-12.6 7.5L3 20.5l1.3-4.7a8.5 8.5 0 1 1 16.2-4.2z"/><path d="M8.2 7.7c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.8 1.9c.1.3.1.5-.1.7l-.6.7c-.2.2-.1.4 0 .6.7 1.2 1.7 2.1 2.9 2.7.2.1.4.1.6-.1l.8-1c.2-.2.4-.3.7-.2l2 .9c.3.1.4.3.4.5 0 .3-.2 1.5-1.1 2.1-.6.4-1.4.6-2.3.3-1-.3-2.4-.8-4.1-2.3-1.4-1.2-2.4-2.7-2.7-3.7-.7-1.9.2-2.9.5-3.1z"/></svg>
+    </a>
+    <a href="mailto:sales@realjetech.com?subject=Website%20insight%20enquiry&amp;body=Hello%2C%20I%20would%20like%20to%20discuss%20this%20content%3A%20{{ canonical }}%0A%0AChannel%3A%20website" data-insight-cta data-cta-type="email" data-channel="website" aria-label="E-mail" title="E-mail">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+    </a>
+  </nav>
 </article>

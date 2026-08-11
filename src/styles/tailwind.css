@@ -51,39 +51,35 @@ body.modal-open .analytics-consent-panel {
 .analytics-consent-panel {
   position: fixed;
   z-index: 130;
-  right: 20px;
-  bottom: 20px;
-  left: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  width: min(860px, calc(100% - 40px));
-  margin-inline: auto;
-  padding: 18px 20px;
-  border: 1px solid #d9e3e9;
-  border-radius: 14px;
-  color: #172a3c;
-  background: #ffffff;
-  box-shadow: 0 22px 60px rgba(3, 17, 29, 0.24);
+  justify-content: center;
+  gap: 28px;
+  width: 100%;
+  padding: 16px 58px 16px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.84);
+  box-shadow: 0 -16px 48px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(12px);
 }
 
-.analytics-consent-copy strong {
-  display: block;
-  color: #08253f;
-  font-size: 15px;
+.analytics-consent-copy {
+  max-width: 760px;
 }
 
 .analytics-consent-copy p {
-  max-width: 610px;
-  margin: 5px 0 0;
-  color: #627486;
-  font-size: 13px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
   line-height: 1.55;
 }
 
 .analytics-consent-copy a {
-  color: #1678aa;
+  color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -94,39 +90,73 @@ body.modal-open .analytics-consent-panel {
   gap: 8px;
 }
 
+.analytics-consent-actions a,
 .analytics-consent-actions button {
-  border: 1px solid #cbd8df;
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.56);
   border-radius: 8px;
-  padding: 9px 12px;
-  color: #08253f;
-  background: #f3f7f9;
+  padding: 8px 14px;
+  color: #ffffff;
+  background: transparent;
   font-size: 12px;
   font-weight: 800;
+  text-decoration: none;
 }
 
 .analytics-consent-actions .analytics-consent-accept {
-  border-color: #1678aa;
+  border-color: #ffffff;
+  color: #111111;
+  background: #ffffff;
+}
+
+.analytics-consent-close {
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
   color: #ffffff;
-  background: #1678aa;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 22px;
+  line-height: 1;
+  transform: translateY(-50%);
 }
 
 @media (max-width: 720px) {
   .analytics-consent-panel {
-    bottom: 78px;
-    display: block;
-    padding: 16px;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: min(420px, calc(100% - 32px));
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 14px;
+    transform: translate(-50%, -50%);
   }
 
   .analytics-consent-actions {
-    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .analytics-consent-actions button {
-    flex: 1;
+  .analytics-consent-close {
+    top: 8px;
+    right: 8px;
+    transform: none;
   }
 
   .privacy-page .analytics-consent-panel {
-    bottom: 16px;
+    bottom: auto;
   }
 }
 

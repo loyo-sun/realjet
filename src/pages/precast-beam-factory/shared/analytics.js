@@ -6,50 +6,57 @@ const consentCopy = {
   en: {
     title: "Analytics preferences",
     body: "We use Google Analytics to understand how this page is used and improve project enquiries. Form contents are never sent to analytics.",
-    accept: "Accept analytics",
-    reject: "Reject",
+    accept: "Accept all",
+    settings: "Privacy settings",
+    close: "Close analytics preferences",
     privacy: "Privacy Policy",
   },
   id: {
     title: "Preferensi analitik",
     body: "Kami menggunakan Google Analytics untuk memahami penggunaan halaman dan meningkatkan proses permintaan proyek. Isi formulir tidak pernah dikirim ke analitik.",
-    accept: "Terima analitik",
-    reject: "Tolak",
+    accept: "Terima semua",
+    settings: "Pengaturan privasi",
+    close: "Tutup preferensi analitik",
     privacy: "Kebijakan Privasi",
   },
   ar: {
     title: "تفضيلات التحليلات",
     body: "نستخدم Google Analytics لفهم استخدام الصفحة وتحسين استفسارات المشاريع. لا نرسل محتوى النموذج إلى أدوات التحليل.",
-    accept: "قبول التحليلات",
-    reject: "رفض",
+    accept: "قبول الكل",
+    settings: "إعدادات الخصوصية",
+    close: "إغلاق تفضيلات التحليلات",
     privacy: "سياسة الخصوصية",
   },
   ru: {
     title: "Настройки аналитики",
     body: "Мы используем Google Analytics, чтобы понимать использование страницы и улучшать обработку проектных запросов. Содержимое формы не передаётся в аналитику.",
-    accept: "Разрешить аналитику",
-    reject: "Отклонить",
+    accept: "Принять все",
+    settings: "Настройки конфиденциальности",
+    close: "Закрыть настройки аналитики",
     privacy: "Политика конфиденциальности",
   },
   cn: {
     title: "统计偏好设置",
     body: "我们使用 Google Analytics 了解页面使用情况并改进项目询盘体验。表单填写内容不会发送至统计系统。",
-    accept: "同意统计",
-    reject: "拒绝",
+    accept: "全部接受",
+    settings: "隐私设置",
+    close: "关闭统计偏好设置",
     privacy: "隐私政策",
   },
   fr: {
     title: "Préférences d’analyse",
     body: "Nous utilisons Google Analytics pour comprendre l’utilisation de cette page et améliorer les demandes de projet. Le contenu du formulaire n’est jamais transmis à l’outil d’analyse.",
-    accept: "Accepter l’analyse",
-    reject: "Refuser",
+    accept: "Tout accepter",
+    settings: "Paramètres de confidentialité",
+    close: "Fermer les préférences d’analyse",
     privacy: "Politique de confidentialité",
   },
   es: {
     title: "Preferencias de analítica",
     body: "Utilizamos Google Analytics para conocer el uso de esta página y mejorar las consultas de proyectos. El contenido del formulario nunca se envía a la herramienta de analítica.",
-    accept: "Aceptar analítica",
-    reject: "Rechazar",
+    accept: "Aceptar todo",
+    settings: "Ajustes de privacidad",
+    close: "Cerrar las preferencias de analítica",
     privacy: "Política de privacidad",
   },
 };
@@ -323,17 +330,17 @@ function showConsentPanel(locale) {
   panel.className = "analytics-consent-panel";
   panel.setAttribute("role", "dialog");
   panel.setAttribute("aria-modal", "false");
-  panel.setAttribute("aria-labelledby", "analytics-consent-title");
+  panel.setAttribute("aria-label", copy.title);
   panel.dir = locale === "ar" ? "rtl" : "ltr";
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <strong id="analytics-consent-title">${copy.title}</strong>
       <p>${copy.body} <a href="${privacyUrl(locale)}">${copy.privacy}</a></p>
     </div>
     <div class="analytics-consent-actions">
-      <button type="button" data-consent="denied">${copy.reject}</button>
+      <a href="${privacyUrl(locale)}">${copy.settings}</a>
       <button type="button" class="analytics-consent-accept" data-consent="granted">${copy.accept}</button>
     </div>
+    <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="${copy.close}">×</button>
   `;
   panel.addEventListener("click", (event) => {
     const value = event.target.closest("button")?.dataset.consent;

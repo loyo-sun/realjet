@@ -48,16 +48,16 @@ function showConsentPanel() {
   panel.className = "analytics-consent-panel";
   panel.setAttribute("role", "dialog");
   panel.setAttribute("aria-modal", "false");
-  panel.setAttribute("aria-labelledby", "analytics-consent-title");
+  panel.setAttribute("aria-label", "Analytics preferences");
   panel.innerHTML = `
-    <div>
-      <strong id="analytics-consent-title">Analytics preferences</strong>
+    <div class="analytics-consent-copy">
       <p>We use Google Analytics to understand how this website is used and improve project enquiries. Form contents are never sent to analytics. <a href="/marketing/privacy/en/">Privacy Policy</a></p>
     </div>
     <div class="analytics-consent-actions">
-      <button type="button" data-consent="denied">Reject</button>
-      <button type="button" class="consent-accept" data-consent="granted">Accept analytics</button>
-    </div>`;
+      <a href="/marketing/privacy/en/">Privacy settings</a>
+      <button type="button" class="consent-accept" data-consent="granted">Accept all</button>
+    </div>
+    <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="Close analytics preferences">×</button>`;
   panel.addEventListener("click", (event) => {
     const value = event.target.closest("button")?.dataset.consent;
     if (!value) return;
@@ -173,57 +173,6 @@ if (productGallery) {
       });
     });
   }
-}
-
-const floatingEnquiry = document.querySelector("[data-floating-enquiry]");
-if (floatingEnquiry) {
-  const toggle = floatingEnquiry.querySelector("[data-floating-enquiry-toggle]");
-  const content = floatingEnquiry.querySelector("[data-floating-enquiry-content]");
-  const storageKey = `realjet_quick_enquiry_minimized_${document.body.dataset.articleSlug || "insight"}`;
-  let revealed = false;
-
-  const setMinimized = (minimized, remember = true) => {
-    floatingEnquiry.classList.toggle("is-minimized", minimized);
-    content.setAttribute("aria-hidden", String(minimized));
-    content.inert = minimized;
-    toggle.setAttribute("aria-expanded", String(!minimized));
-    toggle.setAttribute("aria-label", minimized ? "Expand quick enquiry" : "Minimize quick enquiry");
-    toggle.textContent = minimized ? "+" : "−";
-    if (remember) {
-      try {
-        sessionStorage.setItem(storageKey, minimized ? "true" : "false");
-      } catch {
-        // The control still works when session storage is unavailable.
-      }
-    }
-  };
-
-  try {
-    setMinimized(sessionStorage.getItem(storageKey) === "true", false);
-  } catch {
-    setMinimized(false, false);
-  }
-
-  const revealAfterFirstScreen = () => {
-    if (revealed || window.scrollY < window.innerHeight * 0.9) return;
-    revealed = true;
-    floatingEnquiry.hidden = false;
-    requestAnimationFrame(() => floatingEnquiry.classList.add("is-visible"));
-    window.removeEventListener("scroll", revealAfterFirstScreen);
-    trackEvent("quick_enquiry_reveal", { article_slug: document.body.dataset.articleSlug });
-  };
-
-  toggle.addEventListener("click", () => {
-    const minimized = !floatingEnquiry.classList.contains("is-minimized");
-    setMinimized(minimized);
-    trackEvent("quick_enquiry_toggle", {
-      article_slug: document.body.dataset.articleSlug,
-      state: minimized ? "minimized" : "expanded",
-    });
-  });
-
-  window.addEventListener("scroll", revealAfterFirstScreen, { passive: true });
-  revealAfterFirstScreen();
 }
 
 const contactForm = document.querySelector("[data-contact-form]");
