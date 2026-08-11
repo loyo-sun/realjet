@@ -33,6 +33,19 @@ collections:
       - { label: 显示顺序, name: order, widget: number, value_type: int, min: 1, required: true, hint: "数字越小，在产品列表和首页推荐产品中的位置越靠前。" }
       - { label: 首页推荐, name: featured, widget: boolean, default: false, required: true, hint: "只有启用此项的产品才会显示在首页产品模块。" }
       - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "将生成 /products/product-name.html。发布后如无重定向，请勿修改。" }
+      - label: Product Category
+        name: category
+        widget: select
+        required: false
+        options:
+          - { label: Bridge & Transportation Moulds, value: bridge-transportation-moulds }
+          - { label: Building Component Moulds, value: building-component-moulds }
+          - { label: Tunnel & Underground Moulds, value: tunnel-underground-moulds }
+          - { label: Municipal & Infrastructure Moulds, value: municipal-infrastructure-moulds }
+          - { label: Custom Precast Moulds, value: custom-precast-moulds }
+      - { label: Product Category Display Name, name: categoryName, widget: string, required: false }
+      - { label: Product Subcategory Key, name: subcategory, widget: string, required: false }
+      - { label: Product Subcategory Display Name, name: subcategoryName, widget: string, required: false }
       - { label: 产品主图, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "用于产品详情页主图和产品卡片。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
       - { label: 主图替代文本, name: imageAlt, widget: string, required: true }
       - label: 产品图片集

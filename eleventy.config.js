@@ -94,6 +94,17 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", (items, count) =>
     Array.isArray(items) ? items.slice(0, count) : [],
   );
+  eleventyConfig.addFilter(
+    "productsForSubcategory",
+    (items, category, subcategory) =>
+      Array.isArray(items)
+        ? items.filter(
+            (item) =>
+              item.data.category === category &&
+              item.data.subcategory === subcategory,
+          )
+        : [],
+  );
 
   eleventyConfig.addShortcode(
     "responsiveImage",

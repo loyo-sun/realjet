@@ -1,0 +1,54 @@
+---
+pagination:
+  data: productTaxonomy.categories
+  size: 1
+  alias: category
+permalink: "/products/{{ category.slug }}/index.html"
+layout: layouts/base.njk
+pageType: product-category
+robots: index, follow
+eleventyComputed:
+  title: "{{ category.name }} | Realjet"
+  seoTitle: "{{ category.name }} for Precast Concrete | Realjet"
+  description: "{{ category.description }}"
+  canonical: "https://realjetech.com/products/{{ category.slug }}/"
+---
+<header class="listing-hero category-listing-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{{ category.name }}</span></nav>
+    <span class="eyebrow">Precast Concrete Moulds</span>
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.description }}</p>
+  </div>
+</header>
+
+<section class="taxonomy-detail-section">
+  <div class="container taxonomy-detail-grid">
+    {% for subcategory in category.subcategories %}
+    {% set subcategoryProducts = collections.publishedProducts | productsForSubcategory(category.slug, subcategory.slug) %}
+    <section class="subcategory-panel" id="{{ subcategory.slug }}" aria-labelledby="{{ subcategory.slug }}-title">
+      <div class="subcategory-heading">
+        <span>{{ loop.index | string }}</span>
+        <h2 id="{{ subcategory.slug }}-title">{{ subcategory.name }}</h2>
+      </div>
+      {% if subcategoryProducts.length %}
+      <div class="product-grid taxonomy-product-grid">
+        {% for product in subcategoryProducts %}{% include "components/product-card.njk" %}{% endfor %}
+      </div>
+      {% else %}
+      <div class="subcategory-empty">
+        <p>Product pages for this subcategory are being prepared. Send your component drawings and production requirements for a project-specific review.</p>
+        <a class="text-link" href="/contact/?topic=precast-moulds">Discuss a custom mould <span aria-hidden="true">→</span></a>
+      </div>
+      {% endif %}
+    </section>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="category-contact-band">
+  <div class="container category-contact-inner">
+    <div><span class="eyebrow">Project Review</span><h2>Start with the component drawing and production plan.</h2></div>
+    <a class="button button-primary" href="/contact/?topic=precast-moulds">Send Project Requirements <span aria-hidden="true">→</span></a>
+  </div>
+</section>

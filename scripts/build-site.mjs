@@ -86,6 +86,12 @@ for (const expectedPath of [
   "contact/index.html",
   "insights/index.html",
   "products/index.html",
+  "precast-concrete-molds/index.html",
+  "products/bridge-transportation-moulds/index.html",
+  "products/building-component-moulds/index.html",
+  "products/tunnel-underground-moulds/index.html",
+  "products/municipal-infrastructure-moulds/index.html",
+  "products/custom-precast-moulds/index.html",
   "admin/index.html",
   "admin/config.yml",
   "admin/config.zh.yml",
@@ -117,6 +123,14 @@ const manufacturingPage = await readFile(
 );
 const contactPage = await readFile(join(finalOutput, "contact/index.html"), "utf8");
 const productsPage = await readFile(join(finalOutput, "products/index.html"), "utf8");
+const precastMouldsPage = await readFile(
+  join(finalOutput, "precast-concrete-molds/index.html"),
+  "utf8",
+);
+const bridgeMouldsCategoryPage = await readFile(
+  join(finalOutput, "products/bridge-transportation-moulds/index.html"),
+  "utf8",
+);
 const insightPage = await readFile(
   join(
     finalOutput,
@@ -260,6 +274,37 @@ for (const requiredProductsPageContent of requiredProductsPageContents) {
     throw new Error(`Products page validation failed: ${requiredProductsPageContent}`);
   }
 }
+for (const requiredMouldsPageContent of [
+  '<link rel="canonical" href="https://realjetech.com/precast-concrete-molds/"',
+  'meta name="robots" content="index, follow"',
+  "Precast Concrete Moulds &amp; Formwork",
+  "Bridge &amp; Transportation Moulds",
+  "Building Component Moulds",
+  "Tunnel &amp; Underground Moulds",
+  "Municipal &amp; Infrastructure Moulds",
+  "Custom Precast Moulds",
+  'name="precast-mould-enquiry"',
+  'name="privacy_acknowledgement"',
+  "data-mould-inquiry-form",
+  "data-mould-category",
+]) {
+  if (!precastMouldsPage.includes(requiredMouldsPageContent)) {
+    throw new Error(`Precast moulds page validation failed: ${requiredMouldsPageContent}`);
+  }
+}
+for (const requiredBridgeCategoryContent of [
+  "Bridge &amp; Transportation Moulds",
+  "Beam and Girder Moulds",
+  "Box Girder Moulds",
+  "Segment Moulds",
+  "Beam and Girder Moulds for Precast Concrete Production",
+  "Box Girder Moulds for Precast Bridge Production",
+  "Segment Moulds for Precast Segmental Bridges",
+]) {
+  if (!bridgeMouldsCategoryPage.includes(requiredBridgeCategoryContent)) {
+    throw new Error(`Bridge mould category validation failed: ${requiredBridgeCategoryContent}`);
+  }
+}
 if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"')) {
   throw new Error("Manufacturing construction page must remain noindex.");
 }
@@ -292,6 +337,12 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/contact/",
   "https://realjetech.com/insights/",
   "https://realjetech.com/products/",
+  "https://realjetech.com/precast-concrete-molds/",
+  "https://realjetech.com/products/bridge-transportation-moulds/",
+  "https://realjetech.com/products/building-component-moulds/",
+  "https://realjetech.com/products/tunnel-underground-moulds/",
+  "https://realjetech.com/products/municipal-infrastructure-moulds/",
+  "https://realjetech.com/products/custom-precast-moulds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",

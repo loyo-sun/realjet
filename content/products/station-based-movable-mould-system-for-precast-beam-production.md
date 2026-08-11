@@ -8,6 +8,10 @@ featured: false
 slug: station-based-movable-mould-system-for-precast-beam-production
 image: /images/products/movable-hydraulic-formwork-production-line.jpg
 imageAlt: Long precast production hall with parallel mould stations, floor rails and overhead cranes
+category: bridge-transportation-moulds
+categoryName: Bridge & Transportation Moulds
+subcategory: beam-girder-moulds
+subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

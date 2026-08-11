@@ -85,6 +85,20 @@
       }
     </script>
     {% endif %}
+    {% if pageType == "precast-moulds" or pageType == "product-category" %}
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"CollectionPage",
+        "name":{{ (seoTitle or title) | json | safe }},
+        "description":{{ description | json | safe }},
+        "url":{{ canonical | json | safe }},
+        "isPartOf":{"@type":"WebSite","name":"Realjet","url":"https://realjetech.com/"},
+        "about":{"@type":"Product","name":"Precast Concrete Moulds and Formwork","brand":{"@type":"Brand","name":"Realjet"}},
+        "inLanguage":"en"
+      }
+    </script>
+    {% endif %}
   </head>
   <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}{% if pageType == "product-inquiry" %} data-product-slug="{{ product.data.slug }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>

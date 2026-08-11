@@ -8,6 +8,10 @@ featured: false
 slug: custom-hydraulic-u-beam-formwork-for-precast-bridge-construction
 image: /images/products/68f44670626f2ea2e67b17c0d1212210.jpg
 imageAlt: Steel U-beam formwork with inclined mould faces inside a precast bridge component factory
+category: bridge-transportation-moulds
+categoryName: Bridge & Transportation Moulds
+subcategory: beam-girder-moulds
+subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

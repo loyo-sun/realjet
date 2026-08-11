@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <article class="product-page">
   <header class="product-page-heading">
     <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a>{% if category and categoryName %}<span aria-hidden="true">/</span><a href="/products/{{ category }}/">{{ categoryName }}</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
     </div>
   </header>
   <div class="container product-detail-shell">
@@ -21,7 +21,7 @@ layout: layouts/base.njk
         {% endif %}
       </div>
       <div class="product-overview-copy">
-        <span class="eyebrow">Realjet Equipment</span>
+        <span class="eyebrow">{{ subcategoryName or "Realjet Equipment" }}</span>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
         <a class="button button-dark" href="/inquiry/{{ slug }}.html" data-product-inquiry-link>Enquire About This Product <span aria-hidden="true">→</span></a>

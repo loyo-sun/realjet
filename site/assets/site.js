@@ -142,6 +142,18 @@ document.addEventListener("click", (event) => {
       cta_id: "product_quick_inquiry_jump",
     });
   }
+
+  const mouldCategory = event.target.closest("[data-mould-category]");
+  if (mouldCategory) {
+    trackEvent("mould_category_click", {
+      category_slug: mouldCategory.dataset.mouldCategory,
+    });
+  }
+
+  const mouldCta = event.target.closest("[data-mould-cta]");
+  if (mouldCta) {
+    trackEvent("mould_cta_click", { cta_id: mouldCta.dataset.mouldCta });
+  }
 });
 
 if (document.body.dataset.pageType === "home") trackEvent("home_page_view");
@@ -150,6 +162,9 @@ if (document.body.dataset.pageType === "insight") {
 }
 if (document.body.dataset.pageType === "product") {
   trackEvent("product_view", { product_slug: document.body.dataset.productSlug });
+}
+if (document.body.dataset.pageType === "precast-moulds") {
+  trackEvent("precast_moulds_page_view");
 }
 
 const productGallery = document.querySelector("[data-product-gallery]");
@@ -223,6 +238,7 @@ if (contactForm) {
   const topicValues = {
     manufacturing: "Custom Machinery Component Manufacturing",
     "precast-line": "Precast Concrete Component Production Line",
+    "precast-moulds": "Precast Concrete Moulds and Formwork",
   };
   const topicField = contactForm.elements.namedItem("inquiry_topic");
   if (topicValues[topic] && topicField) topicField.value = topicValues[topic];
@@ -436,5 +452,78 @@ for (const productInquiryForm of productInquiryForms) {
 if (document.body.dataset.pageType === "product-inquiry") {
   trackEvent("product_inquiry_view", {
     product_slug: document.body.dataset.productSlug,
+  });
+}
+
+const mouldInquiryForm = document.querySelector("[data-mould-inquiry-form]");
+if (mouldInquiryForm) {
+  const container = mouldInquiryForm.closest("[data-mould-inquiry-container]");
+  const formShell = container.querySelector("[data-mould-inquiry-shell]");
+  const successPanel = container.querySelector("[data-mould-inquiry-success]");
+  const errorMessage = mouldInquiryForm.querySelector("[data-mould-inquiry-error]");
+  const submitButton = mouldInquiryForm.querySelector("[data-mould-inquiry-submit]");
+  const fieldset = mouldInquiryForm.querySelector("fieldset");
+  let started = false;
+  let succeeded = false;
+
+  const start = () => {
+    if (started) return;
+    started = true;
+    trackEvent("lead_form_start", {
+      form_id: "precast-mould-enquiry",
+      cta_id: "precast_moulds_page_form",
+    });
+  };
+
+  mouldInquiryForm.addEventListener("focusin", start);
+  mouldInquiryForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    start();
+    errorMessage.hidden = true;
+    fieldset.disabled = true;
+    mouldInquiryForm.setAttribute("aria-busy", "true");
+    submitButton.textContent = "Sending…";
+    trackEvent("lead_form_submit_attempt", {
+      form_id: "precast-mould-enquiry",
+      cta_id: "precast_moulds_page_form",
+    });
+
+    try {
+      const body = new URLSearchParams(new FormData(mouldInquiryForm)).toString();
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body,
+      });
+      if (!response.ok) throw new Error("Submission failed");
+      succeeded = true;
+      trackEvent("generate_lead", {
+        form_id: "precast-mould-enquiry",
+        lead_source: "precast_moulds_page",
+        cta_id: "precast_moulds_page_form",
+      });
+      mouldInquiryForm.reset();
+      formShell.hidden = true;
+      successPanel.hidden = false;
+      successPanel.focus();
+    } catch {
+      errorMessage.hidden = false;
+      fieldset.disabled = false;
+      mouldInquiryForm.removeAttribute("aria-busy");
+      submitButton.innerHTML = 'Send Requirements <span aria-hidden="true">→</span>';
+      trackEvent("lead_form_submit_error", {
+        form_id: "precast-mould-enquiry",
+        cta_id: "precast_moulds_page_form",
+        error_type: "submission_failed",
+      });
+    }
+  });
+
+  window.addEventListener("pagehide", () => {
+    if (!started || succeeded) return;
+    trackEvent("lead_form_abandon", {
+      form_id: "precast-mould-enquiry",
+      cta_id: "precast_moulds_page_form",
+    });
   });
 }
