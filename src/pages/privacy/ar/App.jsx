@@ -1,6 +1,6 @@
 import { ArrowRight, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. من نحن"],
@@ -213,7 +213,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. ملفات تعريف الارتباط والتقنيات المشابهة">
               <p>قد يستخدم الموقع أو مزود الاستضافة وظائف تقنية أو آليات أمن ضرورية لعرض الصفحة ومعالجة الاستفسار ومنع إساءة الاستخدام والمحافظة على موثوقية الخدمة.</p>
-              <p>Google Analytics 4 خدمة تحليل اختيارية تقدمها Google. يكون تخزين بيانات التحليلات مرفوضًا افتراضيًا، ولا يُفعّل إلا بعد اختيار «قبول التحليلات». ويظل تخزين الإعلانات وبيانات المستخدم الإعلانية وتخصيص الإعلانات معطّلًا.</p>
+              <p>Google Analytics 4 خدمة تحليل اختيارية تقدمها Google. يُفعّل تخزين بيانات التحليلات عند اختيار «قبول الكل» أو إبقاء مفتاح التحليلات أدناه مفعّلًا، ويمكنك تعطيله في أي وقت. ويظل تخزين الإعلانات وبيانات المستخدم الإعلانية وتخصيص الإعلانات معطّلًا.</p>
               <p>يمكنك قبول التحليلات أو رفضها، ثم تغيير اختيارك في أي وقت من خلال إعدادات التحليلات.</p>
               <ul>
                 <li>الغرض: قياس استخدام الصفحة وفعالية مسار الاستفسار؛</li>
@@ -221,7 +221,7 @@ export default function App() {
                 <li>البيانات: معلومات بأسماء مستعارة عن الجهاز والمتصفح والصفحة والتفاعل، دون محتوى النموذج؛</li>
                 <li>التحكم: يمكن منح الموافقة أو رفضها أو سحبها في أي وقت.</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">إدارة تفضيلات التحليلات</button>
+              <AnalyticsPreferenceSwitch label="إدارة تفضيلات التحليلات" onLabel="التحليلات مفعّلة" offLabel="التحليلات معطّلة" />
             </PolicySection>
 
             <PolicySection id="children" title="11. معلومات الأطفال">

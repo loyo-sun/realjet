@@ -5,15 +5,15 @@ const DEFAULT_PAGE_TYPE = "precast_production_line";
 const consentCopy = {
   en: {
     title: "Analytics preferences",
-    body: "We use Google Analytics to understand how this page is used and improve project enquiries. Form contents are never sent to analytics.",
+    body: "We use cookies for anonymous site analytics to improve your experience. For more information, please read our",
     accept: "Accept all",
     settings: "Privacy settings",
     close: "Close analytics preferences",
-    privacy: "Privacy Policy",
+    privacy: "privacy policy",
   },
   id: {
     title: "Preferensi analitik",
-    body: "Kami menggunakan Google Analytics untuk memahami penggunaan halaman dan meningkatkan proses permintaan proyek. Isi formulir tidak pernah dikirim ke analitik.",
+    body: "Kami menggunakan cookie untuk analitik situs anonim guna meningkatkan pengalaman Anda. Untuk informasi lebih lanjut, silakan baca",
     accept: "Terima semua",
     settings: "Pengaturan privasi",
     close: "Tutup preferensi analitik",
@@ -21,7 +21,7 @@ const consentCopy = {
   },
   ar: {
     title: "تفضيلات التحليلات",
-    body: "نستخدم Google Analytics لفهم استخدام الصفحة وتحسين استفسارات المشاريع. لا نرسل محتوى النموذج إلى أدوات التحليل.",
+    body: "نستخدم ملفات تعريف الارتباط لتحليل استخدام الموقع بصورة مجهولة الهوية وتحسين تجربتك. لمزيد من المعلومات، يرجى قراءة",
     accept: "قبول الكل",
     settings: "إعدادات الخصوصية",
     close: "إغلاق تفضيلات التحليلات",
@@ -29,7 +29,7 @@ const consentCopy = {
   },
   ru: {
     title: "Настройки аналитики",
-    body: "Мы используем Google Analytics, чтобы понимать использование страницы и улучшать обработку проектных запросов. Содержимое формы не передаётся в аналитику.",
+    body: "Мы используем файлы cookie для анонимной аналитики сайта, чтобы улучшить вашу работу с сайтом. Для получения дополнительной информации ознакомьтесь с",
     accept: "Принять все",
     settings: "Настройки конфиденциальности",
     close: "Закрыть настройки аналитики",
@@ -37,7 +37,7 @@ const consentCopy = {
   },
   cn: {
     title: "统计偏好设置",
-    body: "我们使用 Google Analytics 了解页面使用情况并改进项目询盘体验。表单填写内容不会发送至统计系统。",
+    body: "我们使用 Cookie 进行匿名网站分析，以改善您的使用体验。如需了解更多信息，请阅读我们的",
     accept: "全部接受",
     settings: "隐私设置",
     close: "关闭统计偏好设置",
@@ -45,7 +45,7 @@ const consentCopy = {
   },
   fr: {
     title: "Préférences d’analyse",
-    body: "Nous utilisons Google Analytics pour comprendre l’utilisation de cette page et améliorer les demandes de projet. Le contenu du formulaire n’est jamais transmis à l’outil d’analyse.",
+    body: "Nous utilisons des cookies pour analyser anonymement l’utilisation du site et améliorer votre expérience. Pour plus d’informations, veuillez consulter notre",
     accept: "Tout accepter",
     settings: "Paramètres de confidentialité",
     close: "Fermer les préférences d’analyse",
@@ -53,7 +53,7 @@ const consentCopy = {
   },
   es: {
     title: "Preferencias de analítica",
-    body: "Utilizamos Google Analytics para conocer el uso de esta página y mejorar las consultas de proyectos. El contenido del formulario nunca se envía a la herramienta de analítica.",
+    body: "Utilizamos cookies para realizar análisis anónimos del sitio y mejorar su experiencia. Para obtener más información, consulte nuestra",
     accept: "Aceptar todo",
     settings: "Ajustes de privacidad",
     close: "Cerrar las preferencias de analítica",
@@ -318,8 +318,16 @@ function updateConsent(value, trackChoice = false) {
   }
 }
 
+export function isAnalyticsConsentGranted() {
+  return readConsent() !== "denied";
+}
+
+export function setAnalyticsConsent(enabled) {
+  updateConsent(enabled ? "granted" : "denied", enabled);
+}
+
 function privacyUrl(locale) {
-  return `/marketing/privacy/${locale}/`;
+  return `/marketing/privacy/${locale}/#cookies`;
 }
 
 function showConsentPanel(locale) {
@@ -334,7 +342,7 @@ function showConsentPanel(locale) {
   panel.dir = locale === "ar" ? "rtl" : "ltr";
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <p>${copy.body} <a href="${privacyUrl(locale)}">${copy.privacy}</a></p>
+      <p>${copy.body} <a href="${privacyUrl(locale)}">${copy.privacy}</a>.</p>
     </div>
     <div class="analytics-consent-actions">
       <a href="${privacyUrl(locale)}">${copy.settings}</a>
@@ -355,11 +363,12 @@ export function openAnalyticsConsentSettings() {
   showConsentPanel(runtime.locale);
 }
 
-export function initAnalyticsConsent(locale) {
+export function initAnalyticsConsent(locale, options = {}) {
   runtime.locale = locale;
   const current = readConsent();
   if (current) updateConsent(current);
-  else showConsentPanel(locale);
+  else if (options.defaultGranted) updateConsent("granted");
+  else if (options.showPanel !== false) showConsentPanel(locale);
 }
 
 export function initLandingAnalytics(locale, options = {}) {

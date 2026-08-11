@@ -1,6 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. Quiénes somos"],
@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies y tecnologías similares">
               <p>El sitio web o su proveedor de alojamiento puede utilizar funciones técnicas o mecanismos de seguridad estrictamente necesarios para mostrar la página, procesar consultas, prevenir abusos o mantener la fiabilidad del servicio.</p>
-              <p>Google Analytics 4 es un servicio de analítica opcional proporcionado por Google. El almacenamiento de analítica se rechaza de forma predeterminada y solo se activa después de seleccionar «Aceptar analítica». El almacenamiento publicitario, los datos de usuario para publicidad y la personalización de anuncios permanecen desactivados.</p>
+              <p>Google Analytics 4 es un servicio de analítica opcional proporcionado por Google. El almacenamiento de analítica se activa cuando selecciona «Aceptar todo» o mantiene activado el interruptor de analítica que aparece a continuación, y puede desactivarlo en cualquier momento. El almacenamiento publicitario, los datos de usuario para publicidad y la personalización de anuncios permanecen desactivados.</p>
               <p>Puede aceptar o rechazar la analítica y cambiar su elección en cualquier momento mediante la configuración de analítica.</p>
               <ul>
                 <li>Finalidad: medir el uso de las páginas y la eficacia del recorrido de consulta;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Datos: información seudonimizada sobre dispositivo, navegador, página e interacciones, sin el contenido del formulario;</li>
                 <li>Control: el consentimiento puede otorgarse, rechazarse o retirarse en cualquier momento.</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Gestionar las preferencias de analítica</button>
+              <AnalyticsPreferenceSwitch label="Gestionar las preferencias de analítica" onLabel="Analítica activada" offLabel="Analítica desactivada" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Datos de menores">

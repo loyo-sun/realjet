@@ -1,6 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. О компании"],
@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Файлы cookie и аналогичные технологии">
               <p>Сайт или его хостинг-провайдер может использовать строго необходимые технические функции и механизмы безопасности для отображения страниц, обработки запросов, предотвращения злоупотреблений и поддержания надёжности.</p>
-              <p>Google Analytics 4 — необязательный аналитический сервис Google. Хранение аналитических данных по умолчанию запрещено и включается только после выбора «Разрешить аналитику». Хранение рекламных данных, рекламные пользовательские данные и персонализация рекламы остаются отключёнными.</p>
+              <p>Google Analytics 4 — необязательный аналитический сервис Google. Хранение аналитических данных включается, когда вы выбираете «Принять все» или оставляете переключатель аналитики ниже включённым; его можно отключить в любой момент. Хранение рекламных данных, рекламные пользовательские данные и персонализация рекламы остаются отключёнными.</p>
               <p>Вы можете разрешить или отклонить аналитику, а затем изменить выбор в любое время через настройки аналитики.</p>
               <ul>
                 <li>Цель: измерение использования страниц и эффективности пути отправки запроса;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Данные: псевдонимизированные сведения об устройстве, браузере, странице и взаимодействиях, без содержимого формы;</li>
                 <li>Управление: согласие можно предоставить, отклонить или отозвать в любое время.</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Управление настройками аналитики</button>
+              <AnalyticsPreferenceSwitch label="Управление настройками аналитики" onLabel="Аналитика включена" offLabel="Аналитика отключена" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Данные несовершеннолетних">

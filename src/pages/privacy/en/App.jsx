@@ -1,6 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. Who We Are"],
@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies and Similar Technologies">
               <p>The website or its hosting provider may use strictly necessary technical functions or security mechanisms required to deliver the page, process an enquiry, prevent abuse or maintain service reliability.</p>
-              <p>Google Analytics 4 is an optional analytics service provided by Google. Analytics storage is denied by default and is enabled only after you select “Accept analytics”. Advertising storage, advertising user data and ad personalisation remain disabled.</p>
+              <p>Google Analytics 4 is an optional analytics service provided by Google. Analytics storage is enabled when you select “Accept all” or keep the analytics switch below on, and you can disable it at any time. Advertising storage, advertising user data and ad personalisation remain disabled.</p>
               <p>You may accept or reject analytics and later change your choice using the analytics settings control. When analytics is accepted, Google may set analytics cookies and process pseudonymous usage information in accordance with its own terms and privacy practices.</p>
               <ul>
                 <li>Purpose: measure page use and the effectiveness of the enquiry journey;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Data: pseudonymous device, browser, page and interaction information—never the contents entered into the enquiry form;</li>
                 <li>Control: consent can be granted, refused or withdrawn at any time.</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Manage analytics preferences</button>
+              <AnalyticsPreferenceSwitch label="Manage analytics preferences" onLabel="Analytics enabled" offLabel="Analytics disabled" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Children’s Information">

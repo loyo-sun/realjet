@@ -1,6 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. Tentang Kami"],
@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookie dan Teknologi Serupa">
               <p>Situs web atau penyedia hostingnya dapat menggunakan fungsi teknis yang benar-benar diperlukan atau mekanisme keamanan untuk menampilkan halaman, memproses pertanyaan, mencegah penyalahgunaan, atau menjaga keandalan layanan.</p>
-              <p>Google Analytics 4 adalah layanan analitik opsional dari Google. Penyimpanan analitik ditolak secara bawaan dan hanya diaktifkan setelah Anda memilih “Terima analitik”. Penyimpanan iklan, data pengguna untuk iklan, dan personalisasi iklan tetap dinonaktifkan.</p>
+              <p>Google Analytics 4 adalah layanan analitik opsional dari Google. Penyimpanan analitik diaktifkan saat Anda memilih “Terima semua” atau membiarkan sakelar analitik di bawah tetap aktif, dan dapat dinonaktifkan kapan saja. Penyimpanan iklan, data pengguna untuk iklan, dan personalisasi iklan tetap dinonaktifkan.</p>
               <p>Anda dapat menerima atau menolak analitik dan mengubah pilihan kapan saja melalui pengaturan analitik.</p>
               <ul>
                 <li>Tujuan: mengukur penggunaan halaman dan efektivitas alur permintaan;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Data: informasi pseudonim mengenai perangkat, peramban, halaman, dan interaksi—bukan isi formulir;</li>
                 <li>Kontrol: persetujuan dapat diberikan, ditolak, atau ditarik kapan saja.</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">Kelola preferensi analitik</button>
+              <AnalyticsPreferenceSwitch label="Kelola preferensi analitik" onLabel="Analitik aktif" offLabel="Analitik nonaktif" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Data Anak">

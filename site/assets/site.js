@@ -51,10 +51,10 @@ function showConsentPanel() {
   panel.setAttribute("aria-label", "Analytics preferences");
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <p>We use Google Analytics to understand how this website is used and improve project enquiries. Form contents are never sent to analytics. <a href="/marketing/privacy/en/">Privacy Policy</a></p>
+      <p>We use cookies for anonymous site analytics to improve your experience. For more information, please read our <a href="/marketing/privacy/en/">privacy policy</a>.</p>
     </div>
     <div class="analytics-consent-actions">
-      <a href="/marketing/privacy/en/">Privacy settings</a>
+      <a href="/marketing/privacy/en/#cookies">Privacy settings</a>
       <button type="button" class="consent-accept" data-consent="granted">Accept all</button>
     </div>
     <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="Close analytics preferences">×</button>`;

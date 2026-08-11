@@ -1,6 +1,6 @@
 import { ArrowLeft, Mail, MapPin, ShieldCheck } from "lucide-react";
 import logoImage from "../../../assets/image/realjet-logo.webp";
-import { openAnalyticsConsentSettings } from "../../precast-beam-factory/shared/analytics";
+import AnalyticsPreferenceSwitch from "../shared/AnalyticsPreferenceSwitch";
 
 const sections = [
   ["who-we-are", "1. 关于我们"],
@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookie 与类似技术">
               <p>本网站或其托管服务提供商可能使用展示页面、处理询盘、防止滥用或维持服务可靠性所必需的技术功能或安全机制。</p>
-              <p>Google Analytics 4 是由 Google 提供的可选分析服务。分析数据存储默认处于拒绝状态，只有在您选择“同意统计”后才会启用。广告数据存储、广告用户数据及广告个性化功能始终保持关闭。</p>
+              <p>Google Analytics 4 是由 Google 提供的可选分析服务。当您选择“全部接受”或保持下方分析统计开关开启时，分析数据存储将被启用；您可随时将其关闭。广告数据存储、广告用户数据及广告个性化功能始终保持关闭。</p>
               <p>您可以接受或拒绝分析统计，并可通过“统计设置”随时更改选择。同意分析统计后，Google 可能设置分析 Cookie，并按照其自身条款及隐私规则处理经过假名化的使用信息。</p>
               <ul>
                 <li>目的：衡量页面使用情况及询盘流程的有效性；</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>数据：经过假名化的设备、浏览器、页面和交互信息，不包括询盘表单中填写的具体内容；</li>
                 <li>控制方式：您可以随时同意、拒绝或撤回同意。</li>
               </ul>
-              <button type="button" onClick={openAnalyticsConsentSettings} className="mt-2 inline-flex min-h-10 items-center rounded-lg border border-brand-blue/25 bg-soft px-4 text-[13px] font-[800] text-brand-blue transition hover:border-brand-blue hover:bg-white">管理统计设置</button>
+              <AnalyticsPreferenceSwitch label="管理统计设置" onLabel="分析统计已开启" offLabel="分析统计已关闭" />
             </PolicySection>
 
             <PolicySection id="children" title="11. 未成年人信息">
