@@ -11,55 +11,45 @@ robots: index, follow
 ---
 <article class="moulds-landing">
   <section class="moulds-hero">
-    <div class="container moulds-hero-grid">
-      <div class="moulds-hero-copy">
-        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Precast Concrete Moulds</span></nav>
-        <span class="eyebrow">Project-Specific Steel Mould Systems</span>
-        <h1>Precast Concrete Moulds &amp; Formwork</h1>
-        <p>Reusable steel mould systems engineered around the component geometry, casting sequence, production layout and project requirements of each precast operation.</p>
-        <div class="moulds-hero-actions">
-          <a class="button button-primary" href="#mould-categories" data-mould-cta="explore_categories">Explore Categories <span aria-hidden="true">↓</span></a>
-          <a class="button button-outline" href="#mould-enquiry" data-mould-cta="hero_enquiry">Request a Technical Review <span aria-hidden="true">→</span></a>
+    <div class="container moulds-hero-shell">
+      <div class="moulds-hero-grid">
+        <div class="moulds-hero-copy">
+          <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Precast Concrete Moulds</span></nav>
+          <span class="eyebrow">Project-Specific Steel Mould Systems</span>
+          <h1>Precast Concrete Moulds &amp; Formwork</h1>
+          <p>Reusable steel mould systems engineered around the component geometry, casting sequence, production layout and project requirements of each precast operation.</p>
+          <div class="moulds-hero-actions">
+            <a class="button button-primary" href="#mould-catalogue" data-mould-cta="explore_products">Explore Products <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline" href="#mould-enquiry" data-mould-cta="hero_enquiry">Request a Technical Review <span aria-hidden="true">→</span></a>
+          </div>
+          <ul class="moulds-proof-list" aria-label="Planning basis">
+            <li>Factory or casting-yard use</li>
+            <li>Mechanical or hydraulic operation</li>
+            <li>Made to approved drawings</li>
+          </ul>
         </div>
-        <ul class="moulds-proof-list" aria-label="Planning basis">
-          <li>Factory or casting-yard use</li>
-          <li>Mechanical or hydraulic operation</li>
-          <li>Made to approved drawings</li>
-        </ul>
+        <div class="moulds-hero-media">
+          <img src="/images/products/high-precision-hydraulic-formwork.webp" alt="Large fabricated steel formwork with hydraulic operating equipment in a precast production facility" width="1200" height="675" decoding="async" />
+          <span>Placeholder image — product photography can be replaced in the content system.</span>
+        </div>
       </div>
-      <div class="moulds-hero-media">
-        <img src="/images/products/high-precision-hydraulic-formwork.webp" alt="Large fabricated steel formwork with hydraulic operating equipment in a precast production facility" width="1200" height="675" decoding="async" />
-        <span>Placeholder image — product photography can be replaced in the content system.</span>
-      </div>
+      <nav class="mould-scenario-nav" aria-label="Application scenarios">
+        <span>View by Application Scenario</span>
+        <div>
+          {% for category in precastMouldCatalog.categories %}{% if category.slug != "custom-precast-moulds" %}<a href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">{{ category.name }}</a>{% endif %}{% endfor %}
+        </div>
+      </nav>
     </div>
   </section>
 
-  <section id="mould-categories" class="moulds-categories" aria-labelledby="mould-categories-title">
-    <div class="container">
-      <div class="moulds-section-heading"><div><span class="eyebrow">Five Application Categories</span><h2 id="mould-categories-title">Browse the complete 16-product mould range.</h2></div></div>
-      <div class="mould-category-grid">
-        {% for category in precastMouldCatalog.categories %}
-        {% set categoryProducts = precastMouldCatalog.products | mouldProductsForCategory(category.slug) %}
-        <a class="mould-category-card" href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">
-          <span class="mould-category-number">0{{ loop.index }}</span>
-          <h3>{{ category.name }}</h3>
-          <p>{{ category.description }}</p>
-          <ul>{% for mouldProduct in categoryProducts %}<li>{{ mouldProduct.title }}</li>{% endfor %}</ul>
-          <b>{{ categoryProducts.length }} products <span aria-hidden="true">↓</span></b>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="mould-catalogue" aria-labelledby="mould-catalogue-title">
+  <section id="mould-catalogue" class="mould-catalogue" aria-labelledby="mould-catalogue-title">
     <div class="container">
       <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">16 mould systems organised by application.</h2></div>
       {% for category in precastMouldCatalog.categories %}
       {% set categoryProducts = precastMouldCatalog.products | mouldProductsForCategory(category.slug) %}
       <section class="mould-category-products" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
-        <div class="mould-category-products-heading"><div><span>0{{ loop.index }}</span><h3 id="{{ category.slug }}-title">{{ category.name }}</h3></div><a class="text-link" href="/precast-concrete-molds/{{ category.slug }}/">View category <span aria-hidden="true">→</span></a></div>
-        <div class="mould-products-grid">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
+        <div class="mould-category-products-heading"><div><span>0{{ loop.index }}</span><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div></div>
+        <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
       </section>
       {% endfor %}
     </div>

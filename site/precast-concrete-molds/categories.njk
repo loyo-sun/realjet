@@ -24,7 +24,7 @@ eleventyComputed:
 </header>
 <section class="mould-products-section">
   <div class="container">
-    <div class="mould-products-grid">
+    <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">
       {% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}
     </div>
   </div>

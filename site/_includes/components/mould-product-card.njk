@@ -4,8 +4,7 @@
   </a>
   <div class="mould-product-card-body">
     <span>{{ mouldProduct.order | string }}</span>
-    <h3><a href="/precast-concrete-molds/{{ mouldProduct.slug }}/">{{ mouldProduct.title }}</a></h3>
+    <h3><a href="/precast-concrete-molds/{{ mouldProduct.slug }}/" data-mould-product="{{ mouldProduct.slug }}">{{ mouldProduct.title }}</a></h3>
     <p>{{ mouldProduct.description }}</p>
-    <a class="text-link" href="/precast-concrete-molds/{{ mouldProduct.slug }}/" data-mould-product="{{ mouldProduct.slug }}">View product <span aria-hidden="true">→</span></a>
   </div>
 </article>

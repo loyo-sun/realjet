@@ -303,6 +303,15 @@ const mouldProductCardCount = (precastMouldsPage.match(/data-mould-product=/g) |
 if (mouldProductCardCount !== 16) {
   throw new Error(`Precast moulds page must contain exactly 16 product cards; found ${mouldProductCardCount}.`);
 }
+const mouldScenarioCount = (precastMouldsPage.match(/data-mould-category=/g) || []).length;
+if (mouldScenarioCount !== 4) {
+  throw new Error(`Precast moulds hero must contain exactly four application scenarios; found ${mouldScenarioCount}.`);
+}
+for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View product", "View category"]) {
+  if (precastMouldsPage.includes(removedCatalogueLabel)) {
+    throw new Error(`Precast moulds page retains removed catalogue label: ${removedCatalogueLabel}`);
+  }
+}
 for (const requiredBridgeCategoryContent of [
   "Bridge &amp; Transportation Moulds",
   "Beam and Girder Moulds",
