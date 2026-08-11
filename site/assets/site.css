@@ -498,12 +498,20 @@ button, input, textarea, select { font: inherit; }
   .moulds-hero-copy > p { font-size: 15px; }
   .moulds-hero-actions { align-items: stretch; flex-direction: column; }
   .moulds-proof-list { align-items: flex-start; flex-direction: column; }
-  .moulds-categories { padding: 56px 0; }
+  .moulds-categories { padding: 44px 0 48px; }
   .moulds-section-heading { align-items: flex-start; flex-direction: column; }
+  .moulds-section-heading { margin-bottom: 20px; }
+  .moulds-section-heading h2 { font-size: 30px; }
   .mould-category-grid { grid-template-columns: 1fr; }
-  .mould-category-card:nth-child(n) { grid-column: auto; min-height: 285px; }
-  .mould-enquiry { padding: 44px 0; }
-  .mould-enquiry-shell { padding: 25px 20px; }
+  .mould-category-card:nth-child(n) { grid-column: auto; min-height: 0; padding: 16px 18px; }
+  .mould-category-card h3 { margin-top: 7px; font-size: 20px; }
+  .mould-category-card p, .mould-category-card ul { display: none; }
+  .mould-category-card b { padding-top: 10px; }
+  .mould-enquiry { padding: 34px 0; }
+  .mould-enquiry-shell { gap: 18px; padding: 22px 18px; }
+  .mould-enquiry h2 { font-size: 29px; }
+  .mould-enquiry-copy p { display: none; }
+  .mould-enquiry textarea { min-height: 82px; }
   .mould-enquiry .button { width: 100%; }
 }
 
