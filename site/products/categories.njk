@@ -8,8 +8,8 @@ layout: layouts/base.njk
 pageType: product-category
 robots: index, follow
 eleventyComputed:
-  title: "{{ category.name }} | Realjet"
-  seoTitle: "{{ category.name }} for Precast Concrete | Realjet"
+  title: "{{ category.name | safe }} | Realjet"
+  seoTitle: "{{ category.name | safe }} for Precast Concrete | Realjet"
   description: "{{ category.description }}"
   canonical: "https://realjetech.com/products/{{ category.slug }}/"
 ---
