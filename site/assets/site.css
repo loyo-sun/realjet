@@ -342,7 +342,7 @@ button, input, textarea, select { font: inherit; }
 .moulds-proof-list { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 20px 0 0; padding: 0; color: rgba(255,255,255,.62); font-size: 11px; font-weight: 750; list-style: none; }
 .moulds-proof-list li::before { margin-right: 8px; color: #69d5de; content: "✓"; }
 .moulds-hero-media { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(255,255,255,.06); box-shadow: 0 28px 80px rgba(0,0,0,.28); }
-.moulds-hero-media img { width: 100%; aspect-ratio: 16/9; object-fit: cover; filter: saturate(.82) contrast(1.05); }
+.moulds-hero-media img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; filter: saturate(.82) contrast(1.05); }
 .moulds-hero-media > span { display: block; padding: 11px 14px; color: rgba(255,255,255,.58); font-size: 10px; line-height: 1.45; }
 .mould-scenario-nav { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 22px; align-items: center; padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); border-radius: 13px; background: rgba(2,20,33,.42); backdrop-filter: blur(10px); }
 .mould-scenario-nav > span { color: #69d5de; font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
@@ -377,7 +377,7 @@ button, input, textarea, select { font: inherit; }
 .mould-products-grid { display: grid; grid-template-columns: repeat(var(--mould-columns,4),minmax(0,1fr)); gap: 16px; }
 .mould-product-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 34px rgba(8,37,63,.06); }
 .mould-product-image { display: block; overflow: hidden; background: var(--soft); }
-.mould-product-image img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform 220ms ease; }
+.mould-product-image img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transition: transform 220ms ease; }
 .mould-product-card:hover .mould-product-image img { transform: scale(1.025); }
 .mould-product-card-body { display: flex; min-height: 190px; align-items: flex-start; flex-direction: column; padding: 17px 18px; }
 .mould-product-card-body > span { color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; }
@@ -392,7 +392,7 @@ button, input, textarea, select { font: inherit; }
 .mould-product-hero p { max-width: 690px; margin: 22px 0 0; color: rgba(255,255,255,.72); font-size: 17px; line-height: 1.7; }
 .mould-product-hero .button { margin-top: 28px; }
 .mould-product-hero figure { margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 16px; background: rgba(255,255,255,.06); }
-.mould-product-hero figure img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+.mould-product-hero figure img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; }
 .mould-product-hero figcaption { padding: 10px 13px; color: rgba(255,255,255,.56); font-size: 10px; }
 .mould-product-content { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; padding-block: 68px 82px; }
 .mould-product-content section { padding: 30px; border: 1px solid var(--line); border-radius: 15px; background: var(--white); }
