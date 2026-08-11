@@ -8,10 +8,6 @@ featured: false
 slug: high-precision-u-beam-mould-for-repeatable-precast-geometry
 image: /images/products/6a8e18fe58dd5c73e9f6893082025e8c.jpg
 imageAlt: Completed precast U-beam cross-section beside opened steel formwork in a production workshop
-category: bridge-transportation-moulds
-categoryName: Bridge & Transportation Moulds
-subcategory: beam-girder-moulds
-subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

@@ -8,10 +8,6 @@ featured: false
 slug: reusable-u-beam-formwork-system-for-station-based-production
 image: /images/products/4955024504ff6a0d94d46405ac16d5b6.jpg
 imageAlt: Parallel rows of blue steel U-beam formwork with access platforms and floor rails
-category: bridge-transportation-moulds
-categoryName: Bridge & Transportation Moulds
-subcategory: beam-girder-moulds
-subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

@@ -1,0 +1,37 @@
+---
+pagination:
+  data: precastMouldCatalog.categories
+  size: 1
+  alias: mouldCategory
+permalink: "/precast-concrete-molds/{{ mouldCategory.slug }}/index.html"
+layout: layouts/base.njk
+pageType: precast-mould-category
+robots: index, follow
+eleventyComputed:
+  title: "{{ mouldCategory.name | safe }} | Realjet"
+  seoTitle: "{{ mouldCategory.name | safe }} for Precast Concrete | Realjet"
+  description: "{{ mouldCategory.description }}"
+  canonical: "https://realjetech.com/precast-concrete-molds/{{ mouldCategory.slug }}/"
+---
+{% set categoryProducts = precastMouldCatalog.products | mouldProductsForCategory(mouldCategory.slug) %}
+<header class="listing-hero category-listing-hero">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/precast-concrete-molds/">Precast Concrete Moulds</a><span aria-hidden="true">/</span><span aria-current="page">{{ mouldCategory.name }}</span></nav>
+    <span class="eyebrow">Precast Mould Category</span>
+    <h1>{{ mouldCategory.name }}</h1>
+    <p>{{ mouldCategory.description }}</p>
+  </div>
+</header>
+<section class="mould-products-section">
+  <div class="container">
+    <div class="mould-products-grid">
+      {% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}
+    </div>
+  </div>
+</section>
+<section class="category-contact-band">
+  <div class="container category-contact-inner">
+    <div><span class="eyebrow">Project Review</span><h2>Start with the component drawings and production plan.</h2></div>
+    <a class="button button-primary" href="/precast-concrete-molds/#mould-enquiry">Send Project Requirements <span aria-hidden="true">→</span></a>
+  </div>
+</section>

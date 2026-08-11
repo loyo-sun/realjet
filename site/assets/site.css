@@ -357,6 +357,42 @@ button, input, textarea, select { font: inherit; }
 .mould-category-card ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; padding: 0; list-style: none; }
 .mould-category-card li { padding: 6px 8px; border-radius: 6px; color: var(--navy); background: var(--soft); font-size: 10px; font-weight: 750; }
 .mould-category-card b { margin-top: auto; padding-top: 18px; color: var(--blue); font-size: 12px; }
+.mould-catalogue, .mould-products-section { padding: 74px 0 82px; background: var(--white); }
+.mould-catalogue-heading { margin-bottom: 34px; }
+.mould-catalogue-heading h2 { max-width: 760px; font-size: clamp(32px,4vw,48px); }
+.mould-category-products { scroll-margin-top: 86px; padding: 34px 0; border-top: 1px solid var(--line); }
+.mould-category-products:first-of-type { border-top: 0; }
+.mould-category-products-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 22px; }
+.mould-category-products-heading > div { display: flex; align-items: center; gap: 14px; }
+.mould-category-products-heading span { display: grid; width: 34px; height: 34px; flex: 0 0 auto; place-items: center; border-radius: 50%; color: var(--navy); background: rgba(57,187,200,.2); font-size: 11px; font-weight: 900; }
+.mould-category-products-heading h3 { margin: 0; color: var(--navy); font-size: clamp(25px,3vw,34px); letter-spacing: -.035em; }
+.mould-products-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; }
+.mould-product-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 34px rgba(8,37,63,.06); }
+.mould-product-image { display: block; overflow: hidden; background: var(--soft); }
+.mould-product-image img { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform 220ms ease; }
+.mould-product-card:hover .mould-product-image img { transform: scale(1.025); }
+.mould-product-card-body { display: flex; min-height: 250px; align-items: flex-start; flex-direction: column; padding: 20px; }
+.mould-product-card-body > span { color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; }
+.mould-product-card h3 { margin: 12px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -.025em; }
+.mould-product-card h3 a { color: var(--navy); text-decoration: none; }
+.mould-product-card p { margin: 12px 0 18px; color: var(--muted); font-size: 12px; line-height: 1.62; }
+.mould-product-card .text-link { margin-top: auto; }
+.mould-product-hero { padding: 28px 0 70px; color: var(--white); background: linear-gradient(135deg,#061b2c,#0b405d); }
+.mould-product-hero .breadcrumbs { margin-bottom: 44px; }
+.mould-product-hero-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,.78fr); gap: clamp(40px,6vw,82px); align-items: center; }
+.mould-product-hero .eyebrow { color: #69d5de; }
+.mould-product-hero h1 { max-width: 760px; margin: 16px 0 0; font-size: clamp(42px,5vw,66px); line-height: 1.04; letter-spacing: -.05em; }
+.mould-product-hero p { max-width: 690px; margin: 22px 0 0; color: rgba(255,255,255,.72); font-size: 17px; line-height: 1.7; }
+.mould-product-hero .button { margin-top: 28px; }
+.mould-product-hero figure { margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 16px; background: rgba(255,255,255,.06); }
+.mould-product-hero figure img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.mould-product-hero figcaption { padding: 10px 13px; color: rgba(255,255,255,.56); font-size: 10px; }
+.mould-product-content { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; padding-block: 68px 82px; }
+.mould-product-content section { padding: 30px; border: 1px solid var(--line); border-radius: 15px; background: var(--white); }
+.mould-product-content h2 { margin: 10px 0 0; color: var(--navy); font-size: 30px; line-height: 1.16; letter-spacing: -.035em; }
+.mould-product-content p, .mould-product-content li { color: var(--muted); font-size: 14px; line-height: 1.75; }
+.mould-product-content ul { display: grid; gap: 8px; margin: 20px 0 0; padding-left: 20px; }
+.mould-product-content .mould-boundary { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 12px; }
 .mould-enquiry { padding: 64px 0; color: var(--white); background: var(--navy-dark); }
 .mould-enquiry-shell { display: grid; grid-template-columns: minmax(280px,.8fr) minmax(0,1.2fr); gap: 48px; align-items: start; padding: 38px; border: 1px solid rgba(255,255,255,.14); border-radius: 18px; background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(57,187,200,.03)); }
 .mould-enquiry .eyebrow { color: #69d5de; }
@@ -393,6 +429,8 @@ button, input, textarea, select { font: inherit; }
   .taxonomy-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .moulds-hero-grid { grid-template-columns: 1fr; }
   .moulds-hero-media { display: none; }
+  .mould-products-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .mould-product-hero-grid, .mould-product-content { grid-template-columns: 1fr; }
   .mould-enquiry-shell { grid-template-columns: 1fr; gap: 28px; }
 }
 
@@ -507,6 +545,19 @@ button, input, textarea, select { font: inherit; }
   .mould-category-card h3 { margin-top: 7px; font-size: 20px; }
   .mould-category-card p, .mould-category-card ul { display: none; }
   .mould-category-card b { padding-top: 10px; }
+  .mould-catalogue, .mould-products-section { padding: 48px 0 58px; }
+  .mould-category-products { padding: 28px 0; }
+  .mould-category-products-heading { align-items: flex-start; flex-direction: column; }
+  .mould-products-grid { grid-template-columns: 1fr; }
+  .mould-product-card-body { min-height: 0; }
+  .mould-product-hero { padding: 20px 0 48px; }
+  .mould-product-hero .breadcrumbs { margin-bottom: 32px; }
+  .mould-product-hero h1 { font-size: 42px; }
+  .mould-product-hero p { font-size: 15px; }
+  .mould-product-hero figure { display: none; }
+  .mould-product-content { gap: 14px; padding-block: 42px 58px; }
+  .mould-product-content section { padding: 23px 20px; }
+  .mould-product-content h2 { font-size: 27px; }
   .mould-enquiry { padding: 34px 0; }
   .mould-enquiry-shell { gap: 18px; padding: 22px 18px; }
   .mould-enquiry h2 { font-size: 29px; }

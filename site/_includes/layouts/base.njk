@@ -85,7 +85,7 @@
       }
     </script>
     {% endif %}
-    {% if pageType == "precast-moulds" or pageType == "product-category" %}
+    {% if pageType == "precast-moulds" or pageType == "precast-mould-category" %}
     <script type="application/ld+json">
       {
         "@context":"https://schema.org",
@@ -99,8 +99,21 @@
       }
     </script>
     {% endif %}
+    {% if pageType == "precast-mould-product" %}
+    <script type="application/ld+json">
+      {
+        "@context":"https://schema.org",
+        "@type":"Product",
+        "name":{{ mouldProduct.title | json | safe }},
+        "description":{{ mouldProduct.description | json | safe }},
+        "image":{{ socialImage | json | safe }},
+        "url":{{ canonical | json | safe }},
+        "brand":{"@type":"Brand","name":"Realjet"}
+      }
+    </script>
+    {% endif %}
   </head>
-  <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}{% if pageType == "product-inquiry" %} data-product-slug="{{ product.data.slug }}"{% endif %}>
+  <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}{% if pageType == "precast-mould-product" %} data-product-slug="{{ mouldProduct.slug }}"{% endif %}{% if pageType == "product-inquiry" %} data-product-slug="{{ product.data.slug }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include "components/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>

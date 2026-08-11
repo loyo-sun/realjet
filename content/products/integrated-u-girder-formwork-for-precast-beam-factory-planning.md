@@ -11,10 +11,6 @@ slug: integrated-u-girder-formwork-for-precast-beam-factory-planning
 image: /images/products/b672989850ae88f0862ea9d23a305539.jpg
 imageAlt: Parallel steel U-girder formwork lines with work platforms and central
   rail routes in a factory
-category: bridge-transportation-moulds
-categoryName: Bridge & Transportation Moulds
-subcategory: beam-girder-moulds
-subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

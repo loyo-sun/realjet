@@ -95,15 +95,16 @@ export default function (eleventyConfig) {
     Array.isArray(items) ? items.slice(0, count) : [],
   );
   eleventyConfig.addFilter(
-    "productsForSubcategory",
-    (items, category, subcategory) =>
+    "mouldProductsForCategory",
+    (items, category) =>
       Array.isArray(items)
-        ? items.filter(
-            (item) =>
-              item.data.category === category &&
-              item.data.subcategory === subcategory,
-          )
+        ? items.filter((item) => item.category === category)
         : [],
+  );
+  eleventyConfig.addFilter("mouldCategoryBySlug", (categories, slug) =>
+    Array.isArray(categories)
+      ? categories.find((category) => category.slug === slug)
+      : null,
   );
 
   eleventyConfig.addShortcode(

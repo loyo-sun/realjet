@@ -154,6 +154,13 @@ document.addEventListener("click", (event) => {
   if (mouldCta) {
     trackEvent("mould_cta_click", { cta_id: mouldCta.dataset.mouldCta });
   }
+
+  const mouldProduct = event.target.closest("[data-mould-product]");
+  if (mouldProduct) {
+    trackEvent("mould_product_click", {
+      product_slug: mouldProduct.dataset.mouldProduct,
+    });
+  }
 });
 
 if (document.body.dataset.pageType === "home") trackEvent("home_page_view");
@@ -165,6 +172,14 @@ if (document.body.dataset.pageType === "product") {
 }
 if (document.body.dataset.pageType === "precast-moulds") {
   trackEvent("precast_moulds_page_view");
+}
+if (document.body.dataset.pageType === "precast-mould-category") {
+  trackEvent("precast_mould_category_view");
+}
+if (document.body.dataset.pageType === "precast-mould-product") {
+  trackEvent("precast_mould_product_view", {
+    product_slug: document.body.dataset.productSlug,
+  });
 }
 
 const productGallery = document.querySelector("[data-product-gallery]");

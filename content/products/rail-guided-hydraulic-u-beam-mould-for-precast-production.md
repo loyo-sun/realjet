@@ -8,10 +8,6 @@ featured: false
 slug: rail-guided-hydraulic-u-beam-mould-for-precast-production
 image: /images/products/84b38d920145aec3fec8bfc94da5bdc2.jpg
 imageAlt: Hydraulic cylinder and rail mechanism installed beneath steel U-beam formwork
-category: bridge-transportation-moulds
-categoryName: Bridge & Transportation Moulds
-subcategory: beam-girder-moulds
-subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 

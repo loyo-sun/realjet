@@ -8,10 +8,6 @@ featured: false
 slug: hydraulic-formwork-operating-system-for-precast-moulds
 image: /images/products/movable-hydraulic-formwork-hydraulic-operation.jpg
 imageAlt: Multiple hydraulic cylinders installed on blue steel formwork beside precast curing chambers
-category: custom-precast-moulds
-categoryName: Custom Precast Moulds
-subcategory: movable-hydraulic-moulds
-subcategoryName: Movable and Hydraulic Moulds
 draft: false
 ---
 

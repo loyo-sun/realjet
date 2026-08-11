@@ -8,10 +8,6 @@ featured: false
 slug: hydraulic-side-formwork-for-controlled-u-girder-demoulding
 image: /images/products/b62079b0da20901efdc98ee92abec7f9.jpg
 imageAlt: Yellow hydraulic cylinders connected to long blue steel side formwork at a precast bridge yard
-category: bridge-transportation-moulds
-categoryName: Bridge & Transportation Moulds
-subcategory: beam-girder-moulds
-subcategoryName: Beam and Girder Moulds
 draft: false
 ---
 
