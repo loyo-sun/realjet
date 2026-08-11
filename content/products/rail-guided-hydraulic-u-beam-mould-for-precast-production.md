@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 4
 featured: false
 slug: rail-guided-hydraulic-u-beam-mould-for-precast-production
+productSeries: precast-production-equipment
 image: /images/products/84b38d920145aec3fec8bfc94da5bdc2.jpg
 imageAlt: Hydraulic cylinder and rail mechanism installed beneath steel U-beam formwork
 draft: false

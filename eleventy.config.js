@@ -57,7 +57,21 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("publishedProducts", (collectionApi) =>
     collectionApi
       .getFilteredByGlob("./content/products/*.md")
-      .filter((item) => !item.data.draft || !isProduction)
+      .filter(
+        (item) =>
+          (!item.data.draft || !isProduction) &&
+          item.data.productSeries !== "precast-concrete-moulds",
+      )
+      .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
+  );
+  eleventyConfig.addCollection("publishedMouldProducts", (collectionApi) =>
+    collectionApi
+      .getFilteredByGlob("./content/products/*.md")
+      .filter(
+        (item) =>
+          (!item.data.draft || !isProduction) &&
+          item.data.productSeries === "precast-concrete-moulds",
+      )
       .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
   );
   eleventyConfig.addCollection("featuredProducts", (collectionApi) =>
@@ -65,14 +79,20 @@ export default function (eleventyConfig) {
       .getFilteredByGlob("./content/products/*.md")
       .filter(
         (item) =>
-          (!item.data.draft || !isProduction) && item.data.featured === true,
+          (!item.data.draft || !isProduction) &&
+          item.data.featured === true &&
+          item.data.productSeries !== "precast-concrete-moulds",
       )
       .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
   );
   eleventyConfig.addCollection("latestProducts", (collectionApi) =>
     collectionApi
       .getFilteredByGlob("./content/products/*.md")
-      .filter((item) => !item.data.draft || !isProduction)
+      .filter(
+        (item) =>
+          (!item.data.draft || !isProduction) &&
+          item.data.productSeries !== "precast-concrete-moulds",
+      )
       .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
   );
 
@@ -98,7 +118,7 @@ export default function (eleventyConfig) {
     "mouldProductsForCategory",
     (items, category) =>
       Array.isArray(items)
-        ? items.filter((item) => item.category === category)
+        ? items.filter((item) => item.data?.mouldCategory === category)
         : [],
   );
   eleventyConfig.addFilter("mouldCategoryBySlug", (categories, slug) =>

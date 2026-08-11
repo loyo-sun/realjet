@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 5
 featured: false
 slug: reusable-u-beam-formwork-system-for-station-based-production
+productSeries: precast-production-equipment
 image: /images/products/4955024504ff6a0d94d46405ac16d5b6.jpg
 imageAlt: Parallel rows of blue steel U-beam formwork with access platforms and floor rails
 draft: false

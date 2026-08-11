@@ -1,0 +1,28 @@
+<section class="universal-enquiry-modal" data-universal-enquiry-modal hidden>
+  <button class="universal-enquiry-backdrop" type="button" aria-label="Close enquiry form" data-universal-enquiry-close></button>
+  <div class="universal-enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="universal-enquiry-title" tabindex="-1" data-universal-enquiry-dialog>
+    <button class="universal-enquiry-close" type="button" aria-label="Close enquiry form" data-universal-enquiry-close>×</button>
+    <div data-universal-enquiry-form-shell>
+      <span class="eyebrow">Project Enquiry</span>
+      <h2 id="universal-enquiry-title">Tell Us What You Need</h2>
+      <p class="universal-enquiry-context">Enquiry about: <strong data-universal-enquiry-keyword-label>General enquiry</strong></p>
+      <form name="universal-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-universal-enquiry-form>
+        <input type="hidden" name="form-name" value="universal-enquiry" />
+        <input type="hidden" name="keyword" value="General enquiry" data-universal-enquiry-keyword />
+        <input type="hidden" name="subject" value="Website enquiry: General enquiry" data-universal-enquiry-subject />
+        <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
+        <fieldset>
+          <label><span>Name *</span><input type="text" name="name" autocomplete="name" required /></label>
+          <label><span>E-mail *</span><input type="email" name="email" autocomplete="email" required /></label>
+          <label><span>Message *</span><textarea name="message" rows="5" maxlength="4000" required></textarea></label>
+          <p class="universal-enquiry-privacy">By submitting this form, you acknowledge that Realjet will use the information to respond to your enquiry. See our <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+          <p class="form-error" role="alert" data-universal-enquiry-error hidden>We could not send your enquiry. Please try again or email sales@realjetech.com.</p>
+          <button class="button button-primary" type="submit" data-universal-enquiry-submit>Send Enquiry <span aria-hidden="true">→</span></button>
+        </fieldset>
+      </form>
+    </div>
+    <section class="universal-enquiry-success" role="status" data-universal-enquiry-success hidden tabindex="-1">
+      <span class="success-mark" aria-hidden="true">✓</span><h2>Enquiry Sent</h2><p>Thank you. A Realjet specialist will review your message and contact you.</p><button class="button button-dark" type="button" data-universal-enquiry-close>Close</button>
+    </section>
+  </div>
+</section>

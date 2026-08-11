@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 12
 featured: false
 slug: contract-manufactured-aerial-work-platform-turntable
+productSeries: contract-manufacturing
 image: /images/products/aerial-work-platform-turntable-contract-manufacturing.webp
 imageAlt: Fabricated aerial work platform turntable with welded plates and machined connection interfaces
 draft: false

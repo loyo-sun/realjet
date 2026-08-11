@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 11
 featured: false
 slug: station-based-movable-mould-system-for-precast-beam-production
+productSeries: precast-production-equipment
 image: /images/products/movable-hydraulic-formwork-production-line.jpg
 imageAlt: Long precast production hall with parallel mould stations, floor rails and overhead cranes
 draft: false

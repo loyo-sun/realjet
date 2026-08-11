@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <article class="product-page">
   <header class="product-page-heading">
     <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{% if productSeries == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Precast Concrete Moulds</a>{% else %}<a href="/products/">Products</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
     </div>
   </header>
   <div class="container product-detail-shell">
@@ -21,10 +21,10 @@ layout: layouts/base.njk
         {% endif %}
       </div>
       <div class="product-overview-copy">
-        <span class="eyebrow">Realjet Equipment</span>
+        <span class="eyebrow">{% if productSeries == "contract-manufacturing" %}Contract Manufacturing{% elseif productSeries == "precast-concrete-moulds" %}Precast Concrete Moulds{% else %}Precast Production Equipment{% endif %}</span>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
-        <a class="button button-dark" href="/inquiry/{{ slug }}.html" data-product-inquiry-link>Enquire About This Product <span aria-hidden="true">→</span></a>
+        <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Product enquiry: {{ title }}">Enquire About This Product <span aria-hidden="true">→</span></button>
       </div>
     </section>
 
@@ -34,32 +34,5 @@ layout: layouts/base.njk
     </div>
   </div>
 
-  <section id="quick-product-inquiry" class="product-quick-inquiry" aria-labelledby="quick-product-inquiry-title">
-    <div class="container quick-inquiry-card" data-product-inquiry-container>
-      <div class="quick-inquiry-copy">
-        <span class="eyebrow">Quick Enquiry</span>
-        <h2 id="quick-product-inquiry-title">Ask About This Product</h2>
-        <p>Share your email and the essential project details. Our team will follow up directly.</p>
-      </div>
-      <div class="quick-inquiry-form-shell" data-product-inquiry-shell>
-        <form name="product-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-product-inquiry-form data-inquiry-variant="quick">
-          <input type="hidden" name="form-name" value="product-inquiry" />
-          <input type="hidden" name="product_title" value="{{ title }}" />
-          <input type="hidden" name="product_slug" value="{{ slug }}" />
-          <input type="hidden" name="subject" value="Quick product enquiry: {{ title }}" />
-          <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
-          <fieldset>
-            <label class="quick-inquiry-field"><span>Business Email *</span><input name="email" type="email" autocomplete="email" placeholder="name@company.com" required /></label>
-            <label class="quick-inquiry-field quick-message-field"><span>Message *</span><textarea name="message" rows="4" maxlength="4000" placeholder="Component, output target, project location or other requirements" required data-inquiry-message></textarea><small><span data-inquiry-count>0</span>/4000</small></label>
-            <p class="form-error quick-inquiry-error" role="alert" data-product-inquiry-error hidden>We could not send your enquiry. Please try again.</p>
-            <button class="button button-dark" type="submit" data-product-inquiry-submit>Send Enquiry <span aria-hidden="true">→</span></button>
-          </fieldset>
-        </form>
-      </div>
-      <section class="quick-inquiry-success" role="status" data-product-inquiry-success hidden tabindex="-1">
-        <span class="success-mark" aria-hidden="true">✓</span><div><h2>Enquiry Sent</h2><p>Thank you. A Realjet specialist will contact you at the email address provided.</p></div>
-      </section>
-    </div>
-  </section>
   {% include "components/business-promos.njk" %}
 </article>

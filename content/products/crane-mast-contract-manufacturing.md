@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 20
 featured: false
 slug: crane-mast-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/crane-mast-contract-manufacturing.webp
 imageAlt: Red fabricated crane mast and base structure with machined pin and mounting interfaces
 draft: false

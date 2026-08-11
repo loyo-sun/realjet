@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 19
 featured: false
 slug: crane-jib-arm-contract-manufacturing-machining
+productSeries: contract-manufacturing
 image: /images/products/crane-jib-arm-contract-manufacturing.webp
 imageAlt: Pair of red tubular lattice crane jib arm sections prepared for heavy equipment assembly
 draft: false

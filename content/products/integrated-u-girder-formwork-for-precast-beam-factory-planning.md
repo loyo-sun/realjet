@@ -8,6 +8,7 @@ updated: 2026-08-08
 order: 8
 featured: true
 slug: integrated-u-girder-formwork-for-precast-beam-factory-planning
+productSeries: precast-production-equipment
 image: /images/products/b672989850ae88f0862ea9d23a305539.jpg
 imageAlt: Parallel steel U-girder formwork lines with work platforms and central
   rail routes in a factory

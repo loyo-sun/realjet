@@ -80,7 +80,7 @@
         "@context":"https://schema.org",
         "@graph":[
           {"@type":"Product","name":{{ title | json | safe }},"description":{{ description | json | safe }},"image":{{ socialImage | json | safe }},"url":{{ canonical | json | safe }},"brand":{"@type":"Brand","name":"Realjet"}},
-          {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Products","item":"https://realjetech.com/products/"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":{{ canonical | json | safe }}}]}
+          {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"{% if productSeries == 'precast-concrete-moulds' %}Precast Concrete Moulds{% else %}Products{% endif %}","item":"{% if productSeries == 'precast-concrete-moulds' %}https://realjetech.com/precast-concrete-molds/{% else %}https://realjetech.com/products/{% endif %}"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":{{ canonical | json | safe }}}]}
         ]
       }
     </script>
@@ -99,24 +99,12 @@
       }
     </script>
     {% endif %}
-    {% if pageType == "precast-mould-product" %}
-    <script type="application/ld+json">
-      {
-        "@context":"https://schema.org",
-        "@type":"Product",
-        "name":{{ mouldProduct.title | json | safe }},
-        "description":{{ mouldProduct.description | json | safe }},
-        "image":{{ socialImage | json | safe }},
-        "url":{{ canonical | json | safe }},
-        "brand":{"@type":"Brand","name":"Realjet"}
-      }
-    </script>
-    {% endif %}
   </head>
-  <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}{% if pageType == "precast-mould-product" %} data-product-slug="{{ mouldProduct.slug }}"{% endif %}{% if pageType == "product-inquiry" %} data-product-slug="{{ product.data.slug }}"{% endif %}>
+  <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include "components/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>
+    {% include "components/universal-enquiry-modal.njk" %}
     {% include "components/footer.njk" %}
     <script src="/assets/site/site.js" defer></script>
   </body>

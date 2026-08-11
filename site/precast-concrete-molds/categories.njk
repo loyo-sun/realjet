@@ -13,7 +13,7 @@ eleventyComputed:
   description: "{{ mouldCategory.description }}"
   canonical: "https://realjetech.com/precast-concrete-molds/{{ mouldCategory.slug }}/"
 ---
-{% set categoryProducts = precastMouldCatalog.products | mouldProductsForCategory(mouldCategory.slug) %}
+{% set categoryProducts = collections.publishedMouldProducts | mouldProductsForCategory(mouldCategory.slug) %}
 <header class="listing-hero category-listing-hero">
   <div class="container">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/precast-concrete-molds/">Precast Concrete Moulds</a><span aria-hidden="true">/</span><span aria-current="page">{{ mouldCategory.name }}</span></nav>
@@ -32,6 +32,6 @@ eleventyComputed:
 <section class="category-contact-band">
   <div class="container category-contact-inner">
     <div><span class="eyebrow">Project Review</span><h2>Start with the component drawings and production plan.</h2></div>
-    <a class="button button-primary" href="/precast-concrete-molds/#mould-enquiry">Send Project Requirements <span aria-hidden="true">→</span></a>
+    <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="{{ mouldCategory.name }} enquiry">Send Project Requirements <span aria-hidden="true">→</span></button>
   </div>
 </section>

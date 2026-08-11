@@ -8,6 +8,7 @@ updated: 2026-08-08
 order: 16
 featured: true
 slug: fabricated-fuel-tank-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/fabricated-fuel-tank-contract-manufacturing.webp
 imageAlt: Rectangular welded fuel tank with lifting and mounting features for
   machinery installation

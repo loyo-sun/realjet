@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 14
 featured: false
 slug: concrete-pump-chassis-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/concrete-pump-chassis-contract-manufacturing.webp
 imageAlt: Fabricated concrete pump chassis assembly for construction machinery contract manufacturing
 draft: false

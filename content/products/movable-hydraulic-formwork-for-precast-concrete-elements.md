@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 1
 featured: true
 slug: movable-hydraulic-formwork-for-precast-concrete-elements
+productSeries: precast-production-equipment
 image: /images/products/movable-hydraulic-formwork-main.jpg
 imageAlt: Rail-mounted movable hydraulic formwork carrying a large steel mould in a precast concrete production facility
 gallery:

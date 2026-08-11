@@ -32,7 +32,26 @@ collections:
       - { label: 更新日期, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: 显示顺序, name: order, widget: number, value_type: int, min: 1, required: true, hint: "数字越小，在产品列表和首页推荐产品中的位置越靠前。" }
       - { label: 首页推荐, name: featured, widget: boolean, default: false, required: true, hint: "只有启用此项的产品才会显示在首页产品模块。" }
-      - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "将生成 /products/product-name.html。发布后如无重定向，请勿修改。" }
+      - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "系统会根据产品系列生成对应路径。发布后如无重定向，请勿修改。" }
+      - label: 产品系列
+        name: productSeries
+        widget: select
+        required: true
+        default: precast-production-equipment
+        options:
+          - { label: 机械代加工, value: contract-manufacturing }
+          - { label: 预制混凝土构件产线设备, value: precast-production-equipment }
+          - { label: 预制混凝土模板, value: precast-concrete-moulds }
+      - label: 模板应用分类
+        name: mouldCategory
+        widget: select
+        required: false
+        hint: "仅预制混凝土模板系列需要选择。"
+        options:
+          - { label: 桥梁与交通模板, value: bridge-transportation-moulds }
+          - { label: 建筑构件模板, value: building-component-moulds }
+          - { label: 隧道与地下工程模板, value: tunnel-underground-moulds }
+          - { label: 市政与基础设施模板, value: municipal-infrastructure-moulds }
       - { label: 产品主图, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "用于产品详情页主图和产品卡片。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
       - { label: 主图替代文本, name: imageAlt, widget: string, required: true }
       - label: 产品图片集

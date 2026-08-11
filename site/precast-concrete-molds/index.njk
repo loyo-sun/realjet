@@ -4,7 +4,7 @@ permalink: /precast-concrete-molds/index.html
 pageType: precast-moulds
 title: Precast Concrete Moulds & Formwork | Realjet
 seoTitle: Precast Concrete Moulds & Steel Formwork | Realjet
-description: Explore project-specific steel moulds and formwork for precast bridge, building, tunnel, municipal and custom concrete components.
+description: Explore project-specific steel moulds and formwork for precast bridge, building, tunnel and municipal concrete components.
 canonical: https://realjetech.com/precast-concrete-molds/
 socialImage: https://realjetech.com/images/products/high-precision-hydraulic-formwork.webp
 robots: index, follow
@@ -20,7 +20,7 @@ robots: index, follow
           <p>Reusable steel mould systems engineered around the component geometry, casting sequence, production layout and project requirements of each precast operation.</p>
           <div class="moulds-hero-actions">
             <a class="button button-primary" href="#mould-catalogue" data-mould-cta="explore_products">Explore Products <span aria-hidden="true">↓</span></a>
-            <a class="button button-outline" href="#mould-enquiry" data-mould-cta="hero_enquiry">Request a Technical Review <span aria-hidden="true">→</span></a>
+            <button class="button button-outline" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds technical review">Request a Technical Review <span aria-hidden="true">→</span></button>
           </div>
           <ul class="moulds-proof-list" aria-label="Planning basis">
             <li>Factory or casting-yard use</li>
@@ -34,9 +34,8 @@ robots: index, follow
         </div>
       </div>
       <nav class="mould-scenario-nav" aria-label="Application scenarios">
-        <span>View by Application Scenario</span>
         <div>
-          {% for category in precastMouldCatalog.categories %}{% if category.slug != "custom-precast-moulds" %}<a href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">{{ category.name }}</a>{% endif %}{% endfor %}
+          {% for category in precastMouldCatalog.categories %}<a href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">{{ category.name }}</a>{% endfor %}
         </div>
       </nav>
     </div>
@@ -44,39 +43,21 @@ robots: index, follow
 
   <section id="mould-catalogue" class="mould-catalogue" aria-labelledby="mould-catalogue-title">
     <div class="container">
-      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">16 mould systems organised by application.</h2></div>
+      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">14 mould systems organised by application.</h2></div>
       {% for category in precastMouldCatalog.categories %}
-      {% set categoryProducts = precastMouldCatalog.products | mouldProductsForCategory(category.slug) %}
+      {% set categoryProducts = collections.publishedMouldProducts | mouldProductsForCategory(category.slug) %}
       <section class="mould-category-products" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
-        <div class="mould-category-products-heading"><div><span>0{{ loop.index }}</span><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div></div>
+        <div class="mould-category-products-heading"><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div>
         <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
       </section>
       {% endfor %}
     </div>
   </section>
 
-  <section id="mould-enquiry" class="mould-enquiry" aria-labelledby="mould-enquiry-title">
-    <div class="container mould-enquiry-shell" data-mould-inquiry-container>
-      <div class="mould-enquiry-copy">
-        <span class="eyebrow">Project Enquiry</span>
-        <h2 id="mould-enquiry-title">Send the component type and available drawings.</h2>
-        <p>Realjet will review the mould geometry, operating sequence, production target and factory or casting-yard interfaces before defining the technical scope.</p>
-      </div>
-      <div data-mould-inquiry-shell>
-        <form name="precast-mould-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-mould-inquiry-form>
-          <input type="hidden" name="form-name" value="precast-mould-enquiry" />
-          <input type="hidden" name="subject" value="Precast mould project enquiry" />
-          <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
-          <fieldset>
-            <label><span>Business Email *</span><input type="email" name="email" autocomplete="email" placeholder="name@company.com" required /></label>
-            <label><span>Component and Project Requirements *</span><textarea name="project_requirements" rows="4" maxlength="4000" placeholder="Component type, drawings or dimensions, quantity, target cycle, project country and required delivery schedule" required></textarea></label>
-            <label class="privacy-field"><input type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required /><span>I have read the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and understand that Realjet will use my information to respond to this enquiry.</span></label>
-            <p class="form-error" role="alert" data-mould-inquiry-error hidden>Submission failed. Please try again or email sales@realjetech.com.</p>
-            <button class="button button-primary" type="submit" data-mould-inquiry-submit>Send Requirements <span aria-hidden="true">→</span></button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="mould-enquiry-success" data-mould-inquiry-success hidden tabindex="-1" role="status"><span class="success-mark" aria-hidden="true">✓</span><div><h2>Enquiry Sent</h2><p>Thank you. A Realjet specialist will review the information and contact you.</p></div></div>
+  <section id="mould-enquiry" class="mould-enquiry mould-enquiry-cta" aria-labelledby="mould-enquiry-title">
+    <div class="container mould-enquiry-shell">
+      <div class="mould-enquiry-copy"><span class="eyebrow">Project Enquiry</span><h2 id="mould-enquiry-title">Send the component type and available drawings.</h2><p>Realjet will review the mould geometry, operating sequence, production target and factory or casting-yard interfaces before defining the technical scope.</p></div>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds general enquiry">Start an Enquiry <span aria-hidden="true">→</span></button>
     </div>
   </section>
 </article>

@@ -61,6 +61,7 @@ async function readHomepageRecommendations(directory) {
       draft: /^draft:\s*true\s*$/m.test(source),
       date: readField("date"),
       order: Number(readField("order") || 999),
+      productSeries: readField("productSeries"),
     });
   }
 
@@ -91,9 +92,7 @@ for (const expectedPath of [
   "precast-concrete-molds/building-component-moulds/index.html",
   "precast-concrete-molds/tunnel-underground-moulds/index.html",
   "precast-concrete-molds/municipal-infrastructure-moulds/index.html",
-  "precast-concrete-molds/custom-precast-moulds/index.html",
   "precast-concrete-molds/beam-and-girder-moulds/index.html",
-  "precast-concrete-molds/hydraulic-and-special-shaped-moulds/index.html",
   "admin/index.html",
   "admin/config.yml",
   "admin/config.zh.yml",
@@ -191,8 +190,11 @@ for (const requiredContent of requiredHomepageContent) {
   }
 }
 const productRecommendations = await readHomepageRecommendations("content/products");
+const catalogueProductRecommendations = productRecommendations.filter(
+  (item) => item.productSeries !== "precast-concrete-moulds",
+);
 const insightRecommendations = await readHomepageRecommendations("content/insights");
-const visibleProductTitles = productRecommendations
+const visibleProductTitles = catalogueProductRecommendations
   .filter((item) => item.featured)
   .sort((a, b) => a.order - b.order)
   .slice(0, 4)
@@ -208,7 +210,7 @@ for (const title of [...visibleProductTitles, ...visibleInsightTitles]) {
     throw new Error(`Homepage is missing recommended content: ${title}`);
   }
 }
-for (const item of [...productRecommendations, ...insightRecommendations]) {
+for (const item of [...catalogueProductRecommendations, ...insightRecommendations]) {
   if (!item.featured && homepage.includes(item.title)) {
     throw new Error(`Homepage contains non-recommended content: ${item.title}`);
   }
@@ -219,20 +221,18 @@ if (visibleProductTitles.length === 0 && homepage.includes("Featured Products"))
 if (visibleInsightTitles.length === 0 && homepage.includes("Latest Insights")) {
   throw new Error("Homepage insight section must be hidden without recommendations.");
 }
-for (const product of productRecommendations.filter((item) => !item.draft)) {
+for (const product of catalogueProductRecommendations.filter((item) => !item.draft)) {
   const productPath = `products/${product.slug}.html`;
-  const inquiryPath = `inquiry/${product.slug}.html`;
   await access(join(finalOutput, productPath));
-  await access(join(finalOutput, inquiryPath));
 
   const productDetailPage = await readFile(join(finalOutput, productPath), "utf8");
-  const productInquiryPage = await readFile(join(finalOutput, inquiryPath), "utf8");
   for (const requiredProductDetailContent of [
     product.title,
     "data-product-gallery",
     "product-detail-content-layout",
-    'id="quick-product-inquiry"',
-    `href="/inquiry/${product.slug}.html"`,
+    "data-universal-enquiry",
+    'name="universal-enquiry"',
+    'name="keyword"',
     "Contract Manufacturing",
     "Precast Concrete Production Lines",
   ]) {
@@ -242,15 +242,9 @@ for (const product of productRecommendations.filter((item) => !item.draft)) {
       );
     }
   }
-  for (const requiredInquiryContent of [
-    'meta name="robots" content="noindex, follow"',
-    'name="product-inquiry"',
-    'name="message"',
-    'name="email"',
-    "data-product-inquiry-success",
-  ]) {
-    if (!productInquiryPage.includes(requiredInquiryContent)) {
-      throw new Error(`Product inquiry validation failed: ${requiredInquiryContent}`);
+  for (const retiredProductFormContent of ['name="product-inquiry"', "data-product-inquiry-form", "/inquiry/"]) {
+    if (productDetailPage.includes(retiredProductFormContent)) {
+      throw new Error(`Product detail retains retired enquiry content: ${retiredProductFormContent}`);
     }
   }
 }
@@ -269,7 +263,7 @@ if (insightPage.includes("Choose Your Project Path")) {
   throw new Error("Insight sidebar must only contain the latest-news module.");
 }
 const requiredProductsPageContents = [
-  productRecommendations.length
+  catalogueProductRecommendations.length
     ? "Latest Products"
     : "Product catalogue is being updated.",
   "Contract Manufacturing",
@@ -288,26 +282,28 @@ for (const requiredMouldsPageContent of [
   "Building Component Moulds",
   "Tunnel &amp; Underground Moulds",
   "Municipal &amp; Infrastructure Moulds",
-  "Custom Precast Moulds",
-  'name="precast-mould-enquiry"',
-  'name="privacy_acknowledgement"',
-  "data-mould-inquiry-form",
+  'name="universal-enquiry"',
+  'name="name"',
+  'name="email"',
+  'name="message"',
+  'name="keyword"',
+  "data-universal-enquiry",
   "data-mould-category",
-  "16 mould systems organised by application.",
+  "14 mould systems organised by application.",
 ]) {
   if (!precastMouldsPage.includes(requiredMouldsPageContent)) {
     throw new Error(`Precast moulds page validation failed: ${requiredMouldsPageContent}`);
   }
 }
-const mouldProductCardCount = (precastMouldsPage.match(/data-mould-product=/g) || []).length;
-if (mouldProductCardCount !== 16) {
-  throw new Error(`Precast moulds page must contain exactly 16 product cards; found ${mouldProductCardCount}.`);
+const mouldProductCardCount = (precastMouldsPage.match(/class="mould-product-card"/g) || []).length;
+if (mouldProductCardCount !== 14) {
+  throw new Error(`Precast moulds page must contain exactly 14 product cards; found ${mouldProductCardCount}.`);
 }
 const mouldScenarioCount = (precastMouldsPage.match(/data-mould-category=/g) || []).length;
 if (mouldScenarioCount !== 4) {
   throw new Error(`Precast moulds hero must contain exactly four application scenarios; found ${mouldScenarioCount}.`);
 }
-for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View product", "View category"]) {
+for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View by Application Scenario", "View product", "View category", "Custom Precast Moulds"]) {
   if (precastMouldsPage.includes(removedCatalogueLabel)) {
     throw new Error(`Precast moulds page retains removed catalogue label: ${removedCatalogueLabel}`);
   }
@@ -325,14 +321,29 @@ for (const requiredBridgeCategoryContent of [
 for (const requiredMouldProductContent of [
   "Beam and Girder Moulds",
   "Production scenarios and design basis",
-  "Engineering features",
+  "Product performance and engineering features",
   "Required project inputs",
   "About Realjet",
-  "data-mould-cta=\"product_enquiry\"",
+  "data-product-gallery",
+  "data-universal-enquiry",
+  'name="universal-enquiry"',
 ]) {
   if (!beamMouldProductPage.includes(requiredMouldProductContent)) {
     throw new Error(`Precast mould product validation failed: ${requiredMouldProductContent}`);
   }
+}
+for (const mouldPage of [precastMouldsPage, bridgeMouldsCategoryPage, beamMouldProductPage]) {
+  if (!mouldPage.includes('meta name="robots" content="index, follow"')) {
+    throw new Error("Precast mould pages must remain crawlable with index, follow.");
+  }
+}
+const landingProductActionCount = (precastMouldsPage.match(/class="mould-product-actions"/g) || []).length;
+if (landingProductActionCount !== 14) {
+  throw new Error(`Each landing-page product must have an action group; found ${landingProductActionCount}.`);
+}
+const bridgeProductActionCount = (bridgeMouldsCategoryPage.match(/class="mould-product-actions"/g) || []).length;
+if (bridgeProductActionCount !== 3) {
+  throw new Error(`Bridge category must have three product action groups; found ${bridgeProductActionCount}.`);
 }
 if (!manufacturingPage.includes('meta name="robots" content="noindex, follow"')) {
   throw new Error("Manufacturing construction page must remain noindex.");
@@ -366,14 +377,6 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/contact/",
   "https://realjetech.com/insights/",
   "https://realjetech.com/products/",
-  "https://realjetech.com/precast-concrete-molds/",
-  "https://realjetech.com/precast-concrete-molds/bridge-transportation-moulds/",
-  "https://realjetech.com/precast-concrete-molds/building-component-moulds/",
-  "https://realjetech.com/precast-concrete-molds/tunnel-underground-moulds/",
-  "https://realjetech.com/precast-concrete-molds/municipal-infrastructure-moulds/",
-  "https://realjetech.com/precast-concrete-molds/custom-precast-moulds/",
-  "https://realjetech.com/precast-concrete-molds/beam-and-girder-moulds/",
-  "https://realjetech.com/precast-concrete-molds/hydraulic-and-special-shaped-moulds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
@@ -398,12 +401,13 @@ for (const excludedSitemapUrl of [
   "https://realjetech.com/admin/",
   "https://realjetech.com/manufacturing/",
   "https://realjetech.com/inquiry/intelligent-precast-beam-production-line.html",
+  "https://realjetech.com/precast-concrete-molds/",
 ]) {
-  if (sitemap.includes(`<loc>${excludedSitemapUrl}</loc>`)) {
-    throw new Error(`Sitemap contains noindex URL: ${excludedSitemapUrl}`);
+  if (sitemap.includes(excludedSitemapUrl)) {
+    throw new Error(`Sitemap contains excluded URL or URL prefix: ${excludedSitemapUrl}`);
   }
 }
-for (const product of productRecommendations.filter((item) => !item.draft)) {
+for (const product of catalogueProductRecommendations.filter((item) => !item.draft)) {
   const productUrl = `https://realjetech.com/products/${product.slug}.html`;
   if (!sitemap.includes(`<loc>${productUrl}</loc>`)) {
     throw new Error(`Sitemap validation failed: ${productUrl}`);

@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 17
 featured: false
 slug: railway-multifunction-vehicle-structure-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/railway-multifunction-vehicle-contract-manufacturing.webp
 imageAlt: Large yellow railway multifunction service vehicle body fabricated as a project-specific welded structure
 draft: false

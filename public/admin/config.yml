@@ -32,7 +32,26 @@ collections:
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first in product listings and among recommended homepage products." }
       - { label: Show on Homepage, name: featured, widget: boolean, default: false, required: true, hint: "Only enabled products appear in the homepage product section." }
-      - { label: URL Name, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "Creates /products/product-name.html. Do not change after publication without a redirect." }
+      - { label: URL Name, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Use lowercase letters, numbers and hyphens only."], hint: "The product series determines the published route. Do not change after publication without a redirect." }
+      - label: Product Series
+        name: productSeries
+        widget: select
+        required: true
+        default: precast-production-equipment
+        options:
+          - { label: Contract Manufacturing, value: contract-manufacturing }
+          - { label: Precast Production Equipment, value: precast-production-equipment }
+          - { label: Precast Concrete Moulds, value: precast-concrete-moulds }
+      - label: Mould Application Category
+        name: mouldCategory
+        widget: select
+        required: false
+        hint: "Select only for products in the Precast Concrete Moulds series."
+        options:
+          - { label: Bridge & Transportation Moulds, value: bridge-transportation-moulds }
+          - { label: Building Component Moulds, value: building-component-moulds }
+          - { label: Tunnel & Underground Moulds, value: tunnel-underground-moulds }
+          - { label: Municipal & Infrastructure Moulds, value: municipal-infrastructure-moulds }
       - { label: Main Product Image, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "Used as the main product image and on product cards. Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
       - { label: Main Image Alt, name: imageAlt, widget: string, required: true }
       - label: Product Gallery

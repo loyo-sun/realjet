@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 3
 featured: false
 slug: adjustable-steel-u-girder-formwork-for-highway-viaducts
+productSeries: precast-production-equipment
 image: /images/products/97d77ccb0b5fa3c4407b890f8ef45e04.jpg
 imageAlt: Long inclined steel side form for a precast U-girder inside an industrial production building
 draft: false

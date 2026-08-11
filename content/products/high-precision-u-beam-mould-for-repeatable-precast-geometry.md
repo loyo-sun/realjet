@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 7
 featured: false
 slug: high-precision-u-beam-mould-for-repeatable-precast-geometry
+productSeries: precast-production-equipment
 image: /images/products/6a8e18fe58dd5c73e9f6893082025e8c.jpg
 imageAlt: Completed precast U-beam cross-section beside opened steel formwork in a production workshop
 draft: false

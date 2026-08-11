@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 13
 featured: false
 slug: crane-boom-head-contract-manufacturing-machining
+productSeries: contract-manufacturing
 image: /images/products/crane-boom-head-contract-manufacturing.webp
 imageAlt: Red lattice crane boom head manufactured as a welded construction machinery component
 draft: false

@@ -9,7 +9,6 @@ eleventyExcludeFromCollections: true
   "https://realjetech.com/contact/",
   "https://realjetech.com/insights/",
   "https://realjetech.com/products/",
-  "https://realjetech.com/precast-concrete-molds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
@@ -29,6 +28,4 @@ eleventyExcludeFromCollections: true
 {% for itemUrl in staticUrls %}<url><loc>{{ itemUrl }}</loc></url>{% endfor %}
 {% for post in collections.publishedInsights %}<url><loc>{{ post.url | absoluteUrl(site.url) }}</loc><lastmod>{{ (post.data.updated or post.data.date) | isoDate }}</lastmod></url>{% endfor %}
 {% for product in collections.publishedProducts %}<url><loc>{{ product.url | absoluteUrl(site.url) }}</loc><lastmod>{{ (product.data.updated or product.data.date) | isoDate }}</lastmod></url>{% endfor %}
-{% for category in precastMouldCatalog.categories %}<url><loc>https://realjetech.com/precast-concrete-molds/{{ category.slug }}/</loc></url>{% endfor %}
-{% for mouldProduct in precastMouldCatalog.products %}<url><loc>https://realjetech.com/precast-concrete-molds/{{ mouldProduct.slug }}/</loc><lastmod>2026-08-11</lastmod></url>{% endfor %}
 </urlset>

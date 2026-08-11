@@ -23,6 +23,30 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/inquiry/*"
+  to = "/products/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/precast-concrete-molds/custom-precast-moulds/"
+  to = "/precast-concrete-molds/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/precast-concrete-molds/adjustable-and-modular-moulds/"
+  to = "/precast-concrete-molds/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/precast-concrete-molds/hydraulic-and-special-shaped-moulds/"
+  to = "/precast-concrete-molds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]

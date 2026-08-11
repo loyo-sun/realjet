@@ -1,10 +1,13 @@
 <article class="mould-product-card">
-  <a class="mould-product-image" href="/precast-concrete-molds/{{ mouldProduct.slug }}/" tabindex="-1" aria-hidden="true">
-    <img src="{{ precastMouldCatalog.placeholderImage }}" alt="{{ mouldProduct.imageAlt }}" width="640" height="360" loading="lazy" decoding="async" />
+  <a class="mould-product-image" href="{{ mouldProduct.url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ mouldProduct.data.image }}" alt="{{ mouldProduct.data.imageAlt }}" width="640" height="360" loading="lazy" decoding="async" />
   </a>
   <div class="mould-product-card-body">
-    <span>{{ mouldProduct.order | string }}</span>
-    <h3><a href="/precast-concrete-molds/{{ mouldProduct.slug }}/" data-mould-product="{{ mouldProduct.slug }}">{{ mouldProduct.title }}</a></h3>
-    <p>{{ mouldProduct.description }}</p>
+    <h3><a href="{{ mouldProduct.url }}" data-mould-product="{{ mouldProduct.data.slug }}">{{ mouldProduct.data.title }}</a></h3>
+    <p>{{ mouldProduct.data.description }}</p>
+    <div class="mould-product-actions">
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Product enquiry: {{ mouldProduct.data.title }}">Enquire</button>
+      <a class="button mould-details-button" href="{{ mouldProduct.url }}" data-mould-product="{{ mouldProduct.data.slug }}">Details</a>
+    </div>
   </div>
 </article>

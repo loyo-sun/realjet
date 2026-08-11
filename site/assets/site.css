@@ -142,7 +142,7 @@ button, input, textarea, select { font: inherit; }
 .product-page .product-aside h2 { font-size: 23px; }
 .product-page .latest-product-list a { border-color: #d8e2e8; }
 
-.product-aside-inquiry-jump { display: flex; min-height: 45px; align-items: center; justify-content: space-between; gap: 12px; margin: -7px -4px 22px; padding: 10px 13px; border-radius: 8px; color: var(--white); background: var(--blue); font-size: 12px; font-weight: 850; text-decoration: none; }
+.product-aside-inquiry-jump { display: flex; width: calc(100% + 8px); min-height: 45px; align-items: center; justify-content: space-between; gap: 12px; margin: -7px -4px 22px; padding: 10px 13px; border: 0; border-radius: 8px; color: var(--white); background: var(--blue); font-size: 12px; font-weight: 850; text-decoration: none; cursor: pointer; }
 .product-aside-inquiry-jump b { font-size: 16px; }
 .product-aside-inquiry-jump:hover, .product-aside-inquiry-jump:focus-visible { background: var(--navy); }
 .product-quick-inquiry { scroll-margin-top: 86px; padding: 70px 0; background: var(--soft); }
@@ -344,8 +344,7 @@ button, input, textarea, select { font: inherit; }
 .moulds-hero-media { position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(255,255,255,.06); box-shadow: 0 28px 80px rgba(0,0,0,.28); }
 .moulds-hero-media img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; filter: saturate(.82) contrast(1.05); }
 .moulds-hero-media > span { display: block; padding: 11px 14px; color: rgba(255,255,255,.58); font-size: 10px; line-height: 1.45; }
-.mould-scenario-nav { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 22px; align-items: center; padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); border-radius: 13px; background: rgba(2,20,33,.42); backdrop-filter: blur(10px); }
-.mould-scenario-nav > span { color: #69d5de; font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.mould-scenario-nav { padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); border-radius: 13px; background: rgba(2,20,33,.42); backdrop-filter: blur(10px); }
 .mould-scenario-nav > div { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
 .mould-scenario-nav a { min-width: 0; padding: 6px 14px; border-left: 1px solid rgba(255,255,255,.14); color: var(--white); font-size: 12px; font-weight: 800; line-height: 1.25; text-decoration: none; }
 .mould-scenario-nav a:hover, .mould-scenario-nav a:focus-visible { color: #8ce4ea; }
@@ -384,6 +383,10 @@ button, input, textarea, select { font: inherit; }
 .mould-product-card h3 { margin: 9px 0 0; font-size: 20px; line-height: 1.14; letter-spacing: -.025em; }
 .mould-product-card h3 a { color: var(--navy); text-decoration: none; }
 .mould-product-card p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.42; }
+.mould-product-actions { display: grid; width: 100%; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: auto; padding-top: 16px; }
+.mould-product-actions .button { min-height: 40px; padding: 8px 10px; font-size: 11px; cursor: pointer; }
+.mould-details-button { border: 1px solid var(--line); color: var(--navy); background: var(--white); }
+.mould-details-button:hover, .mould-details-button:focus-visible { border-color: var(--blue); color: var(--blue); }
 .mould-product-hero { padding: 28px 0 70px; color: var(--white); background: linear-gradient(135deg,#061b2c,#0b405d); }
 .mould-product-hero .breadcrumbs { margin-bottom: 44px; }
 .mould-product-hero-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,.78fr); gap: clamp(40px,6vw,82px); align-items: center; }
@@ -420,6 +423,30 @@ button, input, textarea, select { font: inherit; }
 .mould-enquiry-success { display: flex; align-items: center; gap: 18px; }
 .mould-enquiry-success h2 { margin: 0; font-size: 28px; }
 .mould-enquiry-success p { margin: 7px 0 0; color: rgba(255,255,255,.66); font-size: 13px; }
+.mould-enquiry-cta .mould-enquiry-shell { align-items: center; }
+.mould-enquiry-cta .mould-enquiry-shell > .button { justify-self: end; }
+.universal-enquiry-modal { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 22px; }
+.universal-enquiry-modal[hidden] { display: none; }
+.universal-enquiry-backdrop { position: absolute; inset: 0; border: 0; background: rgba(3,17,28,.76); backdrop-filter: blur(7px); cursor: pointer; }
+.universal-enquiry-dialog { position: relative; z-index: 1; width: min(620px,100%); max-height: calc(100svh - 44px); padding: 34px; overflow-y: auto; border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: 0 30px 90px rgba(0,0,0,.34); }
+.universal-enquiry-close { position: absolute; top: 14px; right: 14px; display: grid; width: 38px; height: 38px; place-items: center; padding: 0; border: 0; border-radius: 50%; color: var(--navy); background: var(--soft); font-size: 24px; cursor: pointer; }
+.universal-enquiry-dialog h2 { margin: 10px 42px 0 0; color: var(--navy); font-size: clamp(31px,5vw,42px); line-height: 1.08; letter-spacing: -.04em; }
+.universal-enquiry-context { margin: 13px 0 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.universal-enquiry-context strong { color: var(--navy); }
+.universal-enquiry-dialog form { margin-top: 22px; }
+.universal-enquiry-dialog fieldset { display: grid; gap: 13px; padding: 0; border: 0; }
+.universal-enquiry-dialog label > span { display: block; margin-bottom: 6px; color: var(--navy); font-size: 11px; font-weight: 850; }
+.universal-enquiry-dialog input[type="text"], .universal-enquiry-dialog input[type="email"], .universal-enquiry-dialog textarea { width: 100%; border: 1px solid var(--line); border-radius: 9px; color: var(--navy); background: var(--white); outline: none; }
+.universal-enquiry-dialog input[type="text"], .universal-enquiry-dialog input[type="email"] { min-height: 45px; padding: 9px 12px; }
+.universal-enquiry-dialog textarea { min-height: 120px; padding: 11px 12px; resize: vertical; }
+.universal-enquiry-dialog input:focus, .universal-enquiry-dialog textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(22,120,170,.12); }
+.universal-enquiry-privacy { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.universal-enquiry-privacy a { color: var(--blue); }
+.universal-enquiry-dialog fieldset > .button { justify-self: start; cursor: pointer; }
+.universal-enquiry-success { min-height: 360px; place-items: center; align-content: center; text-align: center; }
+.universal-enquiry-success h2 { margin-right: 0; }
+.universal-enquiry-success p { max-width: 440px; margin: 13px auto 22px; color: var(--muted); line-height: 1.65; }
+body.has-enquiry-modal { overflow: hidden; }
 :focus-visible { outline: 3px solid rgba(57,187,200,.55); outline-offset: 3px; }
 
 @media (max-width: 900px) {
@@ -485,7 +512,7 @@ button, input, textarea, select { font: inherit; }
   .product-overview-copy .button { margin-top: 28px; }
   .product-detail-content-layout { gap: 36px; margin-top: 48px; padding-top: 40px; }
   .product-page { padding-bottom: 72px; }
-  .product-page .product-overview-copy .button[data-product-inquiry-link] { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }
+  .product-page .product-overview-copy .button[data-universal-enquiry] { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }
   .product-quick-inquiry, .product-aside-inquiry-jump { display: none; }
   .product-inquiry-page .product-page-heading { padding: 10px 0; }
   .product-inquiry-section { min-height: calc(100svh - 102px); padding: 10px 0; }
@@ -544,7 +571,6 @@ button, input, textarea, select { font: inherit; }
   .moulds-hero-actions .button { min-height: 42px; flex: 1 1 0; padding: 8px 10px; font-size: 10px; }
   .moulds-proof-list { display: none; }
   .mould-scenario-nav { display: block; padding: 12px; }
-  .mould-scenario-nav > span { display: block; margin-bottom: 8px; }
   .mould-scenario-nav > div { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px; background: rgba(255,255,255,.12); }
   .mould-scenario-nav a { min-height: 40px; padding: 7px 9px; border: 0; background: #0a3148; font-size: 10px; }
   .moulds-categories { padding: 44px 0 48px; }
@@ -576,6 +602,11 @@ button, input, textarea, select { font: inherit; }
   .mould-enquiry-copy p { display: none; }
   .mould-enquiry textarea { min-height: 82px; }
   .mould-enquiry .button { width: 100%; }
+  .mould-enquiry-cta .mould-enquiry-shell > .button { justify-self: stretch; }
+  .universal-enquiry-modal { padding: 12px; }
+  .universal-enquiry-dialog { max-height: calc(100svh - 24px); padding: 27px 18px 20px; }
+  .universal-enquiry-dialog h2 { font-size: 31px; }
+  .universal-enquiry-dialog fieldset > .button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

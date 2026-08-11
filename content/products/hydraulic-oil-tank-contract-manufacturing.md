@@ -7,6 +7,7 @@ updated: 2026-08-08
 order: 15
 featured: true
 slug: hydraulic-oil-tank-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/hydraulic-oil-tank-contract-manufacturing.webp
 imageAlt: Fabricated hydraulic oil tank with multiple ports for mobile and
   industrial machinery

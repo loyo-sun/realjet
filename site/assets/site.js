@@ -129,20 +129,6 @@ document.addEventListener("click", (event) => {
     });
   }
 
-  if (event.target.closest("[data-product-inquiry-link]")) {
-    trackEvent("product_inquiry_click", {
-      product_slug: document.body.dataset.productSlug,
-      cta_id: "product_detail_enquire",
-    });
-  }
-
-  if (event.target.closest("[data-quick-inquiry-jump]")) {
-    trackEvent("product_inquiry_jump_click", {
-      product_slug: document.body.dataset.productSlug,
-      cta_id: "product_quick_inquiry_jump",
-    });
-  }
-
   const mouldCategory = event.target.closest("[data-mould-category]");
   if (mouldCategory) {
     trackEvent("mould_category_click", {
@@ -161,6 +147,12 @@ document.addEventListener("click", (event) => {
       product_slug: mouldProduct.dataset.mouldProduct,
     });
   }
+
+  const enquiryTrigger = event.target.closest("[data-universal-enquiry]");
+  if (enquiryTrigger) {
+    event.preventDefault();
+    openUniversalEnquiry(enquiryTrigger);
+  }
 });
 
 if (document.body.dataset.pageType === "home") trackEvent("home_page_view");
@@ -175,11 +167,6 @@ if (document.body.dataset.pageType === "precast-moulds") {
 }
 if (document.body.dataset.pageType === "precast-mould-category") {
   trackEvent("precast_mould_category_view");
-}
-if (document.body.dataset.pageType === "precast-mould-product") {
-  trackEvent("precast_mould_product_view", {
-    product_slug: document.body.dataset.productSlug,
-  });
 }
 
 const productGallery = document.querySelector("[data-product-gallery]");
@@ -359,186 +346,129 @@ if (contactForm) {
   trackEvent("contact_page_view");
 }
 
-const productInquiryForms = Array.from(
-  document.querySelectorAll("[data-product-inquiry-form]"),
-);
-for (const productInquiryForm of productInquiryForms) {
-  const container = productInquiryForm.closest("[data-product-inquiry-container]");
-  const formShell = container.querySelector("[data-product-inquiry-shell]");
-  const successPanel = container.querySelector("[data-product-inquiry-success]");
-  const errorMessage = productInquiryForm.querySelector("[data-product-inquiry-error]");
-  const submitButton = productInquiryForm.querySelector("[data-product-inquiry-submit]");
-  const fieldset = productInquiryForm.querySelector("fieldset");
-  const messageField = productInquiryForm.querySelector("[data-inquiry-message]");
-  const count = productInquiryForm.querySelector("[data-inquiry-count]");
-  const productSlug = document.body.dataset.productSlug;
-  const inquiryVariant = productInquiryForm.dataset.inquiryVariant || "dedicated";
-  let started = false;
-  let submitted = false;
-  let succeeded = false;
+const universalEnquiryModal = document.querySelector("[data-universal-enquiry-modal]");
+const universalEnquiryDialog = document.querySelector("[data-universal-enquiry-dialog]");
+const universalEnquiryForm = document.querySelector("[data-universal-enquiry-form]");
+const universalEnquiryFormShell = document.querySelector("[data-universal-enquiry-form-shell]");
+const universalEnquirySuccess = document.querySelector("[data-universal-enquiry-success]");
+const universalEnquiryError = document.querySelector("[data-universal-enquiry-error]");
+const universalEnquirySubmit = document.querySelector("[data-universal-enquiry-submit]");
+const universalEnquiryFieldset = universalEnquiryForm?.querySelector("fieldset");
+const universalKeywordField = document.querySelector("[data-universal-enquiry-keyword]");
+const universalKeywordLabel = document.querySelector("[data-universal-enquiry-keyword-label]");
+const universalSubjectField = document.querySelector("[data-universal-enquiry-subject]");
+let universalEnquiryOpener = null;
+let universalEnquiryStarted = false;
+let universalEnquirySubmitted = false;
+let universalEnquirySucceeded = false;
 
-  const eventParameters = {
-    form_id: "product-inquiry",
-    product_slug: productSlug,
-    inquiry_variant: inquiryVariant,
-    cta_id: inquiryVariant === "quick" ? "product_quick_inquiry" : "product_inquiry_form",
+function universalEnquiryParameters() {
+  return {
+    form_id: "universal-enquiry",
+    keyword: universalKeywordField?.value || "General enquiry",
+    product_slug: document.body.dataset.productSlug || undefined,
   };
-  const start = () => {
-    if (started) return;
-    started = true;
-    trackEvent("product_inquiry_start", eventParameters);
-  };
+}
 
-  messageField.addEventListener("input", () => {
-    count.textContent = String(messageField.value.length);
-    start();
-  });
-  submitButton.addEventListener("click", () => {
-    trackEvent("product_inquiry_submit_click", eventParameters);
-  });
-  productInquiryForm.addEventListener("focusin", start);
-  productInquiryForm.addEventListener(
+function openUniversalEnquiry(trigger) {
+  if (!universalEnquiryModal || !universalEnquiryForm) return;
+  universalEnquiryOpener = trigger;
+  universalEnquiryStarted = false;
+  universalEnquirySubmitted = false;
+  universalEnquirySucceeded = false;
+  universalEnquiryForm.reset();
+  universalEnquiryFieldset.disabled = false;
+  universalEnquiryForm.removeAttribute("aria-busy");
+  universalEnquiryError.hidden = true;
+  universalEnquiryFormShell.hidden = false;
+  universalEnquirySuccess.hidden = true;
+  universalEnquirySubmit.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
+  const keyword = trigger.dataset.enquiryKeyword || "General enquiry";
+  universalKeywordField.value = keyword;
+  universalKeywordLabel.textContent = keyword;
+  universalSubjectField.value = `Website enquiry: ${keyword}`;
+  universalEnquiryModal.hidden = false;
+  document.body.classList.add("has-enquiry-modal");
+  universalEnquiryDialog.focus();
+  trackEvent("universal_enquiry_open", universalEnquiryParameters());
+}
+
+function closeUniversalEnquiry() {
+  if (!universalEnquiryModal || universalEnquiryModal.hidden) return;
+  universalEnquiryModal.hidden = true;
+  document.body.classList.remove("has-enquiry-modal");
+  universalEnquiryOpener?.focus();
+}
+
+for (const closeButton of document.querySelectorAll("[data-universal-enquiry-close]")) {
+  closeButton.addEventListener("click", closeUniversalEnquiry);
+}
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && universalEnquiryModal && !universalEnquiryModal.hidden) {
+    closeUniversalEnquiry();
+  }
+});
+
+if (universalEnquiryForm) {
+  const startUniversalEnquiry = () => {
+    if (universalEnquiryStarted) return;
+    universalEnquiryStarted = true;
+    trackEvent("lead_form_start", universalEnquiryParameters());
+  };
+  universalEnquiryForm.addEventListener("focusin", startUniversalEnquiry);
+  universalEnquiryForm.addEventListener(
     "invalid",
     (event) => {
-      start();
-      trackEvent("product_inquiry_validation_error", {
-        ...eventParameters,
+      startUniversalEnquiry();
+      trackEvent("lead_form_validation_error", {
+        ...universalEnquiryParameters(),
         field_name: event.target.name,
       });
     },
     true,
   );
-
-  productInquiryForm.addEventListener("submit", async (event) => {
+  universalEnquiryForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    start();
-    submitted = true;
-    errorMessage.hidden = true;
-    fieldset.disabled = true;
-    productInquiryForm.setAttribute("aria-busy", "true");
-    submitButton.textContent = "Sending…";
-    trackEvent("product_inquiry_submit_attempt", eventParameters);
-
+    startUniversalEnquiry();
+    universalEnquirySubmitted = true;
+    universalEnquiryError.hidden = true;
+    universalEnquiryFieldset.disabled = true;
+    universalEnquiryForm.setAttribute("aria-busy", "true");
+    universalEnquirySubmit.textContent = "Sending…";
+    trackEvent("lead_form_submit_attempt", universalEnquiryParameters());
     try {
-      const body = new URLSearchParams(new FormData(productInquiryForm)).toString();
+      const body = new URLSearchParams(new FormData(universalEnquiryForm)).toString();
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
       });
       if (!response.ok) throw new Error("Submission failed");
-      succeeded = true;
+      universalEnquirySucceeded = true;
       trackEvent("generate_lead", {
-        ...eventParameters,
-        lead_source: inquiryVariant === "quick" ? "product_quick_inquiry" : "product_inquiry",
+        ...universalEnquiryParameters(),
+        lead_source: "universal_enquiry_modal",
       });
-      trackEvent("product_inquiry_success", eventParameters);
-      productInquiryForm.reset();
-      count.textContent = "0";
-      formShell.hidden = true;
-      successPanel.hidden = false;
-      successPanel.focus();
+      universalEnquiryFormShell.hidden = true;
+      universalEnquirySuccess.hidden = false;
+      universalEnquirySuccess.focus();
     } catch {
-      submitted = false;
-      errorMessage.hidden = false;
-      fieldset.disabled = false;
-      productInquiryForm.removeAttribute("aria-busy");
-      submitButton.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
-      trackEvent("product_inquiry_submit_error", {
-        ...eventParameters,
-        error_type: "submission_failed",
-      });
-    }
-  });
-
-  window.addEventListener("pagehide", () => {
-    if (!started || succeeded) return;
-    trackEvent("product_inquiry_abandon", {
-      ...eventParameters,
-      submitted: submitted ? "yes" : "no",
-    });
-  });
-
-  if (inquiryVariant !== "quick" || window.matchMedia("(min-width: 721px)").matches) {
-    trackEvent("product_inquiry_form_view", eventParameters);
-  }
-}
-
-if (document.body.dataset.pageType === "product-inquiry") {
-  trackEvent("product_inquiry_view", {
-    product_slug: document.body.dataset.productSlug,
-  });
-}
-
-const mouldInquiryForm = document.querySelector("[data-mould-inquiry-form]");
-if (mouldInquiryForm) {
-  const container = mouldInquiryForm.closest("[data-mould-inquiry-container]");
-  const formShell = container.querySelector("[data-mould-inquiry-shell]");
-  const successPanel = container.querySelector("[data-mould-inquiry-success]");
-  const errorMessage = mouldInquiryForm.querySelector("[data-mould-inquiry-error]");
-  const submitButton = mouldInquiryForm.querySelector("[data-mould-inquiry-submit]");
-  const fieldset = mouldInquiryForm.querySelector("fieldset");
-  let started = false;
-  let succeeded = false;
-
-  const start = () => {
-    if (started) return;
-    started = true;
-    trackEvent("lead_form_start", {
-      form_id: "precast-mould-enquiry",
-      cta_id: "precast_moulds_page_form",
-    });
-  };
-
-  mouldInquiryForm.addEventListener("focusin", start);
-  mouldInquiryForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    start();
-    errorMessage.hidden = true;
-    fieldset.disabled = true;
-    mouldInquiryForm.setAttribute("aria-busy", "true");
-    submitButton.textContent = "Sending…";
-    trackEvent("lead_form_submit_attempt", {
-      form_id: "precast-mould-enquiry",
-      cta_id: "precast_moulds_page_form",
-    });
-
-    try {
-      const body = new URLSearchParams(new FormData(mouldInquiryForm)).toString();
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body,
-      });
-      if (!response.ok) throw new Error("Submission failed");
-      succeeded = true;
-      trackEvent("generate_lead", {
-        form_id: "precast-mould-enquiry",
-        lead_source: "precast_moulds_page",
-        cta_id: "precast_moulds_page_form",
-      });
-      mouldInquiryForm.reset();
-      formShell.hidden = true;
-      successPanel.hidden = false;
-      successPanel.focus();
-    } catch {
-      errorMessage.hidden = false;
-      fieldset.disabled = false;
-      mouldInquiryForm.removeAttribute("aria-busy");
-      submitButton.innerHTML = 'Send Requirements <span aria-hidden="true">→</span>';
+      universalEnquirySubmitted = false;
+      universalEnquiryError.hidden = false;
+      universalEnquiryFieldset.disabled = false;
+      universalEnquiryForm.removeAttribute("aria-busy");
+      universalEnquirySubmit.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
       trackEvent("lead_form_submit_error", {
-        form_id: "precast-mould-enquiry",
-        cta_id: "precast_moulds_page_form",
+        ...universalEnquiryParameters(),
         error_type: "submission_failed",
       });
     }
   });
-
   window.addEventListener("pagehide", () => {
-    if (!started || succeeded) return;
+    if (!universalEnquiryStarted || universalEnquirySucceeded) return;
     trackEvent("lead_form_abandon", {
-      form_id: "precast-mould-enquiry",
-      cta_id: "precast_moulds_page_form",
+      ...universalEnquiryParameters(),
+      submitted: universalEnquirySubmitted ? "yes" : "no",
     });
   });
 }

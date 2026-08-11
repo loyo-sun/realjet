@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 9
 featured: false
 slug: mould-carrying-transfer-trolley-for-precast-concrete-production
+productSeries: precast-production-equipment
 image: /images/products/movable-hydraulic-formwork-main.jpg
 imageAlt: Rail-mounted transfer trolley carrying a large steel precast mould in an outdoor production area
 draft: false

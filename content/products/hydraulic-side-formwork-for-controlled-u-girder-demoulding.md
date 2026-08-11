@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 6
 featured: false
 slug: hydraulic-side-formwork-for-controlled-u-girder-demoulding
+productSeries: precast-production-equipment
 image: /images/products/b62079b0da20901efdc98ee92abec7f9.jpg
 imageAlt: Yellow hydraulic cylinders connected to long blue steel side formwork at a precast bridge yard
 draft: false

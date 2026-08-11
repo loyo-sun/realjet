@@ -6,6 +6,7 @@ updated: 2026-08-08
 order: 18
 featured: false
 slug: industrial-chain-conveyor-contract-manufacturing
+productSeries: contract-manufacturing
 image: /images/products/industrial-chain-conveyor-contract-manufacturing.webp
 imageAlt: Long industrial chain conveyor assembled with fabricated steel frames and drive units
 draft: false
