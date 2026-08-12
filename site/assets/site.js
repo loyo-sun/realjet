@@ -259,8 +259,7 @@ if (contactForm) {
     "precast-line": "Precast Concrete Component Production Line",
     "precast-moulds": "Precast Concrete Moulds and Formwork",
   };
-  const topicField = contactForm.elements.namedItem("inquiry_topic");
-  if (topicValues[topic] && topicField) topicField.value = topicValues[topic];
+  const selectedTopic = topicValues[topic] || "General Project Enquiry";
 
   contactForm.addEventListener("focusin", (event) => {
     if (fields.includes(event.target)) start();
@@ -299,27 +298,15 @@ if (contactForm) {
     start();
     submitted = true;
     errorMessage.hidden = true;
-    const company = contactForm.elements.namedItem("company").value.trim();
-    const country = contactForm.elements.namedItem("country").value.trim() || "Country not provided";
-    const contactName = contactForm.elements.namedItem("contact_name").value.trim();
-    const selectedTopic = topicField.value;
-    const projectDetails = contactForm.elements.namedItem("project_details").value.trim() || "Not provided";
     const keyword = `Contact page enquiry: ${selectedTopic}`;
     const body = new URLSearchParams({
       "form-name": "universal-enquiry",
       keyword,
       subject: `Website enquiry: ${keyword}`,
       "bot-field": contactForm.elements.namedItem("bot-field").value,
-      name: contactName,
+      name: contactForm.elements.namedItem("name").value.trim(),
       email: contactForm.elements.namedItem("email").value.trim(),
-      message: [
-        `Company: ${company}`,
-        `Country / Region: ${country}`,
-        `Enquiry type: ${selectedTopic}`,
-        `Project details: ${projectDetails}`,
-        `Source page: ${window.location.href}`,
-        "Privacy acknowledgement: accepted",
-      ].join("\n"),
+      message: contactForm.elements.namedItem("message").value.trim(),
     }).toString();
     trackEvent("lead_form_submit_attempt", {
       form_id: formId,
@@ -354,7 +341,7 @@ if (contactForm) {
       errorMessage.hidden = false;
       fieldset.disabled = false;
       contactForm.removeAttribute("aria-busy");
-      submitButton.innerHTML = 'Submit Project Details <span aria-hidden="true">→</span>';
+      submitButton.innerHTML = 'Submit Enquiry <span aria-hidden="true">→</span>';
       trackEvent("lead_form_submit_error", {
         form_id: formId,
         cta_id: "contact_page_form",

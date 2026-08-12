@@ -366,8 +366,6 @@ for (const requiredContactContent of [
   'name="email"',
   'name="message"',
   'name="keyword"',
-  'name="inquiry_topic"',
-  'name="privacy_acknowledgement"',
   "data-contact-form",
   "data-contact-submit",
 ]) {

@@ -34,27 +34,19 @@ robots: index, follow
       <div data-contact-form-shell>
         <span class="eyebrow">Project Details</span>
         <h2>Send an Enquiry</h2>
-        <p class="form-intro">Company, contact name and business email are required. Add any available project details below.</p>
+        <p class="form-intro">Enter your name, e-mail and message. We will use the page context to route your enquiry.</p>
         <form name="universal-enquiry" method="POST" data-contact-form>
           <input type="hidden" name="form-name" value="universal-enquiry" />
           <p class="honeypot"><label>Do not fill this field <input name="bot-field" /></label></p>
           <fieldset>
             <div class="form-grid">
-              <label><span>Company *</span><input name="company" type="text" autocomplete="organization" placeholder="Company name" required /></label>
-              <label><span>Contact Name *</span><input name="contact_name" type="text" autocomplete="name" placeholder="Your name" required /></label>
-              <label><span>Country / Region</span><input name="country" type="text" autocomplete="country-name" placeholder="Project location" /></label>
-              <label><span>Business Email *</span><input name="email" type="email" autocomplete="email" placeholder="name@company.com" required /></label>
-              <label class="form-span"><span>Enquiry Type *</span><select name="inquiry_topic" required>
-                <option value="General Project Enquiry">General Project Enquiry</option>
-                <option value="Custom Machinery Component Manufacturing">Custom Machinery Component Manufacturing</option>
-                <option value="Precast Concrete Component Production Line">Precast Concrete Component Production Line</option>
-                <option value="Precast Concrete Moulds and Formwork">Precast Concrete Moulds and Formwork</option>
-              </select></label>
-              <label class="form-span"><span>Project Details</span><textarea name="project_details" rows="5" placeholder="Briefly describe the product or component type, quantity, target output or schedule, site conditions, and current project stage. Leave unknown items blank."></textarea></label>
-              <label class="privacy-field form-span"><input type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required /><span>I have read the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and understand that Realjet will use my information to respond to this enquiry.</span></label>
+              <label><span>Name *</span><input name="name" type="text" autocomplete="name" placeholder="Your name" required /></label>
+              <label><span>E-mail *</span><input name="email" type="email" autocomplete="email" placeholder="name@company.com" required /></label>
+              <label class="form-span"><span>Message *</span><textarea name="message" rows="5" placeholder="Tell us what you need, the target output or schedule, and any known project requirements." required></textarea></label>
             </div>
+            <p class="form-privacy-note">By submitting, you agree that Realjet may use this information to respond to your enquiry. <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
             <p class="form-error" role="alert" data-contact-error hidden>Submission failed. Please check your connection and try again, or email Realjet directly.</p>
-            <button class="button button-dark contact-submit" type="submit" data-contact-submit>Submit Project Details <span aria-hidden="true">→</span></button>
+            <button class="button button-dark contact-submit" type="submit" data-contact-submit>Submit Enquiry <span aria-hidden="true">→</span></button>
           </fieldset>
         </form>
       </div>

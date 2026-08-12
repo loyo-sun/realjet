@@ -3,6 +3,7 @@ import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Building2, CheckCircle, Clou
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
+import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -644,41 +645,11 @@ function LeadModal({
             </button>
           </div> : <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">Perusahaan, nama kontak dan email bisnis diperlukan. Tambahkan detail proyek apa pun yang tersedia di bawah.</p>
+            <p className="mt-1.5 mb-5 text-xs text-muted">Masukkan nama, e-mail, dan pesan Anda.</p>
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
-              <input type="hidden" name="inquiry_topic" value={title} />
-              <input type="hidden" name="title" defaultValue="" />
-              <input type="hidden" name="subject" defaultValue="" />
               <input type="hidden" name="bot-field" />
-              <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
-                <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
-                  <Field id="company" name="company" label="Nama Perusahaan *" placeholder="Nama perusahaan" icon={Building2} required />
-                  <Field id="contact-name" name="contact_name" label="Nama Kontak *" placeholder="Nama Anda" icon={User} required />
-                  <Field id="country" name="country" label="Negara/Wilayah" placeholder="Lokasi proyek" icon={MapPin} />
-                  <Field id="email" name="email" label="Email Bisnis *" placeholder="nama@perusahaan.com" icon={Send} type="email" required />
-                  <label className="col-span-2 block max-[720px]:col-span-1">
-                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">Detail Proyek</span>
-                    <textarea name="project_details" rows="4" className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" placeholder="Jelaskan secara singkat jenis produk, kuantitas, target keluaran atau jadwal, kondisi lokasi, dan tahapan proyek saat ini. Biarkan item yang tidak diketahui kosong." />
-                  </label>
-                  <div className="col-span-2 flex items-start gap-2 text-[12px] leading-[1.5] text-muted max-[720px]:col-span-1">
-                    <input id="privacy-acknowledgement" type="checkbox" name="privacy_acknowledgement" value="Privacy policy acknowledged" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
-                    <label htmlFor="privacy-acknowledgement">
-                      Saya telah membaca{" "}
-                      <a href="../../privacy/id/" target="_blank" rel="noopener noreferrer" className="font-[750] text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:text-brand-navy">
-                        Kebijakan Privasi
-                      </a>{" "}
-                      dan memahami bahwa Realjet akan menggunakan informasi saya untuk menjawab pertanyaan ini.
-                    </label>
-                  </div>
-                </div>
-                {submissionState === "error" && <p role="alert" className="mt-4 text-[12px] text-red-600">Pengiriman gagal. Silakan periksa koneksi Anda dan coba lagi, atau hubungi kami nanti.</p>}
-                <div className="mt-5 flex justify-end">
-                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75">
-                    {submissionState === "submitting" ? <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> Mengirimkan…</> : <>Kirimkan Detail Proyek <Send size={15} /></>}
-                  </button>
-                </div>
-              </fieldset>
+              <UniversalEnquiryFields locale="id" submissionState={submissionState} />
             </form>
           </>}
       </div>

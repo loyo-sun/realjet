@@ -243,6 +243,8 @@ button, input, textarea, select { font: inherit; }
 .privacy-field { display: flex; align-items: flex-start; gap: 10px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 .privacy-field input { flex: 0 0 auto; width: 16px; height: 16px; margin-top: 2px; accent-color: var(--blue); }
 .privacy-field a { color: var(--blue); font-weight: 750; text-underline-offset: 3px; }
+.form-privacy-note { margin: 14px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.form-privacy-note a { color: var(--blue); font-weight: 750; text-underline-offset: 3px; }
 .contact-submit { margin-top: 23px; cursor: pointer; }
 .form-error { margin: 18px 0 0; color: #b42318; font-size: 12px; font-weight: 700; }
 .contact-success { display: grid; flex: 1; width: 100%; min-height: 480px; place-items: center; align-content: center; padding: 45px 20px; text-align: center; }

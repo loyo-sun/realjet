@@ -25,6 +25,7 @@ import {
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
+import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -698,46 +699,11 @@ function LeadModal({ open, onClose, title }) {
         ) : (
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
+            <p className="mt-1.5 mb-5 text-xs text-muted">请填写姓名、邮箱和信息。</p>
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
-              <input type="hidden" name="inquiry_topic" value={title} />
-              <input type="text" name="title" defaultValue="" readOnly tabIndex="-1" aria-hidden="true" className="sr-only" />
-              <input type="hidden" name="subject" defaultValue="" />
               <input type="hidden" name="bot-field" />
-              <fieldset disabled={submissionState === "submitting"} className="min-w-0 disabled:cursor-wait">
-                <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1">
-                  <Field id="company" name="company" label="公司名称 *" placeholder="公司全称" icon={Building2} required />
-                  <Field id="contact-name" name="contact_name" label="联系人 *" placeholder="您的姓名" icon={User} required />
-                  <Field id="country" name="country" label="国家 / 地区（选填）" placeholder="项目所在国家或地区" icon={MapPin} />
-                  <Field id="email" name="email" label="商务邮箱 *" placeholder="name@company.com" icon={Send} type="email" required />
-                  <label className="col-span-2 block max-[720px]:col-span-1">
-                    <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">项目说明</span>
-                    <textarea
-                      name="project_details"
-                      rows="4"
-                      className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted"
-                      placeholder="请简要说明梁型、数量、目标产能或工期、场地与现场条件，以及当前项目阶段；暂不明确的内容可留空。"
-                    />
-                  </label>
-                  <label className="col-span-2 flex items-start gap-2 text-[11px] text-muted max-[720px]:col-span-1">
-                    <input type="checkbox" name="privacy_acknowledgement" value="已阅读隐私政策并同意联系" required className="mt-1 accent-brand-blue disabled:cursor-wait" />
-                    <span>我已阅读<a href="../../privacy/cn/" className="mx-1 font-[750] text-brand-blue underline decoration-brand-blue/25 underline-offset-3" target="_blank" rel="noreferrer">《隐私政策》</a>，并同意瑞捷使用我的信息回复本次询盘。</span>
-                  </label>
-                </div>
-                {submissionState === "error" && (
-                  <p role="alert" className="mt-4 text-[12px] text-red-600">提交未成功，请检查网络后重试，或稍后与我们联系。</p>
-                )}
-                <div className="mt-5 flex justify-end">
-                  <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75">
-                    {submissionState === "submitting" ? (
-                      <><LoaderCircle className="animate-spin" size={17} aria-hidden="true" /> 提交中…</>
-                    ) : (
-                      <>提交 <Send size={15} /></>
-                    )}
-                  </button>
-                </div>
-              </fieldset>
+              <UniversalEnquiryFields locale="cn" submissionState={submissionState} />
             </form>
           </>
         )}
