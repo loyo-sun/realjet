@@ -3,7 +3,7 @@
 Date: 2026-08-12  
 Production site: <https://realjetech.com/>  
 Historical form-field fix: [`f1118e7`](https://github.com/loyo-sun/realjet/commit/f1118e7) — retained only for defect traceability
-Minimum production acceptance baseline: [`ec87741`](https://github.com/loyo-sun/realjet/commit/ec87741) or later
+Minimum production acceptance baseline: [`32b08cf`](https://github.com/loyo-sun/realjet/commit/32b08cf) or later
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The corrected order is:
 
 ## Pre-test preparation
 
-- [ ] Confirm the GitHub `main` branch is at `ec87741` or later.
-- [ ] Confirm the latest Netlify Production deploy is published from `ec87741` or later.
+- [ ] Confirm the GitHub `main` branch is at `32b08cf` or later.
+- [ ] Confirm the latest Netlify Production deploy is published from `32b08cf` or later.
 - [ ] Test the Production URL, not only a Deploy Preview.
 - [ ] Use a private window or hard refresh to avoid a cached copy of `site.js`.
 - [ ] Prepare a recognizable test email address.
@@ -65,7 +65,7 @@ Screenshot rules:
 
 | Gate | When complete | Required screenshots | Review objective |
 |---|---|---|---|
-| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `ec87741` or later | Verify the minimum accepted production version |
+| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `32b08cf` or later | Verify the minimum accepted production version |
 | G1 | Catalogue enquiry | Success UI and matching Netlify fields | Content and product attribution |
 | G2 | Category enquiry | Success UI and matching Netlify fields | Shared component and category flow |
 | G3 | Product-detail enquiry | Product CTAs, success UI, and Netlify fields | Entry points, content, attribution |
@@ -226,6 +226,8 @@ Verify these events in the visitor-action order:
 - [ ] The page-specific view event, such as `precast_moulds_page_view` or `product_view`
 - [ ] `universal_enquiry_open`
 - [ ] `lead_form_start`
+- [ ] Three `lead_form_field_complete` events, with `field_name` values `name`, `email`, and `message`
+- [ ] `lead_form_submit_click`
 - [ ] `lead_form_submit_attempt`
 - [ ] `generate_lead`
 
@@ -239,6 +241,7 @@ DebugView may display the newest event first, so its visual order can appear rev
 - [ ] A successful event contains `lead_source`.
 - [ ] `page_path` matches the current URL.
 - [ ] `page_type` matches the page type.
+- [ ] The completed form reports `field_count = 3`, `completed_fields = 3`, and `required_fields_completed = 3`.
 - [ ] GA4 receives no Name, E-mail, Message, company name, or other personal data.
 - [ ] One successful submission fires exactly one `generate_lead`.
 - [ ] `generate_lead` is marked as a GA4 key event.
@@ -268,7 +271,7 @@ For each test combination:
 
 Production passes only when all of the following are true:
 
-- [ ] GitHub commit `ec87741` or later is published in Netlify Production.
+- [ ] GitHub commit `32b08cf` or later is published in Netlify Production.
 - [ ] Catalogue, category, and product detail entry points each pass one successful test.
 - [ ] `/contact/` passes one successful test.
 - [ ] All required visitor fields contain the correct values in Netlify.
