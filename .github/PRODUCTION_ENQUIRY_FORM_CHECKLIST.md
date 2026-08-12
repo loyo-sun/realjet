@@ -3,7 +3,7 @@
 Date: 2026-08-12  
 Production site: <https://realjetech.com/>  
 Historical form-field fix: [`f1118e7`](https://github.com/loyo-sun/realjet/commit/f1118e7) — retained only for defect traceability
-Minimum production acceptance baseline: [`a37679b`](https://github.com/loyo-sun/realjet/commit/a37679b) or later
+Minimum production acceptance baseline: [`ec87741`](https://github.com/loyo-sun/realjet/commit/ec87741) or later
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The corrected order is:
 
 ## Pre-test preparation
 
-- [ ] Confirm the GitHub `main` branch is at `a37679b` or later.
-- [ ] Confirm the latest Netlify Production deploy is published from `a37679b` or later.
+- [ ] Confirm the GitHub `main` branch is at `ec87741` or later.
+- [ ] Confirm the latest Netlify Production deploy is published from `ec87741` or later.
 - [ ] Test the Production URL, not only a Deploy Preview.
 - [ ] Use a private window or hard refresh to avoid a cached copy of `site.js`.
 - [ ] Prepare a recognizable test email address.
@@ -65,7 +65,7 @@ Screenshot rules:
 
 | Gate | When complete | Required screenshots | Review objective |
 |---|---|---|---|
-| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `a37679b` or later | Verify the minimum accepted production version |
+| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `ec87741` or later | Verify the minimum accepted production version |
 | G1 | Catalogue enquiry | Success UI and matching Netlify fields | Content and product attribution |
 | G2 | Category enquiry | Success UI and matching Netlify fields | Shared component and category flow |
 | G3 | Product-detail enquiry | Product CTAs, success UI, and Netlify fields | Entry points, content, attribution |
@@ -133,14 +133,11 @@ Test URL: <https://realjetech.com/contact/>
 
 ### UI and submission flow
 
-- [ ] Enter Company.
-- [ ] Enter Contact Name.
-- [ ] Enter Country / Region.
-- [ ] Enter Business Email.
-- [ ] Select the required Enquiry Type; test `Precast Concrete Moulds and Formwork` at minimum.
-- [ ] Enter Project Details containing a unique test marker.
-- [ ] Accept the privacy acknowledgement.
-- [ ] Click `Submit Project Details` once.
+- [ ] Confirm the visible form contains only Name, E-mail, and Message.
+- [ ] Enter Name.
+- [ ] Enter E-mail.
+- [ ] Enter a Message containing a unique test marker.
+- [ ] Click `Submit Enquiry` once.
 - [ ] Confirm the button shows `Submitting…` while the request is active.
 - [ ] Confirm the page shows `Your Project Enquiry Has Been Submitted` after success.
 - [ ] Confirm there is no blank page, script error, or unexpected redirect.
@@ -150,11 +147,11 @@ Test URL: <https://realjetech.com/contact/>
 Open the latest `universal-enquiry` submission and verify:
 
 - [ ] `form-name` equals `universal-enquiry`.
-- [ ] `name` exactly matches Contact Name and is not blank.
+- [ ] `name` exactly matches the entered Name and is not blank.
 - [ ] `email` exactly matches the entered value and is not blank.
-- [ ] `keyword` identifies the Contact page and the selected Enquiry Type.
+- [ ] `keyword` identifies the Contact page; a supported `topic` query parameter may add automatic routing context without adding a visible field.
 - [ ] `subject` begins with `Website enquiry:` and includes the keyword.
-- [ ] `message` contains Company, Country / Region, Enquiry Type, Project Details, Source page, and the privacy acknowledgement; entered values must not be blank or lost.
+- [ ] `message` exactly matches the entered Message and is not blank.
 - [ ] `bot-field` is blank.
 - [ ] One click created only one Netlify submission.
 
@@ -164,12 +161,13 @@ Open the latest `universal-enquiry` submission and verify:
 
 Test URL: <https://realjetech.com/marketing/precast-beam-factory/en/>
 
-- [ ] Complete Company, Contact Name, Country / Region, Business Email, and Project Details, then accept the privacy acknowledgement.
+- [ ] Confirm the visible form contains only Name, E-mail, and Message.
+- [ ] Complete Name, E-mail, and Message.
 - [ ] Submit once and confirm the success state appears.
 - [ ] Open the latest `universal-enquiry` submission.
 - [ ] Confirm `form-name`, `name`, `email`, `keyword`, `subject`, `message`, and `bot-field` follow the same standard contract above.
 - [ ] Confirm `keyword` identifies the beam-factory locale and page title.
-- [ ] Confirm `message` contains Company, Country / Region, Project Details, page locale, Source page, and the privacy acknowledgement.
+- [ ] Confirm `message` exactly matches the entered Message.
 
 **📷 Send screenshots for confirmation (G5):** send the beam-factory success state and its matching `universal-enquiry` Submission details.
 
@@ -178,11 +176,10 @@ Test URL: <https://realjetech.com/marketing/precast-beam-factory/en/>
 The following cases must not create a valid Netlify submission or fire `generate_lead`:
 
 - [ ] Submit an empty form: required-field validation appears and no success state is shown.
-- [ ] Omit Name or Contact Name: submission is blocked.
+- [ ] Omit Name: submission is blocked.
 - [ ] Omit E-mail: submission is blocked.
 - [ ] Enter an invalid email format: submission is blocked.
 - [ ] Omit Message in the universal enquiry form: submission is blocked.
-- [ ] Omit the privacy acknowledgement on the contact form: submission is blocked.
 - [ ] Click the submit button rapidly: only one submission is created.
 - [ ] Close the modal or press Escape during submission: no second request is created.
 - [ ] Submit while offline: an error message appears and retry is possible after reconnecting.
@@ -271,7 +268,7 @@ For each test combination:
 
 Production passes only when all of the following are true:
 
-- [ ] GitHub commit `a37679b` or later is published in Netlify Production.
+- [ ] GitHub commit `ec87741` or later is published in Netlify Production.
 - [ ] Catalogue, category, and product detail entry points each pass one successful test.
 - [ ] `/contact/` passes one successful test.
 - [ ] All required visitor fields contain the correct values in Netlify.
