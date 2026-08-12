@@ -297,6 +297,9 @@ if (contactForm) {
     const submissionTitle = `[${selectedTopic}] ${company} - ${country} - ${contactName}`;
     contactForm.elements.namedItem("title").value = submissionTitle;
     contactForm.elements.namedItem("subject").value = submissionTitle;
+    // Capture successful controls before disabling the fieldset. Disabled
+    // controls are intentionally omitted by the FormData constructor.
+    const body = new URLSearchParams(new FormData(contactForm)).toString();
     trackEvent("lead_form_submit_attempt", {
       form_id: formId,
       cta_id: "contact_page_form",
@@ -307,7 +310,6 @@ if (contactForm) {
     submitButton.textContent = "Submitting…";
 
     try {
-      const body = new URLSearchParams(new FormData(contactForm)).toString();
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -440,12 +442,14 @@ if (universalEnquiryForm) {
     startUniversalEnquiry();
     universalEnquirySubmitted = true;
     universalEnquiryError.hidden = true;
+    // Capture the enquiry fields before disabling them so Netlify receives
+    // the visitor's name, email address and message.
+    const body = new URLSearchParams(new FormData(universalEnquiryForm)).toString();
     universalEnquiryFieldset.disabled = true;
     universalEnquiryForm.setAttribute("aria-busy", "true");
     universalEnquirySubmit.textContent = "Sending…";
     trackEvent("lead_form_submit_attempt", universalEnquiryParameters());
     try {
-      const body = new URLSearchParams(new FormData(universalEnquiryForm)).toString();
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
