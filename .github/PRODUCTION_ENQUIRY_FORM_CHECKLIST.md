@@ -2,8 +2,8 @@
 
 Date: 2026-08-12  
 Production site: <https://realjetech.com/>  
-Form-field fix: [`f1118e7`](https://github.com/loyo-sun/realjet/commit/f1118e7)
-Current conversion UI: [`a1a9219`](https://github.com/loyo-sun/realjet/commit/a1a9219)
+Historical form-field fix: [`f1118e7`](https://github.com/loyo-sun/realjet/commit/f1118e7) — retained only for defect traceability
+Minimum production acceptance baseline: [`6d49ab6`](https://github.com/loyo-sun/realjet/commit/6d49ab6) or later
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The corrected order is:
 
 ## Pre-test preparation
 
-- [ ] Confirm the GitHub `main` branch contains commit `f1118e7` or a later commit.
-- [ ] Confirm the latest Netlify Production deploy is published from that commit or later.
+- [ ] Confirm the GitHub `main` branch is at `6d49ab6` or later.
+- [ ] Confirm the latest Netlify Production deploy is published from `6d49ab6` or later.
 - [ ] Test the Production URL, not only a Deploy Preview.
 - [ ] Use a private window or hard refresh to avoid a cached copy of `site.js`.
 - [ ] Prepare a recognizable test email address.
@@ -65,7 +65,7 @@ Screenshot rules:
 
 | Gate | When complete | Required screenshots | Review objective |
 |---|---|---|---|
-| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `a1a9219` or later | Verify the tested production version |
+| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `6d49ab6` or later | Verify the minimum accepted production version |
 | G1 | Catalogue enquiry | Success UI and matching Netlify fields | Content and product attribution |
 | G2 | Category enquiry | Success UI and matching Netlify fields | Shared component and category flow |
 | G3 | Product-detail enquiry | Product CTAs, success UI, and Netlify fields | Entry points, content, attribution |
@@ -260,7 +260,7 @@ For each test combination:
 
 Production passes only when all of the following are true:
 
-- [ ] The fix is published in Netlify Production.
+- [ ] GitHub commit `6d49ab6` or later is published in Netlify Production.
 - [ ] Catalogue, category, and product detail entry points each pass one successful test.
 - [ ] `/contact/` passes one successful test.
 - [ ] All required visitor fields contain the correct values in Netlify.
