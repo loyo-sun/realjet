@@ -125,15 +125,15 @@ const capabilities = [
 ];
 
 const productCases = [
-  { image: turntableImage, alt: "Aerial work platform turntable fabricated by Realjet", title: "Aerial Work Platform Turntable", client: "SINOBOOM reference", category: "Welded structure" },
-  { image: craneBoomImage, alt: "Crane boom head manufactured by Realjet", title: "Crane Boom Head", client: "SANY reference", category: "Crane component" },
-  { image: chassisImage, alt: "Concrete pump chassis manufactured by Realjet", title: "Concrete Pump Chassis", client: "Zoomlion reference", category: "Machine chassis" },
-  { image: oilTankImage, alt: "Hydraulic oil tank manufactured under Helgesen authorization", title: "Hydraulic Oil Tank", client: "Helgesen licensed", category: "Fluid system component" },
-  { image: fuelTankImage, alt: "Fabricated fuel tank manufactured by Realjet", title: "Fuel Tank", client: "Helgesen licensed", category: "Fabricated tank" },
-  { image: tunnelPlatformImage, alt: "Railway multifunction service vehicle structure", title: "Railway Multifunction Vehicle", client: "CRCHI reference", category: "Rail equipment" },
-  { image: productionLineImage, alt: "Chain conveyor assembly manufactured by Realjet", title: "Chain Conveyor", client: "Changtai reference", category: "Production equipment" },
-  { image: craneJibImage, alt: "Crane jib arm manufactured by Realjet", title: "Crane Jib Arm", client: "SANY reference", category: "Crane component" },
-  { image: craneMastImage, alt: "Crane mast structure manufactured by Realjet", title: "Crane Mast", client: "SANY reference", category: "Welded structure" },
+  { image: turntableImage, alt: "Aerial work platform turntable fabricated by Realjet", title: "Aerial Work Platform Turntable", client: "SINOBOOM reference", category: "Welded structure", href: "/products/contract-manufactured-aerial-work-platform-turntable.html" },
+  { image: craneBoomImage, alt: "Crane boom head manufactured by Realjet", title: "Crane Boom Head", client: "SANY reference", category: "Crane component", href: "/products/crane-boom-head-contract-manufacturing-machining.html" },
+  { image: chassisImage, alt: "Concrete pump chassis manufactured by Realjet", title: "Concrete Pump Chassis", client: "Zoomlion reference", category: "Machine chassis", href: "/products/concrete-pump-chassis-contract-manufacturing.html" },
+  { image: oilTankImage, alt: "Hydraulic oil tank manufactured under Helgesen authorization", title: "Hydraulic Oil Tank", client: "Helgesen licensed", category: "Fluid system component", href: "/products/hydraulic-oil-tank-contract-manufacturing.html" },
+  { image: fuelTankImage, alt: "Fabricated fuel tank manufactured by Realjet", title: "Fuel Tank", client: "Helgesen licensed", category: "Fabricated tank", href: "/products/fabricated-fuel-tank-contract-manufacturing.html" },
+  { image: tunnelPlatformImage, alt: "Railway multifunction service vehicle structure", title: "Railway Multifunction Vehicle", client: "CRCHI reference", category: "Rail equipment", href: "/products/railway-multifunction-vehicle-structure-contract-manufacturing.html" },
+  { image: productionLineImage, alt: "Chain conveyor assembly manufactured by Realjet", title: "Chain Conveyor", client: "Changtai reference", category: "Production equipment", href: "/products/industrial-chain-conveyor-contract-manufacturing.html" },
+  { image: craneJibImage, alt: "Crane jib arm manufactured by Realjet", title: "Crane Jib Arm", client: "SANY reference", category: "Crane component", href: "/products/crane-jib-arm-contract-manufacturing-machining.html" },
+  { image: craneMastImage, alt: "Crane mast structure manufactured by Realjet", title: "Crane Mast", client: "SANY reference", category: "Welded structure", href: "/products/crane-mast-contract-manufacturing.html" },
 ];
 
 const recognitionCases = [
@@ -469,10 +469,10 @@ function App() {
             <div className="mt-12 grid grid-cols-3 gap-5 max-[960px]:grid-cols-2 max-[620px]:grid-cols-1">
               {productCases.map((item) => (
                 <article key={item.title} className="group overflow-hidden rounded-card border border-white/12 bg-brand-navy-light">
-                  <div className="aspect-[4/3] overflow-hidden bg-white/5"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" /></div>
+                  <a href={item.href} aria-label={`View ${item.title} product details`} className="block aspect-[4/3] overflow-hidden bg-white/5"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" /></a>
                   <div className="p-5">
                     <p className="m-0 text-[10px] font-[850] tracking-[.14em] text-brand-cyan uppercase">{item.category}</p>
-                    <h3 className="mt-2 mb-0 text-xl leading-tight font-[850] text-white">{item.title}</h3>
+                    <h3 className="mt-2 mb-0 text-xl leading-tight font-[850]"><a href={item.href} className="text-white no-underline transition hover:text-brand-cyan focus-visible:text-brand-cyan">{item.title}</a></h3>
                     <p className="mt-3 mb-0 text-xs font-bold text-white/54">{item.client}</p>
                   </div>
                 </article>
