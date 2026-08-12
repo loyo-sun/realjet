@@ -8,8 +8,8 @@ featured: false
 slug: manhole-and-inspection-chamber-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: municipal-infrastructure-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a precast manhole and inspection chamber mould"
+image: /images/products/precast-moulds/manhole-and-inspection-chamber-moulds.webp
+imageAlt: "Blue cylindrical steel mould for precast manholes and inspection chambers shown beside a finished chamber unit"
 draft: false
 ---
 

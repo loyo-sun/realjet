@@ -8,8 +8,8 @@ featured: false
 slug: concrete-pipe-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: municipal-infrastructure-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing an inner-core and outer-shell precast concrete pipe mould"
+image: /images/products/precast-moulds/concrete-pipe-moulds.webp
+imageAlt: "Blue cylindrical steel mould for precast concrete pipes shown with a completed concrete pipe section"
 draft: false
 ---
 

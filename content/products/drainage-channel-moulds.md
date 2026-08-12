@@ -8,8 +8,8 @@ featured: false
 slug: drainage-channel-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: municipal-infrastructure-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a precast drainage channel or trench mould"
+image: /images/products/precast-moulds/drainage-channel-moulds.webp
+imageAlt: "Blue steel mould for precast concrete drainage channels shown beside finished U-shaped channel units"
 draft: false
 ---
 

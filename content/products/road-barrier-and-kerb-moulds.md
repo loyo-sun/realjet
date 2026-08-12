@@ -8,8 +8,8 @@ featured: false
 slug: road-barrier-and-kerb-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: municipal-infrastructure-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing precast concrete road barrier and kerb moulds"
+image: /images/products/precast-moulds/road-barrier-and-kerb-moulds.webp
+imageAlt: "Open blue steel mould containing a precast concrete road barrier unit"
 draft: false
 ---
 

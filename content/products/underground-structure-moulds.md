@@ -8,8 +8,8 @@ featured: false
 slug: underground-structure-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: tunnel-underground-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a project-specific precast underground structure mould"
+image: /images/products/precast-moulds/underground-structure-moulds.webp
+imageAlt: "Large blue steel mould for precast underground structural modules shown with completed concrete units"
 draft: false
 ---
 
