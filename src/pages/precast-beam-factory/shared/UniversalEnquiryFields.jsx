@@ -94,7 +94,7 @@ const copyByLocale = {
   },
 };
 
-export default function UniversalEnquiryFields({ locale, submissionState }) {
+export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/` }) {
   const copy = copyByLocale[locale] || copyByLocale.en;
   const disabled = submissionState === "submitting";
 
@@ -122,7 +122,7 @@ export default function UniversalEnquiryFields({ locale, submissionState }) {
       </div>
       <p className="mt-3 text-[11px] leading-[1.5] text-muted">
         {copy.privacy}{" "}
-        <a href={`../../privacy/${locale}/`} target="_blank" rel="noopener noreferrer" className="font-[750] text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:text-brand-navy">{copy.privacyLabel}</a>
+        <a href={privacyHref} target="_blank" rel="noopener noreferrer" className="font-[750] text-brand-blue underline decoration-brand-blue/30 underline-offset-2 hover:text-brand-navy">{copy.privacyLabel}</a>
       </p>
       {submissionState === "error" && <p role="alert" className="mt-4 text-[12px] text-red-600">{copy.error}</p>}
       <div className="mt-5 flex justify-end max-[720px]:mt-3">

@@ -355,6 +355,10 @@ for (const requiredContent of [
   '<link rel="canonical" href="https://realjetech.com/marketing/contract_manufacturing/"',
   'meta name="robots" content="index, follow"',
   "Custom Machinery Component Manufacturing",
+  'name="universal-enquiry"',
+  'name="name"',
+  'name="email"',
+  'name="message"',
 ]) {
   if (!contractManufacturingPage.includes(requiredContent)) {
     throw new Error(`Contract manufacturing page validation failed: ${requiredContent}`);

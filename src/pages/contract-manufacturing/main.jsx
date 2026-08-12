@@ -5,7 +5,7 @@ import { initLandingAnalytics } from "../precast-beam-factory/shared/analytics";
 import "../../styles/tailwind.css";
 
 initLandingAnalytics("en", {
-  formName: "contract-manufacturing-inquiry",
+  formName: "universal-enquiry",
   pageType: "contract_manufacturing",
 });
 

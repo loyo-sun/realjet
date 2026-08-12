@@ -1,8 +1,7 @@
 export const UNIVERSAL_ENQUIRY_FORM_NAME = "universal-enquiry";
 
-export function createBeamFactoryEnquiryBody(form, { locale, title }) {
+export function createUniversalEnquiryBody(form, keyword) {
   const value = (name) => String(form.elements.namedItem(name)?.value || "").trim();
-  const keyword = `Precast beam factory enquiry [${locale}]: ${title}`;
 
   return new URLSearchParams({
     "form-name": UNIVERSAL_ENQUIRY_FORM_NAME,
@@ -13,4 +12,9 @@ export function createBeamFactoryEnquiryBody(form, { locale, title }) {
     email: value("email"),
     message: value("message"),
   }).toString();
+}
+
+export function createBeamFactoryEnquiryBody(form, { locale, title }) {
+  const keyword = `Precast beam factory enquiry [${locale}]: ${title}`;
+  return createUniversalEnquiryBody(form, keyword);
 }

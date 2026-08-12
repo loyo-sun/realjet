@@ -51,24 +51,19 @@
   <body>
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:text-brand-navy">Skip to content</a>
     <form
-      name="contract-manufacturing-inquiry"
+      name="universal-enquiry"
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
       hidden
     >
-      <input type="hidden" name="form-name" value="contract-manufacturing-inquiry" />
-      <input type="hidden" name="inquiry_topic" />
-      <input type="hidden" name="title" />
+      <input type="hidden" name="form-name" value="universal-enquiry" />
+      <input type="hidden" name="keyword" />
       <input type="hidden" name="subject" />
       <input name="bot-field" />
-      <input name="company" />
-      <input name="contact_name" />
-      <input name="country" />
+      <input name="name" />
       <input type="email" name="email" />
-      <input name="component_type" />
-      <textarea name="project_details"></textarea>
-      <input name="privacy_acknowledgement" />
+      <textarea name="message"></textarea>
     </form>
     <div id="root"></div>
     <script type="module" src="../../src/pages/contract-manufacturing/main.jsx"></script>
