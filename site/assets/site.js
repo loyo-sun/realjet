@@ -132,7 +132,7 @@ document.addEventListener("click", (event) => {
   if (event.target.closest("[data-contact-submit]")) {
     const form = event.target.closest("form");
     trackEvent("lead_form_submit_click", {
-      form_id: form?.name || "universal-enquiry",
+      form_id: form?.getAttribute("name") || "universal-enquiry",
       cta_id: "contact_page_form",
     });
   }

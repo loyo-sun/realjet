@@ -101,6 +101,10 @@ function visibleFormFields(form) {
   });
 }
 
+function formIdentifier(form) {
+  return form?.getAttribute("name") || "";
+}
+
 function isComplete(field) {
   if (["checkbox", "radio"].includes(field.type)) return field.checked;
   return Boolean(String(field.value || "").trim());
@@ -135,7 +139,7 @@ function getFormState(form) {
 
 function trackedField(target) {
   const form = target?.form;
-  if (!form || form.name !== runtime.formName) return null;
+  if (!form || formIdentifier(form) !== runtime.formName) return null;
   return visibleFormFields(form).includes(target) ? target : null;
 }
 
@@ -173,7 +177,7 @@ function onClick(event) {
   if (!button) return;
 
   const form = button.form;
-  if (form?.name === runtime.formName && button.type === "submit") {
+  if (formIdentifier(form) === runtime.formName && button.type === "submit") {
     const state = getFormState(form);
     startForm(form, state);
     state.submitClicked = true;
@@ -237,7 +241,7 @@ function onInvalid(event) {
 
 function onSubmit(event) {
   const form = event.target;
-  if (form?.name !== runtime.formName) return;
+  if (formIdentifier(form) !== runtime.formName) return;
   const state = getFormState(form);
   startForm(form, state);
   state.submitted = true;
