@@ -3,7 +3,7 @@
 Date: 2026-08-12  
 Production site: <https://realjetech.com/>  
 Historical form-field fix: [`f1118e7`](https://github.com/loyo-sun/realjet/commit/f1118e7) — retained only for defect traceability
-Minimum production acceptance baseline: [`6d49ab6`](https://github.com/loyo-sun/realjet/commit/6d49ab6) or later
+Minimum production acceptance baseline: [`a37679b`](https://github.com/loyo-sun/realjet/commit/a37679b) or later
 
 ## Purpose
 
@@ -39,8 +39,8 @@ The corrected order is:
 
 ## Pre-test preparation
 
-- [ ] Confirm the GitHub `main` branch is at `6d49ab6` or later.
-- [ ] Confirm the latest Netlify Production deploy is published from `6d49ab6` or later.
+- [ ] Confirm the GitHub `main` branch is at `a37679b` or later.
+- [ ] Confirm the latest Netlify Production deploy is published from `a37679b` or later.
 - [ ] Test the Production URL, not only a Deploy Preview.
 - [ ] Use a private window or hard refresh to avoid a cached copy of `site.js`.
 - [ ] Prepare a recognizable test email address.
@@ -65,16 +65,17 @@ Screenshot rules:
 
 | Gate | When complete | Required screenshots | Review objective |
 |---|---|---|---|
-| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `6d49ab6` or later | Verify the minimum accepted production version |
+| G0 | Netlify Production deploy | `Published`, Production, deploy time, commit `a37679b` or later | Verify the minimum accepted production version |
 | G1 | Catalogue enquiry | Success UI and matching Netlify fields | Content and product attribution |
 | G2 | Category enquiry | Success UI and matching Netlify fields | Shared component and category flow |
 | G3 | Product-detail enquiry | Product CTAs, success UI, and Netlify fields | Entry points, content, attribution |
 | G4 | Contact-page enquiry | Success UI and complete Netlify fields | Contact-form integrity |
-| G5 | Successful GA4 enquiry funnel | DebugView sequence and `generate_lead` parameters | Event order and success semantics |
-| G6 | Product E-mail/WhatsApp clicks | `product_conversion_click` parameter details | Channel, position, product slug |
-| G7 | Beam-factory mould heading link | H3 state, destination, event parameters | H3 link and cross-page analytics |
-| G8 | Mobile checks | Product actions, modal, keyboard-open form | No obstruction and usable submission |
-| G9 | End of testing | Completed result table and final decision | Final production acceptance |
+| G5 | Beam-factory enquiry | Success UI and complete `universal-enquiry` fields | Beam-factory form integrity |
+| G6 | Successful GA4 enquiry funnel | DebugView sequence and `generate_lead` parameters | Event order and success semantics |
+| G7 | Product E-mail/WhatsApp clicks | `product_conversion_click` parameter details | Channel, position, product slug |
+| G8 | Beam-factory mould heading link | H3 state, destination, event parameters | H3 link and cross-page analytics |
+| G9 | Mobile checks | Product actions, modal, keyboard-open form | No obstruction and usable submission |
+| G10 | End of testing | Completed result table and final decision | Final production acceptance |
 
 Send G0 screenshots for confirmation before submitting test enquiries.
 
@@ -146,21 +147,31 @@ Test URL: <https://realjetech.com/contact/>
 
 ### Netlify submission verification
 
-Open the latest `precast-beam-factory-inquiry` submission and verify:
+Open the latest `universal-enquiry` submission and verify:
 
-- [ ] `form-name` equals `precast-beam-factory-inquiry`.
-- [ ] `company` exactly matches the entered value and is not blank.
-- [ ] `contact_name` exactly matches the entered value and is not blank.
-- [ ] `country` matches the entered value; it may be blank only when intentionally omitted.
+- [ ] `form-name` equals `universal-enquiry`.
+- [ ] `name` exactly matches Contact Name and is not blank.
 - [ ] `email` exactly matches the entered value and is not blank.
-- [ ] `inquiry_topic` matches the selected option.
-- [ ] `project_details` exactly matches the entered value.
-- [ ] `privacy_acknowledgement` equals `Privacy policy acknowledged`.
-- [ ] `title` and `subject` contain the enquiry type, company, country, and contact name.
+- [ ] `keyword` identifies the Contact page and the selected Enquiry Type.
+- [ ] `subject` begins with `Website enquiry:` and includes the keyword.
+- [ ] `message` contains Company, Country / Region, Enquiry Type, Project Details, Source page, and the privacy acknowledgement; entered values must not be blank or lost.
 - [ ] `bot-field` is blank.
 - [ ] One click created only one Netlify submission.
 
 **📷 Send screenshots for confirmation (G4):** send the contact-page success state and the matching Netlify Submission details showing every business field is populated correctly.
+
+## Precast beam factory form
+
+Test URL: <https://realjetech.com/marketing/precast-beam-factory/en/>
+
+- [ ] Complete Company, Contact Name, Country / Region, Business Email, and Project Details, then accept the privacy acknowledgement.
+- [ ] Submit once and confirm the success state appears.
+- [ ] Open the latest `universal-enquiry` submission.
+- [ ] Confirm `form-name`, `name`, `email`, `keyword`, `subject`, `message`, and `bot-field` follow the same standard contract above.
+- [ ] Confirm `keyword` identifies the beam-factory locale and page title.
+- [ ] Confirm `message` contains Company, Country / Region, Project Details, page locale, Source page, and the privacy acknowledgement.
+
+**📷 Send screenshots for confirmation (G5):** send the beam-factory success state and its matching `universal-enquiry` Submission details.
 
 ## Validation and failure paths
 
@@ -193,7 +204,7 @@ Send screenshots immediately when any failure-path result differs from the expec
 - [ ] `cta_position` is `overview` or `floating` as appropriate.
 - [ ] `product_slug` matches the current product.
 
-**📷 Send screenshots for confirmation (G6):** send one product-detail action-layout screenshot and GA4 parameter-detail screenshots for at least one E-mail and one WhatsApp click.
+**📷 Send screenshots for confirmation (G7):** send one product-detail action-layout screenshot and GA4 parameter-detail screenshots for at least one E-mail and one WhatsApp click.
 
 ## Beam-factory mould catalogue link
 
@@ -206,7 +217,7 @@ Test: <https://realjetech.com/marketing/precast-beam-factory/en/>
 - [ ] `equipment_name` equals `High-Precision Hydraulic Moulds`.
 - [ ] `destination_path` equals `/precast-concrete-molds/`.
 
-**📷 Send screenshots for confirmation (G7):** send the H3 card, the destination URL, and the GA4 event parameter details.
+**📷 Send screenshots for confirmation (G8):** send the H3 card, the destination URL, and the GA4 event parameter details.
 
 ## GA4 event verification
 
@@ -235,7 +246,7 @@ DebugView may display the newest event first, so its visual order can appear rev
 - [ ] One successful submission fires exactly one `generate_lead`.
 - [ ] `generate_lead` is marked as a GA4 key event.
 
-**📷 Send screenshots for confirmation (G5):** send the complete event sequence, then the expanded `generate_lead` parameters showing `form_id`, `keyword`, `product_slug`, `lead_source`, `page_path`, and `page_type`, with no personal information.
+**📷 Send screenshots for confirmation (G6):** send the complete event sequence, then the expanded `generate_lead` parameters showing `form_id`, `keyword`, `product_slug`, `lead_source`, `page_path`, and `page_type`, with no personal information.
 
 ## Device and browser coverage
 
@@ -254,13 +265,13 @@ For each test combination:
 - [ ] Mobile sticky actions do not cover the form submit button.
 - [ ] English text, non-Latin characters, spaces, hyphens, and common punctuation reach Netlify correctly.
 
-**📷 Send screenshots for confirmation (G8):** send at least three iPhone Safari or Android Chrome screenshots: product-page main and floating actions, the full enquiry modal, and the form while the keyboard is open with submission controls still usable.
+**📷 Send screenshots for confirmation (G9):** send at least three iPhone Safari or Android Chrome screenshots: product-page main and floating actions, the full enquiry modal, and the form while the keyboard is open with submission controls still usable.
 
 ## Acceptance criteria
 
 Production passes only when all of the following are true:
 
-- [ ] GitHub commit `6d49ab6` or later is published in Netlify Production.
+- [ ] GitHub commit `a37679b` or later is published in Netlify Production.
 - [ ] Catalogue, category, and product detail entry points each pass one successful test.
 - [ ] `/contact/` passes one successful test.
 - [ ] All required visitor fields contain the correct values in Netlify.
@@ -276,7 +287,7 @@ Final decision:
 - [ ] Conditional pass — record non-blocking issues and schedule corrections.
 - [ ] Fail — stop paid traffic and repair the enquiry path before resuming.
 
-**📷 Send screenshots for confirmation (G9):** send the completed result table and final decision. Mark production validation complete only after review.
+**📷 Send screenshots for confirmation (G10):** send the completed result table and final decision. Mark production validation complete only after review.
 
 ## Issue log
 
