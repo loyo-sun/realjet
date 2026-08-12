@@ -156,6 +156,15 @@ document.addEventListener("click", (event) => {
     });
   }
 
+  const productConversion = event.target.closest("[data-product-conversion]");
+  if (productConversion) {
+    trackEvent("product_conversion_click", {
+      product_slug: document.body.dataset.productSlug,
+      conversion_type: productConversion.dataset.conversionType,
+      cta_position: productConversion.dataset.conversionPosition,
+    });
+  }
+
   const enquiryTrigger = event.target.closest("[data-universal-enquiry]");
   if (enquiryTrigger) {
     event.preventDefault();

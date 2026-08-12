@@ -5,6 +5,7 @@ const toDate = (value) =>
   value instanceof Date ? value : new Date(`${value}T00:00:00Z`);
 
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add(".github/**");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("DESIGN_TOKENS.md");
   eleventyConfig.ignores.add("content/insights/README.md");
@@ -111,6 +112,9 @@ export default function (eleventyConfig) {
     new URL(value, base).toString(),
   );
   eleventyConfig.addFilter("json", (value) => JSON.stringify(value));
+  eleventyConfig.addFilter("urlencode", (value) =>
+    encodeURIComponent(String(value ?? "")),
+  );
   eleventyConfig.addFilter("limit", (items, count) =>
     Array.isArray(items) ? items.slice(0, count) : [],
   );

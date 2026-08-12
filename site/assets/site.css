@@ -136,6 +136,10 @@ button, input, textarea, select { font: inherit; }
 .product-overview-copy h1 { width: 100%; margin: 15px 0 0; padding-bottom: 22px; border-bottom: 1px solid var(--line); color: var(--navy); font-size: clamp(27px,2.7vw,38px); line-height: 1.16; letter-spacing: -.035em; }
 .product-overview-copy p { max-width: 720px; margin: 24px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
 .product-overview-copy .button { width: 100%; margin-top: 34px; border-radius: 9px; }
+.product-conversion-actions { display: grid; width: 100%; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 34px; }
+.product-overview-copy .product-conversion-actions .button { margin-top: 0; }
+.product-whatsapp-button { color: var(--white); background: #128c4a; }
+.product-whatsapp-button:hover, .product-whatsapp-button:focus-visible { background: #0d713b; }
 .product-detail-content-layout { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 48px; align-items: start; margin-top: 68px; padding-top: 54px; border-top: 1px solid var(--line); }
 .product-description { min-width: 0; }
 .product-page .product-aside { top: 92px; padding: 27px 24px; border: 0; border-radius: 8px; background: var(--soft); box-shadow: none; }
@@ -283,8 +287,8 @@ button, input, textarea, select { font: inherit; }
 .latest-news-list strong { display: -webkit-box; overflow: hidden; color: var(--navy); font-size: 13px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .latest-news-list a:hover strong { color: var(--blue); }
 .insight-contact-actions { position: fixed; top: 50%; right: 18px; z-index: 120; display: grid; gap: 8px; padding: 8px; border: 1px solid rgba(255,255,255,.18); border-radius: 14px; background: rgba(5,26,44,.9); box-shadow: 0 18px 46px rgba(5,26,44,.28); transform: translateY(-50%); backdrop-filter: blur(10px); }
-.insight-contact-actions a { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 10px; color: var(--white); background: rgba(255,255,255,.08); text-decoration: none; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
-.insight-contact-actions a:hover, .insight-contact-actions a:focus-visible { color: var(--navy); background: var(--cyan); transform: translateX(-3px); }
+.insight-contact-actions a, .insight-contact-actions button { display: grid; width: 46px; height: 46px; place-items: center; padding: 0; border: 0; border-radius: 10px; color: var(--white); background: rgba(255,255,255,.08); text-decoration: none; cursor: pointer; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
+.insight-contact-actions a:hover, .insight-contact-actions a:focus-visible, .insight-contact-actions button:hover, .insight-contact-actions button:focus-visible { color: var(--navy); background: var(--cyan); transform: translateX(-3px); }
 .insight-contact-actions svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 .site-footer { padding: 22px 0; color: rgba(255,255,255,.62); background: var(--navy-dark); }
@@ -514,7 +518,8 @@ body.has-enquiry-modal { overflow: hidden; }
   .product-overview-copy .button { margin-top: 28px; }
   .product-detail-content-layout { gap: 36px; margin-top: 48px; padding-top: 40px; }
   .product-page { padding-bottom: 72px; }
-  .product-page .product-overview-copy .button[data-universal-enquiry] { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }
+  .product-page .product-conversion-actions { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; gap: 8px; margin: 0; }
+  .product-page .product-conversion-actions .button { min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }
   .product-quick-inquiry, .product-aside-inquiry-jump { display: none; }
   .product-inquiry-page .product-page-heading { padding: 10px 0; }
   .product-inquiry-section { min-height: calc(100svh - 102px); padding: 10px 0; }
@@ -550,7 +555,7 @@ body.has-enquiry-modal { overflow: hidden; }
   .article-layout { width: calc(100% - 32px); gap: 38px; padding-block: 42px 62px; }
   .article-body { font-size: 16px; }
   .insight-contact-actions { right: 10px; gap: 6px; padding: 6px; }
-  .insight-contact-actions a { width: 42px; height: 42px; }
+  .insight-contact-actions a, .insight-contact-actions button { width: 42px; height: 42px; }
   .site-footer { padding: 20px 0; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
   .footer-meta { align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: 10px; }
