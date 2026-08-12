@@ -989,7 +989,17 @@ export default function App() {
                   />
                 </div>
                 <div className="p-5.5">
-                  <h3 className="font-[850] text-brand-navy">{title}</h3>
+                  <h3 className="font-[850] text-brand-navy">
+                    {href ? (
+                      <a
+                        href={href}
+                        onClick={() => trackEvent("equipment_catalogue_click", { equipment_name: title, destination_path: href })}
+                        className="no-underline transition hover:text-brand-blue focus-visible:text-brand-blue"
+                      >
+                        {title}
+                      </a>
+                    ) : title}
+                  </h3>
                   <p className="mt-2 text-[14px] leading-[1.7] text-muted">{text}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {features.map((feature) => (
@@ -998,15 +1008,6 @@ export default function App() {
                       </span>
                     ))}
                   </div>
-                  {href && (
-                    <a
-                      href={href}
-                      onClick={() => trackEvent("equipment_catalogue_click", { equipment_name: title, destination_path: href })}
-                      className="mt-5 inline-flex items-center gap-2 text-[13px] font-[850] text-brand-blue no-underline transition hover:text-brand-navy focus-visible:text-brand-navy"
-                    >
-                      Explore Precast Moulds <ArrowRight size={15} aria-hidden="true" />
-                    </a>
-                  )}
                 </div>
               </article>
             ))}
