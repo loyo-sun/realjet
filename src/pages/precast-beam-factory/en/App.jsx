@@ -23,7 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
-import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
+import { trackEvent, trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -237,6 +237,7 @@ const products = [
     title: "High-Precision Hydraulic Moulds",
     text: "Synchronised hydraulic opening and closing supports multiple girder geometries. Repeat positioning accuracy remains within 0.3 mm after 5,000 cycles, while the mould joint gap remains within 0.5 mm, supporting consistent dimensions in batch production.",
     features: ["Synchronised Operation", "Flexible Geometry", "Shared Mould for Interior / Exterior Girders"],
+    href: "/precast-concrete-molds/",
   },
   {
     image: castingBedSystemImage,
@@ -978,7 +979,7 @@ export default function App() {
         <Section id="products">
           <SectionHeader kicker="Core Production Equipment" title="Configure the Line Around Its Critical Operations" text="Equipment is not simply added to a list. Each system is selected and combined according to product type, takt time, and site conditions." />
           <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
-            {products.map(({ image, alt, title, text, features }, index) => (
+            {products.map(({ image, alt, title, text, features, href }, index) => (
               <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
                   <img
@@ -997,6 +998,15 @@ export default function App() {
                       </span>
                     ))}
                   </div>
+                  {href && (
+                    <a
+                      href={href}
+                      onClick={() => trackEvent("equipment_catalogue_click", { equipment_name: title, destination_path: href })}
+                      className="mt-5 inline-flex items-center gap-2 text-[13px] font-[850] text-brand-blue no-underline transition hover:text-brand-navy focus-visible:text-brand-navy"
+                    >
+                      Explore Precast Moulds <ArrowRight size={15} aria-hidden="true" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
