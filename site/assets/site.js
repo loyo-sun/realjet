@@ -132,7 +132,7 @@ document.addEventListener("click", (event) => {
   if (event.target.closest("[data-contact-submit]")) {
     const form = event.target.closest("form");
     trackEvent("lead_form_submit_click", {
-      form_id: form?.name || "precast-beam-factory-inquiry",
+      form_id: form?.name || "universal-enquiry",
       cta_id: "contact_page_form",
     });
   }
@@ -303,12 +303,24 @@ if (contactForm) {
     const country = contactForm.elements.namedItem("country").value.trim() || "Country not provided";
     const contactName = contactForm.elements.namedItem("contact_name").value.trim();
     const selectedTopic = topicField.value;
-    const submissionTitle = `[${selectedTopic}] ${company} - ${country} - ${contactName}`;
-    contactForm.elements.namedItem("title").value = submissionTitle;
-    contactForm.elements.namedItem("subject").value = submissionTitle;
-    // Capture successful controls before disabling the fieldset. Disabled
-    // controls are intentionally omitted by the FormData constructor.
-    const body = new URLSearchParams(new FormData(contactForm)).toString();
+    const projectDetails = contactForm.elements.namedItem("project_details").value.trim() || "Not provided";
+    const keyword = `Contact page enquiry: ${selectedTopic}`;
+    const body = new URLSearchParams({
+      "form-name": "universal-enquiry",
+      keyword,
+      subject: `Website enquiry: ${keyword}`,
+      "bot-field": contactForm.elements.namedItem("bot-field").value,
+      name: contactName,
+      email: contactForm.elements.namedItem("email").value.trim(),
+      message: [
+        `Company: ${company}`,
+        `Country / Region: ${country}`,
+        `Enquiry type: ${selectedTopic}`,
+        `Project details: ${projectDetails}`,
+        `Source page: ${window.location.href}`,
+        "Privacy acknowledgement: accepted",
+      ].join("\n"),
+    }).toString();
     trackEvent("lead_form_submit_attempt", {
       form_id: formId,
       cta_id: "contact_page_form",

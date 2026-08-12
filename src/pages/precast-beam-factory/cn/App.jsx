@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
+import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import heroImage from "../../../assets/image/precast-beam-factory-hero.webp";
 import logoImage from "../../../assets/image/realjet-logo.webp";
 import lineV1Image from "../../../assets/image/intelligent-precast-beam-line-v1.webp";
@@ -656,14 +657,7 @@ function LeadModal({ open, onClose, title }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const company = form.elements.company.value.trim();
-    const country = form.elements.country.value.trim() || "国家未填写";
-    const contactName = form.elements.contact_name.value.trim();
-    const submissionTitle = `【${title}】${company}-${country}-${contactName}`;
-    const formData = new FormData(form);
-    formData.set("title", submissionTitle);
-    formData.set("subject", submissionTitle);
-    const body = new URLSearchParams(formData).toString();
+    const body = createBeamFactoryEnquiryBody(form, { locale: "cn", title });
     setSubmissionState("submitting");
 
     try {
@@ -705,8 +699,8 @@ function LeadModal({ open, onClose, title }) {
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
             <p className="mt-1.5 mb-5 text-xs text-muted">填写公司、联系人和邮箱即可提交；如有明确的项目条件，可在项目说明中补充。</p>
-            <form name="precast-beam-factory-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
-              <input type="hidden" name="form-name" value="precast-beam-factory-inquiry" />
+            <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
               <input type="hidden" name="inquiry_topic" value={title} />
               <input type="text" name="title" defaultValue="" readOnly tabIndex="-1" aria-hidden="true" className="sr-only" />
               <input type="hidden" name="subject" defaultValue="" />

@@ -1,4 +1,4 @@
-const DEFAULT_FORM_NAME = "precast-beam-factory-inquiry";
+const DEFAULT_FORM_NAME = "universal-enquiry";
 const CONSENT_KEY = "realjet_analytics_consent_v1";
 const DEFAULT_PAGE_TYPE = "precast_production_line";
 

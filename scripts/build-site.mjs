@@ -361,7 +361,11 @@ for (const requiredContent of [
   }
 }
 for (const requiredContactContent of [
-  'name="precast-beam-factory-inquiry"',
+  'name="universal-enquiry"',
+  'name="name"',
+  'name="email"',
+  'name="message"',
+  'name="keyword"',
   'name="inquiry_topic"',
   'name="privacy_acknowledgement"',
   "data-contact-form",
