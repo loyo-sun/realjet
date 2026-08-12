@@ -14,7 +14,24 @@ imageAlt: End view of a blue steel beam and girder mould installed inside a
   precast concrete production facility
 draft: false
 ---
-<iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1043729811853102%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+## Product Video
+
+<p>This video shows the product, manufacturing process or application scenario.</p>
+
+<div style="display:flex;justify-content:center;margin:24px 0;">
+  <iframe
+    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1043729811853102%2F&show_text=false&width=267&t=0"
+    title="Realjet product demonstration video"
+    width="267"
+    height="476"
+    style="max-width:100%;border:0;overflow:hidden;"
+    scrolling="no"
+    frameborder="0"
+    loading="lazy"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+</div>
 
 ## Production scenarios and design basis
 
