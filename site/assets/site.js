@@ -1,5 +1,13 @@
 const CONSENT_KEY = "realjet_analytics_consent_v1";
 
+const randomHero = document.querySelector("[data-random-hero]");
+if (randomHero) {
+  const heroSources = randomHero.dataset.heroSources?.split("|").filter(Boolean) || [];
+  if (heroSources.length > 1) {
+    randomHero.src = heroSources[Math.floor(Math.random() * heroSources.length)];
+  }
+}
+
 function sendGtag(...args) {
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function gtagQueue() {
