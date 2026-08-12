@@ -8,8 +8,8 @@ featured: false
 slug: box-girder-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: bridge-transportation-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing an external and internal precast box girder mould system"
+image: /images/products/precast-moulds/box-girder-moulds.webp
+imageAlt: "Open blue steel mould surrounding the cross-section of a precast concrete box girder inside a factory"
 draft: false
 ---
 

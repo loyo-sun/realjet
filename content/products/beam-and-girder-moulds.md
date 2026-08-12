@@ -8,8 +8,8 @@ featured: false
 slug: beam-and-girder-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: bridge-transportation-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a project-specific precast beam and girder mould system"
+image: /images/products/precast-moulds/beam-and-girder-moulds.webp
+imageAlt: "End view of a blue steel beam and girder mould installed inside a precast concrete production facility"
 draft: false
 ---
 

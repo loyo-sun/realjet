@@ -8,8 +8,8 @@ featured: false
 slug: segmental-bridge-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: bridge-transportation-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a short-line or long-line precast segmental bridge mould"
+image: /images/products/precast-moulds/segmental-bridge-moulds.webp
+imageAlt: "Large blue and yellow steel mould system for precast segmental bridge production in an outdoor casting yard"
 draft: false
 ---
 

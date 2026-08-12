@@ -8,8 +8,8 @@ featured: false
 slug: floor-and-roof-slab-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: building-component-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a precast floor and roof slab mould or casting table"
+image: /images/products/precast-moulds/floor-and-roof-slab-moulds.webp
+imageAlt: "Blue horizontal steel casting mould for precast concrete floor and roof slabs"
 draft: false
 ---
 

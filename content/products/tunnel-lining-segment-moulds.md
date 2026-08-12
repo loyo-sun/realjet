@@ -8,8 +8,8 @@ featured: false
 slug: tunnel-lining-segment-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: tunnel-underground-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a precast tunnel lining segment mould"
+image: /images/products/precast-moulds/tunnel-lining-segment-moulds.webp
+imageAlt: "Rows of open blue steel moulds with curved contact surfaces for precast tunnel lining segments"
 draft: false
 ---
 

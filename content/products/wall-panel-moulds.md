@@ -8,8 +8,8 @@ featured: false
 slug: wall-panel-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: building-component-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing a precast concrete wall panel mould"
+image: /images/products/precast-moulds/wall-panel-moulds.webp
+imageAlt: "Upright blue steel mould for producing precast concrete wall panels inside a fabrication workshop"
 draft: false
 ---
 

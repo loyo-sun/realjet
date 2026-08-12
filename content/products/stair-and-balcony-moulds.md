@@ -8,8 +8,8 @@ featured: false
 slug: stair-and-balcony-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: building-component-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing precast concrete stair and balcony moulds"
+image: /images/products/precast-moulds/stair-and-balcony-moulds.webp
+imageAlt: "Blue steel mould with shaped end forms for precast concrete stairs and balcony components inside a factory"
 draft: false
 ---
 

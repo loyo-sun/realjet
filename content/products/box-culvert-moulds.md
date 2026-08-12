@@ -8,8 +8,8 @@ featured: false
 slug: box-culvert-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: tunnel-underground-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing an internal and external precast box culvert mould"
+image: /images/products/precast-moulds/box-culvert-moulds.webp
+imageAlt: "Blue steel box culvert mould with hydraulic supports and yellow access platforms in a precast yard"
 draft: false
 ---
 

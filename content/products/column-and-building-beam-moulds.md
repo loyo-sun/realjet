@@ -8,8 +8,8 @@ featured: false
 slug: column-and-building-beam-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: building-component-moulds
-image: /images/products/high-precision-hydraulic-formwork.webp
-imageAlt: "Placeholder view of fabricated steel formwork representing adjustable precast column and building beam moulds"
+image: /images/products/precast-moulds/column-and-building-beam-moulds.webp
+imageAlt: "Long blue steel mould for precast building columns and beams positioned on a factory production floor"
 draft: false
 ---
 
