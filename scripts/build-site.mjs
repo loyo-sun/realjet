@@ -289,7 +289,7 @@ for (const requiredMouldsPageContent of [
   'name="keyword"',
   "data-universal-enquiry",
   "data-mould-category",
-  "14 mould systems organised by application.",
+  "14 Precast Mould Systems",
 ]) {
   if (!precastMouldsPage.includes(requiredMouldsPageContent)) {
     throw new Error(`Precast moulds page validation failed: ${requiredMouldsPageContent}`);

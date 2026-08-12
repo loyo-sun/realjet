@@ -43,7 +43,7 @@ robots: index, follow
 
   <section id="mould-catalogue" class="mould-catalogue" aria-labelledby="mould-catalogue-title">
     <div class="container">
-      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">14 mould systems organised by application.</h2></div>
+      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">14 Precast Mould Systems</h2></div>
       {% for category in precastMouldCatalog.categories %}
       {% set categoryProducts = collections.publishedMouldProducts | mouldProductsForCategory(category.slug) %}
       <section class="mould-category-products" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
