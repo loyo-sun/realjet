@@ -24,8 +24,12 @@ eleventyComputed:
 </header>
 <section class="mould-products-section">
   <div class="container">
-    <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">
-      {% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}
+    <div class="mould-products-carousel">
+      <button class="mould-carousel-control mould-carousel-control-left" type="button" data-mould-carousel-direction="-1" aria-label="View previous {{ mouldCategory.name }} products"><span aria-hidden="true">←</span></button>
+      <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">
+        {% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}
+      </div>
+      <button class="mould-carousel-control mould-carousel-control-right" type="button" data-mould-carousel-direction="1" aria-label="View next {{ mouldCategory.name }} products"><span aria-hidden="true">→</span></button>
     </div>
   </div>
 </section>

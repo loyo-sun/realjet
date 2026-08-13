@@ -45,7 +45,11 @@ robots: index, follow
       {% set categoryProducts = collections.publishedMouldProducts | mouldProductsForCategory(category.slug) %}
       <section class="mould-category-products" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
         <div class="mould-category-products-heading"><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div>
-        <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
+        <div class="mould-products-carousel">
+          <button class="mould-carousel-control mould-carousel-control-left" type="button" data-mould-carousel-direction="-1" aria-label="View previous {{ category.name }} products"><span aria-hidden="true">←</span></button>
+          <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
+          <button class="mould-carousel-control mould-carousel-control-right" type="button" data-mould-carousel-direction="1" aria-label="View next {{ category.name }} products"><span aria-hidden="true">→</span></button>
+        </div>
       </section>
       {% endfor %}
     </div>

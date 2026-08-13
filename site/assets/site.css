@@ -101,6 +101,8 @@ button, input, textarea, select { font: inherit; }
 .product-grid-home .product-card p { font-size: 13px; }
 
 .product-listing-section { padding: 72px 0 88px; background: var(--soft); }
+.mould-products-carousel { position: relative; }
+.mould-carousel-control { display: none; }
 .product-listing-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 42px; align-items: start; }
 .product-listing-main, .product-detail-main { min-width: 0; }
 .product-aside { position: sticky; top: 92px; padding: 25px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
@@ -612,6 +614,11 @@ body.has-enquiry-modal { overflow: hidden; }
   .mould-category-products-heading { align-items: flex-start; flex-direction: column; }
   .mould-category-products .mould-products-grid, .mould-products-section .mould-products-grid { display: flex; gap: 12px; margin-inline: -14px; padding: 0 14px 14px; overflow-x: auto; scroll-padding-inline: 14px; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; }
   .mould-category-products .mould-product-card, .mould-products-section .mould-product-card { flex: 0 0 min(82vw, 320px); scroll-snap-align: start; }
+  .mould-carousel-control { position: absolute; top: 50%; z-index: 4; display: grid; width: 38px; height: 38px; place-items: center; padding: 0; color: var(--navy); border: 1px solid rgba(217,227,233,.9); border-radius: 999px; background: rgba(255,255,255,.94); box-shadow: 0 8px 22px rgba(8,37,63,.14); backdrop-filter: blur(8px); transform: translateY(-50%); cursor: pointer; transition: color 180ms ease, border-color 180ms ease, transform 180ms ease; }
+  .mould-carousel-control:hover, .mould-carousel-control:focus-visible { color: var(--blue); border-color: rgba(22,120,170,.38); transform: translateY(-50%) scale(1.04); }
+  .mould-carousel-control span { font-size: 20px; line-height: 1; }
+  .mould-carousel-control-left { left: 6px; }
+  .mould-carousel-control-right { right: 6px; }
   .mould-product-card-body { min-height: 174px; }
   .mould-product-hero { padding: 20px 0 48px; }
   .mould-product-hero .breadcrumbs { margin-bottom: 32px; }

@@ -514,3 +514,24 @@ if (universalEnquiryForm) {
     });
   });
 }
+
+for (const carousel of document.querySelectorAll(".mould-products-carousel")) {
+  const track = carousel.querySelector(".mould-products-grid");
+  const controls = carousel.querySelectorAll("[data-mould-carousel-direction]");
+  if (!track || !controls.length) continue;
+
+  const updateControls = () => {
+    const hasOverflow = track.scrollWidth > track.clientWidth + 1;
+    for (const control of controls) control.hidden = !hasOverflow;
+  };
+
+  for (const control of controls) {
+    control.addEventListener("click", () => {
+      const direction = Number(control.dataset.mouldCarouselDirection) || 1;
+      track.scrollBy({ left: direction * track.clientWidth * 0.84, behavior: "smooth" });
+    });
+  }
+
+  updateControls();
+  window.addEventListener("resize", updateControls);
+}
