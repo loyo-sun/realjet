@@ -550,7 +550,7 @@ function Header({ onLead }) {
   return (
     <header className="sticky top-0 z-40 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
       <div className="site-container flex h-full items-center gap-6">
-        <a href="#top" aria-label="瑞捷机械" className="shrink-0">
+        <a href="/" aria-label="瑞捷首页" className="shrink-0">
           <img src={logoImage} alt="瑞捷机械 Logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[27px]" />
         </a>
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1000px]:hidden" aria-label="主导航">

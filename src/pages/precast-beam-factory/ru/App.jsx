@@ -573,7 +573,7 @@ function Header({ onLead }) {
   return (
     <header className="sticky top-0 z-40 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
       <div className="site-container flex h-full items-center gap-6 max-[720px]:gap-2">
-        <a href="#top" aria-label="Realjet" className="shrink-0">
+        <a href="/" aria-label="Главная страница Realjet" className="shrink-0">
           <img src={logoImage} alt="Логотип Realjet" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
         </a>
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1100px]:hidden" aria-label="Основная навигация">
