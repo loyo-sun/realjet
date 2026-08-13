@@ -83,10 +83,32 @@ document.querySelector("[data-open-analytics]")?.addEventListener("click", showC
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-navigation");
+const menuLabel = menuToggle?.querySelector(".sr-only");
+const mobileMenuBackdrop = document.querySelector("[data-mobile-menu-backdrop]");
+
+function setMobileMenu(open) {
+  menuToggle?.setAttribute("aria-expanded", String(open));
+  navigation?.classList.toggle("is-open", open);
+  document.body.classList.toggle("has-mobile-menu", open);
+  if (menuLabel) menuLabel.textContent = open ? "Close navigation" : "Open navigation";
+  if (mobileMenuBackdrop) mobileMenuBackdrop.hidden = !open;
+}
+
 menuToggle?.addEventListener("click", () => {
-  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!expanded));
-  navigation?.classList.toggle("is-open", !expanded);
+  setMobileMenu(menuToggle.getAttribute("aria-expanded") !== "true");
+});
+mobileMenuBackdrop?.addEventListener("click", () => setMobileMenu(false));
+navigation?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) setMobileMenu(false);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
+    setMobileMenu(false);
+    menuToggle.focus();
+  }
+});
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 720) setMobileMenu(false);
 });
 
 document.addEventListener("click", (event) => {

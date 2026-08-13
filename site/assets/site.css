@@ -38,6 +38,7 @@ button, input, textarea, select { font: inherit; }
 .site-navigation a:hover, .site-navigation a:focus-visible { color: var(--white); }
 .menu-toggle { display: none; width: 42px; height: 42px; border: 0; color: var(--white); background: transparent; }
 .menu-toggle > span:not(.sr-only) { display: block; width: 22px; height: 2px; margin: 5px auto; background: currentColor; }
+.mobile-menu-backdrop { display: none; }
 
 .home-hero { position: relative; display: grid; min-height: 420px; align-items: center; overflow: hidden; color: var(--white); background: radial-gradient(circle at 78% 20%, rgba(57,187,200,.24), transparent 28rem), linear-gradient(135deg, #061e34, #0b3855 58%, #0d4b68); }
 .home-hero::after, .manufacturing-coming::after { position: absolute; inset: 0; pointer-events: none; content: ""; opacity: .24; background-image: linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px); background-size: 72px 72px; mask-image: linear-gradient(to bottom, #000, transparent); }
@@ -494,9 +495,14 @@ body.has-enquiry-modal { overflow: hidden; }
   .site-header, .header-inner { min-height: 62px; }
   .brand img { width: 155px; }
   .menu-toggle { display: block; }
-  .site-navigation { position: absolute; top: 62px; right: 0; left: 0; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: 10px 14px 16px; border-top: 1px solid rgba(255,255,255,.1); background: var(--navy); }
+  .site-navigation { position: absolute; top: 62px; right: 0; left: 0; z-index: 2; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: 10px 14px 16px; border-top: 1px solid rgba(255,255,255,.1); background: var(--navy); }
   .site-navigation.is-open { display: flex; }
   .site-navigation a { padding: 13px 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .mobile-menu-backdrop { position: fixed; inset: 62px 0 0; z-index: 300; display: block; padding: 0; border: 0; background: rgba(0,0,0,.62); backdrop-filter: blur(2px); }
+  body.has-mobile-menu .site-header { z-index: 310; }
+  body.has-mobile-menu { overflow: hidden; }
+  .breadcrumbs, .product-page-heading { display: none; }
+  .listing-hero .eyebrow, .contact-hero .eyebrow { margin-top: 0; }
   .home-hero { min-height: 430px; }
   .hero-copy { padding-block: 58px 76px; }
   .home-hero h1 { font-size: clamp(39px, 11.8vw, 54px); }
