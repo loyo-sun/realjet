@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 function scrollTrack(event, direction) {
@@ -9,16 +10,35 @@ function scrollTrack(event, direction) {
   });
 }
 
-const buttonClass = "grid h-9 w-9 place-items-center rounded-full border border-brand-blue/20 bg-white text-brand-navy shadow-card transition hover:border-brand-blue/40 hover:text-brand-blue";
-
 export default function MobileScrollArrows() {
+  const controlsRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const controls = controlsRef.current;
+    const track = controls?.previousElementSibling;
+    if (!controls || !track) return undefined;
+
+    const syncTrackHeight = () => {
+      controls.style.setProperty("--mobile-track-height", `${track.offsetHeight}px`);
+    };
+
+    syncTrackHeight();
+    const observer = new ResizeObserver(syncTrackHeight);
+    observer.observe(track);
+    window.addEventListener("resize", syncTrackHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", syncTrackHeight);
+    };
+  }, []);
+
   return (
-    <div className="mobile-scroll-arrows mt-2 hidden items-center justify-between max-[720px]:flex" role="group" aria-label="Horizontal scroll controls" dir="ltr">
-      <button type="button" onClick={(event) => scrollTrack(event, -1)} className={buttonClass} aria-label="Scroll left">
+    <div ref={controlsRef} className="mobile-scroll-arrows hidden max-[720px]:block" role="group" aria-label="Horizontal scroll controls" dir="ltr">
+      <button type="button" onClick={(event) => scrollTrack(event, -1)} className="precast-carousel-control precast-carousel-control-left" aria-label="Scroll left">
         <ArrowLeft size={17} aria-hidden="true" />
       </button>
-      <span className="text-[10px] font-[800] tracking-[0.12em] text-muted uppercase" aria-hidden="true">Swipe</span>
-      <button type="button" onClick={(event) => scrollTrack(event, 1)} className={buttonClass} aria-label="Scroll right">
+      <button type="button" onClick={(event) => scrollTrack(event, 1)} className="precast-carousel-control precast-carousel-control-right" aria-label="Scroll right">
         <ArrowRight size={17} aria-hidden="true" />
       </button>
     </div>
