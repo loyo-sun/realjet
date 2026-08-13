@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -906,7 +907,7 @@ export default function App() {
             title="Build on Proven Technology to Define the Right Process for Each Project"
             text="We have developed proven production processes for a wide range of precast concrete products. For special requirements, we work with customers on process development, solution design, equipment development, and production validation."
           />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -932,7 +933,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="Core Production Equipment" title="Configure the Line Around Its Critical Operations" text="Equipment is not simply added to a list. Each system is selected and combined according to product type, takt time, and site conditions." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, alt, title, text, features, href }, index) => (
               <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
@@ -980,7 +981,7 @@ export default function App() {
             title="Different Projects Require Different Production Lines"
             text="Realjet has delivered production lines for major transport and infrastructure projects and achieved stable production across multiple sites."
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, alt, category, title, line, coreEquipment, product, output }, index) => (
               <article key={title} className={`group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30 ${index >= 2 && !showAllProjects ? "max-[720px]:hidden" : ""}`}>
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1048,7 +1049,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({ icon, image, alt, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
@@ -1101,12 +1102,7 @@ export default function App() {
           </div>
         </footer>
 
-        <button
-          onClick={() => openLead("Get a Free Custom Plan")}
-          className="fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex"
-        >
-          Get a Free Custom Plan <ArrowRight size={16} />
-        </button>
+        <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/en/" enquireLabel="Enquire" enquiryTitle="Get a Free Custom Plan" onEnquire={openLead} subject="a precast beam production line" />
       </div>
 
       <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />

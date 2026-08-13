@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -949,7 +950,7 @@ export default function App() {
             title="Une technologie éprouvée pour définir le procédé adapté à chaque projet"
             text="Nous avons développé des procédés éprouvés pour de nombreux produits préfabriqués en béton. Pour les besoins particuliers, nous travaillons avec le client sur le procédé, la solution, les équipements et la validation de la production."
           />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -975,7 +976,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="Équipements de production essentiels" title="Configurer la ligne autour de ses opérations critiques" text="Les équipements ne sont pas une simple liste : chaque système est sélectionné et combiné selon le produit, le temps de cycle et les conditions du site." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, alt, title, text, features }, index) => (
               <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1013,7 +1014,7 @@ export default function App() {
             title="Chaque projet exige une ligne de production différente"
             text="Realjet a livré des lignes pour de grands projets de transport et d’infrastructure et atteint une production stable sur plusieurs sites."
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, alt, category, title, englishTitle, line, coreEquipment, product, output }, index) => (
               <article key={title} className={`group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30 ${index >= 2 && !showAllProjects ? "max-[720px]:hidden" : ""}`}>
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1084,7 +1085,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({ icon, image, alt, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
@@ -1137,18 +1138,7 @@ export default function App() {
           </div>
         </footer>
 
-        <button
-          onClick={() => openLead("Étude personnalisée gratuite")}
-          aria-hidden={hideMobileCta}
-          tabIndex={hideMobileCta ? -1 : 0}
-          className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
-            hideMobileCta
-              ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
-              : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
-          }`}
-        >
-          Étude personnalisée gratuite <ArrowRight size={16} />
-        </button>
+        <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/fr/" enquireLabel="Demande" enquiryTitle="Étude personnalisée gratuite" hidden={hideMobileCta} onEnquire={openLead} subject="une ligne de production de poutres préfabriquées" />
       </div>
 
       <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />

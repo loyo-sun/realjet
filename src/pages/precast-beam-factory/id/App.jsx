@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Building2, CheckCircle, CloudSun, Compass, FileCheck, HardHat, LoaderCircle, MapPin, Menu, Package, Search, Send, Settings, User, Workflow, Wrench, X } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -817,7 +818,7 @@ export default function App() {
 
         <Section id="lines" soft>
           <SectionHeader kicker="Konfigurasi Umum Lini Produksi" title="Teknologi Teruji untuk Menentukan Proses yang Tepat bagi Setiap Proyek" text="Kami telah mengembangkan proses produksi yang teruji untuk berbagai produk beton pracetak. Untuk kebutuhan khusus, kami bekerja bersama pelanggan dalam pengembangan proses, perancangan solusi, pengembangan peralatan, dan validasi produksi." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({
               image,
               alt,
@@ -845,7 +846,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="Peralatan Produksi Utama" title="Konfigurasikan Lini Berdasarkan Operasi Kritisnya" text="Peralatan tidak sekadar ditambahkan ke dalam daftar. Setiap sistem dipilih dan dipadukan berdasarkan jenis produk, waktu takt, dan kondisi lokasi." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({
               image,
               alt,
@@ -875,7 +876,7 @@ export default function App() {
 
         <Section id="projects" soft>
           <SectionHeader kicker="Referensi Proyek" title="Setiap Proyek Memerlukan Lini Produksi yang Berbeda" text="Realjet telah mengirimkan lini produksi untuk proyek transportasi dan infrastruktur besar serta mencapai produksi yang stabil di berbagai lokasi." />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({
               image,
               alt,
@@ -943,7 +944,7 @@ export default function App() {
                 <span className="mt-1 block text-[11px] text-muted">{label}</span>
               </div>)}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({
               icon,
               image,
@@ -995,9 +996,7 @@ export default function App() {
           </div>
         </footer>
 
-        <button onClick={() => openLead("Dapatkan Rancangan Lini Gratis")} aria-hidden={hideMobileCta} tabIndex={hideMobileCta ? -1 : 0} className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${hideMobileCta ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0" : "max-[720px]:translate-y-0 max-[720px]:opacity-100"}`}>
-          Dapatkan Rancangan Lini Gratis <ArrowRight size={16} />
-        </button>
+        <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/id/" enquireLabel="Pertanyaan" enquiryTitle="Dapatkan Rancangan Lini Gratis" hidden={hideMobileCta} onEnquire={openLead} subject="lini produksi balok pracetak" />
       </div>
 
       <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />

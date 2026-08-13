@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -949,7 +950,7 @@ export default function App() {
             title="Проверенная технология для выбора процесса под каждый проект"
             text="Мы разработали проверенные процессы для широкого спектра сборных железобетонных изделий. Для специальных задач совместно с заказчиком разрабатываем технологию, решение, оборудование и подтверждаем производство."
           />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -975,7 +976,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="Основное производственное оборудование" title="Настроить линию вокруг ключевых операций" text="Оборудование — не просто перечень: каждая система подбирается и объединяется с учётом изделия, производственного цикла и условий площадки." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, alt, title, text, features }, index) => (
               <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1013,7 +1014,7 @@ export default function App() {
             title="Для каждого проекта требуется своя производственная линия"
             text="Realjet поставила линии для крупных транспортных и инфраструктурных проектов и обеспечила стабильное производство на разных площадках."
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, alt, category, title, englishTitle, line, coreEquipment, product, output }, index) => (
               <article key={title} className={`group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30 ${index >= 2 && !showAllProjects ? "max-[720px]:hidden" : ""}`}>
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1084,7 +1085,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({ icon, image, alt, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
@@ -1137,18 +1138,7 @@ export default function App() {
           </div>
         </footer>
 
-        <button
-          onClick={() => openLead("Бесплатная схема линии под проект")}
-          aria-hidden={hideMobileCta}
-          tabIndex={hideMobileCta ? -1 : 0}
-          className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
-            hideMobileCta
-              ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
-              : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
-          }`}
-        >
-          Бесплатная схема линии под проект <ArrowRight size={16} />
-        </button>
+        <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/ru/" enquireLabel="Запрос" enquiryTitle="Бесплатная схема линии под проект" hidden={hideMobileCta} onEnquire={openLead} subject="линия производства сборных балок" />
       </div>
 
       <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />

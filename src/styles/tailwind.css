@@ -706,7 +706,52 @@ section {
 
   .solution-input-list,
   .delivery-flow {
-    display: block;
+    display: flex;
+    gap: 12px;
+    margin-right: -22px;
+    margin-left: -22px;
+    padding: 2px 22px 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+  }
+
+  .solution-input-list::-webkit-scrollbar,
+  .delivery-flow::-webkit-scrollbar,
+  .mobile-card-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .solution-input-list {
+    padding-top: 14px;
+  }
+
+  .solution-input-item,
+  .delivery-step {
+    flex: 0 0 min(82vw, 320px);
+    scroll-snap-align: start;
+  }
+
+  .solution-input-item {
+    align-items: start;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .delivery-flow::before {
+    display: none;
+  }
+
+  .delivery-step,
+  .delivery-step:last-child {
+    align-content: start;
+    padding: 16px;
+    border: 1px solid #d9e3e9;
+    border-radius: 13px;
+    background: #ffffff;
   }
 
   .journey-arrow {
@@ -725,7 +770,7 @@ section {
   .delivery-step {
     grid-template-columns: 46px minmax(0, 1fr);
     gap: 12px;
-    padding: 13px 0;
+    padding: 16px;
   }
 
   .solution-input-item p,
@@ -744,6 +789,33 @@ section {
 
   .precast-type-card {
     flex-basis: 86%;
+  }
+
+  .mobile-card-track {
+    display: flex !important;
+    gap: 14px;
+    margin-right: -14px;
+    margin-left: -14px;
+    padding: 2px 14px 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-inline: contain;
+  }
+
+  .mobile-card-track > article {
+    display: flex !important;
+    flex: 0 0 min(84vw, 340px);
+    flex-direction: column;
+    scroll-snap-align: start;
+  }
+
+  .mobile-card-track + button {
+    display: none !important;
+  }
+
+  body:has(.beam-mobile-contact-bar) footer {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
   }
 
   .precast-carousel-control {

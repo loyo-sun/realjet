@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -836,7 +837,7 @@ export default function App() {
             title="以成熟技术为基础，共同定义适合项目的新工艺"
             text="我们已积累各类型预制件产线成熟工艺，对于特殊项目要求，与您共同完成工艺研究、方案设计、装备开发和生产验证。"
           />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, kicker, title, visual, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -862,7 +863,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="产线核心设备" title="围绕关键工序，组成适合项目的产线" text="不是简单地堆叠设备，而是根据产品、节拍和场地进行最佳组合。" />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, title, text, features }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
@@ -895,7 +896,7 @@ export default function App() {
             title="不同项目，得到不同的产线答案"
             text="已与国内头部施工总包单位合作，在多个项目上完成产线量产验证。"
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, category, title, line, coreEquipment, product, output }) => (
               <article key={title} className="group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -961,7 +962,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({ icon, image, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
@@ -1014,9 +1015,7 @@ export default function App() {
         </div>
       </footer>
 
-      <button onClick={() => openLead("免费获取产线定制方案")} className="fixed right-3.5 bottom-3.5 left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating max-[720px]:flex">
-        免费获取产线定制方案 <ArrowRight size={16} />
-      </button>
+      <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/cn/" enquireLabel="询盘" enquiryTitle="免费获取产线定制方案" onEnquire={openLead} subject="预制梁生产线" />
 
       <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} title={leadTitle} />
     </>

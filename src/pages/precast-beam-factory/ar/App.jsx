@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
+import MobileContactBar from "../shared/MobileContactBar";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -969,7 +970,7 @@ export default function App() {
             title="اعتمد على تقنية مجرّبة لتحديد العملية المناسبة لكل مشروع"
             text="طورنا عمليات إنتاج مجرّبة لمجموعة واسعة من منتجات الخرسانة مسبقة الصب. وللمتطلبات الخاصة، نتعاون مع العملاء في تطوير العمليات وتصميم الحلول وتطوير المعدات والتحقق من الإنتاج."
           />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {lines.map(({ image, alt, kicker, title, visual, visualLabel, text }) => (
               <article key={title} className="group overflow-hidden rounded-card border border-line bg-white shadow-card">
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -995,7 +996,7 @@ export default function App() {
 
         <Section id="products">
           <SectionHeader kicker="معدات الإنتاج الأساسية" title="هيئ الخط وفق عملياته الأساسية" text="لا تُضاف المعدات إلى قائمة فحسب؛ بل يُختار كل نظام ويُدمج وفق نوع المنتج وزمن التتابع وظروف الموقع." />
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {products.map(({ image, alt, title, text, features }, index) => (
               <article key={title} className={`group overflow-hidden rounded-card border border-line bg-white shadow-card ${index >= 3 && !showAllEquipment ? "max-[720px]:hidden" : ""}`}>
                 <div className="aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1033,7 +1034,7 @@ export default function App() {
             title="تتطلب المشاريع المختلفة خطوط إنتاج مختلفة"
             text="نفذت Realjet خطوط إنتاج لمشاريع نقل وبنية تحتية كبرى وحققت إنتاجًا مستقرًا في مواقع متعددة."
           />
-          <div className="grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-4 gap-4 max-[1000px]:grid-cols-2 max-[720px]:grid-cols-1">
             {projects.map(({ image, alt, category, title, englishTitle, line, coreEquipment, product, output }, index) => (
               <article key={title} className={`group flex h-full flex-col overflow-hidden rounded-card border border-line bg-white shadow-card transition duration-200 hover:-translate-y-1 hover:border-brand-blue/30 ${index >= 2 && !showAllProjects ? "max-[720px]:hidden" : ""}`}>
                 <div className="relative aspect-video overflow-hidden bg-[#e4edf2]">
@@ -1104,7 +1105,7 @@ export default function App() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
+          <div className="mobile-card-track grid grid-cols-3 gap-4 max-[1000px]:grid-cols-1">
             {capabilities.map(({ icon, image, alt, title, headline, text, stats }, index) => (
               <article key={title} className="group flex flex-col overflow-hidden rounded-card border border-line bg-white shadow-card max-[1000px]:grid max-[1000px]:grid-cols-[minmax(260px,0.8fr)_minmax(0,1.2fr)] max-[720px]:block">
                 {image ? (
@@ -1157,18 +1158,7 @@ export default function App() {
           </div>
         </footer>
 
-        <button
-          onClick={() => openLead("احصل على تصميم خط مجاني")}
-          aria-hidden={hideMobileCta}
-          tabIndex={hideMobileCta ? -1 : 0}
-          className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${
-            hideMobileCta
-              ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0"
-              : "max-[720px]:translate-y-0 max-[720px]:opacity-100"
-          }`}
-        >
-          احصل على تصميم خط مجاني <ArrowLeft size={16} />
-        </button>
+        <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/ar/" enquireLabel="استفسار" enquiryTitle="احصل على تصميم خط مجاني" hidden={hideMobileCta} onEnquire={openLead} subject="خط إنتاج الكمرات مسبقة الصب" />
       </div>
 
       <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />
