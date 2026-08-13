@@ -1,8 +1,8 @@
 ---
 title: "Road Barrier and Kerb Moulds"
-description: "Repeat-production steel moulds for project-defined concrete road barriers, median units, kerbs and edge components."
+description: "Custom steel moulds for concrete road barriers, median units and kerbs, available in conventional, hydraulic or movable configurations to meet customer profiles and output targets."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 113
 featured: false
 slug: road-barrier-and-kerb-moulds

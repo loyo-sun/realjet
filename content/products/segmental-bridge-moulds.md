@@ -1,8 +1,8 @@
 ---
 title: "Segmental Bridge Moulds"
-description: "Short-line or long-line steel mould systems for project-controlled production of precast segmental bridge units."
+description: "Custom short-line or long-line segmental bridge moulds, engineered as conventional, hydraulic or movable systems to match customer geometry, casting sequence and yard requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 103
 featured: false
 slug: segmental-bridge-moulds

@@ -1,8 +1,8 @@
 ---
 title: "Stair and Balcony Moulds"
-description: "Project-specific mould systems for precast stair flights, landings, balcony slabs and related architectural components."
+description: "Custom moulds for precast stairs, landings and balcony slabs, available in conventional, hydraulic or movable configurations for customer-defined geometry and factory workflows."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 107
 featured: false
 slug: stair-and-balcony-moulds

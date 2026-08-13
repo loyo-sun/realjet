@@ -1,9 +1,10 @@
 ---
 title: Beam and Girder Moulds
-description: Steel mould systems configured for repeated production of precast
-  T-, I-, U-, trough and other project-defined beams or girders.
+description: Custom steel mould systems for precast T-, I-, U-, trough and other
+  beams or girders, available in conventional, hydraulic or movable configurations
+  to meet customer production requirements.
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 101
 featured: false
 slug: beam-and-girder-moulds

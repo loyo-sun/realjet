@@ -1,8 +1,8 @@
 ---
 title: "Floor and Roof Slab Moulds"
-description: "Steel casting tables and edge-form systems configured for solid, ribbed or other approved precast floor and roof slabs."
+description: "Custom steel moulds for solid, ribbed and project-defined floor or roof slabs, available as conventional, hydraulic or movable systems to match customer factory and handling requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 105
 featured: false
 slug: floor-and-roof-slab-moulds

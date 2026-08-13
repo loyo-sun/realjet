@@ -1,8 +1,8 @@
 ---
 title: "Drainage Channel Moulds"
-description: "Steel mould systems for open channels, U-shaped drains, trench units and related precast drainage components."
+description: "Custom steel moulds for open channels, U-shaped drains and trench units, with conventional, hydraulic or movable configurations selected for customer geometry and production needs."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 111
 featured: false
 slug: drainage-channel-moulds

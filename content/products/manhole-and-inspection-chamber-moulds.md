@@ -1,8 +1,8 @@
 ---
 title: "Manhole and Inspection Chamber Moulds"
-description: "Core-and-shell mould systems for precast manholes, inspection chambers, bases, risers and project-defined access units."
+description: "Custom core-and-shell moulds for precast manholes and inspection chambers, available in conventional, hydraulic or movable configurations for customer-defined access units."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 112
 featured: false
 slug: manhole-and-inspection-chamber-moulds

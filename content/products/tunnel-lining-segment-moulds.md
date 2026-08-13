@@ -1,8 +1,8 @@
 ---
 title: "Tunnel Lining Segment Moulds"
-description: "Steel mould systems for repeated production of project-defined precast tunnel lining segments and ring components."
+description: "Custom steel moulds for precast tunnel lining segments, available in conventional, hydraulic or movable configurations to suit customer ring geometry, cycle and curing requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 108
 featured: false
 slug: tunnel-lining-segment-moulds

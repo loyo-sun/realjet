@@ -1,8 +1,8 @@
 ---
 title: "Concrete Pipe Moulds"
-description: "Inner-core and outer-shell mould assemblies for project-defined precast concrete pipes and compatible joint profiles."
+description: "Custom inner-core and outer-shell concrete pipe moulds, available in conventional, hydraulic or movable configurations for customer-defined pipe sizes, joints and production processes."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 114
 featured: false
 slug: concrete-pipe-moulds

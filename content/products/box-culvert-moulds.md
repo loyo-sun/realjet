@@ -1,8 +1,8 @@
 ---
 title: "Box Culvert Moulds"
-description: "Internal and external mould systems for single-cell, multi-cell and project-defined precast box culvert units."
+description: "Custom internal and external mould systems for precast box culverts, available in conventional, hydraulic or movable configurations to suit customer geometry, cycle and demoulding requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 109
 featured: false
 slug: box-culvert-moulds

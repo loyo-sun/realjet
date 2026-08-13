@@ -1,8 +1,8 @@
 ---
 title: "Wall Panel Moulds"
-description: "Horizontal or vertical steel mould arrangements for structural, façade, sandwich and project-defined precast wall panels."
+description: "Custom horizontal or vertical wall panel moulds, available in conventional, hydraulic or movable configurations for customer-defined structural, façade and sandwich panels."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 104
 featured: false
 slug: wall-panel-moulds

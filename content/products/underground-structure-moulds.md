@@ -1,8 +1,8 @@
 ---
 title: "Underground Structure Moulds"
-description: "Made-to-drawing mould systems for precast shafts, utility structures, galleries and other below-ground concrete components."
+description: "Made-to-drawing moulds for precast shafts, utility galleries and underground structures, customized as conventional, hydraulic or movable systems for customer project requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 110
 featured: false
 slug: underground-structure-moulds

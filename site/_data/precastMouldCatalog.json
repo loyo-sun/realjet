@@ -3,22 +3,22 @@
     {
       "name": "Bridge & Transportation Moulds",
       "slug": "bridge-transportation-moulds",
-      "description": "Project-specific steel mould systems for precast bridge, viaduct and rail components produced in permanent factories or dedicated casting yards."
+      "description": "Custom steel mould systems for precast bridge, viaduct and rail components, available in conventional, hydraulic or movable configurations to suit customer drawings, casting methods, permanent factories and dedicated casting yards."
     },
     {
       "name": "Building Component Moulds",
       "slug": "building-component-moulds",
-      "description": "Steel mould systems for repeat production of structural and architectural components used in residential, commercial and industrial buildings."
+      "description": "Custom steel mould systems for repeat production of structural and architectural building components, with conventional, hydraulic or movable configurations selected to match customer requirements, component geometry and factory workflow."
     },
     {
       "name": "Tunnel & Underground Moulds",
       "slug": "tunnel-underground-moulds",
-      "description": "Purpose-designed mould systems for tunnel linings, culverts and other precast components installed below ground."
+      "description": "Purpose-designed tunnel and underground mould systems, customized as conventional, hydraulic or movable configurations according to customer drawings, demoulding requirements and production conditions."
     },
     {
       "name": "Municipal & Infrastructure Moulds",
       "slug": "municipal-infrastructure-moulds",
-      "description": "Mould systems for drainage, utility, road and civil-infrastructure components manufactured in controlled precast operations."
+      "description": "Custom mould systems for drainage, utility, road and civil-infrastructure components, available with conventional, hydraulic or movable operation to meet customer-specific geometry, output and handling requirements."
     }
   ]
 }

@@ -1,8 +1,8 @@
 ---
 title: "Column and Building Beam Moulds"
-description: "Adjustable steel mould systems for precast columns and building beams with project-defined sections, lengths and connection details."
+description: "Custom steel moulds for precast columns and building beams, available in conventional, hydraulic or movable configurations for customer-defined sections, lengths and connection details."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 106
 featured: false
 slug: column-and-building-beam-moulds

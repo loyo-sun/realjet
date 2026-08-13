@@ -1,8 +1,8 @@
 ---
 title: "Box Girder Moulds"
-description: "External and internal steel mould assemblies engineered around the approved geometry and casting method of precast box girders."
+description: "Custom external and internal box girder moulds engineered in conventional, hydraulic or movable configurations around customer geometry, casting methods and production requirements."
 date: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-13
 order: 102
 featured: false
 slug: box-girder-moulds
