@@ -558,6 +558,8 @@ body.has-enquiry-modal { overflow: hidden; }
   .article-body { font-size: 16px; }
   .insight-contact-actions { right: 10px; gap: 6px; padding: 6px; }
   .insight-contact-actions a, .insight-contact-actions button { width: 42px; height: 42px; }
+  .category-contact-actions { top: auto; right: auto; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; display: flex; transform: translateX(-50%); }
+  .category-contact-actions a:hover, .category-contact-actions a:focus-visible, .category-contact-actions button:hover, .category-contact-actions button:focus-visible { transform: translateY(-3px); }
   .site-footer { padding: 20px 0; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
   .footer-meta { align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: 10px; }
