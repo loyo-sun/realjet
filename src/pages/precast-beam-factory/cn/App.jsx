@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -858,6 +859,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>与工程师沟通生产工艺</SectionCta>
         </Section>
 
@@ -887,6 +889,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>获取更多设备信息</SectionCta>
         </Section>
 
@@ -945,6 +948,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>了解更多案例</SectionCta>
         </Section>
 
@@ -992,6 +996,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>预约专家沟通项目</SectionCta>
         </Section>
 

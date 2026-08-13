@@ -695,76 +695,67 @@ section {
   }
 
   .solution-journey {
-    grid-template-columns: 1fr;
-  }
-
-  .solution-input-panel,
-  .solution-process-panel {
-    display: block;
-    padding: 26px 22px;
-  }
-
-  .solution-input-list,
-  .delivery-flow {
     display: flex;
-    gap: 12px;
-    margin-right: -22px;
-    margin-left: -22px;
-    padding: 2px 22px 14px;
+    gap: 8px;
+    margin-right: -14px;
+    margin-left: -14px;
+    padding-bottom: 14px;
     overflow-x: auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
     overscroll-behavior-inline: contain;
   }
 
-  .solution-input-list::-webkit-scrollbar,
-  .delivery-flow::-webkit-scrollbar,
-  .mobile-card-track::-webkit-scrollbar {
+  .solution-journey::-webkit-scrollbar {
     display: none;
   }
 
-  .solution-input-list {
-    padding-top: 14px;
+  .solution-input-panel {
+    flex: 0 0 66.666vw;
   }
 
-  .solution-input-item,
-  .delivery-step {
-    flex: 0 0 min(82vw, 320px);
+  .solution-process-panel {
+    flex: 0 0 88vw;
+  }
+
+  .solution-input-panel,
+  .solution-process-panel {
+    display: block;
+    min-width: 0;
+    padding: 22px 18px;
+    overflow: hidden;
+    border: 1px solid #d9e3e9;
+    border-radius: 20px;
     scroll-snap-align: start;
   }
 
-  .solution-input-item {
-    align-items: start;
-    padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 13px;
-    background: rgba(255, 255, 255, 0.05);
+  .solution-input-list,
+  .delivery-flow {
+    display: block;
+    margin: 18px 0 0;
+    padding: 0;
+    overflow: visible;
   }
 
   .delivery-flow::before {
-    display: none;
-  }
-
-  .delivery-step,
-  .delivery-step:last-child {
-    align-content: start;
-    padding: 16px;
-    border: 1px solid #d9e3e9;
-    border-radius: 13px;
-    background: #ffffff;
+    display: block;
   }
 
   .journey-arrow {
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg);
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
   }
 
   #site-shell[data-locale="ar"] .journey-arrow {
-    top: 0;
-    right: auto;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
+    top: 50%;
+    right: 0;
+    left: auto;
+    transform: translate(50%, -50%);
   }
 
   .delivery-step {
@@ -776,6 +767,10 @@ section {
   .solution-input-item p,
   .delivery-copy p {
     font-size: 12px;
+  }
+
+  .solution-panel-header > h3 {
+    font-size: 22px;
   }
 
   .delivery-output {
@@ -803,6 +798,10 @@ section {
     overscroll-behavior-inline: contain;
   }
 
+  .mobile-card-track::-webkit-scrollbar {
+    display: none;
+  }
+
   .mobile-card-track > article {
     display: flex !important;
     flex: 0 0 min(84vw, 340px);
@@ -810,7 +809,7 @@ section {
     scroll-snap-align: start;
   }
 
-  .mobile-card-track + button {
+  .mobile-card-track + .mobile-scroll-arrows + button {
     display: none !important;
   }
 

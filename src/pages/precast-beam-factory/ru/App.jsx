@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -971,6 +972,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>Обсудить ваш технологический процесс</SectionCta>
         </Section>
 
@@ -1000,6 +1002,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           {!showAllEquipment && (
             <button type="button" onClick={() => setShowAllEquipment(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
               Показать всё оборудование
@@ -1063,6 +1066,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           {!showAllProjects && (
             <button type="button" onClick={() => setShowAllProjects(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
               Показать все проекты
@@ -1115,6 +1119,7 @@ export default function App() {
               </article>
             ))}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>Заказать техническую консультацию</SectionCta>
         </Section>
 

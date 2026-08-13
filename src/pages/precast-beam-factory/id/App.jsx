@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Building2, CheckCircle, CloudSun, Compass, FileCheck, HardHat, LoaderCircle, MapPin, Menu, Package, Search, Send, Settings, User, Workflow, Wrench, X } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
 import UniversalEnquiryFields from "../shared/UniversalEnquiryFields";
@@ -841,6 +842,7 @@ export default function App() {
                 </div>
               </article>)}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>Diskusikan Proses Produksi Anda</SectionCta>
         </Section>
 
@@ -868,6 +870,7 @@ export default function App() {
                 </div>
               </article>)}
           </div>
+          <MobileScrollArrows />
           {!showAllEquipment && <button type="button" onClick={() => setShowAllEquipment(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
               Lihat Semua Peralatan
             </button>}
@@ -927,6 +930,7 @@ export default function App() {
                 </div>
               </article>)}
           </div>
+          <MobileScrollArrows />
           {!showAllProjects && <button type="button" onClick={() => setShowAllProjects(true)} className="mx-auto mt-6 hidden min-h-11 items-center justify-center rounded-[9px] border border-brand-blue/20 bg-white px-5 text-[13px] font-[850] text-brand-navy max-[720px]:flex">
               Lihat Semua Proyek
             </button>}
@@ -973,6 +977,7 @@ export default function App() {
                 </div>
               </article>)}
           </div>
+          <MobileScrollArrows />
           <SectionCta onClick={openLead}>Jadwalkan Konsultasi Teknis</SectionCta>
         </Section>
 
