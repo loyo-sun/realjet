@@ -292,6 +292,7 @@ button, input, textarea, select { font: inherit; }
 .insight-contact-actions a, .insight-contact-actions button { display: grid; width: 46px; height: 46px; place-items: center; padding: 0; border: 0; border-radius: 10px; color: var(--white); background: rgba(255,255,255,.08); text-decoration: none; cursor: pointer; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
 .insight-contact-actions a:hover, .insight-contact-actions a:focus-visible, .insight-contact-actions button:hover, .insight-contact-actions button:focus-visible { color: var(--navy); background: var(--cyan); transform: translateX(-3px); }
 .insight-contact-actions svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.category-action-label { display: none; }
 
 .site-footer { padding: 22px 0; color: rgba(255,255,255,.62); background: var(--navy-dark); }
 .footer-bottom, .footer-meta { display: flex; align-items: center; }
@@ -558,8 +559,12 @@ body.has-enquiry-modal { overflow: hidden; }
   .article-body { font-size: 16px; }
   .insight-contact-actions { right: 10px; gap: 6px; padding: 6px; }
   .insight-contact-actions a, .insight-contact-actions button { width: 42px; height: 42px; }
-  .category-contact-actions { top: auto; right: auto; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; display: flex; transform: translateX(-50%); }
+  .category-contact-actions { top: auto; right: 0; bottom: 0; left: 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1px; width: 100%; padding: 8px max(10px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(10px,env(safe-area-inset-left)); border-width: 1px 0 0; border-radius: 14px 14px 0 0; transform: none; }
+  .category-contact-actions a, .category-contact-actions button { display: flex; width: auto; height: 52px; min-width: 0; justify-content: center; gap: 7px; padding: 0 8px; font-size: 12px; font-weight: 800; }
+  .category-contact-actions svg { width: 20px; height: 20px; flex: 0 0 auto; }
+  .category-action-label { display: inline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .category-contact-actions a:hover, .category-contact-actions a:focus-visible, .category-contact-actions button:hover, .category-contact-actions button:focus-visible { transform: translateY(-3px); }
+  body[data-page-type="precast-mould-category"] .site-footer { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
   .site-footer { padding: 20px 0; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
   .footer-meta { align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: 10px; }
