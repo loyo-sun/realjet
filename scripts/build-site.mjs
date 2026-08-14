@@ -136,10 +136,12 @@ const beamMouldProductPage = await readFile(
   join(finalOutput, "precast-concrete-molds/beam-and-girder-moulds/index.html"),
   "utf8",
 );
+const validatedInsightSlug =
+  "precast-concrete-production-line-layout-rfq-checklist";
 const insightPage = await readFile(
   join(
     finalOutput,
-    "insights/precast-concrete-production-line-layout-rfq-checklist/index.html",
+    `insights/${validatedInsightSlug}/index.html`,
   ),
   "utf8",
 );
@@ -251,12 +253,39 @@ for (const product of catalogueProductRecommendations.filter((item) => !item.dra
 for (const requiredInsightContent of [
   "Latest News",
   "latest-news-list",
-  "Precast Concrete Production Line Commissioning Checklist",
   "Contract Manufacturing",
   "Precast Concrete Production Lines",
 ]) {
   if (!insightPage.includes(requiredInsightContent)) {
     throw new Error(`Insight detail validation failed: ${requiredInsightContent}`);
+  }
+}
+const expectedSidebarInsights = insightRecommendations
+  .filter((item) => !item.draft && item.slug !== validatedInsightSlug)
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .slice(0, 5);
+const renderedSidebarInsightCount = (
+  insightPage.match(/data-insight-position="sidebar"/g) || []
+).length;
+if (renderedSidebarInsightCount !== expectedSidebarInsights.length) {
+  throw new Error(
+    `Insight sidebar rendered ${renderedSidebarInsightCount} items; expected ${expectedSidebarInsights.length}`,
+  );
+}
+if (insightPage.includes(`data-insight-slug="${validatedInsightSlug}"`)) {
+  throw new Error("Insight sidebar must exclude the current article.");
+}
+for (const item of expectedSidebarInsights) {
+  for (const requiredSidebarContent of [
+    `href="/insights/${item.slug}/"`,
+    `data-insight-slug="${item.slug}"`,
+    item.title,
+  ]) {
+    if (!insightPage.includes(requiredSidebarContent)) {
+      throw new Error(
+        `Insight sidebar is missing expected content: ${requiredSidebarContent}`,
+      );
+    }
   }
 }
 if (insightPage.includes("Choose Your Project Path")) {

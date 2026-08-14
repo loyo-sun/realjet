@@ -118,6 +118,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("limit", (items, count) =>
     Array.isArray(items) ? items.slice(0, count) : [],
   );
+  eleventyConfig.addFilter("excludeInsightSlug", (items, slug) =>
+    Array.isArray(items)
+      ? items.filter((item) => item.data?.slug !== slug)
+      : [],
+  );
   eleventyConfig.addFilter(
     "mouldProductsForCategory",
     (items, category) =>

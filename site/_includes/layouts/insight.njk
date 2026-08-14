@@ -22,16 +22,14 @@ layout: layouts/base.njk
         <span class="eyebrow">Latest News</span>
         <h2 id="latest-news-title">Latest Insights</h2>
         <nav class="latest-news-list" aria-label="Latest news">
-          {% for news in collections.publishedInsights | limit(5) %}
-            {% if news.data.slug != slug %}
-              <a href="{{ news.url }}" data-insight-card data-insight-slug="{{ news.data.slug }}" data-insight-position="sidebar">
-                <img src="{{ news.data.image }}" alt="" width="68" height="68" loading="lazy" decoding="async">
-                <span>
-                  <time datetime="{{ news.data.date | isoDate }}">{{ news.data.date | readableDate }}</time>
-                  <strong>{{ news.data.title }}</strong>
-                </span>
-              </a>
-            {% endif %}
+          {% for news in collections.publishedInsights | excludeInsightSlug(slug) | limit(5) %}
+            <a href="{{ news.url }}" data-insight-card data-insight-slug="{{ news.data.slug }}" data-insight-position="sidebar">
+              <img src="{{ news.data.image }}" alt="" width="68" height="68" loading="lazy" decoding="async">
+              <span>
+                <time datetime="{{ news.data.date | isoDate }}">{{ news.data.date | readableDate }}</time>
+                <strong>{{ news.data.title }}</strong>
+              </span>
+            </a>
           {% endfor %}
         </nav>
       </section>
