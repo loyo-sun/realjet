@@ -20,8 +20,8 @@ robots: index, follow
           <h1>Precast Concrete Moulds &amp; Formwork</h1>
           <p>Project-specific steel mould systems engineered around component geometry, casting sequence, production target and factory or casting-yard conditions.</p>
           <div class="moulds-hero-actions">
-            <a class="button button-primary" href="#mould-categories" data-mould-cta="explore_products">Explore Mould Types <span aria-hidden="true">↓</span></a>
-            <button class="button button-outline" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds technical review">Request a Technical Review <span aria-hidden="true">→</span></button>
+            <a class="button button-primary" href="#mould-catalogue" data-mould-cta="explore_products">Explore Mould Types <span aria-hidden="true">↓</span></a>
+            <button class="button button-outline" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds enquiry">Enquiry <span aria-hidden="true">→</span></button>
           </div>
           <ul class="moulds-proof-list" aria-label="Planning basis">
             <li>Factory or casting-yard use</li>
@@ -32,7 +32,7 @@ robots: index, follow
       </div>
       <nav class="mould-scenario-nav" aria-label="Application scenarios">
         <div>
-          {% for category in precastMouldCatalog.categories %}<a href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">{{ category.name }}</a>{% endfor %}
+          {% for category in precastMouldCatalog.categories | limit(5) %}<a href="#{{ category.slug }}" data-mould-category="{{ category.slug }}">{{ category.name }}</a>{% endfor %}
         </div>
       </nav>
     </div>
@@ -47,23 +47,6 @@ robots: index, follow
     </div>
   </section>
 
-  <section id="mould-categories" class="moulds-categories" aria-labelledby="mould-categories-title">
-    <div class="container">
-      <div class="moulds-section-heading"><div><span class="eyebrow">Application Structure</span><h2 id="mould-categories-title">Seven mould categories for project review</h2></div><p>Choose the component family first. Final mould scope is confirmed from approved drawings and the production plan.</p></div>
-      <div class="mould-category-grid">
-        {% for category in precastMouldCatalog.categories %}
-        <a class="mould-category-card" href="/precast-concrete-molds/{{ category.slug }}/" data-mould-category="{{ category.slug }}">
-          <span class="mould-category-number">0{{ loop.index }}</span>
-          <h3>{{ category.name }}</h3>
-          <p>{{ category.description }}</p>
-          <ul>{% for productName in category.representativeProducts | limit(4) %}<li>{{ productName }}</li>{% endfor %}</ul>
-          <b>Review category <span aria-hidden="true">→</span></b>
-        </a>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
   <section id="mould-catalogue" class="mould-catalogue" aria-labelledby="mould-catalogue-title">
     <div class="container">
       <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">Precast mould systems by application</h2><p>Published product pages show confirmed scope and available visual evidence. Additional shapes are reviewed through custom mould engineering.</p></div>
@@ -74,39 +57,12 @@ robots: index, follow
         <div class="mould-category-products-heading"><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div>
         <div class="mould-products-carousel">
           <button class="mould-carousel-control mould-carousel-control-left" type="button" data-mould-carousel-direction="-1" aria-label="View previous {{ category.name }} products"><span aria-hidden="true">←</span></button>
-          <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
+          <div class="mould-products-grid{% if category.slug == 'bridge-transportation-moulds' %} mould-products-grid-3x2{% endif %}" style="--mould-columns: {{ categoryProducts.length }}">{% for mouldProduct in categoryProducts %}{% include "components/mould-product-card.njk" %}{% endfor %}</div>
           <button class="mould-carousel-control mould-carousel-control-right" type="button" data-mould-carousel-direction="1" aria-label="View next {{ category.name }} products"><span aria-hidden="true">→</span></button>
         </div>
       </section>
       {% endif %}
       {% endfor %}
-    </div>
-  </section>
-
-  <section class="mould-process" aria-labelledby="mould-process-title">
-    <div class="container">
-      <div class="moulds-section-heading"><div><span class="eyebrow">Engineering Workflow</span><h2 id="mould-process-title">From component review to project support</h2></div><p>Each stage is aligned to the agreed project scope before manufacturing begins.</p></div>
-      <ol class="mould-process-grid">
-        <li><span>01</span><strong>Component and drawing review</strong></li>
-        <li><span>02</span><strong>Casting sequence and output review</strong></li>
-        <li><span>03</span><strong>Mould concept and operating method</strong></li>
-        <li><span>04</span><strong>3D design and engineering verification</strong></li>
-        <li><span>05</span><strong>Customer drawing approval</strong></li>
-        <li><span>06</span><strong>Fabrication, trial assembly and inspection</strong></li>
-        <li><span>07</span><strong>Packing, installation and commissioning support</strong></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="mould-configurations" aria-labelledby="mould-configurations-title">
-    <div class="container mould-configuration-layout">
-      <div class="mould-configuration-intro"><span class="eyebrow">Configuration Review</span><h2 id="mould-configurations-title">Choose operation around the production task</h2><p>No single operating method fits every component. Realjet reviews the geometry, opening load, available space, target cycle and handling plan before confirming the configuration.</p></div>
-      <div class="mould-table-wrap"><table><thead><tr><th>Configuration</th><th>Typical review context</th><th>Key project inputs</th></tr></thead><tbody>
-        <tr><th>Conventional</th><td>Simple geometry or lower-frequency operation</td><td>Geometry, quantity and labour conditions</td></tr>
-        <tr><th>Mechanical</th><td>Assisted opening, closing or positioning</td><td>Moving mass and operating space</td></tr>
-        <tr><th>Hydraulic</th><td>Large forms or frequent controlled movement</td><td>Cycle, safety and hydraulic interfaces</td></tr>
-        <tr><th>Movable</th><td>Station-based or circulation production</td><td>Rails, layout, transfer and lifting plan</td></tr>
-      </tbody></table></div>
     </div>
   </section>
 
@@ -119,13 +75,6 @@ robots: index, follow
         <article><img src="/images/uploads/machining.webp" alt="Machining operation at the Realjet manufacturing facility" width="760" height="427" loading="lazy" decoding="async"><div><strong>Machined interfaces</strong><span>Critical interfaces are machined where the project design and inspection plan require them.</span></div></article>
         <article><img src="/images/uploads/quality-inspection.webp" alt="Realjet quality inspector checking a manufactured steel component" width="760" height="427" loading="lazy" decoding="async"><div><strong>Trial assembly and inspection</strong><span>Fit-up, movement and key dimensions are checked against the agreed inspection basis.</span></div></article>
       </div>
-    </div>
-  </section>
-
-  <section class="mould-project-reference" aria-labelledby="mould-reference-title">
-    <div class="container mould-reference-card">
-      <img src="/images/insights/g15-ningbo-south-tj05-t-girder-line.webp" alt="30 metre T-girder mould beneath a gantry at the G15 Ningbo South TJ05 precast yard" width="1200" height="675" loading="lazy" decoding="async">
-      <div><span class="eyebrow">Verified Project Reference</span><h2 id="mould-reference-title">G15 Ningbo South TJ05 T-Girder Line</h2><p>Realjet supplied production-line solutions for 30 m T-girders. The confirmed arrangement uses two coordinated lines designed around a combined daily output of six girders, connecting mould transfer, concrete placing, vibration, steam curing and prestressing.</p><a class="button button-dark" href="/insights/g15-ningbo-south-tj05-t-girder-line/">Review the project reference <span aria-hidden="true">→</span></a></div>
     </div>
   </section>
 
@@ -153,7 +102,7 @@ robots: index, follow
   <section id="mould-enquiry" class="mould-enquiry mould-enquiry-cta" aria-labelledby="mould-enquiry-title">
     <div class="container mould-enquiry-shell">
       <div class="mould-enquiry-copy"><span class="eyebrow">Project Enquiry</span><h2 id="mould-enquiry-title">Tell us the component type and project requirements.</h2><p>Use the Message field to outline the component, main dimensions, target output and whether drawings are available. Realjet will request detailed files through an appropriate follow-up channel.</p></div>
-      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds general enquiry">Request a Technical Review <span aria-hidden="true">→</span></button>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds general enquiry">Enquiry <span aria-hidden="true">→</span></button>
     </div>
   </section>
 </article>

@@ -320,8 +320,6 @@ for (const requiredMouldsPageContent of [
   "Tunnel &amp; Underground Moulds",
   "Municipal &amp; Infrastructure Moulds",
   "Marine &amp; Coastal Moulds",
-  "Retaining Wall &amp; Block Moulds",
-  "Volumetric &amp; Special Precast Moulds",
   'name="universal-enquiry"',
   'name="name"',
   'name="email"',
@@ -330,9 +328,7 @@ for (const requiredMouldsPageContent of [
   "data-universal-enquiry",
   "data-mould-category",
   "Precast mould systems by application",
-  "From component review to project support",
-  "Choose operation around the production task",
-  "G15 Ningbo South TJ05 T-Girder Line",
+  "mould-products-grid-3x2",
 ]) {
   if (!precastMouldsPage.includes(requiredMouldsPageContent)) {
     throw new Error(`Precast moulds page validation failed: ${requiredMouldsPageContent}`);
@@ -343,10 +339,10 @@ if (mouldProductCardCount !== 18) {
   throw new Error(`Precast moulds page must contain exactly 18 product cards; found ${mouldProductCardCount}.`);
 }
 const mouldScenarioCount = (precastMouldsPage.match(/data-mould-category=/g) || []).length;
-if (mouldScenarioCount !== 14) {
-  throw new Error(`Precast moulds page must contain seven hero category links and seven category cards; found ${mouldScenarioCount}.`);
+if (mouldScenarioCount !== 5) {
+  throw new Error(`Precast moulds hero must contain exactly five application shortcuts; found ${mouldScenarioCount}.`);
 }
-for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View by Application Scenario", "View product", "View category", "Custom Precast Moulds"]) {
+for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View by Application Scenario", "View product", "View category", "Custom Precast Moulds", "Seven mould categories for project review", "From component review to project support", "Choose operation around the production task", "G15 Ningbo South TJ05 T-Girder Line", "Request a Technical Review", "Technical Review", "Enquire Now"]) {
   if (precastMouldsPage.includes(removedCatalogueLabel)) {
     throw new Error(`Precast moulds page retains removed catalogue label: ${removedCatalogueLabel}`);
   }
@@ -363,6 +359,9 @@ for (const requiredBridgeCategoryContent of [
   if (!bridgeMouldsCategoryPage.includes(requiredBridgeCategoryContent)) {
     throw new Error(`Bridge mould category validation failed: ${requiredBridgeCategoryContent}`);
   }
+}
+if (!bridgeMouldsCategoryPage.includes("mould-products-grid-3x2")) {
+  throw new Error("Bridge mould category must use the 3 × 2 product grid.");
 }
 for (const requiredMouldProductContent of [
   "Beam and Girder Moulds",
