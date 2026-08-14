@@ -1,12 +1,14 @@
 ---
-title: "Precast Concrete Production Line Maintenance RFQ"
-description: "A buyer-side guide to maintainability, spare parts, safe isolation, service records and recovery planning for a precast concrete production line."
+title: Precast Concrete Production Line Maintenance RFQ
+description: A buyer-side guide to maintainability, spare parts, safe isolation,
+  service records and recovery planning for a precast concrete production line.
 date: 2026-08-14
 updated: 2026-08-14
-slug: "precast-concrete-production-line-maintenance-rfq"
-image: "/images/insights/precast-concrete-production-line-maintenance-rfq.webp"
-imageAlt: "Rail-mounted mould transfer trolley on a precast concrete production line"
-ctaType: "precast-line"
+featured: false
+slug: precast-concrete-production-line-maintenance-rfq
+image: /images/uploads/movable-hydraulic-formwork-production-line.jpg
+imageAlt: Rail-mounted mould transfer trolley on a precast concrete production line
+ctaType: precast-line
 draft: false
 ---
 
