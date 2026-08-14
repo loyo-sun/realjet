@@ -10,8 +10,8 @@ publish_mode: editorial_workflow
 site_url: https://realjetech.com
 display_url: https://realjetech.com
 logo_url: https://realjetech.com/images/realjet-logo.webp
-media_folder: public/images
-public_folder: /images
+media_folder: public/images/uploads
+public_folder: /images/uploads
 
 collections:
   - name: products
@@ -52,7 +52,7 @@ collections:
           - { label: 建筑构件模板, value: building-component-moulds }
           - { label: 隧道与地下工程模板, value: tunnel-underground-moulds }
           - { label: 市政与基础设施模板, value: municipal-infrastructure-moulds }
-      - { label: 产品主图, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products", hint: "用于产品详情页主图和产品卡片。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
+      - { label: 产品主图, name: image, widget: image, required: true, hint: "用于产品详情页主图和产品卡片。所有后台上传文件统一保存到共享媒体库。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
       - { label: 主图替代文本, name: imageAlt, widget: string, required: true }
       - label: 产品图片集
         name: gallery
@@ -61,7 +61,7 @@ collections:
         summary: "{{fields.alt}}"
         hint: "可添加多张产品辅助图片，产品主图仍单独使用上方设置。"
         fields:
-          - { label: 图片, name: image, widget: image, required: true, media_folder: "public/images/products", public_folder: "/images/products" }
+          - { label: 图片, name: image, widget: image, required: true }
           - { label: 图片替代文本, name: alt, widget: string, required: true, hint: "请用自然语言描述图片中实际展示的内容。" }
       - { label: 草稿, name: draft, widget: boolean, default: true, required: true }
       - { label: 产品详细介绍, name: body, widget: markdown, required: true, hint: "页面已自动生成 H1 标题，正文请从 H2 二级标题开始。" }
@@ -84,7 +84,7 @@ collections:
       - { label: 更新日期, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: 首页推荐, name: featured, widget: boolean, default: false, required: true, hint: "新文章默认不在首页展示，只有启用此项后才会显示。" }
       - { label: URL 名称, name: slug, widget: string, required: true, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "只能使用小写英文字母、数字和连字符。"], hint: "发布后如无 301 重定向，请勿修改。" }
-      - { label: 文章主图, name: image, widget: image, required: true, media_folder: "public/images/insights", public_folder: "/images/insights", hint: "请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
+      - { label: 文章主图, name: image, widget: image, required: true, hint: "所有后台上传文件统一保存到共享媒体库。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
       - { label: 图片替代文本, name: imageAlt, widget: string, required: true, hint: "请用自然英文描述图片中实际展示的内容。" }
       - label: 文章转化入口
         name: ctaType

@@ -48,4 +48,11 @@ npm run build
 4. 审核前保持 Draft 开启；审核后关闭 Draft 并发布。
 5. CMS 向 GitHub 提交后，Netlify 自动构建并更新首页、Insights、RSS 和 sitemap。
 
+## CMS 媒体库
+
+- 后台“媒体”统一读取 `public/images/uploads/`，网页访问路径为 `/images/uploads/`。
+- 产品主图、产品相册和 Insights 主图的新上传文件都会默认保存到该目录。
+- 现有官网图片在媒体库中保留一份可复用副本；原图片路径仍保留，已发布页面不会因此失效。
+- 上传前确认图片已获授权，并使用能准确描述内容的英文文件名和 Alt 文本。
+
 完整设计、内容与操作标准见 `04_官网与网络资产/03_评估执行/4.44_Realjet英文官网与SEO新闻系统设计及操作指南.md`。
