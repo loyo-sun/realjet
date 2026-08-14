@@ -3,8 +3,8 @@ layout: layouts/base.njk
 permalink: /precast-concrete-molds/index.html
 pageType: precast-moulds
 title: Precast Concrete Moulds & Formwork | Realjet
-seoTitle: Precast Concrete Moulds & Steel Formwork | Realjet
-description: Explore project-specific steel moulds and formwork for precast bridge, building, tunnel and municipal concrete components.
+seoTitle: Precast Concrete Moulds & Steel Formwork Manufacturer | Realjet
+description: Project-specific steel moulds and formwork for precast bridge, building, tunnel, municipal, marine, retaining-wall and special concrete components.
 canonical: https://realjetech.com/precast-concrete-molds/
 socialImage: https://realjetech.com/images/products/precast-moulds/precast-concrete-moulds-hero.webp
 robots: index, follow
@@ -18,9 +18,9 @@ robots: index, follow
           <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Precast Concrete Moulds</span></nav>
           <span class="eyebrow">Project-Specific Steel Mould Systems</span>
           <h1>Precast Concrete Moulds &amp; Formwork</h1>
-          <p>Reusable steel mould systems engineered around the component geometry, casting sequence, production layout and project requirements of each precast operation.</p>
+          <p>Project-specific steel mould systems engineered around component geometry, casting sequence, production target and factory or casting-yard conditions.</p>
           <div class="moulds-hero-actions">
-            <a class="button button-primary" href="#mould-catalogue" data-mould-cta="explore_products">Explore Products <span aria-hidden="true">↓</span></a>
+            <a class="button button-primary" href="#mould-categories" data-mould-cta="explore_products">Explore Mould Types <span aria-hidden="true">↓</span></a>
             <button class="button button-outline" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds technical review">Request a Technical Review <span aria-hidden="true">→</span></button>
           </div>
           <ul class="moulds-proof-list" aria-label="Planning basis">
@@ -38,11 +38,38 @@ robots: index, follow
     </div>
   </section>
 
+  <section class="mould-evidence-strip" aria-label="Mould project review basis">
+    <div class="container mould-evidence-grid">
+      <div><strong>Approved geometry</strong><span>Cross-section, openings, joints and embedded items</span></div>
+      <div><strong>Casting sequence</strong><span>Placement, vibration, curing and demoulding access</span></div>
+      <div><strong>Operating method</strong><span>Conventional, mechanical, hydraulic or movable</span></div>
+      <div><strong>Production conditions</strong><span>Target output, handling plan and site interfaces</span></div>
+    </div>
+  </section>
+
+  <section id="mould-categories" class="moulds-categories" aria-labelledby="mould-categories-title">
+    <div class="container">
+      <div class="moulds-section-heading"><div><span class="eyebrow">Application Structure</span><h2 id="mould-categories-title">Seven mould categories for project review</h2></div><p>Choose the component family first. Final mould scope is confirmed from approved drawings and the production plan.</p></div>
+      <div class="mould-category-grid">
+        {% for category in precastMouldCatalog.categories %}
+        <a class="mould-category-card" href="/precast-concrete-molds/{{ category.slug }}/" data-mould-category="{{ category.slug }}">
+          <span class="mould-category-number">0{{ loop.index }}</span>
+          <h3>{{ category.name }}</h3>
+          <p>{{ category.description }}</p>
+          <ul>{% for productName in category.representativeProducts | limit(4) %}<li>{{ productName }}</li>{% endfor %}</ul>
+          <b>Review category <span aria-hidden="true">→</span></b>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
   <section id="mould-catalogue" class="mould-catalogue" aria-labelledby="mould-catalogue-title">
     <div class="container">
-      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">14 Precast Mould Systems</h2></div>
+      <div class="section-heading mould-catalogue-heading"><span class="eyebrow">Product Catalogue</span><h2 id="mould-catalogue-title">Precast mould systems by application</h2><p>Published product pages show confirmed scope and available visual evidence. Additional shapes are reviewed through custom mould engineering.</p></div>
       {% for category in precastMouldCatalog.categories %}
       {% set categoryProducts = collections.publishedMouldProducts | mouldProductsForCategory(category.slug) %}
+      {% if categoryProducts.length %}
       <section class="mould-category-products" id="{{ category.slug }}" aria-labelledby="{{ category.slug }}-title">
         <div class="mould-category-products-heading"><h3 id="{{ category.slug }}-title"><a href="/precast-concrete-molds/{{ category.slug }}/">{{ category.name }}</a></h3></div>
         <div class="mould-products-carousel">
@@ -51,14 +78,92 @@ robots: index, follow
           <button class="mould-carousel-control mould-carousel-control-right" type="button" data-mould-carousel-direction="1" aria-label="View next {{ category.name }} products"><span aria-hidden="true">→</span></button>
         </div>
       </section>
+      {% endif %}
       {% endfor %}
+    </div>
+  </section>
+
+  <section class="mould-process" aria-labelledby="mould-process-title">
+    <div class="container">
+      <div class="moulds-section-heading"><div><span class="eyebrow">Engineering Workflow</span><h2 id="mould-process-title">From component review to project support</h2></div><p>Each stage is aligned to the agreed project scope before manufacturing begins.</p></div>
+      <ol class="mould-process-grid">
+        <li><span>01</span><strong>Component and drawing review</strong></li>
+        <li><span>02</span><strong>Casting sequence and output review</strong></li>
+        <li><span>03</span><strong>Mould concept and operating method</strong></li>
+        <li><span>04</span><strong>3D design and engineering verification</strong></li>
+        <li><span>05</span><strong>Customer drawing approval</strong></li>
+        <li><span>06</span><strong>Fabrication, trial assembly and inspection</strong></li>
+        <li><span>07</span><strong>Packing, installation and commissioning support</strong></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="mould-configurations" aria-labelledby="mould-configurations-title">
+    <div class="container mould-configuration-layout">
+      <div class="mould-configuration-intro"><span class="eyebrow">Configuration Review</span><h2 id="mould-configurations-title">Choose operation around the production task</h2><p>No single operating method fits every component. Realjet reviews the geometry, opening load, available space, target cycle and handling plan before confirming the configuration.</p></div>
+      <div class="mould-table-wrap"><table><thead><tr><th>Configuration</th><th>Typical review context</th><th>Key project inputs</th></tr></thead><tbody>
+        <tr><th>Conventional</th><td>Simple geometry or lower-frequency operation</td><td>Geometry, quantity and labour conditions</td></tr>
+        <tr><th>Mechanical</th><td>Assisted opening, closing or positioning</td><td>Moving mass and operating space</td></tr>
+        <tr><th>Hydraulic</th><td>Large forms or frequent controlled movement</td><td>Cycle, safety and hydraulic interfaces</td></tr>
+        <tr><th>Movable</th><td>Station-based or circulation production</td><td>Rails, layout, transfer and lifting plan</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+
+  <section class="mould-quality" aria-labelledby="mould-quality-title">
+    <div class="container">
+      <div class="moulds-section-heading"><div><span class="eyebrow">Manufacturing Evidence</span><h2 id="mould-quality-title">Make quality visible in the workshop</h2></div><p>Project acceptance remains subject to the approved drawings, inspection plan and agreed delivery scope.</p></div>
+      <div class="mould-quality-grid">
+        <article><img src="/images/uploads/plate-cutting.webp" alt="Steel plate cutting in the Realjet manufacturing workshop" width="550" height="309" loading="lazy" decoding="async"><div><strong>Material preparation</strong><span>Plate cutting and part identification follow the released manufacturing drawings.</span></div></article>
+        <article><img src="/images/uploads/robotic-welding.webp" alt="Robotic welding equipment in the Realjet manufacturing workshop" width="760" height="427" loading="lazy" decoding="async"><div><strong>Welding and fabrication</strong><span>Support frames, contact surfaces, joints and locking positions are built for the approved mould concept.</span></div></article>
+        <article><img src="/images/uploads/machining.webp" alt="Machining operation at the Realjet manufacturing facility" width="760" height="427" loading="lazy" decoding="async"><div><strong>Machined interfaces</strong><span>Critical interfaces are machined where the project design and inspection plan require them.</span></div></article>
+        <article><img src="/images/uploads/quality-inspection.webp" alt="Realjet quality inspector checking a manufactured steel component" width="760" height="427" loading="lazy" decoding="async"><div><strong>Trial assembly and inspection</strong><span>Fit-up, movement and key dimensions are checked against the agreed inspection basis.</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mould-project-reference" aria-labelledby="mould-reference-title">
+    <div class="container mould-reference-card">
+      <img src="/images/insights/g15-ningbo-south-tj05-t-girder-line.webp" alt="30 metre T-girder mould beneath a gantry at the G15 Ningbo South TJ05 precast yard" width="1200" height="675" loading="lazy" decoding="async">
+      <div><span class="eyebrow">Verified Project Reference</span><h2 id="mould-reference-title">G15 Ningbo South TJ05 T-Girder Line</h2><p>Realjet supplied production-line solutions for 30 m T-girders. The confirmed arrangement uses two coordinated lines designed around a combined daily output of six girders, connecting mould transfer, concrete placing, vibration, steam curing and prestressing.</p><a class="button button-dark" href="/insights/g15-ningbo-south-tj05-t-girder-line/">Review the project reference <span aria-hidden="true">→</span></a></div>
+    </div>
+  </section>
+
+  <section class="mould-capability" aria-labelledby="mould-capability-title">
+    <div class="container mould-capability-layout">
+      <div><span class="eyebrow">Complete Project Capability</span><h2 id="mould-capability-title">More than a standalone steel mould</h2><p>When included in the agreed project scope, Realjet can connect mould engineering with production layout and the equipment interfaces required around casting, curing, handling and transfer.</p></div>
+      <ul><li>Single moulds or coordinated mould sets</li><li>Factory and casting-yard layout interfaces</li><li>Concrete placing, curing and transfer integration</li><li>Hydraulic power and control options</li><li>Trial assembly and inspection</li><li>Installation and commissioning support as agreed</li></ul>
+    </div>
+  </section>
+
+  <section class="mould-faq" aria-labelledby="mould-faq-title">
+    <div class="container mould-faq-layout">
+      <div><span class="eyebrow">Buyer FAQ</span><h2 id="mould-faq-title">Questions to resolve before quotation</h2></div>
+      <div class="mould-faq-list">
+        <details><summary>What information should be included in the first enquiry?</summary><p>Use the Message field to identify the component type, main dimensions or size range, target output and whether drawings are available. Realjet will request detailed technical files by e-mail after the initial review.</p></details>
+        <details><summary>Can one mould cover several component sizes?</summary><p>Replaceable end forms, inserts or adjustable sections may be possible for an approved family of components. Feasibility depends on the geometry, reinforcement, embedded items, tolerance basis and production sequence.</p></details>
+        <details><summary>How is conventional, mechanical or hydraulic operation selected?</summary><p>The choice is reviewed against moving mass, opening frequency, available labour, operating space, safety interfaces and the required casting cycle.</p></details>
+        <details><summary>What is checked before delivery?</summary><p>The agreed inspection scope may include fit-up, locking positions, contact surfaces, key dimensions and mechanical or hydraulic movement. Acceptance criteria must come from the approved project documents.</p></details>
+        <details><summary>Can Realjet support a complete production arrangement?</summary><p>Yes, where agreed in the project scope. The review can connect moulds with factory or casting-yard layout, concrete handling, curing, transfer, installation and commissioning interfaces.</p></details>
+        <details><summary>How should confidential drawings be shared?</summary><p>Do not upload confidential drawings through the general website form. Send a short Message first; Realjet can then arrange an appropriate project communication method.</p></details>
+      </div>
     </div>
   </section>
 
   <section id="mould-enquiry" class="mould-enquiry mould-enquiry-cta" aria-labelledby="mould-enquiry-title">
     <div class="container mould-enquiry-shell">
-      <div class="mould-enquiry-copy"><span class="eyebrow">Project Enquiry</span><h2 id="mould-enquiry-title">Send the component type and available drawings.</h2><p>Realjet will review the mould geometry, operating sequence, production target and factory or casting-yard interfaces before defining the technical scope.</p></div>
-      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds general enquiry">Start an Enquiry <span aria-hidden="true">→</span></button>
+      <div class="mould-enquiry-copy"><span class="eyebrow">Project Enquiry</span><h2 id="mould-enquiry-title">Tell us the component type and project requirements.</h2><p>Use the Message field to outline the component, main dimensions, target output and whether drawings are available. Realjet will request detailed files through an appropriate follow-up channel.</p></div>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete moulds general enquiry">Request a Technical Review <span aria-hidden="true">→</span></button>
     </div>
   </section>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Precast Concrete Moulds","item":"https://realjetech.com/precast-concrete-molds/"}]},
+    {"@type":"ItemList","name":"Realjet Precast Concrete Mould Categories","numberOfItems":7,"itemListElement":[{% for category in precastMouldCatalog.categories %}{"@type":"ListItem","position":{{ loop.index }},"name":{{ category.name | json | safe }},"url":"https://realjetech.com/precast-concrete-molds/{{ category.slug }}/"}{% if not loop.last %},{% endif %}{% endfor %}]}
+  ]
+}
+</script>

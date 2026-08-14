@@ -4,12 +4,13 @@ description: Custom steel mould systems for precast T-, I-, U-, trough and other
   beams or girders, available in conventional, hydraulic or movable configurations
   to meet customer production requirements.
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-14
 order: 101
 featured: false
 slug: beam-and-girder-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: bridge-transportation-moulds
+mouldGroup: true
 image: /images/products/precast-moulds/beam-and-girder-moulds.webp
 imageAlt: End view of a blue steel beam and girder mould installed inside a
   precast concrete production facility
@@ -33,6 +34,17 @@ draft: false
     allowfullscreen
   ></iframe>
 </div>
+
+## Select the beam or girder type
+
+This page is the navigation hub for project-specific beam and girder moulds. Review the product page that matches the approved component section:
+
+- [T-Girder Moulds](/precast-concrete-molds/t-girder-moulds/)
+- [I-Girder Moulds](/precast-concrete-molds/i-girder-moulds/)
+- [U-Girder Moulds](/precast-concrete-molds/u-girder-moulds/)
+- [Trough Girder Moulds](/precast-concrete-molds/trough-girder-moulds/)
+- [Box Girder Moulds](/precast-concrete-molds/box-girder-moulds/)
+- [Segmental Box Girder Moulds](/precast-concrete-molds/segmental-bridge-moulds/)
 
 ## Production scenarios and design basis
 

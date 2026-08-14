@@ -52,6 +52,10 @@ collections:
           - { label: Building Component Moulds, value: building-component-moulds }
           - { label: Tunnel & Underground Moulds, value: tunnel-underground-moulds }
           - { label: Municipal & Infrastructure Moulds, value: municipal-infrastructure-moulds }
+          - { label: Marine & Coastal Moulds, value: marine-coastal-moulds }
+          - { label: Retaining Wall & Block Moulds, value: retaining-wall-block-moulds }
+          - { label: Volumetric & Special Precast Moulds, value: volumetric-special-precast-moulds }
+      - { label: Mould Group Navigation Page, name: mouldGroup, widget: boolean, default: false, required: false, hint: "Enable only when the page is a navigation hub rather than an end product card." }
       - { label: Main Product Image, name: image, widget: image, required: true, hint: "Used as the main product image and on product cards. All CMS uploads are saved in the shared media library. Use an authorised 16:9 image, ideally 1200 × 675 or larger and below 2 MB." }
       - { label: Main Image Alt, name: imageAlt, widget: string, required: true }
       - label: Product Gallery

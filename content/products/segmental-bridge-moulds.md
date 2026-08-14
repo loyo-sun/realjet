@@ -1,8 +1,8 @@
 ---
-title: "Segmental Bridge Moulds"
-description: "Custom short-line or long-line segmental bridge moulds, engineered as conventional, hydraulic or movable systems to match customer geometry, casting sequence and yard requirements."
+title: "Segmental Box Girder Moulds"
+description: "Custom short-line or long-line segmental box girder moulds, engineered as conventional, hydraulic or movable systems to match customer geometry, casting sequence and yard requirements."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-14
 order: 103
 featured: false
 slug: segmental-bridge-moulds

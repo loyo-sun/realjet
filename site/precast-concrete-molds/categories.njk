@@ -24,6 +24,7 @@ eleventyComputed:
 </header>
 <section class="mould-products-section">
   <div class="container">
+    {% if categoryProducts.length %}
     <div class="mould-products-carousel">
       <button class="mould-carousel-control mould-carousel-control-left" type="button" data-mould-carousel-direction="-1" aria-label="View previous {{ mouldCategory.name }} products"><span aria-hidden="true">←</span></button>
       <div class="mould-products-grid" style="--mould-columns: {{ categoryProducts.length }}">
@@ -31,12 +32,20 @@ eleventyComputed:
       </div>
       <button class="mould-carousel-control mould-carousel-control-right" type="button" data-mould-carousel-direction="1" aria-label="View next {{ mouldCategory.name }} products"><span aria-hidden="true">→</span></button>
     </div>
+    {% else %}
+    <div class="mould-category-scope">
+      <span class="eyebrow">Project-Specific Scope</span>
+      <h2>Start with the component and production brief.</h2>
+      <p>This category is handled through custom mould engineering. Realjet reviews the approved component geometry, required size range, casting sequence, target output, demoulding space and lifting or transfer interfaces before confirming the mould scope.</p>
+      <ul>{% for productName in mouldCategory.representativeProducts %}<li>{{ productName }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
   </div>
 </section>
 <section class="category-contact-band">
   <div class="container category-contact-inner">
     <div><span class="eyebrow">Project Review</span><h2>Start with the component drawings and production plan.</h2></div>
-    <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="{{ mouldCategory.name }} enquiry">Send Project Requirements <span aria-hidden="true">→</span></button>
+    <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="{{ mouldCategory.name }} enquiry">Request a Technical Review <span aria-hidden="true">→</span></button>
   </div>
 </section>
 <nav class="insight-contact-actions category-contact-actions" aria-label="{{ mouldCategory.name }} contact options">

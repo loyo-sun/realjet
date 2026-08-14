@@ -3,22 +3,44 @@
     {
       "name": "Bridge & Transportation Moulds",
       "slug": "bridge-transportation-moulds",
-      "description": "Custom steel mould systems for precast bridge, viaduct and rail components, available in conventional, hydraulic or movable configurations to suit customer drawings, casting methods, permanent factories and dedicated casting yards."
+      "description": "Project-specific steel mould systems for precast bridge, viaduct and rail components, developed around the approved section, casting method and production layout.",
+      "representativeProducts": ["T-Girder", "Box Girder", "Segmental Box Girder", "I-Girder", "U-Girder", "Trough Girder"]
     },
     {
       "name": "Building Component Moulds",
       "slug": "building-component-moulds",
-      "description": "Custom steel mould systems for repeat production of structural and architectural building components, with conventional, hydraulic or movable configurations selected to match customer requirements, component geometry and factory workflow."
+      "description": "Steel mould systems for repeat production of structural and architectural building components, configured around component geometry, embedded items and factory workflow.",
+      "representativeProducts": ["Wall Panels", "Floor & Roof Slabs", "Columns & Beams", "Stairs & Balconies"]
     },
     {
       "name": "Tunnel & Underground Moulds",
       "slug": "tunnel-underground-moulds",
-      "description": "Purpose-designed tunnel and underground mould systems, customized as conventional, hydraulic or movable configurations according to customer drawings, demoulding requirements and production conditions."
+      "description": "Purpose-designed mould systems for tunnel and underground components, reviewed against joint details, internal-form withdrawal, handling and production conditions.",
+      "representativeProducts": ["Tunnel Segments", "Box Culverts", "Underground Structures", "Culvert Headwalls"]
     },
     {
       "name": "Municipal & Infrastructure Moulds",
       "slug": "municipal-infrastructure-moulds",
-      "description": "Custom mould systems for drainage, utility, road and civil-infrastructure components, available with conventional, hydraulic or movable operation to meet customer-specific geometry, output and handling requirements."
+      "description": "Project-specific mould systems for drainage, utility, road and civil-infrastructure components, with operation selected to match geometry, output and handling requirements.",
+      "representativeProducts": ["Drainage Channels", "Manholes", "Concrete Pipes", "Road Barriers & Kerbs"]
+    },
+    {
+      "name": "Marine & Coastal Moulds",
+      "slug": "marine-coastal-moulds",
+      "description": "Steel mould systems for breakwater and coastal-protection units, developed from the approved unit geometry, casting direction, demoulding method and production target.",
+      "representativeProducts": ["Interlocking Armour Units", "Tetrapods", "Dolos Units", "Quay Blocks"]
+    },
+    {
+      "name": "Retaining Wall & Block Moulds",
+      "slug": "retaining-wall-block-moulds",
+      "description": "Mould systems for retaining-wall panels and large concrete blocks, reviewed around face finish, connection details, demoulding direction and lifting interfaces.",
+      "representativeProducts": ["Retaining Walls", "MSE Wall Panels", "Interlocking Blocks", "Gravity Blocks"]
+    },
+    {
+      "name": "Volumetric & Special Precast Moulds",
+      "slug": "volumetric-special-precast-moulds",
+      "description": "Custom engineering for three-dimensional and special precast components where openings, embedded items, inner-form withdrawal and transport limits require project review.",
+      "representativeProducts": ["Volumetric Modules", "Elevator Shafts", "Utility Cabins", "Special Containers"]
     }
   ]
 }

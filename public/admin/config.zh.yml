@@ -52,6 +52,10 @@ collections:
           - { label: 建筑构件模板, value: building-component-moulds }
           - { label: 隧道与地下工程模板, value: tunnel-underground-moulds }
           - { label: 市政与基础设施模板, value: municipal-infrastructure-moulds }
+          - { label: 海工与海岸防护模板, value: marine-coastal-moulds }
+          - { label: 挡土墙与大型块体模板, value: retaining-wall-block-moulds }
+          - { label: 三维与特殊预制构件模板, value: volumetric-special-precast-moulds }
+      - { label: 模板分组导航页, name: mouldGroup, widget: boolean, default: false, required: false, hint: "仅当页面是分类导航而非最终产品卡片时启用。" }
       - { label: 产品主图, name: image, widget: image, required: true, hint: "用于产品详情页主图和产品卡片。所有后台上传文件统一保存到共享媒体库。请使用已获授权的 16:9 图片，建议尺寸不低于 1200 × 675，文件小于 2 MB。" }
       - { label: 主图替代文本, name: imageAlt, widget: string, required: true }
       - label: 产品图片集

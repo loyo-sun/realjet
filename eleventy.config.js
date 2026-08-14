@@ -71,7 +71,8 @@ export default function (eleventyConfig) {
       .filter(
         (item) =>
           (!item.data.draft || !isProduction) &&
-          item.data.productSeries === "precast-concrete-moulds",
+          item.data.productSeries === "precast-concrete-moulds" &&
+          item.data.mouldGroup !== true,
       )
       .sort((a, b) => Number(a.data.order || 999) - Number(b.data.order || 999)),
   );
