@@ -101,6 +101,8 @@ for (const expectedPath of [
   "precast-concrete-molds/u-girder-moulds/index.html",
   "precast-concrete-molds/trough-girder-moulds/index.html",
   "precast-concrete-molds/interlocking-concrete-armour-unit-moulds/index.html",
+  "precast-concrete-molds/tetrapod-moulds/index.html",
+  "precast-concrete-molds/precast-concrete-caisson-moulds/index.html",
   "admin/index.html",
   "admin/config.yml",
   "admin/config.zh.yml",
@@ -335,14 +337,14 @@ for (const requiredMouldsPageContent of [
   }
 }
 const mouldProductCardCount = (precastMouldsPage.match(/class="mould-product-card"/g) || []).length;
-if (mouldProductCardCount !== 18) {
-  throw new Error(`Precast moulds page must contain exactly 18 product cards; found ${mouldProductCardCount}.`);
+if (mouldProductCardCount !== 20) {
+  throw new Error(`Precast moulds page must contain exactly 20 product cards; found ${mouldProductCardCount}.`);
 }
 const mouldScenarioCount = (precastMouldsPage.match(/data-mould-category=/g) || []).length;
 if (mouldScenarioCount !== 5) {
   throw new Error(`Precast moulds hero must contain exactly five application shortcuts; found ${mouldScenarioCount}.`);
 }
-for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View by Application Scenario", "View product", "View category", "Custom Precast Moulds", "Seven mould categories for project review", "From component review to project support", "Choose operation around the production task", "G15 Ningbo South TJ05 T-Girder Line", "Request a Technical Review", "Technical Review", "Enquire Now"]) {
+for (const removedCatalogueLabel of ["Browse the complete 16-product mould range.", "View by Application Scenario", "View Product", "View product", "View category", "Custom Precast Moulds", "Seven mould categories for project review", "From component review to project support", "Choose operation around the production task", "G15 Ningbo South TJ05 T-Girder Line", "Request a Technical Review", "Technical Review", "Enquire Now", "Questions to resolve before quotation", "mould-evidence-grid"]) {
   if (precastMouldsPage.includes(removedCatalogueLabel)) {
     throw new Error(`Precast moulds page retains removed catalogue label: ${removedCatalogueLabel}`);
   }
@@ -383,7 +385,7 @@ for (const mouldPage of [precastMouldsPage, bridgeMouldsCategoryPage, beamMouldP
   }
 }
 const landingProductActionCount = (precastMouldsPage.match(/class="mould-product-actions"/g) || []).length;
-if (landingProductActionCount !== 18) {
+if (landingProductActionCount !== 20) {
   throw new Error(`Each landing-page product must have an action group; found ${landingProductActionCount}.`);
 }
 const bridgeProductActionCount = (bridgeMouldsCategoryPage.match(/class="mould-product-actions"/g) || []).length;
@@ -433,6 +435,8 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/precast-concrete-molds/marine-coastal-moulds/",
   "https://realjetech.com/precast-concrete-molds/t-girder-moulds/",
   "https://realjetech.com/precast-concrete-molds/interlocking-concrete-armour-unit-moulds/",
+  "https://realjetech.com/precast-concrete-molds/tetrapod-moulds/",
+  "https://realjetech.com/precast-concrete-molds/precast-concrete-caisson-moulds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",

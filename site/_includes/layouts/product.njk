@@ -11,6 +11,7 @@ layout: layouts/base.njk
     <section class="product-overview">
       <div class="product-gallery" data-product-gallery>
         <div class="product-gallery-stage"><img src="{{ image }}" alt="{{ imageAlt }}" width="1200" height="675" decoding="async" data-product-gallery-main /></div>
+        {% if imageCaption %}<p class="product-gallery-note">{{ imageCaption }}</p>{% endif %}
         {% if gallery and gallery.length %}
         <div class="product-gallery-thumbs" aria-label="Product image gallery">
           <button type="button" class="is-active" aria-pressed="true" aria-label="View main product image" data-product-gallery-thumb data-gallery-src="{{ image }}" data-gallery-alt="{{ imageAlt }}" data-gallery-position="1"><img src="{{ image }}" alt="" width="160" height="90" loading="lazy" decoding="async" /></button>

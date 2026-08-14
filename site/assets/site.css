@@ -354,11 +354,12 @@ button, input, textarea, select { font: inherit; }
 .moulds-hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .moulds-proof-list { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 20px 0 0; padding: 0; color: rgba(255,255,255,.62); font-size: 11px; font-weight: 750; list-style: none; }
 .moulds-proof-list li::before { margin-right: 8px; color: #69d5de; content: "✓"; }
-.mould-scenario-nav { padding: 14px 16px; border: 1px solid rgba(255,255,255,.15); border-radius: 13px; background: rgba(2,20,33,.42); backdrop-filter: blur(10px); }
-.mould-scenario-nav > div { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 1px; background: rgba(255,255,255,.14); }
-.mould-scenario-nav a { display: flex; min-width: 0; grid-column: span 2; align-items: center; justify-content: center; padding: 7px 14px; color: var(--white); background: #0a3148; font-size: 12px; font-weight: 800; line-height: 1.25; text-align: center; text-decoration: none; }
+.mould-scenario-nav { padding: 10px; border: 1px solid rgba(140,228,234,.22); border-radius: 18px; background: linear-gradient(145deg,rgba(4,28,45,.72),rgba(5,42,62,.5)); box-shadow: 0 18px 46px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.08); backdrop-filter: blur(14px); }
+.mould-scenario-nav > div { display: grid; grid-template-columns: repeat(6,minmax(0,1fr)); gap: 8px; }
+.mould-scenario-nav a { position: relative; display: flex; min-width: 0; min-height: 46px; grid-column: span 2; align-items: center; justify-content: center; gap: 9px; padding: 9px 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.1); border-radius: 11px; color: rgba(255,255,255,.92); background: linear-gradient(135deg,rgba(18,73,97,.92),rgba(8,48,70,.9)); box-shadow: inset 0 1px 0 rgba(255,255,255,.06); font-size: 12px; font-weight: 800; line-height: 1.25; text-align: center; text-decoration: none; transition: transform 180ms ease,border-color 180ms ease,color 180ms ease,background 180ms ease,box-shadow 180ms ease; }
+.mould-scenario-nav a::before { width: 5px; height: 5px; flex: 0 0 auto; border-radius: 50%; background: #69d5de; box-shadow: 0 0 0 4px rgba(105,213,222,.1); content: ""; }
 .mould-scenario-nav a:nth-child(n+4) { grid-column: span 3; }
-.mould-scenario-nav a:hover, .mould-scenario-nav a:focus-visible { color: #8ce4ea; }
+.mould-scenario-nav a:hover, .mould-scenario-nav a:focus-visible { border-color: rgba(105,213,222,.46); color: var(--white); background: linear-gradient(135deg,rgba(22,92,120,.96),rgba(10,58,81,.94)); box-shadow: 0 10px 26px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.1); transform: translateY(-2px); }
 .moulds-categories { padding: 72px 0 76px; background: var(--soft); }
 .moulds-section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 28px; }
 .moulds-section-heading h2 { max-width: 760px; margin: 11px 0 0; color: var(--navy); font-size: clamp(31px,4vw,46px); line-height: 1.1; letter-spacing: -.045em; }
@@ -374,13 +375,6 @@ button, input, textarea, select { font: inherit; }
 .mould-category-card ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 0; padding: 0; list-style: none; }
 .mould-category-card li { padding: 6px 8px; border-radius: 6px; color: var(--navy); background: var(--soft); font-size: 10px; font-weight: 750; }
 .mould-category-card b { margin-top: auto; padding-top: 18px; color: var(--blue); font-size: 12px; }
-.mould-evidence-strip { position: relative; z-index: 4; color: var(--white); background: var(--navy-dark); }
-.mould-evidence-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
-.mould-evidence-grid > div { min-width: 0; padding: 22px 20px; border-left: 1px solid rgba(255,255,255,.12); }
-.mould-evidence-grid > div:last-child { border-right: 1px solid rgba(255,255,255,.12); }
-.mould-evidence-grid strong, .mould-evidence-grid span { display: block; }
-.mould-evidence-grid strong { font-size: 13px; }
-.mould-evidence-grid span { margin-top: 6px; color: rgba(255,255,255,.58); font-size: 10px; line-height: 1.45; }
 .moulds-section-heading > p, .mould-catalogue-heading > p { max-width: 440px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
 .mould-catalogue, .mould-products-section { padding: 74px 0 82px; background: var(--white); }
 .mould-catalogue-heading { margin-bottom: 34px; }
@@ -491,7 +485,11 @@ button, input, textarea, select { font: inherit; }
 .mould-enquiry-success h2 { margin: 0; font-size: 28px; }
 .mould-enquiry-success p { margin: 7px 0 0; color: rgba(255,255,255,.66); font-size: 13px; }
 .mould-enquiry-cta .mould-enquiry-shell { align-items: center; }
+.mould-enquiry-cta .mould-enquiry-shell { grid-template-columns: minmax(0,1fr) auto; gap: 24px; }
+.mould-enquiry-cta .mould-enquiry-copy { max-width: 900px; }
+.mould-enquiry-cta .mould-enquiry-copy h2 { max-width: 860px; }
 .mould-enquiry-cta .mould-enquiry-shell > .button { justify-self: end; }
+.product-gallery-note { margin: 10px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
 .universal-enquiry-modal { position: fixed; inset: 0; z-index: 500; display: grid; place-items: center; padding: 22px; }
 .universal-enquiry-modal[hidden] { display: none; }
 .universal-enquiry-backdrop { position: absolute; inset: 0; border: 0; background: rgba(3,17,28,.76); backdrop-filter: blur(7px); cursor: pointer; }
@@ -529,7 +527,6 @@ body.has-enquiry-modal { overflow: hidden; }
   .taxonomy-card-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .taxonomy-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .moulds-hero-copy { width: min(650px,68%); }
-  .mould-evidence-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .mould-process-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
   .mould-configuration-layout, .mould-capability-layout, .mould-faq-layout { grid-template-columns: 1fr; gap: 34px; }
   .mould-reference-card { grid-template-columns: 1fr; }
@@ -656,9 +653,9 @@ body.has-enquiry-modal { overflow: hidden; }
   .moulds-hero-actions { flex-wrap: nowrap; margin-top: 16px; }
   .moulds-hero-actions .button { min-height: 42px; flex: 1 1 0; padding: 8px 10px; font-size: 10px; }
   .moulds-proof-list { display: none; }
-  .mould-scenario-nav { display: block; padding: 12px; }
-  .mould-scenario-nav > div { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px; background: rgba(255,255,255,.12); }
-  .mould-scenario-nav a, .mould-scenario-nav a:nth-child(n) { min-height: 40px; grid-column: span 1; padding: 7px 9px; border: 0; background: #0a3148; font-size: 10px; }
+  .mould-scenario-nav { display: block; padding: 8px; border-radius: 14px; }
+  .mould-scenario-nav > div { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; }
+  .mould-scenario-nav a, .mould-scenario-nav a:nth-child(n) { min-height: 40px; grid-column: span 1; gap: 6px; padding: 7px 8px; border: 1px solid rgba(255,255,255,.09); border-radius: 8px; font-size: 10px; }
   .mould-scenario-nav a:last-child { grid-column: 1 / -1; }
   .moulds-categories { padding: 44px 0 48px; }
   .moulds-section-heading { align-items: flex-start; flex-direction: column; }
@@ -669,8 +666,6 @@ body.has-enquiry-modal { overflow: hidden; }
   .mould-category-card h3 { margin-top: 7px; font-size: 20px; }
   .mould-category-card p, .mould-category-card ul { display: none; }
   .mould-category-card b { padding-top: 10px; }
-  .mould-evidence-grid { grid-template-columns: 1fr; }
-  .mould-evidence-grid > div, .mould-evidence-grid > div:last-child { padding: 16px 4px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.1); border-left: 0; }
   .moulds-section-heading > p, .mould-catalogue-heading > p { max-width: none; }
   .mould-process, .mould-configurations, .mould-quality, .mould-project-reference, .mould-capability, .mould-faq { padding: 50px 0 56px; }
   .mould-process-grid { grid-template-columns: 1fr; }
@@ -704,6 +699,7 @@ body.has-enquiry-modal { overflow: hidden; }
   .mould-product-content h2 { font-size: 27px; }
   .mould-enquiry { padding: 34px 0; }
   .mould-enquiry-shell { gap: 18px; padding: 22px 18px; }
+  .mould-enquiry-cta .mould-enquiry-shell { grid-template-columns: 1fr; gap: 18px; }
   .mould-enquiry h2 { font-size: 29px; }
   .mould-enquiry-copy p { display: none; }
   .mould-enquiry textarea { min-height: 82px; }
