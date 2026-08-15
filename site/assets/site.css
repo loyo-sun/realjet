@@ -628,7 +628,7 @@ body.has-enquiry-modal { overflow: hidden; }
   .category-contact-actions svg { width: 20px; height: 20px; flex: 0 0 auto; }
   .category-action-label { display: inline; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .category-contact-actions a:hover, .category-contact-actions a:focus-visible, .category-contact-actions button:hover, .category-contact-actions button:focus-visible { transform: translateY(-3px); }
-  body[data-page-type="precast-mould-category"] .site-footer { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
+  body[data-page-type="precast-moulds"] .site-footer, body[data-page-type="precast-mould-category"] .site-footer { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
   .site-footer { padding: 20px 0; }
   .footer-bottom { align-items: flex-start; flex-direction: column; gap: 12px; }
   .footer-meta { align-items: flex-start; justify-content: flex-start; flex-direction: column; gap: 10px; }
