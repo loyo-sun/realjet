@@ -1,4 +1,25 @@
-const CONSENT_KEY = "realjet_analytics_consent_v1";
+const CONSENT_KEY = "realjet_consent_v2";
+const LEGACY_CONSENT_KEY = "realjet_analytics_consent_v1";
+const CONSENT_CHOICES = {
+  all: {
+    analytics_storage: "granted",
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  },
+  analytics: {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  },
+  denied: {
+    analytics_storage: "denied",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+  },
+};
 
 const randomHero = document.querySelector("[data-random-hero]");
 if (randomHero) {
@@ -49,26 +70,34 @@ function contactEventName(channel) {
 function readConsent() {
   try {
     const value = localStorage.getItem(CONSENT_KEY);
-    return value === "granted" || value === "denied" ? value : null;
+    if (value && CONSENT_CHOICES[value]) return value;
+    const legacyValue = localStorage.getItem(LEGACY_CONSENT_KEY);
+    // Existing analytics consent does not cover the newly introduced advertising purposes.
+    // Prompt those visitors again instead of silently expanding or migrating their consent.
+    if (legacyValue === "granted") return null;
+    if (legacyValue === "denied") return "denied";
+    return null;
   } catch {
     return null;
   }
 }
 
-function updateConsent(value, trackChoice = false) {
-  sendGtag("consent", "update", {
-    analytics_storage: value,
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-  });
+function updateConsent(choice, trackChoice = false) {
+  const state = CONSENT_CHOICES[choice] || CONSENT_CHOICES.denied;
+  sendGtag("consent", "update", state);
   try {
-    localStorage.setItem(CONSENT_KEY, value);
+    localStorage.setItem(CONSENT_KEY, choice);
+    localStorage.removeItem(LEGACY_CONSENT_KEY);
   } catch {
     // Consent still applies to the current page if storage is unavailable.
   }
-  if (trackChoice && value === "granted") {
-    trackEvent("analytics_consent_granted", { consent_source: "site_banner" });
+  if (trackChoice && state.analytics_storage === "granted") {
+    trackEvent("consent_preferences_updated", {
+      consent_source: "site_banner",
+      analytics_consent: state.analytics_storage,
+      advertising_consent: state.ad_storage,
+      personalization_consent: state.ad_personalization,
+    });
   }
 }
 
@@ -78,16 +107,18 @@ function showConsentPanel() {
   panel.className = "analytics-consent-panel";
   panel.setAttribute("role", "dialog");
   panel.setAttribute("aria-modal", "false");
-  panel.setAttribute("aria-label", "Analytics preferences");
+  panel.setAttribute("aria-label", "Cookie preferences");
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <p>We use cookies for anonymous site analytics to improve your experience. For more information, please read our <a href="/marketing/privacy/en/">privacy policy</a>.</p>
+      <p>We use optional cookies for site analytics and advertising measurement. Choose whether to accept all, allow analytics only, or reject optional cookies. Read our <a href="/marketing/privacy/en/">privacy policy</a>.</p>
     </div>
     <div class="analytics-consent-actions">
       <a href="/marketing/privacy/en/#cookies">Privacy settings</a>
-      <button type="button" class="consent-accept" data-consent="granted">Accept all</button>
+      <button type="button" data-consent="analytics">Analytics only</button>
+      <button type="button" data-consent="denied">Reject all</button>
+      <button type="button" class="consent-accept" data-consent="all">Accept all</button>
     </div>
-    <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="Close analytics preferences">×</button>`;
+    <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="Reject optional cookies and close cookie preferences">×</button>`;
   panel.addEventListener("click", (event) => {
     const value = event.target.closest("button")?.dataset.consent;
     if (!value) return;

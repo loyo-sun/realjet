@@ -1,62 +1,83 @@
 const DEFAULT_FORM_NAME = "universal-enquiry";
-const CONSENT_KEY = "realjet_analytics_consent_v1";
+const CONSENT_KEY = "realjet_consent_v2";
+const LEGACY_CONSENT_KEY = "realjet_analytics_consent_v1";
 const DEFAULT_PAGE_TYPE = "precast_production_line";
+
+const CONSENT_CHOICES = {
+  all: { analytics_storage: "granted", ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted" },
+  analytics: { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" },
+  denied: { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" },
+};
 
 const consentCopy = {
   en: {
-    title: "Analytics preferences",
-    body: "We use cookies for anonymous site analytics to improve your experience. For more information, please read our",
+    title: "Cookie preferences",
+    body: "We use optional cookies for site analytics and advertising measurement. Choose whether to accept all, allow analytics only, or reject optional cookies. Read our",
     accept: "Accept all",
+    analyticsOnly: "Analytics only",
+    reject: "Reject all",
     settings: "Privacy settings",
-    close: "Close analytics preferences",
+    close: "Close cookie preferences",
     privacy: "privacy policy",
   },
   id: {
-    title: "Preferensi analitik",
-    body: "Kami menggunakan cookie untuk analitik situs anonim guna meningkatkan pengalaman Anda. Untuk informasi lebih lanjut, silakan baca",
+    title: "Preferensi cookie",
+    body: "Kami menggunakan cookie opsional untuk analitik situs dan pengukuran iklan. Pilih untuk menerima semua, mengizinkan analitik saja, atau menolak cookie opsional. Baca",
     accept: "Terima semua",
+    analyticsOnly: "Analitik saja",
+    reject: "Tolak semua",
     settings: "Pengaturan privasi",
-    close: "Tutup preferensi analitik",
+    close: "Tutup preferensi cookie",
     privacy: "Kebijakan Privasi",
   },
   ar: {
-    title: "تفضيلات التحليلات",
-    body: "نستخدم ملفات تعريف الارتباط لتحليل استخدام الموقع بصورة مجهولة الهوية وتحسين تجربتك. لمزيد من المعلومات، يرجى قراءة",
+    title: "تفضيلات ملفات تعريف الارتباط",
+    body: "نستخدم ملفات تعريف ارتباط اختيارية لتحليل الموقع وقياس الإعلانات. اختر قبول الكل أو التحليلات فقط أو رفض ملفات الارتباط الاختيارية. اقرأ",
     accept: "قبول الكل",
+    analyticsOnly: "التحليلات فقط",
+    reject: "رفض الكل",
     settings: "إعدادات الخصوصية",
-    close: "إغلاق تفضيلات التحليلات",
+    close: "إغلاق تفضيلات ملفات تعريف الارتباط",
     privacy: "سياسة الخصوصية",
   },
   ru: {
-    title: "Настройки аналитики",
-    body: "Мы используем файлы cookie для анонимной аналитики сайта, чтобы улучшить вашу работу с сайтом. Для получения дополнительной информации ознакомьтесь с",
+    title: "Настройки cookie",
+    body: "Мы используем необязательные cookie для аналитики сайта и измерения рекламы. Выберите: принять все, разрешить только аналитику или отказаться от необязательных cookie. Прочитайте",
     accept: "Принять все",
+    analyticsOnly: "Только аналитика",
+    reject: "Отклонить все",
     settings: "Настройки конфиденциальности",
-    close: "Закрыть настройки аналитики",
+    close: "Закрыть настройки cookie",
     privacy: "Политика конфиденциальности",
   },
   cn: {
-    title: "统计偏好设置",
-    body: "我们使用 Cookie 进行匿名网站分析，以改善您的使用体验。如需了解更多信息，请阅读我们的",
+    title: "Cookie 偏好设置",
+    body: "我们使用可选 Cookie 进行网站分析和广告效果衡量。您可以选择全部接受、仅允许分析统计，或拒绝所有可选 Cookie。请阅读我们的",
     accept: "全部接受",
+    analyticsOnly: "仅分析统计",
+    reject: "全部拒绝",
     settings: "隐私设置",
-    close: "关闭统计偏好设置",
+    close: "关闭 Cookie 偏好设置",
     privacy: "隐私政策",
   },
   fr: {
-    title: "Préférences d’analyse",
-    body: "Nous utilisons des cookies pour analyser anonymement l’utilisation du site et améliorer votre expérience. Pour plus d’informations, veuillez consulter notre",
+    title: "Préférences de cookies",
+    body: "Nous utilisons des cookies facultatifs pour l’analyse du site et la mesure publicitaire. Choisissez de tout accepter, d’autoriser uniquement l’analyse ou de refuser les cookies facultatifs. Consultez notre",
     accept: "Tout accepter",
+    analyticsOnly: "Analyse uniquement",
+    reject: "Tout refuser",
     settings: "Paramètres de confidentialité",
-    close: "Fermer les préférences d’analyse",
+    close: "Fermer les préférences de cookies",
     privacy: "Politique de confidentialité",
   },
   es: {
-    title: "Preferencias de analítica",
-    body: "Utilizamos cookies para realizar análisis anónimos del sitio y mejorar su experiencia. Para obtener más información, consulte nuestra",
+    title: "Preferencias de cookies",
+    body: "Utilizamos cookies opcionales para la analítica del sitio y la medición publicitaria. Elija aceptar todo, permitir solo la analítica o rechazar las cookies opcionales. Consulte nuestra",
     accept: "Aceptar todo",
+    analyticsOnly: "Solo analítica",
+    reject: "Rechazar todo",
     settings: "Ajustes de privacidad",
-    close: "Cerrar las preferencias de analítica",
+    close: "Cerrar las preferencias de cookies",
     privacy: "Política de privacidad",
   },
 };
@@ -321,40 +342,49 @@ export function trackLeadError(form, errorType = "submission_failed") {
 function readConsent() {
   try {
     const value = window.localStorage.getItem(CONSENT_KEY);
-    return value === "granted" || value === "denied" ? value : null;
+    if (value && CONSENT_CHOICES[value]) return value;
+    const legacyValue = window.localStorage.getItem(LEGACY_CONSENT_KEY);
+    // Existing analytics consent does not cover the newly introduced advertising purposes.
+    // Prompt those visitors again instead of silently expanding or migrating their consent.
+    if (legacyValue === "granted") return null;
+    if (legacyValue === "denied") return "denied";
+    return null;
   } catch {
     return null;
   }
 }
 
-function writeConsent(value) {
+function writeConsent(choice) {
   try {
-    window.localStorage.setItem(CONSENT_KEY, value);
+    window.localStorage.setItem(CONSENT_KEY, choice);
+    window.localStorage.removeItem(LEGACY_CONSENT_KEY);
   } catch {
     // The consent update still applies to the current page if storage is unavailable.
   }
 }
 
-function updateConsent(value, trackChoice = false) {
-  if (import.meta.env.DEV) console.info("[Realjet consent]", value);
-  gtag("consent", "update", {
-    analytics_storage: value,
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-  });
-  writeConsent(value);
-  if (trackChoice && value === "granted") {
-    trackEvent("analytics_consent_granted", { consent_source: "site_banner" });
+function updateConsent(choice, trackChoice = false) {
+  const state = CONSENT_CHOICES[choice] || CONSENT_CHOICES.denied;
+  if (import.meta.env.DEV) console.info("[Realjet consent]", choice, state);
+  gtag("consent", "update", state);
+  writeConsent(choice);
+  if (trackChoice && state.analytics_storage === "granted") {
+    trackEvent("consent_preferences_updated", {
+      consent_source: "site_banner",
+      analytics_consent: state.analytics_storage,
+      advertising_consent: state.ad_storage,
+      personalization_consent: state.ad_personalization,
+    });
   }
 }
 
 export function isAnalyticsConsentGranted() {
-  return readConsent() !== "denied";
+  const choice = readConsent();
+  return choice ? CONSENT_CHOICES[choice].analytics_storage === "granted" : false;
 }
 
 export function setAnalyticsConsent(enabled) {
-  updateConsent(enabled ? "granted" : "denied", enabled);
+  updateConsent(enabled ? "analytics" : "denied", enabled);
 }
 
 function privacyUrl(locale) {
@@ -377,7 +407,9 @@ function showConsentPanel(locale) {
     </div>
     <div class="analytics-consent-actions">
       <a href="${privacyUrl(locale)}">${copy.settings}</a>
-      <button type="button" class="analytics-consent-accept" data-consent="granted">${copy.accept}</button>
+      <button type="button" data-consent="analytics">${copy.analyticsOnly}</button>
+      <button type="button" data-consent="denied">${copy.reject}</button>
+      <button type="button" class="analytics-consent-accept" data-consent="all">${copy.accept}</button>
     </div>
     <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="${copy.close}">×</button>
   `;
@@ -399,7 +431,6 @@ export function initAnalyticsConsent(locale, options = {}) {
   initContactTracking();
   const current = readConsent();
   if (current) updateConsent(current);
-  else if (options.defaultGranted) updateConsent("granted");
   else if (options.showPanel !== false) showConsentPanel(locale);
 }
 

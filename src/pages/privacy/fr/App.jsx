@@ -215,15 +215,15 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies et technologies similaires">
               <p>Le site ou son hébergeur peut utiliser des fonctions techniques ou des mécanismes de sécurité strictement nécessaires à l’affichage des pages, au traitement des demandes, à la prévention des abus ou à la fiabilité du service.</p>
-              <p>Google Analytics 4 est un service d’analyse facultatif fourni par Google. Le stockage des données d’analyse est activé lorsque vous sélectionnez « Tout accepter » ou laissez activé l’interrupteur d’analyse ci-dessous, et vous pouvez le désactiver à tout moment. Le stockage publicitaire, les données utilisateur à des fins publicitaires et la personnalisation des annonces restent désactivés.</p>
-              <p>Vous pouvez accepter ou refuser l’analyse, puis modifier votre choix à tout moment dans les paramètres d’analyse.</p>
+              <p>Google Analytics 4 et, lorsqu’elle est configurée, la mesure des conversions Google Ads sont des services Google facultatifs. « Tout accepter » active le stockage des données d’analyse, le stockage publicitaire, les données utilisateur à des fins publicitaires et la personnalisation des annonces ; « Analyse uniquement » active seulement le stockage des données d’analyse ; « Tout refuser » désactive toutes les finalités facultatives.</p>
+              <p>Vous pouvez modifier ou retirer votre choix à tout moment dans les préférences de cookies. Lorsqu’ils sont autorisés, les tags Google peuvent utiliser des cookies et traiter des informations pseudonymisées relatives à l’appareil, aux pages, aux interactions et à l’attribution publicitaire. Le contenu du formulaire de demande n’est pas envoyé à Google Analytics ni à Google Ads.</p>
               <ul>
-                <li>Finalité : mesurer l’utilisation des pages et l’efficacité du parcours de demande ;</li>
-                <li>Prestataire : Google LLC (Google Analytics 4) ;</li>
+                <li>Finalité : mesurer l’utilisation des pages, l’efficacité du parcours de demande et, lorsqu’elles sont configurées, les conversions publicitaires ;</li>
+                <li>Prestataire : Google LLC (Google Analytics 4 et Google Ads, lorsqu’il est configuré) ;</li>
                 <li>Données : informations pseudonymisées sur l’appareil, le navigateur, la page et les interactions, sans le contenu du formulaire ;</li>
                 <li>Contrôle : le consentement peut être accordé, refusé ou retiré à tout moment.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Gérer les préférences d’analyse" onLabel="Analyse activée" offLabel="Analyse désactivée" />
+              <AnalyticsPreferenceSwitch label="Gérer les préférences de cookies" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Données relatives aux mineurs">

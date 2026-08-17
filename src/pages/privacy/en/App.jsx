@@ -215,15 +215,15 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies and Similar Technologies">
               <p>The website or its hosting provider may use strictly necessary technical functions or security mechanisms required to deliver the page, process an enquiry, prevent abuse or maintain service reliability.</p>
-              <p>Google Analytics 4 is an optional analytics service provided by Google. Analytics storage is enabled when you select “Accept all” or keep the analytics switch below on, and you can disable it at any time. Advertising storage, advertising user data and ad personalisation remain disabled.</p>
-              <p>You may accept or reject analytics and later change your choice using the analytics settings control. When analytics is accepted, Google may set analytics cookies and process pseudonymous usage information in accordance with its own terms and privacy practices.</p>
+              <p>Google Analytics 4 and, where configured, Google Ads conversion measurement are optional Google services. “Accept all” enables analytics storage, advertising storage, advertising user data and ad personalisation; “Analytics only” enables analytics storage while keeping advertising purposes disabled; “Reject all” keeps all optional purposes disabled.</p>
+              <p>You may change or withdraw your choice at any time using the cookie-preferences control. When permitted, Google tags may set cookies and process pseudonymous device, page, interaction and advertising-attribution information. We do not send the contents entered into the enquiry form to Google Analytics or Google Ads.</p>
               <ul>
-                <li>Purpose: measure page use and the effectiveness of the enquiry journey;</li>
-                <li>Provider: Google LLC (Google Analytics 4);</li>
+                <li>Purpose: measure page use, the effectiveness of the enquiry journey and, where configured, advertising conversions;</li>
+                <li>Provider: Google LLC (Google Analytics 4 and Google Ads, where configured);</li>
                 <li>Data: pseudonymous device, browser, page and interaction information—never the contents entered into the enquiry form;</li>
                 <li>Control: consent can be granted, refused or withdrawn at any time.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Manage analytics preferences" onLabel="Analytics enabled" offLabel="Analytics disabled" />
+              <AnalyticsPreferenceSwitch label="Manage cookie preferences" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Children’s Information">

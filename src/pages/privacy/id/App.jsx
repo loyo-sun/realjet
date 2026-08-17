@@ -215,15 +215,15 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookie dan Teknologi Serupa">
               <p>Situs web atau penyedia hostingnya dapat menggunakan fungsi teknis yang benar-benar diperlukan atau mekanisme keamanan untuk menampilkan halaman, memproses pertanyaan, mencegah penyalahgunaan, atau menjaga keandalan layanan.</p>
-              <p>Google Analytics 4 adalah layanan analitik opsional dari Google. Penyimpanan analitik diaktifkan saat Anda memilih “Terima semua” atau membiarkan sakelar analitik di bawah tetap aktif, dan dapat dinonaktifkan kapan saja. Penyimpanan iklan, data pengguna untuk iklan, dan personalisasi iklan tetap dinonaktifkan.</p>
-              <p>Anda dapat menerima atau menolak analitik dan mengubah pilihan kapan saja melalui pengaturan analitik.</p>
+              <p>Google Analytics 4 dan, jika dikonfigurasi, pengukuran konversi Google Ads merupakan layanan opsional dari Google. “Terima semua” mengaktifkan penyimpanan analitik, penyimpanan iklan, data pengguna untuk iklan, dan personalisasi iklan; “Analitik saja” hanya mengaktifkan penyimpanan analitik; “Tolak semua” menonaktifkan semua tujuan opsional.</p>
+              <p>Anda dapat mengubah atau menarik pilihan kapan saja melalui pengaturan cookie. Jika diizinkan, tag Google dapat menggunakan cookie dan memproses informasi pseudonim mengenai perangkat, halaman, interaksi, dan atribusi iklan. Isi formulir permintaan tidak dikirim ke Google Analytics atau Google Ads.</p>
               <ul>
-                <li>Tujuan: mengukur penggunaan halaman dan efektivitas alur permintaan;</li>
-                <li>Penyedia: Google LLC (Google Analytics 4);</li>
+                <li>Tujuan: mengukur penggunaan halaman, efektivitas alur permintaan, dan, jika dikonfigurasi, konversi iklan;</li>
+                <li>Penyedia: Google LLC (Google Analytics 4 dan Google Ads, jika dikonfigurasi);</li>
                 <li>Data: informasi pseudonim mengenai perangkat, peramban, halaman, dan interaksi—bukan isi formulir;</li>
                 <li>Kontrol: persetujuan dapat diberikan, ditolak, atau ditarik kapan saja.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Kelola preferensi analitik" onLabel="Analitik aktif" offLabel="Analitik nonaktif" />
+              <AnalyticsPreferenceSwitch label="Kelola preferensi cookie" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Data Anak">

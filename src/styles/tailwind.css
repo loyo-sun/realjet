@@ -87,6 +87,7 @@ body.modal-open .analytics-consent-panel {
 .analytics-consent-actions {
   display: flex;
   flex: none;
+  flex-wrap: wrap;
   gap: 8px;
 }
 

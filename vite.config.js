@@ -3,10 +3,24 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "node:path";
 
+const consentModeDefaults = {
+  name: "realjet-consent-mode-defaults",
+  transformIndexHtml: {
+    order: "pre",
+    handler() {
+      return [{
+        tag: "script",
+        children: `window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};window.gtag("consent","default",{analytics_storage:"denied",ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",wait_for_update:500});`,
+        injectTo: "head-prepend",
+      }];
+    },
+  },
+};
+
 export default defineConfig({
   base: "./",
   publicDir: false,
-  plugins: [react(), tailwindcss()],
+  plugins: [consentModeDefaults, react(), tailwindcss()],
   build: {
     outDir: ".build/vite",
     emptyOutDir: true,

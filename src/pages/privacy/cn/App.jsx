@@ -215,15 +215,15 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookie 与类似技术">
               <p>本网站或其托管服务提供商可能使用展示页面、处理询盘、防止滥用或维持服务可靠性所必需的技术功能或安全机制。</p>
-              <p>Google Analytics 4 是由 Google 提供的可选分析服务。当您选择“全部接受”或保持下方分析统计开关开启时，分析数据存储将被启用；您可随时将其关闭。广告数据存储、广告用户数据及广告个性化功能始终保持关闭。</p>
-              <p>您可以接受或拒绝分析统计，并可通过“统计设置”随时更改选择。同意分析统计后，Google 可能设置分析 Cookie，并按照其自身条款及隐私规则处理经过假名化的使用信息。</p>
+              <p>Google Analytics 4 以及已配置时的 Google Ads 转化衡量是 Google 提供的可选服务。“全部接受”会允许分析数据存储、广告数据存储、广告用户数据及广告个性化；“仅分析统计”只允许分析数据存储；“全部拒绝”会关闭所有可选用途。</p>
+              <p>您可通过 Cookie 偏好设置随时更改或撤回选择。获得允许后，Google 标签可能设置 Cookie，并处理经过假名化的设备、页面、交互和广告归因信息。我们不会将询盘表单中填写的具体内容发送给 Google Analytics 或 Google Ads。</p>
               <ul>
-                <li>目的：衡量页面使用情况及询盘流程的有效性；</li>
-                <li>服务提供商：Google LLC（Google Analytics 4）；</li>
+                <li>目的：衡量页面使用情况、询盘流程的有效性，以及已配置时的广告转化；</li>
+                <li>服务提供商：Google LLC（Google Analytics 4 及已配置时的 Google Ads）；</li>
                 <li>数据：经过假名化的设备、浏览器、页面和交互信息，不包括询盘表单中填写的具体内容；</li>
                 <li>控制方式：您可以随时同意、拒绝或撤回同意。</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="管理统计设置" onLabel="分析统计已开启" offLabel="分析统计已关闭" />
+              <AnalyticsPreferenceSwitch label="管理 Cookie 偏好设置" />
             </PolicySection>
 
             <PolicySection id="children" title="11. 未成年人信息">

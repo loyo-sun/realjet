@@ -5,7 +5,7 @@ import { initAnalyticsConsent } from "../../precast-beam-factory/shared/analytic
 import "../../../styles/tailwind.css";
 
 document.body.classList.add("privacy-page");
-initAnalyticsConsent("fr", { defaultGranted: true, showPanel: false });
+initAnalyticsConsent("fr", { showPanel: false });
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
