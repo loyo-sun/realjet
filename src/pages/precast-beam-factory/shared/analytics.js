@@ -66,6 +66,7 @@ const runtime = {
   formName: DEFAULT_FORM_NAME,
   pageType: DEFAULT_PAGE_TYPE,
   initialized: false,
+  contactTrackingInitialized: false,
   currentCta: "unknown",
   forms: new Map(),
   observer: null,
@@ -91,6 +92,32 @@ export function trackEvent(name, parameters = {}) {
   const payload = { ...commonParameters(), ...parameters };
   if (import.meta.env.DEV) console.info("[Realjet analytics]", name, payload);
   gtag("event", name, payload);
+}
+
+function contactMethod(target) {
+  const link = target.closest?.("a");
+  if (!link) return null;
+  if (link.id === "contact-email") return "email";
+  const href = link.getAttribute("href") || "";
+  if (/^mailto:/i.test(href)) return "email";
+  if (/^https?:\/\/(?:api\.)?whatsapp\.com\//i.test(href) || /^https?:\/\/wa\.me\//i.test(href)) return "whatsapp";
+  return null;
+}
+
+function onContactClick(event) {
+  const link = event.target.closest?.("a");
+  const method = contactMethod(event.target);
+  if (!link || !method) return;
+  trackEvent(method === "whatsapp" ? "contact_whatsapp" : "contact_email", {
+    cta_id: link.dataset.ctaId || link.id || undefined,
+    cta_position: link.closest(".beam-mobile-contact-bar") ? "mobile_bar" : undefined,
+  });
+}
+
+function initContactTracking() {
+  if (runtime.contactTrackingInitialized) return;
+  runtime.contactTrackingInitialized = true;
+  document.addEventListener("click", onContactClick, true);
 }
 
 function visibleFormFields(form) {
@@ -369,6 +396,7 @@ export function openAnalyticsConsentSettings() {
 
 export function initAnalyticsConsent(locale, options = {}) {
   runtime.locale = locale;
+  initContactTracking();
   const current = readConsent();
   if (current) updateConsent(current);
   else if (options.defaultGranted) updateConsent("granted");

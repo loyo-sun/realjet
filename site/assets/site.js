@@ -24,6 +24,28 @@ function trackEvent(name, parameters = {}) {
   });
 }
 
+function contactChannel(target) {
+  const link = target.closest?.("a");
+  if (!link) return null;
+  const href = link.getAttribute("href") || "";
+  if (/^mailto:/i.test(href)) return "email";
+  if (/^https?:\/\/(?:api\.)?whatsapp\.com\//i.test(href) || /^https?:\/\/wa\.me\//i.test(href)) return "whatsapp";
+  return null;
+}
+
+function contactParameters(link) {
+  return {
+    cta_id: link.dataset.mouldCta || link.dataset.ctaId || undefined,
+    cta_position: link.dataset.conversionPosition || undefined,
+    article_slug: document.body.dataset.articleSlug || undefined,
+    product_slug: document.body.dataset.productSlug || undefined,
+  };
+}
+
+function contactEventName(channel) {
+  return channel === "whatsapp" ? "contact_whatsapp" : "contact_email";
+}
+
 function readConsent() {
   try {
     const value = localStorage.getItem(CONSENT_KEY);
@@ -112,6 +134,12 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("click", (event) => {
+  const contactLink = event.target.closest?.("a");
+  const contactMethod = contactChannel(event.target);
+  if (contactMethod) {
+    trackEvent(contactEventName(contactMethod), contactParameters(contactLink));
+  }
+
   const businessEntry = event.target.closest("[data-business-entry]");
   if (businessEntry) {
     trackEvent("business_entry_click", {
@@ -129,7 +157,7 @@ document.addEventListener("click", (event) => {
   }
 
   const insightCta = event.target.closest("[data-insight-cta]");
-  if (insightCta) {
+  if (insightCta && !contactMethod) {
     trackEvent("insight_cta_click", {
       article_slug: document.body.dataset.articleSlug,
       cta_type: insightCta.dataset.ctaType,
@@ -167,7 +195,7 @@ document.addEventListener("click", (event) => {
   }
 
   const mouldCta = event.target.closest("[data-mould-cta]");
-  if (mouldCta) {
+  if (mouldCta && !contactMethod) {
     trackEvent("mould_cta_click", { cta_id: mouldCta.dataset.mouldCta });
   }
 
@@ -179,7 +207,7 @@ document.addEventListener("click", (event) => {
   }
 
   const productConversion = event.target.closest("[data-product-conversion]");
-  if (productConversion) {
+  if (productConversion && !contactMethod) {
     trackEvent("product_conversion_click", {
       product_slug: document.body.dataset.productSlug,
       conversion_type: productConversion.dataset.conversionType,

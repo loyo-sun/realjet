@@ -20,8 +20,6 @@ export default function MobileContactBar({
     ? "max-[720px]:pointer-events-none max-[720px]:translate-y-full max-[720px]:opacity-0"
     : "max-[720px]:translate-y-0 max-[720px]:opacity-100";
 
-  const trackContact = (channel) => trackEvent("mobile_contact_click", { channel });
-
   return (
     <nav
       className={`beam-mobile-contact-bar fixed inset-x-0 bottom-0 z-40 hidden grid-cols-3 gap-px border-t border-white/15 bg-brand-navy/95 px-2 pt-2 pb-[calc(8px+env(safe-area-inset-bottom))] text-white shadow-floating backdrop-blur-xl transition duration-200 max-[720px]:grid ${visibilityClass}`}
@@ -31,7 +29,7 @@ export default function MobileContactBar({
       <button
         type="button"
         onClick={() => {
-          trackContact("enquiry");
+          trackEvent("mobile_contact_click", { channel: "enquiry" });
           onEnquire(enquiryTitle);
         }}
         tabIndex={hidden ? -1 : 0}
@@ -44,7 +42,6 @@ export default function MobileContactBar({
         href={`https://wa.me/8619310090600?text=${whatsappText}`}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={() => trackContact("whatsapp")}
         tabIndex={hidden ? -1 : 0}
         className={`${actionClass} bg-white/8`}
       >
@@ -53,7 +50,6 @@ export default function MobileContactBar({
       </a>
       <a
         href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`}
-        onClick={() => trackContact("email")}
         tabIndex={hidden ? -1 : 0}
         className={`${actionClass} bg-white/8`}
       >
