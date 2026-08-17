@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies and Similar Technologies">
               <p>The website or its hosting provider may use strictly necessary technical functions or security mechanisms required to deliver the page, process an enquiry, prevent abuse or maintain service reliability.</p>
-              <p>Google Analytics 4 and, where configured, Google Ads conversion measurement are optional Google services. “Accept all” enables analytics storage, advertising storage, advertising user data and ad personalisation; “Analytics only” enables analytics storage while keeping advertising purposes disabled; “Reject all” keeps all optional purposes disabled.</p>
+              <p>Google Analytics 4 and, where configured, Google Ads conversion measurement are optional Google services. “Accept all” enables both analytics and advertising purposes. The two controls below let you enable or disable analytics and advertising independently. Closing the initial notice without accepting rejects both optional purposes.</p>
               <p>You may change or withdraw your choice at any time using the cookie-preferences control. When permitted, Google tags may set cookies and process pseudonymous device, page, interaction and advertising-attribution information. We do not send the contents entered into the enquiry form to Google Analytics or Google Ads.</p>
               <ul>
                 <li>Purpose: measure page use, the effectiveness of the enquiry journey and, where configured, advertising conversions;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Data: pseudonymous device, browser, page and interaction information—never the contents entered into the enquiry form;</li>
                 <li>Control: consent can be granted, refused or withdrawn at any time.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Manage cookie preferences" />
+              <AnalyticsPreferenceSwitch locale="en" label="Manage cookie preferences" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Children’s Information">

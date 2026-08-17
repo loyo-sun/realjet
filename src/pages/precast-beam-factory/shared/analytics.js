@@ -6,79 +6,59 @@ const DEFAULT_PAGE_TYPE = "precast_production_line";
 const CONSENT_CHOICES = {
   all: { analytics_storage: "granted", ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted" },
   analytics: { analytics_storage: "granted", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" },
+  advertising: { analytics_storage: "denied", ad_storage: "granted", ad_user_data: "granted", ad_personalization: "granted" },
   denied: { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" },
 };
 
 const consentCopy = {
   en: {
     title: "Cookie preferences",
-    body: "We use optional cookies for site analytics and advertising measurement. Choose whether to accept all, allow analytics only, or reject optional cookies. Read our",
+    body: "We use optional cookies for site analytics and advertising measurement. Select Accept all, or use Privacy settings to manage analytics and advertising separately. Close this notice to reject optional cookies.",
     accept: "Accept all",
-    analyticsOnly: "Analytics only",
-    reject: "Reject all",
     settings: "Privacy settings",
     close: "Close cookie preferences",
-    privacy: "privacy policy",
   },
   id: {
     title: "Preferensi cookie",
-    body: "Kami menggunakan cookie opsional untuk analitik situs dan pengukuran iklan. Pilih untuk menerima semua, mengizinkan analitik saja, atau menolak cookie opsional. Baca",
+    body: "Kami menggunakan cookie opsional untuk analitik situs dan pengukuran iklan. Pilih Terima semua, atau gunakan Pengaturan privasi untuk mengelola analitik dan iklan secara terpisah. Tutup pemberitahuan ini untuk menolak cookie opsional.",
     accept: "Terima semua",
-    analyticsOnly: "Analitik saja",
-    reject: "Tolak semua",
     settings: "Pengaturan privasi",
     close: "Tutup preferensi cookie",
-    privacy: "Kebijakan Privasi",
   },
   ar: {
     title: "تفضيلات ملفات تعريف الارتباط",
-    body: "نستخدم ملفات تعريف ارتباط اختيارية لتحليل الموقع وقياس الإعلانات. اختر قبول الكل أو التحليلات فقط أو رفض ملفات الارتباط الاختيارية. اقرأ",
+    body: "نستخدم ملفات تعريف ارتباط اختيارية لتحليل الموقع وقياس الإعلانات. اختر قبول الكل، أو استخدم إعدادات الخصوصية لإدارة التحليلات والإعلانات بشكل منفصل. أغلق هذا الإشعار لرفض ملفات الارتباط الاختيارية.",
     accept: "قبول الكل",
-    analyticsOnly: "التحليلات فقط",
-    reject: "رفض الكل",
     settings: "إعدادات الخصوصية",
     close: "إغلاق تفضيلات ملفات تعريف الارتباط",
-    privacy: "سياسة الخصوصية",
   },
   ru: {
     title: "Настройки cookie",
-    body: "Мы используем необязательные cookie для аналитики сайта и измерения рекламы. Выберите: принять все, разрешить только аналитику или отказаться от необязательных cookie. Прочитайте",
+    body: "Мы используем необязательные cookie для аналитики сайта и измерения рекламы. Выберите «Принять все» или используйте настройки конфиденциальности, чтобы раздельно управлять аналитикой и рекламой. Закройте это уведомление, чтобы отклонить необязательные cookie.",
     accept: "Принять все",
-    analyticsOnly: "Только аналитика",
-    reject: "Отклонить все",
     settings: "Настройки конфиденциальности",
     close: "Закрыть настройки cookie",
-    privacy: "Политика конфиденциальности",
   },
   cn: {
     title: "Cookie 偏好设置",
-    body: "我们使用可选 Cookie 进行网站分析和广告效果衡量。您可以选择全部接受、仅允许分析统计，或拒绝所有可选 Cookie。请阅读我们的",
+    body: "我们使用可选 Cookie 进行网站分析和广告效果衡量。您可选择“全部接受”，或进入“隐私设置”分别管理分析统计和广告。关闭此提示即拒绝可选 Cookie。",
     accept: "全部接受",
-    analyticsOnly: "仅分析统计",
-    reject: "全部拒绝",
     settings: "隐私设置",
     close: "关闭 Cookie 偏好设置",
-    privacy: "隐私政策",
   },
   fr: {
     title: "Préférences de cookies",
-    body: "Nous utilisons des cookies facultatifs pour l’analyse du site et la mesure publicitaire. Choisissez de tout accepter, d’autoriser uniquement l’analyse ou de refuser les cookies facultatifs. Consultez notre",
+    body: "Nous utilisons des cookies facultatifs pour l’analyse du site et la mesure publicitaire. Sélectionnez « Tout accepter » ou utilisez les paramètres de confidentialité pour gérer séparément l’analyse et la publicité. Fermez cet avis pour refuser les cookies facultatifs.",
     accept: "Tout accepter",
-    analyticsOnly: "Analyse uniquement",
-    reject: "Tout refuser",
     settings: "Paramètres de confidentialité",
     close: "Fermer les préférences de cookies",
-    privacy: "Politique de confidentialité",
   },
   es: {
     title: "Preferencias de cookies",
-    body: "Utilizamos cookies opcionales para la analítica del sitio y la medición publicitaria. Elija aceptar todo, permitir solo la analítica o rechazar las cookies opcionales. Consulte nuestra",
+    body: "Utilizamos cookies opcionales para la analítica del sitio y la medición publicitaria. Seleccione «Aceptar todo» o use los ajustes de privacidad para gestionar por separado la analítica y la publicidad. Cierre este aviso para rechazar las cookies opcionales.",
     accept: "Aceptar todo",
-    analyticsOnly: "Solo analítica",
-    reject: "Rechazar todo",
     settings: "Ajustes de privacidad",
     close: "Cerrar las preferencias de cookies",
-    privacy: "Política de privacidad",
   },
 };
 
@@ -378,13 +358,20 @@ function updateConsent(choice, trackChoice = false) {
   }
 }
 
-export function isAnalyticsConsentGranted() {
+export function getConsentPreferences() {
   const choice = readConsent();
-  return choice ? CONSENT_CHOICES[choice].analytics_storage === "granted" : false;
+  const state = choice ? CONSENT_CHOICES[choice] : CONSENT_CHOICES.denied;
+  return {
+    analytics: state.analytics_storage === "granted",
+    advertising: state.ad_storage === "granted",
+  };
 }
 
-export function setAnalyticsConsent(enabled) {
-  updateConsent(enabled ? "analytics" : "denied", enabled);
+export function setConsentPreferences({ analytics, advertising }) {
+  const choice = analytics
+    ? (advertising ? "all" : "analytics")
+    : (advertising ? "advertising" : "denied");
+  updateConsent(choice, true);
 }
 
 function privacyUrl(locale) {
@@ -403,12 +390,10 @@ function showConsentPanel(locale) {
   panel.dir = locale === "ar" ? "rtl" : "ltr";
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <p>${copy.body} <a href="${privacyUrl(locale)}">${copy.privacy}</a>.</p>
+      <p>${copy.body}</p>
     </div>
     <div class="analytics-consent-actions">
       <a href="${privacyUrl(locale)}">${copy.settings}</a>
-      <button type="button" data-consent="analytics">${copy.analyticsOnly}</button>
-      <button type="button" data-consent="denied">${copy.reject}</button>
       <button type="button" class="analytics-consent-accept" data-consent="all">${copy.accept}</button>
     </div>
     <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="${copy.close}">×</button>

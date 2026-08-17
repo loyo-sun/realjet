@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies et technologies similaires">
               <p>Le site ou son hébergeur peut utiliser des fonctions techniques ou des mécanismes de sécurité strictement nécessaires à l’affichage des pages, au traitement des demandes, à la prévention des abus ou à la fiabilité du service.</p>
-              <p>Google Analytics 4 et, lorsqu’elle est configurée, la mesure des conversions Google Ads sont des services Google facultatifs. « Tout accepter » active le stockage des données d’analyse, le stockage publicitaire, les données utilisateur à des fins publicitaires et la personnalisation des annonces ; « Analyse uniquement » active seulement le stockage des données d’analyse ; « Tout refuser » désactive toutes les finalités facultatives.</p>
+              <p>Google Analytics 4 et, lorsqu’elle est configurée, la mesure des conversions Google Ads sont des services Google facultatifs. « Tout accepter » active les finalités d’analyse et de publicité. Les deux interrupteurs ci-dessous permettent d’activer ou de désactiver séparément l’analyse et la publicité. Fermer l’avis initial sans accepter revient à refuser ces deux finalités facultatives.</p>
               <p>Vous pouvez modifier ou retirer votre choix à tout moment dans les préférences de cookies. Lorsqu’ils sont autorisés, les tags Google peuvent utiliser des cookies et traiter des informations pseudonymisées relatives à l’appareil, aux pages, aux interactions et à l’attribution publicitaire. Le contenu du formulaire de demande n’est pas envoyé à Google Analytics ni à Google Ads.</p>
               <ul>
                 <li>Finalité : mesurer l’utilisation des pages, l’efficacité du parcours de demande et, lorsqu’elles sont configurées, les conversions publicitaires ;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Données : informations pseudonymisées sur l’appareil, le navigateur, la page et les interactions, sans le contenu du formulaire ;</li>
                 <li>Contrôle : le consentement peut être accordé, refusé ou retiré à tout moment.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Gérer les préférences de cookies" />
+              <AnalyticsPreferenceSwitch locale="fr" label="Gérer les préférences de cookies" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Données relatives aux mineurs">

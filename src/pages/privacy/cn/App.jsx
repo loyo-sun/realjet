@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookie 与类似技术">
               <p>本网站或其托管服务提供商可能使用展示页面、处理询盘、防止滥用或维持服务可靠性所必需的技术功能或安全机制。</p>
-              <p>Google Analytics 4 以及已配置时的 Google Ads 转化衡量是 Google 提供的可选服务。“全部接受”会允许分析数据存储、广告数据存储、广告用户数据及广告个性化；“仅分析统计”只允许分析数据存储；“全部拒绝”会关闭所有可选用途。</p>
+              <p>Google Analytics 4 以及已配置时的 Google Ads 转化衡量是 Google 提供的可选服务。“全部接受”会同时开启分析统计和广告用途。下方两个开关可分别开启或关闭分析统计和广告。如果直接关闭首次弹出的提示而不接受，则两项可选用途均保持关闭。</p>
               <p>您可通过 Cookie 偏好设置随时更改或撤回选择。获得允许后，Google 标签可能设置 Cookie，并处理经过假名化的设备、页面、交互和广告归因信息。我们不会将询盘表单中填写的具体内容发送给 Google Analytics 或 Google Ads。</p>
               <ul>
                 <li>目的：衡量页面使用情况、询盘流程的有效性，以及已配置时的广告转化；</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>数据：经过假名化的设备、浏览器、页面和交互信息，不包括询盘表单中填写的具体内容；</li>
                 <li>控制方式：您可以随时同意、拒绝或撤回同意。</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="管理 Cookie 偏好设置" />
+              <AnalyticsPreferenceSwitch locale="cn" label="管理 Cookie 偏好设置" />
             </PolicySection>
 
             <PolicySection id="children" title="11. 未成年人信息">

@@ -13,6 +13,12 @@ const CONSENT_CHOICES = {
     ad_user_data: "denied",
     ad_personalization: "denied",
   },
+  advertising: {
+    analytics_storage: "denied",
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+  },
   denied: {
     analytics_storage: "denied",
     ad_storage: "denied",
@@ -110,12 +116,10 @@ function showConsentPanel() {
   panel.setAttribute("aria-label", "Cookie preferences");
   panel.innerHTML = `
     <div class="analytics-consent-copy">
-      <p>We use optional cookies for site analytics and advertising measurement. Choose whether to accept all, allow analytics only, or reject optional cookies. Read our <a href="/marketing/privacy/en/">privacy policy</a>.</p>
+      <p>We use optional cookies for site analytics and advertising measurement. Select Accept all, or use Privacy settings to manage analytics and advertising separately. Close this notice to reject optional cookies.</p>
     </div>
     <div class="analytics-consent-actions">
       <a href="/marketing/privacy/en/#cookies">Privacy settings</a>
-      <button type="button" data-consent="analytics">Analytics only</button>
-      <button type="button" data-consent="denied">Reject all</button>
       <button type="button" class="consent-accept" data-consent="all">Accept all</button>
     </div>
     <button type="button" class="analytics-consent-close" data-consent="denied" aria-label="Reject optional cookies and close cookie preferences">×</button>`;

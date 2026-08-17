@@ -215,7 +215,7 @@ export default function App() {
 
             <PolicySection id="cookies" title="10. Cookies y tecnologías similares">
               <p>El sitio web o su proveedor de alojamiento puede utilizar funciones técnicas o mecanismos de seguridad estrictamente necesarios para mostrar la página, procesar consultas, prevenir abusos o mantener la fiabilidad del servicio.</p>
-              <p>Google Analytics 4 y, cuando esté configurada, la medición de conversiones de Google Ads son servicios opcionales de Google. «Aceptar todo» activa el almacenamiento de analítica, el almacenamiento publicitario, los datos de usuario para publicidad y la personalización de anuncios; «Solo analítica» activa únicamente el almacenamiento de analítica; «Rechazar todo» desactiva todas las finalidades opcionales.</p>
+              <p>Google Analytics 4 y, cuando esté configurada, la medición de conversiones de Google Ads son servicios opcionales de Google. «Aceptar todo» activa las finalidades de analítica y publicidad. Los dos interruptores siguientes permiten activar o desactivar la analítica y la publicidad de forma independiente. Cerrar el aviso inicial sin aceptar supone rechazar ambas finalidades opcionales.</p>
               <p>Puede modificar o retirar su elección en cualquier momento mediante las preferencias de cookies. Cuando se permiten, las etiquetas de Google pueden utilizar cookies y procesar información seudonimizada sobre el dispositivo, las páginas, las interacciones y la atribución publicitaria. El contenido del formulario de consulta no se envía a Google Analytics ni a Google Ads.</p>
               <ul>
                 <li>Finalidad: medir el uso de las páginas, la eficacia del recorrido de consulta y, cuando estén configuradas, las conversiones publicitarias;</li>
@@ -223,7 +223,7 @@ export default function App() {
                 <li>Datos: información seudonimizada sobre dispositivo, navegador, página e interacciones, sin el contenido del formulario;</li>
                 <li>Control: el consentimiento puede otorgarse, rechazarse o retirarse en cualquier momento.</li>
               </ul>
-              <AnalyticsPreferenceSwitch label="Gestionar las preferencias de cookies" />
+              <AnalyticsPreferenceSwitch locale="es" label="Gestionar las preferencias de cookies" />
             </PolicySection>
 
             <PolicySection id="children" title="11. Datos de menores">
