@@ -1,0 +1,58 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# Realjet
+
+> Realjet (Changsha Ruijie Machinery Technology Co., Ltd) engineers and manufactures turnkey precast concrete production lines, project-specific steel moulds and formwork, and custom fabricated machinery components. Its scope can include process planning, mechanical design, manufacturing, installation support and commissioning.
+
+Realjet serves infrastructure contractors, precast producers and machinery manufacturers. Project-specific dimensions, functions, interfaces, capacity and delivery boundaries are confirmed through technical review before manufacture. The primary site language is English; selected precast-production-line and privacy pages are also available in Indonesian, Arabic, Russian, Chinese, French and Spanish.
+
+## Main pages
+
+- [Home](https://realjetech.com/): Overview of Realjet's two core businesses and engineering capabilities.
+- [Precast concrete production equipment](https://realjetech.com/products/): Equipment modules for project-specific precast concrete production lines.
+- [Precast concrete moulds and formwork](https://realjetech.com/precast-concrete-molds/): Steel mould systems organized by precast component and application.
+- [Custom machinery component manufacturing](https://realjetech.com/marketing/contract_manufacturing/): Contract manufacturing for welded, machined and assembled machinery components.
+- [Precast concrete production lines](https://realjetech.com/marketing/precast-beam-factory/en/): Turnkey production-line planning, equipment, installation and commissioning.
+- [Engineering insights](https://realjetech.com/insights/): Buyer guides, RFQ checklists and technical planning articles.
+- [Contact Realjet](https://realjetech.com/contact/): Project enquiry form and company contact details.
+
+## Precast concrete production equipment
+
+{% for product in collections.publishedProducts %}- [{{ product.data.title | safe }}]({{ product.url | absoluteUrl(site.url) }}): {{ product.data.description | safe }}
+{% endfor %}
+## Precast mould categories
+
+{% for category in precastMouldCatalog.categories %}- [{{ category.name | safe }}](https://realjetech.com/precast-concrete-molds/{{ category.slug }}/): {{ category.description | safe }}
+{% endfor %}
+## Precast mould and formwork products
+
+- [Beam and Girder Moulds](https://realjetech.com/precast-concrete-molds/beam-and-girder-moulds/): Navigation hub for project-specific T-, I-, U-, trough, box and segmental girder moulds.
+{% for product in collections.publishedMouldProducts %}- [{{ product.data.title | safe }}]({{ product.url | absoluteUrl(site.url) }}): {{ product.data.description | safe }}
+{% endfor %}
+
+## Engineering insights
+
+{% for post in collections.publishedInsights %}- [{{ post.data.title | safe }}]({{ post.url | absoluteUrl(site.url) }}): {{ post.data.description | safe }}
+{% endfor %}
+## Localized precast production-line pages
+
+- [English](https://realjetech.com/marketing/precast-beam-factory/en/): Precast concrete production-line solutions in English.
+- [Bahasa Indonesia](https://realjetech.com/marketing/precast-beam-factory/id/): Lini produksi beton pracetak dalam Bahasa Indonesia.
+- [Arabic](https://realjetech.com/marketing/precast-beam-factory/ar/): Precast concrete production-line information in Arabic.
+- [Russian](https://realjetech.com/marketing/precast-beam-factory/ru/): Precast concrete production-line information in Russian.
+- [Chinese](https://realjetech.com/marketing/precast-beam-factory/cn/): 预制构件生产线中文页面。
+- [French](https://realjetech.com/marketing/precast-beam-factory/fr/): Lignes de production de béton préfabriqué en français.
+- [Spanish](https://realjetech.com/marketing/precast-beam-factory/es/): Líneas de producción de prefabricados de hormigón en español.
+
+## Optional
+
+- [RSS feed](https://realjetech.com/feed.xml): The 20 most recent published engineering insights.
+- [XML sitemap](https://realjetech.com/sitemap.xml): Complete indexable URL inventory.
+- [Privacy policy](https://realjetech.com/marketing/privacy/en/): English privacy and analytics information.
+
+## Contact
+
+- Email: sales@realjetech.com
+- Address: No. 48, Jinzhou New District, Ningxiang, Changsha, Hunan 410600, China

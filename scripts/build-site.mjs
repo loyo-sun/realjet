@@ -108,6 +108,7 @@ for (const expectedPath of [
   "admin/config.zh.yml",
   "sitemap.xml",
   "robots.txt",
+  "llms.txt",
   "feed.xml",
   "marketing/precast-beam-factory/en/index.html",
   "marketing/contract_manufacturing/index.html",
@@ -160,6 +161,7 @@ const contractManufacturingPage = await readFile(
   "utf8",
 );
 const sitemap = await readFile(join(finalOutput, "sitemap.xml"), "utf8");
+const llms = await readFile(join(finalOutput, "llms.txt"), "utf8");
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
@@ -464,6 +466,22 @@ for (const excludedSitemapUrl of [
 ]) {
   if (sitemap.includes(excludedSitemapUrl)) {
     throw new Error(`Sitemap contains excluded URL or URL prefix: ${excludedSitemapUrl}`);
+  }
+}
+
+for (const requiredLlmsContent of [
+  "# Realjet",
+  "https://realjetech.com/products/",
+  "https://realjetech.com/precast-concrete-molds/",
+  "https://realjetech.com/marketing/contract_manufacturing/",
+  "https://realjetech.com/marketing/precast-beam-factory/en/",
+  "https://realjetech.com/insights/",
+  "## Precast concrete production equipment",
+  "## Precast mould and formwork products",
+  "## Engineering insights",
+]) {
+  if (!llms.includes(requiredLlmsContent)) {
+    throw new Error(`llms.txt validation failed: ${requiredLlmsContent}`);
   }
 }
 for (const product of catalogueProductRecommendations.filter((item) => !item.draft)) {
