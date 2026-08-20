@@ -1,6 +1,7 @@
 ---
 title: Tetrapod Moulds
-description: Project-specific segmented steel moulds for precast concrete tetrapod armour units used in breakwater and coastal-protection works.
+description: Project-specific segmented steel moulds for precast concrete
+  tetrapod armour units used in breakwater and coastal-protection works.
 date: 2026-08-14
 updated: 2026-08-14
 order: 502
@@ -8,10 +9,12 @@ featured: false
 slug: tetrapod-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: marine-coastal-moulds
-image: /images/uploads/tetrapod-moulds.jpg
-imageAlt: Engineering illustration of an opened segmented steel mould for a precast concrete tetrapod armour unit
-imageCaption: Conceptual engineering illustration. Final mould design follows the approved tetrapod drawings and project requirements.
+image: /images/uploads/tetrapodmoulds-.webp
 draft: false
+imageCaption: Conceptual engineering illustration. Final mould design follows
+  the approved tetrapod drawings and project requirements.
+imageAlt: Engineering illustration of an opened segmented steel mould for a
+  precast concrete tetrapod armour unit
 ---
 
 ## Breakwater and coastal-protection applications
