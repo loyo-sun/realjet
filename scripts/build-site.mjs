@@ -86,6 +86,8 @@ for (const expectedPath of [
   "manufacturing/index.html",
   "contact/index.html",
   "insights/index.html",
+  "insights/page/2/index.html",
+  "insights/page/3/index.html",
   "products/index.html",
   "precast-concrete-molds/index.html",
   "precast-concrete-molds/bridge-transportation-moulds/index.html",

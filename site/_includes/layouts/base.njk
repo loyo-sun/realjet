@@ -17,6 +17,8 @@
     <meta name="robots" content="{{ robots or 'index, follow' }}" />
     <meta name="description" content="{{ description or site.defaultDescription }}" />
     <link rel="canonical" href="{{ canonical }}" />
+    {% if pagination and pagination.href.previous %}<link rel="prev" href="{{ pagination.href.previous | absoluteUrl(site.url) }}" />{% endif %}
+    {% if pagination and pagination.href.next %}<link rel="next" href="{{ pagination.href.next | absoluteUrl(site.url) }}" />{% endif %}
     <meta name="theme-color" content="#08253f" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/icons/realjet-site-icon.svg" />

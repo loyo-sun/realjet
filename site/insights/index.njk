@@ -1,12 +1,17 @@
 ---
+pagination:
+  data: collections.publishedInsights
+  size: 9
+  alias: insightPosts
 layout: layouts/base.njk
-permalink: /insights/index.html
+permalink: "/insights/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html"
 pageType: insights
 title: Engineering Insights | Realjet
-seoTitle: Precast Concrete Lines & Machinery Insights | Realjet
 description: Practical Realjet insights for custom machinery component manufacturing and production-line planning for precast concrete components.
-canonical: https://realjetech.com/insights/
 robots: index, follow
+eleventyComputed:
+  seoTitle: "{% if pagination.pageNumber > 0 %}Precast Concrete Lines & Machinery Insights — Page {{ pagination.pageNumber + 1 }} | Realjet{% else %}Precast Concrete Lines & Machinery Insights | Realjet{% endif %}"
+  canonical: "https://realjetech.com{{ page.url }}"
 ---
 <header class="listing-hero">
   <div class="container">
@@ -16,8 +21,19 @@ robots: index, follow
   </div>
 </header>
 <section class="section listing-section"><div class="container">
-  {% if collections.publishedInsights.length %}
-    <div class="insight-grid">{% for post in collections.publishedInsights %}{% include "components/insight-card.njk" %}{% endfor %}</div>
+  {% if insightPosts.length %}
+    <div class="insight-grid">{% for post in insightPosts %}{% include "components/insight-card.njk" %}{% endfor %}</div>
+    {% if pagination.pages.length > 1 %}
+    <nav class="pagination" aria-label="Insights pages">
+      {% if pagination.href.previous %}<a class="pagination-direction" href="{{ pagination.href.previous }}" rel="prev"><span aria-hidden="true">←</span> Previous</a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true"><span aria-hidden="true">←</span> Previous</span>{% endif %}
+      <ol>
+        {% for pageHref in pagination.hrefs %}
+        <li>{% if loop.index0 == pagination.pageNumber %}<span class="pagination-page is-current" aria-current="page"><span class="sr-only">Page </span>{{ loop.index }}</span>{% else %}<a class="pagination-page" href="{{ pageHref }}" aria-label="Page {{ loop.index }}">{{ loop.index }}</a>{% endif %}</li>
+        {% endfor %}
+      </ol>
+      {% if pagination.href.next %}<a class="pagination-direction" href="{{ pagination.href.next }}" rel="next">Next <span aria-hidden="true">→</span></a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true">Next <span aria-hidden="true">→</span></span>{% endif %}
+    </nav>
+    {% endif %}
   {% else %}
     <div class="empty-insights"><span>Insights are being prepared</span><h2>Our first engineering articles are in development.</h2><p>Return soon for project-based guidance on production-line planning, equipment and manufacturing.</p><a class="button button-dark" href="/">Return to Realjet</a></div>
   {% endif %}
