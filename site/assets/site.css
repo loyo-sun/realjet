@@ -82,7 +82,7 @@ button, input, textarea, select { font: inherit; }
 .pagination { display: grid; grid-template-columns: minmax(120px,1fr) auto minmax(120px,1fr); gap: 18px; align-items: center; margin-top: 42px; }
 .pagination ol { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; padding: 0; list-style: none; }
 .pagination-direction, .pagination-page { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 10px; color: var(--navy); background: var(--white); font-size: 13px; font-weight: 850; text-decoration: none; transition: border-color 180ms ease, color 180ms ease, background 180ms ease; }
-.pagination-direction { gap: 9px; padding: 0 16px; }
+.pagination-direction { justify-self: start; gap: 9px; padding: 0 16px; }
 .pagination-direction:last-child { justify-self: end; }
 .pagination-page { min-width: 44px; padding: 0 12px; }
 .pagination a:hover, .pagination a:focus-visible { border-color: var(--blue); color: var(--blue); }
