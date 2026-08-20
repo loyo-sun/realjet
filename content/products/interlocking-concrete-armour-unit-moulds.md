@@ -4,10 +4,10 @@ description: Project-specific steel moulds for interlocking concrete armour
   units used in breakwater and coastal-protection works, developed from approved
   unit geometry and production requirements.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-20
 order: 501
 featured: false
-slug: interlocking-concrete-armour-unit-moulds
+slug: accropode-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: marine-coastal-moulds
 image: /images/uploads/accropodemoulds.webp

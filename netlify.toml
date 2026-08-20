@@ -47,6 +47,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/precast-concrete-molds/interlocking-concrete-armour-unit-moulds/"
+  to = "/precast-concrete-molds/accropode-moulds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]

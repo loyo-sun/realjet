@@ -22,7 +22,7 @@ The wider [precast concrete mould range](/precast-concrete-molds/) includes brid
 
 The mould manufacturer should not select or recreate an armour-unit system from a photograph. The buyer needs to provide the approved three-dimensional geometry, controlled drawings, unit volume or mass, material requirements and any licensed design information required by the project.
 
-Some armour-unit systems are proprietary. A generic description of an interlocking unit does not grant the right to manufacture a protected design or use its trade name. Realjet's exact published [interlocking concrete armour unit mould page](/precast-concrete-molds/interlocking-concrete-armour-unit-moulds/) states the same limit: project documentation and naming must follow the rights and approvals supplied by the customer.
+Some armour-unit systems are proprietary. A generic description of an interlocking unit does not grant the right to manufacture a protected design or use its trade name. Realjet's published [Accropode moulds page](/precast-concrete-molds/accropode-moulds/) states the same limit: project documentation and naming must follow the rights and approvals supplied by the customer.
 
 The US Army Corps of Engineers publishes its [Coastal Engineering Manual](https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/u43544q/636F617374616C20656E67696E656572696E67206D616E75616C/udt_43544_param_orderby/Proponent/udt_43544_param_direction/ascending/) as engineering guidance for coastal processes and shore-protection projects. Mould procurement does not replace the coastal designer's hydraulic model, stability analysis, structural review or placement specification.
 
