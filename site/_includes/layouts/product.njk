@@ -33,7 +33,14 @@ layout: layouts/base.njk
     </section>
 
     <div class="product-detail-content-layout">
-      <div class="product-description article-body">{{ content | safe }}</div>
+      <div class="product-description article-body">
+        {{ content | safe }}
+        {% if productSeries == "precast-concrete-moulds" %}
+        <figure class="product-about-image">
+          <img src="/images/company/about-realjet.webp" alt="Realjet headquarters, manufacturing workshop and company honor display" width="1824" height="1026" loading="lazy" decoding="async" />
+        </figure>
+        {% endif %}
+      </div>
     </div>
     <div class="product-latest-section">
       {% include "components/latest-products.njk" %}
