@@ -2,7 +2,7 @@
   <span class="eyebrow">Recently Added</span>
   <h2 id="latest-products-title">Latest Products</h2>
   <nav class="latest-product-list" aria-label="Latest products">
-    {% for item in collections.latestProducts | limit(5) %}
+    {% for item in collections.latestProducts | limit(6) %}
       {% if item.data.slug != slug %}
       <a href="{{ item.url }}">
         <img src="{{ item.data.image }}" alt="" width="120" height="76" loading="lazy" decoding="async" />
