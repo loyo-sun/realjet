@@ -4,7 +4,7 @@ description: Modular steel formwork systems for large precast concrete marine
   caissons, developed around approved geometry, internal cells and casting
   sequence.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-21
 order: 503
 featured: false
 slug: precast-concrete-caisson-moulds
@@ -28,6 +28,23 @@ gallery:
 ## Marine caisson production applications
 
 Precast concrete caisson moulds are reviewed for large hollow marine structures used in harbour, quay, breakwater and coastal works. Engineering starts from the approved external geometry, internal-cell arrangement, construction joints, casting stages, reinforcement and embedded items.
+
+## Is this mould relevant to your project?
+
+This formwork type may be relevant when:
+
+- Approved caisson geometry defines multiple cells, construction joints or casting stages
+- Reinforcement congestion and embedded items affect panel division and working access
+- Internal forms require a planned installation and withdrawal sequence
+- Form repositioning, platforms and yard handling must follow a defined production programme
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Modular outer and internal form panels | The caisson is divided into practical assembly and casting stages | Panel joints, ties, supports, access and dimensional references |
+| Repositionable form sections | Repeated stages or related units reuse approved form geometry | Lifting points, reference positions, changeover and storage |
+| Project-specific working-platform interfaces | Placement, inspection or form operation requires elevated access | Loads, access routes, guard interfaces and casting sequence |
 
 ## Product performance and engineering features
 

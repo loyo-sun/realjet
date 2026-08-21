@@ -2,7 +2,7 @@
 title: "Stair and Balcony Moulds"
 description: "Custom moulds for precast stairs, landings and balcony slabs, available in conventional, hydraulic or movable configurations for customer-defined geometry and factory workflows."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 107
 featured: false
 slug: stair-and-balcony-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Stair and balcony moulds support building projects that need repeated components with controlled geometry, visible faces and connection details. The mould orientation and division are selected from riser and tread geometry, landing arrangement, balcony edge profile, drainage falls, inserts, finish requirements and handling method.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Stair flights, landings or balcony units form an approved repeat family
+- Visible faces, drainage falls or edge profiles affect casting orientation
+- Connection hardware, anchors or recesses require controlled positioning
+- The mould division must allow reinforcement access and damage-free demoulding
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Fixed base with removable side and end forms | Geometry permits a direct casting and lifting sequence | Surface orientation, joints, locking and lifting access |
+| Adjustable ends or inserts | Approved variants share common tread, landing or slab geometry | Adjustment range, datum positions and changeover method |
+| Mechanical, hydraulic or movable arrangement | Larger panels or repeated operation require assisted movement | Opening path, controls, floor interfaces and operator access |
 
 ## Product performance and engineering features
 

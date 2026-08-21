@@ -2,7 +2,7 @@
 title: "Manhole and Inspection Chamber Moulds"
 description: "Custom core-and-shell moulds for precast manholes and inspection chambers, available in conventional, hydraulic or movable configurations for customer-defined access units."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 112
 featured: false
 slug: manhole-and-inspection-chamber-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 These moulds are used by drainage and utility-component producers manufacturing circular, rectangular or project-specific access chambers. The configuration follows internal and external geometry, base channels, wall penetrations, joint profiles, riser sizes, lifting details and the intended casting orientation.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Chamber bases, risers or cover units follow an approved size schedule
+- Pipe entries, channels, joints or access openings require controlled inserts
+- Core withdrawal is restricted by geometry or factory clearance
+- Repeat casting must fit the available lifting and handling equipment
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Segmented shell with fixed or removable core | Geometry allows direct core withdrawal or panel removal | Concentric setup, joints, locking and lifting points |
+| Collapsible or mechanically assisted core | Internal geometry limits direct withdrawal | Collapse path, clearance, guidance and operating access |
+| Hydraulic or movable arrangement | Larger units or repeated operation require powered movement | Stroke, support, controls, safety and maintenance |
 
 ## Product performance and engineering features
 

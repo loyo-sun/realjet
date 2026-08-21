@@ -2,7 +2,7 @@
 title: "Underground Structure Moulds"
 description: "Made-to-drawing moulds for precast shafts, utility galleries and underground structures, customized as conventional, hydraulic or movable systems for customer project requirements."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 110
 featured: false
 slug: underground-structure-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Underground structure moulds address components whose geometry does not fit a standard tunnel segment or culvert family. Typical applications may include shafts, utility galleries, access structures and project-defined underground modules, subject to confirmation from the approved design documents.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- The underground component does not match a standard segment or culvert family
+- Internal cores, penetrations, recesses or joints require a project-specific division
+- Demoulding is restricted by geometry, lifting clearance or site conditions
+- The mould concept must coordinate with a defined casting and handling sequence
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Modular panel mould | Project geometry can be divided into practical reusable sections | Panel joints, supports, ties, sealing and lifting points |
+| Removable or collapsible internal core | Internal geometry limits direct withdrawal | Collapse path, clearance, guidance and operating access |
+| Mechanical, hydraulic or movable arrangement | Component size or repeated operation justifies assisted movement | Stroke, controls, foundations, safety and maintenance |
 
 ## Product performance and engineering features
 

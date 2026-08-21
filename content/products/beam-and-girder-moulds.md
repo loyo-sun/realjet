@@ -4,7 +4,7 @@ description: Custom steel mould systems for precast T-, I-, U-, trough and other
   beams or girders, available in conventional, hydraulic or movable configurations
   to meet customer production requirements.
 date: 2026-08-11
-updated: 2026-08-14
+updated: 2026-08-21
 order: 101
 featured: false
 slug: beam-and-girder-moulds
@@ -49,6 +49,23 @@ This page is the navigation hub for project-specific beam and girder moulds. Rev
 ## Production scenarios and design basis
 
 Beam and girder moulds are used in precast factories and project casting yards serving highways, urban viaducts, rail infrastructure and industrial construction. The mould arrangement is developed from the approved cross-section, length range, reinforcement and embedded-item layout, prestressing method where applicable, casting sequence and component-handling plan.
+
+## Is this mould range relevant to your project?
+
+This range is intended for projects that have a defined beam or girder section and need a mould concept coordinated with repeat production. It may be relevant when:
+
+- The component family includes approved section or length variants
+- Prestressing, embedded items or replaceable end details affect the mould layout
+- Opening, demoulding and handling must fit an existing factory or casting yard
+- The buyer needs the mould, operating method and production interfaces reviewed together
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional segmented mould | Straightforward production sequences with suitable crane and labour access | Panel division, locking, lifting and demoulding clearance |
+| Mechanical or hydraulic opening | Repeated opening and closing of larger side or internal forms | Moving mass, stroke, safety interlocks and maintenance access |
+| Movable or station-based arrangement | The mould must work with defined production stations or transfer routes | Rails, foundations, utilities, takt sequence and handling interfaces |
 
 ## Product performance and engineering features
 

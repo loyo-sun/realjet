@@ -2,7 +2,7 @@
 title: "Drainage Channel Moulds"
 description: "Custom steel moulds for open channels, U-shaped drains and trench units, with conventional, hydraulic or movable configurations selected for customer geometry and production needs."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 111
 featured: false
 slug: drainage-channel-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Drainage channel moulds support municipal roads, industrial sites, transport corridors and water-management works. The mould is configured from the channel cross-section, length, wall thickness, end joint, cover-seat or edge detail, embedded items and intended production method.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Channel or trench geometry is defined by an approved size schedule
+- End joints, cover seats, edge details or embedded items vary by component
+- Side-form opening must preserve concrete edges during demoulding
+- Repeat production must fit the selected casting, curing and lifting process
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Fixed base with removable side forms | Geometry and lifting access allow a direct demoulding sequence | Alignment, locking, sealing and edge protection |
+| Adjustable ends or inserts | An approved component family shares a common main section | Adjustment range, datum positions and changeover access |
+| Mechanical, hydraulic or movable arrangement | Larger panels or repeated operation require assisted movement | Opening path, controls, floor interfaces and maintenance |
 
 ## Product performance and engineering features
 

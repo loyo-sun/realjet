@@ -2,7 +2,7 @@
 title: "Segmental Box Girder Moulds"
 description: "Custom short-line or long-line segmental box girder moulds, engineered as conventional, hydraulic or movable systems to match customer geometry, casting sequence and yard requirements."
 date: 2026-08-11
-updated: 2026-08-14
+updated: 2026-08-21
 order: 103
 featured: false
 slug: segmental-bridge-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Segmental bridge moulds are used in casting yards producing segments for span-by-span, balanced-cantilever and other approved erection methods. The mould concept follows the bridge alignment, segment family, casting curve, match-casting procedure, diaphragm and web arrangement, shear-key details, post-tensioning ducts and survey-control method.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Segment geometry, bridge alignment and erection method are defined
+- Match casting, shear keys, ducts and survey points must be coordinated in one setup
+- A short-line or long-line production method must be selected for the yard plan
+- Repeated adjustment requires controlled references and positioning functions
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Short-line mould system | Individual segments are cast against a controlled match-cast reference | Geometry control, bulkhead positioning, survey points and adjustment |
+| Long-line mould system | Multiple segments follow an approved line and yard arrangement | Casting bed, alignment, segment sequence and handling space |
+| Mechanical or hydraulic positioning | Repeated mould adjustment requires assisted movement | Stroke, reference system, controls, locking and maintenance |
 
 ## Product performance and engineering features
 

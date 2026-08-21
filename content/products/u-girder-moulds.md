@@ -2,7 +2,7 @@
 title: U-Girder Moulds
 description: Project-specific steel mould systems for precast U-girders, developed around the inner and outer geometry, opening sequence, target cycle and production layout.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-21
 order: 105
 featured: false
 slug: u-girder-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 U-girder moulds are used where the component geometry requires coordinated inner, outer, bottom and end-form movement. The concept is reviewed against the approved section, variable geometry, reinforcement and embedded items, concrete placement, demoulding clearance and component-handling plan.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Approved U-girder geometry requires coordinated inner- and outer-form movement
+- Variable sections, reinforcement or embedded items restrict operating space
+- The demoulding sequence must fit a defined movement envelope
+- Standalone mould operation or station-based production needs technical comparison
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional segmented mould | Crane access and the available movement envelope allow direct handling | Panel division, locking, support and withdrawal sequence |
+| Hydraulic opening system | Coordinated movement of inner or side forms requires powered assistance | Stroke, synchronization, controls, safety and maintenance |
+| Rail-guided or station-based system | The mould must move between defined production operations | Rails, foundations, utilities, transfer logic and interfaces |
 
 ## Product performance and engineering features
 

@@ -152,11 +152,13 @@ button, input, textarea, select { font: inherit; }
 .product-overview-copy .product-conversion-actions .button { margin-top: 0; }
 .product-whatsapp-button { color: var(--white); background: #128c4a; }
 .product-whatsapp-button:hover, .product-whatsapp-button:focus-visible { background: #0d713b; }
-.product-detail-content-layout { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 48px; align-items: start; margin-top: 68px; padding-top: 54px; border-top: 1px solid var(--line); }
-.product-description { min-width: 0; }
-.product-page .product-aside { top: 92px; padding: 27px 24px; border: 0; border-radius: 8px; background: var(--soft); box-shadow: none; }
+.product-detail-content-layout { margin-top: 68px; padding-top: 54px; border-top: 1px solid var(--line); }
+.product-description { width: min(100%,920px); min-width: 0; margin-inline: auto; }
+.product-latest-section { margin-top: 64px; padding-top: 54px; border-top: 1px solid var(--line); }
+.product-page .product-aside { position: static; padding: 27px 24px; border: 0; border-radius: 8px; background: var(--soft); box-shadow: none; }
 .product-page .product-aside h2 { font-size: 23px; }
-.product-page .latest-product-list a { border-color: #d8e2e8; }
+.product-page .latest-product-list { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.product-page .latest-product-list a { min-width: 0; padding: 13px; border: 1px solid #d8e2e8; border-radius: 8px; background: var(--white); }
 
 .product-aside-inquiry-jump { display: flex; width: calc(100% + 8px); min-height: 45px; align-items: center; justify-content: space-between; gap: 12px; margin: -7px -4px 22px; padding: 10px 13px; border: 0; border-radius: 8px; color: var(--white); background: var(--blue); font-size: 12px; font-weight: 850; text-decoration: none; cursor: pointer; }
 .product-aside-inquiry-jump b { font-size: 16px; }
@@ -597,6 +599,8 @@ body.has-enquiry-modal { overflow: hidden; }
   .product-overview-copy { padding: 4px 0 0; }
   .product-overview-copy .button { margin-top: 28px; }
   .product-detail-content-layout { gap: 36px; margin-top: 48px; padding-top: 40px; }
+  .product-latest-section { margin-top: 48px; padding-top: 40px; }
+  .product-page .latest-product-list { grid-template-columns: 1fr; }
   .product-page { padding-bottom: 72px; }
   .product-page .product-conversion-actions { position: fixed; right: 14px; bottom: 12px; left: 14px; z-index: 110; width: auto; gap: 8px; margin: 0; }
   .product-page .product-conversion-actions .button { min-height: 50px; margin: 0; box-shadow: 0 16px 38px rgba(8,37,63,.28); }

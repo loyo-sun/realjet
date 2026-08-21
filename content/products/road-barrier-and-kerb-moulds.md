@@ -2,7 +2,7 @@
 title: "Road Barrier and Kerb Moulds"
 description: "Custom steel moulds for concrete road barriers, median units and kerbs, available in conventional, hydraulic or movable configurations to meet customer profiles and output targets."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 113
 featured: false
 slug: road-barrier-and-kerb-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Road barrier and kerb moulds serve highway, urban road, bridge and traffic-management projects. The equipment is developed around the approved barrier or kerb profile, length, end connection, drainage feature, embedded item, surface requirement and production quantity.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Barrier or kerb profiles and approved variants are defined
+- End connections, drainage details, recesses or lifting points require dedicated inserts
+- The required production quantity affects the number of cavities or mould sets
+- Demoulding and handling must protect visible edges and surfaces
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Single-cavity segmented mould | Component variety or handling method favours individual mould sets | Profile control, joints, locking and lifting points |
+| Multi-cavity arrangement | Repeated components share one approved profile and production method | Cavity spacing, concrete access, handling and cleaning |
+| Adjustable ends or replaceable inserts | Approved variants share a common main profile | Datum positions, changeover, sealing and repeat setup |
 
 ## Product performance and engineering features
 

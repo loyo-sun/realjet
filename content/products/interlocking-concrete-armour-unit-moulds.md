@@ -4,7 +4,7 @@ description: Project-specific steel moulds for interlocking concrete armour
   units used in breakwater and coastal-protection works, developed from approved
   unit geometry and production requirements.
 date: 2026-08-14
-updated: 2026-08-20
+updated: 2026-08-21
 order: 501
 featured: false
 slug: accropode-moulds
@@ -20,6 +20,23 @@ draft: false
 These moulds are reviewed for interlocking concrete armour units used in breakwaters, revetments, seawalls and related coastal-protection works. Engineering begins with the approved unit geometry, single-unit volume or mass, casting direction, required mould quantity, target output, curing method and handling plan.
 
 The generic product name used here does not imply a licence for any proprietary armour-unit system. Project documentation and naming must follow the rights and approvals supplied by the customer.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- The approved armour-unit geometry and size or mass range are available
+- Segmentation must allow release from an interlocking or multi-face shape
+- Mould quantity and opening sequence must support a defined production plan
+- Lifting, turning, curing and storage interfaces need to be reviewed together
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Manually opened segmented mould | Unit size and available lifting equipment allow direct panel handling | Segment joints, locking, sealing and lifting points |
+| Lifting-assisted segmented mould | Individual panels require coordinated crane or handling support | Panel mass, lifting sequence, access and storage position |
+| Mechanically or hydraulically assisted opening | Repeated movement or geometry justifies powered assistance | Opening path, supports, controls, safety and maintenance |
 
 ## Mould segmentation and operation
 

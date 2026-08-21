@@ -2,7 +2,7 @@
 title: "Concrete Pipe Moulds"
 description: "Custom inner-core and outer-shell concrete pipe moulds, available in conventional, hydraulic or movable configurations for customer-defined pipe sizes, joints and production processes."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 114
 featured: false
 slug: concrete-pipe-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Concrete pipe moulds are configured for drainage, sewer, water-management and utility applications. Diameter, wall thickness, pipe length, socket and spigot geometry, reinforcement arrangement, casting orientation, compaction method and lifting process determine the mould concept.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Pipe diameter, wall thickness, length and joint geometry are defined
+- The core and outer shell must suit a specified casting and compaction process
+- Socket, spigot or project-specific end profiles require dedicated formers
+- Opening, lifting and routine cleaning must fit the factory handling system
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional core and segmented outer shell | Direct crane handling and manual closure are practical | Concentric alignment, locking, end rings and lifting points |
+| Mechanically or hydraulically assisted opening | Repeated core or shell movement requires assistance | Stroke, guidance, support, controls and maintenance access |
+| Movable or station-integrated arrangement | Pipe production follows defined workstations or transfer routes | Floor layout, utilities, handling equipment and operating sequence |
 
 ## Product performance and engineering features
 

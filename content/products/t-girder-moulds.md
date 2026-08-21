@@ -2,7 +2,7 @@
 title: T-Girder Moulds
 description: Project-specific steel mould systems for precast T-girders, developed around the approved section, length range, prestressing method and casting-yard workflow.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-21
 order: 101
 featured: false
 slug: t-girder-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 T-girder moulds are developed for precast factories and project casting yards serving highway, viaduct and related bridge works. The mould arrangement starts with the approved T-section, girder length range, reinforcement and embedded-item layout, prestressing method, casting sequence and component-handling plan.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Approved T-girder sections and length variants define a repeat production family
+- Prestressing, embedded items or replaceable end details affect the mould layout
+- Side-form opening must protect the flange, web and concrete edges during demoulding
+- The mould must fit an existing casting bed, lifting plan and yard workflow
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional bottom, side and end forms | Crane access and a direct opening sequence are available | Panel division, locking, supports and demoulding clearance |
+| Mechanical or hydraulic side-form movement | Larger side forms or repeated cycles require assistance | Moving mass, stroke, synchronization, safety and maintenance |
+| Movable or station-based arrangement | The production plan uses defined stations or mould transfer | Rails, foundations, utilities and handling interfaces |
 
 ## Product performance and engineering features
 

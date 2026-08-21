@@ -2,7 +2,7 @@
 title: I-Girder Moulds
 description: Project-specific steel mould systems for precast I-girders, configured around the approved section, girder family, prestressing details and production method.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-21
 order: 104
 featured: false
 slug: i-girder-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 I-girder moulds support repeat production in precast factories or dedicated casting yards. Engineering begins with the approved flange and web geometry, girder height and length range, end details, reinforcement, prestressing system, lifting arrangement and casting sequence.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Approved I-girder sections and length variants define a repeat production family
+- Prestressing, end details or embedded items affect the mould arrangement
+- Side-form opening must protect the flange and web geometry during demoulding
+- The mould must fit the available casting bed, lifting equipment and yard workflow
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional bottom, side and end forms | Crane access and a direct opening sequence are available | Panel division, locking, supports and demoulding clearance |
+| Mechanical or hydraulic side-form movement | Larger side forms or repeated cycles require assistance | Moving mass, stroke, synchronization, safety and maintenance |
+| Movable or station-based arrangement | The production plan uses defined stations or mould transfer | Rails, foundations, utilities and handling interfaces |
 
 ## Product performance and engineering features
 

@@ -2,7 +2,7 @@
 title: "Column and Building Beam Moulds"
 description: "Custom steel moulds for precast columns and building beams, available in conventional, hydraulic or movable configurations for customer-defined sections, lengths and connection details."
 date: 2026-08-11
-updated: 2026-08-13
+updated: 2026-08-21
 order: 106
 featured: false
 slug: column-and-building-beam-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 These moulds are used for structural frames in industrial, commercial and multi-storey precast construction. The design basis includes column or beam cross-section, corbels and ledges, connection plates, reinforcement congestion, length variants, casting orientation and demoulding direction.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Columns or building beams follow a repeatable family of sections and lengths
+- Corbels, ledges, connection plates or inserts affect the mould division
+- Visible surfaces or dimensional interfaces require controlled repeat setup
+- Casting orientation and lifting provisions must fit the factory workflow
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Fixed bottom with removable side and end forms | Component geometry and lifting access allow a direct operating sequence | Alignment, support, locking and demoulding direction |
+| Adjustable ends or inserts | An approved product family uses related lengths or local features | Adjustment range, reference positions and changeover method |
+| Mechanical, hydraulic or movable arrangement | Larger panels or repeated operation require assisted movement | Moving mass, controls, floor interfaces and operator access |
 
 ## Product performance and engineering features
 

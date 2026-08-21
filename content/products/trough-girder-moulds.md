@@ -2,7 +2,7 @@
 title: Trough Girder Moulds
 description: Project-specific steel mould systems for precast trough girders, engineered around the approved section, inner and outer forms, casting sequence and demoulding space.
 date: 2026-08-14
-updated: 2026-08-14
+updated: 2026-08-21
 order: 106
 featured: false
 slug: trough-girder-moulds
@@ -16,6 +16,23 @@ draft: false
 ## Production scenarios and design basis
 
 Trough girder moulds are reviewed for rail, urban transport, bridge and other approved infrastructure applications. The mould concept follows the approved trough section, wall and bottom geometry, reinforcement, embedded items, prestressing method where applicable, casting orientation and demoulding route.
+
+## Is this mould relevant to your project?
+
+This mould type may be relevant when:
+
+- Approved trough geometry defines coordinated inner, outer, bottom and end forms
+- Reinforcement, prestressing or embedded items affect access and mould division
+- Inner-form withdrawal and side-form opening require a controlled route
+- The production arrangement must fit the available operating and lifting space
+
+## Configuration directions
+
+| Configuration direction | When it may be considered | Main review focus |
+| --- | --- | --- |
+| Conventional segmented inner and outer forms | Crane access and demoulding clearance support direct handling | Segmentation, joints, locking and withdrawal sequence |
+| Mechanical or hydraulic movement | Repeated inner- or side-form movement requires assistance | Stroke, guidance, synchronization, safety and maintenance |
+| Movable or station-based arrangement | The mould must connect with defined production stations | Rails, foundations, utilities and handling interfaces |
 
 ## Product performance and engineering features
 
