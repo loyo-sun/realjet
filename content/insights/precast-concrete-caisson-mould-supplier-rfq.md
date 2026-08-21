@@ -1,12 +1,16 @@
 ---
-title: "Precast Concrete Caisson Mould Supplier RFQ Guide"
-description: "A buyer's guide to a precast concrete caisson mould supplier RFQ, covering geometry, casting stages, internal forms, handling and scope boundaries."
+title: Precast Concrete Caisson Mould Supplier RFQ Guide
+description: A buyer's guide to a precast concrete caisson mould supplier RFQ,
+  covering geometry, casting stages, internal forms, handling and scope
+  boundaries.
 date: 2026-08-21
 updated: 2026-08-21
-slug: "precast-concrete-caisson-mould-supplier-rfq"
-image: "/images/insights/precast-concrete-caisson-mould-supplier-rfq.webp"
-imageAlt: "Large blue modular caisson formwork with internal cells prepared for concrete placement"
-ctaType: "precast-line"
+featured: true
+slug: precast-concrete-caisson-mould-supplier-rfq
+image: /images/insights/precast-concrete-caisson-mould-supplier-rfq.webp
+imageAlt: Large blue modular caisson formwork with internal cells prepared for
+  concrete placement
+ctaType: precast-line
 draft: false
 ---
 
