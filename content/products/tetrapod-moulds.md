@@ -16,8 +16,9 @@ imageCaption: Conceptual engineering illustration. Final mould design follows
 imageAlt: Engineering illustration of an opened segmented steel mould for a
   precast concrete tetrapod armour unit
 ---
-
 ## Breakwater and coastal-protection applications
+
+![Tetrapod application scenarios](/images/uploads/tetrapod-application-scenarios.webp "Tetrapod application scenarios")
 
 Tetrapod moulds are reviewed for precast concrete armour units used in breakwaters, revetments and related coastal-protection works. The mould arrangement is developed from the approved tetrapod geometry, unit size or mass range, casting orientation, required mould quantity and production plan.
 
@@ -25,26 +26,26 @@ Tetrapod moulds are reviewed for precast concrete armour units used in breakwate
 
 This mould type may be relevant when:
 
-- Approved tetrapod geometry and the required size or mass range are available
-- Panel segmentation must release the four-arm unit without damaging concrete edges
-- Mould quantity and opening sequence must support a defined casting plan
-- Lifting, curing, demoulding and storage interfaces need coordinated review
+* Approved tetrapod geometry and the required size or mass range are available
+* Panel segmentation must release the four-arm unit without damaging concrete edges
+* Mould quantity and opening sequence must support a defined casting plan
+* Lifting, curing, demoulding and storage interfaces need coordinated review
 
 ## Configuration directions
 
-| Configuration direction | When it may be considered | Main review focus |
-| --- | --- | --- |
-| Manually opened segmented mould | Unit size and lifting equipment allow direct panel handling | Segment joints, locking, sealing and lifting points |
-| Lifting-assisted segmented mould | Individual panels require coordinated crane support | Panel mass, lifting sequence, access and storage position |
-| Mechanically or hydraulically assisted opening | Repeated movement or unit size justifies powered assistance | Opening path, supports, controls, safety and maintenance |
+| Configuration direction                        | When it may be considered                                   | Main review focus                                         |
+| ---------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
+| Manually opened segmented mould                | Unit size and lifting equipment allow direct panel handling | Segment joints, locking, sealing and lifting points       |
+| Lifting-assisted segmented mould               | Individual panels require coordinated crane support         | Panel mass, lifting sequence, access and storage position |
+| Mechanically or hydraulically assisted opening | Repeated movement or unit size justifies powered assistance | Opening path, supports, controls, safety and maintenance  |
 
 ## Product performance and engineering features
 
-- Segmented steel mould panels arranged around the approved four-arm geometry
-- Joint, locking and sealing details reviewed for repeat casting
-- Opening and demoulding sequence coordinated with the available lifting and handling equipment
-- Concrete placement and vibration access considered together with casting orientation
-- Support frame and operating method configured around the production area and target cycle
+* Segmented steel mould panels arranged around the approved four-arm geometry
+* Joint, locking and sealing details reviewed for repeat casting
+* Opening and demoulding sequence coordinated with the available lifting and handling equipment
+* Concrete placement and vibration access considered together with casting orientation
+* Support frame and operating method configured around the production area and target cycle
 
 Final dimensions, tolerances, materials and operating arrangements remain subject to approved project documents and the agreed inspection plan.
 
