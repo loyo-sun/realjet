@@ -10,8 +10,6 @@ slug: tetrapod-moulds
 productSeries: precast-concrete-moulds
 mouldCategory: marine-coastal-moulds
 draft: false
-imageCaption: Conceptual engineering illustration. Final mould design follows
-  the approved tetrapod drawings and project requirements.
 image: /images/uploads/tetrapodmoulds-.webp
 imageAlt: Engineering illustration of an opened segmented steel mould for a
   precast concrete tetrapod armour unit
