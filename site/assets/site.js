@@ -460,10 +460,15 @@ const universalEnquiryFieldset = universalEnquiryForm?.querySelector("fieldset")
 const universalKeywordField = document.querySelector("[data-universal-enquiry-keyword]");
 const universalKeywordLabel = document.querySelector("[data-universal-enquiry-keyword-label]");
 const universalSubjectField = document.querySelector("[data-universal-enquiry-subject]");
+const universalEnquiryTitle = document.querySelector("[data-universal-enquiry-title]");
+const universalEnquiryMessage = document.querySelector("[data-universal-enquiry-message]");
+const universalEnquiryDefaultTitle = universalEnquiryTitle?.textContent || "Tell Us What You Need";
+const universalEnquiryDefaultPlaceholder = universalEnquiryMessage?.placeholder || "";
 let universalEnquiryOpener = null;
 let universalEnquiryStarted = false;
 let universalEnquirySubmitted = false;
 let universalEnquirySucceeded = false;
+let universalEnquirySubmitMarkup = 'Send Enquiry <span aria-hidden="true">→</span>';
 
 function universalEnquiryParameters() {
   return {
@@ -485,7 +490,12 @@ function openUniversalEnquiry(trigger) {
   universalEnquiryError.hidden = true;
   universalEnquiryFormShell.hidden = false;
   universalEnquirySuccess.hidden = true;
-  universalEnquirySubmit.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
+  const submitLabel = trigger.dataset.enquirySubmitLabel || "Send Enquiry";
+  universalEnquirySubmitMarkup = `${submitLabel} <span aria-hidden="true">→</span>`;
+  universalEnquirySubmit.innerHTML = universalEnquirySubmitMarkup;
+  universalEnquiryTitle.textContent = trigger.dataset.enquiryTitle || universalEnquiryDefaultTitle;
+  const messagePlaceholder = trigger.dataset.enquiryPlaceholder || universalEnquiryDefaultPlaceholder;
+  universalEnquiryMessage.placeholder = messagePlaceholder.replaceAll("\\n", "\n");
   const keyword = trigger.dataset.enquiryKeyword || "General enquiry";
   universalKeywordField.value = keyword;
   universalKeywordLabel.textContent = keyword;
@@ -562,7 +572,7 @@ if (universalEnquiryForm) {
       universalEnquiryError.hidden = false;
       universalEnquiryFieldset.disabled = false;
       universalEnquiryForm.removeAttribute("aria-busy");
-      universalEnquirySubmit.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
+      universalEnquirySubmit.innerHTML = universalEnquirySubmitMarkup;
       trackEvent("lead_form_submit_error", {
         ...universalEnquiryParameters(),
         error_type: "submission_failed",

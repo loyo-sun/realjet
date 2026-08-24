@@ -4,7 +4,7 @@
     <button class="universal-enquiry-close" type="button" aria-label="Close enquiry form" data-universal-enquiry-close>×</button>
     <div data-universal-enquiry-form-shell>
       <span class="eyebrow">Project Enquiry</span>
-      <h2 id="universal-enquiry-title">Tell Us What You Need</h2>
+      <h2 id="universal-enquiry-title" data-universal-enquiry-title>Tell Us What You Need</h2>
       <p class="universal-enquiry-context">Enquiry about: <strong data-universal-enquiry-keyword-label>General enquiry</strong></p>
       <form name="universal-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-universal-enquiry-form>
         <input type="hidden" name="form-name" value="universal-enquiry" />
@@ -14,8 +14,8 @@
         <fieldset>
           <label><span>Name *</span><input type="text" name="name" autocomplete="name" required /></label>
           <label><span>E-mail *</span><input type="email" name="email" autocomplete="email" required /></label>
-          <label><span>Message *</span><textarea name="message" rows="5" maxlength="4000" placeholder="Tell us the component type, main dimensions, target output and whether drawings are available." required></textarea></label>
-          <p class="universal-enquiry-privacy">By submitting this form, you acknowledge that Realjet will use the information to respond to your enquiry. See our <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.</p>
+          <label><span>Message *</span><textarea name="message" rows="5" maxlength="4000" placeholder="Tell us the component type, main dimensions, target output and whether drawings are available." data-universal-enquiry-message required></textarea></label>
+          <label class="privacy-field"><input type="checkbox" name="privacy_consent" value="accepted" required /><span>I agree that Realjet may use this information to respond to my enquiry, as described in the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. *</span></label>
           <p class="form-error" role="alert" data-universal-enquiry-error hidden>We could not send your enquiry. Please try again or email sales@realjetech.com.</p>
           <button class="button button-primary" type="submit" data-universal-enquiry-submit>Send Enquiry <span aria-hidden="true">→</span></button>
         </fieldset>

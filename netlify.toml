@@ -53,6 +53,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/precast-concrete-molds/wall-panel-moulds/"
+  to = "/marketing/precast-concrete-molds/wall-panel-moulds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
