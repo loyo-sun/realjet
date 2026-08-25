@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import UniversalEnquiryFields from "../precast-beam-factory/shared/UniversalEnquiryFields";
+import FloatingContactActions from "../precast-beam-factory/shared/FloatingContactActions";
 import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../precast-beam-factory/shared/universalEnquiry";
 
 import logoImage from "../../assets/image/realjet-logo.webp";
@@ -538,6 +539,7 @@ function App() {
         </div>
         <div className="site-container mt-8 border-t border-white/10 pt-5 text-[11px]">© 2026 Changsha Ruijie Machinery Technology Co., Ltd</div>
       </footer>
+      <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/contract_manufacturing/" enquiryTitle="Request a Manufacturing Review" onEnquire={openLead} subject="contract manufacturing" />
       <button
         type="button"
         onClick={() => openLead("Request a Manufacturing Review")}

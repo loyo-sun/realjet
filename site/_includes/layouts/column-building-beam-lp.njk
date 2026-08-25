@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<article class="wall-panel-lp column-beam-lp">
+  <header class="wall-lp-hero">
+    <img class="wall-lp-hero-background" src="{{ image }}" alt="" aria-hidden="true" width="1600" height="900" decoding="async" />
+    <div class="wall-lp-hero-overlay" aria-hidden="true"></div>
+    <div class="container wall-lp-hero-shell">
+      <div class="wall-lp-hero-copy">
+        <span class="eyebrow">Precast Column &amp; Building Beam Moulds</span>
+        <h1>{{ heroTitle or title }}</h1>
+        <p>{{ description }}</p>
+        <ul class="wall-lp-scope-list" aria-label="Supported column and building beam mould project directions">
+          <li>Precast column mould systems</li>
+          <li>Building beam mould systems</li>
+          <li>Fixed, adjustable or hydraulic</li>
+        </ul>
+        <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Column and building beam mould project" data-enquiry-title="Tell Us About Your Column or Beam Project" data-enquiry-placeholder="What type of column or building beam do you plan to produce? Approximate sections, lengths, photos or drawings can be shared if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="hero">Discuss Your Project <span aria-hidden="true">→</span></button>
+        <small>A photo, approximate dimensions or drawing can start the first discussion.</small>
+      </div>
+    </div>
+  </header>
+
+  <div class="wall-lp-main">
+    {{ content | safe }}
+  </div>
+
+  <section class="wall-lp-final" aria-labelledby="column-beam-lp-final-title">
+    <div class="container wall-lp-final-card">
+      <div>
+        <span class="eyebrow">Start with the component</span>
+        <h2 id="column-beam-lp-final-title">Tell Us What Column or Beam You Plan to Produce</h2>
+        <p>Send a photo, approximate dimensions or a drawing. We will use it to discuss the mould direction; approved project documents are confirmed before final design and manufacturing.</p>
+      </div>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Column and building beam mould project" data-enquiry-title="Tell Us About Your Column or Beam Project" data-enquiry-placeholder="What type of column or building beam do you plan to produce? Approximate sections, lengths, photos or drawings can be shared if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="final">Discuss Your Project <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+</article>

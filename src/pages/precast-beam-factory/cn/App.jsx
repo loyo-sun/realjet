@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import FloatingContactActions from "../shared/FloatingContactActions";
 import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
@@ -1016,6 +1017,7 @@ export default function App() {
         </div>
       </footer>
 
+      <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/cn/" enquiryTitle="免费获取产线定制方案" onEnquire={openLead} subject="预制梁生产线" />
       <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/cn/" enquireLabel="询盘" enquiryTitle="免费获取产线定制方案" onEnquire={openLead} subject="预制梁生产线" />
 
       <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} title={leadTitle} />

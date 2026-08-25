@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import FloatingContactActions from "../shared/FloatingContactActions";
 import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
@@ -1159,6 +1160,7 @@ export default function App() {
           </div>
         </footer>
 
+        <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/ar/" enquiryTitle="احصل على تصميم خط مجاني" onEnquire={openLead} subject="خط إنتاج الكمرات مسبقة الصب" />
         <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/ar/" enquireLabel="استفسار" enquiryTitle="احصل على تصميم خط مجاني" hidden={hideMobileCta} onEnquire={openLead} subject="خط إنتاج الكمرات مسبقة الصب" />
       </div>
 

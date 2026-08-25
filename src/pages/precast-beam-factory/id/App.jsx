@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, Building2, CheckCircle, CloudSun, Compass, FileCheck, HardHat, LoaderCircle, MapPin, Menu, Package, Search, Send, Settings, User, Workflow, Wrench, X } from "lucide-react";
 import LanguageSwitcher from "../shared/LanguageSwitcher";
 import MobileContactBar from "../shared/MobileContactBar";
+import FloatingContactActions from "../shared/FloatingContactActions";
 import MobileScrollArrows from "../shared/MobileScrollArrows";
 import { trackLeadError, trackLeadSuccess } from "../shared/analytics";
 import { createBeamFactoryEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../shared/universalEnquiry";
@@ -1000,6 +1001,7 @@ export default function App() {
           </div>
         </footer>
 
+        <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/id/" enquiryTitle="Dapatkan Rancangan Lini Gratis" onEnquire={openLead} subject="lini produksi balok pracetak" />
         <MobileContactBar canonicalUrl="https://realjetech.com/marketing/precast-beam-factory/id/" enquireLabel="Pertanyaan" enquiryTitle="Dapatkan Rancangan Lini Gratis" hidden={hideMobileCta} onEnquire={openLead} subject="lini produksi balok pracetak" />
       </div>
 

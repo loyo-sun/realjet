@@ -633,6 +633,11 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-capability img { width: 100%; height: 100%; object-fit: cover; }
 .wall-lp-capability figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 24px 16px 12px; color: rgba(255,255,255,.74); background: linear-gradient(transparent,rgba(3,18,30,.88)); font-size: 10px; line-height: 1.5; }
 .wall-lp-capability p { margin: 18px 0 0; color: rgba(255,255,255,.66); font-size: 14px; line-height: 1.72; }
+.column-beam-detail-figure { margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 15px; background: rgba(255,255,255,.055); }
+.column-beam-detail-figure figcaption { padding: 14px 17px 16px; color: rgba(255,255,255,.65); font-size: 11px; line-height: 1.55; }
+.column-beam-detail-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px 18px; margin: 18px 0 0; padding: 0; list-style: none; }
+.column-beam-detail-list li { position: relative; padding-left: 16px; color: rgba(255,255,255,.75); font-size: 11px; line-height: 1.55; }
+.column-beam-detail-list li::before { position: absolute; top: .62em; left: 0; width: 6px; height: 6px; border-radius: 999px; background: var(--cyan); content: ""; }
 .wall-lp-faq-shell { display: grid; grid-template-columns: minmax(260px,.68fr) minmax(0,1.32fr); gap: clamp(42px,7vw,90px); align-items: start; }
 .wall-lp-faq { display: grid; gap: 10px; }
 .wall-lp-faq details { padding: 0 21px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
@@ -875,6 +880,7 @@ body.has-enquiry-modal { overflow: hidden; }
   .wall-lp-config-grid article { padding: 24px 20px; }
   .wall-lp-inputs .button { width: 100%; padding-inline: 10px; }
   .wall-lp-input-list li { min-height: 0; }
+  .column-beam-detail-list { grid-template-columns: 1fr; }
   .wall-lp-capability-grid { gap: 30px; }
   .wall-lp-final { padding: 42px 0 78px; }
   .wall-lp-final-card { gap: 26px; padding: 26px 20px; }

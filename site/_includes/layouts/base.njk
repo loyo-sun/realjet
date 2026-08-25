@@ -117,6 +117,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include "components/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>
+    {% include "components/floating-contact-actions.njk" %}
     {% include "components/universal-enquiry-modal.njk" %}
     {% include "components/footer.njk" %}
     <script src="/assets/site/site.js" defer></script>

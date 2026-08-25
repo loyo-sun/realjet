@@ -14,7 +14,7 @@ draft: false
 
 Column and building beam moulds form the structural frame elements of precast industrial, commercial and multi-storey buildings. A column mould shapes a vertical member with corbels, ledges and connection plates. A beam mould shapes a horizontal member with end details, openings and lifting points. Because these members repeat across a project as a family of related sections and lengths, the mould must hold tight, repeatable geometry while staying practical to strip and re-set.
 
-These moulds sit within the [precast concrete mould range](https://realjetech.com/precast-concrete-molds/) under the [Building Component Moulds category](https://realjetech.com/precast-concrete-molds/building-component-moulds/). The published [column and building beam mould page](https://realjetech.com/precast-concrete-molds/column-and-building-beam-moulds/) is the product reference for this family. The mould enquiry is a project specific review of geometry, cycle and handling. The catalogue page is a starting point, not a specification.
+These moulds sit within the [precast concrete mould range](https://realjetech.com/precast-concrete-molds/) under the [Building Component Moulds category](https://realjetech.com/precast-concrete-molds/building-component-moulds/). The published [column and building beam mould page](https://realjetech.com/marketing/precast-concrete-molds/column-and-building-beam-moulds/) is the product reference for this family. The mould enquiry is a project specific review of geometry, cycle and handling. The catalogue page is a starting point, not a specification.
 
 ## Geometry and variants to define in the RFQ
 
@@ -59,7 +59,7 @@ Where a face is buried in the structure, a looser class may be acceptable, while
 
 Realjet supplies mould manufacturing for precast concrete components to approved drawings. It does not sell the columns or beams themselves. The member geometry, reinforcement, cover and the standard to apply are the buyer's design responsibility, set by the project documents and the applicable code. Moulds are project specific: a column or beam mould is developed around the approved section, the casting method and the production layout, not taken from a generic catalogue.
 
-The [column and building beam mould product reference](https://realjetech.com/precast-concrete-molds/column-and-building-beam-moulds/) shows the configuration directions a project can take, while final dimensions, interfaces and delivery scope are confirmed through the buyer's project documents.
+The [column and building beam mould product reference](https://realjetech.com/marketing/precast-concrete-molds/column-and-building-beam-moulds/) shows the configuration directions a project can take, while final dimensions, interfaces and delivery scope are confirmed through the buyer's project documents.
 
 ## Next step before you request the mould
 

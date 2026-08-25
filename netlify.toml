@@ -59,6 +59,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/precast-concrete-molds/column-and-building-beam-moulds/"
+  to = "/marketing/precast-concrete-molds/column-and-building-beam-moulds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
