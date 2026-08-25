@@ -161,9 +161,9 @@ const decisionInputs = [
   "Delivery destination and target schedule",
 ];
 
-function PrimaryButton({ children, onClick, dark = false, ctaId }) {
+function PrimaryButton({ children, onClick, ctaId }) {
   return (
-    <button type="button" onClick={onClick} data-cta-id={ctaId} className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 text-sm font-[850] transition hover:-translate-y-0.5 ${dark ? "bg-brand-navy text-white hover:bg-brand-navy-light" : "bg-white text-brand-navy hover:bg-soft"}`}>
+    <button type="button" onClick={onClick} data-cta-id={ctaId} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#d94824] px-5 text-sm font-[850] text-white shadow-[0_12px_28px_rgba(217,72,36,.26)] transition hover:-translate-y-0.5 hover:bg-[#b93619] focus-visible:bg-[#b93619]">
       {children}<ArrowRight size={17} aria-hidden="true" />
     </button>
   );
@@ -187,7 +187,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-6 text-xs font-bold text-white/70 max-[980px]:hidden" aria-label="Primary navigation">
           {navItems.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button type="button" onClick={() => onLead("Partnership Enquiry")} data-cta-id="header" className="rounded-lg bg-white px-4 py-2.5 text-xs font-[850] text-brand-navy max-[980px]:ml-auto max-[640px]:hidden">Partnership Enquiry</button>
+        <button type="button" onClick={() => onLead("Partnership Enquiry")} data-cta-id="header" className="rounded-lg bg-[#d94824] px-4 py-2.5 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[980px]:ml-auto max-[640px]:hidden">Partnership Enquiry</button>
         <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="hidden rounded-lg border border-white/20 p-2 max-[980px]:block">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -196,7 +196,7 @@ function Header({ onLead }) {
         <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-4 py-4 shadow-floating min-[981px]:hidden" aria-label="Mobile navigation">
           <div className="site-container grid gap-1">
             {navItems.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => { setOpen(false); onLead("Partnership Enquiry"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-white px-3 py-3 text-center text-sm font-extrabold text-brand-navy">Partnership Enquiry</button>
+            <button type="button" onClick={() => { setOpen(false); onLead("Partnership Enquiry"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-[#d94824] px-3 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#b93619] focus-visible:bg-[#b93619]">Partnership Enquiry</button>
           </div>
         </nav>
       )}
@@ -544,7 +544,7 @@ function App() {
         data-cta-id="mobile_sticky"
         aria-hidden={hideMobileCta}
         tabIndex={hideMobileCta ? -1 : 0}
-        className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-brand-cyan text-sm font-[900] text-brand-navy shadow-floating transition duration-200 max-[720px]:flex ${hideMobileCta ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0" : "max-[720px]:translate-y-0 max-[720px]:opacity-100"}`}
+        className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-[#d94824] text-sm font-[900] text-white shadow-[0_12px_28px_rgba(217,72,36,.32)] transition duration-200 hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[720px]:flex ${hideMobileCta ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0" : "max-[720px]:translate-y-0 max-[720px]:opacity-100"}`}
       >
         Request a Manufacturing Review <ArrowRight size={16} />
       </button>

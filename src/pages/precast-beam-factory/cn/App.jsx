@@ -355,16 +355,12 @@ const companyProofs = [
   { value: "832867", label: "新三板证券代码" },
 ];
 
-function PrimaryButton({ children, onClick, dark = false, className = "" }) {
+function PrimaryButton({ children, onClick, className = "" }) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-[9px] px-5 text-[13px] font-[850] transition duration-180 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 ${
-        dark
-          ? "bg-brand-navy text-white focus-visible:outline-brand-blue"
-          : "bg-brand-cyan text-brand-navy focus-visible:outline-white"
-      } ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-[9px] bg-[#d94824] px-5 text-[13px] font-[850] text-white shadow-[0_12px_28px_rgba(217,72,36,.26)] transition duration-180 hover:-translate-y-0.5 hover:bg-[#b93619] focus-visible:bg-[#b93619] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${className}`}
     >
       {children}
     </button>
@@ -558,7 +554,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1000px]:hidden" aria-label="主导航">
           {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button onClick={() => onLead("免费获取产线定制方案")} className="rounded-lg bg-white px-3.5 py-2 text-xs font-[850] text-brand-navy max-[1000px]:ml-auto max-[720px]:hidden">免费获取产线定制方案</button>
+        <button onClick={() => onLead("免费获取产线定制方案")} className="rounded-lg bg-[#d94824] px-3.5 py-2 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[1000px]:ml-auto max-[720px]:hidden">免费获取产线定制方案</button>
         <LanguageSwitcher current="cn" />
         <button
           type="button"

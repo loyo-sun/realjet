@@ -33,7 +33,7 @@ export default function MobileContactBar({
           onEnquire(enquiryTitle);
         }}
         tabIndex={hidden ? -1 : 0}
-        className={`${actionClass} border-0 bg-brand-cyan text-brand-navy`}
+        className={`${actionClass} border-0 bg-[#d94824] text-white shadow-[0_8px_22px_rgba(217,72,36,.32)] hover:bg-[#b93619] focus-visible:bg-[#b93619]`}
       >
         <Send size={18} aria-hidden="true" />
         <span className="truncate">{enquireLabel}</span>

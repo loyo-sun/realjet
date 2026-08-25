@@ -461,8 +461,8 @@ button, input, textarea, select { font: inherit; }
 .mould-faq-list details { border-bottom: 1px solid var(--line); }
 .mould-faq-list summary { padding: 20px 34px 20px 0; color: var(--navy); font-size: 14px; font-weight: 850; line-height: 1.45; cursor: pointer; }
 .mould-faq-list p { max-width: 760px; margin: -4px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.72; }
-.moulds-landing .button-primary, .mould-products-section .button-primary, .category-contact-band .button-primary, .universal-enquiry-dialog .button-primary { color: var(--white); background: var(--blue); }
-.moulds-landing .button-primary:hover, .moulds-landing .button-primary:focus-visible, .mould-products-section .button-primary:hover, .mould-products-section .button-primary:focus-visible, .category-contact-band .button-primary:hover, .category-contact-band .button-primary:focus-visible, .universal-enquiry-dialog .button-primary:hover, .universal-enquiry-dialog .button-primary:focus-visible { background: var(--navy); }
+.moulds-landing .button-primary, .mould-products-section .button-primary, .category-contact-band .button-primary { color: var(--white); background: var(--blue); }
+.moulds-landing .button-primary:hover, .moulds-landing .button-primary:focus-visible, .mould-products-section .button-primary:hover, .mould-products-section .button-primary:focus-visible, .category-contact-band .button-primary:hover, .category-contact-band .button-primary:focus-visible { background: var(--navy); }
 .mould-product-hero { padding: 28px 0 70px; color: var(--white); background: linear-gradient(135deg,#061b2c,#0b405d); }
 .mould-product-hero .breadcrumbs { margin-bottom: 44px; }
 .mould-product-hero-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(360px,.78fr); gap: clamp(40px,6vw,82px); align-items: center; }
@@ -885,4 +885,25 @@ body.has-enquiry-modal { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+/* Site-wide enquiry conversion treatment, aligned with the wall-panel page. */
+.button[data-universal-enquiry],
+.button[data-universal-enquiry-submit],
+.button[data-contact-submit],
+.button[data-manufacturing-inquiry] {
+  color: var(--white);
+  background: #d94824;
+  box-shadow: 0 12px 28px rgba(217,72,36,.26);
+}
+.button[data-universal-enquiry]:hover,
+.button[data-universal-enquiry]:focus-visible,
+.button[data-universal-enquiry-submit]:hover,
+.button[data-universal-enquiry-submit]:focus-visible,
+.button[data-contact-submit]:hover,
+.button[data-contact-submit]:focus-visible,
+.button[data-manufacturing-inquiry]:hover,
+.button[data-manufacturing-inquiry]:focus-visible {
+  color: var(--white);
+  background: #b93619;
 }

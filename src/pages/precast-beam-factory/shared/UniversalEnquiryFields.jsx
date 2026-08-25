@@ -126,7 +126,7 @@ export default function UniversalEnquiryFields({ locale, submissionState, privac
       </p>
       {submissionState === "error" && <p role="alert" className="mt-4 text-[12px] text-red-600">{copy.error}</p>}
       <div className="mt-5 flex justify-end max-[720px]:mt-3">
-        <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white disabled:cursor-wait disabled:opacity-75 max-[720px]:min-h-10 max-[720px]:w-full max-[720px]:text-xs">
+        <button type="submit" className="inline-flex min-h-12 min-w-[92px] items-center justify-center gap-2 rounded-[9px] bg-[#d94824] px-5 text-[13px] font-[850] text-white shadow-[0_12px_28px_rgba(217,72,36,.26)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] disabled:cursor-wait disabled:opacity-75 max-[720px]:min-h-10 max-[720px]:w-full max-[720px]:text-xs">
           {disabled ? <><span className="h-4 w-4 animate-spin rounded-full border-2 border-white/35 border-t-white" aria-hidden="true" /> {copy.submitting}</> : <>{copy.submit} <Send size={15} /></>}
         </button>
       </div>
