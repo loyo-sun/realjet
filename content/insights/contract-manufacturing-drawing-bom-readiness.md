@@ -1,0 +1,66 @@
+---
+title: "Contract Manufacturing Drawing and BOM Readiness for RFQ"
+description: "Contract manufacturing to customer drawings requires a complete drawing and BOM package before a quote. Review the inputs suppliers need to avoid rework."
+date: 2026-08-26
+updated: 2026-08-26
+slug: "contract-manufacturing-drawing-bom-readiness"
+image: "/images/insights/contract-manufacturing-drawing-bom-readiness.webp"
+imageAlt: "Welded steel machinery frame with machined mounting interfaces"
+ctaType: "manufacturing"
+draft: false
+---
+
+## What a supplier needs before it can quote
+
+In contract manufacturing, the supplier builds to your drawings, specifications and delivery terms. It does not design the part. That single fact sets the boundary for who prepares what. The supplier needs a coherent drawing and bill-of-materials (BOM) package before it can price the job, plan materials, choose welding and machining methods, and commit to a delivery date. A vague or incomplete package leads to assumptions, change orders and rework that usually cost more than the original quote.
+
+This guide lists the inputs a buyer should prepare before sending a request for quotation (RFQ) for custom machinery components and welded or machined assemblies.
+
+Revision control is part of readiness. Every drawing you send should carry a revision letter and a date, and the BOM should match that revision. When a supplier works from an unrevised or mismatched set, the safest path is to stop and ask, which still delays the quote. Buyers who keep one controlled revision set avoid most of these pauses.
+
+## The drawing package the buyer should prepare
+
+Start with a general arrangement (GA) drawing that shows the overall envelope, main dimensions, datums and the interfaces the component must mate with. Then provide detail drawings for every fabricated or machined item, using a consistent coordinate system and datum references.
+
+For welded fabrications, show weld symbols to the rules in ISO 2553:2019, the current international standard for symbolic weld representation on drawings. For machined features, place geometric dimensioning and tolerancing (GD&T) callouts per ASME Y14.5 so the supplier knows which relationships are controlled and which are open. Where you do not specify a tolerance, state a general tolerance grade such as ISO 2768 so the shop has a default rule instead of guessing.
+
+- ISO 2553:2019, welding symbols on drawings: [iso.org/standard/72740.html](https://www.iso.org/standard/72740.html)
+- ASME Y14.5, dimensioning and tolerancing: [asme.org Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing)
+- ISO 2768-1, general tolerances: [iso.org/standard/7748.html](https://www.iso.org/standard/7748.html)
+
+## BOM fields that prevent rework
+
+A BOM is more than a parts list. Each line should carry the material grade, the quantity, the estimated mass, and any certificate requirement. For structural and pressure-bearing parts, specify the material certificate level, for example an EN 10204 type 3.1 inspection certificate that ties the delivered material to its mill test report. Bought-in items such as bearings, hydraulic cylinders, seals and fasteners need their own part numbers and supplier specifications, because the contract manufacturer will procure them on your behalf and must match the approved source.
+
+Record traceability needs up front. Heat or lot numbers, coating specifications and any marking requirements belong in the BOM or its attached notes, not in a later email.
+
+Some buyers also list the expected annual usage so the supplier can suggest stock or consignment of bought-in items, which can shorten lead time on repeats.
+
+## Material and process evidence to specify
+
+Decide how much proof you require. For welded structures, the fabrication standard matters: many buyers reference AWS D1.1 for structural steel welding or ISO 3834 for the welding quality management system, and they ask the supplier to confirm it can meet the required class. If non-destructive examination (NDE) such as magnetic particle or ultrasonic testing is needed on certain welds, name the method, the acceptance level and who performs it.
+
+- AWS D1.1, structural steel welding: [aws.org D1.1](https://www.aws.org/standards-and-publications/codes-and-standards/d1-1/)
+- ISO 3834-1, welding quality requirements: [iso.org/standard/81650.html](https://www.iso.org/standard/81650.html)
+
+The responsibility split is straightforward. You provide the design, drawings, BOM and specifications. The supplier provides the certificates and dimensional reports for the work it performs, including a factory acceptance test (FAT) record when the RFQ calls for it. Design authority stays with your engineering team or the designated designer, not with the workshop.
+
+## A ready-to-quote checklist
+
+Before you send the RFQ, confirm you can attach:
+
+- The GA and all detail drawings, in a current revision with a revision letter.
+- Weld symbols, GD&T and a stated general tolerance grade.
+- A BOM with material grades, quantities, masses and certificate levels.
+- Specified standards for welding, machining, coating and inspection.
+- Surface treatment, painting or corrosion-class requirements, for example ISO 12944 exposure classes.
+- Packaging, marking and delivery terms, including any export or crating needs.
+- Acceptance evidence expected at shipment, such as FAT, NDE or dimensional reports.
+
+A supplier can still review the package for manufacturability and propose changes, but the design decision remains yours.
+
+## How Realjet handles made-to-drawing manufacturing
+
+Realjet manufactures custom machinery components and assemblies to customer drawings, specifications and delivery requirements. Typical scope includes welded machinery frames, machined interfaces such as those on a [contract-manufactured crane boom head](https://realjetech.com/products/crane-boom-head-contract-manufacturing-machining.html), trial assembly, and the inspection evidence needed to close an RFQ. The work begins with your drawing and BOM, not with a catalogue part.
+
+If your drawings are ready, the next step is to review the [contract manufacturing services](https://realjetech.com/marketing/contract_manufacturing/) and prepare the RFQ package above.
