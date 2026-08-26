@@ -12,7 +12,7 @@ draft: false
 
 ## What a box culvert mould produces
 
-A box culvert mould forms buried precast concrete structures used for drainage, storm sewers, culverts under roads and railways, and utility tunnels. The mould is the tooling; the precast plant casts the concrete units to the project's structural drawings and to applicable standards such as ASTM C1433 for precast reinforced concrete box sections, or to EN 13369 for general precast concrete product requirements. Realjet supplies the mould system, not the culverts.
+A box culvert mould forms buried precast concrete structures used for drainage, storm sewers, road or railway crossings and utility routes. The mould is the tooling; the precast plant casts units to the approved structural drawings and the standards selected by the project. ASTM lists [C1433-25](https://store.astm.org/c1433-25.html) for monolithic single-cell precast reinforced concrete box sections, with a separate metric companion standard. That scope does not automatically cover every culvert geometry, country or project. The buyer's designer must identify the applicable specification and edition. Realjet supplies the mould system, not the culverts.
 
 This guide covers the inputs a buyer should gather before requesting a quotation for a box culvert mould, so the supplier can configure the tooling to the actual geometry and output.
 
@@ -38,7 +38,7 @@ The reinforcement itself is designed by the buyer or the project designer. The m
 
 Box culvert moulds are built with different opening and closing systems. Hydraulic operation reduces manual effort and shortens the cycle for high output, while mechanical or conventional systems suit lower volumes. The choice affects both the mould price and how it fits the production line. State your preferred demoulding method and the daily or annual output, because the number of moulds and their cycle time together set the plant capacity.
 
-Review the wider [precast concrete moulds range](https://realjetech.com/precast-concrete-molds/), the [tunnel and underground mould category](https://realjetech.com/precast-concrete-molds/tunnel-underground-moulds/), and the specific [box culvert mould product](https://realjetech.com/precast-concrete-molds/box-culvert-moulds/) when defining requirements.
+Review the wider [precast concrete mould range](/precast-concrete-molds/), the [tunnel and underground mould category](/precast-concrete-molds/tunnel-underground-moulds/), and the specific [box culvert mould product](/precast-concrete-molds/box-culvert-moulds/) when defining requirements.
 
 ## Mould count, transport and site limits
 
@@ -46,10 +46,9 @@ The number of moulds you order sets how many units you can cast in parallel, and
 
 ## Tolerances, surface and acceptance evidence
 
-Product tolerances follow the applicable precast standard, for example EN 13369, and PCI's plant production manual for dimensional practice. Surface finish matters where the culvert is visually exposed or carries hydraulic flow, so state the finish class and any face requirements. Ask the supplier for a trial cast or a dimensional report that proves the mould holds the agreed geometry before series production. Agree the measurement method and the points to be checked, because a trial cast is only useful if both sides measure the same features.
+Product tolerances and surface requirements come from the approved project documents and applicable product standard. Surface finish may matter for visible faces, joints or hydraulic flow, so identify the controlled faces and the acceptance basis. Ask the supplier to explain how the mould will be inspected against its approved drawings and which records are included. If the purchase contract requires a trial assembly, dimensional witness or trial cast, define the location, measurement points, materials, responsibilities and acceptance route before comparing prices.
 
-- EN 13369, general precast concrete product requirements: [en.wikipedia.org/wiki/EN_13369](https://en.wikipedia.org/wiki/EN_13369)
-- PCI MNL-116, plant precast production manual: [pci.org MNL-116-21](https://www.pci.org/FPCA/ItemDetail?iProductCode=MNL-116-21)
+PCI states that its plant certification program evaluates plants against published quality manuals, including [MNL-116 for structural precast production](https://www.pci.org/PCI/PCI/PCI-Certification/Plant_Certification/Plant_Certification_Procedures.aspx). That is relevant when PCI certification is a project requirement, but it does not set the contract geometry or prove that a particular mould supplier or plant is certified. Verify any certification claim and its category directly.
 
 The design authority stays with the buyer or the designated designer. The mould supplier is responsible for tooling accuracy against the agreed drawing, not for the structural design of the culvert.
 
@@ -64,4 +63,4 @@ Before you request a quote, prepare:
 - Applicable tolerances, finish class and acceptance evidence.
 - Delivery scope: supply only, or supply with installation support.
 
-Realjet supplies box culvert mould systems as part of production lines for precast concrete components. Start by reviewing the [box culvert mould product page](https://realjetech.com/precast-concrete-molds/box-culvert-moulds/) and the [precast concrete moulds overview](https://realjetech.com/precast-concrete-molds/) so the RFQ matches the available tooling.
+Realjet develops project-specific box culvert mould systems from approved component inputs. Start with the [box culvert mould product page](/precast-concrete-molds/box-culvert-moulds/) and the [precast concrete moulds overview](/precast-concrete-molds/) so the RFQ addresses the correct tooling type and delivery boundary.

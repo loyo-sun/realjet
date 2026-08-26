@@ -22,9 +22,8 @@ Revision control is part of readiness. Every drawing you send should carry a rev
 
 Start with a general arrangement (GA) drawing that shows the overall envelope, main dimensions, datums and the interfaces the component must mate with. Then provide detail drawings for every fabricated or machined item, using a consistent coordinate system and datum references.
 
-For welded fabrications, show weld symbols to the rules in ISO 2553:2019, the current international standard for symbolic weld representation on drawings. For machined features, place geometric dimensioning and tolerancing (GD&T) callouts per ASME Y14.5 so the supplier knows which relationships are controlled and which are open. Where you do not specify a tolerance, state a general tolerance grade such as ISO 2768 so the shop has a default rule instead of guessing.
+For welded fabrications, identify the drawing-symbol system and edition the project uses. [ISO 2553:2019](https://www.iso.org/standard/72740.html) defines rules for representing welded joints on technical drawings, while ASME Y14.5 covers dimensioning and tolerancing practice. For machined features, use the project-selected GD&T system consistently so the supplier knows which relationships are controlled and which dimensions are open. If general tolerances apply, state the exact standard, edition and class rather than leaving the workshop to choose one.
 
-- ISO 2553:2019, welding symbols on drawings: [iso.org/standard/72740.html](https://www.iso.org/standard/72740.html)
 - ASME Y14.5, dimensioning and tolerancing: [asme.org Y14.5](https://www.asme.org/codes-standards/find-codes-standards/y14-5-dimensioning-tolerancing)
 - ISO 2768-1, general tolerances: [iso.org/standard/7748.html](https://www.iso.org/standard/7748.html)
 
@@ -38,10 +37,9 @@ Some buyers also list the expected annual usage so the supplier can suggest stoc
 
 ## Material and process evidence to specify
 
-Decide how much proof you require. For welded structures, the fabrication standard matters: many buyers reference AWS D1.1 for structural steel welding or ISO 3834 for the welding quality management system, and they ask the supplier to confirm it can meet the required class. If non-destructive examination (NDE) such as magnetic particle or ultrasonic testing is needed on certain welds, name the method, the acceptance level and who performs it.
+Decide what evidence the contract requires. For welded structures, the buyer may specify AWS D1.1 or another applicable fabrication code. [ISO 3834-1:2021](https://www.iso.org/standard/81650.html) provides criteria for selecting among the quality-requirement levels in the ISO 3834 series; it is not, by itself, proof that a supplier holds a particular certification. If non-destructive examination (NDE) such as magnetic-particle or ultrasonic testing is required on selected welds, name the method, extent, acceptance criteria and responsible party.
 
 - AWS D1.1, structural steel welding: [aws.org D1.1](https://www.aws.org/standards-and-publications/codes-and-standards/d1-1/)
-- ISO 3834-1, welding quality requirements: [iso.org/standard/81650.html](https://www.iso.org/standard/81650.html)
 
 The responsibility split is straightforward. You provide the design, drawings, BOM and specifications. The supplier provides the certificates and dimensional reports for the work it performs, including a factory acceptance test (FAT) record when the RFQ calls for it. Design authority stays with your engineering team or the designated designer, not with the workshop.
 
@@ -61,6 +59,6 @@ A supplier can still review the package for manufacturability and propose change
 
 ## How Realjet handles made-to-drawing manufacturing
 
-Realjet manufactures custom machinery components and assemblies to customer drawings, specifications and delivery requirements. Typical scope includes welded machinery frames, machined interfaces such as those on a [contract-manufactured crane boom head](https://realjetech.com/products/crane-boom-head-contract-manufacturing-machining.html), trial assembly, and the inspection evidence needed to close an RFQ. The work begins with your drawing and BOM, not with a catalogue part.
+Realjet manufactures custom machinery components and assemblies to customer drawings, specifications and delivery requirements. A relevant example is a [contract-manufactured crane boom head](/products/crane-boom-head-contract-manufacturing-machining.html) with fabricated and machined interfaces. The final manufacturing, assembly and evidence scope still has to be defined in the RFQ. The work begins with the buyer's controlled drawing and BOM, not with a catalogue part.
 
-If your drawings are ready, the next step is to review the [contract manufacturing services](https://realjetech.com/marketing/contract_manufacturing/) and prepare the RFQ package above.
+If your drawings are ready, review Realjet's [made-to-drawing contract manufacturing services](/marketing/contract_manufacturing/) and prepare the RFQ package above.

@@ -22,7 +22,7 @@ A simply supported girder of span L needs a casting bed longer than L to allow e
 
 Two different process models change the footprint:
 
-- A fixed long-line bed casts multiple units end to end along a single bed, so the hall length is driven by the bed length. Supplier-published examples show beds in the range of 120 m to 150 m for long-line prestressed production, with longer beds possible for large projects.
+- A fixed long-line bed casts units along a shared bed, so the hall length is driven by the approved component family, prestressing arrangement, end zones and handling clearances.
 - A circulation or station-based layout casts one unit per station and moves it forward, which can shorten the individual bed but adds handling aisles and transfer space.
 
 The buyer's project defines the maximum span, and that maximum sets the minimum hall length regardless of process.
@@ -35,11 +35,13 @@ The production hall is only part of the site. A complete plant also needs:
 - A finished-component storage and curing yard. Precast beams often need continued curing and a stock period before transport, so the yard can be larger than the hall.
 - Ancillary zones: concrete batching, reinforcement fabrication, maintenance and washing, and truck or rail access for components that can be long and heavy.
 
-Third-party supplier data gives a sense of scale. One published frame-line example cites about 3,000 m2 of production area and about 10,000 m2 of total land for a specific capacity. Another supplier describes long-line beds of 120 m to 150 m with four to twelve beds depending on output. These figures are supplier-specific illustrations, not Realjet capacities, and your project will differ.
+Do not estimate total land by applying a generic ratio to the production hall. Storage days, dispatch pattern, crane or transporter routes, reinforcement workflow and batching location can change the site requirement substantially. Ask every bidder to return a zone schedule using the same buyer-supplied production plan, then compare the assumptions behind each area.
 
 ## From annual output to bed count
 
-The number of casting positions follows from your output target and the cycle time per position. As a planning illustration only, if a line must deliver a given number of girders per year and each bed or station completes one casting in several days including curing, the required number of parallel positions is roughly the annual volume divided by the volume each position yields in a year. The real cycle depends on the component, the curing method and the climate, so treat this as a check on scale rather than a quotation. A supplier turns your output target into a specific bed or station count during layout design.
+The number of casting positions follows from the required delivery schedule and the occupied time of each position. Build the estimate from the annual working calendar, planned shifts, component mix, casts per position and project-approved release criteria. Include preparation, reinforcement and insert work, concrete placement, curing, opening, demoulding and changeover. Shared cranes, concrete delivery and reinforcement stations may limit how many positions can work at once.
+
+Ask the supplier to return this calculation as a readable cycle model. It should show the assumed working days, utilization allowance, bottleneck and recovery margin. This is more useful than a headline annual capacity because the buyer can see which assumption changes the proposed bed or station count.
 
 ## Fixed long-line versus circulation footprint
 
@@ -53,4 +55,4 @@ Floor space estimates must include what sits around the line. Reserve space for 
 
 To get a usable layout, provide the component types and maximum span, the target annual output, the available site boundaries and ground conditions, local standards, the climate that affects curing, and the utilities already on site. With these inputs, a supplier can propose a process, a bed or station count, and a building envelope.
 
-Realjet plans and supplies production lines for precast concrete components, including layout, equipment, installation and commissioning where confirmed for the project. It supplies the production line, not the precast components themselves. To start a layout study, review the [precast beam factory solution](https://realjetech.com/marketing/precast-beam-factory/en/) and share your span and output targets.
+Realjet develops production-line proposals around confirmed project inputs and an agreed delivery boundary. It supplies production equipment, not the precast components themselves. To start a layout study, review the [precast beam factory production-line solution](/marketing/precast-beam-factory/en/) and share your component schedule, site boundary and output target.
