@@ -5,7 +5,7 @@ heroTitle: "Custom Precast Wall Panel Moulds & Steel Formwork"
 landingSeoTitle: "Precast Wall Panel Moulds & Steel Formwork | Realjet"
 description: "Realjet designs and manufactures steel mould and formwork systems for horizontal and vertical production of structural, facade and sandwich wall panels. Fixed, movable and hydraulic configurations are developed around the required panel and factory process."
 date: 2026-08-11
-updated: 2026-08-24
+updated: 2026-08-26
 order: 104
 featured: false
 slug: wall-panel-moulds
@@ -80,6 +80,22 @@ draft: false
   <div class="container wall-lp-capability-grid">
     <figure class="wall-lp-capability-media"><img src="/images/products/precast-moulds/wall-panel-moulds/07-wall-panel-mould-inspection.webp" alt="Wall panel mould assembly and inspection in the workshop" width="1000" height="562" loading="lazy" decoding="async" /><figcaption>Wall panel mould assembly and inspection before delivery.</figcaption></figure>
     <div><span class="eyebrow">Engineering and manufacturing</span><h2 id="wall-capability-title">Design connected with steel fabrication</h2><p>Realjet connects project discussion, mechanical design, steel fabrication and workshop assembly around the agreed production objective.</p><p>Final dimensions, functions, inspection requirements and delivery boundaries are confirmed before manufacturing.</p></div>
+  </div>
+</section>
+
+<section class="wall-lp-section wall-lp-section-soft" id="why-realjet">
+  <div class="container">
+    <div class="wall-lp-heading">
+      <span class="eyebrow">Why Realjet</span>
+      <h2>One team connects the wall panel, casting system and manufacturing route</h2>
+      <p>A custom wall panel mould must bring panel geometry, casting direction, moving functions and acceptance requirements into one workable production system.</p>
+    </div>
+    <div class="wall-lp-fit-grid wall-lp-image-card-grid">
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/plate-cutting.webp" alt="Steel plate cutting at the Realjet manufacturing facility" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Panel-led engineering</h3><p>Panel dimensions, openings, surface requirements and horizontal or vertical casting are reviewed before the mould scope is defined.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/robotic-welding.webp" alt="Robotic welding of fabricated steel components at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Connected fabrication</h3><p>Cutting, forming, welding, machining and surface treatment are coordinated around the approved wall panel mould design.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/machining.webp" alt="Machining and assembly work for steel equipment components at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Integrated functions</h3><p>Shuttering, adjustable details and mechanical or hydraulic functions are brought together for workshop assembly.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/quality-inspection.webp" alt="Dimensional quality inspection of a manufactured steel component at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Inspection against the scope</h3><p>Critical dimensions, interfaces, finish and final condition are checked against the agreed project documents before release.</p></div></article>
+    </div>
   </div>
 </section>
 

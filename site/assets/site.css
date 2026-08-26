@@ -562,6 +562,10 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-fit-grid article > span,.wall-lp-process li > span { color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
 .wall-lp-fit-grid h3,.wall-lp-config-grid h3,.wall-lp-process h3 { margin: 30px 0 0; color: var(--navy); font-size: 21px; line-height: 1.2; letter-spacing: -.025em; }
 .wall-lp-fit-grid p,.wall-lp-config-grid p,.wall-lp-config-grid li,.wall-lp-process p { color: var(--muted); font-size: 13px; line-height: 1.68; }
+.wall-lp-image-card-grid article { min-height: 0; overflow: hidden; padding: 0; }
+.wall-lp-image-card-grid h3 { margin: 0; }
+.wall-lp-image-card-grid p { margin: 10px 0 0; }
+.wall-lp-image-card-copy { padding: 22px 24px 24px; }
 .wall-lp-reasons-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 38px; }
 .wall-lp-reasons-grid article { min-height: 210px; padding: 26px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 32px rgba(8,37,63,.06); }
 .wall-lp-reasons-grid article > span { color: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
@@ -607,6 +611,7 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-inputs h2,.wall-lp-capability h2,.wall-lp-final h2 { color: var(--white); }
 .wall-lp-inputs-grid > div > p { margin: 18px 0 0; color: rgba(255,255,255,.65); font-size: 14px; line-height: 1.72; }
 .wall-lp-inputs-grid > div > .wall-lp-low-friction { padding-left: 15px; border-left: 3px solid var(--cyan); color: rgba(255,255,255,.78); font-size: 12px; }
+.wall-lp-inputs .wall-lp-media-16x9 { margin-top: 28px; border: 1px solid rgba(255,255,255,.14); border-radius: 14px; }
 .wall-lp-inputs .button { margin-top: 26px; }
 .wall-lp-drawing-contact { font-size: 11px !important; }
 .wall-lp-drawing-contact a { color: #8ce4ea; font-weight: 800; }
@@ -620,6 +625,7 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-input-list span { margin-top: 9px; color: rgba(255,255,255,.61); font-size: 11px; line-height: 1.58; }
 .wall-lp-process { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin: 38px 0 0; padding: 0; counter-reset: none; list-style: none; }
 .wall-lp-process-three { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.wall-lp-subheading { margin-top: 72px; }
 .wall-lp-process li { position: relative; min-height: 220px; padding: 25px; border-top: 3px solid var(--cyan); background: var(--soft); }
 .wall-lp-process h3 { margin-top: 32px; font-size: 19px; }
 .wall-lp-inline-cta { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 20px; padding: 24px 26px; border-radius: 14px; color: var(--white); background: var(--navy); }

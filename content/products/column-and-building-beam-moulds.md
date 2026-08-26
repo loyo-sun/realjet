@@ -5,7 +5,7 @@ heroTitle: "Custom Precast Column & Beam Moulds"
 landingSeoTitle: "Precast Column & Building Beam Moulds | Realjet"
 description: "Project-specific steel mould systems for precast columns and building beams, developed around the required sections, lengths, corbels, connections and factory process."
 date: 2026-08-11
-updated: 2026-08-25
+updated: 2026-08-26
 order: 106
 featured: false
 slug: column-and-building-beam-moulds
@@ -98,6 +98,22 @@ draft: false
   <div class="container wall-lp-capability-grid">
     <figure><img src="/images/products/precast-moulds/column-building-beam-moulds/07-column-beam-mould-inspection.webp" alt="Technicians carrying out dimensional and assembly inspection on a precast column or building beam steel mould" width="1000" height="562" loading="lazy" decoding="async" /><figcaption>Assembly and dimensional inspection before the agreed delivery scope is completed.</figcaption></figure>
     <div><span class="eyebrow">Engineering and manufacturing</span><h2>From component requirements to a manufacturable mould system</h2><p>Realjet can connect process review, mechanical design, steel fabrication, hydraulic or mechanical integration, workshop assembly and project support around the agreed production objective.</p><p>Final dimensions, tolerances, functions, interfaces and delivery scope remain subject to approved project documents and technical review.</p></div>
+  </div>
+</section>
+
+<section class="wall-lp-section wall-lp-section-soft" id="why-realjet">
+  <div class="container">
+    <div class="wall-lp-heading">
+      <span class="eyebrow">Why Realjet</span>
+      <h2>One team connects the component family, mould functions and manufacturing route</h2>
+      <p>A custom column or building beam mould must coordinate member geometry, adjustable details, operating sequence and acceptance requirements.</p>
+    </div>
+    <div class="wall-lp-fit-grid wall-lp-image-card-grid">
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/plate-cutting.webp" alt="Steel plate cutting at the Realjet manufacturing facility" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Component-family review</h3><p>Sections, lengths, corbels, connections and available drawings are reviewed before the mould scope is defined.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/robotic-welding.webp" alt="Robotic welding of fabricated steel components at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Connected fabrication</h3><p>Cutting, forming, welding, machining and surface treatment are coordinated around the approved mould design.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/machining.webp" alt="Machining and assembly work for steel equipment components at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Integrated adjustment</h3><p>End forms, replaceable inserts and mechanical or hydraulic functions are brought together for workshop assembly.</p></div></article>
+      <article><div class="wall-lp-media-16x9"><img src="/images/uploads/quality-inspection.webp" alt="Dimensional quality inspection of a manufactured steel component at Realjet" width="1200" height="675" loading="lazy" decoding="async" /></div><div class="wall-lp-image-card-copy"><h3>Inspection against the scope</h3><p>Critical dimensions, interfaces, finish and final condition are checked against the agreed project documents before release.</p></div></article>
+    </div>
   </div>
 </section>
 

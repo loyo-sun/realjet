@@ -65,6 +65,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/precast-concrete-molds/floor-and-roof-slab-moulds/"
+  to = "/marketing/precast-concrete-molds/floor-and-roof-slab-moulds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]

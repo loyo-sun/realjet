@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<article class="wall-panel-lp floor-roof-slab-lp">
+  <header class="wall-lp-hero">
+    <img class="wall-lp-hero-background" src="{{ image }}" alt="" aria-hidden="true" width="1600" height="900" decoding="async" />
+    <div class="wall-lp-hero-overlay" aria-hidden="true"></div>
+    <div class="container wall-lp-hero-shell">
+      <div class="wall-lp-hero-copy">
+        <span class="eyebrow">Precast Floor &amp; Roof Slab Moulds</span>
+        <h1>{{ heroTitle or title }}</h1>
+        <p>{{ description }}</p>
+        <ul class="wall-lp-scope-list" aria-label="Supported floor and roof slab mould project directions">
+          <li>Designed around the finished slab</li>
+          <li>Fixed or movable production arrangements</li>
+          <li>Adjustable details where required</li>
+        </ul>
+        <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Floor and roof slab mould project" data-enquiry-title="Tell Us About Your Slab Project" data-enquiry-placeholder="What floor or roof slab do you plan to produce? Share approximate dimensions, slab photos, drawings, openings or production requirements if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="hero">Discuss Your Slab Project <span aria-hidden="true">→</span></button>
+        <small>A slab photo, approximate dimensions or an early drawing is enough to start.</small>
+      </div>
+    </div>
+  </header>
+
+  <div class="wall-lp-main">
+    {{ content | safe }}
+  </div>
+
+  <section class="wall-lp-final" aria-labelledby="floor-roof-slab-lp-final-title">
+    <div class="container wall-lp-final-card">
+      <div>
+        <span class="eyebrow">Start with the component</span>
+        <h2 id="floor-roof-slab-lp-final-title">Show Us the Slab You Plan to Produce</h2>
+        <p>Send a photo, approximate dimensions or an available drawing. We can review the slab details and production process before defining the mould direction.</p>
+      </div>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Floor and roof slab mould project" data-enquiry-title="Tell Us About Your Slab Project" data-enquiry-placeholder="What floor or roof slab do you plan to produce? Share approximate dimensions, slab photos, drawings, openings or production requirements if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="final">Discuss Your Slab Project <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+</article>
