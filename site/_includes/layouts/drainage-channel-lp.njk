@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+---
+<article class="wall-panel-lp drainage-channel-lp">
+  <header class="wall-lp-hero">
+    <img class="wall-lp-hero-background" src="{{ image }}" alt="" aria-hidden="true" width="1600" height="900" decoding="async" />
+    <div class="wall-lp-hero-overlay" aria-hidden="true"></div>
+    <div class="container wall-lp-hero-shell">
+      <div class="wall-lp-hero-copy">
+        <span class="eyebrow">Precast Drainage Channel Moulds</span>
+        <h1>{{ heroTitle or title }}</h1>
+        <p>{{ description }}</p>
+        <ul class="wall-lp-scope-list" aria-label="Supported drainage channel mould project directions">
+          <li>U-drains and open channels</li>
+          <li>Manual, assisted or hydraulic opening</li>
+          <li>Custom-built from approved drawings</li>
+        </ul>
+        <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Drainage channel mould project" data-enquiry-title="Tell Us About Your Drainage Channel Project" data-enquiry-placeholder="What drainage channel do you plan to produce? Share a photo, approximate section, dimensions, drawing or target output if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="hero">Send Your Channel Details <span aria-hidden="true">→</span></button>
+        <small>A photo, sketch or early drawing is enough to start.</small>
+      </div>
+    </div>
+  </header>
+
+  <div class="wall-lp-main">
+    {{ content | safe }}
+  </div>
+
+  <section class="wall-lp-final" aria-labelledby="drainage-channel-lp-final-title">
+    <div class="container wall-lp-final-card">
+      <div>
+        <span class="eyebrow">Ready to discuss your channel?</span>
+        <h2 id="drainage-channel-lp-final-title">Send a Photo. We Will Help With the Next Step.</h2>
+        <p>Tell us what you need to produce. Complete drawings are not required for the first discussion.</p>
+      </div>
+      <button class="button button-primary" type="button" data-universal-enquiry data-enquiry-keyword="Drainage channel mould project" data-enquiry-title="Tell Us About Your Drainage Channel Project" data-enquiry-placeholder="What drainage channel do you plan to produce? Share a photo, approximate section, dimensions, drawing or target output if available." data-enquiry-submit-label="Contact Realjet" data-product-conversion data-conversion-type="enquiry" data-conversion-position="final">Start My Mould Review <span aria-hidden="true">→</span></button>
+    </div>
+  </section>
+</article>

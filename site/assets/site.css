@@ -544,8 +544,8 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-scope-list li { padding: 8px 11px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; color: rgba(255,255,255,.82); background: rgba(255,255,255,.06); font-size: 11px; font-weight: 750; }
 .wall-lp-hero-copy .button { margin-top: 28px; }
 .wall-lp-hero-copy > small { display: block; max-width: 590px; margin-top: 12px; color: rgba(255,255,255,.51); font-size: 10px; line-height: 1.5; }
-.wall-panel-lp .button-primary,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary { color: var(--white); background: #d94824; box-shadow: 0 12px 28px rgba(217,72,36,.26); }
-.wall-panel-lp .button-primary:hover,.wall-panel-lp .button-primary:focus-visible,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary:hover,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary:focus-visible { color: var(--white); background: #b93619; }
+.wall-panel-lp .button-primary,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary,body[data-product-slug="drainage-channel-moulds"] .universal-enquiry-dialog .button-primary { color: var(--white); background: #d94824; box-shadow: 0 12px 28px rgba(217,72,36,.26); }
+.wall-panel-lp .button-primary:hover,.wall-panel-lp .button-primary:focus-visible,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary:hover,body[data-product-slug="wall-panel-moulds"] .universal-enquiry-dialog .button-primary:focus-visible,body[data-product-slug="drainage-channel-moulds"] .universal-enquiry-dialog .button-primary:hover,body[data-product-slug="drainage-channel-moulds"] .universal-enquiry-dialog .button-primary:focus-visible { color: var(--white); background: #b93619; }
 .wall-lp-proof { border-bottom: 1px solid var(--line); background: var(--white); }
 .wall-lp-proof-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); }
 .wall-lp-proof p { display: grid; gap: 7px; margin: 0; padding: 25px 28px; border-left: 1px solid var(--line); }
@@ -590,14 +590,67 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-config-grid ul { display: grid; gap: 8px; margin: 13px 0 0; padding-left: 18px; }
 .wall-lp-boundary { margin: 22px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
 .wall-lp-evidence-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 38px; }
+.wall-lp-component-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .wall-lp-systems-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .wall-lp-evidence-grid figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: var(--white); box-shadow: 0 12px 32px rgba(8,37,63,.06); }
 .wall-lp-media-16x9 { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; background: var(--navy-dark); }
 .wall-lp-media-16x9 img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.wall-lp-media-placeholder { display: flex; min-height: 0; align-items: center; justify-content: center; flex-direction: column; gap: 9px; padding: 24px; color: rgba(255,255,255,.68); background: radial-gradient(circle at 70% 20%,rgba(57,187,200,.18),transparent 25%),linear-gradient(145deg,#0b3652,#061b2c); text-align: center; }
+.wall-lp-media-placeholder > span { color: #75dce4; font-size: 10px; font-weight: 900; letter-spacing: .18em; }
+.wall-lp-media-placeholder > strong { color: var(--white); font-size: clamp(17px,2.2vw,24px); line-height: 1.2; }
+.wall-lp-media-placeholder > code { max-width: 100%; overflow-wrap: anywhere; color: rgba(255,255,255,.48); font-family: inherit; font-size: 10px; }
+.wall-lp-reference-media > span { position: absolute; right: 10px; bottom: 10px; z-index: 1; padding: 6px 9px; border: 1px solid rgba(255,255,255,.48); border-radius: 999px; color: #fff; background: rgba(6,27,44,.82); font-size: 9px; font-weight: 900; letter-spacing: .1em; line-height: 1; }
+.wall-lp-reference-diagram { background: #fff; }
+.wall-lp-reference-diagram img { object-fit: contain; }
 .wall-lp-evidence-grid figcaption { display: grid; gap: 7px; padding: 18px 20px 20px; }
 .wall-lp-evidence-grid figcaption strong { color: var(--navy); font-size: 14px; }
 .wall-lp-evidence-grid figcaption span { color: var(--muted); font-size: 11px; line-height: 1.55; }
 .wall-lp-evidence-grid figcaption ul { display: grid; gap: 7px; margin: 4px 0 0; padding-left: 17px; color: var(--navy); font-size: 11px; line-height: 1.5; }
+.wall-lp-evidence-grid figcaption small,
+.wall-lp-capability figcaption small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; line-height: 1.4; }
+.wall-lp-evidence-grid figcaption small a,
+.wall-lp-capability figcaption small a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.wall-lp-component-detail { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(320px,.85fr); gap: 34px; align-items: center; margin-top: 24px; padding: clamp(24px,4vw,42px); border: 1px solid var(--line); border-radius: 18px; background: var(--white); box-shadow: 0 12px 32px rgba(8,37,63,.06); }
+.wall-lp-component-detail-copy h3 { margin: 8px 0 10px; color: var(--navy); font-size: clamp(23px,2.5vw,34px); line-height: 1.12; }
+.wall-lp-component-detail-copy > p { max-width: 680px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.wall-lp-component-detail-copy ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; margin: 22px 0 0; padding: 0; list-style: none; }
+.wall-lp-component-detail-copy li { display: grid; gap: 4px; padding: 14px; border-radius: 12px; background: var(--surface); }
+.wall-lp-component-detail-copy li strong { color: var(--navy); font-size: 12px; }
+.wall-lp-component-detail-copy li span { color: var(--muted); font-size: 10px; line-height: 1.45; }
+.wall-lp-component-detail figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); }
+.wall-lp-component-detail figcaption { display: grid; gap: 6px; padding: 15px 17px 17px; }
+.wall-lp-component-detail figcaption strong { color: var(--navy); font-size: 13px; }
+.wall-lp-component-detail figcaption span { color: var(--muted); font-size: 10px; line-height: 1.55; }
+.wall-lp-component-detail figcaption small { color: var(--muted); font-size: 9px; }
+.wall-lp-component-detail figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.drainage-operation-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-top: 38px; }
+.drainage-operation-grid article { display: flex; min-height: 390px; flex-direction: column; padding: 28px 26px; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: 0 12px 32px rgba(8,37,63,.06); }
+.drainage-operation-grid article > span { color: var(--cyan-dark); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
+.drainage-operation-grid h3 { margin: 22px 0 10px; color: var(--navy); font-size: 23px; line-height: 1.15; }
+.drainage-operation-grid article > p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.drainage-operation-grid dl { display: grid; gap: 16px; margin: auto 0 0; padding-top: 26px; }
+.drainage-operation-grid dl > div { padding-top: 14px; border-top: 1px solid var(--line); }
+.drainage-operation-grid dt { color: var(--navy); font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.drainage-operation-grid dd { margin: 6px 0 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.drainage-opening-example,.drainage-variant-review { display: grid; grid-template-columns: minmax(320px,.9fr) minmax(0,1.1fr); gap: clamp(28px,5vw,62px); align-items: center; margin-top: 28px; padding: clamp(24px,4vw,42px); border-radius: 18px; }
+.drainage-opening-example { color: var(--white); background: var(--navy-dark); }
+.drainage-variant-review { grid-template-columns: minmax(0,1.1fr) minmax(320px,.9fr); border: 1px solid var(--line); background: var(--surface); }
+.drainage-opening-example figure,.drainage-variant-review figure { margin: 0; overflow: hidden; border-radius: 14px; background: var(--white); }
+.drainage-opening-example figcaption,.drainage-variant-review figcaption { display: grid; gap: 5px; padding: 12px 15px 14px; }
+.drainage-opening-example figcaption { background: var(--white); }
+.drainage-opening-example figcaption small,.drainage-variant-review figcaption small { color: var(--muted); font-size: 9px; }
+.drainage-opening-example figcaption a,.drainage-variant-review figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.drainage-opening-example h3,.drainage-variant-review h3 { margin: 8px 0 12px; font-size: clamp(25px,3vw,38px); line-height: 1.12; }
+.drainage-opening-example h3 { color: var(--white); }
+.drainage-variant-review h3 { color: var(--navy); }
+.drainage-opening-example p,.drainage-variant-review p { margin: 0; font-size: 13px; line-height: 1.7; }
+.drainage-opening-example p { color: rgba(255,255,255,.7); }
+.drainage-variant-review p { color: var(--muted); }
+.drainage-opening-example ul,.drainage-variant-review ul { display: grid; gap: 8px; margin: 20px 0 0; padding-left: 18px; font-size: 11px; line-height: 1.55; }
+.drainage-opening-example ul { color: rgba(255,255,255,.85); }
+.drainage-variant-review ul { color: var(--navy); }
+.drainage-variant-review figcaption strong { color: var(--navy); font-size: 12px; }
+.drainage-variant-review figcaption span { color: var(--muted); font-size: 10px; line-height: 1.5; }
 .wall-lp-components { padding-top: 0; }
 .wall-lp-components-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; margin-top: 34px; }
 .wall-lp-components-grid figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 10px 26px rgba(8,37,63,.055); }
@@ -655,6 +708,49 @@ body.has-enquiry-modal { overflow: hidden; }
 .wall-lp-final p { max-width: 780px; margin: 17px 0 0; color: rgba(255,255,255,.65); font-size: 14px; line-height: 1.7; }
 .wall-lp-final .button { min-width: 250px; }
 
+/* Drainage channel conversion landing page */
+.drainage-channel-lp .wall-lp-section { padding-block: 72px; }
+.drainage-channel-lp .wall-lp-heading { max-width: 760px; }
+.drainage-channel-lp .wall-lp-heading > p { max-width: 680px; }
+.drainage-product-grid { margin-top: 32px; }
+.drainage-product-grid figure { box-shadow: 0 16px 38px rgba(8,37,63,.08); }
+.drainage-product-grid figcaption { min-height: 132px; }
+.drainage-detail-note { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 20px; padding: 22px 24px; border: 1px solid rgba(8,37,63,.1); border-radius: 14px; background: var(--soft); }
+.drainage-detail-note > div { display: grid; gap: 6px; }
+.drainage-detail-note strong { color: var(--navy); font-size: 15px; }
+.drainage-detail-note span { color: var(--muted); font-size: 11px; line-height: 1.55; }
+.drainage-detail-note .button { flex: 0 0 auto; }
+.drainage-enquiry { padding-block: 68px; }
+.drainage-enquiry .wall-lp-inputs-grid { align-items: center; }
+.drainage-input-list li { min-height: 104px; }
+.drainage-choice-layout { display: grid; grid-template-columns: minmax(340px,.95fr) minmax(0,1.05fr); gap: clamp(32px,5vw,64px); align-items: center; margin-top: 34px; }
+.drainage-choice-layout figure { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 15px; background: var(--white); box-shadow: 0 16px 38px rgba(8,37,63,.08); }
+.drainage-choice-layout figcaption { display: grid; gap: 6px; padding: 14px 17px 16px; }
+.drainage-choice-layout figcaption span { color: var(--navy); font-size: 11px; line-height: 1.55; }
+.drainage-choice-layout figcaption small { color: var(--muted); font-size: 9px; }
+.drainage-choice-layout figcaption a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.drainage-choice-list { display: grid; gap: 10px; }
+.drainage-choice-list article { display: grid; grid-template-columns: 82px minmax(0,1fr); gap: 20px; align-items: start; padding: 18px 20px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.drainage-choice-list article > span { padding-top: 3px; color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.drainage-choice-list h3 { margin: 0; color: var(--navy); font-size: 17px; }
+.drainage-choice-list article p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.drainage-choice-note { margin: 2px 0 0; padding: 16px 18px; border-left: 3px solid var(--cyan); color: var(--muted); background: var(--soft); font-size: 11px; line-height: 1.6; }
+.drainage-choice-note strong { color: var(--navy); }
+.drainage-realjet-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin-top: 32px; }
+.drainage-realjet-grid article { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 30px rgba(8,37,63,.06); }
+.drainage-realjet-grid article > div:last-child { padding: 18px 20px 21px; }
+.drainage-realjet-grid article > div:last-child > span { color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+.drainage-realjet-grid h3 { margin: 10px 0 0; color: var(--navy); font-size: 18px; }
+.drainage-realjet-grid p { margin: 8px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.drainage-next-grid { display: grid; grid-template-columns: minmax(0,.85fr) minmax(360px,1.15fr); gap: clamp(42px,7vw,90px); align-items: start; }
+.drainage-next .wall-lp-heading .button { margin-top: 24px; }
+.drainage-next-steps { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.drainage-next-steps li { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 18px; padding: 20px 22px; border: 1px solid var(--line); border-radius: 13px; background: var(--white); }
+.drainage-next-steps li > span { color: var(--cyan-dark); font-size: 12px; font-weight: 900; }
+.drainage-next-steps strong { color: var(--navy); font-size: 15px; }
+.drainage-next-steps p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+.drainage-faq .wall-lp-faq details:nth-child(n+5) { display: none; }
+
 @media (max-width: 900px) {
   .contact-grid { grid-template-columns: 1fr; }
   .insight-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -681,10 +777,17 @@ body.has-enquiry-modal { overflow: hidden; }
   .wall-lp-reasons-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .wall-lp-config-grid { grid-template-columns: 1fr; }
   .wall-lp-evidence-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .wall-lp-component-detail { grid-template-columns: 1fr; }
+  .drainage-operation-grid { grid-template-columns: 1fr; }
+  .drainage-operation-grid article { min-height: 0; }
+  .drainage-operation-grid dl { margin-top: 24px; }
+  .drainage-opening-example,.drainage-variant-review { grid-template-columns: 1fr; }
   .wall-lp-components-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .wall-lp-final-card { grid-template-columns: 1fr; }
   .wall-lp-final .button { justify-self: start; }
   .wall-lp-inline-cta { align-items: flex-start; flex-direction: column; }
+  .drainage-choice-layout,.drainage-next-grid { grid-template-columns: 1fr; }
+  .drainage-realjet-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 
 @media (min-width: 721px) and (max-height: 720px) {
@@ -881,6 +984,11 @@ body.has-enquiry-modal { overflow: hidden; }
   .wall-lp-fit-grid,.wall-lp-input-list,.wall-lp-process { grid-template-columns: 1fr; }
   .wall-lp-reasons-grid { grid-template-columns: 1fr; }
   .wall-lp-evidence-grid { grid-template-columns: 1fr; }
+  .wall-lp-component-detail { gap: 24px; padding: 22px 70px 22px 18px; }
+  .wall-lp-component-detail-copy ul { grid-template-columns: 1fr; }
+  .drainage-operation-grid { gap: 14px; margin-top: 26px; }
+  .drainage-operation-grid article { padding: 24px 20px; }
+  .drainage-opening-example,.drainage-variant-review { gap: 24px; padding: 22px 70px 22px 18px; }
   .wall-lp-components-grid { grid-template-columns: 1fr; }
   .wall-lp-fit-grid article,.wall-lp-process li { min-height: 0; }
   .wall-lp-config-grid article { padding: 24px 20px; }
@@ -893,6 +1001,14 @@ body.has-enquiry-modal { overflow: hidden; }
   .wall-lp-final .button { width: 100%; min-width: 0; padding-inline: 10px; }
   .wall-lp-inline-cta { padding: 22px 20px; }
   .wall-lp-inline-cta .button { width: 100%; padding-inline: 10px; }
+  .drainage-channel-lp .wall-lp-section { padding-block: 50px; }
+  .drainage-detail-note { align-items: stretch; flex-direction: column; padding: 20px 18px; }
+  .drainage-detail-note .button { width: 100%; }
+  .drainage-choice-layout { gap: 24px; margin-top: 26px; }
+  .drainage-choice-list article { grid-template-columns: 1fr; gap: 7px; padding: 18px; }
+  .drainage-realjet-grid { grid-template-columns: 1fr; }
+  .drainage-next-grid { gap: 30px; }
+  .drainage-next .wall-lp-heading .button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

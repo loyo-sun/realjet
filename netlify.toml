@@ -71,6 +71,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/precast-concrete-molds/drainage-channel-moulds/"
+  to = "/marketing/precast-concrete-molds/drainage-channel-moulds/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/admin/*"
   [headers.values]
