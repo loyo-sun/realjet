@@ -30,6 +30,10 @@ export default defineConfig({
           process.cwd(),
           "marketing/contract_manufacturing/index.html",
         ),
+        "spun-pipe-piles-production-line": resolve(
+          process.cwd(),
+          "marketing/spun-pipe-piles-production-ine/index.html",
+        ),
         "precast-beam-factory-cn": resolve(
           process.cwd(),
           "marketing/precast-beam-factory/cn/index.html",
