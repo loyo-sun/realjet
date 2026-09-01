@@ -19,13 +19,13 @@ import {
   Zap,
 } from "lucide-react";
 import logo from "../../assets/image/realjet-logo.webp";
-import heroImage from "../../assets/image/spun-pipe-piles-line/line-hero.jpg";
+import heroImage from "../../assets/image/spun-pipe-piles-line/line-hero.webp";
 import cageImage from "../../assets/image/spun-pipe-piles-line/cage-welding.webp";
 import spinningImage from "../../assets/image/spun-pipe-piles-line/centrifugal-spinning.webp";
 import handlingImage from "../../assets/image/spun-pipe-piles-line/handling.webp";
-import layoutImage from "../../assets/image/spun-pipe-piles-line/line-layout.jpg";
+import layoutImage from "../../assets/image/spun-pipe-piles-line/line-layout.webp";
 import mouldImage from "../../assets/image/spun-pipe-piles-line/pile-mould.webp";
-import mouldFlowImage from "../../assets/image/spun-pipe-piles-line/mould-flow.png";
+import mouldFlowImage from "../../assets/image/spun-pipe-piles-line/mould-flow.webp";
 import plantImage from "../../assets/image/spun-pipe-piles-line/plant-overview.webp";
 import UniversalEnquiryFields from "../precast-beam-factory/shared/UniversalEnquiryFields";
 import FloatingContactActions from "../precast-beam-factory/shared/FloatingContactActions";
@@ -87,12 +87,12 @@ function Button({ children, onClick, secondary = false }) {
   );
 }
 
-function SectionHeading({ eyebrow, title, copy, centered = false }) {
+function SectionHeading({ eyebrow, title, copy, centered = false, inverse = false }) {
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
       <p className="mb-3 text-xs font-[900] tracking-[.18em] text-brand-blue uppercase">{eyebrow}</p>
-      <h2 className="text-[clamp(2rem,4vw,3.35rem)] leading-[1.08] font-[900] tracking-[-.035em] text-brand-navy">{title}</h2>
-      {copy && <p className="mt-5 text-[17px] leading-8 text-muted">{copy}</p>}
+      <h2 className={`text-[clamp(2rem,4vw,3.35rem)] leading-[1.08] font-[900] tracking-[-.035em] ${inverse ? "text-white" : "text-brand-navy"}`}>{title}</h2>
+      {copy && <p className={`mt-5 text-[17px] leading-8 ${inverse ? "text-white/68" : "text-muted"}`}>{copy}</p>}
     </div>
   );
 }
@@ -195,7 +195,7 @@ export default function App() {
             <div className="max-w-[790px]">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/8 px-4 py-2 text-xs font-[850] tracking-[.12em] uppercase backdrop-blur"><Factory size={16} className="text-brand-cyan" /> Turnkey equipment and plant integration</div>
               <h1 className="text-[clamp(2.7rem,6.2vw,5.4rem)] leading-[.98] font-[950] tracking-[-.055em]">Spun Pipe Piles<br /><span className="text-[#58d0d8]">Production Line</span></h1>
-              <p className="mt-6 max-w-2xl text-[clamp(1.08rem,2vw,1.35rem)] leading-8 text-white/80">A project-specific turnkey solution for prestressed spun concrete piles—from moulds and cage preparation to centrifugal spinning, curing, demoulding, handling and line control.</p>
+              <p className="mt-6 max-w-2xl text-[clamp(1.08rem,2vw,1.35rem)] leading-8 text-white/80">Plan a new prestressed spun concrete pile plant or upgrade an existing production line with project-specific moulds, equipment and line integration—from cage preparation to spinning, curing, demoulding and handling.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button onClick={() => openEnquiry("Request a turnkey plant review")}>Request a Turnkey Plant Review <ArrowRight size={17} /></Button>
                 <Button secondary onClick={() => document.querySelector("#solution")?.scrollIntoView()}>Review the Equipment Scope <ChevronRight size={17} /></Button>
@@ -267,14 +267,35 @@ export default function App() {
 
         <section className="bg-[#071f34] py-24 text-white">
           <div className="site-container">
-            <SectionHeading eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
+            <SectionHeading inverse eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
             <div className="mt-12 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Pile drawings, standards, capacity, site and local constraints."], ["02", "Concept engineering", "Process route, layout, takt model, utilities and equipment boundary."], ["03", "Manufacturing & integration", "Equipment fabrication, controls, interfaces and pre-delivery checks."], ["04", "Installation & ramp-up", "Site support, commissioning, trials and operator training to contract scope."]].map(([n, title, text]) => <article key={n} className="rounded-xl border border-white/12 bg-white/5 p-6"><div className="text-3xl font-[950] text-brand-cyan">{n}</div><h3 className="mt-6 text-lg font-[900]">{title}</h3><p className="mt-3 text-sm leading-6 text-white/62">{text}</p></article>)}</div>
             <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Cage preparation", "Equipment is coordinated with reinforcement design and downstream takt."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={`${title} reference for a spun pile production line`} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
           </div>
         </section>
 
         <section className="py-24">
-          <div className="site-container grid grid-cols-[1fr_.9fr] gap-14 max-[900px]:grid-cols-1"><div><SectionHeading eyebrow="Start the engineering conversation" title="Four inputs are enough for a useful first review" copy="If some data is not available, send what you have. We can help structure the remaining questions." /><div className="mt-8 grid grid-cols-2 gap-4 max-[520px]:grid-cols-1">{[[Layers3, "Pile family", "Diameter, length, wall, reinforcement and standard"], [BarChart3, "Output target", "Daily or annual demand and planned shifts"], [Factory, "Plant site", "Available building, crane, utilities and logistics"], [Sparkles, "Preferred scope", "Equipment packages, automation level or turnkey plant"]].map(([Icon, title, text]) => <div key={title} className="rounded-xl border border-line p-5"><Icon className="text-brand-blue" size={23} /><h3 className="mt-4 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{text}</p></div>)}</div></div><div className="rounded-2xl bg-soft p-8 shadow-card"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Direct enquiry</p><h2 className="mt-3 text-3xl font-[900] tracking-[-.03em] text-brand-navy">Send your requirement</h2><p className="mt-3 text-sm leading-6 text-muted">Use our short form, e-mail or WhatsApp. We only ask for the information needed to reply.</p><button type="button" onClick={() => openEnquiry("Discuss a spun pipe piles production line")} className="mt-7 flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button><div className="mt-6 border-t border-line pt-5 text-sm text-muted"><p><strong className="text-brand-navy">E-mail:</strong> sales@realjetech.com</p><p className="mt-2"><strong className="text-brand-navy">WhatsApp:</strong> +86 193 1009 0600</p></div></div></div>
+          <div className="site-container">
+            <SectionHeading eyebrow="Start the engineering conversation" title="Four inputs are enough for a useful first review" copy="If some data is not available, send what you have. We can help structure the remaining questions." />
+            <div className="mt-9 grid grid-cols-2 items-stretch gap-6 max-[900px]:grid-cols-1">
+              <div className="flex h-full flex-col justify-between rounded-2xl bg-soft p-7 shadow-card max-[520px]:p-5">
+                <div>
+                  <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Direct enquiry</p>
+                  <h3 className="mt-3 text-3xl font-[900] tracking-[-.03em] text-brand-navy">Send your requirement</h3>
+                  <p className="mt-3 max-w-lg text-sm leading-6 text-muted">Use our short form, e-mail or WhatsApp. We only ask for the information needed to reply.</p>
+                </div>
+                <div className="mt-6">
+                  <button type="button" onClick={() => openEnquiry("Discuss a spun pipe piles production line")} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button>
+                  <div className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5 text-sm text-muted max-[520px]:grid-cols-1">
+                    <p><strong className="text-brand-navy">E-mail:</strong><br />sales@realjetech.com</p>
+                    <p><strong className="text-brand-navy">WhatsApp:</strong><br />+86 193 1009 0600</p>
+                  </div>
+                </div>
+              </div>
+              <div className="grid h-full grid-cols-2 auto-rows-fr gap-4 max-[520px]:grid-cols-1">
+                {[[Layers3, "Pile family", "Diameter, length, wall, reinforcement and standard"], [BarChart3, "Output target", "Daily or annual demand and planned shifts"], [Factory, "Plant site", "Available building, crane, utilities and logistics"], [Sparkles, "Preferred scope", "Equipment packages, automation level or turnkey plant"]].map(([Icon, title, text]) => <div key={title} className="flex min-h-[160px] flex-col rounded-xl border border-line p-5"><Icon className="text-brand-blue" size={23} /><h3 className="mt-4 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{text}</p></div>)}
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="faq" className="bg-soft py-24"><div className="site-container"><SectionHeading centered eyebrow="Frequently asked questions" title="Questions buyers raise before layout engineering" /><div className="mx-auto mt-10 grid max-w-4xl gap-3">{[["Can Realjet supply only a mould or spinning machine?", "Yes. The delivery boundary can cover selected equipment packages or a coordinated turnkey plant, subject to technical review and contract definition."], ["Are the listed mould sizes fixed product limits?", "No. They are preliminary planning families based on mainstream configurations. Final range and mass depend on the approved pile drawing and engineering review."], ["Is the stated capacity guaranteed?", "No. The table is a concept-stage calculation. Contract capacity must be based on product mix, mould quantity, curing cycle, spinning capacity, handling, shifts and agreed acceptance conditions."], ["What is needed for a first proposal?", "Send the pile dimensions and standard, target output, available site information, preferred automation level and the delivery boundary you expect."], ["Can the control system connect line equipment?", "Yes, within the agreed scope. Recipes, interlocks, operating records and external interfaces are defined during controls engineering."]].map(([q, a]) => <details key={q} className="group rounded-xl border border-line bg-white p-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-[900] text-brand-navy">{q}<span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-soft text-brand-blue transition group-open:rotate-45">+</span></summary><p className="mt-4 max-w-3xl text-sm leading-7 text-muted">{a}</p></details>)}</div></div></section>
