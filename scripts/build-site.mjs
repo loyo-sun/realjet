@@ -113,7 +113,7 @@ for (const expectedPath of [
   "llms.txt",
   "feed.xml",
   "marketing/precast-beam-factory/en/index.html",
-  "marketing/spun-pipe-piles-production-ine/index.html",
+  "marketing/spun-pipe-piles-production-line/index.html",
   "marketing/contract_manufacturing/index.html",
   "marketing/precast-beam-factory/id/index.html",
   "marketing/precast-beam-factory/ar/index.html",
@@ -164,7 +164,7 @@ const contractManufacturingPage = await readFile(
   "utf8",
 );
 const spunPipePilesPage = await readFile(
-  join(finalOutput, "marketing/spun-pipe-piles-production-ine/index.html"),
+  join(finalOutput, "marketing/spun-pipe-piles-production-line/index.html"),
   "utf8",
 );
 const sitemap = await readFile(join(finalOutput, "sitemap.xml"), "utf8");
@@ -421,16 +421,16 @@ for (const requiredContent of [
   }
 }
 for (const requiredContent of [
-  '<link rel="canonical" href="https://realjetech.com/marketing/spun-pipe-piles-production-ine/"',
+  '<link rel="canonical" href="https://realjetech.com/marketing/spun-pipe-piles-production-line/"',
   'meta name="robots" content="index, follow"',
-  "Spun Pipe Piles Production Line",
+  "Prestressed Spun Concrete Pile Production Line",
   'name="universal-enquiry"',
   'name="name"',
   'name="email"',
   'name="message"',
 ]) {
   if (!spunPipePilesPage.includes(requiredContent)) {
-    throw new Error(`Spun pipe piles page validation failed: ${requiredContent}`);
+    throw new Error(`Prestressed spun concrete pile page validation failed: ${requiredContent}`);
   }
 }
 for (const requiredContactContent of [
@@ -460,7 +460,7 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/precast-concrete-molds/tetrapod-moulds/",
   "https://realjetech.com/precast-concrete-molds/precast-concrete-caisson-moulds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
-  "https://realjetech.com/marketing/spun-pipe-piles-production-ine/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
   "https://realjetech.com/marketing/precast-beam-factory/ar/",
@@ -495,7 +495,7 @@ for (const requiredLlmsContent of [
   "https://realjetech.com/products/",
   "https://realjetech.com/precast-concrete-molds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
-  "https://realjetech.com/marketing/spun-pipe-piles-production-ine/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/insights/",
   "## Precast concrete production equipment",

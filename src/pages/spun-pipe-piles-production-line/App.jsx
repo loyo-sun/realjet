@@ -33,15 +33,15 @@ import MobileContactBar from "../precast-beam-factory/shared/MobileContactBar";
 import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../precast-beam-factory/shared/universalEnquiry";
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 
-const canonicalUrl = "https://realjetech.com/marketing/spun-pipe-piles-production-ine/";
-const subject = "a spun pipe piles production line";
+const canonicalUrl = "https://realjetech.com/marketing/spun-pipe-piles-production-line/";
+const subject = "a prestressed spun concrete pile production line";
 
 const scope = [
   ["Spun pile moulds", "Split steel moulds planned around pile diameter, length, mass and lifting method."],
-  ["Cage welding", "Longitudinal bars, spiral wire and end-plate preparation arranged for repeatable cage output."],
+  ["Reinforcement cage welding", "Longitudinal bars, spiral wire and end-plate preparation arranged for repeatable cage output."],
   ["End plates", "End-plate fit-up and connection interfaces coordinated with pile drawings and prestressing."],
-  ["Prestressing", "Tensioning equipment and procedures configured around the approved reinforcement design."],
-  ["Concrete feeding", "Batch receiving, distribution and controlled mould feeding matched to the planned takt."],
+  ["Prestressing / tensioning system", "Tensioning equipment and procedures configured around the approved reinforcement design."],
+  ["Concrete feeding", "Batch receiving, distribution and controlled mould feeding matched to the planned cycle time."],
   ["Centrifugal spinning", "Roller stations and recipes engineered for the specified pile families and concrete mix."],
   ["Curing", "Controlled curing route, chamber allocation and circulation planned around release requirements."],
   ["Demoulding", "Opening, release and mould-return operations designed for safe, repeatable changeover."],
@@ -50,16 +50,16 @@ const scope = [
 ];
 
 const processSteps = [
-  "Rebar preparation",
-  "Cage welding",
-  "End-plate assembly",
-  "Prestressing",
+  "Reinforcement cage & end-plate preparation",
+  "Cage placement in the lower mould",
   "Concrete feeding",
-  "Mould closing",
+  "Mould closing & locking",
+  "Prestressing / tensioning",
   "Centrifugal spinning",
   "Controlled curing",
+  "Stress release / detensioning",
   "Demoulding",
-  "Handling & inspection",
+  "Inspection, marking & handling",
 ];
 
 const mouldRanges = [
@@ -123,7 +123,7 @@ function EnquiryModal({ open, title, onClose }) {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: createUniversalEnquiryBody(form, `Spun pipe piles production line: ${title}`),
+        body: createUniversalEnquiryBody(form, `Prestressed spun concrete pile production line: ${title}`),
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       trackLeadSuccess(form);
@@ -153,8 +153,8 @@ function EnquiryModal({ open, title, onClose }) {
             <p className="mt-2 mb-5 text-sm leading-6 text-muted">Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.</p>
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
-              <input type="hidden" name="keyword" value="Spun pipe piles production line" />
-              <input type="hidden" name="subject" value="Spun pipe piles production line enquiry" />
+              <input type="hidden" name="keyword" value="Prestressed spun concrete pile production line" />
+              <input type="hidden" name="subject" value="Prestressed spun concrete pile production line enquiry" />
               <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
               <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="../privacy/en/" />
             </form>
@@ -188,13 +188,13 @@ export default function App() {
 
       <main>
         <section className="hero-gradient relative isolate min-h-[680px] overflow-hidden text-white">
-          <img src={heroImage} alt="Reference layout of a spun concrete pile production line" className="absolute inset-0 h-full w-full object-cover opacity-55" />
+          <img src={heroImage} alt="Reference layout of a prestressed spun concrete pile production line" className="absolute inset-0 h-full w-full object-cover opacity-55" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,21,36,.98)_0%,rgba(5,31,51,.92)_45%,rgba(5,31,51,.35)_100%)]" />
           <div className="industrial-grid absolute inset-0 opacity-30" />
           <div className="site-container relative flex min-h-[680px] items-center py-20">
             <div className="max-w-[790px]">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/8 px-4 py-2 text-xs font-[850] tracking-[.12em] uppercase backdrop-blur"><Factory size={16} className="text-brand-cyan" /> Turnkey equipment and plant integration</div>
-              <h1 className="text-[clamp(2.7rem,6.2vw,5.4rem)] leading-[.98] font-[950] tracking-[-.055em]">Spun Pipe Piles<br /><span className="text-[#58d0d8]">Production Line</span></h1>
+              <h1 className="text-[clamp(2.7rem,6.2vw,5.4rem)] leading-[.98] font-[950] tracking-[-.055em]">Prestressed Spun Concrete Pile<br /><span className="text-[#58d0d8]">Production Line</span></h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.08rem,2vw,1.35rem)] leading-8 text-white/80">Plan a new prestressed spun concrete pile plant or upgrade an existing production line with project-specific moulds, equipment and line integration—from cage preparation to spinning, curing, demoulding and handling.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button onClick={() => openEnquiry("Request a turnkey plant review")}>Request a Turnkey Plant Review <ArrowRight size={17} /></Button>
@@ -233,15 +233,15 @@ export default function App() {
               </div>
             </div>
             <div className="relative">
-              <img src={layoutImage} alt="Reference concept for spun pile line material flow" className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_28px_70px_rgba(0,0,0,.35)]" />
-              <div className="absolute right-4 bottom-4 left-4 rounded-xl border border-white/12 bg-[#061e34]/88 p-4 backdrop-blur"><p className="text-xs font-[900] tracking-wide text-brand-cyan uppercase">Planning principle</p><p className="mt-1 text-sm leading-6 text-white/78">Mould circulation and crane access are treated as part of the takt model from the start.</p></div>
+              <img src={layoutImage} alt="Reference material-flow concept for a prestressed spun concrete pile production line" className="aspect-[4/3] w-full rounded-2xl object-cover shadow-[0_28px_70px_rgba(0,0,0,.35)]" />
+              <div className="absolute right-4 bottom-4 left-4 rounded-xl border border-white/12 bg-[#061e34]/88 p-4 backdrop-blur"><p className="text-xs font-[900] tracking-wide text-brand-cyan uppercase">Planning principle</p><p className="mt-1 text-sm leading-6 text-white/78">Mould circulation and crane access are included in the cycle-time and capacity model from the start.</p></div>
             </div>
           </div>
         </section>
 
         <section className="py-24">
           <div className="site-container grid grid-cols-2 items-center gap-16 max-[900px]:grid-cols-1">
-            <div className="relative"><img src={spinningImage} alt="Reference centrifugal spinning machine for concrete pipe piles" className="aspect-square w-full rounded-2xl object-cover shadow-card" /><div className="absolute -right-5 -bottom-5 max-w-[250px] rounded-xl bg-[#e4572e] p-5 text-white shadow-floating max-[520px]:right-3 max-[520px]:bottom-3"><Gauge size={25} /><p className="mt-2 text-sm font-[900]">Recipe-based spinning</p><p className="mt-1 text-xs leading-5 text-white/80">Low, medium and high-speed stages are confirmed through product trials.</p></div></div>
+            <div className="relative"><img src={spinningImage} alt="Reference centrifugal spinning machine for prestressed spun concrete piles" className="aspect-square w-full rounded-2xl object-cover shadow-card" /><div className="absolute -right-5 -bottom-5 max-w-[250px] rounded-xl bg-[#e4572e] p-5 text-white shadow-floating max-[520px]:right-3 max-[520px]:bottom-3"><Gauge size={25} /><p className="mt-2 text-sm font-[900]">Recipe-based spinning</p><p className="mt-1 text-xs leading-5 text-white/80">Low, medium and high-speed stages are confirmed through product trials.</p></div></div>
             <div><SectionHeading eyebrow="Centrifugal spinning core" title="The line is engineered around stable mould rotation and repeatable recipes" copy="Spinning equipment, mould running rings, drive arrangement, foundations and controls must work as one system. Final speeds and dwell times are set from the pile geometry, concrete mix and validated process trials." />
               <div className="mt-7 space-y-4">{[[Zap, "Controlled acceleration", "Drive and control logic support staged acceleration instead of abrupt speed changes."], [Settings2, "Mould–machine compatibility", "Running rings, roller spacing, dynamic loading and guarding are reviewed together."], [ShieldCheck, "Interlocks and records", "Operating permissions, alarms and recipe records are defined to the selected control scope."]].map(([Icon, title, text]) => <div key={title} className="flex gap-4"><span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-blue/10 text-brand-blue"><Icon size={22} /></span><div><h3 className="font-[900] text-brand-navy">{title}</h3><p className="mt-1 text-sm leading-6 text-muted">{text}</p></div></div>)}</div>
             </div>
@@ -250,10 +250,10 @@ export default function App() {
 
         <section id="moulds" className="bg-soft py-24">
           <div className="site-container">
-            <div className="grid grid-cols-[.85fr_1.15fr] items-end gap-12 max-[900px]:grid-cols-1"><SectionHeading eyebrow="Mould planning range" title="Mainstream pile families, engineered to the approved product drawing" copy="These ranges are suitable for early layout, crane and budget discussions. Final dimensions, plate thicknesses, running rings, mass and interfaces require engineering confirmation." /><img src={mouldImage} alt="Reference steel moulds for spun concrete pipe piles" className="h-[280px] w-full rounded-2xl object-cover shadow-card" /></div>
+            <div className="grid grid-cols-[.85fr_1.15fr] items-end gap-12 max-[900px]:grid-cols-1"><SectionHeading eyebrow="Mould planning range" title="Mainstream pile families, engineered to the approved product drawing" copy="These ranges are suitable for early layout, crane and budget discussions. Final dimensions, plate thicknesses, running rings, mass and interfaces require engineering confirmation." /><img src={mouldImage} alt="Reference steel moulds for prestressed spun concrete piles" className="h-[280px] w-full rounded-2xl object-cover shadow-card" /></div>
             <div className="mt-10 overflow-x-auto rounded-2xl border border-line bg-white shadow-card"><table className="w-full min-w-[760px] border-collapse text-left"><thead className="bg-brand-navy text-white"><tr>{["Pile outside diameter", "Typical length", "Planning empty-mould mass", "Planning category"].map((label) => <th key={label} className="px-5 py-4 text-xs font-[900] tracking-wide uppercase">{label}</th>)}</tr></thead><tbody>{mouldRanges.map((row) => <tr key={row[0]} className="border-b border-line last:border-0">{row.map((cell, index) => <td key={cell} className={`px-5 py-4 text-sm ${index === 0 ? "font-[900] text-brand-navy" : "text-muted"}`}>{cell}</td>)}</tr>)}</tbody></table></div>
             <div className="mt-5 grid grid-cols-[1fr_auto] items-center gap-5 rounded-xl border border-amber-200 bg-amber-50 p-5 max-[720px]:grid-cols-1"><div><h3 className="text-sm font-[900] text-amber-950">Preliminary planning values—not a quotation or guaranteed product limit</h3><p className="mt-1 text-xs leading-5 text-amber-900/75">Figures reflect mainstream Chinese market configurations. Products above Ø1200 mm, longer sections or unusual load cases require a dedicated technical review.</p></div><button type="button" onClick={() => openEnquiry("Review a spun pile mould specification")} className="rounded-lg bg-amber-950 px-4 py-3 text-xs font-[850] text-white">Review my pile drawing</button></div>
-            <div className="mt-8 grid grid-cols-2 gap-8 max-[800px]:grid-cols-1"><img src={mouldFlowImage} alt="Reference mould circulation arrangement for a spun pile plant" className="h-[360px] w-full rounded-2xl object-cover shadow-card" /><div className="rounded-2xl bg-white p-7 shadow-card"><h3 className="text-xl font-[900] text-brand-navy">Typical mould structure planning</h3><ul className="mt-5 grid gap-3">{["Longitudinal split steel shell with bolted closure", "Running rings coordinated with the spinning station", "Longitudinal stiffeners and sectional flange connections", "End-plate and prestressing interfaces based on the pile design", "Lifting points planned for mould mass and crane method"].map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-muted"><Check className="mt-1 shrink-0 text-[#198754]" size={17} />{item}</li>)}</ul></div></div>
+            <div className="mt-8 grid grid-cols-2 gap-8 max-[800px]:grid-cols-1"><img src={mouldFlowImage} alt="Reference mould circulation arrangement for a prestressed spun concrete pile plant" className="h-[360px] w-full rounded-2xl object-cover shadow-card" /><div className="rounded-2xl bg-white p-7 shadow-card"><h3 className="text-xl font-[900] text-brand-navy">Typical mould structure planning</h3><ul className="mt-5 grid gap-3">{["Longitudinal split steel shell with bolted closure", "Running rings coordinated with the spinning station", "Longitudinal stiffeners and sectional flange connections", "End-plate and prestressing interfaces based on the pile design", "Lifting points planned for mould mass and crane method"].map((item) => <li key={item} className="flex gap-3 text-sm leading-6 text-muted"><Check className="mt-1 shrink-0 text-[#198754]" size={17} />{item}</li>)}</ul></div></div>
           </div>
         </section>
 
@@ -268,8 +268,8 @@ export default function App() {
         <section className="bg-[#071f34] py-24 text-white">
           <div className="site-container">
             <SectionHeading inverse eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
-            <div className="mt-12 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Pile drawings, standards, capacity, site and local constraints."], ["02", "Concept engineering", "Process route, layout, takt model, utilities and equipment boundary."], ["03", "Manufacturing & integration", "Equipment fabrication, controls, interfaces and pre-delivery checks."], ["04", "Installation & ramp-up", "Site support, commissioning, trials and operator training to contract scope."]].map(([n, title, text]) => <article key={n} className="rounded-xl border border-white/12 bg-white/5 p-6"><div className="text-3xl font-[950] text-brand-cyan">{n}</div><h3 className="mt-6 text-lg font-[900]">{title}</h3><p className="mt-3 text-sm leading-6 text-white/62">{text}</p></article>)}</div>
-            <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Cage preparation", "Equipment is coordinated with reinforcement design and downstream takt."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={`${title} reference for a spun pile production line`} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
+            <div className="mt-12 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Pile drawings, standards, capacity, site and local constraints."], ["02", "Concept engineering", "Process route, layout, cycle-time and capacity model, utilities and equipment boundary."], ["03", "Manufacturing & integration", "Equipment fabrication, controls, interfaces and pre-delivery checks."], ["04", "Installation & ramp-up", "Site support, commissioning, trials and operator training to contract scope."]].map(([n, title, text]) => <article key={n} className="rounded-xl border border-white/12 bg-white/5 p-6"><div className="text-3xl font-[950] text-brand-cyan">{n}</div><h3 className="mt-6 text-lg font-[900]">{title}</h3><p className="mt-3 text-sm leading-6 text-white/62">{text}</p></article>)}</div>
+            <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Reinforcement cage preparation", "Equipment is coordinated with the reinforcement design and downstream cycle time."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={`${title} reference for a prestressed spun concrete pile production line`} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
           </div>
         </section>
 
@@ -284,7 +284,7 @@ export default function App() {
                   <p className="mt-3 max-w-lg text-sm leading-6 text-muted">Use our short form, e-mail or WhatsApp. We only ask for the information needed to reply.</p>
                 </div>
                 <div className="mt-6">
-                  <button type="button" onClick={() => openEnquiry("Discuss a spun pipe piles production line")} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button>
+                  <button type="button" onClick={() => openEnquiry("Discuss a prestressed spun concrete pile production line")} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button>
                   <div className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5 text-sm text-muted max-[520px]:grid-cols-1">
                     <p><strong className="text-brand-navy">E-mail:</strong><br />sales@realjetech.com</p>
                     <p><strong className="text-brand-navy">WhatsApp:</strong><br />+86 193 1009 0600</p>
@@ -305,8 +305,8 @@ export default function App() {
 
       <footer className="bg-[#041522] py-10 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Turnkey equipment for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href="/" className="hover:text-white">Company website</a><a href="../privacy/en/" className="hover:text-white">Privacy Policy</a><button type="button" onClick={() => openEnquiry("Contact Realjet") } className="hover:text-white">Contact</button></div></div></footer>
 
-      <div className="max-[720px]:hidden"><FloatingContactActions canonicalUrl={canonicalUrl} enquiryTitle="Discuss a spun pipe piles production line" onEnquire={openEnquiry} subject={subject} /></div>
-      <MobileContactBar canonicalUrl={canonicalUrl} enquireLabel="Enquire" enquiryTitle="Discuss a spun pipe piles production line" onEnquire={openEnquiry} subject={subject} />
+      <div className="max-[720px]:hidden"><FloatingContactActions canonicalUrl={canonicalUrl} enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} /></div>
+      <MobileContactBar canonicalUrl={canonicalUrl} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} />
     </div>
   );
