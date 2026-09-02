@@ -331,9 +331,35 @@ function EnglishAdsPage() {
         </section>
 
         <section id="upgrade" className="scroll-mt-20 bg-soft py-20">
-          <div className="site-container grid grid-cols-[.9fr_1.1fr] items-center gap-14 max-[900px]:grid-cols-1">
-            <div><SectionHeading eyebrow="Production-line upgrade" title="Start with the bottleneck, not a generic equipment list" copy="We review the current process, installed equipment, product mix and output loss before defining the upgrade boundary." /><button type="button" onClick={() => openEnquiry("Review a spun pile line bottleneck")} className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Discuss My Bottleneck <ArrowRight size={17} /></button></div>
-            <div className="grid grid-cols-2 gap-4 max-[620px]:grid-cols-1">{upgradeAreas.map(([Icon, title, copy]) => <article key={title} className="rounded-xl border border-line bg-white p-5 shadow-[0_10px_30px_rgba(8,37,63,.06)]"><Icon size={23} className="text-brand-blue" /><h3 className="mt-4 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{copy}</p></article>)}</div>
+          <div className="site-container">
+            <div className="grid grid-cols-[.9fr_1.1fr] items-center gap-14 max-[900px]:grid-cols-1">
+              <div><SectionHeading eyebrow="Production-line upgrade" title="Start with the bottleneck, not a generic equipment list" copy="We review the current process, installed equipment, product mix and output loss before defining the upgrade boundary." /><button type="button" onClick={() => openEnquiry("Review a spun pile line bottleneck")} className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Discuss My Bottleneck <ArrowRight size={17} /></button></div>
+              <div className="grid grid-cols-2 gap-4 max-[620px]:grid-cols-1">{upgradeAreas.map(([Icon, title, copy]) => <article key={title} className="rounded-xl border border-line bg-white p-5 shadow-[0_10px_30px_rgba(8,37,63,.06)]"><Icon size={23} className="text-brand-blue" /><h3 className="mt-4 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{copy}</p></article>)}</div>
+            </div>
+
+            <div id="layout-upgrade" className="mt-14 overflow-hidden rounded-2xl bg-[#071f34] text-white shadow-[0_24px_70px_rgba(7,31,52,.2)]">
+              <div className="grid grid-cols-[1.05fr_.95fr] gap-12 p-8 max-[900px]:grid-cols-1 max-[520px]:p-5">
+                <div>
+                  <p className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">Layout upgrade opportunity</p>
+                  <h2 className="mt-3 text-[clamp(2rem,4vw,3.2rem)] leading-[1.08] font-[950] tracking-[-.035em]">Move empty moulds on the ground so cranes can focus on production</h2>
+                  <p className="mt-5 text-[16px] leading-8 text-white/68">In many conventional layouts, overhead cranes carry both loaded and empty moulds across the full bay. Crossing movements, waiting and repeated lifts can become a line-level bottleneck. Where site conditions allow, we evaluate a ground-level empty-mould return route as part of the production flow.</p>
+                </div>
+                <div className="grid gap-3">
+                  <p className="text-xs font-[900] tracking-[.15em] text-brand-cyan uppercase">What the layout review checks</p>
+                  {["Crane crossing, long empty-mould travel and waiting between stations", "Curved or straight return routes based on floor space and transfer points", "Mould length and mass, trolley path, power routing, buffers and bay geometry"].map((item) => <div key={item} className="flex gap-3 rounded-xl border border-white/12 bg-white/5 p-4 text-sm leading-6 text-white/82"><CheckCircle2 size={19} className="mt-0.5 shrink-0 text-brand-cyan" />{item}</div>)}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-px bg-white/12 max-[760px]:grid-cols-1">
+                <figure className="bg-white text-ink"><img src={curvedLayoutReference} alt="Reference curved-track ground-level mould return layout for a spun pile production line" loading="lazy" className="h-[410px] w-full object-contain p-4 max-[520px]:h-[310px]" /><figcaption className="border-t border-line bg-soft p-5"><strong className="text-base text-brand-navy">Curved-track return</strong><p className="mt-2 text-sm leading-6 text-muted">Useful when the return route must avoid a central transfer bay, subject to available turning space, trolley design and power arrangement.</p></figcaption></figure>
+                <figure className="bg-white text-ink"><img src={straightLayoutReference} alt="Reference straight-track ground-level mould return layout for a spun pile production line" loading="lazy" className="h-[410px] w-full object-contain p-4 max-[520px]:h-[310px]" /><figcaption className="border-t border-line bg-soft p-5"><strong className="text-base text-brand-navy">Straight-track return</strong><p className="mt-2 text-sm leading-6 text-muted">Simplifies rail and power routing, while transfer points and the auxiliary bay must be checked against the available building.</p></figcaption></figure>
+              </div>
+
+              <div className="flex items-center justify-between gap-6 border-t border-white/12 px-8 py-6 max-[720px]:flex-col max-[720px]:items-start max-[520px]:px-5">
+                <p className="max-w-2xl text-sm leading-6 text-white/68">The preferred route is selected from the actual building, mould circulation, crane coverage and production target—not from a fixed standard layout.</p>
+                <button type="button" onClick={() => openEnquiry("Review a spun pile plant layout upgrade")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Review My Plant Layout <ArrowRight size={17} /></button>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -363,16 +389,8 @@ function EnglishAdsPage() {
         <section className="bg-soft py-16">
           <div className="site-container">
             <details className="group rounded-2xl border border-line bg-white p-6 shadow-card">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-5"><div><p className="text-xs font-[900] tracking-[.15em] text-brand-blue uppercase">Engineering reference</p><h2 className="mt-2 text-2xl font-[950] text-brand-navy">View preliminary mould and capacity planning ranges</h2><p className="mt-2 text-sm leading-6 text-muted">Useful for early discussion; final values require project engineering.</p></div><span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-soft text-2xl text-brand-blue transition group-open:rotate-45">+</span></summary>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-5"><div><p className="text-xs font-[900] tracking-[.15em] text-brand-blue uppercase">Technical planning data</p><h2 className="mt-2 text-2xl font-[950] text-brand-navy">View preliminary mould and capacity planning ranges</h2><p className="mt-2 text-sm leading-6 text-muted">Useful for early discussion; final values require project engineering.</p></div><span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-soft text-2xl text-brand-blue transition group-open:rotate-45">+</span></summary>
               <div className="mt-8 grid gap-8 border-t border-line pt-8">
-                <div>
-                  <h3 className="text-xl font-[950] text-brand-navy">Compare mould-return routes before fixing the plant layout</h3>
-                  <p className="mt-2 max-w-3xl text-sm leading-6 text-muted">A ground-level mould-return route can reduce long empty-mould crane travel. Curved and straight return concepts have different floor-space, transfer and power-supply implications, so the choice must follow the actual building and production flow.</p>
-                  <div className="mt-5 grid grid-cols-2 gap-5 max-[760px]:grid-cols-1">
-                    <figure className="overflow-hidden rounded-xl border border-line bg-soft"><img src={curvedLayoutReference} alt="Reference curved-track mould return layout for a spun pile production line" loading="lazy" className="h-[390px] w-full bg-white object-contain p-3 max-[520px]:h-[310px]" /><figcaption className="border-t border-line p-4"><strong className="text-sm text-brand-navy">Curved-track return concept</strong><p className="mt-1 text-xs leading-5 text-muted">Can reduce dependence on a central transfer bay, but requires suitable turning space and a project-specific trolley solution.</p></figcaption></figure>
-                    <figure className="overflow-hidden rounded-xl border border-line bg-soft"><img src={straightLayoutReference} alt="Reference straight-track mould return layout for a spun pile production line" loading="lazy" className="h-[390px] w-full bg-white object-contain p-3 max-[520px]:h-[310px]" /><figcaption className="border-t border-line p-4"><strong className="text-sm text-brand-navy">Straight-track return concept</strong><p className="mt-1 text-xs leading-5 text-muted">Simplifies rail and power routing, while transfer points and the auxiliary bay must be checked against available floor area.</p></figcaption></figure>
-                  </div>
-                </div>
                 <div className="overflow-x-auto rounded-xl border border-line"><table className="w-full min-w-[720px] border-collapse text-left"><thead className="bg-brand-navy text-white"><tr>{["Pile outside diameter", "Typical length", "Planning empty-mould mass", "Planning category"].map((label) => <th key={label} className="px-4 py-3 text-xs font-[900] uppercase">{label}</th>)}</tr></thead><tbody>{mouldRanges.map((row) => <tr key={row[0]} className="border-b border-line last:border-0">{row.map((cell, index) => <td key={cell} className={`px-4 py-3 text-sm ${index === 0 ? "font-[900] text-brand-navy" : "text-muted"}`}>{cell}</td>)}</tr>)}</tbody></table></div>
                 <div className="overflow-x-auto rounded-xl border border-line"><table className="w-full min-w-[760px] border-collapse text-left"><thead className="bg-brand-blue text-white"><tr>{["Scenario", "Shift pattern", "Piles / day", "Daily output", "Calculated annual output"].map((label) => <th key={label} className="px-4 py-3 text-xs font-[900] uppercase">{label}</th>)}</tr></thead><tbody>{capacityPlans.map((row) => <tr key={row[0]} className="border-b border-line last:border-0">{row.map((cell, index) => <td key={cell} className={`px-4 py-3 text-sm ${index === 0 ? "font-[900] text-brand-navy" : "text-muted"}`}>{cell}</td>)}</tr>)}</tbody></table></div>
                 <p className="text-xs leading-6 text-muted">Capacity examples assume a 12 m weighted average pile length, 300 planned operating days and 85% effective utilisation. Mould ranges and output figures are preliminary planning references—not quotations, guarantees or fixed product limits.</p>
