@@ -192,9 +192,10 @@ function EnquiryModal({ open, title, onClose, locale }) {
   );
 }
 
-function EnglishLeadForm() {
+function AdsLeadForm({ locale = "en" }) {
   const [submissionState, setSubmissionState] = useState("idle");
-  const meta = localeMeta.en;
+  const meta = localeMeta[locale] ?? localeMeta.en;
+  const t = (text) => translate(locale, text);
 
   async function submit(event) {
     event.preventDefault();
@@ -220,8 +221,8 @@ function EnglishLeadForm() {
     return (
       <div className="py-8 text-center">
         <CheckCircle2 className="mx-auto text-[#198754]" size={48} />
-        <h2 className="mt-4 text-2xl font-[900] text-brand-navy">Project brief received</h2>
-        <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-muted">Our team will review your requirement and reply by e-mail.</p>
+        <h2 className="mt-4 text-2xl font-[900] text-brand-navy">{t("Project brief received")}</h2>
+        <p className="mx-auto mt-3 max-w-sm text-sm leading-6 text-muted">{t("Our team will review your requirement and reply by e-mail.")}</p>
       </div>
     );
   }
@@ -232,16 +233,18 @@ function EnglishLeadForm() {
       <input type="hidden" name="keyword" value={meta.subject} />
       <input type="hidden" name="subject" value={meta.enquirySubject} />
       <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
-      <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="../privacy/en/" idPrefix="hero-review" singleColumn />
+      <UniversalEnquiryFields locale={locale} submissionState={submissionState} privacyHref={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} idPrefix={`hero-review-${locale}`} singleColumn />
     </form>
   );
 }
 
-function EnglishAdsPage() {
+function AdsPage({ locale = "en" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
-  const meta = localeMeta.en;
-  const messagingHref = `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
+  const meta = localeMeta[locale] ?? localeMeta.en;
+  const messagingHref = meta.messagingChannel === "zalo"
+    ? "https://zalo.me/8615111041998"
+    : `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
   const openEnquiry = (title) => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
@@ -263,14 +266,14 @@ function EnglishAdsPage() {
   ];
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
             {[["New", "#new-line"], ["Upgrade", "#upgrade"], ["Layout", "#layout-upgrade"], ["Equipment", "#equipment"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
             <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
-            <LanguageSwitcher current="en" />
+            <LanguageSwitcher current={locale} />
           </nav>
           <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/8 md:hidden" aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
         </div>
@@ -291,13 +294,13 @@ function EnglishAdsPage() {
               <ul className="mt-7 grid gap-3 text-sm text-white/76">
                 {["Preliminary equipment boundary and line flow", "Capacity model based on pile mix, mould cycle and shifts", "Mould, spinning, curing, handling and controls reviewed together"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
               </ul>
-              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
+              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
 
             <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[720px]:hidden">
               <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Project-specific review</p>
               <h2 className="mt-2 text-2xl font-[950] tracking-[-.025em] text-brand-navy">Request a Line Proposal</h2>
-              <div className="mt-5"><EnglishLeadForm /></div>
+              <div className="mt-5"><AdsLeadForm locale={locale} /></div>
             </aside>
           </div>
         </section>
@@ -397,12 +400,12 @@ function EnglishAdsPage() {
         <section className="bg-[linear-gradient(135deg,#0d4b68,#08253f)] py-16 text-white"><div className="site-container flex items-center justify-between gap-10 max-[800px]:flex-col max-[800px]:items-start"><div><p className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">New plant or line upgrade</p><h2 className="mt-3 max-w-3xl text-[clamp(2rem,4vw,3.3rem)] leading-[1.08] font-[900] tracking-[-.035em]">Turn your production requirement into a clear equipment plan.</h2></div><button type="button" onClick={() => scrollToReview("final-cta")} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Request a Line Proposal <ArrowRight size={17} /></button></div></section>
       </main>
 
-      <footer className="bg-[#041522] py-9 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Equipment and line integration for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href="../privacy/en/" className="hover:text-white">Privacy Policy</a><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a><button type="button" onClick={() => scrollToReview("footer")} className="hover:text-white">Request a review</button></div></div></footer>
+      <footer className="bg-[#041522] py-9 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Equipment and line integration for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} className="hover:text-white">Privacy Policy</a><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">{meta.messagingLabel}</a><button type="button" onClick={() => scrollToReview("footer")} className="hover:text-white">Request a review</button></div></div></footer>
 
-      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
-      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
-      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale="en" />
-    </div>
+      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
+      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
+      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
+    </div></LocalizedPage>
   );
 }
 
@@ -561,5 +564,5 @@ function LegacyLocalizedPage({ locale = "en" }) {
 }
 
 export default function App({ locale = "en" }) {
-  return locale === "en" ? <EnglishAdsPage /> : <LegacyLocalizedPage locale={locale} />;
+  return <AdsPage locale={locale} />;
 }

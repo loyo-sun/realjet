@@ -437,9 +437,9 @@ for (const requiredContent of [
   }
 }
 for (const [page, locale, canonical, title] of [
-  [spunPipePilesIdPage, "id", "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/", "Lini Produksi Tiang Pancang Beton Prategang Sentrifugal"],
-  [spunPipePilesViPage, "vi", "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/", "Dây Chuyền Sản Xuất Cọc Bê Tông Ly Tâm Dự Ứng Lực"],
-  [spunPipePilesArPage, "ar", "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/", "خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي"],
+  [spunPipePilesIdPage, "id", "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/", "Lini Produksi PHC / PC Baru & Peningkatan Lini"],
+  [spunPipePilesViPage, "vi", "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/", "Dây Chuyền Cọc PHC / PC Mới & Nâng Cấp"],
+  [spunPipePilesArPage, "ar", "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/", "خط إنتاج خوازيق PHC / PC وتطوير الخطوط"],
 ]) {
   for (const requiredContent of [
     `<html lang="${locale}"`,
