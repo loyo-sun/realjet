@@ -266,7 +266,7 @@ function EnglishAdsPage() {
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
-            {[["New line", "#project-paths"], ["Line upgrade", "#upgrade"], ["Mould return layout", "#layout-upgrade"], ["Equipment scope", "#equipment"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
+            {[["New Line", "#new-line"], ["Line Upgrade", "#upgrade"], ["Engineering Highlight", "#layout-upgrade"], ["Line Equipment", "#equipment"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
             <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
             <LanguageSwitcher current="en" />
           </nav>
@@ -304,7 +304,7 @@ function EnglishAdsPage() {
           <div className="site-container">
             <SectionHeading centered eyebrow="Choose your project path" title="A different review for a new plant and an operating line" copy="Start with the decision you are making now. We will structure the equipment boundary around that project stage." />
             <div className="mt-10 grid grid-cols-2 gap-6 max-[820px]:grid-cols-1">
-              <article className="flex h-full flex-col rounded-2xl border-2 border-brand-blue bg-white p-7 shadow-card">
+              <article id="new-line" className="scroll-mt-24 flex h-full flex-col rounded-2xl border-2 border-brand-blue bg-white p-7 shadow-card">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-blue text-white"><Factory size={25} /></div>
                 <p className="mt-6 text-xs font-[900] tracking-[.15em] text-brand-blue uppercase">Path 01</p>
                 <h2 className="mt-2 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Build a New Spun Pile Plant</h2>
