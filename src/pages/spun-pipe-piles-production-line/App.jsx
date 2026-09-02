@@ -1,8 +1,10 @@
 import { Children, cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
+  BarChart3,
   Check,
   CheckCircle2,
+  ClipboardCheck,
   Factory,
   Gauge,
   Layers3,
@@ -304,7 +306,7 @@ function EnglishAdsPage() {
           <div className="site-container">
             <SectionHeading centered eyebrow="Choose your project path" title="A different review for a new plant and an operating line" copy="Start with the decision you are making now. We will structure the equipment boundary around that project stage." />
             <div className="mt-10 grid grid-cols-2 gap-6 max-[820px]:grid-cols-1">
-              <article id="new-line" className="scroll-mt-24 flex h-full flex-col rounded-2xl border-2 border-brand-blue bg-white p-7 shadow-card">
+              <article className="flex h-full flex-col rounded-2xl border-2 border-brand-blue bg-white p-7 shadow-card">
                 <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-blue text-white"><Factory size={25} /></div>
                 <p className="mt-6 text-xs font-[900] tracking-[.15em] text-brand-blue uppercase">Path 01</p>
                 <h2 className="mt-2 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Build a New Spun Pile Plant</h2>
@@ -320,6 +322,25 @@ function EnglishAdsPage() {
                 <ul className="mt-6 grid gap-3">{["Current-line bottleneck and interface review", "Selected replacement or expansion packages", "Integration plan around existing equipment and bays"].map((item) => <li key={item} className="flex gap-3 text-sm font-bold text-brand-navy"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#198754]" />{item}</li>)}</ul>
                 <button type="button" onClick={() => openEnquiry("Upgrade an existing spun pile production line")} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Review My Existing Line <ArrowRight size={17} /></button>
               </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="new-line" className="scroll-mt-20 border-t border-line/70 bg-white py-20">
+          <div className="site-container">
+            <div className="grid grid-cols-[.9fr_1.1fr] items-center gap-14 max-[900px]:grid-cols-1">
+              <div>
+                <SectionHeading eyebrow="New production line" title="Define the production target before sizing the line" copy="We use the pile range, output target, mould cycle, available plant space and utilities to prepare the initial process route and equipment boundary." />
+                <button type="button" onClick={() => openEnquiry("Plan a new spun pile production line")} className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Plan My New Line <ArrowRight size={17} /></button>
+              </div>
+              <div className="grid grid-cols-2 gap-4 max-[620px]:grid-cols-1">
+                {[
+                  [Layers3, "Product definition", "Pile diameter, length, wall thickness, reinforcement and applicable standard."],
+                  [BarChart3, "Output basis", "Daily or annual demand, product mix, shifts and operating days."],
+                  [Factory, "Plant conditions", "Building spans, crane coverage, concrete supply, curing utilities and logistics."],
+                  [ClipboardCheck, "Line concept", "Mould quantity and circulation, station allocation, buffers and equipment interfaces."],
+                ].map(([Icon, title, copy]) => <article key={title} className="rounded-xl border border-line bg-soft/55 p-5"><Icon size={23} className="text-brand-blue" /><h3 className="mt-4 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{copy}</p></article>)}
+              </div>
             </div>
           </div>
         </section>
