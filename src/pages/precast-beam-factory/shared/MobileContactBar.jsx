@@ -14,6 +14,7 @@ export default function MobileContactBar({
   messagingHref,
   messagingLabel,
   onEnquire,
+  showEmail = true,
   subject,
   whatsappLabel = "WhatsApp",
 }) {
@@ -26,7 +27,7 @@ export default function MobileContactBar({
 
   return (
     <nav
-      className={`beam-mobile-contact-bar fixed inset-x-0 bottom-0 z-40 hidden grid-cols-3 gap-px border-t border-white/15 bg-brand-navy/95 px-2 pt-2 pb-[calc(8px+env(safe-area-inset-bottom))] text-white shadow-floating backdrop-blur-xl transition duration-200 max-[720px]:grid ${visibilityClass}`}
+      className={`beam-mobile-contact-bar fixed inset-x-0 bottom-0 z-40 hidden ${showEmail ? "grid-cols-3" : "grid-cols-2"} gap-px border-t border-white/15 bg-brand-navy/95 px-2 pt-2 pb-[calc(8px+env(safe-area-inset-bottom))] text-white shadow-floating backdrop-blur-xl transition duration-200 max-[720px]:grid ${visibilityClass}`}
       aria-label={ariaLabel}
       aria-hidden={hidden}
     >
@@ -53,14 +54,16 @@ export default function MobileContactBar({
         <MessageCircle size={18} aria-hidden="true" />
         <span className="truncate">{messagingLabel || whatsappLabel}</span>
       </a>
-      <a
-        href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`}
-        tabIndex={hidden ? -1 : 0}
-        className={`${actionClass} bg-white/8`}
-      >
-        <Mail size={18} aria-hidden="true" />
-        <span className="truncate">{emailLabel}</span>
-      </a>
+      {showEmail && (
+        <a
+          href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`}
+          tabIndex={hidden ? -1 : 0}
+          className={`${actionClass} bg-white/8`}
+        >
+          <Mail size={18} aria-hidden="true" />
+          <span className="truncate">{emailLabel}</span>
+        </a>
+      )}
     </nav>
   );
 }

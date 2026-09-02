@@ -7,7 +7,7 @@ const copyByLocale = {
     email: "E-mail *",
     emailPlaceholder: "name@company.com",
     message: "Message *",
-    messagePlaceholder: "Tell us what you need, the target output or schedule, and any known project requirements.",
+    messagePlaceholder: "Tell us whether you are building a new plant or upgrading an existing line. Include known pile sizes, target output or schedule, site conditions, and any other project requirements.",
     privacy: "By submitting, you agree that Realjet may use this information to respond to your enquiry.",
     privacyLabel: "Privacy Policy",
     submit: "Submit Enquiry",
@@ -107,13 +107,13 @@ const copyByLocale = {
   },
 };
 
-export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/`, idPrefix = "enquiry" }) {
+export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/`, idPrefix = "enquiry", singleColumn = false }) {
   const copy = copyByLocale[locale] || copyByLocale.en;
   const disabled = submissionState === "submitting";
 
   return (
     <fieldset disabled={disabled} className="min-w-0 disabled:cursor-wait">
-      <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1 max-[720px]:gap-2">
+      <div className={`grid gap-3.5 max-[720px]:grid-cols-1 max-[720px]:gap-2 ${singleColumn ? "grid-cols-1" : "grid-cols-2"}`}>
         <label htmlFor={`${idPrefix}-name-${locale}`} className="block">
           <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{copy.name}</span>
           <span className="relative block">
@@ -128,7 +128,7 @@ export default function UniversalEnquiryFields({ locale, submissionState, privac
             <input id={`${idPrefix}-email-${locale}`} name="email" type="email" autoComplete="email" required placeholder={copy.emailPlaceholder} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
           </span>
         </label>
-        <label htmlFor={`${idPrefix}-message-${locale}`} className="col-span-2 block max-[720px]:col-span-1">
+        <label htmlFor={`${idPrefix}-message-${locale}`} className={`${singleColumn ? "col-span-1" : "col-span-2"} block max-[720px]:col-span-1`}>
           <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{copy.message}</span>
           <textarea id={`${idPrefix}-message-${locale}`} name="message" rows="4" required placeholder={copy.messagePlaceholder} className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
         </label>

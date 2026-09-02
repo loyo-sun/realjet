@@ -1,10 +1,8 @@
 import { Children, cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
-  BarChart3,
   Check,
   CheckCircle2,
-  ClipboardCheck,
   Factory,
   Gauge,
   Layers3,
@@ -177,13 +175,13 @@ function EnquiryModal({ open, title, onClose, locale }) {
           <>
             <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">{t("Project enquiry")}</p>
             <h2 id="enquiry-title" className="mt-2 pr-10 text-2xl font-[900] tracking-[-.02em] text-brand-navy">{t(title)}</h2>
-            <p className="mt-2 mb-5 text-sm leading-6 text-muted">{t("Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.")}</p>
-            <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form>
+            {locale !== "en" && <p className="mt-2 mb-5 text-sm leading-6 text-muted">{t("Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.")}</p>}
+            <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form className={locale === "en" ? "mt-5" : undefined}>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
               <input type="hidden" name="keyword" value={meta.subject} />
               <input type="hidden" name="subject" value={meta.enquirySubject} />
               <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
-              <UniversalEnquiryFields locale={locale} submissionState={submissionState} privacyHref={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} />
+              <UniversalEnquiryFields locale={locale} submissionState={submissionState} privacyHref={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} singleColumn={locale === "en"} />
             </form>
           </>
         )}
@@ -232,7 +230,7 @@ function EnglishLeadForm() {
       <input type="hidden" name="keyword" value={meta.subject} />
       <input type="hidden" name="subject" value={meta.enquirySubject} />
       <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
-      <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="../privacy/en/" idPrefix="hero-review" />
+      <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="../privacy/en/" idPrefix="hero-review" singleColumn />
     </form>
   );
 }
@@ -247,6 +245,10 @@ function EnglishAdsPage() {
     setModal({ open: true, title });
   };
   const scrollToReview = (source) => {
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      openEnquiry("Discuss a prestressed spun concrete pile production line");
+      return;
+    }
     trackEvent("project_review_scroll", { source });
     document.querySelector("#project-review")?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
@@ -264,8 +266,8 @@ function EnglishAdsPage() {
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
-            {[["New plant", "#project-paths"], ["Line upgrade", "#upgrade"], ["Equipment scope", "#equipment"], ["FAQ", "#faq"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request a review</button>
+            {[["New line", "#project-paths"], ["Line upgrade", "#upgrade"], ["Mould return layout", "#layout-upgrade"], ["Equipment scope", "#equipment"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
+            <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
             <LanguageSwitcher current="en" />
           </nav>
           <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/8 md:hidden" aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
@@ -279,7 +281,6 @@ function EnglishAdsPage() {
           <div className="industrial-grid absolute inset-0 opacity-25" />
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/8 px-4 py-2 text-xs font-[850] tracking-[.11em] uppercase backdrop-blur"><Factory size={16} className="text-brand-cyan" /> New plants & existing-line upgrades</div>
               <h1 className="text-[clamp(2.45rem,4.4vw,4rem)] leading-[1.01] font-[950] tracking-[-.048em]"><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
@@ -291,18 +292,11 @@ function EnglishAdsPage() {
               <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
 
-            <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[520px]:p-5">
+            <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[720px]:hidden">
               <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Project-specific review</p>
               <h2 className="mt-2 text-2xl font-[950] tracking-[-.025em] text-brand-navy">Request a Line Proposal</h2>
-              <p className="mt-2 mb-5 text-sm leading-6 text-muted">Tell us whether you are building a new plant or upgrading a line. Include known pile sizes, target output and site conditions.</p>
-              <EnglishLeadForm />
+              <div className="mt-5"><EnglishLeadForm /></div>
             </aside>
-          </div>
-        </section>
-
-        <section className="border-b border-line bg-white py-7">
-          <div className="site-container grid grid-cols-4 gap-3 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">
-            {[[ClipboardCheck, "Pile specification", "Diameter, length, wall and standard"], [BarChart3, "Target output", "Product mix, shifts and operating days"], [Factory, "Plant conditions", "Building, cranes, utilities and logistics"], [PackageCheck, "Preferred boundary", "Selected equipment or integrated line"]].map(([Icon, title, copy]) => <div key={title} className="flex gap-3 rounded-xl border border-line bg-soft/55 p-4"><Icon className="mt-0.5 shrink-0 text-brand-blue" size={21} /><div><h2 className="text-sm font-[900] text-brand-navy">{title}</h2><p className="mt-1 text-xs leading-5 text-muted">{copy}</p></div></div>)}
           </div>
         </section>
 
@@ -403,15 +397,13 @@ function EnglishAdsPage() {
           <div className="site-container"><SectionHeading centered eyebrow="Project delivery" title="From requirement review to production ramp-up" copy="Selected packages or a coordinated line can be supplied. The contract defines the final technical and service boundary." /><div className="mt-10 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Products, output, site and current constraints."], ["02", "Concept engineering", "Process route, layout, capacity and scope."], ["03", "Manufacturing & integration", "Equipment, controls, interfaces and checks."], ["04", "Installation & ramp-up", "Commissioning, trials and training to scope."]].map(([n, title, copy]) => <article key={n} className="rounded-xl border border-line p-5"><div className="text-2xl font-[950] text-brand-blue">{n}</div><h3 className="mt-5 font-[900] text-brand-navy">{title}</h3><p className="mt-2 text-sm leading-6 text-muted">{copy}</p></article>)}</div></div>
         </section>
 
-        <section id="faq" className="scroll-mt-20 bg-soft py-20"><div className="site-container"><SectionHeading centered eyebrow="Buyer questions" title="Before you request a technical proposal" /><div className="mx-auto mt-9 grid max-w-4xl gap-3">{[["Can Realjet supply only selected equipment?", "Yes. The scope can cover moulds, an individual production package, a coordinated upgrade or a complete line, subject to technical review and contract definition."], ["Can you integrate equipment with an existing plant?", "Yes, where interfaces can be technically confirmed. Share the current layout, equipment data, product drawings and the bottleneck you need to solve."], ["Is the displayed capacity guaranteed?", "No. The figures are concept-stage scenarios. Contract capacity depends on product mix, mould quantity, curing cycle, spinning capacity, handling, shifts and agreed acceptance conditions."], ["What should I send for the first review?", "Send the pile dimensions and standard, target output, available site or current-line information, and the delivery boundary you expect. If information is incomplete, send what you have."]].map(([q, a]) => <details key={q} className="group rounded-xl border border-line bg-white p-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-[900] text-brand-navy">{q}<span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-soft text-brand-blue transition group-open:rotate-45">+</span></summary><p className="mt-4 max-w-3xl text-sm leading-7 text-muted">{a}</p></details>)}</div></div></section>
-
         <section className="bg-[linear-gradient(135deg,#0d4b68,#08253f)] py-16 text-white"><div className="site-container flex items-center justify-between gap-10 max-[800px]:flex-col max-[800px]:items-start"><div><p className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">New plant or line upgrade</p><h2 className="mt-3 max-w-3xl text-[clamp(2rem,4vw,3.3rem)] leading-[1.08] font-[900] tracking-[-.035em]">Turn your production requirement into a clear equipment plan.</h2></div><button type="button" onClick={() => scrollToReview("final-cta")} className="inline-flex min-h-12 items-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Request a Line Proposal <ArrowRight size={17} /></button></div></section>
       </main>
 
       <footer className="bg-[#041522] py-9 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Equipment and line integration for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href="../privacy/en/" className="hover:text-white">Privacy Policy</a><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a><button type="button" onClick={() => scrollToReview("footer")} className="hover:text-white">Request a review</button></div></div></footer>
 
-      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} subject={meta.subject} /></div>
-      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} subject={meta.subject} />
+      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
+      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale="en" />
     </div>
   );

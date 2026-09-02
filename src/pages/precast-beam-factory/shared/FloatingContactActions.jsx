@@ -3,7 +3,7 @@ import { trackEvent } from "./analytics";
 
 const actionClass = "grid h-[46px] w-[46px] place-items-center rounded-[10px] text-white no-underline transition hover:-translate-x-0.5 hover:bg-white/15 focus-visible:-translate-x-0.5 focus-visible:bg-white/15 max-[720px]:h-[42px] max-[720px]:w-[42px]";
 
-export default function FloatingContactActions({ ariaLabel = "Contact Realjet", canonicalUrl, enquiryLabel = "Enquiry", enquiryTitle, messagingChannel = "whatsapp", messagingHref, messagingLabel = "WhatsApp", onEnquire, subject }) {
+export default function FloatingContactActions({ ariaLabel = "Contact Realjet", canonicalUrl, enquiryLabel = "Enquiry", enquiryTitle, messagingChannel = "whatsapp", messagingHref, messagingLabel = "WhatsApp", onEnquire, showEmail = true, subject }) {
   const whatsappText = encodeURIComponent(`Hello, I would like to discuss ${subject}.\n${canonicalUrl}\nChannel: website`);
   const emailSubject = encodeURIComponent(`${subject} enquiry`);
   const emailBody = encodeURIComponent(`Hello, I would like to discuss ${subject}.\n${canonicalUrl}\n\nChannel: website`);
@@ -38,9 +38,11 @@ export default function FloatingContactActions({ ariaLabel = "Contact Realjet", 
       <a href={messagingHref || `https://wa.me/8619310090600?text=${whatsappText}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("floating_contact_click", { channel: messagingChannel })} className={`${actionClass} bg-white/8`} aria-label={messagingLabel} title={messagingLabel}>
         <MessageCircle size={22} aria-hidden="true" />
       </a>
-      <a href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`} onClick={() => trackEvent("floating_contact_click", { channel: "email" })} className={`${actionClass} bg-white/8`} aria-label="E-mail" title="E-mail">
-        <Mail size={22} aria-hidden="true" />
-      </a>
+      {showEmail && (
+        <a href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`} onClick={() => trackEvent("floating_contact_click", { channel: "email" })} className={`${actionClass} bg-white/8`} aria-label="E-mail" title="E-mail">
+          <Mail size={22} aria-hidden="true" />
+        </a>
+      )}
     </nav>
   );
 }
