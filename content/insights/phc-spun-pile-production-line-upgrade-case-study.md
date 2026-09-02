@@ -43,6 +43,10 @@ Reinforcement cutting, heading and cage welding were located away from the mould
 
 Realjet therefore treated feeding, mould movement, reinforcement flow and lifting as one upgrade programme. Increasing the speed of only one machine would not have removed the line-level constraint.
 
+![Reference layout of mould circulation, spinning and curing equipment in a PHC spun pile production line](/images/insights/spun-pile-line-upgrade-layout.webp)
+
+*Reference layout used to explain how mould circulation, spinning, curing and crane coverage must be reviewed as one production system.*
+
 ## Concrete feeding and mould-closing upgrade
 
 Realjet removed the existing rotary distributor and feeding cars. The mould-cart rails, previously set 400 mm below floor level, were raised above the finished floor.
@@ -65,6 +69,10 @@ Realjet modified the pipe-pile cage welder for automatic cage discharge and rapi
 
 The change did more than add a machine. It cleared workshop space, reduced unnecessary handling and aligned reinforcement output with the revised mould flow.
 
+![Automatic cage welding equipment producing a reinforcement cage for spun concrete piles](/images/insights/spun-pile-line-cage-welding.webp)
+
+*Reference cage-welding equipment. Product range, changeover, discharge and buffer space must be matched to the revised mould cycle.*
+
 ## Crane attachments, curing covers and mould preparation
 
 Three of the four existing overhead cranes received automatic lifting attachments. Two cranes above the spinning and curing area used attachments designed to engage the upper-mould running rings without a conventional large hook. The curing-pit covers were modified to suit this handling method, and missing insulation was added where required.
@@ -74,6 +82,10 @@ The crane serving the feeding and closing area received an automatic attachment 
 Realjet also added an upper-mould cleaning rack near the feeding tracks. After demoulding, the upper mould could be placed directly on the rack instead of being turned on the floor. Operators cleaned the mould and applied release agent from the supported working position before it returned to production.
 
 These measures shortened handling cycles, reduced dependence on manual hooking and improved the organisation of mould cleaning. The final attachment and support designs were matched to the existing moulds, cranes and plant sequence.
+
+![Centrifugal spinning machines with steel moulds for prestressed concrete piles](/images/insights/spun-pile-line-centrifugal-spinning.webp)
+
+*Reference centrifugal spinning stations for prestressed concrete piles. Spinning capacity must be checked against the faster upstream feeding cycle.*
 
 ## Investment, schedule and operating results
 
