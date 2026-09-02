@@ -241,7 +241,7 @@ function EnglishAdsPage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
   const meta = localeMeta.en;
-  const messagingHref = `https://wa.me/8615111041998?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
+  const messagingHref = `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
   const openEnquiry = (title) => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
@@ -277,10 +277,10 @@ function EnglishAdsPage() {
           <img src={heroImage} alt="Prestressed spun concrete pile production line" className="absolute inset-0 h-full w-full object-cover opacity-38" fetchPriority="high" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(4,21,36,.99)_0%,rgba(5,31,51,.95)_52%,rgba(5,31,51,.72)_100%)]" />
           <div className="industrial-grid absolute inset-0 opacity-25" />
-          <div className="site-container relative grid min-h-[710px] grid-cols-[1.16fr_.84fr] items-center gap-12 py-16 max-[980px]:grid-cols-1 max-[980px]:gap-9">
+          <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/8 px-4 py-2 text-xs font-[850] tracking-[.11em] uppercase backdrop-blur"><Factory size={16} className="text-brand-cyan" /> New plants & existing-line upgrades</div>
-              <h1 className="text-[clamp(2.65rem,5.5vw,5rem)] leading-[.99] font-[950] tracking-[-.052em]">PHC / PC Spun Pile<br /><span className="text-[#58d0d8]">Production Line</span></h1>
+              <h1 className="text-[clamp(2.45rem,4.4vw,4rem)] leading-[1.01] font-[950] tracking-[-.048em]"><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
                 {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
@@ -288,7 +288,7 @@ function EnglishAdsPage() {
               <ul className="mt-7 grid gap-3 text-sm text-white/76">
                 {["Preliminary equipment boundary and line flow", "Capacity model based on pile mix, mould cycle and shifts", "Mould, spinning, curing, handling and controls reviewed together"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
               </ul>
-              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Discuss on WhatsApp <MessageCircle size={17} /></a>
+              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
 
             <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[520px]:p-5">
@@ -296,10 +296,6 @@ function EnglishAdsPage() {
               <h2 className="mt-2 text-2xl font-[950] tracking-[-.025em] text-brand-navy">Request a Line Proposal</h2>
               <p className="mt-2 mb-5 text-sm leading-6 text-muted">Tell us whether you are building a new plant or upgrading a line. Include known pile sizes, target output and site conditions.</p>
               <EnglishLeadForm />
-              <div className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5 text-xs leading-5 text-muted max-[520px]:grid-cols-1">
-                <p><strong className="block text-brand-navy">E-mail</strong>sales@realjetech.com</p>
-                <p dir="ltr"><strong className="block text-brand-navy">WhatsApp</strong>+86 151 1104 1998</p>
-              </div>
             </aside>
           </div>
         </section>
@@ -410,7 +406,8 @@ function LegacyLocalizedPage({ locale = "en" }) {
   const { canonicalUrl, subject } = meta;
   const messagingHref = meta.messagingChannel === "zalo"
     ? "https://zalo.me/8615111041998"
-    : `https://wa.me/8615111041998?text=${encodeURIComponent(`Hello, I would like to discuss ${subject}.\n${canonicalUrl}\nChannel: website`)}`;
+    : `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${subject}.\n${canonicalUrl}\nChannel: website`)}`;
+  const messagingNumber = meta.messagingChannel === "zalo" ? "+86 151 1104 1998" : "+86 193 1009 0600";
   const openEnquiry = (title = "Discuss your spun pile plant") => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
@@ -531,7 +528,7 @@ function LegacyLocalizedPage({ locale = "en" }) {
                   <button type="button" onClick={() => openEnquiry("Discuss a prestressed spun concrete pile production line")} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button>
                   <div className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5 text-sm text-muted max-[520px]:grid-cols-1">
                     <p dir="ltr"><strong className="text-brand-navy">E-mail:</strong><br />sales@realjetech.com</p>
-                    <p dir="ltr"><strong className="text-brand-navy">{meta.messagingLabel}:</strong><br />+86 151 1104 1998</p>
+                    <p dir="ltr"><strong className="text-brand-navy">{meta.messagingLabel}:</strong><br />{messagingNumber}</p>
                   </div>
                 </div>
               </div>
