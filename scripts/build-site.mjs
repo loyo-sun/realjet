@@ -114,6 +114,8 @@ for (const expectedPath of [
   "feed.xml",
   "marketing/precast-beam-factory/en/index.html",
   "marketing/spun-pipe-piles-production-line/index.html",
+  "marketing/spun-pipe-piles-production-line/id/index.html",
+  "marketing/spun-pipe-piles-production-line/vi/index.html",
   "marketing/contract_manufacturing/index.html",
   "marketing/precast-beam-factory/id/index.html",
   "marketing/precast-beam-factory/ar/index.html",
@@ -122,6 +124,7 @@ for (const expectedPath of [
   "marketing/precast-beam-factory/fr/index.html",
   "marketing/precast-beam-factory/es/index.html",
   "marketing/privacy/en/index.html",
+  "marketing/privacy/vi/index.html",
 ]) {
   await access(join(finalOutput, expectedPath));
 }
@@ -165,6 +168,14 @@ const contractManufacturingPage = await readFile(
 );
 const spunPipePilesPage = await readFile(
   join(finalOutput, "marketing/spun-pipe-piles-production-line/index.html"),
+  "utf8",
+);
+const spunPipePilesIdPage = await readFile(
+  join(finalOutput, "marketing/spun-pipe-piles-production-line/id/index.html"),
+  "utf8",
+);
+const spunPipePilesViPage = await readFile(
+  join(finalOutput, "marketing/spun-pipe-piles-production-line/vi/index.html"),
   "utf8",
 );
 const sitemap = await readFile(join(finalOutput, "sitemap.xml"), "utf8");
@@ -420,6 +431,25 @@ for (const requiredContent of [
     throw new Error(`Contract manufacturing page validation failed: ${requiredContent}`);
   }
 }
+for (const [page, locale, canonical, title] of [
+  [spunPipePilesIdPage, "id", "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/", "Lini Produksi Tiang Pancang Beton Prategang Sentrifugal"],
+  [spunPipePilesViPage, "vi", "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/", "Dây Chuyền Sản Xuất Cọc Bê Tông Ly Tâm Dự Ứng Lực"],
+]) {
+  for (const requiredContent of [
+    `<html lang="${locale}">`,
+    `<link rel="canonical" href="${canonical}"`,
+    'meta name="robots" content="index, follow"',
+    title,
+    'name="universal-enquiry"',
+    'name="name"',
+    'name="email"',
+    'name="message"',
+  ]) {
+    if (!page.includes(requiredContent)) {
+      throw new Error(`Localized spun pile page validation failed (${locale}): ${requiredContent}`);
+    }
+  }
+}
 for (const requiredContent of [
   '<link rel="canonical" href="https://realjetech.com/marketing/spun-pipe-piles-production-line/"',
   'meta name="robots" content="index, follow"',
@@ -461,6 +491,8 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/precast-concrete-molds/precast-concrete-caisson-moulds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
   "https://realjetech.com/marketing/precast-beam-factory/ar/",
@@ -475,6 +507,7 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/marketing/privacy/cn/",
   "https://realjetech.com/marketing/privacy/fr/",
   "https://realjetech.com/marketing/privacy/es/",
+  "https://realjetech.com/marketing/privacy/vi/",
 ]) {
   if (!sitemap.includes(`<loc>${requiredSitemapUrl}</loc>`)) {
     throw new Error(`Sitemap validation failed: ${requiredSitemapUrl}`);
@@ -496,6 +529,8 @@ for (const requiredLlmsContent of [
   "https://realjetech.com/precast-concrete-molds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/insights/",
   "## Precast concrete production equipment",

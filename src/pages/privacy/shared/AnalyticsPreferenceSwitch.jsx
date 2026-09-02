@@ -17,6 +17,12 @@ const preferenceCopy = {
     advertising: "Cookie iklan",
     advertisingDescription: "Mengukur konversi, mendukung atribusi, dan mempersonalisasi iklan.",
   },
+  vi: {
+    analytics: "Cookie phân tích",
+    analyticsDescription: "Đo lường việc sử dụng website và hành trình gửi yêu cầu.",
+    advertising: "Cookie quảng cáo",
+    advertisingDescription: "Đo lường chuyển đổi, hỗ trợ phân bổ và cá nhân hóa quảng cáo.",
+  },
   ar: {
     analytics: "ملفات ارتباط التحليلات",
     analyticsDescription: "قياس استخدام الموقع ومسار الاستفسار.",

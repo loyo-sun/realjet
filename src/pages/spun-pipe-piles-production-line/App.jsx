@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Children, cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   BarChart3,
@@ -32,9 +32,8 @@ import FloatingContactActions from "../precast-beam-factory/shared/FloatingConta
 import MobileContactBar from "../precast-beam-factory/shared/MobileContactBar";
 import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../precast-beam-factory/shared/universalEnquiry";
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
-
-const canonicalUrl = "https://realjetech.com/marketing/spun-pipe-piles-production-line/";
-const subject = "a prestressed spun concrete pile production line";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { localeMeta, translate } from "./translations";
 
 const scope = [
   ["Spun pile moulds", "Split steel moulds planned around pile diameter, length, mass and lifting method."],
@@ -97,9 +96,35 @@ function SectionHeading({ eyebrow, title, copy, centered = false, inverse = fals
   );
 }
 
-function EnquiryModal({ open, title, onClose }) {
+const translatableProps = new Set(["alt", "aria-label", "copy", "enquireLabel", "enquiryTitle", "eyebrow", "title"]);
+
+function localizeTree(node, locale) {
+  if (typeof node === "string") {
+    const core = node.trim();
+    if (!core) return node;
+    const localized = translate(locale, core);
+    return localized === core ? node : node.replace(core, localized);
+  }
+  if (!isValidElement(node)) return node;
+  const nextProps = {};
+  for (const prop of translatableProps) {
+    if (typeof node.props[prop] === "string") nextProps[prop] = translate(locale, node.props[prop]);
+  }
+  if (node.props.children !== undefined) {
+    nextProps.children = Children.map(node.props.children, (child) => localizeTree(child, locale));
+  }
+  return cloneElement(node, nextProps);
+}
+
+function LocalizedPage({ locale, children }) {
+  return localizeTree(children, locale);
+}
+
+function EnquiryModal({ open, title, onClose, locale }) {
   const [submissionState, setSubmissionState] = useState("idle");
   const dialogRef = useRef(null);
+  const t = (text) => translate(locale, text);
+  const meta = localeMeta[locale] ?? localeMeta.en;
 
   useEffect(() => {
     if (!open) return undefined;
@@ -123,7 +148,7 @@ function EnquiryModal({ open, title, onClose }) {
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: createUniversalEnquiryBody(form, `Prestressed spun concrete pile production line: ${title}`),
+        body: createUniversalEnquiryBody(form, `${meta.subject}: ${t(title)}`),
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       trackLeadSuccess(form);
@@ -138,25 +163,25 @@ function EnquiryModal({ open, title, onClose }) {
   return (
     <div className="fixed inset-0 z-[120] grid place-items-center bg-[#041522]/78 p-5 backdrop-blur-sm" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="enquiry-title" className="relative w-full max-w-[650px] rounded-2xl bg-white p-7 shadow-[0_35px_90px_rgba(0,0,0,.38)] max-[720px]:p-5">
-        <button type="button" onClick={onClose} aria-label="Close enquiry form" className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-full bg-soft text-brand-navy hover:bg-line"><X size={19} /></button>
+        <button type="button" onClick={onClose} aria-label={t("Close enquiry form")} className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-full bg-soft text-brand-navy hover:bg-line"><X size={19} /></button>
         {submissionState === "success" ? (
           <div className="py-8 text-center">
             <CheckCircle2 className="mx-auto text-[#198754]" size={48} />
-            <h2 id="enquiry-title" className="mt-4 text-2xl font-[900] text-brand-navy">Enquiry received</h2>
-            <p className="mx-auto mt-3 max-w-md text-muted">Thank you. Our team will review your requirement and reply by e-mail.</p>
-            <button type="button" onClick={onClose} className="mt-6 rounded-lg bg-brand-navy px-5 py-3 text-sm font-bold text-white">Close</button>
+            <h2 id="enquiry-title" className="mt-4 text-2xl font-[900] text-brand-navy">{t("Enquiry received")}</h2>
+            <p className="mx-auto mt-3 max-w-md text-muted">{t("Thank you. Our team will review your requirement and reply by e-mail.")}</p>
+            <button type="button" onClick={onClose} className="mt-6 rounded-lg bg-brand-navy px-5 py-3 text-sm font-bold text-white">{t("Close")}</button>
           </div>
         ) : (
           <>
-            <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Project enquiry</p>
-            <h2 id="enquiry-title" className="mt-2 pr-10 text-2xl font-[900] tracking-[-.02em] text-brand-navy">{title}</h2>
-            <p className="mt-2 mb-5 text-sm leading-6 text-muted">Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.</p>
+            <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">{t("Project enquiry")}</p>
+            <h2 id="enquiry-title" className="mt-2 pr-10 text-2xl font-[900] tracking-[-.02em] text-brand-navy">{t(title)}</h2>
+            <p className="mt-2 mb-5 text-sm leading-6 text-muted">{t("Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.")}</p>
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
-              <input type="hidden" name="keyword" value="Prestressed spun concrete pile production line" />
-              <input type="hidden" name="subject" value="Prestressed spun concrete pile production line enquiry" />
+              <input type="hidden" name="keyword" value={meta.subject} />
+              <input type="hidden" name="subject" value={`${meta.subject} enquiry`} />
               <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
-              <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="../privacy/en/" />
+              <UniversalEnquiryFields locale={locale} submissionState={submissionState} privacyHref={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} />
             </form>
           </>
         )}
@@ -165,22 +190,24 @@ function EnquiryModal({ open, title, onClose }) {
   );
 }
 
-export default function App() {
+export default function App({ locale = "en" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
+  const { canonicalUrl, subject } = localeMeta[locale] ?? localeMeta.en;
   const openEnquiry = (title = "Discuss your spun pile plant") => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[72px] items-center justify-between gap-6">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[72px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
             {[["Solution", "#solution"], ["Process", "#process"], ["Mould range", "#moulds"], ["Capacity", "#capacity"], ["FAQ", "#faq"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/78 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
             <button type="button" onClick={() => openEnquiry("Request a turnkey plant review")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white md:inline-flex">Request a review</button>
+            <LanguageSwitcher current={locale} />
           </nav>
           <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/8 md:hidden" aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
         </div>
@@ -269,7 +296,7 @@ export default function App() {
           <div className="site-container">
             <SectionHeading inverse eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
             <div className="mt-12 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Pile drawings, standards, capacity, site and local constraints."], ["02", "Concept engineering", "Process route, layout, cycle-time and capacity model, utilities and equipment boundary."], ["03", "Manufacturing & integration", "Equipment fabrication, controls, interfaces and pre-delivery checks."], ["04", "Installation & ramp-up", "Site support, commissioning, trials and operator training to contract scope."]].map(([n, title, text]) => <article key={n} className="rounded-xl border border-white/12 bg-white/5 p-6"><div className="text-3xl font-[950] text-brand-cyan">{n}</div><h3 className="mt-6 text-lg font-[900]">{title}</h3><p className="mt-3 text-sm leading-6 text-white/62">{text}</p></article>)}</div>
-            <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Reinforcement cage preparation", "Equipment is coordinated with the reinforcement design and downstream cycle time."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={`${title} reference for a prestressed spun concrete pile production line`} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
+            <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Reinforcement cage preparation", "Equipment is coordinated with the reinforcement design and downstream cycle time."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={title} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
           </div>
         </section>
 
@@ -307,7 +334,7 @@ export default function App() {
 
       <div className="max-[720px]:hidden"><FloatingContactActions canonicalUrl={canonicalUrl} enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} /></div>
       <MobileContactBar canonicalUrl={canonicalUrl} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} />
-      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} />
-    </div>
+      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
+    </div></LocalizedPage>
   );
 }

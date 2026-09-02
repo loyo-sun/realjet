@@ -25,6 +25,13 @@ const consentCopy = {
     settings: "Pengaturan privasi",
     close: "Tutup preferensi cookie",
   },
+  vi: {
+    title: "Tùy chọn cookie",
+    body: "Chúng tôi sử dụng cookie tùy chọn để phân tích website và đo lường quảng cáo. Chọn Chấp nhận tất cả hoặc dùng Cài đặt quyền riêng tư để quản lý riêng cookie phân tích và quảng cáo. Đóng thông báo này để từ chối cookie tùy chọn.",
+    accept: "Chấp nhận tất cả",
+    settings: "Cài đặt quyền riêng tư",
+    close: "Đóng tùy chọn cookie",
+  },
   ar: {
     title: "تفضيلات ملفات تعريف الارتباط",
     body: "نستخدم ملفات تعريف ارتباط اختيارية لتحليل الموقع وقياس الإعلانات. اختر قبول الكل، أو استخدم إعدادات الخصوصية لإدارة التحليلات والإعلانات بشكل منفصل. أغلق هذا الإشعار لرفض ملفات الارتباط الاختيارية.",

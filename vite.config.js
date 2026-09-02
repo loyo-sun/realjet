@@ -34,6 +34,14 @@ export default defineConfig({
           process.cwd(),
           "marketing/spun-pipe-piles-production-line/index.html",
         ),
+        "spun-pipe-piles-production-line-id": resolve(
+          process.cwd(),
+          "marketing/spun-pipe-piles-production-line/id/index.html",
+        ),
+        "spun-pipe-piles-production-line-vi": resolve(
+          process.cwd(),
+          "marketing/spun-pipe-piles-production-line/vi/index.html",
+        ),
         "precast-beam-factory-cn": resolve(
           process.cwd(),
           "marketing/precast-beam-factory/cn/index.html",
@@ -89,6 +97,10 @@ export default defineConfig({
         "privacy-ru": resolve(
           process.cwd(),
           "marketing/privacy/ru/index.html",
+        ),
+        "privacy-vi": resolve(
+          process.cwd(),
+          "marketing/privacy/vi/index.html",
         ),
       },
     },

@@ -12,6 +12,8 @@ eleventyExcludeFromCollections: true
   "https://realjetech.com/precast-concrete-molds/",
   "https://realjetech.com/marketing/contract_manufacturing/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
   "https://realjetech.com/marketing/precast-beam-factory/ar/",
@@ -25,7 +27,8 @@ eleventyExcludeFromCollections: true
   "https://realjetech.com/marketing/privacy/ru/",
   "https://realjetech.com/marketing/privacy/cn/",
   "https://realjetech.com/marketing/privacy/fr/",
-  "https://realjetech.com/marketing/privacy/es/"
+  "https://realjetech.com/marketing/privacy/es/",
+  "https://realjetech.com/marketing/privacy/vi/"
 ] %}
 {% for itemUrl in staticUrls %}<url><loc>{{ itemUrl }}</loc></url>{% endfor %}
 {% for post in collections.publishedInsights %}<url><loc>{{ post.url | absoluteUrl(site.url) }}</loc><lastmod>{{ (post.data.updated or post.data.date) | isoDate }}</lastmod></url>{% endfor %}
