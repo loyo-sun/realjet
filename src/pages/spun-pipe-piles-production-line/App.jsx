@@ -302,30 +302,6 @@ function EnglishAdsPage() {
           </div>
         </section>
 
-        <section id="project-paths" className="scroll-mt-20 py-20">
-          <div className="site-container">
-            <SectionHeading centered eyebrow="Choose your project path" title="A different review for a new plant and an operating line" copy="Start with the decision you are making now. We will structure the equipment boundary around that project stage." />
-            <div className="mt-10 grid grid-cols-2 gap-6 max-[820px]:grid-cols-1">
-              <article className="flex h-full flex-col rounded-2xl border-2 border-brand-blue bg-white p-7 shadow-card">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-brand-blue text-white"><Factory size={25} /></div>
-                <p className="mt-6 text-xs font-[900] tracking-[.15em] text-brand-blue uppercase">Path 01</p>
-                <h2 className="mt-2 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Build a New Spun Pile Plant</h2>
-                <p className="mt-3 text-sm leading-7 text-muted">Plan product families, output, mould circulation, equipment, utilities, layout and commissioning as one production system.</p>
-                <ul className="mt-6 grid gap-3">{["Initial process route and equipment boundary", "Preliminary layout and capacity model", "Utilities, installation and ramp-up scope"].map((item) => <li key={item} className="flex gap-3 text-sm font-bold text-brand-navy"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#198754]" />{item}</li>)}</ul>
-                <button type="button" onClick={() => openEnquiry("Plan a new spun pile production line")} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Review My New Plant <ArrowRight size={17} /></button>
-              </article>
-              <article className="flex h-full flex-col rounded-2xl border-2 border-[#e4572e] bg-[#fffaf7] p-7 shadow-card">
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-[#e4572e] text-white"><Settings2 size={25} /></div>
-                <p className="mt-6 text-xs font-[900] tracking-[.15em] text-[#c8421d] uppercase">Path 02</p>
-                <h2 className="mt-2 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Upgrade an Existing Production Line</h2>
-                <p className="mt-3 text-sm leading-7 text-muted">Target the actual constraint—capacity, mould compatibility, spinning, curing, handling, safety or controls—without replacing what still works.</p>
-                <ul className="mt-6 grid gap-3">{["Current-line bottleneck and interface review", "Selected replacement or expansion packages", "Integration plan around existing equipment and bays"].map((item) => <li key={item} className="flex gap-3 text-sm font-bold text-brand-navy"><CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#198754]" />{item}</li>)}</ul>
-                <button type="button" onClick={() => openEnquiry("Upgrade an existing spun pile production line")} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Review My Existing Line <ArrowRight size={17} /></button>
-              </article>
-            </div>
-          </div>
-        </section>
-
         <section id="new-line" className="scroll-mt-20 border-t border-line/70 bg-white py-20">
           <div className="site-container">
             <div className="grid grid-cols-[.9fr_1.1fr] items-center gap-14 max-[900px]:grid-cols-1">
