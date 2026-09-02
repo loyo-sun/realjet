@@ -107,30 +107,30 @@ const copyByLocale = {
   },
 };
 
-export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/` }) {
+export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/`, idPrefix = "enquiry" }) {
   const copy = copyByLocale[locale] || copyByLocale.en;
   const disabled = submissionState === "submitting";
 
   return (
     <fieldset disabled={disabled} className="min-w-0 disabled:cursor-wait">
       <div className="grid grid-cols-2 gap-3.5 max-[720px]:grid-cols-1 max-[720px]:gap-2">
-        <label htmlFor={`enquiry-name-${locale}`} className="block">
+        <label htmlFor={`${idPrefix}-name-${locale}`} className="block">
           <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{copy.name}</span>
           <span className="relative block">
             <User size={15} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted" />
-            <input id={`enquiry-name-${locale}`} name="name" type="text" autoComplete="name" required placeholder={copy.namePlaceholder} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
+            <input id={`${idPrefix}-name-${locale}`} name="name" type="text" autoComplete="name" required placeholder={copy.namePlaceholder} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
           </span>
         </label>
-        <label htmlFor={`enquiry-email-${locale}`} className="block">
+        <label htmlFor={`${idPrefix}-email-${locale}`} className="block">
           <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{copy.email}</span>
           <span className="relative block">
             <Send size={15} className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-muted" />
-            <input id={`enquiry-email-${locale}`} name="email" type="email" autoComplete="email" required placeholder={copy.emailPlaceholder} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
+            <input id={`${idPrefix}-email-${locale}`} name="email" type="email" autoComplete="email" required placeholder={copy.emailPlaceholder} className="focus-control w-full rounded-lg border border-[#ccd8df] bg-[#fbfcfd] py-2.5 pr-3 pl-9 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
           </span>
         </label>
-        <label htmlFor={`enquiry-message-${locale}`} className="col-span-2 block max-[720px]:col-span-1">
+        <label htmlFor={`${idPrefix}-message-${locale}`} className="col-span-2 block max-[720px]:col-span-1">
           <span className="mb-1.5 block text-[11px] font-[850] text-[#3e5668]">{copy.message}</span>
-          <textarea id={`enquiry-message-${locale}`} name="message" rows="4" required placeholder={copy.messagePlaceholder} className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
+          <textarea id={`${idPrefix}-message-${locale}`} name="message" rows="4" required placeholder={copy.messagePlaceholder} className="focus-control w-full resize-y rounded-lg border border-[#ccd8df] bg-[#fbfcfd] px-3 py-2.5 text-sm text-ink disabled:cursor-wait disabled:bg-[#eef2f5] disabled:text-muted" />
         </label>
       </div>
       <p className="mt-3 text-[11px] leading-[1.5] text-muted">
