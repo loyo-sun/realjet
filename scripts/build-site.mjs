@@ -116,6 +116,7 @@ for (const expectedPath of [
   "marketing/spun-pipe-piles-production-line/index.html",
   "marketing/spun-pipe-piles-production-line/id/index.html",
   "marketing/spun-pipe-piles-production-line/vi/index.html",
+  "marketing/spun-pipe-piles-production-line/ar/index.html",
   "marketing/contract_manufacturing/index.html",
   "marketing/precast-beam-factory/id/index.html",
   "marketing/precast-beam-factory/ar/index.html",
@@ -176,6 +177,10 @@ const spunPipePilesIdPage = await readFile(
 );
 const spunPipePilesViPage = await readFile(
   join(finalOutput, "marketing/spun-pipe-piles-production-line/vi/index.html"),
+  "utf8",
+);
+const spunPipePilesArPage = await readFile(
+  join(finalOutput, "marketing/spun-pipe-piles-production-line/ar/index.html"),
   "utf8",
 );
 const sitemap = await readFile(join(finalOutput, "sitemap.xml"), "utf8");
@@ -434,9 +439,10 @@ for (const requiredContent of [
 for (const [page, locale, canonical, title] of [
   [spunPipePilesIdPage, "id", "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/", "Lini Produksi Tiang Pancang Beton Prategang Sentrifugal"],
   [spunPipePilesViPage, "vi", "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/", "Dây Chuyền Sản Xuất Cọc Bê Tông Ly Tâm Dự Ứng Lực"],
+  [spunPipePilesArPage, "ar", "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/", "خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي"],
 ]) {
   for (const requiredContent of [
-    `<html lang="${locale}">`,
+    `<html lang="${locale}"`,
     `<link rel="canonical" href="${canonical}"`,
     'meta name="robots" content="index, follow"',
     title,
@@ -493,6 +499,7 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/marketing/precast-beam-factory/id/",
   "https://realjetech.com/marketing/precast-beam-factory/ar/",
@@ -531,6 +538,7 @@ for (const requiredLlmsContent of [
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
+  "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
   "https://realjetech.com/insights/",
   "## Precast concrete production equipment",

@@ -22,6 +22,13 @@ const languages = [
     lang: "vi",
     href: "/marketing/spun-pipe-piles-production-line/vi/",
   },
+  {
+    code: "ar",
+    flag: "🇸🇦",
+    label: "العربية",
+    lang: "ar",
+    href: "/marketing/spun-pipe-piles-production-line/ar/",
+  },
 ];
 
 export default function LanguageSwitcher({ current = "en" }) {
@@ -34,7 +41,7 @@ export default function LanguageSwitcher({ current = "en" }) {
         <span>{active.label}</span>
         <ChevronDown size={13} className="transition group-open:rotate-180" aria-hidden="true" />
       </summary>
-      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[190px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating">
+      <div className="absolute top-[calc(100%+8px)] right-0 z-50 min-w-[190px] overflow-hidden rounded-lg border border-white/10 bg-brand-navy p-1.5 shadow-floating rtl:right-auto rtl:left-0">
         {languages.map(({ code, flag, label, lang, href }) => (
           <a
             key={code}

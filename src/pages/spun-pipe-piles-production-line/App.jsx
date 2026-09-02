@@ -4,12 +4,12 @@ import {
   BarChart3,
   Check,
   CheckCircle2,
-  ChevronRight,
   ClipboardCheck,
   Factory,
   Gauge,
   Layers3,
   Menu,
+  MessageCircle,
   PackageCheck,
   Settings2,
   ShieldCheck,
@@ -179,7 +179,7 @@ function EnquiryModal({ open, title, onClose, locale }) {
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
               <input type="hidden" name="keyword" value={meta.subject} />
-              <input type="hidden" name="subject" value={`${meta.subject} enquiry`} />
+              <input type="hidden" name="subject" value={meta.enquirySubject} />
               <p className="hidden"><label>Do not fill this out: <input name="bot-field" /></label></p>
               <UniversalEnquiryFields locale={locale} submissionState={submissionState} privacyHref={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} />
             </form>
@@ -193,14 +193,18 @@ function EnquiryModal({ open, title, onClose, locale }) {
 export default function App({ locale = "en" }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
-  const { canonicalUrl, subject } = localeMeta[locale] ?? localeMeta.en;
+  const meta = localeMeta[locale] ?? localeMeta.en;
+  const { canonicalUrl, subject } = meta;
+  const messagingHref = meta.messagingChannel === "zalo"
+    ? "https://zalo.me/8615111041998"
+    : `https://wa.me/8615111041998?text=${encodeURIComponent(`Hello, I would like to discuss ${subject}.\n${canonicalUrl}\nChannel: website`)}`;
   const openEnquiry = (title = "Discuss your spun pile plant") => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
   };
 
   return (
-    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[72px] items-center justify-between gap-6">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
@@ -225,7 +229,7 @@ export default function App({ locale = "en" }) {
               <p className="mt-6 max-w-2xl text-[clamp(1.08rem,2vw,1.35rem)] leading-8 text-white/80">Plan a new prestressed spun concrete pile plant or upgrade an existing production line with project-specific moulds, equipment and line integration—from cage preparation to spinning, curing, demoulding and handling.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button onClick={() => openEnquiry("Request a turnkey plant review")}>Request a Turnkey Plant Review <ArrowRight size={17} /></Button>
-                <Button secondary onClick={() => document.querySelector("#solution")?.scrollIntoView()}>Review the Equipment Scope <ChevronRight size={17} /></Button>
+                <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">{meta.messagingCta} <MessageCircle size={17} /></a>
               </div>
               <div className="mt-10 grid max-w-3xl grid-cols-3 gap-px overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[720px]:grid-cols-1">
                 {[["10", "Equipment packages"], ["Ø300–1200 mm", "Preliminary planning families"], ["1–2 shifts", "Scalable capacity scenarios"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><div className="text-xl font-[900] text-white">{value}</div><div className="mt-1 text-[11px] font-bold tracking-wide text-white/62 uppercase">{label}</div></div>)}
@@ -313,8 +317,8 @@ export default function App({ locale = "en" }) {
                 <div className="mt-6">
                   <button type="button" onClick={() => openEnquiry("Discuss a prestressed spun concrete pile production line")} className="flex min-h-14 w-full items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white shadow-[0_14px_30px_rgba(228,87,46,.25)]">Open enquiry form <ArrowRight size={17} /></button>
                   <div className="mt-5 grid grid-cols-2 gap-3 border-t border-line pt-5 text-sm text-muted max-[520px]:grid-cols-1">
-                    <p><strong className="text-brand-navy">E-mail:</strong><br />sales@realjetech.com</p>
-                    <p><strong className="text-brand-navy">WhatsApp:</strong><br />+86 193 1009 0600</p>
+                    <p dir="ltr"><strong className="text-brand-navy">E-mail:</strong><br />sales@realjetech.com</p>
+                    <p dir="ltr"><strong className="text-brand-navy">{meta.messagingLabel}:</strong><br />+86 151 1104 1998</p>
                   </div>
                 </div>
               </div>
@@ -332,8 +336,8 @@ export default function App({ locale = "en" }) {
 
       <footer className="bg-[#041522] py-10 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Turnkey equipment for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href="/" className="hover:text-white">Company website</a><a href="../privacy/en/" className="hover:text-white">Privacy Policy</a><button type="button" onClick={() => openEnquiry("Contact Realjet") } className="hover:text-white">Contact</button></div></div></footer>
 
-      <div className="max-[720px]:hidden"><FloatingContactActions canonicalUrl={canonicalUrl} enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} /></div>
-      <MobileContactBar canonicalUrl={canonicalUrl} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" onEnquire={openEnquiry} subject={subject} />
+      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} subject={subject} /></div>
+      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={canonicalUrl} emailLabel={meta.emailLabel} enquireLabel="Enquire" enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} subject={subject} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
     </div></LocalizedPage>
   );

@@ -4,11 +4,15 @@ import { trackEvent } from "./analytics";
 const actionClass = "flex min-w-0 items-center justify-center gap-1.5 rounded-lg px-2 py-3 text-[11px] font-[850] no-underline transition hover:bg-white/10 focus-visible:bg-white/10";
 
 export default function MobileContactBar({
+  ariaLabel = "Contact options",
   canonicalUrl,
   emailLabel = "Email",
   enquireLabel,
   enquiryTitle,
   hidden = false,
+  messagingChannel = "whatsapp",
+  messagingHref,
+  messagingLabel,
   onEnquire,
   subject,
   whatsappLabel = "WhatsApp",
@@ -23,7 +27,7 @@ export default function MobileContactBar({
   return (
     <nav
       className={`beam-mobile-contact-bar fixed inset-x-0 bottom-0 z-40 hidden grid-cols-3 gap-px border-t border-white/15 bg-brand-navy/95 px-2 pt-2 pb-[calc(8px+env(safe-area-inset-bottom))] text-white shadow-floating backdrop-blur-xl transition duration-200 max-[720px]:grid ${visibilityClass}`}
-      aria-label="Contact options"
+      aria-label={ariaLabel}
       aria-hidden={hidden}
     >
       <button
@@ -39,14 +43,15 @@ export default function MobileContactBar({
         <span className="truncate">{enquireLabel}</span>
       </button>
       <a
-        href={`https://wa.me/8619310090600?text=${whatsappText}`}
+        href={messagingHref || `https://wa.me/8619310090600?text=${whatsappText}`}
         target="_blank"
         rel="noopener noreferrer"
         tabIndex={hidden ? -1 : 0}
         className={`${actionClass} bg-white/8`}
+        onClick={() => trackEvent("mobile_contact_click", { channel: messagingChannel })}
       >
         <MessageCircle size={18} aria-hidden="true" />
-        <span className="truncate">{whatsappLabel}</span>
+        <span className="truncate">{messagingLabel || whatsappLabel}</span>
       </a>
       <a
         href={`mailto:sales@realjetech.com?subject=${emailSubject}&body=${emailBody}`}

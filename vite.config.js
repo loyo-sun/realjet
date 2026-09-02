@@ -42,6 +42,10 @@ export default defineConfig({
           process.cwd(),
           "marketing/spun-pipe-piles-production-line/vi/index.html",
         ),
+        "spun-pipe-piles-production-line-ar": resolve(
+          process.cwd(),
+          "marketing/spun-pipe-piles-production-line/ar/index.html",
+        ),
         "precast-beam-factory-cn": resolve(
           process.cwd(),
           "marketing/precast-beam-factory/cn/index.html",
