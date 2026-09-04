@@ -87,12 +87,12 @@ function Button({ children, onClick, secondary = false }) {
   );
 }
 
-function SectionHeading({ eyebrow, title, copy, centered = false }) {
+function SectionHeading({ eyebrow, title, copy, centered = false, inverse = false }) {
   return (
     <div className={centered ? "mx-auto max-w-3xl text-center" : "max-w-3xl"}>
-      <p className="mb-3 text-xs font-[900] tracking-[.18em] text-brand-blue uppercase">{eyebrow}</p>
-      <h2 className="text-[clamp(2rem,4vw,3.35rem)] leading-[1.08] font-[900] tracking-[-.035em] text-brand-navy">{title}</h2>
-      {copy && <p className="mt-5 text-[17px] leading-8 text-muted">{copy}</p>}
+      <p className={`mb-3 text-xs font-[900] tracking-[.18em] uppercase ${inverse ? "text-[#58d0d8]" : "text-brand-blue"}`}>{eyebrow}</p>
+      <h2 className={`text-[clamp(2rem,4vw,3.35rem)] leading-[1.08] font-[900] tracking-[-.035em] ${inverse ? "text-white" : "text-brand-navy"}`}>{title}</h2>
+      {copy && <p className={`mt-5 text-[17px] leading-8 ${inverse ? "text-white/75" : "text-muted"}`}>{copy}</p>}
     </div>
   );
 }
@@ -267,7 +267,7 @@ export default function App() {
 
         <section className="bg-[#071f34] py-24 text-white">
           <div className="site-container">
-            <SectionHeading eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
+            <SectionHeading inverse eyebrow="Turnkey delivery path" title="From requirement review to a commissioned production system" copy="Realjet can supply selected equipment packages or coordinate a turnkey plant boundary. The contract defines exactly what is included." />
             <div className="mt-12 grid grid-cols-4 gap-4 max-[900px]:grid-cols-2 max-[520px]:grid-cols-1">{[["01", "Requirement review", "Pile drawings, standards, capacity, site and local constraints."], ["02", "Concept engineering", "Process route, layout, takt model, utilities and equipment boundary."], ["03", "Manufacturing & integration", "Equipment fabrication, controls, interfaces and pre-delivery checks."], ["04", "Installation & ramp-up", "Site support, commissioning, trials and operator training to contract scope."]].map(([n, title, text]) => <article key={n} className="rounded-xl border border-white/12 bg-white/5 p-6"><div className="text-3xl font-[950] text-brand-cyan">{n}</div><h3 className="mt-6 text-lg font-[900]">{title}</h3><p className="mt-3 text-sm leading-6 text-white/62">{text}</p></article>)}</div>
             <div className="mt-10 grid grid-cols-3 gap-5 max-[800px]:grid-cols-1">{[[cageImage, "Cage preparation", "Equipment is coordinated with reinforcement design and downstream takt."], [handlingImage, "Mould handling", "Lifting, transfer and buffers are planned around real mass and bay geometry."], [plantImage, "Plant integration", "Line layout connects production flow, access, utilities and safety zones."]].map(([image, title, text]) => <article key={title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5"><img src={image} alt={`${title} reference for a spun pile production line`} className="h-52 w-full object-cover" /><div className="p-5"><h3 className="font-[900]">{title}</h3><p className="mt-2 text-sm leading-6 text-white/62">{text}</p></div></article>)}</div>
           </div>
