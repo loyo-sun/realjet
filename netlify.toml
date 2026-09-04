@@ -81,3 +81,8 @@
   for = "/admin/*"
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/marketing/spun-pipe-piles-production-line-v1/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
