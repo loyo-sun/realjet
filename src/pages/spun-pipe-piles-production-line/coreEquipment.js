@@ -1,29 +1,30 @@
-import feeding from "../../assets/image/spun-pipe-piles-line/equipment-reference/feeding.png";
-import heading from "../../assets/image/spun-pipe-piles-line/equipment-reference/cutting-heading.webp";
-import skirt from "../../assets/image/spun-pipe-piles-line/equipment-reference/skirt-forming.png";
-import wire from "../../assets/image/spun-pipe-piles-line/equipment-reference/wire-drawing.webp";
-import tension from "../../assets/image/spun-pipe-piles-line/equipment-reference/tensioning.png";
-import cage from "../../assets/image/spun-pipe-piles-line/cage-welding.webp";
-import mould from "../../assets/image/spun-pipe-piles-line/pile-mould.webp";
-import spinning from "../../assets/image/spun-pipe-piles-line/centrifugal-spinning.webp";
-import crane from "../../assets/image/spun-pipe-piles-line/line-hero.webp";
+import product0 from "../../assets/image/spun-pipe-piles-line/core-products/batching-plant.webp";
+import product1 from "../../assets/image/spun-pipe-piles-line/core-products/friction-wheel-drive.webp";
+import product2 from "../../assets/image/spun-pipe-piles-line/core-products/bar-processing-machine.webp";
+import product3 from "../../assets/image/spun-pipe-piles-line/core-products/cage-welding-machine.webp";
+import product4 from "../../assets/image/spun-pipe-piles-line/core-products/skirt-forming-machine.webp";
+import product5 from "../../assets/image/spun-pipe-piles-line/core-products/wire-drawing-machine.webp";
+import product6 from "../../assets/image/spun-pipe-piles-line/core-products/tensioning-machine.webp";
+import product7 from "../../assets/image/spun-pipe-piles-line/core-products/pile-steel-mould.webp";
+import product8 from "../../assets/image/spun-pipe-piles-line/core-products/spinning-machine.webp";
+import product9 from "../../assets/image/spun-pipe-piles-line/core-products/curing-control-cabinet.webp";
+import product10 from "../../assets/image/spun-pipe-piles-line/core-products/twin-hook-overhead-crane.webp";
+import product11 from "../../assets/image/spun-pipe-piles-line/core-products/automatic-mould-lifter.webp";
 
-// Replace each image and alt together when the matching approved equipment photo is available.
-// reference=true denotes a third-party equipment reference, not Realjet-owned equipment.
-// Source pages and replacement shot list: docs/spun-pile-photo-references.md.
+// One product per card. Photo provenance: docs/spun-pile-photo-references.md.
 export const coreEquipment = [
-  { id: "batching-feeding", nameZh: "混凝土搅拌、分料与喂料系统", title: "Concrete batching & feeding", copy: "Batching plant, distribution cars and fixed feeding hoppers.", image: feeding, alt: "Third-party reference photograph of a concrete feeding hopper and discharge unit", reference: true },
-  { id: "friction-transfer", nameZh: "摩擦轮驱动与喂料平车", title: "Friction drives & transfer cars", copy: "Friction-wheel drives and flat transfer cars for feeding and curing-exit areas.", image: null, alt: "", reference: false, photoBrief: "Friction-wheel drive, rail and transfer car in one view." },
-  { id: "cutting-heading", nameZh: "自动切断镦头一体机", title: "Automatic cutting & heading", copy: "Steel-bar cutting, heading, pay-off and automatic turnover racks.", image: heading, alt: "Third-party reference photograph of a PC steel bar heading station with steel coils and bar guides", reference: true },
-  { id: "cage-welding", nameZh: "圆桩钢筋笼滚焊机", title: "Reinforcement cage welding", copy: "Cage welding machine with traction carriage, guides and controls.", image: cage, alt: "Circular reinforcement cage welding equipment", reference: false },
-  { id: "skirt-forming", nameZh: "圆桩裙板加工设备", title: "Pile skirt forming equipment", copy: "Steel-strip cutting, rolling, embossing and mechanical joining.", image: skirt, alt: "Third-party reference photograph of an integrated pile skirt plate processing line", reference: true },
-  { id: "wire-drawing", nameZh: "拉丝机组", title: "Wire drawing line", copy: "Wire drawing with pay-off, descaling and butt-welding equipment.", image: wire, alt: "Third-party reference photograph of a multi-block steel wire drawing machine", reference: true },
-  { id: "tensioning", nameZh: "数控张拉机", title: "Controlled tensioning system", copy: "Tensioning carriage, hydraulic station, jack and control cabinet.", image: tension, alt: "Third-party reference photograph of a pile tensioning jack, rail carriage and control cabinet", reference: true },
-  { id: "pile-moulds", nameZh: "管桩钢模", title: "Spun pile steel moulds", copy: "Split moulds matched to the pile drawing and spinning equipment.", image: mould, alt: "Split steel moulds for spun concrete piles", reference: false },
-  { id: "spinning", nameZh: "离心机", title: "Centrifugal spinning machines", copy: "Roller assemblies, motors, variable-speed drives and controls.", image: spinning, alt: "Spun pile moulds supported on centrifugal spinning rollers", reference: false },
-  { id: "curing-control", nameZh: "蒸养池温控系统", title: "Steam-curing temperature control", copy: "Curing-pit temperature monitoring, electrical controls and display.", image: null, alt: "", reference: false, photoBrief: "Temperature cabinet, display and curing-pit sensor connections." },
-  { id: "overhead-cranes", nameZh: "双钩桥式起重机", title: "Twin-hook overhead cranes", copy: "Single- or double-girder cranes matched to bay and lifting requirements.", image: crane, alt: "Overhead cranes above a spun pile mould production area", reference: false },
-  { id: "lifting-devices", nameZh: "钢模自动吊具与成品桩吸盘", title: "Mould & finished-pile lifters", copy: "Automatic steel-mould lifting devices and finished-pile suction lifters.", image: null, alt: "", reference: false, photoBrief: "Automatic mould gripper and finished-pile suction lifter." },
+  { id: "batching-plant", nameZh: "混凝土搅拌站", title: "Concrete Batching Plant", copy: "Produces concrete batches for spun pile production.", image: product0, alt: "Concrete batching plant with storage silos above the mixing platform" },
+  { id: "friction-wheel-drive", nameZh: "摩擦轮驱动装置", title: "Friction-Wheel Drive", copy: "Moves the production trolley along its transfer route.", image: product1, alt: "Motor-driven friction-wheel assemblies on steel bases" },
+  { id: "bar-processing-machine", nameZh: "自动切断镦头一体机", title: "PC Bar Processing Machine", copy: "Cuts prestressing bar to length before forming anchorage heads.", image: product2, alt: "PC bar processing equipment beside a long steel-bar feed rack" },
+  { id: "cage-welding-machine", nameZh: "钢筋笼滚焊机", title: "Cage Welding Machine", copy: "Welds spiral wire onto longitudinal bars to form the pile cage.", image: product3, alt: "Circular reinforcement cage welding machine in a workshop" },
+  { id: "skirt-forming-machine", nameZh: "裙板成型机", title: "Skirt Forming Machine", copy: "Forms steel strip into pile-end skirts.", image: product4, alt: "Pile skirt forming machine beside formed steel rings" },
+  { id: "wire-drawing-machine", nameZh: "拉丝机", title: "Wire Drawing Machine", copy: "Draws steel wire to the specified diameter for cage production.", image: product5, alt: "Steel wire drawing machine with multiple drawing blocks" },
+  { id: "tensioning-machine", nameZh: "数控张拉机", title: "Pile Tensioning Machine", copy: "Applies controlled prestress to reinforcement inside the mould.", image: product6, alt: "Pile tensioning machine positioned at the end of a steel mould" },
+  { id: "pile-steel-mould", nameZh: "管桩钢模", title: "Spun Pile Steel Mould", copy: "Defines the pile shape during centrifugal forming.", image: product7, alt: "Split steel moulds for spun concrete pile production" },
+  { id: "spinning-machine", nameZh: "离心机", title: "Centrifugal Spinning Machine", copy: "Rotates the loaded mould to compact the concrete.", image: product8, alt: "Centrifugal spinning machine roller assemblies in a workshop" },
+  { id: "curing-control-cabinet", nameZh: "蒸养温控柜", title: "Curing Control Cabinet", copy: "Monitors curing-pit temperatures through a central control panel.", image: product9, alt: "Steam-curing control cabinet with individual temperature displays" },
+  { id: "twin-hook-overhead-crane", nameZh: "双钩桥式起重机", title: "Twin-Hook Overhead Crane", copy: "Lifts long moulds using two coordinated lifting points.", image: product10, alt: "Twin-hook overhead bridge cranes inside a production workshop" },
+  { id: "automatic-mould-lifter", nameZh: "钢模自动吊具", title: "Automatic Mould Lifter", copy: "Grips steel moulds for crane-assisted transfer between stations.", image: product11, alt: "Suspended automatic mould lifting beam with multiple gripping points" },
 ];
 
-export const auxiliaryEquipment = ["Steam boiler", "Screw air compressor & receivers", "Winch", "Pile-sawing trolleys", "Pneumatic impact wrenches"];
+export const auxiliaryEquipment = ["Steam boiler", "Screw air compressor", "Winch", "Pile-sawing trolley", "Pneumatic impact wrench"];
