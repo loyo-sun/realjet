@@ -5,6 +5,24 @@ eleventyExcludeFromCollections: true
 
 # Equipment system 单产品卡片与 WebP 图片
 
+## 当前补充
+
+设备总数现为 17 款，桌面每行 4 款。以下五款已从 Supporting equipment 标签改成主列表图文卡片；序号和页面参考声明按用户要求删除。原有 12 款及原图未改。
+
+| 产品 | imagess 来源 | 输出 WebP | 字节 |
+| --- | --- | --- | --- |
+| Steam Boiler | 第6页-16.PNG | steam-boiler.webp | 12342 |
+| Screw Air Compressor | 第7页-17.PNG | screw-air-compressor.webp | 8178 |
+| Winch | 第7页-18.PNG | winch.webp | 13638 |
+| Pile-Sawing Trolley | 第7页-19.PNG | pile-sawing-trolley.webp | 11936 |
+| Pneumatic Impact Wrench | 第8页-22.PNG | pneumatic-impact-wrench.webp | 19624 |
+
+点击每张图片可打开原生模态对话框，支持关闭按钮、Esc、背景关闭；打开时锁定背景滚动，关闭后恢复焦点。放大显示现有 WebP，不生成虚假的高清细节。
+
+维护记录中的权利提醒仍然有效，移除页面说明不代表素材授权已核验。
+
+以下为首批 12 款的处理记录。
+
 日期：2026-09-04。当前英文 LP 保留 12 张卡片，桌面 4 列 × 3 行。
 每张卡片仅介绍一款设备，标题与介绍不使用 and 或 & 组合不同产品。
 

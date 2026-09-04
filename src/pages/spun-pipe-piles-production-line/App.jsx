@@ -36,7 +36,8 @@ import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../prec
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeMeta, translate } from "./translations";
-import { coreEquipment, auxiliaryEquipment } from "./coreEquipment";
+import { coreEquipment } from "./coreEquipment";
+import EquipmentImageDialog from "./EquipmentImageDialog";
 import userPlantLayout from "../../assets/image/spun-pipe-piles-line/plant-planning-user.png";
 
 const scope = [
@@ -241,6 +242,7 @@ function AdsLeadForm({ locale = "en" }) {
 }
 
 function EnglishVisualAdsPage() {
+  const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
   const meta = localeMeta.en;
@@ -317,16 +319,16 @@ function EnglishVisualAdsPage() {
 
             <div id="core-equipment" className="mt-12 scroll-mt-24 border-t border-line pt-10">
               <div className="flex items-end justify-between gap-6 max-[760px]:flex-col max-[760px]:items-start">
-                <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Spun pile equipment</h3><p className="mt-4 text-sm leading-7 text-muted">One core machine per production task. Select each unit to fit your plant requirements.</p></div>
+                <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Spun pile equipment</h3><p className="mt-4 text-sm leading-7 text-muted">One core machine per production task. Select each unit to fit your plant requirements.</p></div>
                 <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
               </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
-                {coreEquipment.map((item, index) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#f6f8fa]"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /><span className="absolute top-3 left-3 rounded-md bg-brand-navy/90 px-2.5 py-1 text-xs font-[900] text-white">{String(index + 1).padStart(2, "0")}</span></div>
+                {coreEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
+                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`Enlarge ${item.title} image`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /><span className="absolute right-2 bottom-2 rounded bg-white/90 px-2 py-1 text-[11px] font-bold text-brand-navy">View larger</span></button>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
               </div>
-              <div className="mt-6 border-t border-line pt-5"><h4 className="text-sm font-[900] text-brand-navy">Supporting equipment</h4><div className="mt-3 flex flex-wrap gap-2">{auxiliaryEquipment.map((item) => <span key={item} className="rounded-full bg-soft px-3 py-2 text-xs font-bold text-brand-navy">{item}</span>)}</div><p className="mt-4 text-xs leading-6 text-muted">Equipment photos are illustrative references, not evidence of Realjet manufacture or delivery. Final specifications depend on project requirements.</p></div>
+
             </div>
             </div>
           </div>
@@ -349,6 +351,7 @@ function EnglishVisualAdsPage() {
 
       <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
       <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
+      <EquipmentImageDialog item={selectedEquipment} onClose={() => setSelectedEquipment(null)} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale="en" />
     </div>
   );
