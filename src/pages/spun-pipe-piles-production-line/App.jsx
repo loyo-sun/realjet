@@ -36,6 +36,7 @@ import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../prec
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeMeta, translate } from "./translations";
+import { coreEquipment, auxiliaryEquipment } from "./coreEquipment";
 
 const scope = [
   ["Spun pile moulds", "Split steel moulds planned around pile diameter, length, mass and lifting method."],
@@ -356,11 +357,18 @@ function EnglishVisualAdsPage() {
               <div className="flex flex-col justify-center p-9 max-[520px]:p-6"><span className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">Plan around the whole production flow</h3><p className="mt-4 text-sm leading-7 text-white/68">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 rounded-lg border border-white/12 bg-white/5 px-3 py-3 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
             </div>
 
-            <div className="mt-6 grid grid-cols-[.82fr_1.18fr] overflow-hidden rounded-2xl border border-line bg-white shadow-card max-[900px]:grid-cols-1">
-              <div className="flex flex-col justify-center p-9 max-[520px]:p-6"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">One package or a coordinated complete line</h3><p className="mt-4 text-sm leading-7 text-muted">Supply can cover selected equipment or the main production system—from cage preparation and moulds to spinning, curing, handling and controls.</p><button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="mt-6 inline-flex items-center gap-2 self-start text-sm font-[900] text-brand-blue">Confirm My Scope <ArrowRight size={17} /></button></div>
-              <div className="grid grid-cols-2 gap-1 bg-line p-1">
-                {[[mouldImage, "Spun pile moulds"], [cageImage, "Reinforcement cage equipment"], [spinningImage, "Centrifugal spinning equipment"], [handlingImage, "Mould handling and transfer"]].map(([image, label]) => <figure key={label} className="relative min-h-[210px] overflow-hidden bg-brand-navy"><img src={image} alt={label} loading="lazy" className="absolute inset-0 h-full w-full object-cover" /><figcaption className="absolute right-0 bottom-0 left-0 bg-gradient-to-t from-[#041522] to-transparent px-4 pt-10 pb-4 text-sm font-[900] text-white">{label}</figcaption></figure>)}
+            <div id="core-equipment" className="mt-8 scroll-mt-24 rounded-2xl border border-line bg-white p-8 shadow-card max-[520px]:p-5">
+              <div className="flex items-end justify-between gap-6 max-[760px]:flex-col max-[760px]:items-start">
+                <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Core equipment for a coordinated production line</h3><p className="mt-4 text-sm leading-7 text-muted">From reinforcement preparation to mould handling. Select the equipment around your product, plant and upgrade scope.</p></div>
+                <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
               </div>
+              <div className="mt-7 grid grid-cols-3 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
+                {coreEquipment.map((item, index) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-soft"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover" /><span className="absolute top-3 left-3 rounded-md bg-brand-navy/90 px-2.5 py-1 text-xs font-[900] text-white">{String(index + 1).padStart(2, "0")}</span>{item.reference && <span className="absolute right-0 bottom-0 left-0 bg-brand-navy/85 px-3 py-2 text-[11px] font-bold text-white">Process reference · image to be replaced</span>}</div>
+                  <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
+                </article>)}
+              </div>
+              <div className="mt-6 border-t border-line pt-5"><h4 className="text-sm font-[900] text-brand-navy">Supporting equipment</h4><div className="mt-3 flex flex-wrap gap-2">{auxiliaryEquipment.map((item) => <span key={item} className="rounded-full bg-soft px-3 py-2 text-xs font-bold text-brand-navy">{item}</span>)}</div><p className="mt-4 text-xs leading-6 text-muted">Final models, quantities, utilities and delivery scope require project-specific engineering. Reference images do not represent the final equipment configuration.</p></div>
             </div>
           </div>
         </section>
