@@ -812,7 +812,7 @@ const adsPageTranslations = {
     "Layout": "المخطط",
     "Equipment": "المعدات",
     "Request proposal": "اطلب عرضاً",
-    "PHC / PC Spun Pile": "خوازيق PHC / PC",
+    "PHC / PC Spun Pile": "خوازيق PHC وPC",
     "Prestressed spun concrete pile production line": "خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي",
     "Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.": "أنشئ مصنعاً جديداً للخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي أو طوّر خطاً قائماً بقوالب وتكامل معدات وتخطيط طاقة مخصص للمشروع.",
     "New production line": "خط إنتاج جديد",

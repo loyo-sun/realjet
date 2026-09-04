@@ -439,7 +439,7 @@ for (const requiredContent of [
 for (const [page, locale, canonical, title] of [
   [spunPipePilesIdPage, "id", "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/", "Lini Produksi PHC / PC Baru & Peningkatan Lini"],
   [spunPipePilesViPage, "vi", "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/", "Dây Chuyền Cọc PHC / PC Mới & Nâng Cấp"],
-  [spunPipePilesArPage, "ar", "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/", "خط إنتاج خوازيق PHC / PC وتطوير الخطوط"],
+  [spunPipePilesArPage, "ar", "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/", "خط إنتاج خوازيق PHC وPC وتطوير الخطوط"],
 ]) {
   for (const requiredContent of [
     `<html lang="${locale}"`,

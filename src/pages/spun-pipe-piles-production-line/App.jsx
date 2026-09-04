@@ -286,7 +286,9 @@ function AdsPage({ locale = "en" }) {
           <div className="industrial-grid absolute inset-0 opacity-25" />
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
-              <h1 className="text-[clamp(2.45rem,4.4vw,4rem)] leading-[1.01] font-[950] tracking-[-.048em]"><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></h1>
+              <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
+                {locale === "ar" ? <> خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></>}
+              </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
                 {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
