@@ -266,7 +266,7 @@ function EnglishVisualAdsPage() {
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
-            {[["Solutions", "#solutions"], ["Advantages", "#advantages"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
+            {[["Advantages", "#advantages"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
             <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
             <LanguageSwitcher current="en" />
           </nav>
@@ -300,28 +300,14 @@ function EnglishVisualAdsPage() {
           </div>
         </section>
 
-        <section id="solutions" className="scroll-mt-20 py-20">
-          <div className="site-container">
-            <SectionHeading centered eyebrow="What we do" title="Build a new line—or make your existing line work better" copy="Two project paths, both engineered around your pile range, output target and plant conditions." />
-            <div className="mt-10 grid grid-cols-2 gap-6 max-[820px]:grid-cols-1">
-              <article className="group overflow-hidden rounded-2xl bg-[#071f34] text-white shadow-card">
-                <div className="relative h-[330px] overflow-hidden"><img src={layoutImage} alt="Reference layout concept for a new spun pile production line" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" /><div className="absolute inset-0 bg-gradient-to-t from-[#071f34]/90 via-transparent to-transparent" /><span className="absolute top-5 left-5 rounded-full bg-brand-cyan px-3 py-1.5 text-xs font-[900] text-brand-navy">NEW LINE</span></div>
-                <div className="p-7"><h3 className="text-2xl font-[950]">Build a New Spun Pile Line</h3><p className="mt-3 text-sm leading-6 text-white/68">Define the process, equipment, mould quantity, capacity and layout from the production target.</p><div className="mt-5 flex flex-wrap gap-2">{["Product & output", "Plant layout", "Equipment scope", "Mould circulation"].map((item) => <span key={item} className="rounded-full border border-white/14 px-3 py-1.5 text-xs font-bold text-white/78">{item}</span>)}</div><button type="button" onClick={() => openEnquiry("Plan a new spun pile production line")} className="mt-6 inline-flex items-center gap-2 text-sm font-[900] text-brand-cyan">Plan My New Line <ArrowRight size={17} /></button></div>
-              </article>
 
-              <article className="group overflow-hidden rounded-2xl bg-soft shadow-card">
-                <div className="relative h-[330px] overflow-hidden"><img src={spinningImage} alt="Reference centrifugal spinning equipment for an existing spun pile line upgrade" loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" /><div className="absolute inset-0 bg-gradient-to-t from-[#071f34]/70 via-transparent to-transparent" /><span className="absolute top-5 left-5 rounded-full bg-[#e4572e] px-3 py-1.5 text-xs font-[900] text-white">LINE UPGRADE</span></div>
-                <div className="p-7"><h3 className="text-2xl font-[950] text-brand-navy">Upgrade an Existing Production Line</h3><p className="mt-3 text-sm leading-6 text-muted">Start with the real bottleneck, then define the equipment, flow and control changes that belong in the upgrade.</p><div className="mt-5 flex flex-wrap gap-2">{["Spinning stability", "Mould return", "Handling & buffers", "Controls"].map((item) => <span key={item} className="rounded-full border border-line bg-white px-3 py-1.5 text-xs font-bold text-brand-navy">{item}</span>)}</div><button type="button" onClick={() => openEnquiry("Review an existing spun pile production line")} className="mt-6 inline-flex items-center gap-2 text-sm font-[900] text-brand-blue">Discuss My Bottleneck <ArrowRight size={17} /></button></div>
-              </article>
-            </div>
-          </div>
-        </section>
 
         <section id="advantages" className="scroll-mt-20 bg-soft py-20">
           <div className="site-container">
-            <SectionHeading centered eyebrow="Why Realjet" title="Plan the line. Coordinate the equipment." copy="A workable plant needs both system-level planning and equipment that fits the agreed process." />
+            <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-card" data-section="integrated-capabilities">
+            <div className="px-8 py-10 max-[520px]:px-5"><SectionHeading centered eyebrow="Why Realjet" title="Plan the line. Coordinate the equipment." copy="A workable plant needs both system-level planning and equipment that fits the agreed process." /></div>
 
-            <div className="mt-11 grid grid-cols-[1.05fr_.95fr] overflow-hidden rounded-2xl bg-[#071f34] text-white shadow-card max-[900px]:grid-cols-1">
+            <div className="grid grid-cols-[1.05fr_.95fr] border-y border-line bg-[#071f34] text-white max-[900px]:grid-cols-1">
               <a href={userPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center bg-white p-4 text-brand-blue" aria-label="Open full-size spun pile plant layout">
                 <img src={userPlantLayout} alt="Spun pile plant layout showing production bays, curing pits, finished-pile storage and aggregate areas" loading="lazy" className="h-auto w-full object-contain" />
                 <span className="mt-3 text-center text-xs font-bold">View full-size plant layout ↗</span>
@@ -329,7 +315,7 @@ function EnglishVisualAdsPage() {
               <div className="flex flex-col justify-center p-9 max-[520px]:p-6"><span className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">Plan around the whole production flow</h3><p className="mt-4 text-sm leading-7 text-white/68">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 rounded-lg border border-white/12 bg-white/5 px-3 py-3 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
             </div>
 
-            <div id="core-equipment" className="mt-8 scroll-mt-24 rounded-2xl border border-line bg-white p-8 shadow-card max-[520px]:p-5">
+            <div id="core-equipment" className="scroll-mt-24 bg-white p-8 max-[520px]:p-5">
               <div className="flex items-end justify-between gap-6 max-[760px]:flex-col max-[760px]:items-start">
                 <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Core equipment for a coordinated production line</h3><p className="mt-4 text-sm leading-7 text-muted">One core machine per production task. Select each unit to fit your plant requirements.</p></div>
                 <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
@@ -341,6 +327,7 @@ function EnglishVisualAdsPage() {
                 </article>)}
               </div>
               <div className="mt-6 border-t border-line pt-5"><h4 className="text-sm font-[900] text-brand-navy">Supporting equipment</h4><div className="mt-3 flex flex-wrap gap-2">{auxiliaryEquipment.map((item) => <span key={item} className="rounded-full bg-soft px-3 py-2 text-xs font-bold text-brand-navy">{item}</span>)}</div><p className="mt-4 text-xs leading-6 text-muted">Equipment photos are illustrative references, not evidence of Realjet manufacture or delivery. Final specifications depend on project requirements.</p></div>
+            </div>
             </div>
           </div>
         </section>
