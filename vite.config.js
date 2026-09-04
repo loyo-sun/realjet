@@ -34,6 +34,10 @@ export default defineConfig({
           process.cwd(),
           "marketing/spun-pipe-piles-production-line/index.html",
         ),
+        "spun-pipe-piles-production-line-v1": resolve(
+          process.cwd(),
+          "marketing/spun-pipe-piles-production-line-v1/index.html",
+        ),
         "spun-pipe-piles-production-line-id": resolve(
           process.cwd(),
           "marketing/spun-pipe-piles-production-line/id/index.html",

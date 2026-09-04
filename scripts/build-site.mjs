@@ -114,6 +114,7 @@ for (const expectedPath of [
   "feed.xml",
   "marketing/precast-beam-factory/en/index.html",
   "marketing/spun-pipe-piles-production-line/index.html",
+  "marketing/spun-pipe-piles-production-line-v1/index.html",
   "marketing/spun-pipe-piles-production-line/id/index.html",
   "marketing/spun-pipe-piles-production-line/vi/index.html",
   "marketing/spun-pipe-piles-production-line/ar/index.html",
