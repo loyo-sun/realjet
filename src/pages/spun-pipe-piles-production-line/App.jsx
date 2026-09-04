@@ -324,7 +324,7 @@ function EnglishVisualAdsPage() {
               </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
                 {coreEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
-                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`Enlarge ${item.title} image`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /><span className="absolute right-2 bottom-2 rounded bg-white/90 px-2 py-1 text-[11px] font-bold text-brand-navy">View larger</span></button>
+                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`Enlarge ${item.title} image`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></button>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
               </div>

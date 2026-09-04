@@ -17,7 +17,6 @@ const sources = [
   ["spinning-machine", "../imagess/第7页-21.PNG"],
   ["curing-control-cabinet", "../imagess/第3页-6.PNG"],
   ["twin-hook-overhead-crane", "../imagess/第4页-7.PNG"],
-  ["automatic-mould-lifter", "../imagess/第5页-10.PNG"],
   ["steam-boiler", "../imagess/第6页-16.PNG"],
   ["screw-air-compressor", "../imagess/第7页-17.PNG"],
   ["winch", "../imagess/第7页-18.PNG"],

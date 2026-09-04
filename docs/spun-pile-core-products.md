@@ -7,6 +7,8 @@ eleventyExcludeFromCollections: true
 
 ## 当前补充
 
+最新调整：移除 Automatic Mould Lifter 产品卡片，当前展示 16 款，桌面四列四行。移除所有 View larger 可见提示，图片点击放大功能保留。以下 17 款说明为上一轮记录，移除的图片文件保留备份。
+
 设备总数现为 17 款，桌面每行 4 款。以下五款已从 Supporting equipment 标签改成主列表图文卡片；序号和页面参考声明按用户要求删除。原有 12 款及原图未改。
 
 | 产品 | imagess 来源 | 输出 WebP | 字节 |

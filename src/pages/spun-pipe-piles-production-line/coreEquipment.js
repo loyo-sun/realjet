@@ -9,7 +9,6 @@ import product7 from "../../assets/image/spun-pipe-piles-line/core-products/pile
 import product8 from "../../assets/image/spun-pipe-piles-line/core-products/spinning-machine.webp";
 import product9 from "../../assets/image/spun-pipe-piles-line/core-products/curing-control-cabinet.webp";
 import product10 from "../../assets/image/spun-pipe-piles-line/core-products/twin-hook-overhead-crane.webp";
-import product11 from "../../assets/image/spun-pipe-piles-line/core-products/automatic-mould-lifter.webp";
 import boiler from "../../assets/image/spun-pipe-piles-line/core-products/steam-boiler.webp";
 import compressor from "../../assets/image/spun-pipe-piles-line/core-products/screw-air-compressor.webp";
 import winch from "../../assets/image/spun-pipe-piles-line/core-products/winch.webp";
@@ -29,7 +28,6 @@ export const coreEquipment = [
   { id: "spinning-machine", nameZh: "离心机", title: "Centrifugal Spinning Machine", copy: "Rotates the loaded mould to compact the concrete.", image: product8, alt: "Centrifugal spinning machine roller assemblies in a workshop" },
   { id: "curing-control-cabinet", nameZh: "蒸养温控柜", title: "Curing Control Cabinet", copy: "Monitors curing-pit temperatures through a central control panel.", image: product9, alt: "Steam-curing control cabinet with individual temperature displays" },
   { id: "twin-hook-overhead-crane", nameZh: "双钩桥式起重机", title: "Twin-Hook Overhead Crane", copy: "Lifts long moulds using two coordinated lifting points.", image: product10, alt: "Twin-hook overhead bridge cranes inside a production workshop" },
-  { id: "automatic-mould-lifter", nameZh: "钢模自动吊具", title: "Automatic Mould Lifter", copy: "Grips steel moulds for crane-assisted transfer between stations.", image: product11, alt: "Suspended automatic mould lifting beam with multiple gripping points" },
   { id: "steam-boiler", nameZh: "蒸汽锅炉", title: "Steam Boiler", copy: "Supplies steam for concrete pile curing.", image: boiler, alt: "Industrial steam boiler with a front-mounted burner" },
   { id: "screw-air-compressor", nameZh: "螺杆空压机", title: "Screw Air Compressor", copy: "Supplies compressed air for pneumatic equipment.", image: compressor, alt: "Blue enclosed screw air compressor with a control panel" },
   { id: "winch", nameZh: "卷扬机", title: "Winch", copy: "Provides pulling force for material transfer.", image: winch, alt: "Winch drive assembly with a gearbox beside a brake mechanism" },
