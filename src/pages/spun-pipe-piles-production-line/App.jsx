@@ -302,22 +302,22 @@ function EnglishVisualAdsPage() {
 
 
 
-        <section id="advantages" className="scroll-mt-20 bg-soft py-20">
+        <section id="advantages" className="scroll-mt-20 bg-white py-20">
           <div className="site-container">
-            <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-card" data-section="integrated-capabilities">
-            <div className="px-8 py-10 max-[520px]:px-5"><SectionHeading centered eyebrow="Why Realjet" title="Plan the line. Coordinate the equipment." copy="A workable plant needs both system-level planning and equipment that fits the agreed process." /></div>
+            <div data-section="integrated-capabilities">
+            <div className="mb-12"><SectionHeading centered eyebrow="Why Realjet" title="Plant layout and equipment" copy="We plan your production flow and select equipment to match it." /></div>
 
-            <div className="grid grid-cols-[1.05fr_.95fr] border-y border-line bg-[#071f34] text-white max-[900px]:grid-cols-1">
-              <a href={userPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center bg-white p-4 text-brand-blue" aria-label="Open full-size spun pile plant layout">
+            <div className="grid grid-cols-[1.05fr_.95fr] items-center gap-10 text-brand-navy max-[900px]:grid-cols-1 max-[900px]:gap-6">
+              <a href={userPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center text-brand-blue" aria-label="Open full-size spun pile plant layout">
                 <img src={userPlantLayout} alt="Spun pile plant layout showing production bays, curing pits, finished-pile storage and aggregate areas" loading="lazy" className="h-auto w-full object-contain" />
                 <span className="mt-3 text-center text-xs font-bold">View full-size plant layout ↗</span>
               </a>
-              <div className="flex flex-col justify-center p-9 max-[520px]:p-6"><span className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">Plan around the whole production flow</h3><p className="mt-4 text-sm leading-7 text-white/68">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 rounded-lg border border-white/12 bg-white/5 px-3 py-3 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
+              <div className="flex flex-col justify-center"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">A layout that fits your plant</h3><p className="mt-4 text-sm leading-7 text-muted">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 py-2 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
             </div>
 
-            <div id="core-equipment" className="scroll-mt-24 bg-white p-8 max-[520px]:p-5">
+            <div id="core-equipment" className="mt-12 scroll-mt-24 border-t border-line pt-10">
               <div className="flex items-end justify-between gap-6 max-[760px]:flex-col max-[760px]:items-start">
-                <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Core equipment for a coordinated production line</h3><p className="mt-4 text-sm leading-7 text-muted">One core machine per production task. Select each unit to fit your plant requirements.</p></div>
+                <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Equipment system</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Spun pile equipment</h3><p className="mt-4 text-sm leading-7 text-muted">One core machine per production task. Select each unit to fit your plant requirements.</p></div>
                 <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
               </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
@@ -336,7 +336,7 @@ function EnglishVisualAdsPage() {
 
         <section id="start" className="scroll-mt-20 bg-[#071f34] py-20 text-white">
           <div className="site-container">
-            <SectionHeading inverse eyebrow="Start the engineering conversation" title="Tell us about your production line project" copy="Send what you already know. We will organise the remaining technical questions with you." />
+            <SectionHeading inverse eyebrow="Start the engineering conversation" title="Let's discuss your project" copy="Send what you already know. We will organise the remaining technical questions with you." />
             <div className="mt-6 grid grid-cols-[1fr_.8fr] overflow-hidden rounded-2xl bg-white text-ink shadow-[0_24px_70px_rgba(0,0,0,.2)] max-[860px]:grid-cols-1">
               <div className="p-8 max-[520px]:p-6"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">What the review produces</p><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">A clearer basis for your next decision</h3><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Recommended equipment boundary", "Preliminary flow and layout", "Capacity and bottleneck checks", "Open questions for proposal engineering"].map((item) => <div key={item} className="flex gap-2 rounded-lg bg-soft px-4 py-3 text-sm font-bold text-brand-navy"><CheckCircle2 size={18} className="shrink-0 text-[#198754]" />{item}</div>)}</div></div>
               <div className="flex flex-col justify-center bg-[#eaf3f7] p-8 max-[520px]:p-6"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">New line or line upgrade</p><h3 className="mt-3 text-2xl font-[950] text-brand-navy">Turn your requirement into an equipment and layout plan.</h3><button type="button" onClick={() => scrollToReview("start-section")} className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Request a Line Proposal <ArrowRight size={17} /></button><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-brand-blue/20 bg-white px-5 text-sm font-[900] text-brand-blue no-underline">Chat on WhatsApp <MessageCircle size={17} /></a></div>
