@@ -307,7 +307,7 @@ function EnglishVisualAdsPage() {
         <section id="advantages" className="scroll-mt-20 bg-white py-20">
           <div className="site-container">
             <div data-section="integrated-capabilities">
-            <div className="mb-12"><SectionHeading centered eyebrow="Why Realjet" title="Plant layout and equipment" copy="We plan your production flow and select equipment to match it." /></div>
+            <div className="mb-12"><SectionHeading centered eyebrow="What we do" title="Plant layout and equipment" copy="We plan your production flow and select equipment to match it." /></div>
 
             <div className="grid grid-cols-[1.05fr_.95fr] items-center gap-10 text-brand-navy max-[900px]:grid-cols-1 max-[900px]:gap-6">
               <a href={userPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center text-brand-blue" aria-label="Open full-size spun pile plant layout">
