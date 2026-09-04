@@ -1,3 +1,8 @@
+---
+permalink: false
+eleventyExcludeFromCollections: true
+---
+
 # 管桩 LP 图片替换与拍摄清单
 
 > 本文保留上一版选图历史。当前单产品卡片、imagess 图片对应关系与 WebP 体积见 [单产品与图片记录](spun-pile-core-products.md)。下文的第三方参考图和三个待补拍位置已不再代表当前页面状态。

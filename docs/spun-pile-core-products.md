@@ -1,3 +1,8 @@
+---
+permalink: false
+eleventyExcludeFromCollections: true
+---
+
 # Equipment system 单产品卡片与 WebP 图片
 
 日期：2026-09-04。当前英文 LP 保留 12 张卡片，桌面 4 列 × 3 行。
