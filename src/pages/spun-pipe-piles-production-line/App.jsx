@@ -37,6 +37,7 @@ import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-fa
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeMeta, translate } from "./translations";
 import { coreEquipment, auxiliaryEquipment } from "./coreEquipment";
+import userPlantLayout from "../../assets/image/spun-pipe-piles-line/plant-planning-user.png";
 
 const scope = [
   ["Spun pile moulds", "Split steel moulds planned around pile diameter, length, mass and lifting method."],
@@ -257,36 +258,7 @@ function EnglishVisualAdsPage() {
     document.querySelector("#project-review")?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
-  const projectPreviews = [
-    {
-      image: plantImage,
-      label: "New production line",
-      title: "Integrated PHC / PC spun pile plant",
-      copy: "Product range, capacity, mould circulation, equipment and plant flow planned as one system.",
-      alt: "Reference PHC and PC spun pile production plant for a future project case",
-    },
-    {
-      image: layoutImage,
-      label: "Plant engineering",
-      title: "Production flow and layout planning",
-      copy: "Stations, buffers, crane coverage and utilities arranged around the actual building.",
-      alt: "Reference layout concept for a future spun pile production line project case",
-    },
-    {
-      image: spinningImage,
-      label: "Line upgrade",
-      title: "Spinning-system review and upgrade",
-      copy: "Mould running rings, rollers, drives, foundations and recipes reviewed together.",
-      alt: "Reference centrifugal spinning equipment for a future spun pile line upgrade case",
-    },
-    {
-      image: handlingImage,
-      label: "Flow upgrade",
-      title: "Mould handling and return upgrade",
-      copy: "Lifting, transfer, buffers and empty-mould return assessed against the target cycle.",
-      alt: "Reference mould handling equipment for a future spun pile line upgrade case",
-    },
-  ];
+
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
@@ -294,7 +266,7 @@ function EnglishVisualAdsPage() {
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
-            {[["Solutions", "#solutions"], ["Advantages", "#advantages"], ["Projects", "#projects"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
+            {[["Solutions", "#solutions"], ["Advantages", "#advantages"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
             <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
             <LanguageSwitcher current="en" />
           </nav>
@@ -350,10 +322,10 @@ function EnglishVisualAdsPage() {
             <SectionHeading centered eyebrow="Why Realjet" title="Plan the line. Coordinate the equipment." copy="A workable plant needs both system-level planning and equipment that fits the agreed process." />
 
             <div className="mt-11 grid grid-cols-[1.05fr_.95fr] overflow-hidden rounded-2xl bg-[#071f34] text-white shadow-card max-[900px]:grid-cols-1">
-              <div className="grid grid-cols-2 gap-px bg-white/12">
-                <figure className="bg-white"><img src={curvedLayoutReference} alt="Reference curved-track ground-level empty-mould return layout" loading="lazy" className="h-full min-h-[330px] w-full object-contain p-3" /></figure>
-                <figure className="bg-white"><img src={straightLayoutReference} alt="Reference straight-track ground-level empty-mould return layout" loading="lazy" className="h-full min-h-[330px] w-full object-contain p-3" /></figure>
-              </div>
+              <a href={userPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center bg-white p-4 text-brand-blue" aria-label="Open full-size spun pile plant layout">
+                <img src={userPlantLayout} alt="Spun pile plant layout showing production bays, curing pits, finished-pile storage and aggregate areas" loading="lazy" className="h-auto w-full object-contain" />
+                <span className="mt-3 text-center text-xs font-bold">View full-size plant layout ↗</span>
+              </a>
               <div className="flex flex-col justify-center p-9 max-[520px]:p-6"><span className="text-xs font-[900] tracking-[.16em] text-brand-cyan uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">Plan around the whole production flow</h3><p className="mt-4 text-sm leading-7 text-white/68">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 rounded-lg border border-white/12 bg-white/5 px-3 py-3 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
             </div>
 
@@ -364,7 +336,7 @@ function EnglishVisualAdsPage() {
               </div>
               <div className="mt-7 grid grid-cols-3 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
                 {coreEquipment.map((item, index) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
-                  <div className="relative aspect-[16/10] overflow-hidden bg-soft"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover" /><span className="absolute top-3 left-3 rounded-md bg-brand-navy/90 px-2.5 py-1 text-xs font-[900] text-white">{String(index + 1).padStart(2, "0")}</span>{item.reference && <span className="absolute right-0 bottom-0 left-0 bg-brand-navy/85 px-3 py-2 text-[11px] font-bold text-white">Process reference · image to be replaced</span>}</div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-soft">{item.image ? <img src={item.image} alt={item.alt} loading="lazy" className={`h-full w-full ${item.reference ? "object-contain bg-white p-3 pb-10" : "object-cover"}`} /> : <div className="flex h-full flex-col items-center justify-center gap-3 px-7 text-center text-muted"><Factory size={32} className="text-brand-blue/50" /><span className="text-sm font-bold">Equipment photo to follow</span><span className="text-xs leading-5">{item.photoBrief}</span></div>}<span className="absolute top-3 left-3 rounded-md bg-brand-navy/90 px-2.5 py-1 text-xs font-[900] text-white">{String(index + 1).padStart(2, "0")}</span>{item.reference && item.image && <span className="absolute right-0 bottom-0 left-0 bg-brand-navy/85 px-3 py-2 text-[11px] font-bold text-white">Third-party reference · photo to be replaced</span>}</div>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
               </div>
@@ -373,14 +345,7 @@ function EnglishVisualAdsPage() {
           </div>
         </section>
 
-        <section id="projects" className="scroll-mt-20 py-20">
-          <div className="site-container">
-            <div className="flex items-end justify-between gap-8 max-[760px]:flex-col max-[760px]:items-start"><SectionHeading eyebrow="Project portfolio" title="Four ways a spun pile project can begin" copy="Project details shown here are preview formats. Confirmed names, scope and results will replace them after client approval." /><span className="shrink-0 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-xs font-[850] text-amber-900">PROJECT PREVIEWS</span></div>
-            <div className="mt-10 grid grid-cols-2 gap-6 max-[760px]:grid-cols-1">
-              {projectPreviews.map((project, index) => <article key={project.title} className="group overflow-hidden rounded-2xl border border-line bg-white shadow-[0_12px_36px_rgba(8,37,63,.08)]"><div className="relative h-[310px] overflow-hidden"><img src={project.image} alt={project.alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]" /><div className="absolute inset-0 bg-gradient-to-t from-[#041522]/80 via-transparent to-transparent" /><div className="absolute right-5 bottom-5 left-5 flex items-end justify-between gap-5"><span className="rounded-full bg-white/94 px-3 py-1.5 text-xs font-[900] text-brand-blue">{project.label}</span><span className="text-3xl font-[950] text-white/72">0{index + 1}</span></div></div><div className="p-6"><h3 className="text-xl font-[950] text-brand-navy">{project.title}</h3><p className="mt-3 text-sm leading-6 text-muted">{project.copy}</p><p className="mt-5 border-t border-line pt-4 text-xs font-bold text-muted">Location · Product range · Scope · Outcome — to be confirmed</p></div></article>)}
-            </div>
-          </div>
-        </section>
+
 
         <section id="start" className="scroll-mt-20 bg-[#071f34] py-20 text-white">
           <div className="site-container">
