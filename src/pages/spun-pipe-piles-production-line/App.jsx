@@ -296,12 +296,9 @@ function EnglishVisualAdsPage({ locale = "en" }) {
                 {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
-              <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
-                {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
+              <div className="mt-8 grid max-w-2xl grid-cols-3 overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[620px]:grid-cols-1">
+                {[["90 days", "Delivery lead time"], ["+50%", "Capacity increase"], ["-10%", "Labour cost reduction"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><bdi dir="ltr" className="text-2xl font-[950] text-white">{value}</bdi><div className="mt-1 text-xs font-bold text-white/68">{label}</div></div>)}
               </div>
-              <ul className="mt-7 grid gap-3 text-sm text-white/76">
-                {["Equipment configuration based on pile specifications and output", "Production flow and layout based on plant conditions", "Moulds, spinning, curing, transfer and controls coordinated as one line"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
-              </ul>
               <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
 
@@ -419,12 +416,9 @@ function AdsPage({ locale = "en" }) {
                 {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
-              <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
-                {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
+              <div className="mt-8 grid max-w-2xl grid-cols-3 overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[620px]:grid-cols-1">
+                {[["90 days", "Delivery lead time"], ["+50%", "Capacity increase"], ["-10%", "Labour cost reduction"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><bdi dir="ltr" className="text-2xl font-[950] text-white">{value}</bdi><div className="mt-1 text-xs font-bold text-white/68">{label}</div></div>)}
               </div>
-              <ul className="mt-7 grid gap-3 text-sm text-white/76">
-                {["Equipment configuration based on pile specifications and output", "Production flow and layout based on plant conditions", "Moulds, spinning, curing, transfer and controls coordinated as one line"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
-              </ul>
               <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
 
