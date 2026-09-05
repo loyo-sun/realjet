@@ -168,7 +168,7 @@ function EnquiryModal({ open, title, onClose, locale }) {
   return (
     <div className="fixed inset-0 z-[120] grid place-items-center bg-[#041522]/78 p-5 backdrop-blur-sm" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
       <div ref={dialogRef} role="dialog" aria-modal="true" aria-labelledby="enquiry-title" className="relative w-full max-w-[650px] rounded-2xl bg-white p-7 shadow-[0_35px_90px_rgba(0,0,0,.38)] max-[720px]:p-5">
-        <button type="button" onClick={onClose} aria-label={t("Close enquiry form")} className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-full bg-soft text-brand-navy hover:bg-line"><X size={19} /></button>
+        <button type="button" onClick={onClose} aria-label={t("Close enquiry form")} className="absolute top-4 right-4 grid h-9 w-9 place-items-center rounded-full bg-soft text-brand-navy hover:bg-line rtl:right-auto rtl:left-4"><X size={19} /></button>
         {submissionState === "success" ? (
           <div className="py-8 text-center">
             <CheckCircle2 className="mx-auto text-[#198754]" size={48} />
@@ -179,7 +179,7 @@ function EnquiryModal({ open, title, onClose, locale }) {
         ) : (
           <>
             <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">{t("Project enquiry")}</p>
-            <h2 id="enquiry-title" className="mt-2 pr-10 text-2xl font-[900] tracking-[-.02em] text-brand-navy">{t(title)}</h2>
+            <h2 id="enquiry-title" className="mt-2 pr-10 text-2xl font-[900] tracking-[-.02em] text-brand-navy rtl:pr-0 rtl:pl-10">{t(title)}</h2>
             {locale !== "en" && <p className="mt-2 mb-5 text-sm leading-6 text-muted">{t("Share the pile size, target output and site information you already have. Name, e-mail and message are all we need.")}</p>}
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={submit} data-contact-form className={locale === "en" ? "mt-5" : undefined}>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
@@ -241,12 +241,21 @@ function AdsLeadForm({ locale = "en" }) {
   );
 }
 
-function EnglishVisualAdsPage() {
+function EnglishVisualAdsPage({ locale = "en" }) {
   const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
-  const meta = localeMeta.en;
-  const messagingHref = `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
+  const meta = localeMeta[locale] ?? localeMeta.en;
+  const t = (text) => translate(locale, text);
+  const localizedEquipment = coreEquipment.map((item) => ({
+    ...item,
+    title: t(item.title),
+    copy: t(item.copy),
+    alt: locale === "en" ? item.alt : t(item.title),
+  }));
+  const messagingHref = meta.messagingChannel === "zalo"
+    ? "https://zalo.me/8615111041998"
+    : `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
   const openEnquiry = (title) => {
     trackEvent("enquiry_modal_open", { source: title });
     setModal({ open: true, title });
@@ -263,14 +272,14 @@ function EnglishVisualAdsPage() {
 
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20">
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
           <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
             {[["Advantages", "#advantages"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white">Request proposal</button>
-            <LanguageSwitcher current="en" />
+            <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white rtl:mr-2 rtl:ml-0">Request proposal</button>
+            <LanguageSwitcher current={locale} />
           </nav>
           <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/8 md:hidden" aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
         </div>
@@ -283,7 +292,9 @@ function EnglishVisualAdsPage() {
           <div className="industrial-grid absolute inset-0 opacity-25" />
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
-              <h1 className="text-[clamp(2.45rem,4.4vw,4rem)] leading-[1.01] font-[950] tracking-[-.048em]"><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></h1>
+              <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
+                {locale === "ar" ? <>خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></>}
+              </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
                 {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
@@ -297,7 +308,7 @@ function EnglishVisualAdsPage() {
             <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[720px]:hidden">
               <p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">Project-specific review</p>
               <h2 className="mt-2 text-2xl font-[950] tracking-[-.025em] text-brand-navy">Request a Line Proposal</h2>
-              <div className="mt-5"><AdsLeadForm locale="en" /></div>
+              <div className="mt-5"><AdsLeadForm locale={locale} /></div>
             </aside>
           </div>
         </section>
@@ -322,8 +333,8 @@ function EnglishVisualAdsPage() {
                 <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
               </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
-                {coreEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
-                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`Enlarge ${item.title} image`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></button>
+                {localizedEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
+                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`${t("Enlarge image")}: ${item.title}`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></button>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
               </div>
@@ -346,13 +357,13 @@ function EnglishVisualAdsPage() {
         </section>
       </main>
 
-      <footer className="bg-[#041522] py-9 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Equipment and line integration for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href="../privacy/en/" className="hover:text-white">Privacy Policy</a><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a><button type="button" onClick={() => scrollToReview("footer")} className="hover:text-white">Request a review</button></div></div></footer>
+      <footer className="bg-[#041522] py-9 text-white"><div className="site-container flex items-center justify-between gap-6 max-[720px]:flex-col max-[720px]:items-start"><div><img src={logo} alt="REALJET" className="h-8 w-auto brightness-0 invert" /><p className="mt-3 text-xs text-white/48">Equipment and line integration for precast concrete production.</p></div><div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-bold text-white/65"><a href={locale === "en" ? "../privacy/en/" : `../../privacy/${locale}/`} className="hover:text-white">Privacy Policy</a><a href={messagingHref} target="_blank" rel="noopener noreferrer" className="hover:text-white">{meta.messagingLabel}</a><button type="button" onClick={() => scrollToReview("footer")} className="hover:text-white">Request a review</button></div></div></footer>
 
-      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
-      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel="whatsapp" messagingHref={messagingHref} messagingLabel="WhatsApp" onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
-      <EquipmentImageDialog item={selectedEquipment} onClose={() => setSelectedEquipment(null)} />
-      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale="en" />
-    </div>
+      <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
+      <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
+      <EquipmentImageDialog item={selectedEquipment} closeLabel={t("Close enlarged image")} onClose={() => setSelectedEquipment(null)} />
+      <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
+    </div></LocalizedPage>
   );
 }
 
@@ -684,5 +695,5 @@ function LegacyLocalizedPage({ locale = "en" }) {
 }
 
 export default function App({ locale = "en" }) {
-  return locale === "en" ? <EnglishVisualAdsPage /> : <AdsPage locale={locale} />;
+  return <EnglishVisualAdsPage locale={locale} />;
 }
