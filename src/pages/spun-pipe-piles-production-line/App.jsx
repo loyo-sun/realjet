@@ -292,7 +292,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
           <div className="industrial-grid absolute inset-0 opacity-25" />
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
-              <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
+              <h1 className={`text-[clamp(2.1rem,3.6vw,3.35rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
                 {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
@@ -415,7 +415,7 @@ function AdsPage({ locale = "en" }) {
           <div className="industrial-grid absolute inset-0 opacity-25" />
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
-              <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
+              <h1 className={`text-[clamp(2.1rem,3.6vw,3.35rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
                 {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
               <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
