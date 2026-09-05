@@ -5,6 +5,14 @@ eleventyExcludeFromCollections: true
 
 # Equipment system 单产品卡片与 WebP 图片
 
+## 2026-09-05 图片更新
+
+用户已自行替换 6 张素材：Automatic Mould Lifter、PC Bar Processing Machine、Concrete Batching Plant、Cage Welding Machine、Curing Control Cabinet、Friction-Wheel Drive。本轮保留这些文件不动。
+
+其余 11 张当前设备图使用 OpenAI Image 模型，以原图为编辑目标执行高清修复与 8:5 横向扩图：Skirt Forming Machine、Wire Drawing Machine、Pile Tensioning Machine、Spun Pile Steel Mould、Centrifugal Spinning Machine、Steam Boiler、Screw Air Compressor、Winch、Pile-Sawing Trolley、Pneumatic Impact Wrench、Twin-Hook Overhead Crane。统一输出为 800×500 WebP，单张 35,792–78,540 字节。气动扳手由原产品说明页改成无文字的单品实拍式画面，并同步修改 Alt。
+
+通用模型提示要求：保留原设备身份、主体结构、主要部件、颜色和视角；提高画面清晰度与曝光平衡；通过横向扩图达到 8:5；不得添加商标、水印或无关设备。模型输出属于基于原图的 AI 编辑素材，正式作为设备结构证明前仍需由项目负责人核对。
+
 ## 当前补充
 
 最新调整：移除 Automatic Mould Lifter 产品卡片，当前展示 16 款，桌面四列四行。移除所有 View larger 可见提示，图片点击放大功能保留。以下 17 款说明为上一轮记录，移除的图片文件保留备份。

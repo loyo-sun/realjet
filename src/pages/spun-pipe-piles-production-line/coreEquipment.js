@@ -32,5 +32,5 @@ export const coreEquipment = [
   { id: "screw-air-compressor", nameZh: "螺杆空压机", title: "Screw Air Compressor", copy: "Supplies compressed air for pneumatic equipment.", image: compressor, alt: "Blue enclosed screw air compressor with a control panel" },
   { id: "winch", nameZh: "卷扬机", title: "Winch", copy: "Provides pulling force for material transfer.", image: winch, alt: "Winch drive assembly with a gearbox beside a brake mechanism" },
   { id: "pile-sawing-trolley", nameZh: "锯桩小车", title: "Pile-Sawing Trolley", copy: "Supports pile positioning during cutting.", image: trolley, alt: "Stacked yellow trolley frames for pile-sawing equipment" },
-  { id: "pneumatic-impact-wrench", nameZh: "气动扳手", title: "Pneumatic Impact Wrench", copy: "Tightens or loosens mould fasteners using compressed air.", image: wrench, alt: "Product sheet showing a pneumatic impact wrench with a long drive shaft" },
+  { id: "pneumatic-impact-wrench", nameZh: "气动扳手", title: "Pneumatic Impact Wrench", copy: "Tightens or loosens mould fasteners using compressed air.", image: wrench, alt: "Red and black long-shaft pneumatic impact wrench on an industrial workbench" },
 ];
