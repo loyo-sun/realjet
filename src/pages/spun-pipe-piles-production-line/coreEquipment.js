@@ -12,7 +12,7 @@ import product10 from "../../assets/image/spun-pipe-piles-line/core-products/twi
 import boiler from "../../assets/image/spun-pipe-piles-line/core-products/steam-boiler.webp";
 import compressor from "../../assets/image/spun-pipe-piles-line/core-products/screw-air-compressor.webp";
 import winch from "../../assets/image/spun-pipe-piles-line/core-products/winch.webp";
-import trolley from "../../assets/image/spun-pipe-piles-line/core-products/pile-sawing-trolley.webp";
+import trolley from "../../assets/image/spun-pipe-piles-line/core-products/transfer-trolley.webp";
 import wrench from "../../assets/image/spun-pipe-piles-line/core-products/pneumatic-impact-wrench.webp";
 
 // One product per card. Photo provenance: docs/spun-pile-photo-references.md.
@@ -31,6 +31,6 @@ export const coreEquipment = [
   { id: "steam-boiler", nameZh: "蒸汽锅炉", title: "Steam Boiler", copy: "Supplies steam for concrete pile curing.", image: boiler, alt: "Industrial steam boiler with a front-mounted burner" },
   { id: "screw-air-compressor", nameZh: "螺杆空压机", title: "Screw Air Compressor", copy: "Supplies compressed air for pneumatic equipment.", image: compressor, alt: "Blue enclosed screw air compressor with a control panel" },
   { id: "winch", nameZh: "卷扬机", title: "Winch", copy: "Provides pulling force for material transfer.", image: winch, alt: "Winch drive assembly with a gearbox beside a brake mechanism" },
-  { id: "pile-sawing-trolley", nameZh: "锯桩小车", title: "Pile-Sawing Trolley", copy: "Supports pile positioning during cutting.", image: trolley, alt: "Stacked yellow trolley frames for pile-sawing equipment" },
+  { id: "transfer-trolley", nameZh: "管桩转运小车", title: "Transfer Trolley", copy: "Transfers piles between production stations.", image: trolley, alt: "Yellow pile transfer trolley frames in a workshop" },
   { id: "pneumatic-impact-wrench", nameZh: "气动扳手", title: "Pneumatic Impact Wrench", copy: "Tightens or loosens mould fasteners using compressed air.", image: wrench, alt: "Black and silver long-shaft pneumatic impact wrench on a white background" },
 ];

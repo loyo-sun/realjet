@@ -963,8 +963,8 @@ const visualPageTranslations = {
     "Supplies compressed air for pneumatic equipment.": "Memasok udara bertekanan untuk peralatan pneumatik.",
     "Winch": "Winch",
     "Provides pulling force for material transfer.": "Memberikan gaya tarik untuk transfer material.",
-    "Pile-Sawing Trolley": "Troli Pemotong Tiang",
-    "Supports pile positioning during cutting.": "Menopang dan memosisikan tiang saat pemotongan.",
+    "Transfer Trolley": "Troli Transfer Tiang",
+    "Transfers piles between production stations.": "Memindahkan tiang pancang antarstasiun produksi.",
     "Pneumatic Impact Wrench": "Kunci Impak Pneumatik",
     "Tightens or loosens mould fasteners using compressed air.": "Mengencangkan atau melepas pengikat cetakan dengan udara bertekanan."
   },
@@ -1027,8 +1027,8 @@ const visualPageTranslations = {
     "Supplies compressed air for pneumatic equipment.": "Cấp khí nén cho thiết bị khí động.",
     "Winch": "Tời kéo",
     "Provides pulling force for material transfer.": "Cung cấp lực kéo để vận chuyển vật liệu.",
-    "Pile-Sawing Trolley": "Xe cắt cọc",
-    "Supports pile positioning during cutting.": "Đỡ và định vị cọc trong khi cắt.",
+    "Transfer Trolley": "Xe chuyển cọc",
+    "Transfers piles between production stations.": "Chuyển cọc giữa các công đoạn sản xuất.",
     "Pneumatic Impact Wrench": "Súng siết bu lông khí nén",
     "Tightens or loosens mould fasteners using compressed air.": "Siết hoặc tháo liên kết khuôn bằng khí nén."
   },
@@ -1091,8 +1091,8 @@ const visualPageTranslations = {
     "Supplies compressed air for pneumatic equipment.": "يوفر الهواء المضغوط للمعدات الهوائية.",
     "Winch": "ونش سحب",
     "Provides pulling force for material transfer.": "يوفر قوة السحب لنقل المواد.",
-    "Pile-Sawing Trolley": "عربة قطع الخوازيق",
-    "Supports pile positioning during cutting.": "تسند الخازوق وتضبط موضعه أثناء القطع.",
+    "Transfer Trolley": "عربة نقل الخوازيق",
+    "Transfers piles between production stations.": "تنقل الخوازيق بين محطات الإنتاج.",
     "Pneumatic Impact Wrench": "مفتاح صدمات هوائي",
     "Tightens or loosens mould fasteners using compressed air.": "يشد أو يفك مثبتات القالب بالهواء المضغوط."
   }

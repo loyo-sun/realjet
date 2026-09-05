@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
 
 用户已自行替换 6 张素材：Automatic Mould Lifter、PC Bar Processing Machine、Concrete Batching Plant、Cage Welding Machine、Curing Control Cabinet、Friction-Wheel Drive。本轮保留这些文件不动。
 
-其余 11 张当前设备图使用 OpenAI Image 模型，以原图为编辑目标执行高清修复与 8:5 横向扩图：Skirt Forming Machine、Wire Drawing Machine、Pile Tensioning Machine、Spun Pile Steel Mould、Centrifugal Spinning Machine、Steam Boiler、Screw Air Compressor、Winch、Pile-Sawing Trolley、Pneumatic Impact Wrench、Twin-Hook Overhead Crane。统一输出为 800×500 WebP，单张 35,792–78,540 字节。气动扳手由原产品说明页改成无文字的单品实拍式画面，并同步修改 Alt。
+其余 11 张当前设备图使用 OpenAI Image 模型，以原图为编辑目标执行高清修复与 8:5 横向扩图：Skirt Forming Machine、Wire Drawing Machine、Pile Tensioning Machine、Spun Pile Steel Mould、Centrifugal Spinning Machine、Steam Boiler、Screw Air Compressor、Winch、Transfer Trolley、Pneumatic Impact Wrench、Twin-Hook Overhead Crane。统一输出为 800×500 WebP，单张 35,792–78,540 字节。气动扳手由原产品说明页改成无文字的单品实拍式画面，并同步修改 Alt。
 
 通用模型提示要求：保留原设备身份、主体结构、主要部件、颜色和视角；提高画面清晰度与曝光平衡；通过横向扩图达到 8:5；不得添加商标、水印或无关设备。模型输出属于基于原图的 AI 编辑素材，正式作为设备结构证明前仍需由项目负责人核对。
 
@@ -26,7 +26,7 @@ eleventyExcludeFromCollections: true
 | Steam Boiler | 第6页-16.PNG | steam-boiler.webp | 12342 |
 | Screw Air Compressor | 第7页-17.PNG | screw-air-compressor.webp | 8178 |
 | Winch | 第7页-18.PNG | winch.webp | 13638 |
-| Pile-Sawing Trolley | 第7页-19.PNG | pile-sawing-trolley.webp | 11936 |
+| Transfer Trolley | 第7页-19.PNG | transfer-trolley.webp | 11936 |
 | Pneumatic Impact Wrench | 第8页-22.PNG | pneumatic-impact-wrench.webp | 19624 |
 
 点击每张图片可打开原生模态对话框，支持关闭按钮、Esc、背景关闭；打开时锁定背景滚动，关闭后恢复焦点。放大显示现有 WebP，不生成虚假的高清细节。
