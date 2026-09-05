@@ -312,7 +312,6 @@ function EnglishVisualAdsPage() {
             <div className="grid grid-cols-[1.05fr_.95fr] items-center gap-10 text-brand-navy max-[900px]:grid-cols-1 max-[900px]:gap-6">
               <a href={enPlantLayout} target="_blank" rel="noopener noreferrer" className="flex flex-col justify-center text-brand-blue" aria-label="Open full-size English spun pile plant layout">
                 <img src={enPlantLayout} alt="English-labelled spun pile plant layout showing production areas, curing tanks, finished-goods storage and aggregate bins" loading="lazy" className="h-auto w-full object-contain" />
-                <span className="mt-3 text-center text-xs font-bold">View full-size plant layout ↗</span>
               </a>
               <div className="flex flex-col justify-center"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">01 · Line planning</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em]">A layout that fits your plant</h3><p className="mt-4 text-sm leading-7 text-muted">Product mix, mould cycle, spinning, curing, crane access, buffers and return routes are reviewed together.</p><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Cycle-time model", "Mould circulation", "Crane & logistics", "Plant constraints"].map((item) => <div key={item} className="flex items-center gap-2 py-2 text-sm font-bold"><Check size={16} className="text-brand-cyan" />{item}</div>)}</div></div>
             </div>
