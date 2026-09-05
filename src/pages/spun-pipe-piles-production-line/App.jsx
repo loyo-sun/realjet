@@ -293,14 +293,14 @@ function EnglishVisualAdsPage({ locale = "en" }) {
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
               <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
-                {locale === "ar" ? <>خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></>}
+                {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
-              <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
+              <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
                 {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
               </div>
               <ul className="mt-7 grid gap-3 text-sm text-white/76">
-                {["Preliminary equipment boundary and line flow", "Capacity model based on pile mix, mould cycle and shifts", "Mould, spinning, curing, handling and controls reviewed together"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
+                {["Equipment configuration based on pile specifications and output", "Production flow and layout based on plant conditions", "Moulds, spinning, curing, transfer and controls coordinated as one line"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
               </ul>
               <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: "whatsapp" })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
@@ -416,14 +416,14 @@ function AdsPage({ locale = "en" }) {
           <div className="site-container relative grid min-h-[calc(100svh-71px)] grid-cols-[1.16fr_.84fr] items-center gap-12 py-8 max-[980px]:grid-cols-1 max-[980px]:gap-9 max-[980px]:py-12">
             <div className="max-w-[760px]">
               <h1 className={`text-[clamp(2.45rem,4.4vw,4rem)] font-[950] ${locale === "ar" ? "leading-[1.12] tracking-[-.035em]" : "leading-[1.01] tracking-[-.048em]"}`}>
-                {locale === "ar" ? <> خط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">Production Line</span></>}
+                {locale === "ar" ? <>إنشاء وتطوير خطوط إنتاج الخوازيق الخرسانية سابقة الإجهاد بالطرد المركزي من نوعي <bdi dir="ltr">PHC</bdi> و<bdi dir="ltr">PC</bdi></> : <><span className="whitespace-nowrap max-[640px]:whitespace-normal">PHC / PC Spun Pile</span><br /><span className="text-[#58d0d8]">New Lines &amp; Upgrades</span></>}
               </h1>
-              <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Build a new prestressed spun concrete pile plant or upgrade an existing line with project-specific moulds, equipment integration and capacity planning.</p>
+              <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.8vw,1.3rem)] leading-8 text-white/80">Based on your pile specifications, target capacity and plant conditions, we plan the production flow, line layout and complete equipment package.</p>
               <div className="mt-7 grid max-w-2xl grid-cols-2 gap-3 max-[620px]:grid-cols-1">
                 {["New production line", "Upgrade an existing line"].map((item) => <div key={item} className="flex items-center gap-3 rounded-xl border border-white/14 bg-white/7 px-4 py-3 text-sm font-[850] backdrop-blur"><CheckCircle2 size={19} className="shrink-0 text-brand-cyan" />{item}</div>)}
               </div>
               <ul className="mt-7 grid gap-3 text-sm text-white/76">
-                {["Preliminary equipment boundary and line flow", "Capacity model based on pile mix, mould cycle and shifts", "Mould, spinning, curing, handling and controls reviewed together"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
+                {["Equipment configuration based on pile specifications and output", "Production flow and layout based on plant conditions", "Moulds, spinning, curing, transfer and controls coordinated as one line"].map((item) => <li key={item} className="flex items-start gap-3"><Check className="mt-0.5 shrink-0 text-brand-cyan" size={18} />{item}</li>)}
               </ul>
               <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
             </div>
