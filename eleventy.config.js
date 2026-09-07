@@ -18,8 +18,6 @@ export default function (eleventyConfig) {
       "images/home/manufacturing-capability.webp",
     "src/assets/image/precast-beam-factory-hero.webp":
       "images/home/precast-production-line.webp",
-    "src/assets/image/spun-pipe-piles-line/line-hero.webp":
-      "images/home/spun-pile-production-line.webp",
     "src/assets/image/intelligent-precast-beam-line-v1.webp":
       "images/products/intelligent-precast-beam-line.webp",
     "src/assets/image/intelligent-precast-beam-line-v2.webp":
