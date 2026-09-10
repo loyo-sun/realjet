@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { X } from "lucide-react";
 
-export default function EquipmentImageDialog({ item, closeLabel = "Close enlarged image", onClose }) {
+export default function EquipmentImageDialog({ item, detailLabel = "Role in the production line", closeLabel = "Close enlarged image", onClose }) {
   const dialogRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +30,13 @@ export default function EquipmentImageDialog({ item, closeLabel = "Close enlarge
           <button type="button" autoFocus onClick={onClose} aria-label={closeLabel}
             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-soft focus-visible:outline-2 focus-visible:outline-brand-blue"><X size={22} /></button>
         </div>
-        <img src={item.image} alt={item.alt} className="h-[70svh] w-full object-contain" />
+        <div className="grid grid-cols-[1.25fr_.75fr] gap-6 max-[760px]:grid-cols-1">
+          <div className="flex min-h-[360px] items-center justify-center rounded-xl bg-[#f6f8fa] p-4 max-[520px]:min-h-[260px]"><img src={item.image} alt={item.alt} className="max-h-[66svh] w-full object-contain" /></div>
+          <div className="self-center rounded-xl border border-line bg-soft p-6 max-[520px]:p-5">
+            <p className="text-xs font-[900] tracking-[.14em] text-brand-blue uppercase">{detailLabel}</p>
+            <p className="mt-4 text-base leading-7 text-muted">{item.detail}</p>
+          </div>
+        </div>
       </div>}
     </dialog>
   );

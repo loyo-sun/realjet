@@ -36,7 +36,7 @@ import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../prec
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeMeta, translate } from "./translations";
-import { coreEquipment } from "./coreEquipment";
+import { coreEquipment, equipmentCategories } from "./coreEquipment";
 import EquipmentImageDialog from "./EquipmentImageDialog";
 import enPlantLayout from "../../assets/image/spun-pipe-piles-line/spun-pile-plant-layout-en.webp";
 
@@ -243,6 +243,7 @@ function AdsLeadForm({ locale = "en" }) {
 
 function EnglishVisualAdsPage({ locale = "en" }) {
   const [selectedEquipment, setSelectedEquipment] = useState(null);
+  const [activeEquipmentCategory, setActiveEquipmentCategory] = useState("all");
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
   const meta = localeMeta[locale] ?? localeMeta.en;
@@ -251,8 +252,12 @@ function EnglishVisualAdsPage({ locale = "en" }) {
     ...item,
     title: t(item.title),
     copy: t(item.copy),
+    detail: t(item.detail),
     alt: locale === "en" ? item.alt : t(item.title),
   }));
+  const visibleEquipment = activeEquipmentCategory === "all"
+    ? localizedEquipment
+    : localizedEquipment.filter((item) => item.category === activeEquipmentCategory);
   const messagingHref = meta.messagingChannel === "zalo"
     ? "https://zalo.me/8615111041998"
     : `https://wa.me/8619310090600?text=${encodeURIComponent(`Hello, I would like to discuss ${meta.subject}.\n${meta.canonicalUrl}\nChannel: website`)}`;
@@ -329,8 +334,14 @@ function EnglishVisualAdsPage({ locale = "en" }) {
                 <div className="max-w-2xl"><span className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">02 · Complete equipment supply</span><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">Equipment for the whole production line</h3><p className="mt-4 text-sm leading-7 text-muted">We plan equipment purchases across the line's lifecycle to balance cost and performance and improve your return on investment.</p></div>
                 <button type="button" onClick={() => openEnquiry("Confirm a spun pile equipment scope")} className="inline-flex min-h-12 shrink-0 items-center gap-2 rounded-xl bg-brand-navy px-5 text-sm font-[900] text-white">Confirm My Scope <ArrowRight size={17} /></button>
               </div>
+              <div className="mt-7 flex flex-wrap gap-2" role="group" aria-label={t("Filter equipment by category")}>
+                {equipmentCategories.map((category) => {
+                  const active = activeEquipmentCategory === category.id;
+                  return <button key={category.id} type="button" aria-pressed={active} onClick={() => setActiveEquipmentCategory(category.id)} className={`min-h-10 rounded-full border px-4 text-sm font-[850] transition ${active ? "border-brand-navy bg-brand-navy text-white" : "border-line bg-white text-brand-navy hover:border-brand-blue hover:text-brand-blue"}`}>{t(category.label)}</button>;
+                })}
+              </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
-                {localizedEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
+                {visibleEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
                   <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`${t("Enlarge image")}: ${item.title}`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></button>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy">{item.title}</h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
@@ -358,7 +369,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
 
       <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
       <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
-      <EquipmentImageDialog item={selectedEquipment} closeLabel={t("Close enlarged image")} onClose={() => setSelectedEquipment(null)} />
+      <EquipmentImageDialog item={selectedEquipment} detailLabel={t("Role in the production line")} closeLabel={t("Close enlarged image")} onClose={() => setSelectedEquipment(null)} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
     </div></LocalizedPage>
   );
