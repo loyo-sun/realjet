@@ -9,7 +9,6 @@ import {
   Gauge,
   Layers3,
   Menu,
-  MessageCircle,
   PackageCheck,
   Settings2,
   ShieldCheck,
@@ -32,6 +31,7 @@ import straightLayoutReference from "../../assets/image/spun-pipe-piles-line/lay
 import UniversalEnquiryFields from "../precast-beam-factory/shared/UniversalEnquiryFields";
 import FloatingContactActions from "../precast-beam-factory/shared/FloatingContactActions";
 import MobileContactBar from "../precast-beam-factory/shared/MobileContactBar";
+import MessagingIcon from "../precast-beam-factory/shared/MessagingIcon";
 import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../precast-beam-factory/shared/universalEnquiry";
 import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -304,7 +304,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
               <div className="mt-8 grid max-w-2xl grid-cols-3 overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[620px]:grid-cols-1">
                 {[["90 days", "Delivery lead time"], ["+50%", "Capacity increase"], ["-10%", "Labour cost reduction"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><bdi dir="ltr" className="text-2xl font-[950] text-white">{value}</bdi><div className="mt-1 text-xs font-bold text-white/68">{label}</div></div>)}
               </div>
-              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className={`mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border px-5 text-sm font-[850] text-white no-underline transition ${locale === "vi" ? "border-[#0068ff] bg-[#0068ff] shadow-[0_14px_32px_rgba(0,104,255,.35)] hover:bg-[#0057d9]" : "border-white/30 bg-white/8 hover:bg-white/15"}`}>{meta.messagingCta} <MessageCircle size={17} /></a>
+              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className={`mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border px-5 text-sm font-[850] text-white no-underline transition ${locale === "vi" ? "border-[#0068ff] bg-[#0068ff] shadow-[0_14px_32px_rgba(0,104,255,.35)] hover:bg-[#0057d9]" : "border-white/30 bg-white/8 hover:bg-white/15"}`}>{meta.messagingCta} <MessagingIcon channel={meta.messagingChannel} size={22} /></a>
             </div>
 
             <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[720px]:hidden">
@@ -359,7 +359,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
             <SectionHeading inverse eyebrow="Start the engineering conversation" title="Let's discuss your project" copy="Send what you already know. We will organise the remaining technical questions with you." />
             <div className="mt-6 grid grid-cols-[1fr_.8fr] overflow-hidden rounded-2xl bg-white text-ink shadow-[0_24px_70px_rgba(0,0,0,.2)] max-[860px]:grid-cols-1">
               <div className="p-8 max-[520px]:p-6"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">What the review produces</p><h3 className="mt-3 text-3xl font-[950] tracking-[-.03em] text-brand-navy">A clearer basis for your next decision</h3><div className="mt-6 grid grid-cols-2 gap-3 max-[520px]:grid-cols-1">{["Recommended equipment boundary", "Preliminary flow and layout", "Capacity and bottleneck checks", "Open questions for proposal engineering"].map((item) => <div key={item} className="flex gap-2 rounded-lg bg-soft px-4 py-3 text-sm font-bold text-brand-navy"><CheckCircle2 size={18} className="shrink-0 text-[#198754]" />{item}</div>)}</div></div>
-              <div className="flex flex-col justify-center bg-[#eaf3f7] p-8 max-[520px]:p-6"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">New line or line upgrade</p><h3 className="mt-3 text-2xl font-[950] text-brand-navy">Turn your requirement into an equipment and layout plan.</h3><button type="button" onClick={() => scrollToReview("start-section")} className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Request a Line Proposal <ArrowRight size={17} /></button><a href={messagingHref} target="_blank" rel="noopener noreferrer" className={`mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border px-5 text-sm font-[900] no-underline transition ${locale === "vi" ? "border-[#0068ff] bg-[#0068ff] text-white shadow-[0_12px_28px_rgba(0,104,255,.28)] hover:bg-[#0057d9]" : "border-brand-blue/20 bg-white text-brand-blue"}`}>{meta.messagingCta} <MessageCircle size={17} /></a></div>
+              <div className="flex flex-col justify-center bg-[#eaf3f7] p-8 max-[520px]:p-6"><p className="text-xs font-[900] tracking-[.16em] text-brand-blue uppercase">New line or line upgrade</p><h3 className="mt-3 text-2xl font-[950] text-brand-navy">Turn your requirement into an equipment and layout plan.</h3><button type="button" onClick={() => scrollToReview("start-section")} className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#e4572e] px-5 text-sm font-[900] text-white">Request a Line Proposal <ArrowRight size={17} /></button><a href={messagingHref} target="_blank" rel="noopener noreferrer" className={`mt-3 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border px-5 text-sm font-[900] no-underline transition ${locale === "vi" ? "border-[#0068ff] bg-[#0068ff] text-white shadow-[0_12px_28px_rgba(0,104,255,.28)] hover:bg-[#0057d9]" : "border-brand-blue/20 bg-white text-brand-blue"}`}>{meta.messagingCta} <MessagingIcon channel={meta.messagingChannel} size={22} /></a></div>
             </div>
           </div>
         </section>
@@ -430,7 +430,7 @@ function AdsPage({ locale = "en" }) {
               <div className="mt-8 grid max-w-2xl grid-cols-3 overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[620px]:grid-cols-1">
                 {[["90 days", "Delivery lead time"], ["+50%", "Capacity increase"], ["-10%", "Labour cost reduction"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><bdi dir="ltr" className="text-2xl font-[950] text-white">{value}</bdi><div className="mt-1 text-xs font-bold text-white/68">{label}</div></div>)}
               </div>
-              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessageCircle size={17} /></a>
+              <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">Start Instant Chat <MessagingIcon channel={meta.messagingChannel} size={18} /></a>
             </div>
 
             <aside id="project-review" className="scroll-mt-24 rounded-2xl border border-white/20 bg-white p-7 text-ink shadow-[0_30px_80px_rgba(0,0,0,.32)] max-[720px]:hidden">
@@ -585,7 +585,7 @@ function LegacyLocalizedPage({ locale = "en" }) {
               <p className="mt-6 max-w-2xl text-[clamp(1.08rem,2vw,1.35rem)] leading-8 text-white/80">Plan a new prestressed spun concrete pile plant or upgrade an existing production line with project-specific moulds, equipment and line integration—from cage preparation to spinning, curing, demoulding and handling.</p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button onClick={() => openEnquiry("Request a turnkey plant review")}>Request a Turnkey Plant Review <ArrowRight size={17} /></Button>
-                <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">{meta.messagingCta} <MessageCircle size={17} /></a>
+                <a href={messagingHref} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("hero_messaging_click", { channel: meta.messagingChannel })} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-[10px] border border-white/30 bg-white/8 px-5 text-sm font-[850] text-white no-underline transition hover:bg-white/15">{meta.messagingCta} <MessagingIcon channel={meta.messagingChannel} size={18} /></a>
               </div>
               <div className="mt-10 grid max-w-3xl grid-cols-3 gap-px overflow-hidden rounded-xl border border-white/14 bg-white/14 max-[720px]:grid-cols-1">
                 {[["10", "Equipment packages"], ["Ø300–1200 mm", "Preliminary planning families"], ["1–2 shifts", "Scalable capacity scenarios"]].map(([value, label]) => <div key={label} className="bg-[#071f34]/76 px-5 py-4 backdrop-blur"><div className="text-xl font-[900] text-white">{value}</div><div className="mt-1 text-[11px] font-bold tracking-wide text-white/62 uppercase">{label}</div></div>)}

@@ -1,5 +1,6 @@
-import { Mail, MessageCircle, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
 import { trackEvent } from "./analytics";
+import MessagingIcon from "./MessagingIcon";
 
 const actionClass = "flex min-w-0 items-center justify-center gap-1.5 rounded-lg px-2 py-3 text-[11px] font-[850] no-underline transition hover:bg-white/10 focus-visible:bg-white/10";
 
@@ -51,7 +52,7 @@ export default function MobileContactBar({
         className={`${actionClass} bg-white/8`}
         onClick={() => trackEvent("mobile_contact_click", { channel: messagingChannel })}
       >
-        <MessageCircle size={18} aria-hidden="true" />
+        <MessagingIcon channel={messagingChannel} size={18} />
         <span className="truncate">{messagingLabel || whatsappLabel}</span>
       </a>
       {showEmail && (
