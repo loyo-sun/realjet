@@ -142,6 +142,13 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-navigation");
 const menuLabel = menuToggle?.querySelector(".sr-only");
 const mobileMenuBackdrop = document.querySelector("[data-mobile-menu-backdrop]");
+const solutionsMenu = navigation?.querySelector(".navigation-item-has-submenu");
+const solutionsToggle = solutionsMenu?.querySelector(".submenu-toggle");
+
+function setSolutionsMenu(open) {
+  solutionsMenu?.classList.toggle("is-open", open);
+  solutionsToggle?.setAttribute("aria-expanded", String(open));
+}
 
 function setMobileMenu(open) {
   menuToggle?.setAttribute("aria-expanded", String(open));
@@ -149,22 +156,50 @@ function setMobileMenu(open) {
   document.body.classList.toggle("has-mobile-menu", open);
   if (menuLabel) menuLabel.textContent = open ? "Close navigation" : "Open navigation";
   if (mobileMenuBackdrop) mobileMenuBackdrop.hidden = !open;
+  if (!open) setSolutionsMenu(false);
 }
 
 menuToggle?.addEventListener("click", () => {
   setMobileMenu(menuToggle.getAttribute("aria-expanded") !== "true");
 });
 mobileMenuBackdrop?.addEventListener("click", () => setMobileMenu(false));
+solutionsToggle?.addEventListener("click", () => {
+  if (window.innerWidth <= 720) {
+    setSolutionsMenu(solutionsToggle.getAttribute("aria-expanded") !== "true");
+  } else {
+    setSolutionsMenu(true);
+  }
+});
+solutionsMenu?.addEventListener("mouseenter", () => {
+  if (window.innerWidth > 720) setSolutionsMenu(true);
+});
+solutionsMenu?.addEventListener("mouseleave", () => {
+  if (window.innerWidth > 720) setSolutionsMenu(false);
+});
+solutionsMenu?.addEventListener("focusin", () => {
+  if (window.innerWidth > 720) setSolutionsMenu(true);
+});
+solutionsMenu?.addEventListener("focusout", (event) => {
+  if (window.innerWidth > 720 && !solutionsMenu.contains(event.relatedTarget)) {
+    setSolutionsMenu(false);
+  }
+});
 navigation?.addEventListener("click", (event) => {
   if (event.target.closest("a")) setMobileMenu(false);
 });
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && solutionsToggle?.getAttribute("aria-expanded") === "true") {
+    setSolutionsMenu(false);
+    solutionsToggle.focus();
+    return;
+  }
   if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
     setMobileMenu(false);
     menuToggle.focus();
   }
 });
 window.addEventListener("resize", () => {
+  setSolutionsMenu(false);
   if (window.innerWidth > 720) setMobileMenu(false);
 });
 

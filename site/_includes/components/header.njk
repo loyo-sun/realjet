@@ -8,9 +8,20 @@
     </button>
     <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
       <a href="/">Home</a>
+      <div class="navigation-item navigation-item-has-submenu">
+        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="solutions-submenu">
+          <span>Solutions</span>
+          <svg class="submenu-chevron" viewBox="0 0 12 8" width="12" height="8" aria-hidden="true" focusable="false">
+            <path d="M1 1.25 6 6.25l5-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div id="solutions-submenu" class="site-submenu">
+          <a href="/marketing/contract_manufacturing/">Contract Manufacturing</a>
+          <a href="/marketing/precast-beam-factory/en/">Turnkey Precast Beam Production Line</a>
+          <a href="/marketing/spun-pipe-piles-production-line/">Turnkey Precast Spun Pile Production Line</a>
+        </div>
+      </div>
       <a href="/products/">Products</a>
-      <a href="/precast-concrete-molds/">Precast Moulds</a>
-      <a href="/#services">Services</a>
       <a href="/insights/">Insights</a>
       <a href="/contact/">Contact</a>
     </nav>

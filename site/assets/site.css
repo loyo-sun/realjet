@@ -33,9 +33,17 @@ button, input, textarea, select { font: inherit; }
 .header-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 28px; }
 .brand { display: inline-flex; align-items: center; text-decoration: none; }
 .brand img { width: 188px; height: auto; }
-.site-navigation { display: flex; align-items: center; gap: 30px; }
-.site-navigation a { color: rgba(255,255,255,.76); font-size: 13px; font-weight: 800; text-decoration: none; }
-.site-navigation a:hover, .site-navigation a:focus-visible { color: var(--white); }
+.site-navigation { display: flex; min-height: 70px; align-items: center; gap: 30px; }
+.site-navigation > a, .submenu-toggle { color: rgba(255,255,255,.76); font-size: 13px; font-weight: 800; text-decoration: none; }
+.site-navigation > a:hover, .site-navigation > a:focus-visible, .submenu-toggle:hover, .submenu-toggle:focus-visible { color: var(--white); }
+.navigation-item { position: relative; display: flex; min-height: 70px; align-items: center; }
+.submenu-toggle { display: inline-flex; align-items: center; gap: 7px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.submenu-chevron { transition: transform 180ms ease; }
+.navigation-item-has-submenu:hover .submenu-chevron, .navigation-item-has-submenu.is-open .submenu-chevron { transform: rotate(180deg); }
+.site-submenu { position: absolute; top: 100%; left: 50%; width: max-content; min-width: 280px; max-width: 360px; padding: 8px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(6,27,44,.99); box-shadow: 0 18px 48px rgba(0,0,0,.28); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%,-7px); transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease; }
+.site-submenu a { display: block; padding: 12px 13px; border-radius: 8px; color: rgba(255,255,255,.76); font-size: 12px; font-weight: 750; line-height: 1.35; text-decoration: none; }
+.site-submenu a:hover, .site-submenu a:focus-visible { color: var(--white); background: rgba(255,255,255,.08); }
+.navigation-item-has-submenu:hover .site-submenu, .navigation-item-has-submenu.is-open .site-submenu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%,0); }
 .menu-toggle { display: none; width: 42px; height: 42px; border: 0; color: var(--white); background: transparent; }
 .menu-toggle > span:not(.sr-only) { display: block; width: 22px; height: 2px; margin: 5px auto; background: currentColor; }
 .mobile-menu-backdrop { display: none; }
@@ -808,9 +816,16 @@ body.has-enquiry-modal { overflow: hidden; }
   .site-header, .header-inner { min-height: 62px; }
   .brand img { width: 155px; }
   .menu-toggle { display: block; }
-  .site-navigation { position: absolute; top: 62px; right: 0; left: 0; z-index: 2; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: 10px 14px 16px; border-top: 1px solid rgba(255,255,255,.1); background: var(--navy); }
+  .site-navigation { position: absolute; top: 62px; right: 0; left: 0; z-index: 2; display: none; min-height: 0; align-items: stretch; flex-direction: column; gap: 0; padding: 10px 14px 16px; border-top: 1px solid rgba(255,255,255,.1); background: var(--navy); }
   .site-navigation.is-open { display: flex; }
-  .site-navigation a { padding: 13px 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .site-navigation > a { padding: 13px 8px; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .navigation-item { display: block; min-height: 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+  .submenu-toggle { width: 100%; min-height: 47px; justify-content: space-between; padding: 0 8px; text-align: left; }
+  .site-submenu { position: static; display: none; width: auto; min-width: 0; max-width: none; margin: 0 0 8px; padding: 4px 6px; border: 0; border-radius: 8px; background: rgba(255,255,255,.045); box-shadow: none; opacity: 1; visibility: visible; pointer-events: auto; transform: none; transition: none; }
+  .site-submenu a { padding: 11px 12px; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 12px; }
+  .site-submenu a:last-child { border-bottom: 0; }
+  .navigation-item-has-submenu:hover .site-submenu { display: none; transform: none; }
+  .navigation-item-has-submenu.is-open .site-submenu, .navigation-item-has-submenu.is-open:hover .site-submenu { display: block; }
   .mobile-menu-backdrop { position: fixed; inset: 62px 0 0; z-index: 300; display: block; padding: 0; border: 0; background: rgba(0,0,0,.62); backdrop-filter: blur(2px); }
   body.has-mobile-menu .site-header { z-index: 310; }
   body.has-mobile-menu { overflow: hidden; }
