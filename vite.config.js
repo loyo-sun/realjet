@@ -78,6 +78,10 @@ export default defineConfig({
           process.cwd(),
           "marketing/precast-beam-factory/ru/index.html",
         ),
+        "precast-beam-factory-vi": resolve(
+          process.cwd(),
+          "marketing/precast-beam-factory/vi/index.html",
+        ),
         "privacy-en": resolve(
           process.cwd(),
           "marketing/privacy/en/index.html",

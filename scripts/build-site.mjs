@@ -125,6 +125,7 @@ for (const expectedPath of [
   "marketing/precast-beam-factory/cn/index.html",
   "marketing/precast-beam-factory/fr/index.html",
   "marketing/precast-beam-factory/es/index.html",
+  "marketing/precast-beam-factory/vi/index.html",
   "marketing/privacy/en/index.html",
   "marketing/privacy/vi/index.html",
 ]) {
@@ -508,6 +509,7 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/marketing/precast-beam-factory/cn/",
   "https://realjetech.com/marketing/precast-beam-factory/fr/",
   "https://realjetech.com/marketing/precast-beam-factory/es/",
+  "https://realjetech.com/marketing/precast-beam-factory/vi/",
   "https://realjetech.com/marketing/privacy/en/",
   "https://realjetech.com/marketing/privacy/id/",
   "https://realjetech.com/marketing/privacy/ar/",
@@ -541,6 +543,7 @@ for (const requiredLlmsContent of [
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/ar/",
   "https://realjetech.com/marketing/precast-beam-factory/en/",
+  "https://realjetech.com/marketing/precast-beam-factory/vi/",
   "https://realjetech.com/insights/",
   "## Precast concrete production equipment",
   "## Precast mould and formwork products",

@@ -11,6 +11,6 @@ initAnalyticsConsent("vi", { showPanel: false });
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
-    <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/privacy/vi/" subject="dự án Realjet" />
+    <FloatingContactActions ariaLabel="Tùy chọn liên hệ" canonicalUrl="https://realjetech.com/marketing/privacy/vi/" enquiryLabel="Yêu cầu" messagingChannel="zalo" messagingHref="https://zalo.me/8619310090600" messagingLabel="Zalo" showEmail={false} subject="dự án Realjet" />
   </React.StrictMode>,
 );
