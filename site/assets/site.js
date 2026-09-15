@@ -142,12 +142,19 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".site-navigation");
 const menuLabel = menuToggle?.querySelector(".sr-only");
 const mobileMenuBackdrop = document.querySelector("[data-mobile-menu-backdrop]");
-const solutionsMenu = navigation?.querySelector(".navigation-item-has-submenu");
-const solutionsToggle = solutionsMenu?.querySelector(".submenu-toggle");
+const submenuItems = Array.from(
+  navigation?.querySelectorAll(".navigation-item-has-submenu") || [],
+);
 
-function setSolutionsMenu(open) {
-  solutionsMenu?.classList.toggle("is-open", open);
-  solutionsToggle?.setAttribute("aria-expanded", String(open));
+function setSubmenu(item, open) {
+  item?.classList.toggle("is-open", open);
+  item?.querySelector(".submenu-toggle")?.setAttribute("aria-expanded", String(open));
+}
+
+function closeSubmenus(except = null) {
+  for (const item of submenuItems) {
+    if (item !== except) setSubmenu(item, false);
+  }
 }
 
 function setMobileMenu(open) {
@@ -156,42 +163,55 @@ function setMobileMenu(open) {
   document.body.classList.toggle("has-mobile-menu", open);
   if (menuLabel) menuLabel.textContent = open ? "Close navigation" : "Open navigation";
   if (mobileMenuBackdrop) mobileMenuBackdrop.hidden = !open;
-  if (!open) setSolutionsMenu(false);
+  if (!open) closeSubmenus();
 }
 
 menuToggle?.addEventListener("click", () => {
   setMobileMenu(menuToggle.getAttribute("aria-expanded") !== "true");
 });
 mobileMenuBackdrop?.addEventListener("click", () => setMobileMenu(false));
-solutionsToggle?.addEventListener("click", () => {
-  if (window.innerWidth <= 720) {
-    setSolutionsMenu(solutionsToggle.getAttribute("aria-expanded") !== "true");
-  } else {
-    setSolutionsMenu(true);
-  }
-});
-solutionsMenu?.addEventListener("mouseenter", () => {
-  if (window.innerWidth > 720) setSolutionsMenu(true);
-});
-solutionsMenu?.addEventListener("mouseleave", () => {
-  if (window.innerWidth > 720) setSolutionsMenu(false);
-});
-solutionsMenu?.addEventListener("focusin", () => {
-  if (window.innerWidth > 720) setSolutionsMenu(true);
-});
-solutionsMenu?.addEventListener("focusout", (event) => {
-  if (window.innerWidth > 720 && !solutionsMenu.contains(event.relatedTarget)) {
-    setSolutionsMenu(false);
-  }
-});
+for (const item of submenuItems) {
+  const toggle = item.querySelector(".submenu-toggle");
+  toggle?.addEventListener("click", () => {
+    closeSubmenus(item);
+    if (window.innerWidth <= 720) {
+      setSubmenu(item, toggle.getAttribute("aria-expanded") !== "true");
+    } else {
+      setSubmenu(item, true);
+    }
+  });
+  item.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 720) {
+      closeSubmenus(item);
+      setSubmenu(item, true);
+    }
+  });
+  item.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 720) setSubmenu(item, false);
+  });
+  item.addEventListener("focusin", () => {
+    if (window.innerWidth > 720) {
+      closeSubmenus(item);
+      setSubmenu(item, true);
+    }
+  });
+  item.addEventListener("focusout", (event) => {
+    if (window.innerWidth > 720 && !item.contains(event.relatedTarget)) {
+      setSubmenu(item, false);
+    }
+  });
+}
 navigation?.addEventListener("click", (event) => {
   if (event.target.closest("a")) setMobileMenu(false);
 });
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && solutionsToggle?.getAttribute("aria-expanded") === "true") {
-    setSolutionsMenu(false);
-    solutionsToggle.focus();
-    return;
+  if (event.key === "Escape") {
+    const openItem = submenuItems.find((item) => item.classList.contains("is-open"));
+    if (openItem) {
+      setSubmenu(openItem, false);
+      openItem.querySelector(".submenu-toggle")?.focus();
+      return;
+    }
   }
   if (event.key === "Escape" && menuToggle?.getAttribute("aria-expanded") === "true") {
     setMobileMenu(false);
@@ -199,7 +219,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 window.addEventListener("resize", () => {
-  setSolutionsMenu(false);
+  closeSubmenus();
   if (window.innerWidth > 720) setMobileMenu(false);
 });
 
