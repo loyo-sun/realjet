@@ -1,146 +1,93 @@
 {
-  "hero-panoramic-plant.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-1-1.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
-  },
-  "bottleneck-precision.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-2.jpg",
-    "credit": "Moldtech",
-    "width": 960,
-    "height": 600,
-    "original_dimensions": [
-      960,
-      600
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
-  },
   "bottleneck-demoulding.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-6.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 70300
   },
   "bottleneck-handling.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-10.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 50274
   },
-  "station-01-rebar-jig.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-4.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+  "bottleneck-precision.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 71820
   },
-  "station-02-hydraulic-core.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-7.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+  "hero-panoramic-plant.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 1600,
+    "height": 1000,
+    "bytes": 161606
   },
-  "station-03-curing-enclosure.webp": {
-    "source_page": "https://curetecglobal.com/fully-automated-tent-curing-for-120-tonne-bridge-beams-in-western-australia/",
-    "source_image": "https://curetecglobal.com/wp-content/uploads/2026/06/premacast7.png",
-    "credit": "Curetec",
-    "width": 840,
-    "height": 400,
-    "original_dimensions": [
-      840,
-      400
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
-  },
-  "station-04-transfer-cart.webp": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-10.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
-  },
-  "station-05-fitout-assembly.webp": {
-    "source_page": "https://chinaconstruction.cscec.com/zjny/en/kjcx/PPVC/",
-    "source_image": "https://chinaconstruction.cscec.com/zjny/en/kjcx/PPVC/202011/W020250317560705978987.png",
-    "credit": "CCDC / CSCEC",
-    "width": 881,
-    "height": 525,
-    "original_dimensions": [
-      881,
-      525
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+  "og-plant.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 1200,
+    "height": 630,
+    "bytes": 86048
   },
   "qa-gantry-milling.webp": {
-    "source_page": "https://cma-machining-group.com/Gantry-Milling-Machine.html",
-    "source_image": "https://cma-machining-group.com/IMG/jpg/_520-vue_d_ensemble_fraiseuse_avec_operateur.jpg",
-    "credit": "Groupe CMA",
-    "width": 800,
-    "height": 501,
-    "original_dimensions": [
-      800,
-      501
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
-  },
-  "qa-laser-tracker.webp": {
-    "source_page": "https://vmt.global/tunnelling/en/precast/",
-    "source_image": "https://vmt.global/tunnelling/wp-content/uploads/sites/2/2024/07/p11611081-1024x589.jpg",
-    "credit": "VMT",
-    "width": 1024,
-    "height": 589,
-    "original_dimensions": [
-      1024,
-      589
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 720,
+    "bytes": 35488
   },
   "qa-global-shipping.webp": {
-    "source_page": "https://moldtechsl.es/en/business/services/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2023/07/logistica-1024x858-1.webp",
-    "credit": "Moldtech",
-    "width": 1014,
-    "height": 850,
-    "original_dimensions": [
-      1024,
-      858
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 720,
+    "bytes": 46070
+  },
+  "qa-laser-tracker.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 720,
+    "bytes": 18430
+  },
+  "station-01-rebar-jig.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 101218
+  },
+  "station-02-hydraulic-core.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 81872
+  },
+  "station-03-curing-enclosure.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 46716
+  },
+  "station-04-transfer-cart.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 78688
+  },
+  "station-05-fitout-assembly.webp": {
+    "supplied_by": "user",
+    "status": "User-replaced asset uploaded without image modification",
+    "width": 960,
+    "height": 640,
+    "bytes": 101976
   }
 }

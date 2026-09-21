@@ -10,12 +10,10 @@
         "Dedicated MEP positioning jigs"
       ],
       "image": "station-01-rebar-jig.webp",
-      "alt": "Spatial steel rebar cage suspended beside a PPVC mould at a production facility",
-      "caption": "Spatial reinforcement cage before casting.",
-      "width": 900,
-      "height": 563,
-      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "credit": "Moldtech"
+      "alt": "Workers assembling a steel reinforcement cage",
+      "caption": "Reinforcement cage assembly before casting.",
+      "width": 960,
+      "height": 640
     },
     {
       "short": "Hydraulic casting",
@@ -27,12 +25,10 @@
         "Preparation target: <25 minutes"
       ],
       "image": "station-02-hydraulic-core.webp",
-      "alt": "Worker placing concrete into a reinforced PPVC box mould",
-      "caption": "Concrete placement at a volumetric mould.",
-      "width": 900,
-      "height": 563,
-      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "credit": "Moldtech"
+      "alt": "Concrete distribution equipment above precast moulds in a production workshop",
+      "caption": "Concrete distribution and casting equipment.",
+      "width": 960,
+      "height": 640
     },
     {
       "short": "Controlled curing",
@@ -44,12 +40,10 @@
         "Release strength verified by testing"
       ],
       "image": "station-03-curing-enclosure.webp",
-      "alt": "Retractable steam curing tent at a precast production yard",
-      "caption": "Precast curing tent example.",
-      "width": 840,
-      "height": 400,
-      "source": "https://curetecglobal.com/fully-automated-tent-curing-for-120-tonne-bridge-beams-in-western-australia/",
-      "credit": "Curetec"
+      "alt": "Retractable steam curing enclosure at a precast production yard",
+      "caption": "Controlled curing enclosure.",
+      "width": 960,
+      "height": 640
     },
     {
       "short": "Demould & transfer",
@@ -61,12 +55,10 @@
         "Lifting points and interlocks engineered together"
       ],
       "image": "station-04-transfer-cart.webp",
-      "alt": "Concrete volumetric module lifted by an overhead crane after demoulding",
-      "caption": "Vertical lifting of a demoulded concrete module.",
-      "width": 900,
-      "height": 563,
-      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "credit": "Moldtech"
+      "alt": "Volumetric concrete module lifted inside a production workshop",
+      "caption": "Module lifting and transfer between work areas.",
+      "width": 960,
+      "height": 640
     },
     {
       "short": "Fit-out & MEP",
@@ -78,12 +70,10 @@
         "Overhead utility drops and safe access"
       ],
       "image": "station-05-fitout-assembly.webp",
-      "alt": "PPVC modules inside a dedicated fit-out centre",
-      "caption": "PPVC module handling at a dedicated fit-out centre.",
-      "width": 881,
-      "height": 525,
-      "source": "https://chinaconstruction.cscec.com/zjny/en/kjcx/PPVC/",
-      "credit": "CCDC / CSCEC"
+      "alt": "Volumetric module positioned above a transport vehicle in a factory",
+      "caption": "Finished module handling before dispatch.",
+      "width": 960,
+      "height": 640
     }
   ],
   "specs": [
@@ -149,86 +139,48 @@
   "qa": [
     [
       "qa-gantry-milling.webp",
-      "Large gantry milling machine and operator in a machining workshop",
+      "CNC machining equipment in a manufacturing workshop",
       "Precision machining",
       "Critical contact surfaces, alignment and dimensional inspection are defined in the agreed inspection plan.",
-      800,
-      501,
-      "https://cma-machining-group.com/Gantry-Milling-Machine.html",
-      "Groupe CMA"
+      960,
+      720
     ],
     [
       "qa-laser-tracker.webp",
-      "Technician using a laser tracker to inspect a precast concrete segment",
+      "Dimensional measurement results displayed on a laptop beside a precast concrete element",
       "Inspection & traceability",
       "Agree the measurement method, instrument accuracy and inspection records before manufacturing starts.",
-      1024,
-      589,
-      "https://vmt.global/tunnelling/en/precast/",
-      "VMT"
+      960,
+      720
     ],
     [
       "qa-global-shipping.webp",
       "Steel mould equipment secured inside a shipping container",
       "Pre-shipment readiness",
       "Define trial assembly, hydraulic testing, preservation, packing and lifting requirements before shipment.",
-      1014,
-      850,
-      "https://moldtechsl.es/en/business/services/",
-      "Moldtech"
+      960,
+      720
     ]
   ],
   "hero": {
-    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-1-1.jpg",
-    "credit": "Moldtech",
-    "width": 900,
-    "height": 563,
-    "original_dimensions": [
-      900,
-      563
-    ],
-    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    "width": 1600,
+    "height": 1000
   },
   "bottlenecks": [
     {
       "image": "bottleneck-precision.webp",
-      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-2.jpg",
-      "credit": "Moldtech",
       "width": 960,
-      "height": 600,
-      "original_dimensions": [
-        960,
-        600
-      ],
-      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+      "height": 640
     },
     {
       "image": "bottleneck-demoulding.webp",
-      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-6.jpg",
-      "credit": "Moldtech",
-      "width": 900,
-      "height": 563,
-      "original_dimensions": [
-        900,
-        563
-      ],
-      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+      "width": 960,
+      "height": 640
     },
     {
       "image": "bottleneck-handling.webp",
-      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
-      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-10.jpg",
-      "credit": "Moldtech",
-      "width": 900,
-      "height": 563,
-      "original_dimensions": [
-        900,
-        563
-      ],
-      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+      "width": 960,
+      "height": 640
     }
   ]
 }

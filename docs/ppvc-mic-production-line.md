@@ -12,7 +12,7 @@ Submission confirms success inline, matching the standard enquiry experience. Th
 
 ## Photography and layout
 
-All hero, bottleneck, station and QA photos are newly sourced online industry examples. See `docs/ppvc-mic-image-replacement.md` and the machine-readable source manifest. Visible source credits and links have been removed at the user’s request; original photo pixels remain unchanged. Provenance is retained in the internal source manifest. The imagery is for the user-requested demonstration, not evidence of Realjet installations.
+The user has replaced all 13 page and social-card image files. They are uploaded unchanged. Intrinsic image dimensions, alt text and station captions match the new files. Visible photo-source credits remain removed; the asset manifest records these as user-supplied replacements rather than attributing them to the previous online references.
 
 The three bottleneck cards use photographs instead of SVG drawings. Station images use 39% of the desktop layout, with a 440 px maximum width and natural aspect ratio; text uses 61%. The old fixed 430/455/760 px station minimum heights were removed. QA image frames use 4:3 with `object-fit: contain`, preserving the full original photo without stretching or cropping. All images have intrinsic width/height values matching their actual files.
 
