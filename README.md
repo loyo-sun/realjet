@@ -10,6 +10,7 @@ Realjet 英文官网、SEO Insights 内容系统和 7 语种预制构件生产�
 - Insights 列表：`/insights/`
 - 内容管理：`/admin/`
 - 预制构件生产线：`/marketing/precast-beam-factory/{language}/`
+- PPVC / MiC 英文产线方案：`/marketing/ppvc-mic-production-line/`
 - 隐私政策：`/marketing/privacy/{language}/`
 
 落地页语言代码为 `en` 、`id` 、`ar` 、`ru` 、`cn` 、`fr` 和 `es`。

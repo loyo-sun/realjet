@@ -560,6 +560,20 @@ for (const product of catalogueProductRecommendations.filter((item) => !item.dra
   }
 }
 
+const ppvcPage = await readFile(join(finalOutput, "marketing/ppvc-mic-production-line/index.html"), "utf8");
+const ppvcThanks = await readFile(join(finalOutput, "marketing/ppvc-mic-production-line/thank-you/index.html"), "utf8");
+for (const required of [
+  'href="https://realjetech.com/marketing/ppvc-mic-production-line/"',
+  'name="ppvc-plant-lead"', 'data-netlify="true"', 'enctype="multipart/form-data"',
+  'name="drawing"', 'name="drawing_link"', 'id="technical-specs"',
+  'id="station-panel-5"', '/assets/site/ppvc.js', '/assets/site/ppvc.css',
+]) {
+  if (!ppvcPage.includes(required)) throw new Error(`PPVC page missing: ${required}`);
+}
+if (!ppvcThanks.includes('content="noindex, follow"')) throw new Error("PPVC thank-you must be noindex.");
+if (!sitemap.includes('<loc>https://realjetech.com/marketing/ppvc-mic-production-line/</loc>')) throw new Error("PPVC page missing from sitemap.");
+if (sitemap.includes('/ppvc-mic-production-line/thank-you/')) throw new Error("PPVC thank-you must not appear in sitemap.");
+
 await run(process.execPath, ["scripts/validate-site.mjs"]);
 
 console.log("Realjet website build merged successfully into dist/.");

@@ -8,6 +8,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add(".github/**");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("DESIGN_TOKENS.md");
+  eleventyConfig.ignores.add("docs/ppvc-mic-*.md");
   eleventyConfig.ignores.add("content/insights/README.md");
 
   eleventyConfig.addPassthroughCopy({ public: "." });

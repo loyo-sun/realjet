@@ -1,0 +1,149 @@
+{
+  "stations": [
+    {
+      "short": "Rebar & utilities",
+      "title": "3D Rebar Cage Rigging & Precision Utility Positioning",
+      "body": "Rigid steel jigs support spatial rebar assembly outside the casting bay. Magnetic locators and mechanical brackets position MEP conduit sleeves, lifting points and grouting couplers before the cage is lifted into the mould.",
+      "parameters": [
+        "Positioning target: \u00b11.0 mm",
+        "Overhead spreader bar integration",
+        "Dedicated MEP positioning jigs"
+      ],
+      "image": "station-01-rebar-jig.webp",
+      "alt": "Reference rebar cage production equipment; PPVC jig photo to follow",
+      "caption": "Equipment reference: rebar cage production. Project-specific 3D jigs are configured to module drawings."
+    },
+    {
+      "short": "Hydraulic casting",
+      "title": "Monolithic Hydraulic 3D Box Moulding Station",
+      "body": "A monolithic five-face mould forms the walls and roof or slab in one pour, subject to structural design. A hydraulic power unit drives a shrinking internal core and guided exterior walls. Integrated vibration supports consolidation around dense reinforcement.",
+      "parameters": [
+        "4-way synchronized core shrinkage",
+        "Design pressure: 16\u201321 MPa",
+        "Preparation target: <25 minutes"
+      ],
+      "image": "station-02-hydraulic-core.webp",
+      "alt": "Reference concrete box mould with steel formwork and access platforms",
+      "caption": "Equipment reference: concrete box mould. PPVC core and exterior geometry are project-specific."
+    },
+    {
+      "short": "Controlled curing",
+      "title": "Sectional Enclosure Steam Curing System",
+      "body": "Motorized insulated enclosures close over the casting station. PLC controls manage heating, constant-temperature curing and controlled cooling. Mix trials and strength tests establish the release schedule; an 8\u201310-hour cycle is a planning target, not a universal guarantee.",
+      "parameters": [
+        "Multi-zone temperature sensing",
+        "Digital temperature curve logging",
+        "Release strength verified by testing"
+      ],
+      "image": "station-03-curing-enclosure.webp",
+      "alt": "Reference enclosure for controlled curing in a precast production plant",
+      "caption": "Equipment reference: precast curing enclosure. Final layout depends on the selected casting process."
+    },
+    {
+      "short": "Demould & transfer",
+      "title": "Vertical Synchronized Stripping & Heavy-Duty Transfer",
+      "body": "Synchronized multi-point hydraulic lifting releases the module from its base while controlling differential movement. Rail carts or multidirectional AGVs connect stripping, inspection and finishing bays. Load distribution and lifting inserts are checked against the structural design.",
+      "parameters": [
+        "Typical transfer payload: 25\u201360 t",
+        "Travel speed: 0\u201315 m/min adjustable",
+        "Lifting points and interlocks engineered together"
+      ],
+      "image": "station-04-transfer-cart.webp",
+      "alt": "Reference rail transfer trolley for precast factory material handling",
+      "caption": "Equipment reference: rail transfer trolley. Payload and support points require module-specific engineering."
+    },
+    {
+      "short": "Fit-out & MEP",
+      "title": "Progressive Fit-Out & Prefabricated Bathroom Assembly",
+      "body": "Multi-level staging platforms give teams coordinated access inside and outside each module. The line can accommodate insulation, light-gauge framing, prefabricated bathroom unit (PBU) docking and MEP continuity and pressure testing.",
+      "parameters": [
+        "PBU docking and partition mounting jigs",
+        "MEP continuity and pressure test stations",
+        "Overhead utility drops and safe access"
+      ],
+      "image": "station-05-fitout-assembly.webp",
+      "alt": "Realjet engineers working on site during equipment commissioning",
+      "caption": "Service reference: on-site engineering support. A PPVC fit-out workstation photo will replace this image."
+    }
+  ],
+  "specs": [
+    [
+      "Target module envelope",
+      "L: 6.0\u20139.0 m | W: 2.8\u20133.6 m",
+      "L: up to 12.0 m | W: up to 4.5 m"
+    ],
+    [
+      "Module height capability",
+      "2.8\u20133.2 m",
+      "Up to 3.6 m; high-clearance core"
+    ],
+    [
+      "Dimensional tolerance targets",
+      "Length / width: \u00b11.5 mm | Diagonals: \u00b12.0 mm",
+      "Laser-calibrated target: \u00b11.0 mm"
+    ],
+    [
+      "Mould mechanical structure",
+      "Monolithic 5-face hydraulic box mould",
+      "Split modular multi-wall variable mould"
+    ],
+    [
+      "Core stripping mechanism",
+      "Synchronized 4-way hydraulic shrinking",
+      "Multi-linkage telescopic hydraulic system"
+    ],
+    [
+      "Logistics payload rating",
+      "25\u201340 t per transfer unit",
+      "50\u201380 t heavy-duty AGV / trolley"
+    ],
+    [
+      "Daily line productivity target",
+      "2\u20134 modules / day; multiple stations",
+      "Configured to curing cycle and shifts"
+    ],
+    [
+      "Project standards for design review",
+      "Singapore BCA PPVC / MASA; Hong Kong BD MiC",
+      "Applicable Eurocodes, ASTM and BS standards"
+    ]
+  ],
+  "scope": [
+    [
+      "Civil & Layout Engineering",
+      "Factory logistics planning, crane coverage and capacity review, foundation loading data and utility connection requirements."
+    ],
+    [
+      "Machinery & Hydraulic Fabrication",
+      "Steel fabrication, stress relief, precision machining and hydraulic system assembly to approved equipment drawings."
+    ],
+    [
+      "SCADA / MES Integration",
+      "Optional curing records, RFID or barcode tracking, hydraulic monitoring and output dashboards matched to your plant systems."
+    ],
+    [
+      "Global Commissioning & Training",
+      "On-site erection guidance, cold and hot commissioning, trial pours, operator training and documented handover."
+    ]
+  ],
+  "qa": [
+    [
+      "qa-gantry-milling.webp",
+      "CNC machining equipment in the Realjet manufacturing workshop",
+      "Precision machining",
+      "Critical contact surfaces, alignment and dimensional inspection are defined in the agreed inspection plan."
+    ],
+    [
+      "qa-laser-tracker.webp",
+      "Reference digital production monitoring screens",
+      "Inspection & traceability",
+      "Agree the measurement method, instrument accuracy and inspection records before manufacturing starts."
+    ],
+    [
+      "qa-global-shipping.webp",
+      "Realjet manufacturing facility exterior",
+      "Pre-shipment readiness",
+      "Define trial assembly, hydraulic testing, preservation, packing and lifting requirements before shipment."
+    ]
+  ]
+}
