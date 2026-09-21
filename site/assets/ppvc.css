@@ -18,9 +18,6 @@
 .ppvc-button span{font-size:19px;margin-left:auto}
 .ppvc-button-dark{background:#123648;color:white}
 .ppvc-button-dark:hover{background:#20546b}
-.ppvc-video-button{display:flex;align-items:center;gap:12px;border:0;padding:0;color:white;background:transparent;cursor:pointer;font-size:13px}
-.ppvc-video-button span{border:1px solid #a0b4bf;border-radius:50%;display:grid;place-items:center;width:35px;height:35px;font-size:22px}
-.ppvc-photo-note{font-size:10px!important;color:#a7bac4!important;margin-top:30px!important}
 .ppvc-project-card{background:#fff;color:#193341;border-top:4px solid var(--ppvc-orange);padding:32px;box-shadow:0 20px 65px #0003;border-radius:4px}
 .ppvc-project-card h2{font-size:28px;line-height:1.22;letter-spacing:-.03em}
 .ppvc-project-card p{font-size:13px;margin-top:15px;color:#59717d}
@@ -114,18 +111,6 @@
 .ppvc-form-error{font-size:12px;color:#a02c23;margin-bottom:15px!important}
 .ppvc-form-status{font-size:11px;color:#58717e;margin-top:10px!important}
 .ppvc-form button:disabled{opacity:.65;cursor:wait}
-.ppvc-demo{border:0;border-top:4px solid #e4ac57;padding:38px;max-width:720px;width:calc(100% - 32px);max-height:85dvh;overflow:auto;color:#15394b;box-shadow:0 30px 120px #0005}
-.ppvc-demo::backdrop{background:#041721b8}
-.ppvc-demo-close{position:absolute;right:12px;top:7px;border:0;background:transparent;font-size:28px;cursor:pointer;color:#15394b}
-.ppvc-demo h2{font-size:28px;line-height:1.2}
-.ppvc-demo>p{font-size:13px;color:#617986;margin:15px 0}
-.ppvc-demo-stage{background:repeating-linear-gradient(0deg,transparent,transparent 29px,#ffffff09 30px),repeating-linear-gradient(90deg,#123345,#123345 29px,#ffffff18 30px);color:white;padding:32px;min-height:220px;display:flex;flex-direction:column;justify-content:center}
-.ppvc-demo-stage>span{font-size:42px;line-height:1;color:#ebb661;margin-bottom:18px}
-.ppvc-demo-stage p{font-size:13px;margin-top:12px}
-.ppvc-demo-progress{display:flex;gap:8px;margin:20px 0}
-.ppvc-demo-progress button{flex:1;padding:10px;background:#e8eef0;border:0;cursor:pointer;color:#254d60}
-.ppvc-demo-progress button[aria-current=step]{background:#e8b15d;color:#102c3b}
-.ppvc-demo>.ppvc-text-link{display:inline-block;margin:16px}
 .ppvc-page :focus-visible{outline:3px solid #288cb6;outline-offset:3px}
 
 @media(min-width:1100px){.ppvc-hero-grid{min-height:665px}
@@ -172,9 +157,6 @@
 .ppvc-form{padding:24px}
 .ppvc-form-grid{grid-template-columns:1fr}
 .ppvc-enquiry h2{font-size:33px}
-.ppvc-demo{padding:30px 23px}
-.ppvc-demo-stage{padding:25px;min-height:245px}
-.ppvc-demo>.ppvc-text-link{margin-left:0}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
@@ -217,9 +199,7 @@
 
 .ppvc-bottleneck-photo figcaption{padding:7px 12px;font-size:10px;color:#70818a;border-bottom:1px solid #e2e8eb}
 
-.ppvc-photo-credit{display:inline-block;font-size:10px;color:#6a808c;margin-top:10px;text-underline-offset:3px}
 
-.ppvc-station figcaption a{display:block;margin-top:5px;text-underline-offset:3px}
 
 @media(max-width:767px){.ppvc-bottleneck-photo{margin-inline:-24px!important}
 .ppvc-station figure{max-width:440px}

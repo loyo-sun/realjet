@@ -12,13 +12,13 @@ Submission confirms success inline, matching the standard enquiry experience. Th
 
 ## Photography and layout
 
-All hero, bottleneck, station and QA photos are newly sourced online industry examples. See `docs/ppvc-mic-image-replacement.md` and the machine-readable source manifest. Original source branding is retained; captions identify the source. The imagery is for the user-requested demonstration, not evidence of Realjet installations.
+All hero, bottleneck, station and QA photos are newly sourced online industry examples. See `docs/ppvc-mic-image-replacement.md` and the machine-readable source manifest. Visible source credits and links have been removed at the user’s request; original photo pixels remain unchanged. Provenance is retained in the internal source manifest. The imagery is for the user-requested demonstration, not evidence of Realjet installations.
 
 The three bottleneck cards use photographs instead of SVG drawings. Station images use 39% of the desktop layout, with a 440 px maximum width and natural aspect ratio; text uses 61%. The old fixed 430/455/760 px station minimum heights were removed. QA image frames use 4:3 with `object-fit: contain`, preserving the full original photo without stretching or cropping. All images have intrinsic width/height values matching their actual files.
 
 ## Other behavior
 
-`view_technical_specs` fires once after five continuous visible seconds and resets when the table leaves view or the tab is hidden. `open_video_demo` continues to describe the labelled schematic walkthrough; no real-machine video was provided. Existing site consent handling is retained.
+`view_technical_specs` fires once after five continuous visible seconds and resets when the table leaves view or the tab is hidden. The production-cycle CTA, schematic dialog and its JavaScript were removed at the user’s request. Existing site consent handling is retained.
 
 ## Validation
 

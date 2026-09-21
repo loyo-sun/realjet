@@ -79,45 +79,4 @@
       if (started && !succeeded) emit('lead_form_abandon', context);
     });
   });
-
-  const dialog = root.querySelector('.ppvc-demo');
-  const titles = ['Rebar & utilities', 'Hydraulic casting', 'Controlled curing', 'Demould & transfer', 'Fit-out & MEP'];
-  const copy = [
-    'Prepare the spatial cage and position embedded services before casting.',
-    'Close the exterior mould, position the shrinking core and cast the concrete module.',
-    'Follow the validated heating, holding and cooling schedule. Verify release strength.',
-    'Retract the core, synchronize the lift and transfer the module to the next bay.',
-    'Complete internal fit-out, PBU docking and MEP checks before final inspection.',
-  ];
-  let step = 0, timer, trigger;
-  const play = root.querySelector('[data-demo-play]');
-  const stop = () => { clearInterval(timer); timer = null; play.textContent = 'Play walkthrough'; };
-  const show = (index) => {
-    step = index;
-    root.querySelector('[data-demo-number]').textContent = String(index + 1).padStart(2, '0');
-    root.querySelector('[data-demo-title]').textContent = titles[index];
-    root.querySelector('[data-demo-copy]').textContent = copy[index];
-    root.querySelectorAll('[data-demo-step]').forEach((button, i) => {
-      if (i === index) button.setAttribute('aria-current', 'step'); else button.removeAttribute('aria-current');
-    });
-  };
-  root.querySelectorAll('[data-open-ppvc-demo]').forEach((button) => button.addEventListener('click', () => {
-    trigger = button; show(0); dialog.showModal();
-    emit('open_video_demo', { demo_type: 'schematic_walkthrough' });
-  }));
-  root.querySelector('.ppvc-demo-close').addEventListener('click', () => dialog.close());
-  root.querySelector('[data-demo-enquire]').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('close', () => { stop(); trigger?.focus(); });
-  dialog.addEventListener('click', (event) => {
-    const rect = dialog.getBoundingClientRect();
-    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
-  });
-  root.querySelectorAll('[data-demo-step]').forEach((button) => button.addEventListener('click', () => { stop(); show(Number(button.dataset.demoStep)); }));
-  play.addEventListener('click', () => {
-    if (timer) return stop();
-    play.textContent = 'Pause walkthrough';
-    timer = setInterval(() => { if (step === 4) return stop(); show(step + 1); }, 3500);
-    if (step === 4) show(0);
-  });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
 })();

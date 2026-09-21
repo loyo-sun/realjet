@@ -1,8 +1,8 @@
 # PPVC / MiC 实拍示例图片替换说明
 
-本页图片均重新从公开网站检索、下载并逐张核对，没有继续使用网站原有素材占位。页面保留图片来源链接，原图中的品牌标识未抹除。这些是行业演示案例，不代表 Realjet 项目。
+本页图片均重新从公开网站检索、下载并逐张核对，没有继续使用网站原有素材占位。页面上的图片来源文字和链接已删除，原图文件未修改。这些是行业演示案例，不代表 Realjet 项目。
 
-所有图片位于 `public/images/ppvc-line/`。文件采用等比例 WebP 编码；五工位与质量展示区按原始比例显示，避免变形。替换为自有照片时，同步修改 `site/_data/ppvc.json` 中的 width、height、alt、caption、source 和 credit。
+所有图片位于 `public/images/ppvc-line/`。文件采用等比例 WebP 编码；五工位与质量展示区按原始比例显示，避免变形。替换为自有照片时，同步修改 `site/_data/ppvc.json` 中的 width、height、alt 和 caption。
 
 | 页面文件 | 来源 | 图片尺寸 |
 |---|---|---|
