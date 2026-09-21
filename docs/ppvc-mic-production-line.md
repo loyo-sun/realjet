@@ -1,37 +1,27 @@
-# PPVC / MiC Production Line — implementation notes
+# PPVC / MiC Production Line
 
-- Public page: `/marketing/ppvc-mic-production-line/` (English only).
-- Confirmation: `/marketing/ppvc-mic-production-line/thank-you/` (`noindex`, excluded from sitemap).
-- Page: `site/ppvc-mic-production-line/index.njk`; station/specification content: `site/_data/ppvc.json`.
-- Styling and behavior: `site/assets/ppvc.css` and `site/assets/ppvc.js`.
-- Shared Solutions submenu updated for all Eleventy pages; sitemap and llms.txt updated.
+- English URL: `/marketing/ppvc-mic-production-line/`.
+- Page: `site/ppvc-mic-production-line/index.njk`; content and image dimensions: `site/_data/ppvc.json`.
+- Styling / behavior: `site/assets/ppvc.css` and `site/assets/ppvc.js`.
 
-## Assets
+## Standard Realjet enquiries
 
-See `docs/ppvc-mic-image-replacement.md`. Images use independent, stable WebP filenames under `public/images/ppvc-line/`. Existing repository imagery is explicitly captioned as equipment/service references. Search references are provided for art direction; competitor photos were not presented as Realjet installations.
+Both hero and bottom sections use `components/ppvc-standard-enquiry.njk`, with Name, E-mail and Message plus the standard privacy consent checkbox. They submit the existing `universal-enquiry` schema (`form-name`, `keyword`, `subject`, `bot-field`, `name`, `email`, `message`, `privacy_consent`) to the standard URL-encoded POST `/` endpoint. No separate plant-lead form, extra qualification fields or file uploader remains.
 
-The modal provides a playable five-stage illustrated walkthrough. A verified 1:45 Realjet PPVC machine video was not supplied or present in the repository. Replace the walkthrough with an approved local video when available; update the CTA duration and `demo_type` accordingly. Current event retains the requested name `open_video_demo` with `demo_type: schematic_walkthrough`.
+Submission confirms success inline, matching the standard enquiry experience. The two forms maintain independent pending, error and success states, protect against duplicate submission, and preserve entered values after failure. Accepted responses emit the standard `generate_lead` event with hero/bottom CTA context; no personal field content is passed into analytics. Form start, invalid, attempted, error and abandonment events use the existing event naming. The previous thank-you route remains noindex for backwards compatibility and is no longer a form destination.
 
-## Form and tracking
+## Photography and layout
 
-`ppvc-plant-lead` is a static, detectable Netlify Form with multipart POST, a honeypot, required project fields, one attachment, a drawing URL and campaign fields. Success emits `submit_plant_lead` only after an OK response and redirects to the confirmation page. Failure preserves entered data. Analytics payloads contain no name, email, company, drawing link or file data. Existing consent defaults are retained.
+All hero, bottleneck, station and QA photos are newly sourced online industry examples. See `docs/ppvc-mic-image-replacement.md` and the machine-readable source manifest. Original source branding is retained; captions identify the source. The imagery is for the user-requested demonstration, not evidence of Realjet installations.
 
-Netlify Forms has an **8 MB total request limit**: https://docs.netlify.com/manage/forms/setup/#file-uploads . The file picker allows PDF/DWG/ZIP up to **7 MiB** to leave room for multipart overhead. A secure URL field supports larger drawing packages, including 25 MB files. Direct 25 MB uploads require a separately provisioned upload/storage service; the UI does not falsely advertise unsupported uploads.
+The three bottleneck cards use photographs instead of SVG drawings. Station images use 39% of the desktop layout, with a 440 px maximum width and natural aspect ratio; text uses 61%. The old fixed 430/455/760 px station minimum heights were removed. QA image frames use 4:3 with `object-fit: contain`, preserving the full original photo without stretching or cropping. All images have intrinsic width/height values matching their actual files.
 
-`view_technical_specs` fires once per page after the comparison table is visible for 5 continuous seconds, pauses/resets when offscreen or in a hidden tab. `open_video_demo` fires when the overview dialog opens. `submit_plant_lead` fires on accepted form submission; direct visits or refreshes of the thank-you page do not emit it.
+## Other behavior
 
-**Account-side setup:** confirm Netlify form detection/notifications after deployment. In GA4, mark `submit_plant_lead` as a key event, then import it into the linked Google Ads account and set it as a primary conversion if this is the chosen attribution route. No Ads conversion label was available in the repository, so no fabricated `AW-…` destination was added. Do not simultaneously import and fire an equivalent direct Ads conversion without a deduplication plan.
+`view_technical_specs` fires once after five continuous visible seconds and resets when the table leaves view or the tab is hidden. `open_video_demo` continues to describe the labelled schematic walkthrough; no real-machine video was provided. Existing site consent handling is retained.
 
-## Content boundaries and validation
+## Validation
 
-The user's requested `/marketing/…/` route overrides the root-level URL in the attached PRD. Dimensions, tolerances, speeds and cycle times are presented as planning/design targets subject to engineering and acceptance tests. Local BCA/BD approvals are distinguished from machinery supply; unsupported patent, unconditional approval, instrument-accuracy, 16 m gantry and automatic NDA guarantees are not asserted.
+`npm run build` (Node 22+) passes all generated-page validation. DOM interaction checks cover both enquiry schemas, required fields, encoded payloads, independent success states, failure recovery, duplicate prevention, event privacy, five station tabs and keyboard controls, and specs-view timing. POSTs are mocked: no real sales enquiries are sent by automated testing. Source photographs were visually inspected before selection.
 
-Run `npm run build` with Node 22+ (the Netlify runtime). Build validation checks all generated pages, new routes, form detection markup, station panels, assets, canonical URL and sitemap exclusions.
-
-The hero is a 150 KB WebP with preload/high fetch priority; station and QA images are lazy-loaded with fixed dimensions. The specs table scrolls horizontally with a sticky first column. No third-party media is loaded on page open. LCP <2 s and CLS <0.05 remain performance targets requiring a real-browser/network measurement; static checks cannot certify these values.
-
-## Checked in this change
-
-- Complete production build and generated-page reference validation passed.
-- DOM-based interaction checks passed: all five tabs, keyboard navigation, timer reset and one-shot specs event, walkthrough controls, brief transfer, campaign fields, file extension/size validation, duplicate-submit protection and accepted/rejected response handling. Form POSTs were mocked; no real sales enquiry was created.
-- Local browser preview was blocked by the computer-use browser layer (`ERR_BLOCKED_BY_CLIENT`). No real-browser layout or Core Web Vitals result is claimed.
+The computer-use browser currently blocks localhost with `ERR_BLOCKED_BY_CLIENT`. Real-browser layout and Core Web Vitals results cannot be inferred from DOM tests.

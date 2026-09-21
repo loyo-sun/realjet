@@ -39,55 +39,45 @@
   observer.observe(specs.querySelector('.ppvc-table-scroll'));
   document.addEventListener('visibilitychange', updateSpecTimer);
 
-  const form = root.querySelector('[data-ppvc-form]');
-  root.querySelector('[data-ppvc-start]').addEventListener('click', () => {
-    form.elements.scope.value = document.getElementById('ppvc-quick-scope').value;
-    form.elements.dimensions.value = document.getElementById('ppvc-quick-size').value;
-  });
-  const query = new URLSearchParams(location.search);
-  ['utm_source', 'utm_medium', 'utm_campaign', 'gclid'].forEach((key) => {
-    form.elements[key].value = (query.get(key) || '').slice(0, 500);
-  });
-  const upload = form.elements.drawing;
-  function validateFile() {
-    const file = upload.files[0];
-    let error = '';
-    if (file && !/\.(pdf|dwg|zip)$/i.test(file.name)) error = 'Please choose a PDF, DWG or ZIP file.';
-    if (file && file.size > 7 * 1024 * 1024) error = 'This file exceeds 7 MB. Please use the drawing download link field for larger files.';
-    upload.setCustomValidity(error);
-    return !error;
-  }
-  upload.addEventListener('change', () => { validateFile(); upload.reportValidity(); });
-  let sending = false;
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-    if (sending || !validateFile() || !form.reportValidity()) return;
+  root.querySelectorAll('[data-ppvc-form]').forEach((form) => {
+    const shell = form.closest('[data-ppvc-enquiry]');
+    const fieldset = form.querySelector('fieldset');
     const error = form.querySelector('[data-ppvc-error]');
-    const status = form.querySelector('[data-ppvc-status]');
     const button = form.querySelector('[type="submit"]');
-    if (form.elements['bot-field'].value) return;
-    const body = new FormData(form);
-    if (!upload.files.length) body.delete('drawing');
-    sending = true; button.disabled = true; form.setAttribute('aria-busy', 'true');
-    error.hidden = true; status.textContent = 'Sending your project enquiry…';
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 35000);
-    try {
-      const response = await fetch('/', { method: 'POST', body, signal: controller.signal });
-      if (!response.ok) throw new Error('Submission rejected');
-      status.textContent = 'Your enquiry has been received. Opening confirmation…';
-      let navigated = false;
-      const go = () => { if (!navigated) { navigated = true; location.assign(form.action); } };
-      // Only server-accepted submissions emit the lead event. No personal data enters analytics.
-      emit('submit_plant_lead', { form_name: 'ppvc-plant-lead', event_callback: go, event_timeout: 1200 });
-      setTimeout(go, 1300);
-    } catch {
-      error.textContent = 'We could not confirm submission. Please try again or email sales@realjetech.com. Your entered details have been kept.';
-      error.hidden = false; status.textContent = ''; sending = false; button.disabled = false;
-      error.tabIndex = -1; error.focus();
-    } finally {
-      clearTimeout(timeout); form.removeAttribute('aria-busy');
-    }
+    const success = shell.querySelector('[data-ppvc-success]');
+    const context = { form_id: 'universal-enquiry', cta_id: `ppvc_${form.dataset.enquiryPosition}_form`, inquiry_topic: 'PPVC / MiC Production Line' };
+    let sending = false, started = false, succeeded = false;
+    form.addEventListener('focusin', () => {
+      if (!started) { started = true; emit('lead_form_start', context); }
+    });
+    form.addEventListener('invalid', (event) => emit('lead_form_validation_error', { ...context, field_name: event.target.name }), true);
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (sending || !form.reportValidity() || form.elements['bot-field'].value) return;
+      // Use Realjet's standard form schema and endpoint for both inline forms.
+      const body = new URLSearchParams(new FormData(form)).toString();
+      sending = true; fieldset.disabled = true; form.setAttribute('aria-busy', 'true');
+      error.hidden = true; button.textContent = 'Sending…';
+      emit('lead_form_submit_attempt', context);
+      try {
+        const response = await fetch('/', {
+          method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body,
+        });
+        if (!response.ok) throw new Error('Submission failed');
+        succeeded = true;
+        emit('generate_lead', { ...context, lead_source: 'website_form' });
+        form.hidden = true; success.hidden = false; success.focus();
+      } catch {
+        error.hidden = false; sending = false; fieldset.disabled = false;
+        button.innerHTML = 'Send Enquiry <span aria-hidden="true">→</span>';
+        emit('lead_form_submit_error', { ...context, error_type: 'submission_failed' });
+      } finally {
+        form.removeAttribute('aria-busy');
+      }
+    });
+    window.addEventListener('pagehide', () => {
+      if (started && !succeeded) emit('lead_form_abandon', context);
+    });
   });
 
   const dialog = root.querySelector('.ppvc-demo');

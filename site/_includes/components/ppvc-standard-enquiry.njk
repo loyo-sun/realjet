@@ -1,0 +1,19 @@
+<div class="ppvc-standard-enquiry" data-ppvc-enquiry>
+  <form class="ppvc-form" name="universal-enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-ppvc-form data-enquiry-position="{{ enquiryPosition }}">
+    <input type="hidden" name="form-name" value="universal-enquiry" />
+    <input type="hidden" name="keyword" value="PPVC / MiC Production Line" />
+    <input type="hidden" name="subject" value="Website enquiry: PPVC / MiC Production Line" />
+    <p class="honeypot"><label>Do not fill this field <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+    <fieldset>
+      <label><span>Name *</span><input type="text" name="name" autocomplete="name" required maxlength="120" placeholder="Your name" /></label>
+      <label><span>E-mail *</span><input type="email" name="email" autocomplete="email" required maxlength="254" placeholder="name@company.com" /></label>
+      <label><span>Message *</span><textarea name="message" rows="{% if enquiryPosition == 'hero' %}3{% else %}5{% endif %}" maxlength="4000" placeholder="Tell us your module type, main dimensions, target output and project requirements." required></textarea></label>
+      <label class="ppvc-privacy-checkbox"><input type="checkbox" name="privacy_consent" value="accepted" required /><span>I agree that Realjet may use this information to respond to my enquiry, as described in the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. *</span></label>
+      <p class="ppvc-form-error" role="alert" data-ppvc-error hidden>We could not send your enquiry. Please try again or email sales@realjetech.com.</p>
+      <button class="ppvc-button ppvc-button-dark" type="submit">Send Enquiry <span aria-hidden="true">→</span></button>
+    </fieldset>
+  </form>
+  <section class="ppvc-enquiry-success" role="status" data-ppvc-success hidden tabindex="-1">
+    <span class="success-mark" aria-hidden="true">✓</span><h3>Enquiry Sent</h3><p>Thank you. A Realjet specialist will review your message and contact you.</p>
+  </section>
+</div>

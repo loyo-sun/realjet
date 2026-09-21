@@ -5,13 +5,17 @@
       "title": "3D Rebar Cage Rigging & Precision Utility Positioning",
       "body": "Rigid steel jigs support spatial rebar assembly outside the casting bay. Magnetic locators and mechanical brackets position MEP conduit sleeves, lifting points and grouting couplers before the cage is lifted into the mould.",
       "parameters": [
-        "Positioning target: \u00b11.0 mm",
+        "Positioning target: ±1.0 mm",
         "Overhead spreader bar integration",
         "Dedicated MEP positioning jigs"
       ],
       "image": "station-01-rebar-jig.webp",
-      "alt": "Reference rebar cage production equipment; PPVC jig photo to follow",
-      "caption": "Equipment reference: rebar cage production. Project-specific 3D jigs are configured to module drawings."
+      "alt": "Spatial steel rebar cage suspended beside a PPVC mould at a production facility",
+      "caption": "Spatial reinforcement cage before casting.",
+      "width": 900,
+      "height": 563,
+      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "credit": "Moldtech"
     },
     {
       "short": "Hydraulic casting",
@@ -19,38 +23,50 @@
       "body": "A monolithic five-face mould forms the walls and roof or slab in one pour, subject to structural design. A hydraulic power unit drives a shrinking internal core and guided exterior walls. Integrated vibration supports consolidation around dense reinforcement.",
       "parameters": [
         "4-way synchronized core shrinkage",
-        "Design pressure: 16\u201321 MPa",
+        "Design pressure: 16–21 MPa",
         "Preparation target: <25 minutes"
       ],
       "image": "station-02-hydraulic-core.webp",
-      "alt": "Reference concrete box mould with steel formwork and access platforms",
-      "caption": "Equipment reference: concrete box mould. PPVC core and exterior geometry are project-specific."
+      "alt": "Worker placing concrete into a reinforced PPVC box mould",
+      "caption": "Concrete placement at a volumetric mould.",
+      "width": 900,
+      "height": 563,
+      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "credit": "Moldtech"
     },
     {
       "short": "Controlled curing",
       "title": "Sectional Enclosure Steam Curing System",
-      "body": "Motorized insulated enclosures close over the casting station. PLC controls manage heating, constant-temperature curing and controlled cooling. Mix trials and strength tests establish the release schedule; an 8\u201310-hour cycle is a planning target, not a universal guarantee.",
+      "body": "Motorized insulated enclosures close over the casting station. PLC controls manage heating, constant-temperature curing and controlled cooling. Mix trials and strength tests establish the release schedule; an 8–10-hour cycle is a planning target, not a universal guarantee.",
       "parameters": [
         "Multi-zone temperature sensing",
         "Digital temperature curve logging",
         "Release strength verified by testing"
       ],
       "image": "station-03-curing-enclosure.webp",
-      "alt": "Reference enclosure for controlled curing in a precast production plant",
-      "caption": "Equipment reference: precast curing enclosure. Final layout depends on the selected casting process."
+      "alt": "Retractable steam curing tent at a precast production yard",
+      "caption": "Precast curing tent example.",
+      "width": 840,
+      "height": 400,
+      "source": "https://curetecglobal.com/fully-automated-tent-curing-for-120-tonne-bridge-beams-in-western-australia/",
+      "credit": "Curetec"
     },
     {
       "short": "Demould & transfer",
       "title": "Vertical Synchronized Stripping & Heavy-Duty Transfer",
       "body": "Synchronized multi-point hydraulic lifting releases the module from its base while controlling differential movement. Rail carts or multidirectional AGVs connect stripping, inspection and finishing bays. Load distribution and lifting inserts are checked against the structural design.",
       "parameters": [
-        "Typical transfer payload: 25\u201360 t",
-        "Travel speed: 0\u201315 m/min adjustable",
+        "Typical transfer payload: 25–60 t",
+        "Travel speed: 0–15 m/min adjustable",
         "Lifting points and interlocks engineered together"
       ],
       "image": "station-04-transfer-cart.webp",
-      "alt": "Reference rail transfer trolley for precast factory material handling",
-      "caption": "Equipment reference: rail transfer trolley. Payload and support points require module-specific engineering."
+      "alt": "Concrete volumetric module lifted by an overhead crane after demoulding",
+      "caption": "Vertical lifting of a demoulded concrete module.",
+      "width": 900,
+      "height": 563,
+      "source": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "credit": "Moldtech"
     },
     {
       "short": "Fit-out & MEP",
@@ -62,25 +78,29 @@
         "Overhead utility drops and safe access"
       ],
       "image": "station-05-fitout-assembly.webp",
-      "alt": "Realjet engineers working on site during equipment commissioning",
-      "caption": "Service reference: on-site engineering support. A PPVC fit-out workstation photo will replace this image."
+      "alt": "PPVC modules inside the CCDC DfMA fit-out centre",
+      "caption": "PPVC module handling at a dedicated fit-out centre.",
+      "width": 881,
+      "height": 525,
+      "source": "https://chinaconstruction.cscec.com/zjny/en/kjcx/PPVC/",
+      "credit": "CCDC / CSCEC"
     }
   ],
   "specs": [
     [
       "Target module envelope",
-      "L: 6.0\u20139.0 m | W: 2.8\u20133.6 m",
+      "L: 6.0–9.0 m | W: 2.8–3.6 m",
       "L: up to 12.0 m | W: up to 4.5 m"
     ],
     [
       "Module height capability",
-      "2.8\u20133.2 m",
+      "2.8–3.2 m",
       "Up to 3.6 m; high-clearance core"
     ],
     [
       "Dimensional tolerance targets",
-      "Length / width: \u00b11.5 mm | Diagonals: \u00b12.0 mm",
-      "Laser-calibrated target: \u00b11.0 mm"
+      "Length / width: ±1.5 mm | Diagonals: ±2.0 mm",
+      "Laser-calibrated target: ±1.0 mm"
     ],
     [
       "Mould mechanical structure",
@@ -94,12 +114,12 @@
     ],
     [
       "Logistics payload rating",
-      "25\u201340 t per transfer unit",
-      "50\u201380 t heavy-duty AGV / trolley"
+      "25–40 t per transfer unit",
+      "50–80 t heavy-duty AGV / trolley"
     ],
     [
       "Daily line productivity target",
-      "2\u20134 modules / day; multiple stations",
+      "2–4 modules / day; multiple stations",
       "Configured to curing cycle and shifts"
     ],
     [
@@ -129,21 +149,86 @@
   "qa": [
     [
       "qa-gantry-milling.webp",
-      "CNC machining equipment in the Realjet manufacturing workshop",
+      "Large gantry milling machine and operator in the Groupe CMA workshop",
       "Precision machining",
-      "Critical contact surfaces, alignment and dimensional inspection are defined in the agreed inspection plan."
+      "Critical contact surfaces, alignment and dimensional inspection are defined in the agreed inspection plan.",
+      800,
+      501,
+      "https://cma-machining-group.com/Gantry-Milling-Machine.html",
+      "Groupe CMA"
     ],
     [
       "qa-laser-tracker.webp",
-      "Reference digital production monitoring screens",
+      "Technician using a laser tracker to inspect a precast concrete segment",
       "Inspection & traceability",
-      "Agree the measurement method, instrument accuracy and inspection records before manufacturing starts."
+      "Agree the measurement method, instrument accuracy and inspection records before manufacturing starts.",
+      1024,
+      589,
+      "https://vmt.global/tunnelling/en/precast/",
+      "VMT"
     ],
     [
       "qa-global-shipping.webp",
-      "Realjet manufacturing facility exterior",
+      "Steel mould equipment secured inside a shipping container",
       "Pre-shipment readiness",
-      "Define trial assembly, hydraulic testing, preservation, packing and lifting requirements before shipment."
+      "Define trial assembly, hydraulic testing, preservation, packing and lifting requirements before shipment.",
+      1014,
+      850,
+      "https://moldtechsl.es/en/business/services/",
+      "Moldtech"
     ]
+  ],
+  "hero": {
+    "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+    "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-1-1.jpg",
+    "credit": "Moldtech",
+    "width": 900,
+    "height": 563,
+    "original_dimensions": [
+      900,
+      563
+    ],
+    "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+  },
+  "bottlenecks": [
+    {
+      "image": "bottleneck-precision.webp",
+      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-2.jpg",
+      "credit": "Moldtech",
+      "width": 960,
+      "height": 600,
+      "original_dimensions": [
+        960,
+        600
+      ],
+      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    },
+    {
+      "image": "bottleneck-demoulding.webp",
+      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-6.jpg",
+      "credit": "Moldtech",
+      "width": 900,
+      "height": 563,
+      "original_dimensions": [
+        900,
+        563
+      ],
+      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    },
+    {
+      "image": "bottleneck-handling.webp",
+      "source_page": "https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/",
+      "source_image": "https://moldtechsl.es/wp-content/uploads/2022/05/3D-Mould-for-PBU-10.jpg",
+      "credit": "Moldtech",
+      "width": 900,
+      "height": 563,
+      "original_dimensions": [
+        900,
+        563
+      ],
+      "usage": "Online industry example requested for demonstration; source branding retained. Not a Realjet project photograph."
+    }
   ]
 }

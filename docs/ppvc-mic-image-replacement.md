@@ -1,20 +1,22 @@
-# PPVC / MiC image replacement map
+# PPVC / MiC 实拍示例图片替换说明
 
-All images currently use existing Realjet repository assets as clearly captioned equipment / service references, not evidence of a delivered PPVC plant. Replace with approved PPVC photos and update alt text/captions in `site/_data/ppvc.json` and the page template. Keep filenames to avoid link changes.
+本页图片均重新从公开网站检索、下载并逐张核对，没有继续使用网站原有素材占位。页面保留图片来源链接，原图中的品牌标识未抹除。这些是行业演示案例，不代表 Realjet 项目。
 
-- `hero-panoramic-plant.webp` ← `src/assets/image/wenzhou-bay-prefab-industrial-base.webp`
-- `station-01-rebar-jig.webp` ← `src/assets/image/spun-pipe-piles-line/cage-welding.webp`
-- `station-02-hydraulic-core.webp` ← `public/images/products/precast-moulds/box-culvert-moulds.webp`
-- `station-03-curing-enclosure.webp` ← `src/assets/image/intelligent-steam-curing-kiln.webp`
-- `station-04-transfer-cart.webp` ← `src/assets/image/spun-pipe-piles-line/core-products/transfer-trolley.webp`
-- `station-05-fitout-assembly.webp` ← `src/assets/image/project-delivery-capability.webp`
-- `qa-gantry-milling.webp` ← `src/assets/image/contract-manufacturing/machining.webp`
-- `qa-laser-tracker.webp` ← `src/assets/image/contract-manufacturing/quality-inspection.webp`
-- `qa-global-shipping.webp` ← `src/assets/image/contract-manufacturing/realjet-factory.webp`
+所有图片位于 `public/images/ppvc-line/`。文件采用等比例 WebP 编码；五工位与质量展示区按原始比例显示，避免变形。替换为自有照片时，同步修改 `site/_data/ppvc.json` 中的 width、height、alt、caption、source 和 credit。
 
-Hero: 1600×1000. Other photos: 960×640. Social card: og-plant.webp, 1200×630.
+| 页面文件 | 来源 | 图片尺寸 |
+|---|---|---|
+| `hero-panoramic-plant.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `bottleneck-precision.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 960 × 600 |
+| `bottleneck-demoulding.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `bottleneck-handling.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `station-01-rebar-jig.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `station-02-hydraulic-core.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `station-03-curing-enclosure.webp` | [Curetec](https://curetecglobal.com/fully-automated-tent-curing-for-120-tonne-bridge-beams-in-western-australia/) | 840 × 400 |
+| `station-04-transfer-cart.webp` | [Moldtech](https://moldtechsl.es/en/projects/equipos-3d-de-moldtech-en-sri-lanka/) | 900 × 563 |
+| `station-05-fitout-assembly.webp` | [CCDC / CSCEC](https://chinaconstruction.cscec.com/zjny/en/kjcx/PPVC/) | 881 × 525 |
+| `qa-gantry-milling.webp` | [Groupe CMA](https://cma-machining-group.com/Gantry-Milling-Machine.html) | 800 × 501 |
+| `qa-laser-tracker.webp` | [VMT](https://vmt.global/tunnelling/en/precast/) | 1024 × 589 |
+| `qa-global-shipping.webp` | [Moldtech](https://moldtechsl.es/en/business/services/) | 1014 × 850 |
 
-Online visual research (reference only; no third-party image licensing presumed):
-- https://www.elematic.com/product/pro-module/
-- https://moldtechsl.es/en/productos/hydraulic-moulds-for-3d-housing-pbu-ppvc/moulds-for-3d-modular-housing-ppvc/
-- https://www1.bca.gov.sg/docs/default-source/docs-corp-buildsg/productivity/ppvc_info_kit.pdf
+原始图片直链与出处记录在 `docs/ppvc-mic-image-sources.json`。`og-plant.webp` 是首页示例图片的 1200 × 630 社交分享画布，未拉伸原图。

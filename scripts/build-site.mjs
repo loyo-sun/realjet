@@ -564,12 +564,17 @@ const ppvcPage = await readFile(join(finalOutput, "marketing/ppvc-mic-production
 const ppvcThanks = await readFile(join(finalOutput, "marketing/ppvc-mic-production-line/thank-you/index.html"), "utf8");
 for (const required of [
   'href="https://realjetech.com/marketing/ppvc-mic-production-line/"',
-  'name="ppvc-plant-lead"', 'data-netlify="true"', 'enctype="multipart/form-data"',
-  'name="drawing"', 'name="drawing_link"', 'id="technical-specs"',
+  'name="universal-enquiry"', 'data-netlify="true"', 'name="message"',
+  'data-enquiry-position="hero"', 'data-enquiry-position="bottom"', 'id="technical-specs"',
   'id="station-panel-5"', '/assets/site/ppvc.js', '/assets/site/ppvc.css',
 ]) {
   if (!ppvcPage.includes(required)) throw new Error(`PPVC page missing: ${required}`);
 }
+if ((ppvcPage.match(/data-ppvc-form /g) || []).length !== 2) throw new Error("PPVC must have both hero and bottom standard enquiry forms.");
+for (const retired of ['name="ppvc-plant-lead"', 'name="drawing"', 'name="drawing_link"', 'name="dimensions"', 'ppvc-quick-scope']) {
+  if (ppvcPage.includes(retired)) throw new Error(`PPVC retains a non-standard enquiry field: ${retired}`);
+}
+if ((ppvcPage.match(/class="ppvc-bottleneck-photo"/g) || []).length !== 3) throw new Error("PPVC bottleneck cards must use three photographs.");
 if (!ppvcThanks.includes('content="noindex, follow"')) throw new Error("PPVC thank-you must be noindex.");
 if (!sitemap.includes('<loc>https://realjetech.com/marketing/ppvc-mic-production-line/</loc>')) throw new Error("PPVC page missing from sitemap.");
 if (sitemap.includes('/ppvc-mic-production-line/thank-you/')) throw new Error("PPVC thank-you must not appear in sitemap.");
