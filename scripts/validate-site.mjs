@@ -48,9 +48,25 @@ function resolveOutputReference(reference, htmlPath) {
 }
 
 const htmlFiles = (await walk(outputRoot)).filter((file) => file.endsWith(".html"));
+function validateStructuredData(value, path) {
+  if (!value || typeof value !== "object") return;
+  const types = [].concat(value["@type"] || []);
+  if (types.includes("Product") && !["offers", "review", "aggregateRating"].some((key) => value[key])) {
+    failures.push(`${path}: Product requires offers, review or aggregateRating for Google product snippets`);
+  }
+  for (const child of Object.values(value)) validateStructuredData(child, path);
+}
+
 for (const htmlPath of htmlFiles) {
   const html = await readFile(htmlPath, "utf8");
   const relativePath = htmlPath.slice(outputRoot.length + 1);
+  for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      validateStructuredData(JSON.parse(match[1]), relativePath);
+    } catch (error) {
+      failures.push(`${relativePath}: invalid JSON-LD: ${error.message}`);
+    }
+  }
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map((match) => match[1]);
   const duplicateIds = ids.filter((id, index) => ids.indexOf(id) !== index);
   if (duplicateIds.length) failures.push(`${relativePath}: duplicate IDs ${[...new Set(duplicateIds)].join(", ")}`);

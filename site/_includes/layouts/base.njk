@@ -97,7 +97,8 @@
       {
         "@context":"https://schema.org",
         "@graph":[
-          {"@type":"Product","name":{{ title | json | safe }},"description":{{ description | json | safe }},"image":{{ socialImage | json | safe }},"url":{{ canonical | json | safe }},"brand":{"@type":"Brand","name":"Realjet"}},
+          {# Enquiry-only pages have no published price or reviews for Product rich results. #}
+          {"@type":"WebPage","name":{{ title | json | safe }},"description":{{ description | json | safe }},"image":{{ socialImage | json | safe }},"url":{{ canonical | json | safe }},"inLanguage":"en"{% if productSeries == "contract-manufacturing" %},"mainEntity":{"@type":"Service","name":{{ title | json | safe }},"description":{{ description | json | safe }},"url":{{ canonical | json | safe }},"serviceType":"Contract manufacturing","provider":{"@type":"Organization","name":{{ site.legalName | json | safe }},"alternateName":"Realjet","url":"https://realjetech.com/"}}{% endif %}},
           {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"{% if productSeries == 'precast-concrete-moulds' %}Precast Concrete Moulds{% else %}Products{% endif %}","item":"{% if productSeries == 'precast-concrete-moulds' %}https://realjetech.com/precast-concrete-molds/{% else %}https://realjetech.com/products/{% endif %}"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":{{ canonical | json | safe }}}]}
         ]
       }
@@ -112,7 +113,7 @@
         "description":{{ description | json | safe }},
         "url":{{ canonical | json | safe }},
         "isPartOf":{"@type":"WebSite","name":"Realjet","url":"https://realjetech.com/"},
-        "about":{"@type":"Product","name":"Precast Concrete Moulds and Formwork","brand":{"@type":"Brand","name":"Realjet"}},
+        "about":{"@type":"Thing","name":"Precast Concrete Moulds and Formwork"},
         "inLanguage":"en"
       }
     </script>
