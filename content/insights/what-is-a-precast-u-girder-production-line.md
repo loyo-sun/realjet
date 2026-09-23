@@ -2,7 +2,7 @@
 title: "What is a precast U-girder production line and what it includes"
 description: "What a precast U-girder production line includes: pretensioning, long-line casting, factory space, utilities and the buyer inputs to prepare before purchase."
 date: 2026-09-16
-updated: 2026-09-16
+updated: 2026-09-23
 slug: "what-is-a-precast-u-girder-production-line"
 image: "/images/insights/what-is-a-precast-u-girder-production-line.webp"
 imageAlt: "Precast beam production line with steel forms set out in a casting yard"
@@ -23,6 +23,17 @@ Most U-girders are made by pretensioning on long casting beds. Strands run the l
 Some projects use match casting, where segments are cast against an already cast segment so the joint faces fit during erection. For U-girders this is more common on dual-track box-girder sections than on single-track U beams. The casting method you choose changes the form design, the bed length and the handling plan, so it should be fixed before the line layout is set.
 
 ## Equipment and forms in the line
+
+<article class="product-card article-product-card">
+  <a class="product-image" href="/precast-concrete-molds/u-girder-moulds/" tabindex="-1" aria-hidden="true">
+    <img src="/images/uploads/u-beam.webp" alt="Precast U-girder geometry used as the design basis for inner and outer steel mould engineering" width="640" height="360" loading="lazy" decoding="async" />
+  </a>
+  <div class="product-card-body">
+    <h3><a href="/precast-concrete-molds/u-girder-moulds/">U-Girder Moulds</a></h3>
+    <p>Project-specific steel mould systems configured for your U-girder geometry, opening sequence, target cycle and production layout.</p>
+    <a class="button button-dark product-action" href="/precast-concrete-molds/u-girder-moulds/">View Details <span aria-hidden="true">→</span></a>
+  </div>
+</article>
 
 A U-girder line is a coordinated set of stations rather than a single machine. The core items are the pretensioning bed with anchor blocks and reaction beams, the steel forms for the U section, a reinforcing cage assembly area, a concrete supply and placing system, a curing arrangement, and lifting and handling gear. The open U section needs side forms that hold the edge-girder geometry while the bottom slab is cast, and the forms must resist the prestress transfer and stripping forces.
 
