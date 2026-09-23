@@ -2,7 +2,7 @@
 title: "What Is a Precast Concrete Pipe Production Line"
 description: "What a precast concrete pipe production line makes, how spun and vertical casting differ, and the design inputs a buyer needs before a pipe project."
 date: 2026-09-11
-updated: 2026-09-11
+updated: 2026-09-23
 slug: "what-is-a-precast-concrete-pipe-production-line"
 image: "/images/insights/what-is-a-precast-concrete-pipe-production-line.webp"
 imageAlt: "Steel mould for precast concrete pipe production shown in a workshop"
@@ -35,6 +35,17 @@ A complete line is more than one machine. Typical packages include:
 - a curing area, with steam where accelerated curing is used;
 - demoulding, handling and storage equipment.
 
+<article class="product-card article-product-card">
+  <a class="product-image" href="/precast-concrete-molds/concrete-pipe-moulds/" tabindex="-1" aria-hidden="true">
+    <img src="/images/products/precast-moulds/concrete-pipe-moulds.webp" alt="Blue cylindrical steel mould for precast concrete pipes shown with a completed concrete pipe section" width="640" height="360" loading="lazy" decoding="async" />
+  </a>
+  <div class="product-card-body">
+    <h3><a href="/precast-concrete-molds/concrete-pipe-moulds/">Concrete Pipe Moulds</a></h3>
+    <p>Custom inner-core and outer-shell moulds configured for your pipe dimensions, joint profiles and casting process.</p>
+    <a class="button button-dark product-action" href="/precast-concrete-molds/concrete-pipe-moulds/">View Details <span aria-hidden="true">→</span></a>
+  </div>
+</article>
+
 The [pipe mould systems](https://realjetech.com/precast-concrete-molds/concrete-pipe-moulds/) are the reusable steel tool at the centre of the line. Their diameter range, joint profile and surface finish decide the pipe the line can make, so the mould specification and the machine specification have to be agreed together. The line also needs a handling plan for green pipes, which are weak until they reach early strength, and a storage yard sized to the curing queue.
 
 ## Capacity drivers
@@ -62,5 +73,16 @@ Before requesting a quotation, gather the documents the supplier needs to scope 
 [ASTM C76](https://www.astm.org/c0076_c0076m-21.html) and [EN 1916](https://www.en-standard.eu/csn-en-1916-concrete-pipes-and-fittings-unreinforced-reinforced-and-prestressed/) are the common references buyers use to fix the pipe performance class. The supplier designs the line to those inputs; the buyer confirms the scope and the responsibility boundary.
 
 ## Responsibility boundary
+
+<article class="product-card article-product-card">
+  <a class="product-image" href="/marketing/precast-beam-factory/en/" tabindex="-1" aria-hidden="true">
+    <img src="/images/home/precast-production-line.webp" alt="Realjet precast concrete production facility" width="640" height="360" loading="lazy" decoding="async" />
+  </a>
+  <div class="product-card-body">
+    <h3><a href="/marketing/precast-beam-factory/en/">Precast Concrete Production Lines</a></h3>
+    <p>Explore production line planning, moulds and supporting equipment for your precast components, output targets and factory site.</p>
+    <a class="button button-dark product-action" href="/marketing/precast-beam-factory/en/">View Details <span aria-hidden="true">→</span></a>
+  </div>
+</article>
 
 Realjet connects the pipe moulds, the casting machine and the supporting equipment into a production solution sized to the buyer's components and site. Final diameters, interfaces, installation and commissioning scope are confirmed through the buyer's project documents. The [precast production line solutions page](https://realjetech.com/marketing/precast-beam-factory/en/) describes the kind of project scope Realjet can take on for precast concrete components.
