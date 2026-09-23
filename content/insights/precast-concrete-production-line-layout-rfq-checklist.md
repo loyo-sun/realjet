@@ -4,7 +4,7 @@ description: A buyer-side guide to product flow, crane coverage, storage,
   utilities and safety interfaces before approving a precast concrete production
   line layout.
 date: 2026-08-08
-updated: 2026-08-08
+updated: 2026-09-23
 featured: true
 slug: precast-concrete-production-line-layout-rfq-checklist
 image: /images/insights/precast-concrete-production-line-layout.webp
@@ -118,5 +118,16 @@ Before the purchase order, agree which documents will progress from concept layo
 ## Put the layout decision into the RFQ
 
 The most useful RFQ does not ask a supplier to “fit a line into this area.” It provides the product schedule, site information, operating model and project requirements, then asks the supplier to prove flow, capacity, handling, access and interfaces on a controlled drawing.
+
+<article class="product-card article-product-card">
+  <a class="product-image" href="/marketing/precast-beam-factory/en/" tabindex="-1" aria-hidden="true">
+    <img src="/images/home/precast-production-line.webp" alt="Realjet precast concrete production facility" width="640" height="360" loading="lazy" decoding="async" />
+  </a>
+  <div class="product-card-body">
+    <h3><a href="/marketing/precast-beam-factory/en/">Request a Precast Concrete Production Line Quotation</a></h3>
+    <p>Share your component types, main dimensions, target output and site conditions to discuss the production layout and equipment scope for your project.</p>
+    <button class="button button-dark product-action" type="button" data-universal-enquiry data-enquiry-keyword="Precast concrete production line RFQ: layout and equipment scope" data-enquiry-title="Request a Production Line Quotation" data-enquiry-placeholder="Tell us your component types, main dimensions, target output, project location and available factory space. Let us know whether product drawings and a site plan are available.">Request a Quote <span aria-hidden="true">→</span></button>
+  </div>
+</article>
 
 Realjet supplies project-specific production-line solutions, with the final scope defined by the agreed project requirements. Sharing product drawings, quantities, the erection programme, site survey, utility conditions and applicable standards allows the initial discussion about a [production line for precast concrete components](/marketing/precast-beam-factory/en/) to focus on the decisions that actually shape the layout. The next step is to compare a small number of documented layout options before foundations and equipment interfaces are frozen.
