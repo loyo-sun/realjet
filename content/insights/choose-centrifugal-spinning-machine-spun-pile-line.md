@@ -33,6 +33,8 @@ The rollers carry the mould and transmit the rotation. Their spacing, diameter a
 
 The drive is commonly a friction-wheel arrangement that contacts the mould running rings, or a driven-roller set built into the spinning frame. The choice affects maintenance, speed control and how the mould is loaded and discharged. Match the drive to the mould mass and to the line layout, and confirm the stopping points if the spinner sits on a transfer route rather than a fixed bay.
 
+{% equipmentCard "spinning-machine" %}
+
 ## Speed stages and process control
 
 Modern spinners are usually controlled through a variable-frequency drive with a preset speed recipe rather than a fixed motor speed. The recipe holds the low, medium and high stages and their durations, and it protects the mould from sudden speed changes that could disturb the concrete layer already on the wall. Vibration monitoring matters at high speed, because an out-of-balance mould will show up there first.

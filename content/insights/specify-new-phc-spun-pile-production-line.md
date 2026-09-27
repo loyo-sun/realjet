@@ -33,17 +33,23 @@ Daily output is the number that drives most of the equipment sizing, and it is a
 
 Ask each supplier to state the assumed cycle, the number of moulds, the curing volume and the handling method in the same table. A low equipment price with too few curing positions simply moves the bottleneck to the yard. The quotation should also name the buyer inputs it assumed, so you can see whether the number reflects your product mix or a generic layout.
 
+{% equipmentCard "spinning-machine" %}
+
 ## Map the equipment package to the process
 
 A complete line covers the full process sequence rather than a random list of machines. The connected steps are reinforcement preparation, cage welding, mould preparation and closing, concrete batching and feeding, pretensioning, centrifugal spinning, steam curing, demoulding, cutting to length and handling. Each step has its own equipment, and the package should be scoped to the product and the target output.
 
 For a spun pile line the core items are the steel moulds sized to the pile diameter and length, the centrifugal spinning frames, the cage welding machine, concrete batching and conveying, the steam curing chamber or pits, and the overhead or gantry handling. The exact machine list should be confirmed during technical review instead of copied from a standard layout, because diameter range, wall thickness and daily volume change the right configuration.
 
+{% equipmentCard "pile-steel-mould" %}
+
 ## Reserve space and utilities before fixing the layout
 
 The spinning frames need foundations and a straight, level track. The curing chamber is often the largest single item and the longest lead component, so confirm its dimensions and door arrangement against the pile length and the handling route before the layout is fixed. Overhead crane or gantry coverage must reach every station where a long mould is lifted, and the steam boiler needs a permitted location with fuel or utility supply.
 
 Plan for water, power and compressed air as well. Civil foundations, the boiler permit and utility connections are normally part of the buyer's site scope unless the contract states otherwise. Drawing the layout on paper after the machines are ordered is a frequent cause of rework, because the real constraint is usually the building column grid and the crane span, not the equipment footprint.
+
+{% equipmentCard "steam-boiler" %}
 
 ## Separate the supplier scope from the buyer's site scope
 
