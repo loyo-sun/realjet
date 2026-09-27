@@ -1069,13 +1069,19 @@ body.has-enquiry-modal { overflow: hidden; }
 
 /* Existing equipment photographs are displayed without cropping. */
 .product-page-spun-equipment .product-gallery-stage img { object-fit: contain; }
-.article-body .product-solution-card { display: flex; flex-direction: column; gap: 12px; margin: 0 0 36px; padding: clamp(22px,4vw,32px); border: 1px solid #c6dce7; border-radius: 12px; background: #eef6fa; color: var(--navy); text-decoration: none; }
+.article-body .product-solution-card { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(20px,3vw,30px); align-items: center; margin: 0 0 36px; padding: clamp(20px,3vw,28px); border: 1px solid #c6dce7; border-radius: 12px; background: #eef6fa; color: var(--navy); }
+.article-body .product-solution-image { display: block; width: 100%; height: auto; margin: 0; border-radius: 8px; }
+.product-solution-copy { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; gap: 12px; }
 .product-solution-card .product-solution-eyebrow { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .product-solution-card strong { font-size: clamp(23px,3vw,30px); line-height: 1.2; }
-.product-solution-card > span:not(.product-solution-eyebrow) { color: var(--muted); font-size: 15px; line-height: 1.7; }
-.product-solution-card b { color: var(--blue); font-size: 14px; }
-.article-body .product-solution-card:hover { border-color: var(--blue); background: #e3f0f7; }
-.article-body .product-solution-card:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+.article-body .product-solution-copy p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.article-body .product-solution-button { margin-top: 4px; color: var(--white); text-align: center; text-decoration: none; }
+.article-body .product-solution-button:hover { background: var(--blue); }
+.article-body .product-solution-button:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+@media (max-width: 720px) {
+  .article-body .product-solution-card { grid-template-columns: minmax(0,1fr); }
+  .product-solution-button { width: 100%; }
+}
 
 @media (max-width: 720px) {
   .spun-equipment-contact-actions { display: none; }

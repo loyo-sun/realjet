@@ -14,6 +14,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ public: "." });
   eleventyConfig.addPassthroughCopy({
     "src/assets/image/spun-pipe-piles-line/core-products": "images/products/spun-pile-equipment",
+    "src/assets/image/spun-pipe-piles-line/line-hero.webp": "images/products/spun-pile-line.webp",
   });
   eleventyConfig.addPassthroughCopy({ "site/assets": "assets/site" });
   eleventyConfig.addPassthroughCopy({

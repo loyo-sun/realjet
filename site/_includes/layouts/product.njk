@@ -35,12 +35,15 @@ layout: layouts/base.njk
     <div class="product-detail-content-layout">
       <div class="product-description article-body">
         {% if solutionUrl %}
-        <a class="product-solution-card" href="{{ solutionUrl }}">
-          <span class="product-solution-eyebrow">Complete production line solution</span>
-          <strong>{{ solutionTitle }}</strong>
-          <span>See how this equipment fits into the line, from reinforcement preparation to forming, curing and handling.</span>
-          <b>Explore the production line</b>
-        </a>
+        <div class="product-solution-card">
+          <img class="product-solution-image" src="/images/products/spun-pile-line.webp" alt="Spun concrete pile production workshop with blue steel moulds and overhead handling equipment" width="1600" height="900" loading="lazy" decoding="async" />
+          <div class="product-solution-copy">
+            <span class="product-solution-eyebrow">Complete production line solution</span>
+            <strong>{{ solutionTitle }}</strong>
+            <p>See how this equipment fits into the line, from reinforcement preparation to forming, curing and handling.</p>
+            <a class="button button-dark product-solution-button" href="{{ solutionUrl }}">Explore the production line</a>
+          </div>
+        </div>
         {% endif %}
         {{ content | safe }}
         {% if productSeries == "precast-concrete-moulds" %}
