@@ -37,7 +37,6 @@ import { trackEvent, trackLeadError, trackLeadSuccess } from "../precast-beam-fa
 import LanguageSwitcher from "./LanguageSwitcher";
 import { localeMeta, translate } from "./translations";
 import { coreEquipment, equipmentCategories } from "./coreEquipment";
-import EquipmentImageDialog from "./EquipmentImageDialog";
 import enPlantLayout from "../../assets/image/spun-pipe-piles-line/spun-pile-plant-layout-en.webp";
 
 const scope = [
@@ -242,7 +241,6 @@ function AdsLeadForm({ locale = "en" }) {
 }
 
 function EnglishVisualAdsPage({ locale = "en" }) {
-  const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [activeEquipmentCategory, setActiveEquipmentCategory] = useState("all");
   const [menuOpen, setMenuOpen] = useState(false);
   const [modal, setModal] = useState({ open: false, title: "Discuss your spun pile plant" });
@@ -253,7 +251,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
     title: t(item.title),
     copy: t(item.copy),
     detail: t(item.detail),
-    alt: locale === "en" ? item.alt : t(item.title),
+    alt: t(item.title),
   }));
   const visibleEquipment = activeEquipmentCategory === "all"
     ? localizedEquipment
@@ -342,7 +340,7 @@ function EnglishVisualAdsPage({ locale = "en" }) {
               </div>
               <div className="mt-7 grid grid-cols-4 gap-5 max-[1000px]:grid-cols-2 max-[600px]:grid-cols-1">
                 {visibleEquipment.map((item) => <article key={item.id} data-equipment-id={item.id} className="overflow-hidden rounded-xl border border-line bg-white">
-                  <button type="button" onClick={() => setSelectedEquipment(item)} aria-label={`${t("Enlarge image")}: ${item.title}`} className="group relative block aspect-[16/10] w-full cursor-zoom-in overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></button>
+                  <a href={item.href} className="group relative block aspect-[16/10] w-full overflow-hidden bg-[#f6f8fa] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-blue"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></a>
                   <div className="p-5"><h4 className="text-lg leading-6 font-[900] text-brand-navy"><a href={item.href} className="underline decoration-brand-blue/30 underline-offset-4 hover:text-brand-blue">{item.title}</a></h4><p className="mt-2 text-sm leading-6 text-muted">{item.copy}</p></div>
                 </article>)}
               </div>
@@ -369,7 +367,6 @@ function EnglishVisualAdsPage({ locale = "en" }) {
 
       <div className="max-[720px]:hidden"><FloatingContactActions ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} enquiryLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} /></div>
       <MobileContactBar ariaLabel={meta.contactOptionsLabel} canonicalUrl={meta.canonicalUrl} emailLabel={meta.emailLabel} enquireLabel={meta.enquiryLabel} enquiryTitle="Discuss a prestressed spun concrete pile production line" messagingChannel={meta.messagingChannel} messagingHref={messagingHref} messagingLabel={meta.messagingLabel} onEnquire={openEnquiry} showEmail={false} subject={meta.subject} />
-      <EquipmentImageDialog item={selectedEquipment} detailLabel={t("Role in the production line")} closeLabel={t("Close enlarged image")} onClose={() => setSelectedEquipment(null)} />
       <EnquiryModal open={modal.open} title={modal.title} onClose={() => setModal((value) => ({ ...value, open: false }))} locale={locale} />
     </div></LocalizedPage>
   );
