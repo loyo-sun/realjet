@@ -12,13 +12,10 @@ contentCluster: "spun-pile"
 relatedEquipment:
   - slug: "pile-steel-mould"
     relevance: "The steel mould sets the pile diameter, length and wall thickness, and its running-ring and lifting geometry must match every downstream station, so it anchors the whole line scope."
-    selectionInputs: "Pile diameter and length range, wall thickness, running-ring profile and lifting-point layout."
   - slug: "spinning-machine"
     relevance: "The centrifugal spinning frames compact the concrete and form the hollow section, so their capacity, roller geometry and drive must track the mould family and the planned cycle."
-    selectionInputs: "Mould diameter and length, running-ring profile, target cycle time and drive arrangement."
   - slug: "steam-boiler"
     relevance: "Steam curing is a staged low-pressure process, and boiler capacity is selected from curing volume, daily cycles, steam pressure and the site fuel or utility supply."
-    selectionInputs: "Curing pit or chamber volume, daily cycles, steam pressure class and available fuel supply."
 ---
 
 ## Start with the product and the standard

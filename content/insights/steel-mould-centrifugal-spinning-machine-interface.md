@@ -12,13 +12,10 @@ contentCluster: "spun-pile"
 relatedEquipment:
   - slug: "pile-steel-mould"
     relevance: "The mould defines the pile shape and carries the running rings and lifting points that the spinner and crane must match, so its geometry drives the interface."
-    selectionInputs: "Pile diameter and length, wall thickness, running-ring profile, split line and lifting-point layout."
   - slug: "spinning-machine"
     relevance: "The centrifugal spinner rotates the mould through the forming stages, so its rollers must match the mould running rings across the full diameter and length range."
-    selectionInputs: "Mould diameter and length, running-ring profile, roller spacing and target cycle time."
   - slug: "friction-wheel-drive"
     relevance: "The friction-wheel drive spins the mould by contacting its running rings, so its force, speed and stopping points must suit the mould mass and the transfer route."
-    selectionInputs: "Mould mass, travel route, required drive force, speed and stopping positions."
 ---
 
 ## Why the mould and spinner are a pair, not two items

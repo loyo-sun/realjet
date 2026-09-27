@@ -12,7 +12,6 @@ contentCluster: "spun-pile"
 relatedEquipment:
   - slug: "spinning-machine"
     relevance: "The spinning machine rotates the filled mould so centrifugal force packs the concrete against the wall and forms the hollow core, so match it to your mould family."
-    selectionInputs: "Loaded mould mass and length, running-ring dimensions, pile sizes and planned cycle."
 ---
 
 ## What the spinning machine actually does
