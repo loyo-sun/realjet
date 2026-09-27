@@ -1066,3 +1066,13 @@ body.has-enquiry-modal { overflow: hidden; }
   color: var(--white);
   background: #b93619;
 }
+
+/* Existing equipment photographs are displayed without cropping. */
+.product-page-spun-equipment .product-gallery-stage img { object-fit: contain; }
+.article-body .product-solution-card { display: flex; flex-direction: column; gap: 12px; margin: 0 0 36px; padding: clamp(22px,4vw,32px); border: 1px solid #c6dce7; border-radius: 12px; background: #eef6fa; color: var(--navy); text-decoration: none; }
+.product-solution-card .product-solution-eyebrow { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.product-solution-card strong { font-size: clamp(23px,3vw,30px); line-height: 1.2; }
+.product-solution-card > span:not(.product-solution-eyebrow) { color: var(--muted); font-size: 15px; line-height: 1.7; }
+.product-solution-card b { color: var(--blue); font-size: 14px; }
+.article-body .product-solution-card:hover { border-color: var(--blue); background: #e3f0f7; }
+.article-body .product-solution-card:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }

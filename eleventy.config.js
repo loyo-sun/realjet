@@ -12,6 +12,9 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("content/insights/README.md");
 
   eleventyConfig.addPassthroughCopy({ public: "." });
+  eleventyConfig.addPassthroughCopy({
+    "src/assets/image/spun-pipe-piles-line/core-products": "images/products/spun-pile-equipment",
+  });
   eleventyConfig.addPassthroughCopy({ "site/assets": "assets/site" });
   eleventyConfig.addPassthroughCopy({
     "src/assets/image/realjet-logo.webp": "images/realjet-logo.webp",
