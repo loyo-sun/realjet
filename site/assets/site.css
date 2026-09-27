@@ -123,21 +123,39 @@ button, input, textarea, select { font: inherit; }
 
 /* Equipment card inserted inline within a spun-pile Insights article body.
    Rendered by the `equipmentCard` shortcode in eleventy.config.js.
-   Scoped under .article-body so it overrides the article h3/img/a rules. */
-.article-body .equipment-card { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); align-items: stretch; margin: 34px 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
-.article-body .equipment-card-image { display: block; overflow: hidden; min-height: 210px; background: #dce6eb; }
+   Scoped under .article-body so it overrides the article h3/img/a rules.
+   Layout is always side by side: image on the left, copy on the right.
+   It never stacks top to bottom, so the card keeps the same structure on
+   desktop, tablet and phone. */
+.article-body .equipment-card { display: flex; flex-direction: row; align-items: stretch; margin: 34px 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
+.article-body .equipment-card .equipment-card-image { display: block; flex: 0 0 42%; width: 42%; max-width: 42%; overflow: hidden; min-height: 210px; background: #dce6eb; }
 .article-body .equipment-card .equipment-card-image img { width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: cover; }
-.article-body .equipment-card-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px; }
+.article-body .equipment-card .equipment-card-body { display: flex; flex: 1 1 auto; min-width: 0; flex-direction: column; justify-content: center; gap: 10px; padding: 24px 26px; }
 .article-body .equipment-card h3 { margin: 0; color: var(--navy); font-size: 20px; line-height: 1.3; letter-spacing: -.025em; }
 .article-body .equipment-card h3 a { color: inherit; text-decoration: none; }
 .article-body .equipment-card .equipment-card-relevance { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .article-body .equipment-card .equipment-card-inputs { margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .article-body .equipment-card .equipment-card-inputs-label { display: block; color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5px; }
-.article-body .equipment-card .equipment-card-action { min-height: 42px; margin-top: auto; padding: 8px 14px; align-self: flex-start; color: var(--white); text-decoration: none; }
+.article-body .equipment-card .equipment-card-action { min-height: 42px; padding: 8px 14px; align-self: flex-start; color: var(--white); text-decoration: none; }
+/* Narrow screens keep the same left/right split, with a slimmer image column
+   and tighter type so the copy column stays readable. */
 @media (max-width: 639px) {
-  .article-body .equipment-card { grid-template-columns: minmax(0, 1fr); }
-  .article-body .equipment-card-image { min-height: 0; aspect-ratio: 8 / 5; }
+  .article-body .equipment-card .equipment-card-image { flex-basis: 38%; width: 38%; max-width: 38%; min-height: 150px; }
   .article-body .equipment-card .equipment-card-image img { object-fit: contain; }
+  .article-body .equipment-card .equipment-card-body { gap: 8px; padding: 15px 15px; }
+  .article-body .equipment-card h3 { font-size: 16px; }
+  .article-body .equipment-card .equipment-card-relevance { font-size: 12.5px; line-height: 1.55; }
+  .article-body .equipment-card .equipment-card-inputs { font-size: 12px; line-height: 1.5; }
+  .article-body .equipment-card .equipment-card-inputs-label { font-size: 9px; letter-spacing: .12em; margin-bottom: 3px; }
+  .article-body .equipment-card .equipment-card-action { min-height: 40px; padding: 7px 12px; font-size: 12px; }
+}
+@media (max-width: 400px) {
+  .article-body .equipment-card { margin: 24px 0; }
+  .article-body .equipment-card .equipment-card-image { flex-basis: 34%; width: 34%; max-width: 34%; min-height: 130px; }
+  .article-body .equipment-card .equipment-card-body { gap: 6px; padding: 12px 12px; }
+  .article-body .equipment-card h3 { font-size: 15px; }
+  .article-body .equipment-card .equipment-card-relevance { font-size: 12px; line-height: 1.5; }
+  .article-body .equipment-card .equipment-card-inputs { font-size: 11.5px; line-height: 1.45; }
 }
 
 .product-listing-section { padding: 72px 0 88px; background: var(--soft); }
