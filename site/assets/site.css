@@ -1076,3 +1076,7 @@ body.has-enquiry-modal { overflow: hidden; }
 .product-solution-card b { color: var(--blue); font-size: 14px; }
 .article-body .product-solution-card:hover { border-color: var(--blue); background: #e3f0f7; }
 .article-body .product-solution-card:focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+
+@media (max-width: 720px) {
+  .spun-equipment-contact-actions { display: none; }
+}
