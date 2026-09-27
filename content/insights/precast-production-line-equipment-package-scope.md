@@ -2,7 +2,7 @@
 title: "Precast Production Line Equipment Package Scope"
 description: "How to define the equipment package scope and supplier responsibility boundaries for a precast beam production line before requesting a quotation."
 date: 2026-08-25
-updated: 2026-08-25
+updated: 2026-09-27
 slug: "precast-production-line-equipment-package-scope"
 image: "/images/insights/precast-production-line-equipment-package-scope.webp"
 imageAlt: "Precast concrete beam production line equipment arranged in a factory hall"
@@ -62,3 +62,7 @@ State which standard applies, which tolerance or quality class the components mu
 ## Next step before you request the quotation
 
 Before contacting suppliers, write the production target, the component list, the site conditions and the scope split. Confirm which parts are your responsibility and which you expect the supplier to deliver, including installation, commissioning and training. When those inputs are fixed, open a review with the [precast beam production line team](/marketing/precast-beam-factory/en/) so the proposal matches your plant objective rather than a generic configuration. Recording the split in the technical agreement, not only in the RFQ, prevents later disagreement about which side owns a missing item.
+
+## Spun pile equipment interfaces
+
+For a spun pile package, compare the [steel mould](/products/pile-steel-mould.html), [centrifugal spinning machine](/products/spinning-machine.html) and [tensioning equipment](/products/tensioning-machine.html) as connected items. Their running rings, loaded mass and mould-end connections need a common design basis. The [spun pile production line solution](/marketing/spun-pipe-piles-production-line/) brings the equipment scope together.

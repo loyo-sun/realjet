@@ -28,6 +28,19 @@ collections:
     fields:
       - { label: Title, name: title, widget: string, required: true }
       - { label: Short Description, name: description, widget: text, required: true, hint: "Used on the homepage, product list and search previews." }
+      - { label: SEO Title Override, name: landingSeoTitle, widget: string, required: false, hint: "Optional search title. Leave blank to use the product title." }
+      - { label: Production Line Solution URL, name: solutionUrl, widget: string, required: false, hint: "Site-relative link for the card above the product description." }
+      - { label: Production Line Solution Title, name: solutionTitle, widget: string, required: false }
+      - label: Related Equipment
+        name: relatedProducts
+        widget: relation
+        collection: products
+        search_fields: [title, slug]
+        value_field: slug
+        display_fields: [title]
+        multiple: true
+        required: false
+
       - { label: Published Date, name: date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Updated Date, name: updated, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: true }
       - { label: Display Order, name: order, widget: number, value_type: int, min: 1, required: true, hint: "Lower numbers appear first in product listings and among recommended homepage products." }
@@ -41,6 +54,7 @@ collections:
         options:
           - { label: Contract Manufacturing, value: contract-manufacturing }
           - { label: Precast Production Equipment, value: precast-production-equipment }
+          - { label: Spun Pile Equipment, value: spun-pile-equipment }
           - { label: Precast Concrete Moulds, value: precast-concrete-moulds }
       - label: Mould Application Category
         name: mouldCategory

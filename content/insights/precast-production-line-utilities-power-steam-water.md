@@ -2,7 +2,7 @@
 title: "Precast Production Line Utilities: Power, Steam, Air, Water"
 description: "How to fix electrical, steam, compressed air, water and drainage utilities for a precast concrete production line before equipment RFQ and civil works."
 date: 2026-08-22
-updated: 2026-08-22
+updated: 2026-09-27
 slug: "precast-production-line-utilities-power-steam-water"
 image: "/images/insights/precast-production-line-utilities-power-steam-water.webp"
 imageAlt: "Aerial view of a precast beam factory showing long casting beds, overhead gantry cranes and utility distribution across the production yard"
@@ -65,3 +65,7 @@ For lighting, the buyer should state the maintained illuminance for each area, t
 The practical step is to add a utilities section to the production line brief at the same time as the product and capacity are fixed. The section should list the grid supply, the steam or hot water basis, the compressed air basis, the water analysis and drainage plan, and the lighting and ventilation rules, with the standards or local codes that apply. Each bidder then prices the same basis, and the buyer's design team can compare bids on equal ground.
 
 Buyers who want to align utilities, layout and equipment scope can use the [project-specific production line service](https://realjetech.com/marketing/precast-beam-factory/en/) to start the engineering review. Final utilities, layout and equipment scope are confirmed through the buyer's project documents, and the bid basis is the buyer's controlled brief, not a supplier's assumed design.
+
+## Utility equipment for spun pile production
+
+For a spun pile plant, review the [steam boiler](/products/steam-boiler.html) with the [curing control cabinet](/products/curing-control-cabinet.html) so that steam demand, zone controls and supply responsibilities are defined together. Size the [screw air compressor](/products/screw-air-compressor.html) around the pneumatic equipment and simultaneous tool demand at the workstations.

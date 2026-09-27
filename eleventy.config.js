@@ -102,6 +102,10 @@ export default function (eleventyConfig) {
       .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
   );
 
+  eleventyConfig.addFilter("relatedEquipment", (items, slugs = []) =>
+    slugs.map((slug) => items.find((item) => item.data.slug === slug)).filter(Boolean),
+  );
+
   eleventyConfig.addFilter("readableDate", (value) =>
     new Intl.DateTimeFormat("en", {
       day: "numeric",
