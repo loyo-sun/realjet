@@ -136,7 +136,7 @@ button, input, textarea, select { font: inherit; }
 .article-body .equipment-card .equipment-card-relevance { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .article-body .equipment-card .equipment-card-inputs { margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .article-body .equipment-card .equipment-card-inputs-label { display: block; color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5px; }
-.article-body .equipment-card .equipment-card-action { min-height: 42px; padding: 8px 14px; align-self: flex-start; color: var(--white); text-decoration: none; }
+.article-body .equipment-card .equipment-card-action { min-height: 44px; padding: 8px 14px; align-self: flex-start; color: var(--white); text-decoration: none; }
 /* Narrow screens keep the same left/right split, with a slimmer image column
    and tighter type so the copy column stays readable. */
 @media (max-width: 639px) {
@@ -147,7 +147,7 @@ button, input, textarea, select { font: inherit; }
   .article-body .equipment-card .equipment-card-relevance { font-size: 12.5px; line-height: 1.55; }
   .article-body .equipment-card .equipment-card-inputs { font-size: 12px; line-height: 1.5; }
   .article-body .equipment-card .equipment-card-inputs-label { font-size: 9px; letter-spacing: .12em; margin-bottom: 3px; }
-  .article-body .equipment-card .equipment-card-action { min-height: 40px; padding: 7px 12px; font-size: 12px; }
+  .article-body .equipment-card .equipment-card-action { min-height: 44px; padding: 7px 12px; font-size: 12px; }
 }
 @media (max-width: 400px) {
   .article-body .equipment-card { margin: 24px 0; }
