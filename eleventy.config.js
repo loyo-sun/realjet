@@ -107,6 +107,11 @@ export default function (eleventyConfig) {
     slugs.map((slug) => items.find((item) => item.data.slug === slug)).filter(Boolean),
   );
 
+  // Resolve one published product by slug for the "Equipment discussed in this guide" cards.
+  eleventyConfig.addFilter("productBySlug", (items, slug) =>
+    Array.isArray(items) ? items.find((item) => item.data && item.data.slug === slug) || null : null,
+  );
+
   eleventyConfig.addFilter("readableDate", (value) =>
     new Intl.DateTimeFormat("en", {
       day: "numeric",

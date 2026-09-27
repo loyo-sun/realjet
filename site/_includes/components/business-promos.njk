@@ -6,9 +6,15 @@
       <a href="/marketing/contract_manufacturing/" data-business-entry data-business-type="manufacturing" data-cta-id="products_manufacturing">
         <span>Manufacturing Services</span><strong>Contract Manufacturing</strong><small>Machinery components made to drawings, specifications and delivery requirements.</small><b aria-hidden="true">Explore Service →</b>
       </a>
+      {% if contentCluster == "spun-pile" %}
+      <a href="/marketing/spun-pipe-piles-production-line/" data-business-entry data-business-type="precast_line" data-cta-id="products_precast_line">
+        <span>Turnkey Solutions</span><strong>Spun Concrete Pile Production Lines</strong><small>Project engineering, equipment manufacturing, installation and commissioning for spun concrete pile plants.</small><b aria-hidden="true">Explore Solution →</b>
+      </a>
+      {% else %}
       <a href="/marketing/precast-beam-factory/en/" data-business-entry data-business-type="precast_line" data-cta-id="products_precast_line">
         <span>Turnkey Solutions</span><strong>Precast Concrete Production Lines</strong><small>Project engineering, equipment manufacturing, installation and commissioning.</small><b aria-hidden="true">Explore Solution →</b>
       </a>
+      {% endif %}
     </div>
   </div>
 </section>
