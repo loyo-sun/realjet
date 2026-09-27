@@ -162,6 +162,47 @@ export default function (eleventyConfig) {
     },
   );
 
+  // Inline equipment card shortcode for spun-pile Insights articles.
+  // Usage in article Markdown: {% equipmentCard "spinning-machine" %}
+  // Copy (relevance / selectionInputs) is read from the page's relatedEquipment list
+  // unless passed explicitly as extra arguments. Product data comes from publishedProducts.
+  eleventyConfig.addShortcode(
+    "equipmentCard",
+    function (slug, relevance, selectionInputs) {
+      const ctx = (this && this.ctx) || {};
+      const products = (ctx.collections && ctx.collections.publishedProducts) || [];
+      const product = Array.isArray(products)
+        ? products.find((item) => item.data && item.data.slug === slug)
+        : null;
+      if (!product) {
+        return `<!-- equipmentCard: product "${slug}" not found -->`;
+      }
+      const list = Array.isArray(ctx.relatedEquipment) ? ctx.relatedEquipment : [];
+      const copy = list.find((item) => item && item.slug === slug) || {};
+      const rel = relevance || copy.relevance || "";
+      const inputs = selectionInputs || copy.selectionInputs || "";
+      const esc = (value) =>
+        String(value == null ? "" : value)
+          .replaceAll("&", "&amp;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;");
+      const url = esc(product.url);
+      const title = esc(product.data.title);
+      const alt = esc(product.data.imageAlt);
+      const img = esc(product.data.image);
+      return `<article class="equipment-card">
+  <a class="equipment-card-image" href="${url}" tabindex="-1" aria-hidden="true"><img src="${img}" alt="${alt}" width="640" height="400" loading="lazy" decoding="async"></a>
+  <div class="equipment-card-body">
+    <h3><a href="${url}">${title}</a></h3>
+    <p class="equipment-card-relevance">${esc(rel)}</p>
+    <p class="equipment-card-inputs"><span class="equipment-card-inputs-label">Enquiry inputs</span> ${esc(inputs)}</p>
+    <a class="button button-dark equipment-card-action" href="${url}" aria-label="View equipment details for ${title}">View equipment details <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</article>`;
+    },
+  );
+
   eleventyConfig.addPlugin(feedPlugin, {
     type: "rss",
     outputPath: "/feed.xml",

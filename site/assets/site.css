@@ -121,30 +121,23 @@ button, input, textarea, select { font: inherit; }
 .product-grid-home .product-card h3 { font-size: 18px; }
 .product-grid-home .product-card p { font-size: 13px; }
 
-/* Equipment discussed in this guide (spun-pile Insights cards) */
-.equipment-cards { padding: 14px 0 6px; }
-.equipment-cards .container { max-width: 1120px; }
-.equipment-cards h2 { margin: 0 0 22px; color: var(--navy); font-size: clamp(24px, 3vw, 32px); line-height: 1.18; letter-spacing: -.03em; }
-.equipment-card-grid { display: grid; gap: 24px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.equipment-card-grid:has(> .equipment-card:nth-child(1):nth-last-child(1)) { grid-template-columns: minmax(0, 1fr); }
-.equipment-card-grid:has(> .equipment-card:nth-child(2):nth-last-child(1)) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.equipment-card-grid:has(> .equipment-card:nth-child(3):nth-last-child(1)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.equipment-card { display: flex; min-width: 0; overflow: hidden; flex-direction: column; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
-.equipment-card-image { display: block; overflow: hidden; aspect-ratio: 8 / 5; background: #dce6eb; }
-.equipment-card-image img { width: 100%; height: 100%; object-fit: contain; }
-.equipment-card-body { display: flex; flex: 1; flex-direction: column; padding: 22px; gap: 10px; }
-.equipment-card h3 { margin: 0; color: var(--navy); font-size: 20px; line-height: 1.3; letter-spacing: -.025em; }
-.equipment-card h3 a { text-decoration: none; color: inherit; }
-.equipment-card-relevance { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-.equipment-card-inputs { margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-.equipment-card-inputs-label { display: block; color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5px; }
-.equipment-card-action { min-height: 42px; margin-top: auto; padding: 8px 14px; align-self: flex-start; }
-@media (max-width: 1023px) {
-  .equipment-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .equipment-card-grid:has(> .equipment-card:nth-child(1):nth-last-child(1)) { grid-template-columns: minmax(0, 1fr); }
-}
+/* Equipment card inserted inline within a spun-pile Insights article body.
+   Rendered by the `equipmentCard` shortcode in eleventy.config.js.
+   Scoped under .article-body so it overrides the article h3/img/a rules. */
+.article-body .equipment-card { display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); align-items: stretch; margin: 34px 0; overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--white); box-shadow: var(--shadow); }
+.article-body .equipment-card-image { display: block; overflow: hidden; min-height: 210px; background: #dce6eb; }
+.article-body .equipment-card .equipment-card-image img { width: 100%; height: 100%; margin: 0; border-radius: 0; object-fit: cover; }
+.article-body .equipment-card-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px; }
+.article-body .equipment-card h3 { margin: 0; color: var(--navy); font-size: 20px; line-height: 1.3; letter-spacing: -.025em; }
+.article-body .equipment-card h3 a { color: inherit; text-decoration: none; }
+.article-body .equipment-card .equipment-card-relevance { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.article-body .equipment-card .equipment-card-inputs { margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.article-body .equipment-card .equipment-card-inputs-label { display: block; color: var(--cyan-dark); font-size: 10px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 5px; }
+.article-body .equipment-card .equipment-card-action { min-height: 42px; margin-top: auto; padding: 8px 14px; align-self: flex-start; color: var(--white); text-decoration: none; }
 @media (max-width: 639px) {
-  .equipment-card-grid { grid-template-columns: minmax(0, 1fr); }
+  .article-body .equipment-card { grid-template-columns: minmax(0, 1fr); }
+  .article-body .equipment-card-image { min-height: 0; aspect-ratio: 8 / 5; }
+  .article-body .equipment-card .equipment-card-image img { object-fit: contain; }
 }
 
 .product-listing-section { padding: 72px 0 88px; background: var(--soft); }

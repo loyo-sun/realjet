@@ -35,22 +35,5 @@ layout: layouts/base.njk
       </section>
     </aside>
   </div>
-  {% if contentCluster == "spun-pile" and relatedEquipment and relatedEquipment.length %}
-  <section class="equipment-cards" aria-labelledby="equipment-guide-title">
-    <div class="container">
-      <h2 id="equipment-guide-title">Equipment discussed in this guide</h2>
-      <div class="equipment-card-grid">
-        {% for item in relatedEquipment %}
-          {% set product = collections.publishedProducts | productBySlug(item.slug) %}
-          {% if product %}
-            {% set relevance = item.relevance %}
-            {% set selectionInputs = item.selectionInputs %}
-            {% include "components/equipment-card.njk" %}
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  {% endif %}
   {% include "components/business-promos.njk" %}
 </article>
