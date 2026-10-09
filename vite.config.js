@@ -23,6 +23,7 @@ export default defineConfig({
   plugins: [consentModeDefaults, react(), tailwindcss()],
   build: {
     outDir: ".build/vite",
+    manifest: true,
     emptyOutDir: true,
     rollupOptions: {
       input: {

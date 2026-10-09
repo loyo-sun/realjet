@@ -2,22 +2,20 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
-  Award,
   Check,
   CheckCircle,
   ChevronRight,
   CircleCheckBig,
   FileCheck2,
   Menu,
-  ShieldCheck,
-  Users,
-  Wrench,
   X,
 } from "lucide-react";
 import { trackLeadError, trackLeadSuccess } from "../precast-beam-factory/shared/analytics";
 import UniversalEnquiryFields from "../precast-beam-factory/shared/UniversalEnquiryFields";
 import FloatingContactActions from "../precast-beam-factory/shared/FloatingContactActions";
 import { createUniversalEnquiryBody, UNIVERSAL_ENQUIRY_FORM_NAME } from "../precast-beam-factory/shared/universalEnquiry";
+
+import { manufacturingFaqs } from "./content";
 
 import logoImage from "../../assets/image/realjet-logo.webp";
 import heroImage from "../../assets/image/contract-manufacturing/hero-welding-workshop.webp";
@@ -49,29 +47,6 @@ const companyStats = [
   { value: "77,000 m²", label: "Manufacturing footprint" },
   { value: "470+", label: "Equipment sets" },
   { value: "150+", label: "Authorized patents" },
-];
-
-const companyValues = [
-  {
-    icon: Users,
-    title: "Company Philosophy",
-    text: "Build a partnership enterprise that satisfies customer needs, fulfils social responsibilities, displays personal talents and realises personal dreams.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Product Concept",
-    text: "Safe · Efficient · Precise · Durable",
-  },
-  {
-    icon: Wrench,
-    title: "Business Philosophy",
-    text: "Integrity · Innovation · Service · Development",
-  },
-  {
-    icon: Award,
-    title: "Core Values",
-    text: "Customer First · Craftsmanship · Collaboration · Excellence",
-  },
 ];
 
 const capabilities = [
@@ -147,8 +122,8 @@ const recognitionCases = [
 ];
 
 const workflow = [
-  { step: "01", title: "Review the requirement", text: "Share drawings, specifications, quantities, delivery location and quality-documentation requirements." },
-  { step: "02", title: "Confirm the process route", text: "Material, fabrication, machining, finishing, inspection and external interfaces are reviewed together." },
+  { step: "01", title: "Review the requirement", text: "Send a short component enquiry. We will contact you to arrange drawing exchange and clarify quantities, delivery and quality requirements." },
+  { step: "02", title: "Confirm the process route", text: "Review drawings, materials, processes and inspection needs together, then confirm the quotation and delivery scope before production." },
   { step: "03", title: "Manufacture with checkpoints", text: "Production follows the agreed route with inspection points aligned to drawings and purchase requirements." },
   { step: "04", title: "Inspect, pack and deliver", text: "Final records, marking, protection, export packing and delivery are coordinated against the agreed scope." },
 ];
@@ -162,6 +137,19 @@ const decisionInputs = [
   "Delivery destination and target schedule",
 ];
 
+function ProductCard({ item }) {
+  return (
+                <article className="group overflow-hidden rounded-card border border-white/12 bg-brand-navy-light">
+                  <a href={item.href} aria-label={`View ${item.title} product details`} className="block aspect-[4/3] overflow-hidden bg-white/5"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" /></a>
+                  <div className="p-5">
+                    <p className="m-0 text-[10px] font-[850] tracking-[.14em] text-brand-cyan uppercase">{item.category}</p>
+                    <h3 className="mt-2 mb-0 text-xl leading-tight font-[850]"><a href={item.href} className="text-white no-underline transition hover:text-brand-cyan focus-visible:text-brand-cyan">{item.title}</a></h3>
+                    <p className="mt-3 mb-0 text-xs font-bold text-white/54">{item.client}</p>
+                  </div>
+                </article>
+  );
+}
+
 function PrimaryButton({ children, onClick, ctaId }) {
   return (
     <button type="button" onClick={onClick} data-cta-id={ctaId} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#d94824] px-5 text-sm font-[850] text-white shadow-[0_12px_28px_rgba(217,72,36,.26)] transition hover:-translate-y-0.5 hover:bg-[#b93619] focus-visible:bg-[#b93619]">
@@ -173,10 +161,10 @@ function PrimaryButton({ children, onClick, ctaId }) {
 function Header({ onLead }) {
   const [open, setOpen] = useState(false);
   const navItems = [
-    ["About", "#about"],
+    ["Components", "#products"],
+    ["Quality & references", "#cases"],
     ["Capabilities", "#capabilities"],
-    ["Products", "#products"],
-    ["Cases", "#cases"],
+    ["FAQ", "#faq"],
   ];
 
   return (
@@ -188,7 +176,7 @@ function Header({ onLead }) {
         <nav className="ml-auto flex items-center gap-6 text-xs font-bold text-white/70 max-[980px]:hidden" aria-label="Primary navigation">
           {navItems.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
         </nav>
-        <button type="button" onClick={() => onLead("Partnership Enquiry")} data-cta-id="header" className="rounded-lg bg-[#d94824] px-4 py-2.5 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[980px]:ml-auto max-[640px]:hidden">Partnership Enquiry</button>
+        <button type="button" onClick={() => onLead("Request a Manufacturing Quote")} data-cta-id="header" className="rounded-lg bg-[#d94824] px-4 py-2.5 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[980px]:ml-auto max-[640px]:hidden">Request a Manufacturing Quote</button>
         <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="hidden rounded-lg border border-white/20 p-2 max-[980px]:block">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -197,7 +185,7 @@ function Header({ onLead }) {
         <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-4 py-4 shadow-floating min-[981px]:hidden" aria-label="Mobile navigation">
           <div className="site-container grid gap-1">
             {navItems.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => { setOpen(false); onLead("Partnership Enquiry"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-[#d94824] px-3 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#b93619] focus-visible:bg-[#b93619]">Partnership Enquiry</button>
+            <button type="button" onClick={() => { setOpen(false); onLead("Request a Manufacturing Quote"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-[#d94824] px-3 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#b93619] focus-visible:bg-[#b93619]">Request a Manufacturing Quote</button>
           </div>
         </nav>
       )}
@@ -295,17 +283,17 @@ function LeadModal({ open, onClose, title }) {
           <div className="py-10 text-center">
             <CheckCircle className="mx-auto mb-4 text-brand-cyan" size={48} />
             <strong className="block text-xl font-[850] text-brand-navy">Your Manufacturing Enquiry Has Been Submitted</strong>
-            <p className="mt-2 text-xs text-muted">Thank you. A Realjet specialist will contact you using the details provided.</p>
+            <p className="mt-2 text-xs text-muted">A Realjet specialist will contact you to clarify the component requirements and arrange drawing exchange. A quotation follows review of the technical and delivery scope.</p>
             <button type="button" onClick={onClose} className="mx-auto mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-[9px] bg-brand-navy px-5 text-[13px] font-[850] text-white"><ArrowLeft size={15} /> Return to Page</button>
           </div>
         ) : (
           <>
             <h3 id="lead-title" className="mr-12 text-2xl font-[850] text-brand-navy">{title}</h3>
-            <p className="mt-1.5 mb-5 text-xs text-muted">Enter your name, e-mail and message. Please do not submit confidential drawings here.</p>
+            <p className="mt-1.5 mb-5 text-xs text-muted">Tell us which component you need. Quantities, materials and delivery destination are helpful if known. We will contact you to agree how to exchange drawings and confirm technical requirements before preparing a quote. Keep confidential details out of this initial form.</p>
             <form name={UNIVERSAL_ENQUIRY_FORM_NAME} method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-busy={submissionState === "submitting"} onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value={UNIVERSAL_ENQUIRY_FORM_NAME} />
               <input type="hidden" name="bot-field" />
-              <UniversalEnquiryFields locale="en" submissionState={submissionState} privacyHref="/marketing/privacy/en/" />
+              <UniversalEnquiryFields copyOverrides={{ email: "Work e-mail *", message: "Component requirement *", messagePlaceholder: "What component do you need? If known, include material, quantity, delivery country and target date. Please do not paste confidential drawing details.", submit: "Request a Quote" }} locale="en" submissionState={submissionState} privacyHref="/marketing/privacy/en/" />
             </form>
           </>
         )}
@@ -326,7 +314,7 @@ function SectionHeading({ eyebrow, title, text, light = false, centered = false 
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [leadTitle, setLeadTitle] = useState("Request a Manufacturing Review");
+  const [leadTitle, setLeadTitle] = useState("Request a Manufacturing Quote");
   const [progress, setProgress] = useState(0);
   const [finalCtaVisible, setFinalCtaVisible] = useState(false);
   const [heroStatsVisible, setHeroStatsVisible] = useState(true);
@@ -335,7 +323,7 @@ function App() {
   const scrollStopTimerRef = useRef(null);
   const leadTriggerRef = useRef(null);
 
-  const openLead = (title = "Request a Manufacturing Review") => {
+  const openLead = (title = "Request a Manufacturing Quote") => {
     leadTriggerRef.current = document.activeElement;
     setLeadTitle(title);
     setModalOpen(true);
@@ -396,58 +384,65 @@ function App() {
       <div className="fixed top-[69px] left-0 z-50 h-[3px] bg-gradient-to-r from-brand-cyan to-accent-orange max-[720px]:top-[61px]" style={{ width: `${progress}%` }} />
       <main id="main-content">
         <section id="top" className="hero-gradient relative isolate min-h-[640px] overflow-hidden text-white">
-          <img src={heroImage} alt="Robotic welding workshop at the Realjet manufacturing facility" className="absolute inset-y-0 right-0 h-full w-[62%] object-cover object-center max-[850px]:w-full" />
+          <img src={heroImage} alt="Robotic welding workshop at the Realjet manufacturing facility" fetchPriority="high" className="absolute inset-y-0 right-0 h-full w-[62%] object-cover object-center max-[850px]:w-full" />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,30,52,1)_0%,rgba(6,30,52,.96)_40%,rgba(6,30,52,.68)_62%,rgba(6,30,52,.28)_100%)] max-[850px]:bg-brand-navy/88" />
           <div className="site-container relative z-10 flex min-h-[640px] items-center py-20">
             <div className="w-[min(690px,60%)] max-[850px]:w-full">
-              <p className="m-0 text-[11px] font-[850] tracking-[0.18em] text-brand-cyan uppercase">One-stop metal fabrication since 2008</p>
-              <h1 className="mt-5 mb-0 text-[clamp(42px,5.2vw,68px)] leading-[1.02] font-[900] tracking-[-0.052em]">Custom Machinery Component Manufacturing</h1>
-              <p className="mt-7 max-w-[640px] text-lg leading-8 text-white/76 max-[640px]:text-base max-[640px]:leading-7">From cutting and forming to welding, machining, coating, inspection and delivery, Realjet manufactures machinery components to customer drawings and project requirements.</p>
+              <p className="m-0 text-[11px] font-[850] tracking-[0.18em] text-brand-cyan uppercase">OEM metal fabrication · Since 2008</p>
+              <h1 className="mt-5 mb-0 text-[clamp(42px,5.2vw,68px)] leading-[1.02] font-[900] tracking-[-0.052em]">Custom Metal Components for Machinery OEMs</h1>
+              <p className="mt-7 max-w-[640px] text-lg leading-8 text-white/76 max-[640px]:text-base max-[640px]:leading-7">Build-to-print manufacturing of welded structures, machine chassis, tanks and assemblies—with cutting, forming, welding, machining, finishing and inspection coordinated by Realjet.</p>
               <div className="mt-9 flex flex-wrap gap-3">
-                <PrimaryButton onClick={() => openLead("Start a Drawing Review")} ctaId="hero">Start a Drawing Review</PrimaryButton>
-                <a href="#products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/28 px-5 text-sm font-[800] text-white no-underline transition hover:bg-white/8">View Manufacturing Cases <ChevronRight size={17} aria-hidden="true" /></a>
+                <PrimaryButton onClick={() => openLead("Request a Manufacturing Quote")} ctaId="hero">Request a Manufacturing Quote</PrimaryButton>
+                <a href="#products" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/28 px-5 text-sm font-[800] text-white no-underline transition hover:bg-white/8">View Component Examples <ChevronRight size={17} aria-hidden="true" /></a>
               </div>
               <div className="mt-10 grid max-w-[650px] grid-cols-3 gap-5 border-t border-white/18 pt-6 max-[640px]:grid-cols-1 max-[640px]:gap-3">
-                {["Drawing-led review", "Six Fabrication Processes", "Project-specific inspection"].map((item) => <div key={item} className="flex items-center gap-2 text-xs font-bold text-white/72"><Check size={15} className="shrink-0 text-brand-cyan" />{item}</div>)}
+                {["Built to your drawings", "Fabrication through finishing", "Agreed inspection requirements"].map((item) => <div key={item} className="flex items-center gap-2 text-xs font-bold text-white/72"><Check size={15} className="shrink-0 text-brand-cyan" />{item}</div>)}
               </div>
             </div>
           </div>
         </section>
 
         <section id="hero-stats" className="border-b border-line bg-white py-8">
-          <div className="site-container grid grid-cols-4 gap-px overflow-hidden rounded-card border border-line bg-line max-[820px]:grid-cols-2 max-[480px]:grid-cols-1">
+          <div className="site-container grid grid-cols-4 gap-px overflow-hidden rounded-card border border-line bg-line max-[820px]:grid-cols-2">
             {companyStats.map((item) => <div key={item.label} className="bg-white px-6 py-5"><strong className="block text-2xl font-[900] tracking-[-0.03em] text-brand-navy">{item.value}</strong><span className="mt-1 block text-xs text-muted">{item.label}</span></div>)}
           </div>
-          <div className="site-container mt-6 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Production Capacity")} ctaId="capacity_stats">Discuss Production Capacity</PrimaryButton></div>
+          <div className="site-container mt-6 flex justify-center"><PrimaryButton dark onClick={() => openLead("Request a Manufacturing Quote")} ctaId="capacity_stats">Request a Manufacturing Quote</PrimaryButton></div>
         </section>
 
-        <section id="about" className="bg-soft py-24 max-[720px]:py-16">
+        <section id="products" className="bg-brand-navy py-24 text-white max-[720px]:py-16">
           <div className="site-container">
-            <div className="grid grid-cols-[.95fr_1.05fr] items-center gap-16 max-[900px]:grid-cols-1 max-[900px]:gap-10">
-              <div className="overflow-hidden rounded-card shadow-card"><img src={factoryImage} alt="Realjet manufacturing facility in Ningxiang, Changsha" loading="lazy" className="aspect-[4/3] w-full object-cover" /></div>
-              <div>
-                <SectionHeading eyebrow="About Realjet" title="A manufacturing partner built around long-term industrial supply" />
-                <p className="mt-6 mb-0 text-base leading-7 text-muted">Changsha Ruijie Machinery Technology Co., Ltd (“Realjet”, the company&apos;s abbreviated name and trademark) was founded in 2008 in Ningxiang, Changsha. With 18 years of experience in high-end equipment manufacturing, Realjet was listed on China&apos;s NEEQ in 2015 under stock code 832867 and now employs more than 500 people, including over 70 R&amp;D engineers.</p>
-                <p className="mt-4 mb-0 text-base leading-7 text-muted">Realjet&apos;s core business is metal structural component manufacturing, supported by full-process capabilities from R&amp;D and precision machining to final assembly and commissioning. Realjet is a long-term partner of SANY, Zoomlion, CRCHI, SINOBOOM, Helgesen and other renowned enterprises.</p>
-                <p className="mt-4 mb-0 text-base leading-7 text-muted">Guided by the philosophy of “Integrity, Innovation, Service, Development,” Realjet builds on rigorous processes and strict quality control to deliver reliable products and technical solutions. Looking ahead, Realjet will drive industrial upgrades through technological innovation and strive to become a trusted long-term partner for global clients.</p>
-                <div className="mt-7"><PrimaryButton dark onClick={() => openLead("Partnership Enquiry")} ctaId="about">Start a Partnership Enquiry</PrimaryButton></div>
-              </div>
+            <SectionHeading light eyebrow="Manufacturing portfolio" title="Welded structures, chassis, tanks and machinery assemblies" text="Find a component similar to yours, then share your requirements for a manufacturing quote. Each project is reviewed against its own drawings, quantities and acceptance criteria." />
+            <div className="mt-12 grid grid-cols-3 gap-5 max-[960px]:grid-cols-2 max-[620px]:grid-cols-1">
+              {productCases.slice(0, 6).map((item) => (
+                <ProductCard key={item.title} item={item} />
+              ))}
             </div>
-            <div className="mt-12 grid grid-cols-4 gap-4 max-[960px]:grid-cols-2 max-[560px]:grid-cols-1">
-              {companyValues.map(({ icon: Icon, title, text }) => (
-                <article key={title} className="rounded-card border border-line bg-white p-6 shadow-card">
-                  <Icon size={24} className="text-brand-blue" aria-hidden="true" />
-                  <h3 className="mt-4 mb-0 text-lg font-[850] text-brand-navy">{title}</h3>
-                  <p className="mt-2 mb-0 text-sm leading-6 text-muted">{text}</p>
+            <details className="mt-8 rounded-card border border-white/20 p-5">
+              <summary className="cursor-pointer text-sm font-bold text-white">View more component examples: conveyors, crane jibs and masts</summary>
+              <div className="mt-6 grid grid-cols-3 gap-5 max-[960px]:grid-cols-2 max-[620px]:grid-cols-1">{productCases.slice(6).map((item) => <ProductCard key={item.title} item={item} />)}</div>
+            </details>
+            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Request a Manufacturing Quote")} ctaId="products">Request a Manufacturing Quote</PrimaryButton></div>
+          </div>
+        </section>
+
+        <section id="cases" className="bg-soft py-24 max-[720px]:py-16">
+          <div className="site-container">
+            <SectionHeading centered eyebrow="Customer recognition & qualifications" title="Customer references and manufacturing qualifications" text="Review the supplier recognitions and documented relationships below. For your order, confirm the applicable quality requirements, inspection records and certificate scope during the technical review." />
+            <div className="mt-12 grid grid-cols-3 gap-5 max-[900px]:grid-cols-2 max-[580px]:grid-cols-1">
+              {recognitionCases.map((item) => (
+                <article key={item.title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
+                  <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-[#f2f4f5] p-3"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></div>
+                  <div className="p-5"><h3 className="m-0 text-xl font-[850] text-brand-navy">{item.title}</h3><p className="mt-2 mb-0 text-sm leading-6 text-muted">{item.text}</p></div>
                 </article>
               ))}
             </div>
+            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Request a Manufacturing Quote")} ctaId="cases">Request a Manufacturing Quote</PrimaryButton></div>
           </div>
         </section>
 
         <section id="capabilities" className="bg-white py-24 max-[720px]:py-16">
           <div className="site-container">
-            <SectionHeading eyebrow="Six-process manufacturing route" title="From plate preparation to final inspection" text="Each requirement is reviewed against drawings, material, volume, standards, documentation and delivery needs. The photos below show the original Realjet manufacturing processes." />
+            <SectionHeading eyebrow="Six-process manufacturing route" title="From plate preparation to final inspection" text="Each requirement is reviewed against drawings, material, volume, standards, documentation and delivery needs. Explore the cutting, forming, welding and finishing capabilities available for your components." />
             <div className="mt-12 grid grid-cols-2 gap-5 max-[820px]:grid-cols-1">
               {capabilities.map((item) => (
                 <article key={item.title} className="group overflow-hidden rounded-card border border-line bg-soft shadow-[0_14px_40px_rgba(8,37,63,.06)]">
@@ -460,41 +455,15 @@ function App() {
                 </article>
               ))}
             </div>
-            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss Your Manufacturing Route")} ctaId="capabilities">Discuss Your Manufacturing Route</PrimaryButton></div>
+            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Request a Manufacturing Quote")} ctaId="capabilities">Request a Manufacturing Quote</PrimaryButton></div>
           </div>
         </section>
 
-        <section id="products" className="bg-brand-navy py-24 text-white max-[720px]:py-16">
-          <div className="site-container">
-            <SectionHeading light eyebrow="Manufacturing portfolio" title="Representative products and delivered components" text="The complete product set retained from the original site is shown below. Customer references are presented as recorded in the supplied source material." />
-            <div className="mt-12 grid grid-cols-3 gap-5 max-[960px]:grid-cols-2 max-[620px]:grid-cols-1">
-              {productCases.map((item) => (
-                <article key={item.title} className="group overflow-hidden rounded-card border border-white/12 bg-brand-navy-light">
-                  <a href={item.href} aria-label={`View ${item.title} product details`} className="block aspect-[4/3] overflow-hidden bg-white/5"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.025]" /></a>
-                  <div className="p-5">
-                    <p className="m-0 text-[10px] font-[850] tracking-[.14em] text-brand-cyan uppercase">{item.category}</p>
-                    <h3 className="mt-2 mb-0 text-xl leading-tight font-[850]"><a href={item.href} className="text-white no-underline transition hover:text-brand-cyan focus-visible:text-brand-cyan">{item.title}</a></h3>
-                    <p className="mt-3 mb-0 text-xs font-bold text-white/54">{item.client}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Request a Component Review")} ctaId="products">Request a Component Review</PrimaryButton></div>
-          </div>
-        </section>
-
-        <section id="cases" className="bg-soft py-24 max-[720px]:py-16">
-          <div className="site-container">
-            <SectionHeading centered eyebrow="Customer recognition & qualifications" title="Original cases, certificates and company honors" text="These photographs and documents are displayed from the supplied historical website archive to preserve the original evidence and context." />
-            <div className="mt-12 grid grid-cols-3 gap-5 max-[900px]:grid-cols-2 max-[580px]:grid-cols-1">
-              {recognitionCases.map((item) => (
-                <article key={item.title} className="overflow-hidden rounded-card border border-line bg-white shadow-card">
-                  <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-[#f2f4f5] p-3"><img src={item.image} alt={item.alt} loading="lazy" className="h-full w-full object-contain" /></div>
-                  <div className="p-5"><h3 className="m-0 text-xl font-[850] text-brand-navy">{item.title}</h3><p className="mt-2 mb-0 text-sm leading-6 text-muted">{item.text}</p></div>
-                </article>
-              ))}
-            </div>
-            <div className="mt-10 flex justify-center"><PrimaryButton dark onClick={() => openLead("Discuss a Supply Partnership")} ctaId="cases">Discuss a Supply Partnership</PrimaryButton></div>
+        <section id="about" className="bg-soft py-16">
+          <div className="site-container grid grid-cols-[.65fr_1.35fr] items-center gap-10 max-[800px]:grid-cols-1">
+            <img src={factoryImage} alt="Realjet metal component manufacturing facility in Changsha, China" loading="lazy" className="aspect-[4/3] w-full rounded-card object-cover" />
+            <div><SectionHeading eyebrow="About Realjet" title="Contract manufacturing for machinery OEMs" text="Founded in Changsha in 2008, Realjet manufactures metal structural components to customer drawings and specifications. Our team coordinates fabrication, machining, finishing and assembly requirements for industrial equipment supply." />
+            <p className="mt-5 text-sm leading-7 text-muted">Review the <a className="font-bold text-brand-blue underline" href="/insights/contract-manufacturing-supplier-qualification/">supplier qualification checklist</a> or the <a className="font-bold text-brand-blue underline" href="/insights/contract-manufacturing-drawing-bom-readiness/">drawing and BOM enquiry guide</a> to prepare your requirements.</p></div>
           </div>
         </section>
 
@@ -504,7 +473,7 @@ function App() {
             <div className="mt-12 grid grid-cols-4 gap-px overflow-hidden rounded-card border border-white/12 bg-white/12 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
               {workflow.map((item) => <article key={item.step} className="min-h-[255px] bg-brand-navy p-6"><span className="text-3xl font-[900] text-brand-cyan">{item.step}</span><h3 className="mt-10 mb-0 text-xl font-[850]">{item.title}</h3><p className="mt-3 mb-0 text-sm leading-6 text-white/64">{item.text}</p></article>)}
             </div>
-            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Start a Manufacturing Review")} ctaId="workflow">Start a Manufacturing Review</PrimaryButton></div>
+            <div className="mt-10 flex justify-center"><PrimaryButton onClick={() => openLead("Request a Manufacturing Quote")} ctaId="workflow">Request a Manufacturing Quote</PrimaryButton></div>
           </div>
         </section>
 
@@ -518,15 +487,24 @@ function App() {
             <div>
               <SectionHeading eyebrow="Prepare the enquiry" title="Send the information needed for a useful manufacturing review" />
               <div className="mt-7 grid grid-cols-2 gap-x-5 gap-y-3 max-[580px]:grid-cols-1">{decisionInputs.map((item) => <div key={item} className="flex items-start gap-2.5 text-sm leading-6 text-muted"><FileCheck2 size={18} className="mt-1 shrink-0 text-brand-blue" />{item}</div>)}</div>
-              <div className="mt-8"><PrimaryButton dark onClick={() => openLead("Send a Manufacturing Enquiry")} ctaId="enquiry_preparation">Send a Manufacturing Enquiry</PrimaryButton></div>
+              <div className="mt-8"><PrimaryButton dark onClick={() => openLead("Request a Manufacturing Quote")} ctaId="enquiry_preparation">Request a Manufacturing Quote</PrimaryButton></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="bg-white py-20">
+          <div className="site-container max-w-[960px]">
+            <SectionHeading eyebrow="Before you enquire" title="OEM manufacturing questions" text="A clear scope helps both teams assess manufacturing fit and prepare a useful quotation." />
+            <div className="mt-10 divide-y divide-line border-y border-line">
+              {manufacturingFaqs.map(({ question, answer }) => <details key={question} className="group py-5"><summary className="cursor-pointer text-lg font-bold text-brand-navy">{question}</summary><p className="mt-4 max-w-[800px] text-sm leading-7 text-muted">{answer}</p></details>)}
             </div>
           </div>
         </section>
 
         <section id="final-cta" className="industrial-grid bg-brand-navy-light py-20 text-white">
           <div className="site-container flex items-center justify-between gap-12 max-[800px]:items-start max-[800px]:flex-col">
-            <div className="max-w-[720px]"><p className="m-0 text-[11px] font-[850] tracking-[0.16em] text-brand-cyan uppercase">Next step</p><h2 className="mt-3 mb-0 text-[clamp(32px,4vw,50px)] leading-[1.08] font-[900] tracking-[-0.04em]">Have a component ready for supplier review?</h2><p className="mt-5 mb-0 text-base leading-7 text-white/68">Share the drawing package, quantities, standards and delivery requirement. Realjet will review the manufacturing scope and identify the next technical questions.</p></div>
-            <PrimaryButton onClick={() => openLead("Start the Manufacturing Review")} ctaId="final_cta">Start the Review</PrimaryButton>
+            <div className="max-w-[720px]"><p className="m-0 text-[11px] font-[850] tracking-[0.16em] text-brand-cyan uppercase">Next step</p><h2 className="mt-3 mb-0 text-[clamp(32px,4vw,50px)] leading-[1.08] font-[900] tracking-[-0.04em]">Request a quote for your custom component</h2><p className="mt-5 mb-0 text-base leading-7 text-white/68">Start with a short description of your component and any known quantities or delivery needs. We will contact you to arrange drawing exchange, confirm the manufacturing scope and prepare a quotation after technical review.</p></div>
+            <PrimaryButton onClick={() => openLead("Request a Manufacturing Quote")} ctaId="final_cta">Request a Manufacturing Quote</PrimaryButton>
           </div>
         </section>
       </main>
@@ -539,16 +517,16 @@ function App() {
         </div>
         <div className="site-container mt-8 border-t border-white/10 pt-5 text-[11px]">© 2026 Changsha Ruijie Machinery Technology Co., Ltd</div>
       </footer>
-      <FloatingContactActions canonicalUrl="https://realjetech.com/marketing/contract_manufacturing/" enquiryTitle="Request a Manufacturing Review" onEnquire={openLead} subject="contract manufacturing" />
+      <div className="max-[720px]:hidden"><FloatingContactActions canonicalUrl="https://realjetech.com/marketing/contract_manufacturing/" enquiryTitle="Request a Manufacturing Quote" onEnquire={openLead} subject="contract manufacturing" /></div>
       <button
         type="button"
-        onClick={() => openLead("Request a Manufacturing Review")}
+        onClick={() => openLead("Request a Manufacturing Quote")}
         data-cta-id="mobile_sticky"
         aria-hidden={hideMobileCta}
         tabIndex={hideMobileCta ? -1 : 0}
         className={`fixed right-3.5 bottom-[max(14px,env(safe-area-inset-bottom))] left-3.5 z-40 hidden min-h-12 items-center justify-center gap-2 rounded-[9px] bg-[#d94824] text-sm font-[900] text-white shadow-[0_12px_28px_rgba(217,72,36,.32)] transition duration-200 hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[720px]:flex ${hideMobileCta ? "max-[720px]:pointer-events-none max-[720px]:translate-y-20 max-[720px]:opacity-0" : "max-[720px]:translate-y-0 max-[720px]:opacity-100"}`}
       >
-        Request a Manufacturing Review <ArrowRight size={16} />
+        Request a Manufacturing Quote <ArrowRight size={16} />
       </button>
     </div>
     <LeadModal open={modalOpen} onClose={closeLead} title={leadTitle} />

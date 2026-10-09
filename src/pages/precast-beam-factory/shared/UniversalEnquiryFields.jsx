@@ -107,8 +107,8 @@ const copyByLocale = {
   },
 };
 
-export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/`, idPrefix = "enquiry", singleColumn = false }) {
-  const copy = copyByLocale[locale] || copyByLocale.en;
+export default function UniversalEnquiryFields({ locale, submissionState, privacyHref = `../../privacy/${locale}/`, idPrefix = "enquiry", singleColumn = false, copyOverrides = {} }) {
+  const copy = { ...(copyByLocale[locale] || copyByLocale.en), ...copyOverrides };
   const disabled = submissionState === "submitting";
 
   return (

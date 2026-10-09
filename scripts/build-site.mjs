@@ -1,3 +1,4 @@
+import { prerenderContractManufacturing } from "./prerender-contract-manufacturing.mjs";
 import { spawn } from "node:child_process";
 import { access, cp, mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
@@ -80,6 +81,7 @@ await run(
 
 await copyWithoutCollisions(join(buildRoot, "vite"), finalOutput);
 await copyWithoutCollisions(join(buildRoot, "eleventy"), finalOutput);
+await prerenderContractManufacturing(projectRoot, finalOutput);
 
 for (const expectedPath of [
   "index.html",
@@ -428,7 +430,11 @@ if (!manufacturingPage.includes("data-manufacturing-inquiry")) {
 for (const requiredContent of [
   '<link rel="canonical" href="https://realjetech.com/marketing/contract_manufacturing/"',
   'meta name="robots" content="index, follow"',
-  "Custom Machinery Component Manufacturing",
+  "Custom Metal Components for Machinery OEMs",
+  "OEM manufacturing questions",
+  "Request a Manufacturing Quote",
+  'id="products"',
+  'id="faq"',
   'name="universal-enquiry"',
   'name="name"',
   'name="email"',
