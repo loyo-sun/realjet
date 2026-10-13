@@ -35,7 +35,7 @@
   ],
   "lines": [
     [
-      "Dual-circulation line",
+      "Dual-Circulation Production Line",
       "dual-line",
       "COORDINATED PALLET FLOW",
       "Solid and sandwich walls · lattice girder slabs",
@@ -44,22 +44,22 @@
       "Product mix, target output, shifts and building layout."
     ],
     [
-      "Long-line casting solution",
+      "Prestressed Composite Slab Production Line",
+      "slab-line",
+      "PRESTRESSED SLAB PRODUCTION",
+      "Prestressed composite floor slabs",
+      "Long-line production with coordinated prestressing, casting and curing.",
+      "Integrated tensioning, material handling and in-line curing.",
+      "Slab drawings, prestressing requirements, target output and plant layout."
+    ],
+    [
+      "Long-Line Casting Table Production Line",
       "long-line",
       "FLEXIBLE PRODUCT MIX",
       "Walls, slabs and selected special elements",
       "For varied products, fixed-bed production and plant upgrades.",
       "Distribution, handling and sectional curing; prestressing optional.",
       "Element geometry, bed arrangement, handling and site interfaces."
-    ],
-    [
-      "Slab production configuration",
-      "slab-line",
-      "FOCUSED SLAB PRODUCTION",
-      "Lattice girder and selected prestressed slabs",
-      "For a slab-focused production plan.",
-      "Rebar preparation, casting and curing coordinated around the slab design.",
-      "Slab drawings, reinforcement, output and product acceptance criteria."
     ]
   ],
   "equipment": [

@@ -71,7 +71,7 @@ pageType: building_precast_plant
       <div class="pc-lines-grid">
         {% for line in buildingPrecast.lines %}
         <article class="pc-line-card">
-          <div class="pc-line-image{% if line[1] != 'long-line' %} pc-image-fit{% endif %}"><img src="/images/building-precast/{{ line[1] }}.webp" alt="{{ line[0] }} reference configuration for building precast concrete elements" width="640" height="360" loading="lazy" decoding="async" /></div>
+          <div class="pc-line-image pc-image-fit"><img src="/images/building-precast/{{ line[1] }}.webp" alt="{{ line[0] }} reference configuration for building precast concrete elements" width="640" height="360" loading="lazy" decoding="async" /></div>
           <div class="pc-line-body"><div class="pc-eyebrow">{{ line[2] }}</div><h3>{{ line[0] }}</h3><p class="pc-line-products">{{ line[3] }}</p><p>{{ line[4] }}</p><dl><div><dt>Automation scope</dt><dd>{{ line[5] }}</dd></div><div><dt>Inputs to review</dt><dd>{{ line[6] }}</dd></div></dl><a class="pc-button pc-button-outline" href="#plant-proposal" data-pc-line="{{ line[0] }}" data-pc-cta="line_{{ loop.index }}">Discuss This Configuration <span aria-hidden="true">↗</span></a></div>
         </article>
         {% endfor %}

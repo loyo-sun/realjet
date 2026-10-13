@@ -21,15 +21,17 @@ The user confirmed strategic-cooperation authorization in the source PRD. Photog
 | Asset | Source PDF / page |
 | --- | --- |
 | Hero long-line workshop | PC factory overall solution (2023), p19 |
-| Dual-circulation line | Overall solution, p11 |
-| Long-line photo | Overall solution, p20 |
-| Slab configuration | PC product catalogue, PDF p6 |
+| Dual-Circulation Production Line | User-supplied image 1, 2026-10-13; catalogue PDF p6 / printed p08 |
+| Long-Line Casting Table Production Line | User-supplied image 3, 2026-10-13; catalogue PDF p7 / printed p10 |
+| Prestressed Composite Slab Production Line | User-supplied image 2, 2026-10-13; catalogue PDF p6 / printed p09 |
 | Distributor, curing, stacker, flying bucket | Overall solution, p12–15 |
 | Compaction, tilting, rebar equipment | PC product catalogue, PDF p9, p8, p11 |
 | Shuttering automation | Overall solution, p18 |
 | Factory reference photos | Overall solution, p48 |
 
 Public copy follows the user’s approved REALJET promotional branding and does not mention the authorized supplier or technology partner. The authorization and source provenance above are retained for internal asset records only. Factory photos illustrate technical arrangements without invented delivery years or measured performance. The digital block is a readable integration concept, not a claimed software deployment screenshot. Replace PDF-derived images with approved high-resolution originals when available.
+
+The production-line cards follow the source names and display order: dual-circulation, prestressed composite slab, long-line casting table. The three user-supplied images replace the earlier extracted card assets, retain their full composition and use WebP delivery. The slab card describes the dedicated prestressed composite slab line rather than a generic slab configuration.
 
 ## Enquiry behavior
 
