@@ -1,0 +1,147 @@
+{
+  "faq": [
+    [
+      "Which precast products can this solution support?",
+      "The proposed configurations cover solid walls, insulated sandwich wall panels, lattice girder slabs and selected special precast elements. We confirm compatibility from your product drawings, dimensions and reinforcement details."
+    ],
+    [
+      "Should we choose a carousel line or a long-line solution?",
+      "The choice depends on product repetition, output targets, available space and the work required at each station. We review the product mix and production flow before recommending a configuration."
+    ],
+    [
+      "What determines the cost of a precast plant?",
+      "Cost depends on the product range, capacity, automation, curing, handling, reinforcement preparation and site interfaces. Your proposal separates equipment and services from civil works, local utilities and other project costs."
+    ],
+    [
+      "What information is needed for a plant proposal?",
+      "Start with your project country, intended products and output target. Product drawings, shift plans, building dimensions, crane capacity and available utilities help us prepare a more useful review. If some information is unavailable, we can clarify it with you."
+    ],
+    [
+      "Can REALJET help upgrade an existing plant?",
+      "Yes. We can review your existing layout, equipment interfaces and production bottlenecks to assess suitable upgrades. The scope is defined after checking the current system and the changes required."
+    ],
+    [
+      "Can production equipment connect with our software?",
+      "MES, equipment data collection and other digital modules can be considered as part of the project. Interfaces, software language, deployment and integration with existing systems require technical confirmation."
+    ],
+    [
+      "What installation and training are included?",
+      "Installation, commissioning, training and support are defined in the agreed package. We identify site preparation, customer responsibilities and local contractor work before implementation."
+    ],
+    [
+      "How is production capacity confirmed?",
+      "We assess capacity using the product mix, pallet or bed arrangement, station cycle times, shifts, curing and handling limits. Preliminary figures are planning assumptions until project conditions and acceptance criteria are agreed."
+    ]
+  ],
+  "lines": [
+    [
+      "Dual-circulation line",
+      "dual-line",
+      "COORDINATED PALLET FLOW",
+      "Solid and sandwich walls · lattice girder slabs",
+      "For repeatable products and coordinated station work.",
+      "Pallet circulation, distribution and curing configured together.",
+      "Product mix, target output, shifts and building layout."
+    ],
+    [
+      "Long-line casting solution",
+      "long-line",
+      "FLEXIBLE PRODUCT MIX",
+      "Walls, slabs and selected special elements",
+      "For varied products, fixed-bed production and plant upgrades.",
+      "Distribution, handling and sectional curing; prestressing optional.",
+      "Element geometry, bed arrangement, handling and site interfaces."
+    ],
+    [
+      "Slab production configuration",
+      "slab-line",
+      "FOCUSED SLAB PRODUCTION",
+      "Lattice girder and selected prestressed slabs",
+      "For a slab-focused production plan.",
+      "Rebar preparation, casting and curing coordinated around the slab design.",
+      "Slab drawings, reinforcement, output and product acceptance criteria."
+    ]
+  ],
+  "equipment": [
+    [
+      "Concrete distributor",
+      "distributor",
+      "Connect concrete supply to controlled casting.",
+      "Confirm hopper volume, concrete mix and coverage width."
+    ],
+    [
+      "Compaction station",
+      "compaction",
+      "Coordinate compaction with the pallet and mix.",
+      "Confirm pallet size, load and SCC compatibility."
+    ],
+    [
+      "Flying bucket",
+      "bucket",
+      "Transfer concrete between batching and casting.",
+      "Confirm route, payload and cleaning access."
+    ],
+    [
+      "Curing system",
+      "curing",
+      "Coordinate curing conditions with station flow.",
+      "Confirm energy supply, curing curve and storage positions."
+    ],
+    [
+      "Pallet stacker",
+      "stacker",
+      "Move pallets into and out of curing positions.",
+      "Confirm total load, rack layout and safety interfaces."
+    ],
+    [
+      "Tilting station",
+      "tilting",
+      "Support wall-panel demoulding and lifting.",
+      "Confirm load, lifting points and release strength."
+    ],
+    [
+      "Shuttering automation",
+      "shuttering",
+      "Connect mould placement with product drawings.",
+      "Confirm shutter compatibility, model format and fallback."
+    ],
+    [
+      "Rebar preparation",
+      "rebar",
+      "Coordinate reinforcement with element production.",
+      "Confirm bar sizes, welding standards and BOM interfaces."
+    ]
+  ],
+  "process": [
+    [
+      "01",
+      "Preparation",
+      "Clean and oil pallets; review the production plan."
+    ],
+    [
+      "02",
+      "Shuttering & reinforcement",
+      "Set edge forms, openings, inserts and reinforcement."
+    ],
+    [
+      "03",
+      "Distribution & compaction",
+      "Coordinate concrete supply, placing and finishing."
+    ],
+    [
+      "04",
+      "Curing",
+      "Confirm curing conditions and release strength."
+    ],
+    [
+      "05",
+      "Demoulding & handling",
+      "Remove shutters, tilt where needed and lift."
+    ],
+    [
+      "06",
+      "Storage & dispatch",
+      "Coordinate yard positions, traceability and delivery."
+    ]
+  ]
+}

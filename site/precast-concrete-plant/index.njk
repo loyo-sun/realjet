@@ -1,0 +1,148 @@
+---
+permalink: /solutions/precast-concrete-plant/index.html
+eleventyExcludeFromCollections: true
+title: Precast Concrete Plant Solutions for Walls & Slabs | REALJET
+description: Plan a precast plant around your wall and slab products, output targets and site conditions. Discuss line layout, equipment and digital control with REALJET.
+canonical: https://realjetech.com/solutions/precast-concrete-plant/
+pageType: building_precast_plant
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ description }}" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#08253f" />
+  <title>{{ title }}</title>
+  <link rel="canonical" href="{{ canonical }}" />
+  <link rel="icon" type="image/svg+xml" href="/icons/realjet-site-icon.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:url" content="{{ canonical }}" />
+  <meta property="og:image" content="https://realjetech.com/images/building-precast/hero.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" as="image" href="/images/building-precast/hero.webp" fetchpriority="high" />
+  <link rel="stylesheet" href="/assets/site/site.css" />
+  <link rel="stylesheet" href="/assets/site/building-precast.css" />
+  <script>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":{{ title | json | safe }},"description":{{ description | json | safe }},"url":{{ canonical | json | safe }},"inLanguage":"en","publisher":{"@type":"Organization","name":{{ site.legalName | json | safe }},"url":"https://realjetech.com/","email":"sales@realjetech.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Precast Concrete Plant Solutions","item":{{ canonical | json | safe }}}]}]}</script>
+</head>
+<body class="pc-plant" data-page-type="building_precast_plant">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="pc-header">
+  <div class="pc-container pc-header-inner">
+    <a class="pc-brand" href="/" aria-label="REALJET home"><img src="/images/realjet-logo.webp" width="188" height="32" alt="REALJET" /></a>
+    <button type="button" class="pc-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="pc-navigation" data-pc-menu><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg></button>
+    <nav id="pc-navigation" class="pc-navigation" aria-label="Production line navigation">
+      <a href="#production-lines">Production Lines</a><a href="#process">Process</a><a href="#equipment">Equipment</a><a href="#projects">Projects</a><a href="#faqs">FAQs</a>
+      <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="nav_proposal">Get a Plant Proposal <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+  <section class="pc-hero" aria-labelledby="pc-title">
+    <div class="pc-container">
+      <div class="pc-hero-grid">
+        <div class="pc-hero-copy">
+          <div class="pc-eyebrow">Engineered around your product</div>
+          <h1 id="pc-title">Turnkey Precast Concrete Plants for <span>Walls and Floor Slabs</span></h1>
+          <p>Plan your factory around your products, output targets and site conditions. REALJET brings together line layout, equipment, digital control and commissioning support.</p>
+          <div class="pc-actions"><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="hero_proposal">Get a Plant Proposal <span aria-hidden="true">↗</span></a><a class="pc-text-link" href="#production-lines" data-pc-cta="hero_compare">Compare Production Lines <span aria-hidden="true">↓</span></a></div>
+        </div>
+        <figure class="pc-hero-media"><img src="/images/building-precast/hero.webp" alt="Long-line precast production workshop with concrete placing equipment, fixed casting beds and overhead cranes" width="427" height="359" fetchpriority="high" /><div class="pc-image-label"><span class="pc-dot"></span> LONG-LINE PRODUCTION</div><figcaption>Production reference from our authorized technology partner.</figcaption></figure>
+      </div>
+      <div class="pc-support"><div><span>01</span><strong>Project-specific layouts</strong></div><div><span>02</span><strong>Carousel and long-line options</strong></div><div><span>03</span><strong>Equipment and digital integration</strong></div></div>
+    </div>
+  </section>
+
+  <section class="pc-section" id="production-lines">
+    <div class="pc-container">
+      <div class="pc-section-head"><div class="pc-eyebrow">01 / Production lines</div><h2>Choose a Line for<br> Your Product Mix</h2><p>Start with the elements you plan to make. We match the line concept to your product mix, production targets and site conditions.</p></div>
+      {% set products = [
+        {name:'Solid wall panels',path:'M22 12 85 28 85 83 22 67Z M22 12 35 6 98 22 85 28 M85 83 98 77 98 22'},
+        {name:'Insulated sandwich panels',path:'M15 18 69 30 69 84 15 72Z M30 10 84 22 84 76 M45 3 99 15 99 69'},
+        {name:'Lattice girder slabs',path:'M8 70 70 88 108 59 47 43Z M20 63 29 37 38 68 M38 68 47 42 56 73 M56 73 65 47 74 79 M74 79 83 53 92 66 M29 37 83 53'},
+        {name:'Special precast elements',path:'M12 76 32 76 32 58 51 58 51 40 71 40 71 22 90 22 90 76 M12 76 29 86 108 86 108 32 90 22'}
+      ] %}
+      <div class="pc-products">{% for product in products %}<div><svg viewBox="0 0 120 100" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="{{ product.path }}" /></svg><span>{{ product.name }}</span></div>{% endfor %}</div>
+      <div class="pc-lines-grid">
+        {% for line in buildingPrecast.lines %}
+        <article class="pc-line-card">
+          <div class="pc-line-image{% if line[1] != 'long-line' %} pc-image-fit{% endif %}"><img src="/images/building-precast/{{ line[1] }}.webp" alt="{{ line[0] }} reference configuration for building precast concrete elements" width="640" height="360" loading="lazy" decoding="async" /><span>0{{ loop.index }}</span></div>
+          <div class="pc-line-body"><div class="pc-eyebrow">{{ line[2] }}</div><h3>{{ line[0] }}</h3><p class="pc-line-products">{{ line[3] }}</p><p>{{ line[4] }}</p><dl><div><dt>Automation scope</dt><dd>{{ line[5] }}</dd></div><div><dt>Inputs to review</dt><dd>{{ line[6] }}</dd></div></dl><a class="pc-button pc-button-outline" href="#plant-proposal" data-pc-line="{{ line[0] }}" data-pc-cta="line_{{ loop.index }}">Discuss This Configuration <span aria-hidden="true">↗</span></a></div>
+        </article>
+        {% endfor %}
+      </div>
+      <p class="pc-note">Configuration, capacity and delivery scope are defined for each project after technical review. Prestressing compatibility is confirmed for the selected product.</p>
+    </div>
+  </section>
+
+  <section class="pc-section pc-section-soft" id="process">
+    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">02 / Production process</div><h2>From Table Preparation<br> to Finished Elements</h2><p>One connected flow, from the production plan to the dispatch yard. The final sequence follows your wall and slab designs.</p></div>
+      <ol class="pc-process">{% for step in buildingPrecast.process %}<li><span class="pc-step-number">{{ step[0] }}</span><h3>{{ step[1] }}</h3><p>{{ step[2] }}</p><span class="pc-step-arrow" aria-hidden="true">↗</span></li>{% endfor %}</ol>
+      <div class="pc-process-notes"><p><strong>Sandwich walls</strong> add insulation placement and a second concrete layer to the casting sequence.</p><p><strong>Prestressed slabs</strong> require separate stressing, anchorage and release steps. This process concept does not replace final engineering design.</p></div>
+    </div>
+  </section>
+
+  <section class="pc-section" id="equipment">
+    <div class="pc-container"><div class="pc-section-head pc-head-wide"><div><div class="pc-eyebrow">03 / Equipment integration</div><h2>Coordinate Equipment<br> Around the Whole Line</h2></div><p>Select by function and interface. Model, load and throughput are confirmed for the agreed configuration.</p></div>
+      <div class="pc-equipment-grid">{% for item in buildingPrecast.equipment %}<article class="pc-equipment-card"><div class="pc-equipment-image{% if item[1] == 'shuttering' %} pc-image-cover{% endif %}"><img src="/images/building-precast/{{ item[1] }}.webp" alt="{{ item[0] }} reference equipment for a wall and slab precast plant" width="640" height="400" loading="lazy" decoding="async" /></div><div><h3>{{ item[0] }}</h3><p>{{ item[2] }}</p><p class="pc-parameters">{{ item[3] }}</p></div></article>{% endfor %}</div>
+      <div class="pc-single"><p><strong>Need a single machine?</strong><span>Tell us about your existing equipment and interfaces.</span></p><a class="pc-button pc-button-dark" href="#plant-proposal" data-pc-need="Single equipment" data-pc-cta="single_equipment">Discuss Single Equipment <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </section>
+
+  <section class="pc-section pc-digital" id="digital-factory">
+    <div class="pc-container pc-digital-grid"><div><div class="pc-eyebrow">04 / Digital factory</div><h2>Connect Production Planning, Quality<br> and Dispatch</h2><p>Coordinate the information behind every element. Digital modules are configured around your equipment, existing systems and project needs.</p><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-interest="Plant digital integration" data-pc-cta="digital_integration">Discuss Plant Integration <span aria-hidden="true">↗</span></a></div>
+      <div class="pc-integration" aria-label="Factory digital integration concept"><div class="pc-integration-top"><span class="pc-dot"></span> YOUR FACTORY, CONNECTED <small>Integration concept</small></div><div class="pc-system"><span>INPUT</span><h3>BIM / ERP</h3><p>Product inputs and existing systems</p></div><span class="pc-system-connector" aria-hidden="true">↓</span><div class="pc-system-row"><div class="pc-system"><span>PLAN & TRACE</span><h3>MES</h3><p>Planning, quality and element traceability</p></div><div class="pc-system"><span>MONITOR & CONTROL</span><h3>SCADA</h3><p>Equipment status, process and energy data</p></div></div><span class="pc-system-connector" aria-hidden="true">↓</span><div class="pc-system pc-system-optional"><span>OPTIONAL MODULES</span><h3>QQS / PC-Link</h3><p>Quotation and dispatch coordination</p></div><p class="pc-integration-note">Language, deployment, ERP/BIM interfaces and licensing require project assessment.</p></div>
+    </div>
+  </section>
+
+  <section class="pc-section pc-section-soft" id="projects">
+    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">05 / Technology references</div><h2>Technology Proven in<br> Operating PC Factories</h2><p>Production references from our authorized technology partner’s portfolio. We review the relevant configuration and delivery scope for your project.</p></div>
+      {% set references = [ ['project-huaian','Pallet circulation','Coordinated production stations and pallet logistics.'], ['project-yuxi','Plant workflow','Workstation arrangement for building precast elements.'], ['project-hefei','Casting and handling','Production-area interfaces and material flow.'] ] %}
+      <div class="pc-reference-grid">{% for ref in references %}<figure><img src="/images/building-precast/{{ ref[0] }}.webp" alt="{{ ref[1] }} inside an authorized technology partner’s building precast factory" width="640" height="420" loading="lazy" decoding="async" /><figcaption><h3>{{ ref[1] }}</h3><p>{{ ref[2] }}</p><small>Reference from our authorized technology partner’s project portfolio.</small></figcaption></figure>{% endfor %}</div>
+      <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="references_proposal">Get a Plant Proposal <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+
+  <section class="pc-section" id="delivery">
+    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">06 / Scope & delivery</div><h2>Know What Goes Into<br> Your Plant Proposal</h2><p>A useful starting point for technical and commercial discussion, with clear responsibilities before implementation.</p></div>
+      <div class="pc-scope-grid"><div class="pc-deliverables"><div class="pc-eyebrow">Your proposal review</div><h3>From your requirements<br> to a line concept.</h3><ol><li>Product and capacity review</li><li>Proposed line concept</li><li>Key equipment scope</li><li>Utility and site interface checklist</li><li>Implementation assumptions</li></ol></div><div class="pc-responsibilities"><article><span>01</span><div><h3>Included in agreed package</h3><p>Line engineering, selected equipment and the installation, commissioning and training services defined in your quotation.</p></div></article><article><span>02</span><div><h3>Optional</h3><p>Digital modules, reinforcement preparation, spare parts and staged upgrades.</p></div></article><article><span>03</span><div><h3>Customer / local contractor</h3><p>Civil works, approvals, raw materials and local utilities. Logistics, taxes and engineer travel are assigned explicitly in the quotation.</p></div></article></div></div>
+      {% set stages = ['Requirements','Line concept','Technical & commercial confirmation','Design & manufacture','Installation & commissioning','Trial production & training'] %}<ol class="pc-delivery-stages">{% for stage in stages %}<li><span>0{{ loop.index }}</span><strong>{{ stage }}</strong></li>{% endfor %}</ol>
+    </div>
+  </section>
+
+  <section class="pc-section pc-enquiry" id="plant-proposal">
+    <div class="pc-container pc-enquiry-grid"><div class="pc-enquiry-copy"><div class="pc-eyebrow">07 / Start your project</div><h2>Discuss Your<br> Precast Plant Project</h2><p>Tell us what you plan to produce. We will review the line options and project information needed for a proposal.</p><div class="pc-no-drawings"><span aria-hidden="true">↗</span><h3>No drawings yet?<br> You can still start the conversation.</h3><p>We will review your requirements and contact you to clarify the next steps.</p></div><div class="pc-direct"><a href="mailto:sales@realjetech.com" data-cta-id="plant_email">sales@realjetech.com <span aria-hidden="true">↗</span></a><a href="https://wa.me/8619310090600?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20precast%20concrete%20plant%20for%20walls%20and%20floor%20slabs." target="_blank" rel="noopener noreferrer" data-cta-id="plant_whatsapp">Chat on WhatsApp <span aria-hidden="true">↗</span></a></div></div>
+      <div class="pc-form-card">
+        <form name="universal-enquiry" method="POST" action="/solutions/precast-concrete-plant/" data-netlify="true" netlify-honeypot="bot-field" data-pc-form>
+          <input type="hidden" name="form-name" value="universal-enquiry" /><input type="hidden" name="page_type" value="building_precast_plant" /><input type="hidden" name="locale" value="en" /><input type="hidden" name="subject" value="Building precast plant proposal enquiry" /><input type="hidden" name="keyword" value="Precast concrete plant for walls and floor slabs" /><input type="hidden" name="submission_id" value="" /><input type="hidden" name="message" value="Building precast plant enquiry" />
+          <p class="honeypot" hidden><label>Do not fill this field <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <fieldset><legend class="pc-sr-only">Your project and contact details</legend>
+            <div class="pc-form-intro"><span class="pc-eyebrow">01 / Project essentials</span><h3>Start with your project</h3><p>Share what you know. We can clarify the rest together.</p></div>
+            <div class="pc-form-grid"><label for="pc-name">Contact name <span aria-hidden="true">*</span><input id="pc-name" name="name" autocomplete="name" maxlength="120" required placeholder="Your name" /></label><label for="pc-country">Country / region <span aria-hidden="true">*</span><input id="pc-country" name="country" autocomplete="country-name" maxlength="100" required placeholder="Project country" /></label><label for="pc-need">Project need <span aria-hidden="true">*</span><select id="pc-need" name="project_need" required><option value="">Select your project need</option><option>New plant</option><option>Expand or upgrade</option><option>Single equipment</option><option>Not sure</option></select></label><label for="pc-product">Product type <span aria-hidden="true">*</span><select id="pc-product" name="product_type" required><option value="">Select your product type</option><option>Solid walls</option><option>Sandwich walls</option><option>Floor slabs</option><option>Special elements</option><option>Not sure</option></select></label></div>
+            <label for="pc-line">Line interest <span class="pc-optional">(optional)</span><select id="pc-line" name="line_interest"><option value="">Help me choose</option>{% for line in buildingPrecast.lines %}<option>{{ line[0] }}</option>{% endfor %}<option>Plant digital integration</option></select></label>
+            <div class="pc-channel"><span>Preferred contact channel</span><div><label><input type="radio" name="contact_channel" value="email" checked /> Email</label><label><input type="radio" name="contact_channel" value="whatsapp" /> WhatsApp</label></div></div>
+            <label for="pc-email" data-pc-email>Email address <span aria-hidden="true">*</span><input id="pc-email" type="email" name="email" autocomplete="email" maxlength="254" required placeholder="you@company.com" /></label>
+            <label for="pc-phone" data-pc-phone hidden>WhatsApp number <span aria-hidden="true">*</span><input id="pc-phone" type="tel" name="whatsapp" autocomplete="tel" maxlength="40" placeholder="Include your country code" disabled /><span class="pc-field-help">We only need one contact channel.</span></label>
+            <label for="pc-company">Company <span class="pc-optional">(optional)</span><input id="pc-company" name="company" autocomplete="organization" maxlength="160" placeholder="Helps us prepare for the conversation" /></label>
+            <details class="pc-technical"><summary><span>02 / Add Technical Details <small>(optional)</small></span><span aria-hidden="true">+</span></summary><div class="pc-technical-body"><p>Not sure of a value? Leave it blank. Original units are retained.</p><div class="pc-form-grid"><label for="pc-output">Target output<input id="pc-output" type="number" name="target_output" min="0" step="any" placeholder="e.g. 500" /></label><label for="pc-unit">Output unit<select id="pc-unit" name="output_unit"><option value="">Not sure</option><option>m²/day</option><option>m³/year</option><option>pieces/day</option></select></label><label for="pc-shifts">Production shifts<select id="pc-shifts" name="shifts"><option value="">Not sure</option><option>1 shift / day</option><option>2 shifts / day</option><option>3 shifts / day</option></select></label><label for="pc-weight">Maximum element weight<input id="pc-weight" name="element_weight" maxlength="80" placeholder="Value + unit, e.g. 8 t" /></label></div><label for="pc-size">Maximum element dimensions<input id="pc-size" name="element_dimensions" maxlength="160" placeholder="Length × width × thickness, with units" /></label><label for="pc-building">Building dimensions<input id="pc-building" name="building_dimensions" maxlength="160" placeholder="Length × width × clear height, with units" /></label><div class="pc-form-grid"><label for="pc-stage">Project stage<select id="pc-stage" name="project_stage"><option value="">Not sure</option><option>Feasibility / planning</option><option>Site secured</option><option>Technical evaluation</option><option>Ready for procurement</option><option>Existing plant upgrade</option></select></label><label for="pc-timing">Project timeline<input id="pc-timing" name="timeline" maxlength="120" placeholder="Target date or not sure" /></label></div><label for="pc-notes">Bottlenecks / project notes<textarea id="pc-notes" name="project_notes" rows="4" maxlength="3000" placeholder="Your products, existing equipment or production constraints"></textarea></label><p class="pc-field-help">Drawings can be shared during follow-up. No upload or budget is required here.</p></div></details>
+            <label class="pc-privacy"><input type="checkbox" name="privacy_consent" value="accepted" required /><span>I agree that REALJET may use this information to respond to my enquiry, as described in the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. *</span></label>
+            <p class="pc-form-error" role="alert" data-pc-error hidden>We could not confirm receipt. Your information is still here. Please try again or email <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>.</p>
+            <button class="pc-button pc-button-primary pc-submit" type="submit" data-pc-submit>Request My Plant Proposal <span aria-hidden="true">↗</span></button>
+            <p class="pc-form-footnote">No automatic marketing subscription. Your project details are used to respond to this enquiry.</p>
+          </fieldset>
+        </form>
+        <section class="pc-form-success" data-pc-success hidden tabindex="-1" role="status"><span class="pc-success-check" aria-hidden="true">✓</span><h3>Enquiry received</h3><p>Thank you. We will review your requirements and contact you to clarify the next steps.</p><p>To add drawings or project details, reply when our team contacts you or email <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>.</p><a class="pc-button pc-button-dark" href="#production-lines">Back to Production Lines <span aria-hidden="true">↑</span></a></section>
+      </div>
+    </div>
+  </section>
+
+  <section class="pc-section" id="faqs"><div class="pc-container pc-faq-grid"><div class="pc-section-head"><div class="pc-eyebrow">08 / FAQs</div><h2>Before You Plan<br> Your Plant</h2><p>Practical answers for your engineering and procurement team.</p></div><div class="pc-faq-list">{% for faq in buildingPrecast.faq %}<details{% if loop.first %} open{% endif %}><summary>{{ faq[0] }}<span aria-hidden="true">+</span></summary><p>{{ faq[1] }}</p></details>{% endfor %}</div></div></section>
+</main>
+<footer class="pc-footer"><div class="pc-container"><div class="pc-footer-top"><a class="pc-brand" href="/"><img src="/images/realjet-logo.webp" width="188" height="32" alt="REALJET home" /></a><p>Precast concrete production.<br> Engineered around your project.</p><nav aria-label="Related REALJET solutions"><span>Explore our solutions</span><a href="/marketing/precast-beam-factory/en/">Precast Beam Production Lines ↗</a><a href="/marketing/spun-pipe-piles-production-line/">Spun Pile Production Lines ↗</a><a href="/marketing/ppvc-mic-production-line/">PPVC / MiC Production Lines ↗</a></nav></div><div class="pc-footer-bottom"><span>© 2026 {{ site.legalName }}</span><div><a href="/marketing/privacy/en/">Privacy Policy</a><button type="button" data-open-analytics>Cookie Preferences</button><a href="mailto:sales@realjetech.com">sales@realjetech.com</a></div></div></div></footer>
+<nav class="pc-mobile-actions" aria-label="Contact REALJET"><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="mobile_proposal">Get Proposal <span aria-hidden="true">↗</span></a><a class="pc-button pc-button-outline" href="https://wa.me/8619310090600?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20precast%20concrete%20plant%20for%20walls%20and%20floor%20slabs." target="_blank" rel="noopener noreferrer" data-cta-id="plant_mobile_whatsapp">WhatsApp ↗</a></nav>
+<script src="/assets/site/site.js" defer></script><script src="/assets/site/building-precast.js" defer></script>
+</body></html>
