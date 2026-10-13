@@ -97,6 +97,11 @@ function commonParameters() {
 }
 
 export function trackEvent(name, parameters = {}) {
+  // Notify GTM only when a form's successful response emits generate_lead.
+  if (name === "generate_lead") {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "realjet_lead_success" });
+  }
   const payload = { ...commonParameters(), ...parameters };
   if (import.meta.env.DEV) console.info("[Realjet analytics]", name, payload);
   gtag("event", name, payload);

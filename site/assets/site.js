@@ -44,6 +44,11 @@ function sendGtag(...args) {
 }
 
 function trackEvent(name, parameters = {}) {
+  // A GTM custom-event message is separate from the existing GA4 gtag event.
+  if (name === "generate_lead") {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: "realjet_lead_success" });
+  }
   sendGtag("event", name, {
     page_path: window.location.pathname,
     page_type: document.body.dataset.pageType || "page",

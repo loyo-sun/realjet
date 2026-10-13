@@ -1,9 +1,15 @@
 (() => {
   const root = document.querySelector('.ppvc-page');
   if (!root) return;
-  const emit = (name, extra = {}) => window.gtag?.('event', name, {
-    page_path: location.pathname, page_type: 'ppvc-line', ...extra,
-  });
+  const emit = (name, extra = {}) => {
+    if (name === 'generate_lead') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'realjet_lead_success' });
+    }
+    window.gtag?.('event', name, {
+      page_path: location.pathname, page_type: 'ppvc-line', ...extra,
+    });
+  };
   const tabs = [...root.querySelectorAll('[role="tab"]')];
   const selectTab = (index, focus = false) => {
     tabs.forEach((tab, i) => {
