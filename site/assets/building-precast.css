@@ -38,3 +38,5 @@
 @media(max-width:600px){.pc-direct>a[href^="mailto:"]{display:none}.pc-enquiry{padding-block:18px}.pc-form-card{padding:16px}.pc-enquiry-copy>p{font-size:13px}.pc-form-card label{font-size:12px}.pc-form-card fieldset{gap:9px}}
 
 @media(min-width:851px) and (max-width:1100px){.pc-header-inner{gap:16px}.pc-navigation{gap:12px}.pc-navigation>a{white-space:nowrap}}
+
+.pc-line-image.pc-image-fit{height:auto;aspect-ratio:16/9;padding:0;background:#fff}.pc-line-image.pc-image-fit>img{display:block;border-radius:0;object-fit:contain}
