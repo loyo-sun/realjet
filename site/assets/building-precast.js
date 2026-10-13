@@ -66,13 +66,15 @@
     clearError(message);
   }
 
-  for (const cta of document.querySelectorAll('[data-pc-cta], [data-pc-line], [data-pc-equipment], [data-pc-need], [data-pc-interest]')) {
+  for (const cta of document.querySelectorAll('[data-pc-cta], [data-pc-line], [data-pc-equipment], [data-pc-case], [data-pc-need], [data-pc-interest]')) {
     cta.addEventListener('click', () => {
       if (cta.dataset.pcLine) {
         selectEnquiry(cta.dataset.pcLine, 'line');
         track('line_select', { line_type: cta.dataset.pcLine });
       } else if (cta.dataset.pcEquipment) {
         selectEnquiry(cta.dataset.pcEquipment, 'equipment');
+      } else if (cta.dataset.pcCase) {
+        selectEnquiry(cta.dataset.pcCase, 'case');
       } else if (cta.dataset.pcNeed) {
         selectEnquiry('a single piece of precast production equipment', 'equipment');
       } else if (cta.dataset.pcInterest) {

@@ -27,7 +27,7 @@ The user confirmed strategic-cooperation authorization in the source PRD. Photog
 | Distributor, curing, stacker, flying bucket | Overall solution, p12–15 |
 | Compaction, tilting, rebar equipment | PC product catalogue, PDF p9, p8, p11 |
 | Shuttering automation | Overall solution, p18 |
-| Factory reference photos | Overall solution, p48 |
+| Project case photos: Huai’an / Yuxi / Hefei | Supplied PPTX slide 48: image87.jpeg / image91.jpeg / image88.png |
 
 Public copy follows the user’s approved REALJET promotional branding and does not mention the authorized supplier or technology partner. The authorization and source provenance above are retained for internal asset records only. Factory photos illustrate technical arrangements without invented delivery years or measured performance. The digital block is a readable integration concept, not a claimed software deployment screenshot. Replace PDF-derived images with approved high-resolution originals when available.
 
@@ -52,3 +52,32 @@ Run `npm run build` and `node --check site/assets/building-precast.js`. Review w
 ## Equipment image cleanup (2026-10-13)
 
 Eight equipment images use uniform 1200 × 750 WebP canvases and 8:5 display frames with contain fitting, including the former cover-fit shuttering photograph. Built-in imagegen cleaned visible branding from distributor, bucket, curing, stacker, tilting and rebar assets. Compaction and shuttering had no visible company logos and retain their original imagery with size normalization only. Editing brief: remove company logos and names, including tiny brand marks on warning-sticker margins; preserve the original equipment structures, configuration, perspective, colors, equipment numbers and safety pictograms/instructions. Cleaned assets remain promotional illustrations. Files are in `public/images/building-precast/` under their existing equipment names.
+
+## Project case selection (2026-10-13)
+
+Source: `01_市场调研/1.6.PC 构件厂/01【筑友智能科技】PC工厂整体解决合作方案（2023）.pptx`, slides 46–49, “工厂承建案例”. Read all 50 slides and extracted the case labels and original embedded photographs. The deck identifies 20 locations but does not provide case-specific line types, capacities, delivery dates, contract scopes or measured improvements. Public copy therefore uses verified locations plus short descriptions of visible plant arrangements; it does not invent performance or attribute unsupported delivery claims.
+
+The page displays only three projects from slide 48: Huai’an, Jiangsu; Yuxi, Yunnan; Hefei, Anhui. Each has one photo, one location and a short descriptive sentence. Navigation reads “Case Studies”; the existing `#projects` anchor remains stable. The enquiry CTA pre-fills a request for a similar precast plant, preserving visitor notes. Photos were re-extracted directly from the PPTX to correct earlier asset-name/location mismatches. No supplier identity is shown in the case copy.
+
+| PPT slide | Location | Embedded photo |
+| --- | --- | --- |
+| 46 | 郑州，河南 | image80.jpeg |
+| 46 | 银川，宁夏 | image81.png |
+| 46 | 烟台，山东 | image79.png |
+| 46 | 昆明，云南 | image82.jpeg |
+| 47 | 中新，天津 | image83.jpeg |
+| 47 | 杭州，浙江 | image85.jpeg |
+| 47 | 长沙，湖南 | image84.jpeg |
+| 47 | 周口，河南 | image86.jpeg |
+| 48 | 淮安，江苏（页面精选） | image87.jpeg |
+| 48 | 玉溪，云南（页面精选） | image91.jpeg |
+| 48 | 合肥，安徽（页面精选） | image88.png |
+| 48 | 佛山，广东 | image90.png |
+| 48 | 衡阳，湖南 | image89.png |
+| 48 | 临安，浙江 | image92.jpeg |
+| 49 | 湘潭，湖南 | image93.png |
+| 49 | 焦作，河南 | image98.png |
+| 49 | 胶州，山东 | image94.jpeg |
+| 49 | 綦江，重庆 | image96.jpeg |
+| 49 | 洛阳，河南 | image97.jpeg |
+| 49 | 驻马店，河南 | image95.jpeg |

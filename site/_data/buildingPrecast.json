@@ -143,5 +143,28 @@
       "Storage & dispatch",
       "Coordinate yard positions, traceability and delivery."
     ]
+  ],
+  "cases": [
+    {
+      "name": "Huai’an, Jiangsu",
+      "image": "project-huaian",
+      "location": "China · Precast concrete plant",
+      "summary": "Pallet circulation routes and coordinated production stations.",
+      "alt": "Pallet circulation and production stations at the Huai’an precast plant in Jiangsu, China"
+    },
+    {
+      "name": "Yuxi, Yunnan",
+      "image": "project-yuxi",
+      "location": "China · Precast concrete plant",
+      "summary": "Pallet transport lanes arranged along the production hall.",
+      "alt": "Pallet transport lanes inside the Yuxi precast plant in Yunnan, China"
+    },
+    {
+      "name": "Hefei, Anhui",
+      "image": "project-hefei",
+      "location": "China · Precast concrete plant",
+      "summary": "Casting workstations alongside pallet handling equipment.",
+      "alt": "Casting workstations and pallet handling equipment at the Hefei precast plant in Anhui, China"
+    }
   ]
 }

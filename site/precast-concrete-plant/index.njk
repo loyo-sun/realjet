@@ -36,7 +36,7 @@ pageType: building_precast_plant
     <a class="pc-brand" href="/" aria-label="REALJET home"><img src="/images/realjet-logo.webp" width="1351" height="184" alt="REALJET" /></a>
     <button type="button" class="pc-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="pc-navigation" data-pc-menu><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg></button>
     <nav id="pc-navigation" class="pc-navigation" aria-label="Production line navigation">
-      <a href="#production-lines">Production Lines</a><a href="#process">Process</a><a href="#equipment">Equipment</a><a href="#digital-factory">Digital Factory</a><a href="#projects">Projects</a><a href="#faqs">FAQs</a>
+      <a href="#production-lines">Production Lines</a><a href="#process">Process</a><a href="#equipment">Equipment</a><a href="#digital-factory">Digital Factory</a><a href="#projects">Case Studies</a><a href="#faqs">FAQs</a>
       <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="nav_proposal">Get a Plant Proposal <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
@@ -101,10 +101,9 @@ pageType: building_precast_plant
   </section>
 
   <section class="pc-section pc-section-soft" id="projects">
-    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">Technology references</div><h2>Technology Proven in<br> Operating PC Factories</h2><p>Explore production layouts, equipment arrangements and material flow for wall and slab factories. We review the configuration and delivery scope for your project.</p></div>
-      {% set references = [ ['project-huaian','Pallet circulation','Coordinated production stations and pallet logistics.'], ['project-yuxi','Plant workflow','Workstation arrangement for building precast elements.'], ['project-hefei','Casting and handling','Production-area interfaces and material flow.'] ] %}
-      <div class="pc-reference-grid">{% for ref in references %}<figure><img src="/images/building-precast/{{ ref[0] }}.webp" alt="{{ ref[1] }} inside a building precast concrete factory" width="640" height="420" loading="lazy" decoding="async" /><figcaption><h3>{{ ref[1] }}</h3><p>{{ ref[2] }}</p></figcaption></figure>{% endfor %}</div>
-      <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="references_proposal">Get a Plant Proposal <span aria-hidden="true">↗</span></a>
+    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">Case studies</div><h2>Precast Plant Projects</h2><p>Selected projects in China, showing production layouts and equipment in place.</p></div>
+      <div class="pc-reference-grid">{% for project in buildingPrecast.cases %}<figure><img src="/images/building-precast/{{ project.image }}.webp" alt="{{ project.alt }}" width="640" height="420" loading="lazy" decoding="async" /><figcaption><h3>{{ project.name }}</h3><span class="pc-case-location">{{ project.location }}</span><p>{{ project.summary }}</p></figcaption></figure>{% endfor %}</div>
+      <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-case="a precast plant similar to the featured projects" data-pc-cta="case_studies_proposal">Discuss a Similar Project <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
