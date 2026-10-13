@@ -12,7 +12,7 @@
   let submissionId = '';
 
   // This page emits only controlled category values and a random submission ID.
-  // Contact details, technical notes and drawings never enter analytics.
+  // Contact details and enquiry messages never enter analytics.
   function track(name, parameters = {}) {
     let allowed = false;
     try { allowed = ['all', 'analytics'].includes(localStorage.getItem('realjet_consent_v2')); } catch { /* Forms remain usable without storage. */ }
@@ -62,23 +62,6 @@
     });
   }
 
-  const emailGroup = form.querySelector('[data-pc-email]');
-  const phoneGroup = form.querySelector('[data-pc-phone]');
-  const email = form.elements.email;
-  const phone = form.elements.whatsapp;
-  function updateChannel() {
-    const isEmail = form.elements.contact_channel.value === 'email';
-    emailGroup.hidden = !isEmail;
-    phoneGroup.hidden = isEmail;
-    email.required = isEmail;
-    email.disabled = !isEmail;
-    phone.required = !isEmail;
-    phone.disabled = isEmail;
-    for (const input of [email, phone]) clearError(input);
-  }
-  for (const radio of form.querySelectorAll('[name="contact_channel"]')) radio.addEventListener('change', updateChannel);
-  updateChannel();
-
   function start() {
     if (started) return;
     started = true;
@@ -101,7 +84,6 @@
     error.className = 'pc-field-error';
     error.textContent = input.validity.typeMismatch && input.type === 'email'
       ? 'Enter a valid email address, such as name@company.com.'
-      : input.type === 'checkbox' ? 'Please confirm how we may use your enquiry details.'
       : input.validity.valueMissing ? 'Please complete this field.' : input.validationMessage;
     input.setAttribute('aria-invalid', 'true');
     input.setAttribute('aria-describedby', error.id);
@@ -129,15 +111,6 @@
     if (!submissionId) submissionId = crypto.randomUUID();
     form.elements.submission_id.value = submissionId;
     const payload = new FormData(form);
-    const labels = [
-      ['country', 'Project country'], ['project_need', 'Project need'], ['product_type', 'Product type'],
-      ['line_interest', 'Line interest'], ['company', 'Company'], ['contact_channel', 'Contact channel'],
-      ['whatsapp', 'WhatsApp'], ['target_output', 'Target output'], ['output_unit', 'Output unit'],
-      ['shifts', 'Shifts'], ['element_weight', 'Element weight'], ['element_dimensions', 'Element dimensions'],
-      ['building_dimensions', 'Building dimensions'], ['project_stage', 'Project stage'],
-      ['timeline', 'Timeline'], ['project_notes', 'Project notes'],
-    ];
-    payload.set('message', ['Building precast plant: walls and floor slabs', ...labels.map(([key, label]) => payload.get(key) ? `${label}: ${payload.get(key)}` : '').filter(Boolean)].join('\n'));
     errorMessage.hidden = true;
     sending = true;
     fieldset.disabled = true;
@@ -157,14 +130,13 @@
       });
       if (!response.ok) throw new Error('server_error');
       succeeded = true;
-      track('enquiry_success', { lead_id: submissionId, need_type: payload.get('project_need'), product_type: payload.get('product_type'), variant: 'plant_v1' });
+      track('enquiry_success', { lead_id: submissionId, need_type: payload.get('project_need') || 'Plant proposal', variant: 'plant_v2' });
       track('generate_lead', { lead_id: submissionId, lead_source: 'building_precast_plant' });
       form.hidden = true;
       success.hidden = false;
       success.focus();
     } catch (error) {
       fieldset.disabled = false;
-      updateChannel();
       form.removeAttribute('aria-busy');
       submit.innerHTML = submitMarkup;
       errorMessage.hidden = false;
@@ -173,5 +145,5 @@
       track('form_error', { error_code: error.name === 'AbortError' ? 'timeout' : 'submission_failed' });
     } finally { clearTimeout(timeout); sending = false; }
   });
-  track('lp_view', { variant: 'plant_v1' });
+  track('lp_view', { variant: 'plant_v2' });
 })();
