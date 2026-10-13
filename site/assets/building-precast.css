@@ -40,3 +40,5 @@
 @media(min-width:851px) and (max-width:1100px){.pc-header-inner{gap:16px}.pc-navigation{gap:12px}.pc-navigation>a{white-space:nowrap}}
 
 .pc-line-image.pc-image-fit{height:auto;aspect-ratio:16/9;padding:0;background:#fff}.pc-line-image.pc-image-fit>img{display:block;border-radius:0;object-fit:contain}
+
+.pc-equipment-image{height:auto;aspect-ratio:8/5;padding:0;background:#fff;overflow:hidden}.pc-equipment-image img{display:block;width:100%;height:100%;object-fit:contain;mix-blend-mode:normal}

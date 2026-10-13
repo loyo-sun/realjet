@@ -48,3 +48,7 @@ Optional analytics respect the existing cookie preference. Events include only f
 ## Validation
 
 Run `npm run build` and `node --check site/assets/building-precast.js`. Review widths 320, 375, 390 and desktop; check menu, FAQ, the four-field form, direct WhatsApp buttons, logo aspect ratio, validation and failed-submit recovery. The sitemap source and built XML must retain their previous checksums.
+
+## Equipment image cleanup (2026-10-13)
+
+Eight equipment images use uniform 1200 × 750 WebP canvases and 8:5 display frames with contain fitting, including the former cover-fit shuttering photograph. Built-in imagegen cleaned visible branding from distributor, bucket, curing, stacker, tilting and rebar assets. Compaction and shuttering had no visible company logos and retain their original imagery with size normalization only. Editing brief: remove company logos and names, including tiny brand marks on warning-sticker margins; preserve the original equipment structures, configuration, perspective, colors, equipment numbers and safety pictograms/instructions. Cleaned assets remain promotional illustrations. Files are in `public/images/building-precast/` under their existing equipment names.
