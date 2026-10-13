@@ -50,14 +50,34 @@
   document.addEventListener('focusout', () => requestAnimationFrame(updateBar));
   window.visualViewport?.addEventListener('resize', updateBar);
 
-  for (const cta of document.querySelectorAll('[data-pc-cta], [data-pc-line], [data-pc-need], [data-pc-interest]')) {
+  let generatedMessage = '';
+  function selectEnquiry(topic, kind) {
+    const message = form.elements.message;
+    let notes = message.value;
+    // Replace only our previous introduction; preserve anything the visitor wrote.
+    if (generatedMessage && notes.startsWith(generatedMessage)) {
+      notes = notes.slice(generatedMessage.length).replace(/^\n{1,2}/, '');
+    }
+    generatedMessage = `I would like to enquire about ${topic}.`;
+    message.value = notes.trim() ? `${generatedMessage}\n\n${notes}` : generatedMessage;
+    form.elements.line_interest.value = kind === 'line' || kind === 'integration' ? topic : '';
+    form.elements.project_need.value = kind === 'equipment' ? 'Single equipment' : kind === 'integration' ? 'Plant digital integration' : 'Plant proposal';
+    form.elements.subject.value = `Precast enquiry: ${topic}`;
+    clearError(message);
+  }
+
+  for (const cta of document.querySelectorAll('[data-pc-cta], [data-pc-line], [data-pc-equipment], [data-pc-need], [data-pc-interest]')) {
     cta.addEventListener('click', () => {
       if (cta.dataset.pcLine) {
-        form.elements.line_interest.value = cta.dataset.pcLine;
+        selectEnquiry(cta.dataset.pcLine, 'line');
         track('line_select', { line_type: cta.dataset.pcLine });
+      } else if (cta.dataset.pcEquipment) {
+        selectEnquiry(cta.dataset.pcEquipment, 'equipment');
+      } else if (cta.dataset.pcNeed) {
+        selectEnquiry('a single piece of precast production equipment', 'equipment');
+      } else if (cta.dataset.pcInterest) {
+        selectEnquiry(cta.dataset.pcInterest, 'integration');
       }
-      if (cta.dataset.pcNeed) form.elements.project_need.value = cta.dataset.pcNeed;
-      if (cta.dataset.pcInterest) form.elements.line_interest.value = cta.dataset.pcInterest;
       track('cta_click', { cta_id: cta.dataset.pcCta || 'configuration', line_interest: form.elements.line_interest.value || 'unspecified' });
     });
   }
