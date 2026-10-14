@@ -20,13 +20,15 @@ function setup({ fetcher = async () => ({ ok: true }), stored = false, local = f
   fields.email = Object.assign(el(), { value: 'visitor@example.com', tagName: 'INPUT' });
   form.elements = fields; form.valid = true; form.reportValidity = () => form.valid;
   const rect = { top: 1000, bottom: 2300 };
+  const proposalRect = { top: 8000, bottom: 8800 };
+  const proposal = { getBoundingClientRect: () => proposalRect };
   const header = { getBoundingClientRect: () => ({ height: 86 }) };
   const lines = { getBoundingClientRect: () => rect };
   panel.querySelector = s => ({ form, '[data-pc-email-close]': close, '[data-pc-email-error]': error, '[data-pc-email-success]': success })[s];
   panel.contains = x => [fields.email, close, success].includes(x);
   form.querySelector = s => s === 'fieldset' ? fieldset : submit;
   const bodyClasses = new Set();
-  const document = Object.assign(el(), { activeElement: el(), body: { classList: { add: x => bodyClasses.add(x), remove: x => bodyClasses.delete(x) } }, querySelector: s => ({ '[data-pc-email-panel]': panel, '#production-lines': lines, '[data-pc-email-announcement]': announcement, '[data-pc-form]': main, '.pc-header': header, '.analytics-consent-panel': consentTop === null ? null : { getBoundingClientRect: () => ({ top: consentTop }) } })[s] || null });
+  const document = Object.assign(el(), { activeElement: el(), body: { classList: { add: x => bodyClasses.add(x), remove: x => bodyClasses.delete(x) } }, querySelector: s => ({ '[data-pc-email-panel]': panel, '#production-lines': lines, '#plant-proposal': proposal, '[data-pc-email-announcement]': announcement, '[data-pc-form]': main, '.pc-header': header, '.analytics-consent-panel': consentTop === null ? null : { getBoundingClientRect: () => ({ top: consentTop }) } })[s] || null });
   const window = Object.assign(el(), { scrollY: 0, innerHeight: 900, trackEvent: (...args) => analytics.push(args) });
   if (keyboard) window.visualViewport = { height: 500, offsetTop: 0, addEventListener() {} };
   const storage = new Map(stored ? [['realjet_pc_scroll_email_shown_v1', '1']] : []), calls = [], analytics = [];
@@ -35,6 +37,8 @@ function setup({ fetcher = async () => ({ ok: true }), stored = false, local = f
   return { document, panel, form, main, close, error, success, fields, calls, analytics, storage, bodyClasses, window,
     see() { window.scrollY = 400; rect.top = 600; rect.bottom = 1900; window.events.scroll(); },
     leave() { window.scrollY = 2250; rect.top = -1250; rect.bottom = 50; window.events.scroll(); },
+    enterProposal() { window.scrollY = 7500; proposalRect.top = 899; proposalRect.bottom = 1700; window.events.scroll(); },
+    exitProposal() { proposalRect.top = 8000; proposalRect.bottom = 8800; },
     submit: () => form.events.submit({ preventDefault() {} }),
     closeOffer: () => close.events.click(),
   };
@@ -59,4 +63,7 @@ const keyboard = setup({ keyboard: true }); keyboard.see(); keyboard.leave(); as
 const invalid = setup(); invalid.form.valid = false; await invalid.submit(); assert.equal(invalid.calls.length, 0);
 const local = setup({ local: true }); local.see(); local.leave(); await local.submit(); assert.equal(local.calls.length, 0); assert.equal(local.success.hidden, true); assert.match(local.error.textContent, /local preview/);
 let finish; const pending = setup({ fetcher: () => new Promise(resolve => { finish = resolve; }) }); pending.see(); pending.leave(); const first = pending.submit(); await pending.submit(); pending.closeOffer(); assert.equal(pending.panel.hidden, false); assert.equal(pending.calls.length, 1); finish({ ok: true }); await first;
-console.log('PASS: scroll trigger, one-field payload, centered placement, repeat crossings, legacy-flag independence and fresh request IDs, validation, receipt/retry/local guard, duplicate prevention and private-data-free analytics/storage.');
+const proposalVisit = setup(); proposalVisit.see(); proposalVisit.leave(); proposalVisit.enterProposal(); assert.equal(proposalVisit.panel.hidden, true); assert.equal(proposalVisit.bodyClasses.size, 0); assert.equal(proposalVisit.fields.email.value, 'visitor@example.com');
+proposalVisit.leave(); assert.equal(proposalVisit.panel.hidden, true); proposalVisit.exitProposal(); proposalVisit.see(); proposalVisit.leave(); assert.equal(proposalVisit.panel.hidden, false);
+let finishHidden; const hiddenPending = setup({ fetcher: () => new Promise(resolve => { finishHidden = resolve; }) }); hiddenPending.see(); hiddenPending.leave(); const hiddenRequest = hiddenPending.submit(); hiddenPending.enterProposal(); assert.equal(hiddenPending.panel.hidden, true); finishHidden({ ok: true }); await hiddenRequest; assert.equal(hiddenPending.panel.hidden, true); assert.equal(hiddenPending.success.focused, undefined); assert.equal(hiddenPending.calls.length, 1);
+console.log('PASS: proposal auto-hide, re-arming and hidden in-flight receipt;  scroll trigger, one-field payload, centered placement, repeat crossings, legacy-flag independence and fresh request IDs, validation, receipt/retry/local guard, duplicate prevention and private-data-free analytics/storage.');

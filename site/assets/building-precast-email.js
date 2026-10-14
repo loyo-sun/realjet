@@ -1,6 +1,7 @@
 (() => {
   const panel = document.querySelector('[data-pc-email-panel]');
   const lines = document.querySelector('#production-lines');
+  const proposal = document.querySelector('#plant-proposal');
   if (!panel || !lines) return;
   const form = panel.querySelector('form');
   const email = form.elements.email;
@@ -57,6 +58,12 @@
     const down = y > previousY;
     previousY = y;
     const header = document.querySelector('.pc-header').getBoundingClientRect().height;
+    const proposalRect = proposal?.getBoundingClientRect();
+    if (proposalRect && proposalRect.top < window.innerHeight && proposalRect.bottom > header) {
+      seenLines = false;
+      if (!panel.hidden) hide();
+      return;
+    }
     const rect = lines.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > header) seenLines = true;
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
@@ -72,7 +79,7 @@
     framePending = true;
     requestAnimationFrame(() => { framePending = false; check(); });
   }, { passive: true });
-  window.addEventListener('resize', position);
+  window.addEventListener('resize', () => { check(); position(); });
   window.visualViewport?.addEventListener('resize', position);
   window.visualViewport?.addEventListener('scroll', position);
   new MutationObserver(position).observe(document.body, { childList: true });
@@ -120,7 +127,7 @@
       submitted = true;
       form.hidden = true;
       success.hidden = false;
-      success.focus({ preventScroll: true });
+      if (!panel.hidden) success.focus({ preventScroll: true });
       trackReceipt(payload.get('submission_id'));
     } catch (failure) {
       fieldset.disabled = false;
