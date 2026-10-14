@@ -75,6 +75,8 @@
   document.addEventListener('visibilitychange', schedule);
   window.addEventListener('resize', () => { update(); schedule(); });
   reduced.addEventListener('change', () => { update(); schedule(); });
+  previous.hidden = false;
+  next.hidden = false;
   carousel.querySelector('[data-pc-case-controls]').hidden = false;
   update();
   if ('IntersectionObserver' in window) {

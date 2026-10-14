@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 
 Route: `/solutions/precast-concrete-plant/`.
 
-The English page covers building wall panels and floor slabs. It follows the REALJET Notion PRD dated 2026-10-12 and uses the REALJET brand throughout. The footer does not link to other production lines. It is excluded from Eleventy collections and is deliberately not added to the sitemap.
+The English page covers building wall panels and floor slabs. It follows the REALJET Notion PRD dated 2026-10-12 and uses the REALJET brand throughout. The footer does not link to other production lines. It is excluded from Eleventy collections. Its canonical URL is included in the sitemap following the user request on 2026-10-14.
 
 ## Content and images
 
@@ -47,7 +47,7 @@ Optional analytics respect the existing cookie preference. Events include only f
 
 ## Validation
 
-Run `npm run build` and `node --check site/assets/building-precast.js`. Review widths 320, 375, 390 and desktop; check menu, FAQ, the four-field form, direct WhatsApp buttons, logo aspect ratio, validation and failed-submit recovery. The sitemap source and built XML must retain their previous checksums.
+Run `npm run build` and `node --check site/assets/building-precast.js`. Review widths 320, 375, 390 and desktop; check menu, FAQ, the four-field form, direct WhatsApp buttons, logo aspect ratio, validation and failed-submit recovery. Verify the canonical landing-page URL appears exactly once in the built sitemap XML.
 
 ## Equipment image cleanup (2026-10-13)
 
@@ -95,3 +95,7 @@ After a visitor has seen Production Lines and scrolls downward past its bottom, 
 A separate static `universal-enquiry` form submits `name=Name`, the visitor's `email`, and `message=客户通过滚动留下了邮箱信息。`, with `enquiry_source=scroll_email` and `project_need=Complete solution`. Country is not invented or required. Existing four-field enquiries stay unchanged. It uses Netlify's existing POST flow, validates email, blocks double submission, retains entered email and submission ID after errors, and confirms receipt only on an accepted response. Local static previews never send/fake successful receipt. No automatic document email delivery is implemented; the lead requests follow-up from the team. No popup frequency flag or visitor email is stored in session storage. Optional conversion analytics include a random lead ID and fixed source labels only.
 
 Validate the scroll offer with `node scripts/test-precast-scroll-email.mjs`; tests use mocked requests and never create live enquiries.
+
+## Case privacy and side navigation (2026-10-14)
+
+The case section explains that customer and company names are omitted to protect privacy; verified geographic labels remain. Previous/next buttons flank the carousel on desktop and sit at the image edges on mobile; the footer retains the pause/play control, range counter and enquiry CTA. The canonical landing-page URL is now listed in the sitemap.
