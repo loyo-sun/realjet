@@ -10,30 +10,25 @@
   const error = panel.querySelector('[data-pc-email-error]');
   const success = panel.querySelector('[data-pc-email-success]');
   const announcement = document.querySelector('[data-pc-email-announcement]');
-  const main = document.querySelector('[data-pc-form]');
-  const key = 'realjet_pc_scroll_email_shown_v1';
   const submitLabel = submit.textContent;
   let seenLines = false;
-  let shown = false;
-  let engaged = false;
   let sending = false;
   let submitted = false;
   let previousY = window.scrollY;
   let priorFocus;
   let framePending = false;
-  try { shown = sessionStorage.getItem(key) === '1'; } catch { /* One prompt per page if storage is unavailable. */ }
 
   function position() {
     if (panel.hidden) return;
     const viewport = window.visualViewport;
-    const keyboard = viewport && window.innerHeight - viewport.height > 160
-      ? window.innerHeight - viewport.height - viewport.offsetTop : 0;
+    const viewportTop = viewport?.offsetTop || 0;
+    const viewportHeight = viewport?.height || window.innerHeight;
     const notice = document.querySelector('.analytics-consent-panel');
-    const consentHeight = notice ? Math.max(0, window.innerHeight - notice.getBoundingClientRect().top) : 0;
-    const bottom = Math.max(16, keyboard + 12, consentHeight + 12);
-    const headerHeight = document.querySelector('.pc-header').getBoundingClientRect().height;
-    panel.style.bottom = `${bottom}px`;
-    panel.style.maxHeight = `${Math.max(180, window.innerHeight - bottom - headerHeight - 16)}px`;
+    const availableBottom = Math.min(viewportTop + viewportHeight, notice ? notice.getBoundingClientRect().top - 12 : Infinity);
+    const availableHeight = Math.max(180, availableBottom - viewportTop);
+    panel.style.top = `${viewportTop + availableHeight / 2}px`;
+    panel.style.maxHeight = `${Math.max(148, availableHeight - 32)}px`;
+
   }
   function hide() {
     panel.hidden = true;
@@ -42,8 +37,14 @@
     if (panel.contains(document.activeElement)) priorFocus?.focus?.({ preventScroll: true });
   }
   function show() {
-    shown = true;
-    try { sessionStorage.setItem(key, '1'); } catch { /* Never store the visitor's email. */ }
+    if (submitted) {
+      submitted = false;
+      form.hidden = false;
+      success.hidden = true;
+      fieldset.disabled = false;
+      submit.textContent = submitLabel;
+      form.elements.submission_id.value = '';
+    }
     priorFocus = document.activeElement;
     panel.hidden = false;
     document.body.classList.add('pc-email-open');
@@ -55,12 +56,16 @@
     const y = window.scrollY;
     const down = y > previousY;
     previousY = y;
-    if (shown || engaged || main?.hidden) return;
     const header = document.querySelector('.pc-header').getBoundingClientRect().height;
     const rect = lines.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > header) seenLines = true;
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
-    if (seenLines && down && rect.bottom <= header && !typing) show();
+    if (seenLines && down && rect.bottom <= header) {
+      // Consume this crossing even when open: dismissal never causes an immediate re-open.
+      // Returning to Production Lines arms the next downward crossing again.
+      seenLines = false;
+      if (panel.hidden && !sending && !typing) show();
+    }
   }
   window.addEventListener('scroll', () => {
     if (framePending) return;
@@ -71,12 +76,6 @@
   window.visualViewport?.addEventListener('resize', position);
   window.visualViewport?.addEventListener('scroll', position);
   new MutationObserver(position).observe(document.body, { childList: true });
-  function engage() { engaged = true; if (!sending) hide(); }
-  main?.addEventListener('input', engage, { once: true });
-  main?.addEventListener('submit', engage, { once: true });
-  document.addEventListener('click', event => {
-    if (event.target.closest('a[href="#plant-proposal"]')) engage();
-  });
   close.addEventListener('click', () => { if (!sending) hide(); });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !panel.hidden && !sending) { event.preventDefault(); hide(); }
