@@ -107,3 +107,7 @@ Replaced the equipment list with all 12 items requested by the user, in screensh
 Removed the digital-factory section, navigation link, digital support claim and software FAQ. Sitemap entry remains present. Common English transfer terminology checked against Elematic's official wall and half-slab brochures; all feature and specification claims come from the supplied manual, not other manufacturers.
 
 Image prompt set: precise-object-edit; erase company names/logos with matching underlying materials; preserve machinery, perspective, colors, equipment numbers and safety markings; centered complete render on white 8:5 canvas, retain the curing-cover photograph. New assets: pallet-transfer, tensioning, reinforcement-film, surface-roughening, pallet-ferry and retractable-curing under public/images/building-precast/.
+
+## Equipment specifications layout (2026-10-14)
+
+Desktop equipment layout is four columns by three rows, with two columns on tablet and one on phones. Specifications use a semantic definition list: muted labels above emphasized values in a pale panel with a cyan top border. Long dimensions and storage arrangements span both internal columns. No source values changed during this style revision.

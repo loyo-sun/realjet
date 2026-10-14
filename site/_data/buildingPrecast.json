@@ -63,73 +63,255 @@
       "Concrete Distributor",
       "distributor",
       "One-touch concrete loading and return, intelligent weighing, concrete setting alarm and fault self-diagnosis. Remote and control-panel operation with automatic lubrication.",
-      "Dimensions: 13,220 × 5,700 × 3,680 mm · Discharge: spreading / screw · Hopper: up to 3 m³ · Casting width: 1.6 / 2.7 m · Discharge gates: 8–12 · Distribution: up to 1.5 m³/min · Gantry / trolley travel: 0–25 m/min."
+      [
+        {
+          "label": "Dimensions",
+          "value": "13,220 × 5,700 × 3,680 mm",
+          "wide": true
+        },
+        {
+          "label": "Discharge",
+          "value": "spreading / screw",
+          "wide": false
+        },
+        {
+          "label": "Hopper",
+          "value": "up to 3 m³",
+          "wide": false
+        },
+        {
+          "label": "Casting width",
+          "value": "1.6 / 2.7 m",
+          "wide": false
+        },
+        {
+          "label": "Discharge gates",
+          "value": "8–12",
+          "wide": false
+        },
+        {
+          "label": "Distribution",
+          "value": "up to 1.5 m³/min",
+          "wide": false
+        },
+        {
+          "label": "Gantry / trolley travel",
+          "value": "0–25 m/min",
+          "wide": false
+        }
+      ]
     ],
     [
       "Pallet Vibration Station",
       "compaction",
       "Clamping vibration with multi-stage cushioning. Adjustable vibration frequency and installation height, with high excitation force.",
-      "Dimensions: 8,786 × 3,590 × 457 mm · 8 vibration units · Frequency: 0–50 Hz · Excitation force: 13 kN × 8."
+      [
+        {
+          "label": "Dimensions",
+          "value": "8,786 × 3,590 × 457 mm",
+          "wide": true
+        },
+        {
+          "label": "Vibration units",
+          "value": "8",
+          "wide": false
+        },
+        {
+          "label": "Frequency",
+          "value": "0–50 Hz",
+          "wide": false
+        },
+        {
+          "label": "Excitation force",
+          "value": "13 kN × 8",
+          "wide": false
+        }
+      ]
     ],
     [
       "Pallet Stacker",
       "stacker",
       "Servo-driven rack-and-pinion positioning, automatic storage-bay recognition and coordinated control. Station safety interlocks, automatic or semi-automatic operation, and an overhead suspended structure.",
-      "Dimensions: 11,150 × 6,000 × 12,050 mm · Rated load: 25 t · Cycle time: ≤8 min."
+      [
+        {
+          "label": "Dimensions",
+          "value": "11,150 × 6,000 × 12,050 mm",
+          "wide": true
+        },
+        {
+          "label": "Rated load",
+          "value": "25 t",
+          "wide": false
+        },
+        {
+          "label": "Cycle time",
+          "value": "≤8 min",
+          "wide": false
+        }
+      ]
     ],
     [
       "Curing Chamber & Climate Control",
       "curing",
       "Integrated multi-level rack structure with independent temperature and humidity control for each chamber row. Hot-air circulation maintains uniform temperatures between levels; steam curing is supported.",
-      "Storage arrangement: 5 bays × 9 levels × 2 chambers."
+      [
+        {
+          "label": "Storage arrangement",
+          "value": "5 bays × 9 levels × 2 chambers",
+          "wide": true
+        }
+      ]
     ],
     [
       "Tilting Station",
       "tilting",
       "One-touch automatic tilting, automatic pallet locking and synchronized hydraulic-cylinder control. Operated by remote control or control panel.",
-      "Dimensions: 9,000 × 4,388 × 1,570 mm · Tilting load: 30 t · Tilting angle: 80° ±5°."
+      [
+        {
+          "label": "Dimensions",
+          "value": "9,000 × 4,388 × 1,570 mm",
+          "wide": true
+        },
+        {
+          "label": "Tilting load",
+          "value": "30 t",
+          "wide": false
+        },
+        {
+          "label": "Tilting angle",
+          "value": "80° ±5°",
+          "wide": false
+        }
+      ]
     ],
     [
       "Pallet Transfer Trolley",
       "pallet-transfer",
       "Synchronized lifting by dual drives, servo-controlled travel and separate sensing for deceleration and stopping.",
-      "Dimensions: 3,842 × 1,077 × 330 mm · Maximum load: 25 t · Travel speed: 13 m/min."
+      [
+        {
+          "label": "Dimensions",
+          "value": "3,842 × 1,077 × 330 mm",
+          "wide": true
+        },
+        {
+          "label": "Maximum load",
+          "value": "25 t",
+          "wide": false
+        },
+        {
+          "label": "Travel speed",
+          "value": "13 m/min",
+          "wide": false
+        }
+      ]
     ],
     [
       "Concrete Transport Bucket",
       "bucket",
       "Easy-clean hopper, high travel speed and coordinated control. Precise positioning, remote operation and automatic tracking and stopping.",
-      "Dimensions: 3,760 × 1,900 × 1,490 mm / 3,880 × 2,100 × 1,572 mm · Nominal volume: 1.8 / 2.5 / 3.5 m³ · Travel speed: 0–42 / 0–60 m/min."
+      [
+        {
+          "label": "Dimensions",
+          "value": "3,760 × 1,900 × 1,490 mm / 3,880 × 2,100 × 1,572 mm",
+          "wide": true
+        },
+        {
+          "label": "Nominal volume",
+          "value": "1.8 / 2.5 / 3.5 m³",
+          "wide": false
+        },
+        {
+          "label": "Travel speed",
+          "value": "0–42 / 0–60 m/min",
+          "wide": false
+        }
+      ]
     ],
     [
       "Automatic Gang Stressing Machine",
       "tensioning",
       "Automatic pin insertion and withdrawal, two stressing modes and one-touch return to the starting position. Sensors monitor reinforcement stressing force and cylinder stroke in real time.",
-      "Maximum stressing force: 160 t."
+      [
+        {
+          "label": "Maximum stressing force",
+          "value": "160 t",
+          "wide": false
+        }
+      ]
     ],
     [
       "Reinforcement & Film Laying Machine",
       "reinforcement-film",
       "Automatic film laying with quick-release film rollers and fast reinforcement clamping. Anti-disengagement comb design, polyurethane-coated wheels and remote-control operation.",
-      "Travel speed: 0–40 m/min · Power supply: conductor rail."
+      [
+        {
+          "label": "Travel speed",
+          "value": "0–40 m/min",
+          "wide": false
+        },
+        {
+          "label": "Power supply",
+          "value": "conductor rail",
+          "wide": false
+        }
+      ]
     ],
     [
       "Surface Roughening & Shutter Handling Machine",
       "surface-roughening",
       "Surface roughening and collection of stop-end and side shutters in one operation. Assisted lifting, one-touch raising and lowering of the roughening unit, a dedicated storage platform, and remote or control-panel operation.",
-      "Hoist capacity: 80 kg · Travel: 0–40 m/min · Roughening lift stroke: 0–250 mm · Conductor-rail power."
+      [
+        {
+          "label": "Hoist capacity",
+          "value": "80 kg",
+          "wide": false
+        },
+        {
+          "label": "Travel",
+          "value": "0–40 m/min",
+          "wide": false
+        },
+        {
+          "label": "Roughening lift stroke",
+          "value": "0–250 mm",
+          "wide": false
+        },
+        {
+          "label": "Power supply",
+          "value": "Conductor rail",
+          "wide": false
+        }
+      ]
     ],
     [
       "Pallet Ferry Transfer Car",
       "pallet-ferry",
       "Hydraulic position locking and coordinated transfer between production beds. Conductor-rail power supply with remote-control and control-panel operation.",
-      "Rated load: 25 t."
+      [
+        {
+          "label": "Rated load",
+          "value": "25 t",
+          "wide": false
+        }
+      ]
     ],
     [
       "Retractable Curing Cover",
       "retractable-curing",
       "Motor-driven, one-touch automatic extension and retraction. Automated operation reduces manual intervention during steam curing.",
-      "Steam curing · Reference dimensions: 10,000 × 3,600 × 1,250 mm."
+      [
+        {
+          "label": "Curing method",
+          "value": "Steam",
+          "wide": false
+        },
+        {
+          "label": "Reference dimensions",
+          "value": "10,000 × 3,600 × 1,250 mm",
+          "wide": true
+        }
+      ]
     ]
   ],
   "process": [
