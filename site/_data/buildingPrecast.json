@@ -21,10 +21,6 @@
       "Yes. We can review your existing layout, equipment interfaces and production bottlenecks to assess suitable upgrades. The scope is defined after checking the current system and the changes required."
     ],
     [
-      "Can production equipment connect with our software?",
-      "MES, equipment data collection and other digital modules can be considered as part of the project. Interfaces, software language, deployment and integration with existing systems require technical confirmation."
-    ],
-    [
       "What installation and training are included?",
       "Installation, commissioning, training and support are defined in the agreed package. We identify site preparation, customer responsibilities and local contractor work before implementation."
     ],
@@ -64,52 +60,76 @@
   ],
   "equipment": [
     [
-      "Concrete distributor",
+      "Concrete Distributor",
       "distributor",
-      "Connect concrete supply to controlled casting.",
-      "Confirm hopper volume, concrete mix and coverage width."
+      "One-touch concrete loading and return, intelligent weighing, concrete setting alarm and fault self-diagnosis. Remote and control-panel operation with automatic lubrication.",
+      "Dimensions: 13,220 × 5,700 × 3,680 mm · Discharge: spreading / screw · Hopper: up to 3 m³ · Casting width: 1.6 / 2.7 m · Discharge gates: 8–12 · Distribution: up to 1.5 m³/min · Gantry / trolley travel: 0–25 m/min."
     ],
     [
-      "Compaction station",
+      "Pallet Vibration Station",
       "compaction",
-      "Coordinate compaction with the pallet and mix.",
-      "Confirm pallet size, load and SCC compatibility."
+      "Clamping vibration with multi-stage cushioning. Adjustable vibration frequency and installation height, with high excitation force.",
+      "Dimensions: 8,786 × 3,590 × 457 mm · 8 vibration units · Frequency: 0–50 Hz · Excitation force: 13 kN × 8."
     ],
     [
-      "Flying bucket",
-      "bucket",
-      "Transfer concrete between batching and casting.",
-      "Confirm route, payload and cleaning access."
-    ],
-    [
-      "Curing system",
-      "curing",
-      "Coordinate curing conditions with station flow.",
-      "Confirm energy supply, curing curve and storage positions."
-    ],
-    [
-      "Pallet stacker",
+      "Pallet Stacker",
       "stacker",
-      "Move pallets into and out of curing positions.",
-      "Confirm total load, rack layout and safety interfaces."
+      "Servo-driven rack-and-pinion positioning, automatic storage-bay recognition and coordinated control. Station safety interlocks, automatic or semi-automatic operation, and an overhead suspended structure.",
+      "Dimensions: 11,150 × 6,000 × 12,050 mm · Rated load: 25 t · Cycle time: ≤8 min."
     ],
     [
-      "Tilting station",
+      "Curing Chamber & Climate Control",
+      "curing",
+      "Integrated multi-level rack structure with independent temperature and humidity control for each chamber row. Hot-air circulation maintains uniform temperatures between levels; steam curing is supported.",
+      "Storage arrangement: 5 bays × 9 levels × 2 chambers."
+    ],
+    [
+      "Tilting Station",
       "tilting",
-      "Support wall-panel demoulding and lifting.",
-      "Confirm load, lifting points and release strength."
+      "One-touch automatic tilting, automatic pallet locking and synchronized hydraulic-cylinder control. Operated by remote control or control panel.",
+      "Dimensions: 9,000 × 4,388 × 1,570 mm · Tilting load: 30 t · Tilting angle: 80° ±5°."
     ],
     [
-      "Shuttering automation",
-      "shuttering",
-      "Connect mould placement with product drawings.",
-      "Confirm shutter compatibility, model format and fallback."
+      "Pallet Transfer Trolley",
+      "pallet-transfer",
+      "Synchronized lifting by dual drives, servo-controlled travel and separate sensing for deceleration and stopping.",
+      "Dimensions: 3,842 × 1,077 × 330 mm · Maximum load: 25 t · Travel speed: 13 m/min."
     ],
     [
-      "Rebar preparation",
-      "rebar",
-      "Coordinate reinforcement with element production.",
-      "Confirm bar sizes, welding standards and BOM interfaces."
+      "Concrete Transport Bucket",
+      "bucket",
+      "Easy-clean hopper, high travel speed and coordinated control. Precise positioning, remote operation and automatic tracking and stopping.",
+      "Dimensions: 3,760 × 1,900 × 1,490 mm / 3,880 × 2,100 × 1,572 mm · Nominal volume: 1.8 / 2.5 / 3.5 m³ · Travel speed: 0–42 / 0–60 m/min."
+    ],
+    [
+      "Automatic Gang Stressing Machine",
+      "tensioning",
+      "Automatic pin insertion and withdrawal, two stressing modes and one-touch return to the starting position. Sensors monitor reinforcement stressing force and cylinder stroke in real time.",
+      "Maximum stressing force: 160 t."
+    ],
+    [
+      "Reinforcement & Film Laying Machine",
+      "reinforcement-film",
+      "Automatic film laying with quick-release film rollers and fast reinforcement clamping. Anti-disengagement comb design, polyurethane-coated wheels and remote-control operation.",
+      "Travel speed: 0–40 m/min · Power supply: conductor rail."
+    ],
+    [
+      "Surface Roughening & Shutter Handling Machine",
+      "surface-roughening",
+      "Surface roughening and collection of stop-end and side shutters in one operation. Assisted lifting, one-touch raising and lowering of the roughening unit, a dedicated storage platform, and remote or control-panel operation.",
+      "Hoist capacity: 80 kg · Travel: 0–40 m/min · Roughening lift stroke: 0–250 mm · Conductor-rail power."
+    ],
+    [
+      "Pallet Ferry Transfer Car",
+      "pallet-ferry",
+      "Hydraulic position locking and coordinated transfer between production beds. Conductor-rail power supply with remote-control and control-panel operation.",
+      "Rated load: 25 t."
+    ],
+    [
+      "Retractable Curing Cover",
+      "retractable-curing",
+      "Motor-driven, one-touch automatic extension and retraction. Automated operation reduces manual intervention during steam curing.",
+      "Steam curing · Reference dimensions: 10,000 × 3,600 × 1,250 mm."
     ]
   ],
   "process": [

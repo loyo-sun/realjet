@@ -99,3 +99,11 @@ Validate the scroll offer with `node scripts/test-precast-scroll-email.mjs`; tes
 ## Case privacy and side navigation (2026-10-14)
 
 The case section explains that customer and company names are omitted to protect privacy; verified geographic labels remain. Previous/next buttons flank the carousel on desktop and sit at the image edges on mobile; the footer retains the pause/play control, range counter and enquiry CTA. The canonical landing-page URL is now listed in the sitemap.
+
+## Equipment catalogue refresh (2026-10-14)
+
+Replaced the equipment list with all 12 items requested by the user, in screenshot order. Source: PC product manual PDF, file pages 7–10 (printed pages 10–17). Feature copy translates the supplied screenshots; titles use generic industry terminology. Specifications use legible, unambiguous source figures; uncertain dimension strings in the original catalogue are omitted rather than reproduced. All equipment frames remain 1200 × 750, white-backed and contain-fit; the retractable cover retains its source factory photograph. Existing cleaned stacker and concrete-bucket images are reused after visual comparison. The former vibration and tilting image mappings were incorrect and are replaced with the correct screenshot subjects. New images are edited with the built-in image tool to remove brands and preserve geometry.
+
+Removed the digital-factory section, navigation link, digital support claim and software FAQ. Sitemap entry remains present. Common English transfer terminology checked against Elematic's official wall and half-slab brochures; all feature and specification claims come from the supplied manual, not other manufacturers.
+
+Image prompt set: precise-object-edit; erase company names/logos with matching underlying materials; preserve machinery, perspective, colors, equipment numbers and safety markings; centered complete render on white 8:5 canvas, retain the curing-cover photograph. New assets: pallet-transfer, tensioning, reinforcement-film, surface-roughening, pallet-ferry and retractable-curing under public/images/building-precast/.
