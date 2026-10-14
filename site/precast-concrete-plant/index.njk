@@ -101,9 +101,11 @@ pageType: building_precast_plant
   </section>
 
   <section class="pc-section pc-section-soft" id="projects">
-    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">Case studies</div><h2>Precast Plant Projects</h2><p>Selected projects in China, showing production layouts and equipment in place.</p></div>
-      <div class="pc-reference-grid">{% for project in buildingPrecast.cases %}<figure><img src="/images/building-precast/{{ project.image }}.webp" alt="{{ project.alt }}" width="640" height="420" loading="lazy" decoding="async" /><figcaption><h3>{{ project.name }}</h3><span class="pc-case-location">{{ project.location }}</span><p>{{ project.summary }}</p></figcaption></figure>{% endfor %}</div>
-      <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-case="a precast plant similar to the featured projects" data-pc-cta="case_studies_proposal">Discuss a Similar Project <span aria-hidden="true">↗</span></a>
+    <div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">Case studies</div><h2>Precast Plant Projects</h2><p>Explore 20 project sites across China.</p></div>
+      <div class="pc-case-carousel" data-pc-cases role="region" aria-roledescription="carousel" aria-label="Precast plant case studies">
+        <ul class="pc-case-track" id="pc-case-track" data-pc-case-track tabindex="0" aria-label="Project photos — scroll to explore all 20 projects" role="list">{% for project in buildingPrecast.cases %}<li class="pc-case-card"><figure><img src="/images/building-precast/{{ project.image }}.webp" alt="{{ project.alt }}" width="{{ project.width }}" height="{{ project.height }}" loading="lazy" decoding="async" /><figcaption><h3><a href="#plant-proposal" data-pc-case="a precast plant similar to the project in {{ project.name }}" data-pc-cta="case_{{ project.image }}">{{ project.name }} <span aria-hidden="true">↗</span></a></h3><span class="pc-case-location">{{ project.location }}</span></figcaption></figure></li>{% endfor %}</ul>
+        <div class="pc-case-footer"><span class="pc-case-progress" data-pc-case-progress>20 projects</span><div class="pc-case-controls" data-pc-case-controls hidden><button type="button" data-pc-case-prev aria-label="Previous projects" aria-controls="pc-case-track">←</button><button type="button" data-pc-case-pause aria-label="Pause automatic project slideshow">Pause</button><button type="button" data-pc-case-next aria-label="Next projects" aria-controls="pc-case-track">→</button></div><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-case="a precast plant similar to the featured projects" data-pc-cta="case_studies_proposal">Discuss a Similar Project <span aria-hidden="true">↗</span></a></div>
+      </div>
     </div>
   </section>
 
@@ -139,5 +141,5 @@ pageType: building_precast_plant
 </main>
 <footer class="pc-footer"><div class="pc-container"><div class="pc-footer-top"><a class="pc-brand" href="/"><img src="/images/realjet-logo.webp" width="1351" height="184" alt="REALJET home" /></a><p>Precast concrete production.<br> Engineered around your project.</p></div><div class="pc-footer-bottom"><span>© 2026 {{ site.legalName }}</span><div><a href="/marketing/privacy/en/">Privacy Policy</a><button type="button" data-open-analytics>Cookie Preferences</button><a href="mailto:sales@realjetech.com">sales@realjetech.com</a></div></div></div></footer>
 <nav class="pc-mobile-actions" aria-label="Contact REALJET"><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="mobile_proposal">Get Proposal <span aria-hidden="true">↗</span></a><a class="pc-button pc-button-outline" href="https://wa.me/8619310090600?text=Hello%2C%20I%20would%20like%20to%20discuss%20a%20precast%20concrete%20plant%20for%20walls%20and%20floor%20slabs." target="_blank" rel="noopener noreferrer" data-cta-id="plant_mobile_whatsapp">WhatsApp ↗</a></nav>
-<script src="/assets/site/site.js" defer></script><script src="/assets/site/building-precast.js" defer></script>
+<script src="/assets/site/site.js" defer></script><script src="/assets/site/building-precast.js" defer></script><script src="/assets/site/building-precast-cases.js" defer></script>
 </body></html>

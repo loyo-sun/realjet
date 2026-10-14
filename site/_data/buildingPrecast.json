@@ -146,25 +146,164 @@
   ],
   "cases": [
     {
+      "name": "Zhengzhou, Henan",
+      "image": "project-zhengzhou",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Zhengzhou, Henan, China",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "name": "Yantai, Shandong",
+      "image": "project-yantai",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Yantai, Shandong, China",
+      "width": 1200,
+      "height": 805
+    },
+    {
+      "name": "Yinchuan, Ningxia",
+      "image": "project-yinchuan",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Yinchuan, Ningxia, China",
+      "width": 1200,
+      "height": 805
+    },
+    {
+      "name": "Kunming, Yunnan",
+      "image": "project-kunming",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Kunming, Yunnan, China",
+      "width": 1200,
+      "height": 818
+    },
+    {
+      "name": "Zhongxin, Tianjin",
+      "image": "project-tianjin-zhongxin",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Zhongxin, Tianjin, China",
+      "width": 1200,
+      "height": 587
+    },
+    {
+      "name": "Changsha, Hunan",
+      "image": "project-changsha",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Changsha, Hunan, China",
+      "width": 1039,
+      "height": 693
+    },
+    {
+      "name": "Hangzhou, Zhejiang",
+      "image": "project-hangzhou",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Hangzhou, Zhejiang, China",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "name": "Zhoukou, Henan",
+      "image": "project-zhoukou",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Zhoukou, Henan, China",
+      "width": 1200,
+      "height": 675
+    },
+    {
       "name": "Huai’an, Jiangsu",
       "image": "project-huaian",
       "location": "China · Precast concrete plant",
-      "summary": "Pallet circulation routes and coordinated production stations.",
-      "alt": "Pallet circulation and production stations at the Huai’an precast plant in Jiangsu, China"
-    },
-    {
-      "name": "Yuxi, Yunnan",
-      "image": "project-yuxi",
-      "location": "China · Precast concrete plant",
-      "summary": "Pallet transport lanes arranged along the production hall.",
-      "alt": "Pallet transport lanes inside the Yuxi precast plant in Yunnan, China"
+      "alt": "Precast concrete plant project in Huai’an, Jiangsu, China",
+      "width": 825,
+      "height": 553
     },
     {
       "name": "Hefei, Anhui",
       "image": "project-hefei",
       "location": "China · Precast concrete plant",
-      "summary": "Casting workstations alongside pallet handling equipment.",
-      "alt": "Casting workstations and pallet handling equipment at the Hefei precast plant in Anhui, China"
+      "alt": "Precast concrete plant project in Hefei, Anhui, China",
+      "width": 651,
+      "height": 437
+    },
+    {
+      "name": "Foshan, Guangdong",
+      "image": "project-foshan",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Foshan, Guangdong, China",
+      "width": 1200,
+      "height": 805
+    },
+    {
+      "name": "Yuxi, Yunnan",
+      "image": "project-yuxi",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Yuxi, Yunnan, China",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "name": "Hengyang, Hunan",
+      "image": "project-hengyang",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Hengyang, Hunan, China",
+      "width": 651,
+      "height": 437
+    },
+    {
+      "name": "Lin’an, Zhejiang",
+      "image": "project-linan",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Lin’an, Zhejiang, China",
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "name": "Xiangtan, Hunan",
+      "image": "project-xiangtan",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Xiangtan, Hunan, China",
+      "width": 825,
+      "height": 553
+    },
+    {
+      "name": "Jiaozhou, Shandong",
+      "image": "project-jiaozhou",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Jiaozhou, Shandong, China",
+      "width": 675,
+      "height": 900
+    },
+    {
+      "name": "Qijiang, Chongqing",
+      "image": "project-qijiang",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Qijiang, Chongqing, China",
+      "width": 800,
+      "height": 596
+    },
+    {
+      "name": "Jiaozuo, Henan",
+      "image": "project-jiaozuo",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Jiaozuo, Henan, China",
+      "width": 616,
+      "height": 321
+    },
+    {
+      "name": "Luoyang, Henan",
+      "image": "project-luoyang",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Luoyang, Henan, China",
+      "width": 1080,
+      "height": 720
+    },
+    {
+      "name": "Zhumadian, Henan",
+      "image": "project-zhumadian",
+      "location": "China · Precast concrete plant",
+      "alt": "Precast concrete plant project in Zhumadian, Henan, China",
+      "width": 1080,
+      "height": 771
     }
   ]
 }

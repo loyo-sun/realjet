@@ -57,7 +57,7 @@ Eight equipment images use uniform 1200 × 750 WebP canvases and 8:5 display fra
 
 Source: `01_市场调研/1.6.PC 构件厂/01【筑友智能科技】PC工厂整体解决合作方案（2023）.pptx`, slides 46–49, “工厂承建案例”. Read all 50 slides and extracted the case labels and original embedded photographs. The deck identifies 20 locations but does not provide case-specific line types, capacities, delivery dates, contract scopes or measured improvements. Public copy therefore uses verified locations plus short descriptions of visible plant arrangements; it does not invent performance or attribute unsupported delivery claims.
 
-The page displays only three projects from slide 48: Huai’an, Jiangsu; Yuxi, Yunnan; Hefei, Anhui. Each has one photo, one location and a short descriptive sentence. Navigation reads “Case Studies”; the existing `#projects` anchor remains stable. The enquiry CTA pre-fills a request for a similar precast plant, preserving visitor notes. Photos were re-extracted directly from the PPTX to correct earlier asset-name/location mismatches. No supplier identity is shown in the case copy.
+The page displays all 20 projects from slides 46–49, in slide reading order. Each has its matched original photo and verified location. A single horizontal carousel shows four cards on desktop, two on tablet and one main card with a preview of the next on phones. Navigation reads “Case Studies”; the existing `#projects` anchor remains stable. The enquiry CTA pre-fills a request for a similar precast plant, preserving visitor notes. Photos were re-extracted directly from the PPTX to correct earlier asset-name/location mismatches. No supplier identity is shown in the case copy.
 
 | PPT slide | Location | Embedded photo |
 | --- | --- | --- |
@@ -69,9 +69,9 @@ The page displays only three projects from slide 48: Huai’an, Jiangsu; Yuxi, Y
 | 47 | 杭州，浙江 | image85.jpeg |
 | 47 | 长沙，湖南 | image84.jpeg |
 | 47 | 周口，河南 | image86.jpeg |
-| 48 | 淮安，江苏（页面精选） | image87.jpeg |
-| 48 | 玉溪，云南（页面精选） | image91.jpeg |
-| 48 | 合肥，安徽（页面精选） | image88.png |
+| 48 | 淮安，江苏 | image87.jpeg |
+| 48 | 玉溪，云南 | image91.jpeg |
+| 48 | 合肥，安徽 | image88.png |
 | 48 | 佛山，广东 | image90.png |
 | 48 | 衡阳，湖南 | image89.png |
 | 48 | 临安，浙江 | image92.jpeg |
@@ -81,3 +81,9 @@ The page displays only three projects from slide 48: Huai’an, Jiangsu; Yuxi, Y
 | 49 | 綦江，重庆 | image96.jpeg |
 | 49 | 洛阳，河南 | image97.jpeg |
 | 49 | 驻马店，河南 | image95.jpeg |
+
+## Complete case carousel (2026-10-14)
+
+All 20 source locations are included, without selecting a subset. The carousel advances one card every five seconds only while visible; it pauses on hover, keyboard focus, manual arrows, touch interaction, hidden tabs and a user Pause action. A Play button resumes it. Reduced-motion preferences disable autoplay. Native horizontal scrolling, scroll snapping, keyboard arrows and previous/next controls remain available. The end wraps to the beginning without duplicated case cards. A range counter shows the current position. Individual project titles prefill an enquiry for a similar plant in that location. The existing navigation and `#projects` URL anchor are retained.
+
+Nine added photographs (Zhengzhou, Yantai, Yinchuan, Kunming, Zhongxin/Tianjin, Hangzhou, Zhoukou, Foshan and Jiaozhou) use built-in imagegen brand cleanup. Editing brief: remove company logos/names and branded slogans only; retain original plant structures, equipment, people, camera perspective and safety markings; add no replacement text. These are retouched promotional case photographs. Other source case images retain their original content. All final assets live in `public/images/building-precast/project-*.webp`.
