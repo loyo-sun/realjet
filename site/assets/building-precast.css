@@ -55,3 +55,6 @@
 @media(max-width:600px){.pc-email-panel{right:auto;left:50%;width:calc(100% - 28px);padding:24px 20px 20px}.pc-email-panel h2{font-size:24px}.pc-email-panel fieldset{margin-top:16px;gap:10px}.pc-email-open .analytics-consent-panel{bottom:12px}}
 
 @media(max-width:600px){.pc-equipment-grid{grid-template-columns:1fr;gap:28px}.pc-equipment-card h3{min-height:0;font-size:22px}.pc-equipment-image{margin-bottom:18px}}
+
+/* Share image, title, description and specification row heights within each equipment row. */
+@supports(grid-template-rows:subgrid){.pc-equipment-card{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0}.pc-equipment-card>div{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;min-width:0}.pc-equipment-card h3,.pc-equipment-card>div>p{align-self:start}.pc-equipment-specs{align-content:start}}

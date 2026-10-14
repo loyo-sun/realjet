@@ -111,3 +111,7 @@ Image prompt set: precise-object-edit; erase company names/logos with matching u
 ## Equipment specifications layout (2026-10-14)
 
 Desktop equipment layout is four columns by three rows, with two columns on tablet and one on phones. Specifications use a semantic definition list: muted labels above emphasized values in a pale panel with a cyan top border. Long dimensions and storage arrangements span both internal columns. No source values changed during this style revision.
+
+## Equipment row alignment (2026-10-14)
+
+Each desktop or tablet equipment row shares image, title, description and specification row heights through CSS subgrid. Descriptions and specification panels begin at the same vertical position within each row, regardless of copy length; phones remain naturally sized single-column cards.
