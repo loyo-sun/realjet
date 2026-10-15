@@ -58,3 +58,6 @@
 
 /* Share image, title, description and specification row heights within each equipment row. */
 @supports(grid-template-rows:subgrid){.pc-equipment-card{display:grid;grid-row:span 4;grid-template-rows:subgrid;row-gap:0}.pc-equipment-card>div{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;min-width:0}.pc-equipment-card h3,.pc-equipment-card>div>p{align-self:start}.pc-equipment-specs{align-content:start}}
+
+.pc-email-prompt{display:none}
+@media(max-width:600px){.pc-email-prompt{position:fixed;left:14px;right:14px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:75;display:flex;align-items:center;border:1px solid #ffffff26;border-radius:6px;background:var(--pc-deep);box-shadow:0 4px 16px #061b2c26;color:#fff}.pc-email-prompt button{border:0;background:transparent;color:inherit;min-height:44px;cursor:pointer}.pc-email-prompt [data-pc-email-launch]{flex:1;text-align:left;display:flex;justify-content:space-between;gap:12px;padding:10px 14px;font-size:12px;font-weight:600}.pc-email-prompt [data-pc-email-launch]>span{color:var(--pc-cyan)}.pc-email-prompt [data-pc-email-prompt-close]{width:44px;flex-shrink:0;font-size:24px}}

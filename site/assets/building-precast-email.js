@@ -11,6 +11,9 @@
   const error = panel.querySelector('[data-pc-email-error]');
   const success = panel.querySelector('[data-pc-email-success]');
   const announcement = document.querySelector('[data-pc-email-announcement]');
+  const prompt = document.querySelector('[data-pc-email-prompt]');
+  const launch = document.querySelector('[data-pc-email-launch]');
+  const mobile = window.matchMedia?.('(max-width: 600px)');
   const submitLabel = submit.textContent;
   let seenLines = false;
   let sending = false;
@@ -33,11 +36,22 @@
   }
   function hide() {
     panel.hidden = true;
+    if (prompt) prompt.hidden = true;
     document.body.classList.remove('pc-email-open');
     announcement.textContent = '';
-    if (panel.contains(document.activeElement)) priorFocus?.focus?.({ preventScroll: true });
+    if (panel.contains(document.activeElement)) {
+      const target = priorFocus === launch ? document.querySelector('.pc-brand') : priorFocus;
+      target?.focus?.({ preventScroll: true });
+    }
+  }
+  function offer() {
+    if (mobile?.matches && prompt) {
+      prompt.hidden = false;
+      announcement.textContent = 'Get the complete solution using the button near the bottom of the screen.';
+    } else show();
   }
   function show() {
+    if (prompt) prompt.hidden = true;
     if (submitted) {
       submitted = false;
       form.hidden = false;
@@ -61,7 +75,7 @@
     const proposalRect = proposal?.getBoundingClientRect();
     if (proposalRect && proposalRect.top < window.innerHeight && proposalRect.bottom > header) {
       seenLines = false;
-      if (!panel.hidden) hide();
+      if (!panel.hidden || (prompt && !prompt.hidden)) hide();
       return;
     }
     const rect = lines.getBoundingClientRect();
@@ -71,7 +85,7 @@
       // Consume this crossing even when open: dismissal never causes an immediate re-open.
       // Returning to Production Lines arms the next downward crossing again.
       seenLines = false;
-      if (panel.hidden && !sending && !typing) show();
+      if (panel.hidden && !sending && !typing) offer();
     }
   }
   window.addEventListener('scroll', () => {
@@ -83,6 +97,8 @@
   window.visualViewport?.addEventListener('resize', position);
   window.visualViewport?.addEventListener('scroll', position);
   new MutationObserver(position).observe(document.body, { childList: true });
+  launch?.addEventListener('click', () => { show(); email.focus({ preventScroll: true }); });
+  document.querySelector('[data-pc-email-prompt-close]')?.addEventListener('click', hide);
   close.addEventListener('click', () => { if (!sending) hide(); });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && !panel.hidden && !sending) { event.preventDefault(); hide(); }

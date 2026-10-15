@@ -13,8 +13,9 @@ function el() {
     addEventListener(k, f) { this.events[k] = f; }, setAttribute(k, v) { this.attrs[k] = v; },
     removeAttribute(k) { delete this.attrs[k]; }, focus() { this.focused = true; } };
 }
-function setup({ fetcher = async () => ({ ok: true }), stored = false, local = false, consentTop = null, keyboard = false } = {}) {
+function setup({ fetcher = async () => ({ ok: true }), stored = false, local = false, consentTop = null, keyboard = false, mobile = false } = {}) {
   const panel = el(), form = el(), main = el(), fieldset = el(), submit = el(), close = el(), error = el(), success = el(), announcement = el();
+  const prompt = el(), launch = el(), promptClose = el(); prompt.hidden = true;
   panel.hidden = true; success.hidden = true;
   const fields = Object.fromEntries(hidden.map(([, k, value]) => [k, { value }]));
   fields.email = Object.assign(el(), { value: 'visitor@example.com', tagName: 'INPUT' });
@@ -28,13 +29,13 @@ function setup({ fetcher = async () => ({ ok: true }), stored = false, local = f
   panel.contains = x => [fields.email, close, success].includes(x);
   form.querySelector = s => s === 'fieldset' ? fieldset : submit;
   const bodyClasses = new Set();
-  const document = Object.assign(el(), { activeElement: el(), body: { classList: { add: x => bodyClasses.add(x), remove: x => bodyClasses.delete(x) } }, querySelector: s => ({ '[data-pc-email-panel]': panel, '#production-lines': lines, '#plant-proposal': proposal, '[data-pc-email-announcement]': announcement, '[data-pc-form]': main, '.pc-header': header, '.analytics-consent-panel': consentTop === null ? null : { getBoundingClientRect: () => ({ top: consentTop }) } })[s] || null });
-  const window = Object.assign(el(), { scrollY: 0, innerHeight: 900, trackEvent: (...args) => analytics.push(args) });
+  const document = Object.assign(el(), { activeElement: el(), body: { classList: { add: x => bodyClasses.add(x), remove: x => bodyClasses.delete(x) } }, querySelector: s => ({ '[data-pc-email-panel]': panel, '[data-pc-email-prompt]': prompt, '[data-pc-email-launch]': launch, '[data-pc-email-prompt-close]': promptClose, '#production-lines': lines, '#plant-proposal': proposal, '[data-pc-email-announcement]': announcement, '[data-pc-form]': main, '.pc-header': header, '.analytics-consent-panel': consentTop === null ? null : { getBoundingClientRect: () => ({ top: consentTop }) } })[s] || null });
+  const window = Object.assign(el(), { scrollY: 0, innerHeight: 900, matchMedia: () => ({ matches: mobile }), trackEvent: (...args) => analytics.push(args) });
   if (keyboard) window.visualViewport = { height: 500, offsetTop: 0, addEventListener() {} };
   const storage = new Map(stored ? [['realjet_pc_scroll_email_shown_v1', '1']] : []), calls = [], analytics = [];
   let sequence = 0;
   runInNewContext(source, { document, window, sessionStorage: { getItem: k => storage.get(k), setItem: (k, v) => storage.set(k, v) }, localStorage: { getItem: () => 'analytics' }, MutationObserver: class { observe() {} }, requestAnimationFrame: fn => fn(), crypto: { randomUUID: () => `random-test-id-${++sequence}` }, FormData: class extends Map { constructor() { super(Object.entries(fields).map(([k, v]) => [k, v.value])); } }, URLSearchParams, AbortController, setTimeout: () => 1, clearTimeout() {}, location: { hostname: local ? 'localhost' : 'realjetech.com', protocol: 'https:' }, fetch: async (url, options) => { calls.push({ url, payload: new URLSearchParams(options.body) }); return fetcher(); } });
-  return { document, panel, form, main, close, error, success, fields, calls, analytics, storage, bodyClasses, window,
+  return { document, panel, prompt, launch, promptClose, form, main, close, error, success, fields, calls, analytics, storage, bodyClasses, window,
     see() { window.scrollY = 400; rect.top = 600; rect.bottom = 1900; window.events.scroll(); },
     leave() { window.scrollY = 2250; rect.top = -1250; rect.bottom = 50; window.events.scroll(); },
     enterProposal() { window.scrollY = 7500; proposalRect.top = 899; proposalRect.bottom = 1700; window.events.scroll(); },
@@ -66,4 +67,5 @@ let finish; const pending = setup({ fetcher: () => new Promise(resolve => { fini
 const proposalVisit = setup(); proposalVisit.see(); proposalVisit.leave(); proposalVisit.enterProposal(); assert.equal(proposalVisit.panel.hidden, true); assert.equal(proposalVisit.bodyClasses.size, 0); assert.equal(proposalVisit.fields.email.value, 'visitor@example.com');
 proposalVisit.leave(); assert.equal(proposalVisit.panel.hidden, true); proposalVisit.exitProposal(); proposalVisit.see(); proposalVisit.leave(); assert.equal(proposalVisit.panel.hidden, false);
 let finishHidden; const hiddenPending = setup({ fetcher: () => new Promise(resolve => { finishHidden = resolve; }) }); hiddenPending.see(); hiddenPending.leave(); const hiddenRequest = hiddenPending.submit(); hiddenPending.enterProposal(); assert.equal(hiddenPending.panel.hidden, true); finishHidden({ ok: true }); await hiddenRequest; assert.equal(hiddenPending.panel.hidden, true); assert.equal(hiddenPending.success.focused, undefined); assert.equal(hiddenPending.calls.length, 1);
-console.log('PASS: proposal auto-hide, re-arming and hidden in-flight receipt;  scroll trigger, one-field payload, centered placement, repeat crossings, legacy-flag independence and fresh request IDs, validation, receipt/retry/local guard, duplicate prevention and private-data-free analytics/storage.');
+const phone = setup({ mobile: true }); phone.see(); phone.leave(); assert.equal(phone.panel.hidden, true); assert.equal(phone.prompt.hidden, false); assert.equal(phone.fields.email.focused, undefined); assert.equal(phone.bodyClasses.size, 0); phone.launch.events.click(); assert.equal(phone.prompt.hidden, true); assert.equal(phone.panel.hidden, false); assert.equal(phone.fields.email.focused, true); phone.closeOffer(); phone.see(); phone.leave(); assert.equal(phone.prompt.hidden, false); phone.promptClose.events.click(); assert.equal(phone.prompt.hidden, true); phone.see(); phone.leave(); phone.enterProposal(); assert.equal(phone.prompt.hidden, true); assert.equal(phone.panel.hidden, true);
+console.log('PASS: mobile prompt requires explicit click before opening email dialog;  proposal auto-hide, re-arming and hidden in-flight receipt;  scroll trigger, one-field payload, centered placement, repeat crossings, legacy-flag independence and fresh request IDs, validation, receipt/retry/local guard, duplicate prevention and private-data-free analytics/storage.');

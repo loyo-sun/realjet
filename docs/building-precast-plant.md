@@ -115,3 +115,7 @@ Desktop equipment layout is four columns by three rows, with two columns on tabl
 ## Equipment row alignment (2026-10-14)
 
 Each desktop or tablet equipment row shares image, title, description and specification row heights through CSS subgrid. Descriptions and specification panels begin at the same vertical position within each row, regardless of copy length; phones remain naturally sized single-column cards.
+
+## Solutions entry and mobile email prompt (2026-10-15)
+
+Added a crawlable link to the landing page in the shared Solutions menu, labeled “Precast Concrete Plants for Walls & Slabs”. On phones up to 600 px, leaving Production Lines now reveals a compact, dismissible offer above the contact bar. The centered email dialog opens only after the user clicks this offer; automatic scrolling does not focus an input or hide the contact bar. Desktop retains the existing centered offer. Both prompt and dialog hide when Start Your Project enters view; repeated production-line crossings remain supported. Hero imagery is unchanged pending user-supplied replacements.
