@@ -195,7 +195,11 @@ const requiredHomepageContent = [
   'href="/marketing/contract_manufacturing/"',
   'href="/marketing/precast-beam-factory/en/"',
   "Custom Machinery Component Manufacturing",
-  "Production Lines for Precast Concrete Components",
+  "Precast Beam Production Lines",
+  "Precast Spun Pile Production Lines",
+  "Wall &amp; Floor Slab Production Lines",
+  'data-cta-id="home_spun_pile_line"',
+  'data-cta-id="home_wall_slab_line"',
   'href="/products/"',
   '<a href="/">Home</a>',
 ];
