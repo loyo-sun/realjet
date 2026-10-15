@@ -119,3 +119,7 @@ Each desktop or tablet equipment row shares image, title, description and specif
 ## Solutions entry and mobile email prompt (2026-10-15)
 
 Added a crawlable link to the landing page in the shared Solutions menu, labeled “Precast Concrete Plants for Walls & Slabs”. On phones up to 600 px, leaving Production Lines now reveals a compact, dismissible offer above the contact bar. The centered email dialog opens only after the user clicks this offer; automatic scrolling does not focus an input or hide the contact bar. Desktop retains the existing centered offer. Both prompt and dialog hide when Start Your Project enters view; repeated production-line crossings remain supported. Hero imagery is unchanged pending user-supplied replacements.
+
+## Disable mobile email offer (2026-10-15)
+
+Removed the compact email prompt and its launch controls. At widths up to 850 px (the mobile navigation breakpoint), scrolling never opens the email offer; resizing an open desktop offer into this range also closes it and restores the contact bar. Desktop trigger behavior is retained. The regular enquiry form and WhatsApp remain available.
