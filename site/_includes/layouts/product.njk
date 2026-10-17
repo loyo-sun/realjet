@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="product-page{% if productSeries == "spun-pile-equipment" %} product-page-spun-equipment{% endif %}">
+<article class="product-page{% if sheetMetalProduct %} product-page-sheet-metal{% endif %}{% if productSeries == "spun-pile-equipment" %} product-page-spun-equipment{% endif %}">
   <header class="product-page-heading">
     <div class="container">
-      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{% if productSeries == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Precast Concrete Moulds</a>{% else %}<a href="/products/">Products</a>{% endif %}<span aria-hidden="true">/</span><span aria-current="page">{{ title }}</span></nav>
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{% if productSeries == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Precast Concrete Moulds</a>{% else %}<a href="/products/">Products</a>{% endif %}<span aria-hidden="true">/</span>{% if productSeries == "contract-manufacturing" %}<a href="/products/custom-machinery-components/">Custom Machinery Components</a><span aria-hidden="true">/</span>{% endif %}<span aria-current="page">{{ title }}</span></nav>
     </div>
   </header>
   <div class="container product-detail-shell">
@@ -22,7 +22,7 @@ layout: layouts/base.njk
         {% endif %}
       </div>
       <div class="product-overview-copy">
-        <span class="eyebrow">{% if productSeries == "contract-manufacturing" %}Contract Manufacturing{% elseif productSeries == "precast-concrete-moulds" %}Precast Concrete Moulds{% else %}Precast Production Equipment{% endif %}</span>
+        <span class="eyebrow">{% if productSeries == "contract-manufacturing" %}Custom Machinery Components{% elseif productSeries == "precast-concrete-moulds" %}Precast Concrete Moulds{% else %}Precast Production Equipment{% endif %}</span>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
         <div class="product-conversion-actions">

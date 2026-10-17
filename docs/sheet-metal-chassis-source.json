@@ -1,0 +1,32 @@
+{
+  "product": "Custom Laser Cut Metal Frame Chassis",
+  "collectedOn": "2026-10-17",
+  "sourceProduct": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/custom-laser-cut-metal-frame-chassis.html",
+  "sourceCategory": "https://www.starwaymetals.com/sheet-metal-fabrication/",
+  "authorization": "User stated commercial permission to reuse product information and images, without supplier logo or text, in this chat on 2026-10-17.",
+  "image": {
+    "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-chassis26559920743.png",
+    "local": "public/images/products/custom-laser-cut-metal-frame-chassis.webp",
+    "processing": "Format conversion to WebP only; no retouching. Original visually inspected; no supplier logo found. Equipment port labels retained.",
+    "sourceSha256": "1160bda78a99c93f648646d2b76eb8a235942c905610413eaeee4f9715e1f128"
+  },
+  "editorialScope": [
+    "Product-specific original English copy for REALJET machinery OEM customers",
+    "Fabrication definition, advantages and technology integrated into this detail page",
+    "Materials, finishing, inspection, FAQ and quotation requirements",
+    "Existing company About page not changed; requested About content included in product detail"
+  ],
+  "excludedUnverifiedClaims": [
+    "Supplier facility area, staff, revenue and founding year",
+    "Supplier ISO certifications, RoHS/REACH blanket compliance",
+    "Fixed lead times and guaranteed tolerances",
+    "Supplier equipment ownership or factory photographs presented as REALJET premises"
+  ],
+  "seo": [
+    "Self-referencing canonical and unique metadata",
+    "Four-level visible and structured breadcrumbs",
+    "Category and product included in sitemap",
+    "Service structured data; no invented price, rating or reviews"
+  ],
+  "batchStatus": "One sample only. Wait for user acceptance before collecting/publishing other products."
+}

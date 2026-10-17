@@ -1118,3 +1118,28 @@ body.has-enquiry-modal { overflow: hidden; }
 @media (max-width: 720px) {
   .spun-equipment-contact-actions { display: none; }
 }
+
+/* Sheet metal product sample: contained photography and scannable technical sections. */
+.product-page-sheet-metal .product-gallery-stage { aspect-ratio: 1 / 1; background: #fff; border: 1px solid var(--line); }
+.product-page-sheet-metal .product-gallery-stage img { object-fit: contain; }
+.product-page-sheet-metal .product-gallery-note { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.product-category-links { margin-bottom: 26px; }
+.product-category-links a { display: inline-flex; gap: 18px; padding: 12px 18px; border: 1px solid var(--line); border-radius: 6px; color: var(--navy); background: #fff; font-weight: 700; text-decoration: none; }
+.fabrication-jump-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 38px; }
+.fabrication-jump-links a { padding: 7px 12px; border: 1px solid var(--line); border-radius: 4px; font-size: 13px; text-decoration: none; }
+.product-page-sheet-metal [id] { scroll-margin-top: 110px; }
+.fabrication-feature-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; margin: 26px 0; }
+.fabrication-feature-grid-two { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.fabrication-feature-grid > div { padding: 23px; border: 1px solid var(--line); border-top: 3px solid var(--blue); border-radius: 6px; background: var(--soft); }
+.fabrication-feature-grid h3 { margin: 0 0 12px; font-size: 20px; }
+.fabrication-feature-grid p { margin: 0; font-size: 15px; line-height: 1.75; }
+.fabrication-quote-panel { margin-top: 48px; padding: clamp(24px,4vw,42px); border-radius: 8px; background: var(--soft); border: 1px solid var(--line); }
+.fabrication-quote-panel h2 { margin-top: 14px; }
+.article-body .fabrication-quote-panel .button { color: var(--white); }
+@media (max-width: 700px) {
+  .fabrication-feature-grid { grid-template-columns: 1fr; }
+  .product-page-sheet-metal .breadcrumbs { flex-wrap: wrap; }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  body[data-product-slug="custom-laser-cut-metal-frame-chassis"] .site-floating-contact-actions { top: auto; bottom: 18px; display: flex; transform: none; }
+}

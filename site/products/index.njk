@@ -2,23 +2,24 @@
 layout: layouts/base.njk
 permalink: /products/index.html
 pageType: products
-title: Precast Concrete Production Equipment | Realjet
-seoTitle: Precast Concrete Production Equipment | Realjet
-description: Explore Realjet equipment for project-specific precast concrete production lines, from forming and circulation to concrete handling, curing and production control.
+title: Precast Equipment & Custom Machinery Components | Realjet
+seoTitle: Precast Equipment & Custom Machinery Components | Realjet
+description: Explore Realjet precast production equipment and custom machinery components, including sheet metal chassis, welded structures, tanks and fabricated assemblies.
 canonical: https://realjetech.com/products/
 robots: index, follow
 ---
 <header class="listing-hero">
   <div class="container">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Products</span></nav>
-    <span class="eyebrow">Production Equipment</span><h1>Products</h1>
-    <p>Equipment modules engineered around the component, process, output target and site conditions of each precast concrete project.</p>
+    <span class="eyebrow">Equipment &amp; Components</span><h1>Products</h1>
+    <p>Project-specific precast production equipment and drawing-based components for machinery manufacturers and equipment integrators.</p>
   </div>
 </header>
 <section class="product-listing-section">
   {% if collections.publishedProducts.length %}
   <div class="container product-listing-layout">
     <div class="product-listing-main">
+      <nav class="product-category-links" aria-label="Product categories"><a href="/products/custom-machinery-components/">Custom Machinery Components <span aria-hidden="true">→</span></a></nav>
       <div class="product-grid">
         {% for product in collections.publishedProducts %}{% include "components/product-card.njk" %}{% endfor %}
       </div>

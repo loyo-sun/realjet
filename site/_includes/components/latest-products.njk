@@ -11,6 +11,18 @@
     {% endfor %}
   </nav>
 </aside>
+{% elseif productSeries == "contract-manufacturing" %}
+<aside class="product-aside" aria-labelledby="related-components-title">
+  <span class="eyebrow">Custom Machinery Components</span>
+  <h2 id="related-components-title">Related Components</h2>
+  <nav class="latest-product-list" aria-label="Related machinery components">
+    {% for item in collections.publishedProducts %}
+      {% if item.data.productSeries == "contract-manufacturing" and item.data.slug != slug %}
+      <a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="" width="120" height="76" loading="lazy" decoding="async" /><span>{{ item.data.title }}</span></a>
+      {% endif %}
+    {% endfor %}
+  </nav>
+</aside>
 {% else %}
 <aside class="product-aside" aria-labelledby="latest-products-title">
   <span class="eyebrow">Recently Added</span>
