@@ -17,8 +17,13 @@
     <meta name="robots" content="{{ robots or 'index, follow' }}" />
     <meta name="description" content="{{ description or site.defaultDescription }}" />
     <link rel="canonical" href="{{ canonical }}" />
+    {% if catalogue %}
+    {% if catalogue.previousUrl %}<link rel="prev" href="{{ catalogue.previousUrl | absoluteUrl(site.url) }}" />{% endif %}
+    {% if catalogue.nextUrl %}<link rel="next" href="{{ catalogue.nextUrl | absoluteUrl(site.url) }}" />{% endif %}
+    {% else %}
     {% if pagination and pagination.href.previous %}<link rel="prev" href="{{ pagination.href.previous | absoluteUrl(site.url) }}" />{% endif %}
     {% if pagination and pagination.href.next %}<link rel="next" href="{{ pagination.href.next | absoluteUrl(site.url) }}" />{% endif %}
+    {% endif %}
     <meta name="theme-color" content="#08253f" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/icons/realjet-site-icon.svg" />
@@ -90,6 +95,15 @@
           {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Insights","item":"https://realjetech.com/insights/"},{"@type":"ListItem","position":3,"name":{{ title | json | safe }},"item":{{ canonical | json | safe }}}]}
         ]
       }
+    </script>
+    {% endif %}
+    {% if catalogue %}
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[
+        {"@type":"CollectionPage","name":{{ seoTitle | json | safe }},"description":{{ description | json | safe }},"url":{{ canonical | json | safe }},"inLanguage":"en","mainEntity":{"@id":"{{ canonical }}#product-list"}},
+        {"@type":"ItemList","@id":"{{ canonical }}#product-list","numberOfItems":{{ catalogue.products.length }},"itemListElement":[{% for product in catalogue.products %}{"@type":"ListItem","position":{{ catalogue.start + loop.index0 }},"name":{{ product.data.title | json | safe }},"url":{{ product.url | absoluteUrl(site.url) | json | safe }}}{% if not loop.last %},{% endif %}{% endfor %}]}
+        ,{"@type":"BreadcrumbList","itemListElement":{{ catalogue.breadcrumbs | json | safe }}}
+      ]}
     </script>
     {% endif %}
     {% if pageType == "product" %}

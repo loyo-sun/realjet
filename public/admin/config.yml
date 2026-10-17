@@ -52,9 +52,9 @@ collections:
         required: true
         default: precast-production-equipment
         options:
-          - { label: Contract Manufacturing, value: contract-manufacturing }
-          - { label: Precast Production Equipment, value: precast-production-equipment }
-          - { label: Spun Pile Equipment, value: spun-pile-equipment }
+          - { label: Custom Machinery Components, value: contract-manufacturing }
+          - { label: Precast Beam Production Equipment, value: precast-production-equipment }
+          - { label: Spun Pile Production Equipment, value: spun-pile-equipment }
           - { label: Precast Concrete Moulds, value: precast-concrete-moulds }
       - label: Mould Application Category
         name: mouldCategory

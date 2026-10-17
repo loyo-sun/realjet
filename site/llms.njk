@@ -23,6 +23,10 @@ Realjet serves infrastructure contractors, precast producers and machinery manuf
 - [Engineering insights](https://realjetech.com/insights/): Buyer guides, RFQ checklists and technical planning articles.
 - [Contact Realjet](https://realjetech.com/contact/): Project enquiry form and company contact details.
 
+## Product catalogue categories
+
+{% for catalogue in collections.productCataloguePages %}{% if catalogue.number == 1 %}- [{{ catalogue.category.name | safe }}]({{ catalogue.url | absoluteUrl(site.url) }}): {{ catalogue.total }} products; {{ catalogue.totalPages }} page(s).
+{% endif %}{% endfor %}
 ## Precast concrete production equipment
 
 {% for product in collections.publishedProducts %}- [{{ product.data.title | safe }}]({{ product.url | absoluteUrl(site.url) }}): {{ product.data.description | safe }}

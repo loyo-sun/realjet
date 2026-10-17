@@ -335,9 +335,9 @@ if (insightPage.includes("Choose Your Project Path")) {
   throw new Error("Insight sidebar must only contain the latest-news module.");
 }
 const requiredProductsPageContents = [
-  catalogueProductRecommendations.length
-    ? "Latest Products"
-    : "Product catalogue is being updated.",
+  'aria-label="Product categories"',
+  "All Products",
+  "Showing",
   "Contract Manufacturing",
   "Precast Concrete Production Lines",
 ];
@@ -590,5 +590,7 @@ if (!sitemap.includes('<loc>https://realjetech.com/marketing/ppvc-mic-production
 if (sitemap.includes('/ppvc-mic-production-line/thank-you/')) throw new Error("PPVC thank-you must not appear in sitemap.");
 
 await run(process.execPath, ["scripts/validate-site.mjs"]);
+
+await run(process.execPath, ["scripts/validate-product-catalogue.mjs"]);
 
 console.log("Realjet website build merged successfully into dist/.");

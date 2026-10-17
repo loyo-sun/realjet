@@ -1,3 +1,4 @@
+import { buildCataloguePages } from "./scripts/product-catalogue.mjs";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 
 const isProduction = process.env.ELEVENTY_ENV === "production";
@@ -58,6 +59,10 @@ export default function (eleventyConfig) {
           (!item.data.draft || !isProduction) && item.data.featured === true,
       )
       .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
+  );
+
+  eleventyConfig.addCollection("productCataloguePages", (collectionApi) =>
+    buildCataloguePages(collectionApi.getFilteredByGlob("./content/products/*.md")),
   );
 
   eleventyConfig.addCollection("publishedProducts", (collectionApi) =>

@@ -1143,3 +1143,30 @@ body.has-enquiry-modal { overflow: hidden; }
 @media (min-width: 701px) and (max-width: 1100px) {
   body[data-product-slug="custom-laser-cut-metal-frame-chassis"] .site-floating-contact-actions { top: auto; bottom: 18px; display: flex; transform: none; }
 }
+
+/* Full catalogue: shared category counts, server-generated pages and 12 products per page. */
+.catalogue-hero { padding: 38px 0 40px; }
+.catalogue-hero .eyebrow { margin-top: 24px; }
+.catalogue-hero h1 { max-width: 1020px; font-size: clamp(36px,4.5vw,58px); }
+.catalogue-listing { padding-top: 38px; }
+.catalogue-page-number { font-size: .7em; font-weight: 500; }
+.catalogue-categories { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.catalogue-categories a { display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 15px; border: 1px solid var(--line); border-radius: 7px; color: var(--navy); background: #fff; font-size: 14px; font-weight: 700; line-height: 1.4; text-decoration: none; }
+.catalogue-categories a:hover, .catalogue-categories a:focus-visible { border-color: var(--blue); }
+.catalogue-categories a.is-current { color: #fff; border-color: var(--navy); background: var(--navy); }
+.catalogue-category-count { display: inline-flex; align-items: center; justify-content: center; min-width: 27px; padding: 2px 7px; border-radius: 4px; background: rgba(22,120,170,.09); font-size: 12px; }
+.catalogue-categories a.is-current .catalogue-category-count { background: rgba(255,255,255,.16); }
+.catalogue-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 24px; color: var(--muted); font-size: 14px; }
+.catalogue-result-count { margin: 0; }
+.catalogue-toolbar a { color: var(--blue); }
+.catalogue-product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.catalogue-product-grid .product-card { min-width: 0; }
+.catalogue-product-grid .product-image img { object-fit: contain; background: #fff; }
+@media (max-width: 1000px) { .catalogue-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 600px) {
+  .catalogue-product-grid { grid-template-columns: 1fr; }
+  .catalogue-categories { gap: 8px; }
+  .catalogue-categories a { width: 100%; justify-content: space-between; padding: 10px 13px; }
+  .catalogue-pagination ol { flex-wrap: wrap; }
+  .catalogue-listing { padding-block: 32px 48px; }
+}

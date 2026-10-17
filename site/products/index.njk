@@ -1,39 +1,54 @@
 ---
+pagination:
+  data: collections.productCataloguePages
+  size: 1
+  alias: catalogue
 layout: layouts/base.njk
-permalink: /products/index.html
+permalink: "{{ catalogue.url }}index.html"
 pageType: products
-title: Precast Equipment & Custom Machinery Components | Realjet
-seoTitle: Precast Equipment & Custom Machinery Components | Realjet
-description: Explore Realjet precast production equipment and custom machinery components, including sheet metal chassis, welded structures, tanks and fabricated assemblies.
-canonical: https://realjetech.com/products/
 robots: index, follow
+eleventyComputed:
+  title: "{{ catalogue.seoTitle }}"
+  seoTitle: "{{ catalogue.seoTitle }}"
+  description: "{{ catalogue.description }}"
+  canonical: "https://realjetech.com{{ catalogue.url }}"
 ---
-<header class="listing-hero">
+<header class="listing-hero catalogue-hero">
   <div class="container">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Products</span></nav>
-    <span class="eyebrow">Equipment &amp; Components</span><h1>Products</h1>
-    <p>Project-specific precast production equipment and drawing-based components for machinery manufacturers and equipment integrators.</p>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">/</span>
+      {% if catalogue.category.slug != "all" %}<a href="/products/">Products</a><span aria-hidden="true">/</span>{% endif %}
+      {% if catalogue.number > 1 %}<a href="{{ catalogue.category.url }}">{{ catalogue.heading }}</a><span aria-hidden="true">/</span><span aria-current="page">Page {{ catalogue.number }}</span>{% else %}<span aria-current="page">{{ catalogue.heading }}</span>{% endif %}
+    </nav>
+    <span class="eyebrow">Equipment &amp; Components</span>
+    <h1>{{ catalogue.heading }}{% if catalogue.number > 1 %} <span class="catalogue-page-number">— Page {{ catalogue.number }}</span>{% endif %}</h1>
+    <p>{{ catalogue.category.description or "Project-specific precast production equipment, steel moulds and drawing-based components for machinery manufacturers and equipment integrators." }}</p>
   </div>
 </header>
-<section class="product-listing-section">
-  {% if collections.publishedProducts.length %}
-  <div class="container product-listing-layout">
-    <div class="product-listing-main">
-      <nav class="product-category-links" aria-label="Product categories"><a href="/products/custom-machinery-components/">Custom Machinery Components <span aria-hidden="true">→</span></a></nav>
-      <div class="product-grid">
-        {% for product in collections.publishedProducts %}{% include "components/product-card.njk" %}{% endfor %}
-      </div>
-    </div>
-    {% include "components/latest-products.njk" %}
-  </div>
-  {% else %}
+<section class="product-listing-section catalogue-listing" aria-label="Product catalogue">
   <div class="container">
-    <div class="empty-insights">
-      <span>Product Catalogue</span>
-      <h2>Product catalogue is being updated.</h2>
-      <p>Contact Realjet to discuss equipment requirements for your precast concrete production project.</p>
+    <nav class="catalogue-categories" aria-label="Product categories">
+      {% for category in catalogue.navigation %}
+      <a href="{{ category.url }}"{% if category.slug == catalogue.category.slug %} class="is-current" aria-current="{% if catalogue.number == 1 %}page{% else %}true{% endif %}"{% endif %}><span>{{ category.name }}</span><span class="catalogue-category-count" aria-label="{{ category.count }} products">{{ category.count }}</span></a>
+      {% endfor %}
+    </nav>
+    <div class="catalogue-toolbar">
+      <p class="catalogue-result-count">Showing <strong>{{ catalogue.start }}–{{ catalogue.end }}</strong> of <strong>{{ catalogue.total }}</strong> products{% if catalogue.category.slug != "all" %} in {{ catalogue.category.name }}{% endif %}</p>
+      {% if catalogue.category.series == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Explore moulds by application <span aria-hidden="true">→</span></a>{% endif %}
     </div>
+    {% if catalogue.products.length %}
+    <h2 class="sr-only">{{ catalogue.category.name }} catalogue</h2>
+    <div class="product-grid catalogue-product-grid">
+      {% for product in catalogue.products %}{% include "components/product-card.njk" %}{% endfor %}
+    </div>
+    {% else %}<div class="empty-insights"><h2>Products are being prepared.</h2><p>Contact Realjet to discuss your component or equipment requirements.</p></div>{% endif %}
+    {% if catalogue.totalPages > 1 %}
+    <nav class="pagination catalogue-pagination" aria-label="Product catalogue pages">
+      {% if catalogue.previousUrl %}<a class="pagination-direction" href="{{ catalogue.previousUrl }}" rel="prev"><span aria-hidden="true">←</span> Previous</a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true"><span aria-hidden="true">←</span> Previous</span>{% endif %}
+      <ol>{% for link in catalogue.pageLinks %}<li>{% if link.number == catalogue.number %}<span class="pagination-page is-current" aria-current="page"><span class="sr-only">Page </span>{{ link.number }}</span>{% else %}<a class="pagination-page" href="{{ link.url }}" aria-label="Page {{ link.number }}">{{ link.number }}</a>{% endif %}</li>{% endfor %}</ol>
+      {% if catalogue.nextUrl %}<a class="pagination-direction" href="{{ catalogue.nextUrl }}" rel="next">Next <span aria-hidden="true">→</span></a>{% else %}<span class="pagination-direction is-disabled" aria-disabled="true">Next <span aria-hidden="true">→</span></span>{% endif %}
+    </nav>
+    {% endif %}
   </div>
-  {% endif %}
 </section>
 {% include "components/business-promos.njk" %}

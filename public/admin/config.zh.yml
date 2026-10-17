@@ -39,8 +39,9 @@ collections:
         required: true
         default: precast-production-equipment
         options:
-          - { label: 机械代加工, value: contract-manufacturing }
-          - { label: 预制混凝土构件产线设备, value: precast-production-equipment }
+          - { label: 定制机械零部件, value: contract-manufacturing }
+          - { label: 预制梁生产设备, value: precast-production-equipment }
+          - { label: 管桩生产设备, value: spun-pile-equipment }
           - { label: 预制混凝土模板, value: precast-concrete-moulds }
       - label: 模板应用分类
         name: mouldCategory
