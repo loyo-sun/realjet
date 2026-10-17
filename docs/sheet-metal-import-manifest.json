@@ -1,0 +1,3075 @@
+{
+  "collectedOn": "2026-10-17",
+  "sourceCatalogue": "https://www.starwaymetals.com/sheet-metal-fabrication/",
+  "sourcePages": 9,
+  "sourceCountsByPage": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    11
+  ],
+  "sourceUniqueProducts": 107,
+  "newPages": 106,
+  "existingSamplePages": 1,
+  "authorization": "User confirmed commercial reuse of source products and images, without supplier logos or text, and requested all nine pages to be imported and pushed to GitHub.",
+  "editorialPolicy": [
+    "Original REALJET copy authored around each product application, interfaces and acceptance requirements",
+    "Shared explanations differentiated by 21 manufacturing families",
+    "No supplier factory size, staff, experience, certifications or fixed lead-time guarantees assigned to REALJET",
+    "No invented prices, reviews or environmental protection ratings",
+    "Representative images do not define material grade, load capacity or product certification",
+    "Unbranded gallery alternatives selected where available; three images had brand lettering removed using built-in imagegen",
+    "All source entries retained as distinct catalogue pages, including the moulded-component entry with its different process explained"
+  ],
+  "products": [
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-service-1.html",
+      "sourceTitle": "Sheet Metal Service",
+      "cataloguePage": 1,
+      "slug": "custom-sheet-metal-processing-service",
+      "title": "Custom Sheet Metal Processing Service",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-sheet-metal-processing-service.md",
+      "canonical": "https://realjetech.com/products/custom-sheet-metal-processing-service.html",
+      "seoTitle": "Custom Sheet Metal Processing Service | Realjet",
+      "description": "REALJET offers custom sheet metal processing service. Review prototype scope, mating components and drawing revisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "74354a1bd848d773b10461b9911f3cd2c4e2f0864b1e6ca20f29305c0d6b1618",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-service0099c.jpg",
+          "sourceSha256": "ae0045da717f3195629645217f13123f8b0e0ecd13b82308588a1ce648ab646b",
+          "published": "/images/products/sheet-metal/custom-sheet-metal-processing-service.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-servicebabd7.jpg",
+          "sourceSha256": "da16516395c94c2140026d11a671c2b3132ec8564ac92d1242fafc294ded7f27",
+          "published": "/images/products/sheet-metal/custom-sheet-metal-processing-service-detail-1.webp",
+          "width": 600,
+          "height": 600,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-service208af.jpg",
+          "sourceSha256": "c221c742ca296af01914cfa445c88d02b4dce14fdc065334a14bdc3f55422a2d",
+          "published": "/images/products/sheet-metal/custom-sheet-metal-processing-service-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/custom-laser-cut-metal-frame-chassis.html",
+      "sourceTitle": "Custom Laser Cut Metal Frame Chassis",
+      "cataloguePage": 1,
+      "slug": "custom-laser-cut-metal-frame-chassis",
+      "title": "Custom Laser Cut Metal Frame Chassis",
+      "status": "existing approved sample retained",
+      "contentFile": "content/products/custom-laser-cut-metal-frame-chassis.md",
+      "sourceHtmlSha256": "591ab617e45fe0ed103f5fc2e839499319d5e6b7a43c708dbb40ac58fd32c4f4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-chassis26559920743.png",
+          "sourceSha256": "1160bda78a99c93f648646d2b76eb8a235942c905610413eaeee4f9715e1f128",
+          "published": "/images/products/custom-laser-cut-metal-frame-chassis.webp",
+          "review": "previously reviewed approved sample"
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/custom-automotive-metal-mounting-bracket.html",
+      "sourceTitle": "Custom Automotive Metal Mounting Bracket",
+      "cataloguePage": 1,
+      "slug": "custom-automotive-metal-mounting-bracket",
+      "title": "Custom Automotive Metal Mounting Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-automotive-metal-mounting-bracket.md",
+      "canonical": "https://realjetech.com/products/custom-automotive-metal-mounting-bracket.html",
+      "seoTitle": "Custom Automotive Metal Mounting Brackets | Realjet",
+      "description": "REALJET offers custom automotive metal mounting brackets. Review offset bends, slotted fastener holes and reinforcement tabs against your equipment drawings before production.",
+      "sourceHtmlSha256": "5a2cb1ddeb3f438233a9f719f94bd100a1d1fe6ed9deeaa399621ca15cd7082e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-bracket59268689787.jpg",
+          "sourceSha256": "2013bbb46d69e39f7f8b59a03933bd0fae08a2edda3fd0541c990dcb953228be",
+          "published": "/images/products/sheet-metal/custom-automotive-metal-mounting-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/precision-cnc-bending-aluminum-chassis.html",
+      "sourceTitle": "Precision CNC Bending Aluminum Chassis",
+      "cataloguePage": 1,
+      "slug": "precision-cnc-bending-aluminum-chassis",
+      "title": "CNC Bent Aluminum Chassis",
+      "family": "chassis",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/precision-cnc-bending-aluminum-chassis.md",
+      "canonical": "https://realjetech.com/products/precision-cnc-bending-aluminum-chassis.html",
+      "seoTitle": "CNC Bent Aluminum Chassis | Realjet",
+      "description": "REALJET offers CNC bent aluminum chassis. Review alloy and temper, bend radii and board clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "9e709f117dd376656b7c5abf05a70c469b40f0283ec024d66bc31eb5ec0dab20",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/bending-aluminium-sheet38110167819.jpg",
+          "sourceSha256": "141f33c69ce5edefa5705776f435a8db5d8650a8e95db4378a999f6562d313ce",
+          "published": "/images/products/sheet-metal/precision-cnc-bending-aluminum-chassis.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/stainless-steel-angle-support-bracket.html",
+      "sourceTitle": "Stainless Steel Angle Support Bracket",
+      "cataloguePage": 1,
+      "slug": "stainless-steel-angle-support-bracket",
+      "title": "Stainless Steel Angle Support Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/stainless-steel-angle-support-bracket.md",
+      "canonical": "https://realjetech.com/products/stainless-steel-angle-support-bracket.html",
+      "seoTitle": "Stainless Steel Angle Support Brackets | Realjet",
+      "description": "REALJET offers stainless steel angle support brackets. Review leg lengths, angle, hole spacing and edge condition against your equipment drawings before production.",
+      "sourceHtmlSha256": "f5a6876525f1504d3c7ac25de90c3e86aaf3397a1066988741a1d1c9f87762aa",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-mounting-bracket50478993413.jpg",
+          "sourceSha256": "009dfdf7bb6ac8d74b3bb18be1a3bdca7c92b7e1b00dd4782ecd6d2bb436b2ad",
+          "published": "/images/products/sheet-metal/stainless-steel-angle-support-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/precision-19-inch-rackmount-server-chassis.html",
+      "sourceTitle": "Precision 19-Inch Rackmount Server Chassis",
+      "cataloguePage": 1,
+      "slug": "precision-19-inch-rackmount-server-chassis",
+      "title": "Custom 19-Inch Rackmount Server Chassis",
+      "family": "chassis",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/precision-19-inch-rackmount-server-chassis.md",
+      "canonical": "https://realjetech.com/products/precision-19-inch-rackmount-server-chassis.html",
+      "seoTitle": "Custom 19-Inch Rackmount Server Chassis | Realjet",
+      "description": "REALJET offers custom 19-inch rackmount server chassis. Review rack interfaces, equipment depth, airflow openings and slide-rail attachment with our team.",
+      "sourceHtmlSha256": "9b56a8d15a7ae2a34cd3260bac3f3721e0b70f7de376f79b008d3a220aaa061f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-frames48116812975.jpg",
+          "sourceSha256": "310b19df69ef2b5263a434c83bfec749b04c773cb91c6a669f127c3e62a97e97",
+          "published": "/images/products/sheet-metal/precision-19-inch-rackmount-server-chassis.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/precision-sheet-metal-brackets-chassis/custom-heavy-duty-steel-mounting-bracket.html",
+      "sourceTitle": "Custom Heavy Duty Steel Mounting Bracket",
+      "cataloguePage": 1,
+      "slug": "custom-heavy-duty-steel-mounting-bracket",
+      "title": "Heavy Duty Steel Mounting Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-heavy-duty-steel-mounting-bracket.md",
+      "canonical": "https://realjetech.com/products/custom-heavy-duty-steel-mounting-bracket.html",
+      "seoTitle": "Heavy Duty Steel Mounting Brackets | Realjet",
+      "description": "REALJET offers heavy duty steel mounting brackets. Review gussets, cantilever reach, bolt patterns and mounting planes against your equipment drawings before production.",
+      "sourceHtmlSha256": "a35b20b6e477c2b04eb89fe43075633b09a422731b67ee861a5947a7009b6d83",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-bracket13153737837.jpg",
+          "sourceSha256": "1f571c7eee2e6759229ae7524b908ef645661272d58a20441fbe7805bb959c92",
+          "published": "/images/products/sheet-metal/custom-heavy-duty-steel-mounting-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/wall-mount-sheet-metal-cabinet.html",
+      "sourceTitle": "Wall Mount Sheet Metal Cabinet",
+      "cataloguePage": 1,
+      "slug": "wall-mount-sheet-metal-cabinet",
+      "title": "Wall Mount Sheet Metal Cabinets",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/wall-mount-sheet-metal-cabinet.md",
+      "canonical": "https://realjetech.com/products/wall-mount-sheet-metal-cabinet.html",
+      "seoTitle": "Wall Mount Sheet Metal Cabinets | Realjet",
+      "description": "REALJET offers wall mount sheet metal cabinets. Review wall attachments, door swing, removable mounting plates and gland entries against your equipment drawings before production.",
+      "sourceHtmlSha256": "cb3aca45d7d7131ae7f0c6b95df324a5d382486cba4e8b970f658d1147ed1ee5",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-fabrication40311716595.jpg",
+          "sourceSha256": "7ffb5f0f52011dc1010d5b796edd1de3e568b4107f237a5fe995af5d8545d40c",
+          "published": "/images/products/sheet-metal/wall-mount-sheet-metal-cabinet.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/custom-ip65-waterproof-metal-box.html",
+      "sourceTitle": "Custom IP65 Waterproof Metal Box",
+      "cataloguePage": 1,
+      "slug": "custom-ip65-waterproof-metal-box",
+      "title": "Custom Metal Boxes for IP65 Projects",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-ip65-waterproof-metal-box.md",
+      "canonical": "https://realjetech.com/products/custom-ip65-waterproof-metal-box.html",
+      "seoTitle": "Custom Metal Boxes for IP65 Projects | Realjet",
+      "description": "REALJET offers custom metal boxes for IP65 projects. Review gasket continuity, latch compression and cable gland interfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "ac79238f1d0dc9ac4b2c31161130001bb7af2d084b18c5e765bdcea9b526775a",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-cabinets54197722057.png",
+          "sourceSha256": "68e877dbc3958183e897d50b4657c7ae965d81506c3265327dd775f627875ac9",
+          "published": "/images/products/sheet-metal/custom-ip65-waterproof-metal-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/stainless-steel-electronics-junction-box.html",
+      "sourceTitle": "Stainless Steel Electronics Junction Box",
+      "cataloguePage": 1,
+      "slug": "stainless-steel-electronics-junction-box",
+      "title": "Stainless Steel Electronics Junction Boxes",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/stainless-steel-electronics-junction-box.md",
+      "canonical": "https://realjetech.com/products/stainless-steel-electronics-junction-box.html",
+      "seoTitle": "Stainless Steel Electronics Junction Boxes | Realjet",
+      "description": "REALJET offers stainless steel electronics junction boxes. Review cable entry layout, earth studs and accessible terminal mounting against your equipment drawings before production.",
+      "sourceHtmlSha256": "720c661fcd090f03de50611af6da42869a0236214e0d795496b22b6763ddc571",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-sheet-metal-electronic-enclosure14122427628.jpg",
+          "sourceSha256": "5cc3859e977ca1739c7ff84c4c4af3918df0d7770a11fe655744f8af10acf766",
+          "published": "/images/products/sheet-metal/stainless-steel-electronics-junction-box.webp",
+          "width": 750,
+          "height": 750,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/powder-coated-aluminum-equipment-enclosure.html",
+      "sourceTitle": "Powder Coated Aluminum Equipment Enclosure",
+      "cataloguePage": 1,
+      "slug": "powder-coated-aluminum-equipment-enclosure",
+      "title": "Powder Coated Aluminum Equipment Enclosures",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/powder-coated-aluminum-equipment-enclosure.md",
+      "canonical": "https://realjetech.com/products/powder-coated-aluminum-equipment-enclosure.html",
+      "seoTitle": "Powder Coated Aluminum Equipment Enclosures | Realjet",
+      "description": "REALJET offers powder coated aluminum equipment enclosures. Review panel fit, coating colour, masking and grounding contact areas against your equipment drawings before production.",
+      "sourceHtmlSha256": "c552c3d9e715adbaf333737ae8406b75bcc6182ce7e5ce4e8f12dd01a8576a0e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/metal-enclosure-fabricationbaa46.jpg",
+          "sourceSha256": "6ab708600c4d1cb0040b6c17c3279703122b79ee978fc6f4a77cf6b33f123f61",
+          "published": "/images/products/sheet-metal/powder-coated-aluminum-equipment-enclosure.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/heavy-duty-sheet-metal-control-box.html",
+      "sourceTitle": "Heavy Duty Sheet Metal Control Box",
+      "cataloguePage": 1,
+      "slug": "heavy-duty-sheet-metal-control-box",
+      "title": "Heavy Duty Sheet Metal Control Boxes",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/heavy-duty-sheet-metal-control-box.md",
+      "canonical": "https://realjetech.com/products/heavy-duty-sheet-metal-control-box.html",
+      "seoTitle": "Heavy Duty Sheet Metal Control Boxes | Realjet",
+      "description": "REALJET offers heavy duty sheet metal control boxes. Review reinforced mounting surfaces, removable panels and cable management against your equipment drawings before production.",
+      "sourceHtmlSha256": "4ff2bd16f50f455bc6b0fd36259bcf3be5af94b026eccdb3755d3968979d4569",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-aluminum-storage-box52236980612.jpg",
+          "sourceSha256": "3f3723c297973ab5472efea20a42dcbc15d1660bdf8707387b519dac8c408b6e",
+          "published": "/images/products/sheet-metal/heavy-duty-sheet-metal-control-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-sheet-metal-enclosures/custom-outdoor-electrical-enclosure.html",
+      "sourceTitle": "Custom Outdoor Electrical Enclosure",
+      "cataloguePage": 2,
+      "slug": "custom-outdoor-electrical-enclosure",
+      "title": "Custom Outdoor Electrical Enclosures",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-outdoor-electrical-enclosure.md",
+      "canonical": "https://realjetech.com/products/custom-outdoor-electrical-enclosure.html",
+      "seoTitle": "Custom Outdoor Electrical Enclosures | Realjet",
+      "description": "REALJET offers custom outdoor electrical enclosures. Review door sealing, rain exposure, cable entries and mounting brackets against your equipment drawings before production.",
+      "sourceHtmlSha256": "6ae7ee508c2c2e9950c46828eae6364fca9d244984be75ffbbbf2c9cfa023638",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-aluminum-case23048125252.jpg",
+          "sourceSha256": "33032c5b7a4bfc4f5ce17237c1eb285f67afc20e1bf2e0122d65e5aeed546ccd",
+          "published": "/images/products/sheet-metal/custom-outdoor-electrical-enclosure.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-injection-mold.html",
+      "sourceTitle": "Custom Injection Mold",
+      "cataloguePage": 2,
+      "slug": "custom-injection-mold",
+      "title": "Custom Injection Moulded Components",
+      "family": "tooling",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-injection-mold.md",
+      "canonical": "https://realjetech.com/products/custom-injection-mold.html",
+      "seoTitle": "Custom Injection Moulded Components | Realjet",
+      "description": "REALJET offers custom injection moulded components. Review resin selection, parting lines, draft, shrinkage and tooling ownership against your equipment drawings before production.",
+      "sourceHtmlSha256": "03e123f90672d70a367f50cf2780cea9880845a6c5873eb696bb5131da27bdef",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-injection-mold04d91.png",
+          "sourceSha256": "c5337211d2066c39dd925916420a5ae8de92adffc79ac8a4e0f889b2d77bd476",
+          "published": "/images/products/sheet-metal/custom-injection-mold.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/sheet-metal-for-stamping.html",
+      "sourceTitle": "Sheet Metal For Stamping",
+      "cataloguePage": 2,
+      "slug": "sheet-metal-for-stamping",
+      "title": "Sheet Metal Stamping Components",
+      "family": "stamping",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-for-stamping.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-for-stamping.html",
+      "seoTitle": "Sheet Metal Stamping Components | Realjet",
+      "description": "REALJET offers sheet metal stamping components. Review die features, hole patterns, material feed and edge requirements against your equipment drawings before production.",
+      "sourceHtmlSha256": "12aadd9883fd7166032ad56970f11641fa347ea334bc85f662e2da0bf5e58cda",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-for-stamping8f9b8.jpg",
+          "sourceSha256": "e6ef52086020be4f0884014003f47bbf57cd7d9cb61b1db56364eb04040acf9f",
+          "published": "/images/products/sheet-metal/sheet-metal-for-stamping.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-for-stamping5e91b.jpg",
+          "sourceSha256": "e0a84256532248c659f1fe2ae8fdb87e72a346dae2b8059a94818eaa2f4e0cdf",
+          "published": "/images/products/sheet-metal/sheet-metal-for-stamping-detail-1.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-for-stampingb13cf.jpg",
+          "sourceSha256": "56aee77f0e9e99a225a6fa82a5f64030a128681a02e754a9aab718a94e9680d4",
+          "published": "/images/products/sheet-metal/sheet-metal-for-stamping-detail-2.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-metal-stampings.html",
+      "sourceTitle": "Custom Metal Stampings",
+      "cataloguePage": 2,
+      "slug": "custom-metal-stampings",
+      "title": "Custom Metal Stampings",
+      "family": "stamping",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-stampings.md",
+      "canonical": "https://realjetech.com/products/custom-metal-stampings.html",
+      "seoTitle": "Custom Metal Stampings | Realjet",
+      "description": "REALJET offers custom metal stampings. Review forming sequence, burr direction and assembled fit against your equipment drawings before production.",
+      "sourceHtmlSha256": "22e45b8cb66eafa3e2bf10aa64776410206d600f99da2ab2454f558bc7f07b59",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-metal-stampingsd3da8.jpg",
+          "sourceSha256": "ea3eb582d1864d7d192bd3a1e3c98f02a1ae3730938270ccab289f39c6aa8ed4",
+          "published": "/images/products/sheet-metal/custom-metal-stampings.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-metal-stampingsfafa2.png",
+          "sourceSha256": "3e500dfa677b57085390de93592e008f18a244c9db2cbecf88458cde535e9b16",
+          "published": "/images/products/sheet-metal/custom-metal-stampings-detail-1.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-metal-stampings74a11.jpg",
+          "sourceSha256": "56aee77f0e9e99a225a6fa82a5f64030a128681a02e754a9aab718a94e9680d4",
+          "published": "/images/products/sheet-metal/custom-metal-stampings-detail-2.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/aluminum-sheet-fabrication.html",
+      "sourceTitle": "Aluminum Sheet Fabrication",
+      "cataloguePage": 2,
+      "slug": "aluminum-sheet-fabrication",
+      "title": "Aluminum Sheet Fabrication for OEM Parts",
+      "family": "aluminum",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/aluminum-sheet-fabrication.md",
+      "canonical": "https://realjetech.com/products/aluminum-sheet-fabrication.html",
+      "seoTitle": "Aluminum Sheet Fabrication for OEM Parts | Realjet",
+      "description": "REALJET offers aluminum sheet fabrication for OEM parts. Review alloy, temper, stiffness and fastening interfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "a760f1077375fbcb40c39a06210ba191ed42baf312a4d5548f45894a227abc87",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/aluminum-sheet-fabricationde70b.jpg",
+          "sourceSha256": "5c662f34ccec9abfeb93aeef67e42abd78a6c597ae4be9383f3fc0bde3c0ae21",
+          "published": "/images/products/sheet-metal/aluminum-sheet-fabrication.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/aluminum-sheet-fabrication11552.jpg",
+          "sourceSha256": "bcb1ed90acba40a26034d0f398bbed333d31b134fff1ff2713af16bc93520900",
+          "published": "/images/products/sheet-metal/aluminum-sheet-fabrication-detail-1.webp",
+          "width": 750,
+          "height": 750,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/aluminum-sheet-fabrication18131.jpg",
+          "sourceSha256": "d58e5e9fca09ec943ccf8a793027e75b91a9baddd27048af3c280060e6a6306d",
+          "published": "/images/products/sheet-metal/aluminum-sheet-fabrication-detail-2.webp",
+          "width": 960,
+          "height": 960,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/aluminum-sheet-fabricationf6f24.jpg",
+          "sourceSha256": "0f9554475f7baaa15f7e59f429495dd3736c472030f59c24085efc09ba8cae80",
+          "published": "/images/products/sheet-metal/aluminum-sheet-fabrication-detail-3.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service-parts.html",
+      "sourceTitle": "Laser Cutting Service",
+      "cataloguePage": 2,
+      "slug": "laser-cutting-service-parts",
+      "title": "Laser Cut and Formed Equipment Parts",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/laser-cutting-service-parts.md",
+      "canonical": "https://realjetech.com/products/laser-cutting-service-parts.html",
+      "seoTitle": "Laser Cut and Formed Equipment Parts | Realjet",
+      "description": "REALJET offers laser cut and formed equipment parts. Review cut edges, internal openings and downstream forming allowances against your equipment drawings before production.",
+      "sourceHtmlSha256": "779c2a0ae7ed1ea50fe7aeb5e967e728d85827103b8ee29a45275c69cd5f6e4a",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/page/laser-cutting-service-parts8fe0c.jpg",
+          "sourceSha256": "b66a916a58eaf375c91ebc380b4db458b18e0afba31ed73c3b835b8318e0d98a",
+          "published": "/images/products/sheet-metal/laser-cutting-service-parts.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/page/laser-cutting-service-partsa1956.jpg",
+          "sourceSha256": "9cbbe5ff581dcc036b8db935ddac3a4c7986a233283e7c2542c71875f3d9803d",
+          "published": "/images/products/sheet-metal/laser-cutting-service-parts-detail-1.webp",
+          "width": 493,
+          "height": 507,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/page/laser-cutting-service-parts7c55c.jpg",
+          "sourceSha256": "9fbe4a88c82ecec8dda368ad44cfcd493caa9605bb9df9c213fe1a2045e77dbd",
+          "published": "/images/products/sheet-metal/laser-cutting-service-parts-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-precision-stainless-steel-fabrication.html",
+      "sourceTitle": "Custom Precision Stainless Steel Fabrication",
+      "cataloguePage": 2,
+      "slug": "custom-precision-stainless-steel-fabrication",
+      "title": "Precision Stainless Steel Fabricated Parts",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-precision-stainless-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-precision-stainless-steel-fabrication.html",
+      "seoTitle": "Precision Stainless Steel Fabricated Parts | Realjet",
+      "description": "REALJET offers precision stainless steel fabricated parts. Review reference datums, weld access and finish continuity against your equipment drawings before production.",
+      "sourceHtmlSha256": "02b40a17998bbe56a7809fe9bba9bd3454df3b49933023986cc0647e3dea7db4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-precision-stainless-steel-fabricationd41a8.jpg",
+          "sourceSha256": "15dc7fc407253f07aab4248896e4a6903430a5b63cb0804abd4a3d30bdf8c93e",
+          "published": "/images/products/sheet-metal/custom-precision-stainless-steel-fabrication.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-precision-stainless-steel-fabricationc8760.jpg",
+          "sourceSha256": "2213866edd44c9ed53ce983f6c8eb5a10e409711d6c124fadef1b60cb109fb3a",
+          "published": "/images/products/sheet-metal/custom-precision-stainless-steel-fabrication-detail-1.webp",
+          "width": 800,
+          "height": 800,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/custom-precision-stainless-steel-fabrication452c8.jpg",
+          "sourceSha256": "92bd97266ca7d292fe9b230c4a84d1eaba5c2e3b77ca980d40fdec4871a41eff",
+          "published": "/images/products/sheet-metal/custom-precision-stainless-steel-fabrication-detail-2.webp",
+          "width": 960,
+          "height": 960,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/cnc-cutting-sheet-metal.html",
+      "sourceTitle": "CNC Cutting Sheet Metal",
+      "cataloguePage": 2,
+      "slug": "cnc-cutting-sheet-metal",
+      "title": "CNC Cut Sheet Metal Profiles",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/cnc-cutting-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/cnc-cutting-sheet-metal.html",
+      "seoTitle": "CNC Cut Sheet Metal Profiles | Realjet",
+      "description": "REALJET offers CNC cut sheet metal profiles. Review small cutouts, hole spacing, narrow webs and deburring against your equipment drawings before production.",
+      "sourceHtmlSha256": "34b4e91aec4f8b55f4191d975a3024e85f6b70bef4d79bd7d92321c69c96414d",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/cnc-cutting-sheet-metal2e8b0.png",
+          "sourceSha256": "65d708f0f9ad4a1eea17cfd515a95deb2930c13c92faf16e9ea6edb05c20cb2d",
+          "published": "/images/products/sheet-metal/cnc-cutting-sheet-metal.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/cnc-cutting-sheet-metalbb6fe.png",
+          "sourceSha256": "567673103fb19cf80c02e7d24b260485db713c3373027221d59dd6f1d1f8ce93",
+          "published": "/images/products/sheet-metal/cnc-cutting-sheet-metal-detail-1.webp",
+          "width": 500,
+          "height": 500,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/cnc-cutting-sheet-metal47ad4.jpg",
+          "sourceSha256": "957ecd2f4b11c79aa3d82024b2f77652217b32e50e462c2ffd418f212b3c11fd",
+          "published": "/images/products/sheet-metal/cnc-cutting-sheet-metal-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-bending-service.html",
+      "sourceTitle": "Sheet Metal Bending Service",
+      "cataloguePage": 2,
+      "slug": "sheet-metal-bending-service",
+      "title": "Sheet Metal Bending Service",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-bending-service.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-bending-service.html",
+      "seoTitle": "Sheet Metal Bending Service | Realjet",
+      "description": "REALJET offers sheet metal bending service. Review bend sequence, minimum flange access and springback against your equipment drawings before production.",
+      "sourceHtmlSha256": "78669ffbe24f409784218f1bc7a96b9fa23bafe3df27939af3761c7c8d8c29f3",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-bending-service6cf5f.png",
+          "sourceSha256": "3dae61eda164dafc62ffc6b0de6de5e0d3a030463d616b7a180d78cca94bc5c6",
+          "published": "/images/products/sheet-metal/sheet-metal-bending-service.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-bending-service4039e.jpg",
+          "sourceSha256": "22963faa8ef245093118b289ab5b450576928f370aef157b568594efac3067d2",
+          "published": "/images/products/sheet-metal/sheet-metal-bending-service-detail-1.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-bending-servicec9c27.jpg",
+          "sourceSha256": "26d70c814da1a622771a83bf46ee88706f8a6b89bb0708c876831b6483097ecd",
+          "published": "/images/products/sheet-metal/sheet-metal-bending-service-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/sheet-metal-bending-service011e9.jpg",
+          "sourceSha256": "a27095632733cd82a228b6be0d86b45abc776a8815ebda59e4791f90d592760a",
+          "published": "/images/products/sheet-metal/sheet-metal-bending-service-detail-3.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/welding-machining.html",
+      "sourceTitle": "Welding Machining",
+      "cataloguePage": 2,
+      "slug": "welding-machining",
+      "title": "Welded Components with Machined Interfaces",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/welding-machining.md",
+      "canonical": "https://realjetech.com/products/welding-machining.html",
+      "seoTitle": "Welded Components with Machined Interfaces | Realjet",
+      "description": "REALJET offers welded components with machined interfaces. Review welding sequence, machining datums and allowance after welding against your equipment drawings before production.",
+      "sourceHtmlSha256": "e33bb644109d30228b43dc235e65baf3c4a4bed1cfa87c39e3a4c21b604c6886",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/welding-machiningf3b11ece-5f5d-4742-bf06-7e6153c49738.png",
+          "sourceSha256": "f0e7ce721c896773bf4dec8e840021ed96cc4b1ec0fc59b5bfdc52c6cb498733",
+          "published": "/images/products/sheet-metal/welding-machining.webp",
+          "width": 553,
+          "height": 490,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/welding-sheet-metal.html",
+      "sourceTitle": "Welding Sheet Metal",
+      "cataloguePage": 2,
+      "slug": "welding-sheet-metal",
+      "title": "Welded Sheet Metal Housings and Covers",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/welding-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/welding-sheet-metal.html",
+      "seoTitle": "Welded Sheet Metal Housings and Covers | Realjet",
+      "description": "REALJET offers welded sheet metal housings and covers. Review seam position, joint access and appearance requirements against your equipment drawings before production.",
+      "sourceHtmlSha256": "b8bb87719c14443fe1e46c2847d94dbf41617a320cb43b6910efca09af21b31e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/welding-sheet-metal62006c89-c8b4-434f-92b8-2b44b90ac51b.jpg",
+          "sourceSha256": "a28d5fc5a82885aaac869586ccd3a1a002a8818eaa26f8edaa806c7f0c2709d3",
+          "published": "/images/products/sheet-metal/welding-sheet-metal.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-forming.html",
+      "sourceTitle": "Sheet Metal Forming",
+      "cataloguePage": 2,
+      "slug": "sheet-metal-forming",
+      "title": "Formed Sheet Metal Mounting Parts",
+      "family": "forming",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-forming.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-forming.html",
+      "seoTitle": "Formed Sheet Metal Mounting Parts | Realjet",
+      "description": "REALJET offers formed sheet metal mounting parts. Review feature height, material flow and flatness of attachment surfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "9ef6ff396b2fbc502a02bbb7b0228d7f09f4c9b9fac40818dd4dfdc6c9c24118",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-forming7760bbda-2e8c-4806-afb5-1f47b60bcd5e.jpg",
+          "sourceSha256": "4e3ce6f833fefbdf21ce1f682269d3a0e3d5ccb9bd2bd5c0140920197c90262e",
+          "published": "/images/products/sheet-metal/sheet-metal-forming.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-laser-cutting.html",
+      "sourceTitle": "Sheet Metal Laser Cutting",
+      "cataloguePage": 3,
+      "slug": "sheet-metal-laser-cutting",
+      "title": "Sheet Metal Laser Cutting Service",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-laser-cutting.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-laser-cutting.html",
+      "seoTitle": "Sheet Metal Laser Cutting Service | Realjet",
+      "description": "REALJET offers sheet metal laser cutting service. Review nesting, kerf allowances and cut-edge quality against your equipment drawings before production.",
+      "sourceHtmlSha256": "120ebf3089573c3ef70e3b67f63e263ab21e946f6c6dfca870ceb0d46484a279",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-laser-cutting4dc6197e-0a1b-4c73-88c7-3cbd936c7014.png",
+          "sourceSha256": "c1d5efa7c64f23f938473b785e9248ba9248164c9eba5d7d64fab961bd5df27b",
+          "published": "/images/products/sheet-metal/sheet-metal-laser-cutting.webp",
+          "width": 523,
+          "height": 303,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/metal-manufacturing.html",
+      "sourceTitle": "Metal Manufacturing",
+      "cataloguePage": 3,
+      "slug": "metal-manufacturing",
+      "title": "Metal Panel and Tray Manufacturing",
+      "family": "panels",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-manufacturing.md",
+      "canonical": "https://realjetech.com/products/metal-manufacturing.html",
+      "seoTitle": "Metal Panel and Tray Manufacturing | Realjet",
+      "description": "REALJET offers metal panel and tray manufacturing. Review perimeter flanges, openings and installation datum edges against your equipment drawings before production.",
+      "sourceHtmlSha256": "762399f413a07dfdc1a795cb34356339c52396404ac88c519fc561b91d765655",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/metal-manufacturing3d848fdd-6ac4-417e-9abd-af5ff492f00b.jpg",
+          "sourceSha256": "0e9bfef4246e98d098938683e82aee79e8a17976033877861709d7707ad49a93",
+          "published": "/images/products/sheet-metal/metal-manufacturing.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metalworks.html",
+      "sourceTitle": "Custom Metalworks",
+      "cataloguePage": 3,
+      "slug": "custom-metalworks",
+      "title": "Custom Fabricated Metal Equipment Cases",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metalworks.md",
+      "canonical": "https://realjetech.com/products/custom-metalworks.html",
+      "seoTitle": "Custom Fabricated Metal Equipment Cases | Realjet",
+      "description": "REALJET offers custom fabricated metal equipment cases. Review cover seams, internal envelope and surface appearance against your equipment drawings before production.",
+      "sourceHtmlSha256": "59512007d835bbfeb026e5a245f724beff236d2c2793488d1100990b2451141f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/custom-metalworkscb599c63-d445-4081-8311-f91e310e7f83.png",
+          "sourceSha256": "7a96c15fb90db809f96dbfb3baf55ec14e4507f9934e4f1ee01be79e9fec83db",
+          "published": "/images/products/sheet-metal/custom-metalworks.webp",
+          "width": 1400,
+          "height": 876,
+          "review": "brand lettering removed with built-in imagegen and output visually reviewed",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null,
+          "editTool": "built-in image_gen",
+          "editPrompt": "Remove both brand and warning labels; retain black case geometry, cover seams, camera angle, red background and white tabletop.",
+          "editedAsset": "public/images/products/sheet-metal/custom-metalworks.webp"
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/metal-fabs.html",
+      "sourceTitle": "Metal Fabs",
+      "cataloguePage": 3,
+      "slug": "metal-fabs",
+      "title": "Custom Formed Metal Angle Parts",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-fabs.md",
+      "canonical": "https://realjetech.com/products/metal-fabs.html",
+      "seoTitle": "Custom Formed Metal Angle Parts | Realjet",
+      "description": "REALJET offers custom formed metal angle parts. Review hole centres, bend line and included angle against your equipment drawings before production.",
+      "sourceHtmlSha256": "e989783391cdea7badd208b316353c586d33d0a4fc25c077eb40435c938d79c3",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/metal-fabs6bf4e955-f040-42a3-9394-f8a9e4a4b529.png",
+          "sourceSha256": "75ceea2e625899c20d3ce8f92829d6007fecbfac659455be31feac7acae690da",
+          "published": "/images/products/sheet-metal/metal-fabs.webp",
+          "width": 256,
+          "height": 256,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/steel-sheet-metal.html",
+      "sourceTitle": "Steel Sheet Metal",
+      "cataloguePage": 3,
+      "slug": "steel-sheet-metal",
+      "title": "Fabricated Steel Sheet Covers",
+      "family": "carbon",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/steel-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/steel-sheet-metal.html",
+      "seoTitle": "Fabricated Steel Sheet Covers | Realjet",
+      "description": "REALJET offers fabricated steel sheet covers. Review flange depth, corner relief and attachment tabs against your equipment drawings before production.",
+      "sourceHtmlSha256": "9e1ac93e9170207d6220433e111ce2cb407762de487bbdea344f9c386751ebe7",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/steel-sheet-metal49d31cf4-d1aa-4369-9445-f20993d60f89.png",
+          "sourceSha256": "ff91b65572741bd5a663b48c825c92d5232fd1d3b7db16a7a54e637ec3bb4127",
+          "published": "/images/products/sheet-metal/steel-sheet-metal.webp",
+          "width": 553,
+          "height": 415,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/bend-plate.html",
+      "sourceTitle": "Bend Plate",
+      "cataloguePage": 3,
+      "slug": "bend-plate",
+      "title": "Custom Bent Plate Assemblies",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/bend-plate.md",
+      "canonical": "https://realjetech.com/products/bend-plate.html",
+      "seoTitle": "Custom Bent Plate Assemblies | Realjet",
+      "description": "REALJET offers custom bent plate assemblies. Review bend radius, section stiffness and joining access against your equipment drawings before production.",
+      "sourceHtmlSha256": "076b1df78f2798e299fcf8dc0c1ee09ddac42073c546362deba28a10890bda19",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/bend-plate2077d21b-292c-43d8-8f1b-5407d9359ebf.png",
+          "sourceSha256": "03e9afb74f02dcd8ce7faf09262e148029a28dd15acaa31a2ae251f65724a104",
+          "published": "/images/products/sheet-metal/bend-plate.webp",
+          "width": 254,
+          "height": 185,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/zinc-sheet-metal.html",
+      "sourceTitle": "Zinc Sheet Metal",
+      "cataloguePage": 3,
+      "slug": "zinc-sheet-metal",
+      "title": "Galvanized Sheet Metal Fabrication",
+      "family": "carbon",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/zinc-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/zinc-sheet-metal.html",
+      "seoTitle": "Galvanized Sheet Metal Fabrication | Realjet",
+      "description": "REALJET offers galvanized sheet metal fabrication. Review cut-edge condition, formed corners and joining method against your equipment drawings before production.",
+      "sourceHtmlSha256": "d9438f72b85d5de8909f95d67f6cb3a37d431643eef1cf25ca0f3367365128ff",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/zinc-sheet-metal0139593e-cdd5-4f3d-9677-d0efba83c9ca.png",
+          "sourceSha256": "f00627b206095512955bfa2fbf24ab5de1447b404c7a757b9a272a3ff37d9c1d",
+          "published": "/images/products/sheet-metal/zinc-sheet-metal.webp",
+          "width": 730,
+          "height": 510,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-folding.html",
+      "sourceTitle": "Sheet Metal Folding",
+      "cataloguePage": 3,
+      "slug": "sheet-metal-folding",
+      "title": "Sheet Metal Folding Service",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-folding.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-folding.html",
+      "seoTitle": "Sheet Metal Folding Service | Realjet",
+      "description": "REALJET offers sheet metal folding service. Review flange straightness, bend sequence and mating-edge position against your equipment drawings before production.",
+      "sourceHtmlSha256": "bfe8a282d28b8f2239f7e1c9a1719eb6c5f59fe200ed8b7f9ef9952472deec64",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-foldingebd30f92-f290-4ad6-a134-b19961050a79.png",
+          "sourceSha256": "22712861c391e8c0a8ebafe723a3bb1a2dd84c0b61793200fe3199d4779f6fca",
+          "published": "/images/products/sheet-metal/sheet-metal-folding.webp",
+          "width": 730,
+          "height": 448,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/thin-sheet-metal.html",
+      "sourceTitle": "Thin Sheet Metal",
+      "cataloguePage": 3,
+      "slug": "thin-sheet-metal",
+      "title": "Thin Sheet Metal Component Fabrication",
+      "family": "forming",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/thin-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/thin-sheet-metal.html",
+      "seoTitle": "Thin Sheet Metal Component Fabrication | Realjet",
+      "description": "REALJET offers thin sheet metal component fabrication. Review small tabs, edge condition and handling distortion against your equipment drawings before production.",
+      "sourceHtmlSha256": "2989976588a48e07128dab428714d3010204eda947c9177875a49414841e7aa9",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/thin-sheet-metal8f660a21-c902-4b82-bcab-5ca410619ab6.png",
+          "sourceSha256": "0ad88ec16ff97df418a5b6a2713b168c37566ed5320247bac4c383167712336b",
+          "published": "/images/products/sheet-metal/thin-sheet-metal.webp",
+          "width": 505,
+          "height": 442,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/thick-sheet-metal.html",
+      "sourceTitle": "Thick Sheet Metal",
+      "cataloguePage": 3,
+      "slug": "thick-sheet-metal",
+      "title": "Thick Sheet Metal and Plate Components",
+      "family": "plates",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/thick-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/thick-sheet-metal.html",
+      "seoTitle": "Thick Sheet Metal and Plate Components | Realjet",
+      "description": "REALJET offers thick sheet metal and plate components. Review plate grade, cut profile and required flatness against your equipment drawings before production.",
+      "sourceHtmlSha256": "6a619a791d88ac69b5226c6578f1bda2f64d1d0826fb636e4b0412b199a71989",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/thick-sheet-metalb2de0d4d-0d7b-4e89-82fb-3fbac4f3a2dd.png",
+          "sourceSha256": "abd6cc64b5e056ee90643cd18b018c48b3033f31a703a714af79f9db8b96d044",
+          "published": "/images/products/sheet-metal/thick-sheet-metal.webp",
+          "width": 729,
+          "height": 710,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/black-sheet-metal.html",
+      "sourceTitle": "Black Sheet Metal",
+      "cataloguePage": 3,
+      "slug": "black-sheet-metal",
+      "title": "Black Finished Sheet Metal Panels",
+      "family": "panels",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/black-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/black-sheet-metal.html",
+      "seoTitle": "Black Finished Sheet Metal Panels | Realjet",
+      "description": "REALJET offers black finished sheet metal panels. Review visible surfaces, edge coverage and masked interfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "9bc52ac8199d3a64a612cf8b1fa5eec6d222cde5fce4172d90794775474fdc4f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/black-sheet-metal128f904e-ce40-4be3-85b5-96b268c966dc.jpg",
+          "sourceSha256": "9ae44c95c25bb5e17e15dff0532e9be6756acdda4af514f9fe34053be0b76a20",
+          "published": "/images/products/sheet-metal/black-sheet-metal.webp",
+          "width": 1254,
+          "height": 1254,
+          "review": "brand lettering removed with built-in imagegen and output visually reviewed",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null,
+          "editTool": "built-in image_gen",
+          "editPrompt": "Remove only JETWAVE lettering by filling letter-shaped openings with matching metal; retain all other holes, contours, folds, finish and background.",
+          "editedAsset": "public/images/products/sheet-metal/black-sheet-metal.webp"
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-solutions.html",
+      "sourceTitle": "Sheet Metal Solutions",
+      "cataloguePage": 3,
+      "slug": "sheet-metal-solutions",
+      "title": "Sheet Metal Equipment Assembly Solutions",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-solutions.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-solutions.html",
+      "seoTitle": "Sheet Metal Equipment Assembly Solutions | Realjet",
+      "description": "REALJET offers sheet metal equipment assembly solutions. Review part interfaces, assembly order and shared drawing revisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "108b61b4169d9bfa882b493c4d714fd16bb50ec4108c9d47bc1d8d26aca647f9",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-solutions3609f719-ebdb-418a-ba6b-6763a4301c9d.png",
+          "sourceSha256": "b2fb3a8dac64260663f03aed5b1cc660447d48cf80d5e71313100119ebba66a2",
+          "published": "/images/products/sheet-metal/sheet-metal-solutions.webp",
+          "width": 208,
+          "height": 156,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-company.html",
+      "sourceTitle": "Sheet Metal Company",
+      "cataloguePage": 4,
+      "slug": "sheet-metal-company",
+      "title": "Drawing-Based Sheet Metal Manufacturing",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-company.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-company.html",
+      "seoTitle": "Drawing-Based Sheet Metal Manufacturing | Realjet",
+      "description": "REALJET offers drawing-based sheet metal manufacturing. Review drawing completeness, process scope and inspection responsibility against your equipment drawings before production.",
+      "sourceHtmlSha256": "5d1e5e7366a309d424705624ada19aeca6bb7454f2e4d31a402fef287c0712b1",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-laser-cutting4dc6197e-0a1b-4c73-88c7-3cbd936c7014.png",
+          "sourceSha256": "c1d5efa7c64f23f938473b785e9248ba9248164c9eba5d7d64fab961bd5df27b",
+          "published": "/images/products/sheet-metal/sheet-metal-company.webp",
+          "width": 523,
+          "height": 303,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-laser-cutting.html"
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/commercial-sheet-metal.html",
+      "sourceTitle": "Commercial Sheet Metal",
+      "cataloguePage": 4,
+      "slug": "commercial-sheet-metal",
+      "title": "Custom Finished Sheet Metal Housings",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/commercial-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/commercial-sheet-metal.html",
+      "seoTitle": "Custom Finished Sheet Metal Housings | Realjet",
+      "description": "REALJET offers custom finished sheet metal housings. Review visible faces, open-top geometry and panel finish against your equipment drawings before production.",
+      "sourceHtmlSha256": "c63b22d804b7f2310376e9625553d517c3bbb0f9e3e4e7d6b2b4fb48cf46ab40",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/commercial-sheet-metal44a0ff0c-17d1-407a-a89d-66fae6368ab2.png",
+          "sourceSha256": "abcb031737e4dcf079a7a9d7e83ef9cb85b92d644625b753bd3209deb604755c",
+          "published": "/images/products/sheet-metal/commercial-sheet-metal.webp",
+          "width": 1254,
+          "height": 1254,
+          "review": "brand lettering removed with built-in imagegen and output visually reviewed",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null,
+          "editTool": "built-in image_gen",
+          "editPrompt": "Remove only the brand lettering on the pink panel; retain box geometry, openings, colour, camera angle and background.",
+          "editedAsset": "public/images/products/sheet-metal/commercial-sheet-metal.webp"
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/custom-stainless-steel-fabrication.html",
+      "sourceTitle": "Custom Stainless Steel Fabrication",
+      "cataloguePage": 4,
+      "slug": "custom-stainless-steel-fabrication",
+      "title": "Custom Stainless Steel Equipment Fabrication",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-stainless-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-stainless-steel-fabrication.html",
+      "seoTitle": "Custom Stainless Steel Equipment Fabrication | Realjet",
+      "description": "REALJET offers custom stainless steel equipment fabrication. Review joint design, mounting edges and surface condition against your equipment drawings before production.",
+      "sourceHtmlSha256": "413fd8adea208ba0b6474a5ac326fe3cb25cc7d0b7c1647467b7750c5997c16e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/custom-stainless-steel-fabrication42bd5fd7-0172-42c8-ba7e-b47f0b607d9b.png",
+          "sourceSha256": "6d4c0a7387421c5b7be8756c75e2f05231a169f05fac2cb6e23faccf68e55b8d",
+          "published": "/images/products/sheet-metal/custom-stainless-steel-fabrication.webp",
+          "width": 259,
+          "height": 280,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/custom-sheet-metal.html",
+      "sourceTitle": "Custom Sheet Metal",
+      "cataloguePage": 4,
+      "slug": "custom-sheet-metal",
+      "title": "Custom Sheet Metal OEM Components",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/custom-sheet-metal.html",
+      "seoTitle": "Custom Sheet Metal OEM Components | Realjet",
+      "description": "REALJET offers custom sheet metal OEM components. Review hole pattern, bend geometry and connected parts against your equipment drawings before production.",
+      "sourceHtmlSha256": "ab56e343b703d3f10deca21d421765295fe39e2c6daedf78dde9e794d503d253",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/custom-sheet-metal06bc0425-693e-4d3f-b976-4a795a7062aa.png",
+          "sourceSha256": "c11526812298faf7beb3f2a944eabd9e8d3518f272f26cc61064c46116ab0dae",
+          "published": "/images/products/sheet-metal/custom-sheet-metal.webp",
+          "width": 262,
+          "height": 197,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-steel-fabrication.html",
+      "sourceTitle": "Custom Steel Fabrication",
+      "cataloguePage": 4,
+      "slug": "custom-steel-fabrication",
+      "title": "Custom Steel Fabrication for Machinery",
+      "family": "carbon",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-steel-fabrication.html",
+      "seoTitle": "Custom Steel Fabrication for Machinery | Realjet",
+      "description": "REALJET offers custom steel fabrication for machinery. Review section layout, stiffening details and connection locations against your equipment drawings before production.",
+      "sourceHtmlSha256": "0823a585e6f5b6fe863a2f64676e47d760eeff992ae4d81ba16b6d38160522c0",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/custom-steel-fabrication5469330f-43a4-481c-b0a3-cb026cbde116.jpg",
+          "sourceSha256": "68ce12620b62e9c3748ae4f5b1ceb8d6e18fc7ac5336f1aa1e870be895877c29",
+          "published": "/images/products/sheet-metal/custom-steel-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/stainless-steel-sheet-metal-fabrication.html",
+      "sourceTitle": "Stainless Steel Sheet Metal Fabrication",
+      "cataloguePage": 4,
+      "slug": "stainless-steel-sheet-metal-fabrication",
+      "title": "Stainless Steel Sheet Fabrication",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/stainless-steel-sheet-metal-fabrication.md",
+      "canonical": "https://realjetech.com/products/stainless-steel-sheet-metal-fabrication.html",
+      "seoTitle": "Stainless Steel Sheet Fabrication | Realjet",
+      "description": "REALJET offers stainless steel sheet fabrication. Review material thickness, grain direction and mating clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "7f9ef4ccd98700cd9adc2647abfdb9f6363f2854c98b3e0de68307afd1f9617b",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/stainless-steel-sheet-metal-fabricationcfd3bf3b-6520-468d-bdb2-61629e67e0dd.jpg",
+          "sourceSha256": "2b4a9522e9ab6ca3c6e36ff48a9b35e30e7bd9007335c0383670db8267cfb7e1",
+          "published": "/images/products/sheet-metal/stainless-steel-sheet-metal-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/stainless-steel-fabrication.html",
+      "sourceTitle": "Stainless Steel Fabrication",
+      "cataloguePage": 4,
+      "slug": "stainless-steel-fabrication",
+      "title": "Stainless Steel Welded Components",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/stainless-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/stainless-steel-fabrication.html",
+      "seoTitle": "Stainless Steel Welded Components | Realjet",
+      "description": "REALJET offers stainless steel welded components. Review weld placement, heat distortion and post-weld surface condition against your equipment drawings before production.",
+      "sourceHtmlSha256": "aea8e23ecc1973dbff2e27cda6ddbcb2143cb2e431cd0f6ef09a3dcdedd02376",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/stainless-steel-fabrication9ea44ffa-3611-443c-8f13-dc3e8b3622cb.jpg",
+          "sourceSha256": "7f44221d111ccacbe195585fba31c7fa6807116dc3ce4ff819deb328dd737331",
+          "published": "/images/products/sheet-metal/stainless-steel-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/laser-cutting.html",
+      "sourceTitle": "Laser Cutting",
+      "cataloguePage": 4,
+      "slug": "laser-cutting",
+      "title": "Laser Cut Custom Metal Components",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/laser-cutting.md",
+      "canonical": "https://realjetech.com/products/laser-cutting.html",
+      "seoTitle": "Laser Cut Custom Metal Components | Realjet",
+      "description": "REALJET offers laser cut custom metal components. Review cut-path definition, piercing locations and small internal features against your equipment drawings before production.",
+      "sourceHtmlSha256": "90f8c6bb61af2ee29e70197fc611afbe9f71b04fd37708b084c59371cb85c1f1",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/laser-cuttingdfddc309-c755-4716-924b-d5401628f41e.jpg",
+          "sourceSha256": "4b3a18e64eeccc2daeaf1bc92a28b7e5f3336385c148cbe04e612ca82d3d6fb8",
+          "published": "/images/products/sheet-metal/laser-cutting.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/metal-bend.html",
+      "sourceTitle": "Metal Bend",
+      "cataloguePage": 4,
+      "slug": "metal-bend",
+      "title": "Custom Metal Bend Components",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-bend.md",
+      "canonical": "https://realjetech.com/products/metal-bend.html",
+      "seoTitle": "Custom Metal Bend Components | Realjet",
+      "description": "REALJET offers custom metal bend components. Review included angles, offset height and bolt clearance against your equipment drawings before production.",
+      "sourceHtmlSha256": "a0bea948ab4380f1e3793e5c726e8a54dfca0285d97c2e9d82648c8043d3135e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/metal-bendfb4c6c6a-7a53-4540-87a6-0268bfa08d50.jpg",
+          "sourceSha256": "c4d6ea60c8a45819b76dcb3a4c1a58331c2b66796d163fcb6b6bde21e6cf81ae",
+          "published": "/images/products/sheet-metal/metal-bend.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-suppliers.html",
+      "sourceTitle": "Sheet Metal Suppliers",
+      "cataloguePage": 4,
+      "slug": "sheet-metal-suppliers",
+      "title": "Sheet Metal Component Supply for OEMs",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-suppliers.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-suppliers.html",
+      "seoTitle": "Sheet Metal Component Supply for OEMs | Realjet",
+      "description": "REALJET offers sheet metal component supply for oems. Review part numbering, revision status and delivery condition against your equipment drawings before production.",
+      "sourceHtmlSha256": "1e91bb1313cb99d963f03dd9468155c333a15630497a91f7379cb404f20aa5e9",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/sheet-metal-supplierse1bef41e-0443-416b-9814-e74ab4ff5018.jpg",
+          "sourceSha256": "a15302520b557eb285ad12d7be79c4de58b618647760fe56cdf17cee6520027b",
+          "published": "/images/products/sheet-metal/sheet-metal-suppliers.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-manufacturing.html",
+      "sourceTitle": "Sheet Metal Manufacturing",
+      "cataloguePage": 4,
+      "slug": "sheet-metal-manufacturing",
+      "title": "Sheet Metal Manufacturing for Equipment Builders",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-manufacturing.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-manufacturing.html",
+      "seoTitle": "Sheet Metal Manufacturing for Equipment Builders | Realjet",
+      "description": "REALJET offers sheet metal manufacturing for equipment builders. Review process sequencing, hardware sourcing and production release against your equipment drawings before production.",
+      "sourceHtmlSha256": "03d9b1954e405099279c053b2151ef8536c91f3b18b6beccd61ec69e496e11c4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-manufacturingf208418f-5b49-4205-810d-274010d5359b.png",
+          "sourceSha256": "325f42b5281926b0547a52f21604a16d583f1b55a93f2e7ced2f4205741cfc44",
+          "published": "/images/products/sheet-metal/sheet-metal-manufacturing.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-cabinet.html",
+      "sourceTitle": "Sheet Metal",
+      "cataloguePage": 4,
+      "slug": "sheet-metal-cabinet",
+      "title": "Custom Sheet Metal Cabinet Panels",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-cabinet.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-cabinet.html",
+      "seoTitle": "Custom Sheet Metal Cabinet Panels | Realjet",
+      "description": "REALJET offers custom sheet metal cabinet panels. Review door-to-frame fit, panel returns and mounting features against your equipment drawings before production.",
+      "sourceHtmlSha256": "e15aebb409c806b01279231c72d2ac13a77e5a223c744a0171b1453ea9e695ef",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202329238/sheet-metal-cabinet88c6208f-895b-4da3-981d-a6e3571f7af1.png",
+          "sourceSha256": "a392f628cbb13d564a356796184d461d4f8671693e958115a0d2facb6739aab0",
+          "published": "/images/products/sheet-metal/sheet-metal-cabinet.webp",
+          "width": 328,
+          "height": 246,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/fabrication-welding.html",
+      "sourceTitle": "Fabrication Welding",
+      "cataloguePage": 5,
+      "slug": "fabrication-welding",
+      "title": "Fabrication Welding for Equipment Assemblies",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/fabrication-welding.md",
+      "canonical": "https://realjetech.com/products/fabrication-welding.html",
+      "seoTitle": "Fabrication Welding for Equipment Assemblies | Realjet",
+      "description": "REALJET offers fabrication welding for equipment assemblies. Review joint preparation, weld sequence and fixture references against your equipment drawings before production.",
+      "sourceHtmlSha256": "5ee4b4bbaf9f476bcd0daaa44c14703846be8cfd01c2bd5973d3fb159250ca6a",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/fabrication-welding0f297960-4c0b-487b-8038-a79e1456b8d6.jpg",
+          "sourceSha256": "926e4700fadd4b69855a3f5a3541857a52414b1415439d4dbbc69d3180711f89",
+          "published": "/images/products/sheet-metal/fabrication-welding.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/copper-sheet-metal-fabrication.html",
+      "sourceTitle": "Copper Sheet Metal Fabrication",
+      "cataloguePage": 5,
+      "slug": "copper-sheet-metal-fabrication",
+      "title": "Copper Sheet Metal Components",
+      "family": "copper",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/copper-sheet-metal-fabrication.md",
+      "canonical": "https://realjetech.com/products/copper-sheet-metal-fabrication.html",
+      "seoTitle": "Copper Sheet Metal Components | Realjet",
+      "description": "REALJET offers copper sheet metal components. Review contact surfaces, bend radii and fastening clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "e714cc7f8bf16a0e16f39243b8bb4650e95c4e227434568e5f5e6942013aeac4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/copper-sheet-metal-fabrication1a8537e2-4bfc-4395-b425-023946966207.png",
+          "sourceSha256": "6ad67c46ca7dc80b2c3ba056faaf8a43e4a075299658d98ff43b00bb09be73dd",
+          "published": "/images/products/sheet-metal/copper-sheet-metal-fabrication.webp",
+          "width": 700,
+          "height": 700,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-sheet-metal-fabrication.html",
+      "sourceTitle": "Custom Sheet Metal Fabrication",
+      "cataloguePage": 5,
+      "slug": "custom-sheet-metal-fabrication",
+      "title": "Custom Sheet Metal Fabricated Assemblies",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-sheet-metal-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-sheet-metal-fabrication.html",
+      "seoTitle": "Custom Sheet Metal Fabricated Assemblies | Realjet",
+      "description": "REALJET offers custom sheet metal fabricated assemblies. Review subassembly boundaries, hardware and installation references against your equipment drawings before production.",
+      "sourceHtmlSha256": "6c67728c0bbf97c987f44d263a90d27d8f426367b91970d00c3ea09f886205af",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/custom-sheet-metal-fabricatione5766f4e-ea08-4ab5-afb5-75ddcd29dc75.png",
+          "sourceSha256": "993679cd48ba66187c284051265e39ea08c180cb74e221ffa1d0b9248f8b0f67",
+          "published": "/images/products/sheet-metal/custom-sheet-metal-fabrication.webp",
+          "width": 700,
+          "height": 700,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/structural-steel-fabrication.html",
+      "sourceTitle": "Structural Steel Fabrication",
+      "cataloguePage": 5,
+      "slug": "structural-steel-fabrication",
+      "title": "Structural Steel Equipment Supports",
+      "family": "frames",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/structural-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/structural-steel-fabrication.html",
+      "seoTitle": "Structural Steel Equipment Supports | Realjet",
+      "description": "REALJET offers structural steel equipment supports. Review load path, base connections and section alignment against your equipment drawings before production.",
+      "sourceHtmlSha256": "5e39b69e612a2e3c3c2199c012f6f04e9ecd3285297c8188d4106d95793b45a8",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/structural-steel-fabrication3798565b-2784-4c43-8f9c-c6cd0c3e5aac.png",
+          "sourceSha256": "945e971a1bbf6c464a47b93794b0e07a00d0148292e7e4d3f1304cbb47cf66fc",
+          "published": "/images/products/sheet-metal/structural-steel-fabrication.webp",
+          "width": 700,
+          "height": 700,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/the-importance-of-providing-customers-with.html",
+      "sourceTitle": "Sheet Metal Welding",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-welded-assemblies",
+      "title": "Sheet Metal Welded Assemblies",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-welded-assemblies.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-welded-assemblies.html",
+      "seoTitle": "Sheet Metal Welded Assemblies | Realjet",
+      "description": "REALJET offers sheet metal welded assemblies. Review weld access, heat input and local stiffening against your equipment drawings before production.",
+      "sourceHtmlSha256": "6a665ffe80dace42fdb8c728e3085640a2e95d4001c988feda622b7c33f837b1",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/the-importance-of-providing-customers-with0dc2bca1-9c0c-42a1-a21f-c934fcf2688b.png",
+          "sourceSha256": "37c3794db5d502004efb75e1059821446106d809b686ce66bc3b1ccb242a4459",
+          "published": "/images/products/sheet-metal/sheet-metal-welded-assemblies.webp",
+          "width": 700,
+          "height": 700,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-service.html",
+      "sourceTitle": "Sheet Metal Service",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-service",
+      "title": "Sheet Metal Prototype and Batch Service",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-service.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-service.html",
+      "seoTitle": "Sheet Metal Prototype and Batch Service | Realjet",
+      "description": "REALJET offers sheet metal prototype and batch service. Review prototype learning, drawing updates and batch acceptance against your equipment drawings before production.",
+      "sourceHtmlSha256": "de8182aa250d2668aa954d9f642a6a89e672083ee2580b961265dba38efe5fb8",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-service01283730810.jpg",
+          "sourceSha256": "ee3b3426718bb382f41488dacc9090200f750e028761ff4540412265d6736ac8",
+          "published": "/images/products/sheet-metal/sheet-metal-service.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-fabrication-service.html",
+      "sourceTitle": "Sheet Metal Fabrication Service",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-fabrication-service",
+      "title": "Integrated Sheet Metal Fabrication Service",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-fabrication-service.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-fabrication-service.html",
+      "seoTitle": "Integrated Sheet Metal Fabrication Service | Realjet",
+      "description": "REALJET offers integrated sheet metal fabrication service. Review scope boundaries, supplier interfaces and packing requirements against your equipment drawings before production.",
+      "sourceHtmlSha256": "09803f681bff83cf93af9934145c9ab5a7cab93d8dbb45131df57680e6459eff",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202229238/sheet-metal-fabrication-service07579086426.jpg",
+          "sourceSha256": "e1a0f124e741970512e08779de1eed25fab287b04e2886421a2536f1f6be353b",
+          "published": "/images/products/sheet-metal/sheet-metal-fabrication-service.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-part.html",
+      "sourceTitle": "Sheet Metal Part",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-part",
+      "title": "Custom Sheet Metal Parts",
+      "family": "forming",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-part.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-part.html",
+      "seoTitle": "Custom Sheet Metal Parts | Realjet",
+      "description": "REALJET offers custom sheet metal parts. Review functional edges, tabs and assembly clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "f5fae51477c801f7cb04a9b0728c49e613d771ee1749488d36c385437b962de3",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-part40221225548.jpg",
+          "sourceSha256": "1c248c6a121462a4afd5a3eaf452c3d62081e1dc618de42b8cc1ebfbae23f056",
+          "published": "/images/products/sheet-metal/sheet-metal-part.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-component.html",
+      "sourceTitle": "Sheet Metal Component",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-component",
+      "title": "Sheet Metal Subassembly Components",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-component.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-component.html",
+      "seoTitle": "Sheet Metal Subassembly Components | Realjet",
+      "description": "REALJET offers sheet metal subassembly components. Review part identification, mating hardware and final assembly references against your equipment drawings before production.",
+      "sourceHtmlSha256": "a7de54065f97ff9579927d89383cc0915b20e4fe115e4d3ba1a22afa338e4de2",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-component33387083515.jpg",
+          "sourceSha256": "4904cb1708678fc71382d7b06b00927dcb7a2261f9e29d1e395e064b4a98df73",
+          "published": "/images/products/sheet-metal/sheet-metal-component.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-aluminum-case.html",
+      "sourceTitle": "Custom Aluminum Case",
+      "cataloguePage": 5,
+      "slug": "custom-aluminum-case",
+      "title": "Custom Aluminum Equipment Cases",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-aluminum-case.md",
+      "canonical": "https://realjetech.com/products/custom-aluminum-case.html",
+      "seoTitle": "Custom Aluminum Equipment Cases | Realjet",
+      "description": "REALJET offers custom aluminum equipment cases. Review cover alignment, fixing points and external dimensions against your equipment drawings before production.",
+      "sourceHtmlSha256": "a0a40467980a87b65baaec5a2905952a3780c0945638daa7b784c2b36dd15b75",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-aluminum-case23048125252.jpg",
+          "sourceSha256": "33032c5b7a4bfc4f5ce17237c1eb285f67afc20e1bf2e0122d65e5aeed546ccd",
+          "published": "/images/products/sheet-metal/custom-aluminum-case.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-case.html",
+      "sourceTitle": "Sheet Metal Case",
+      "cataloguePage": 5,
+      "slug": "sheet-metal-case",
+      "title": "Custom Sheet Metal Cases",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-case.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-case.html",
+      "seoTitle": "Custom Sheet Metal Cases | Realjet",
+      "description": "REALJET offers custom sheet metal cases. Review body-to-cover seams, access openings and mounting provisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "06e041202f018f9af29d042091b9e74078f0c4bda8a5fde71f1f920ee072e3d4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-case52519253288.jpg",
+          "sourceSha256": "d8cc69a9f4c1c8a7523953f686fd1822c481ebc4f24a297e23667108f2040692",
+          "published": "/images/products/sheet-metal/sheet-metal-case.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/bending-aluminum-sheet-metal.html",
+      "sourceTitle": "Bending Aluminum Sheet Metal",
+      "cataloguePage": 5,
+      "slug": "bending-aluminum-sheet-metal",
+      "title": "Aluminum Sheet Bending Service",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/bending-aluminum-sheet-metal.md",
+      "canonical": "https://realjetech.com/products/bending-aluminum-sheet-metal.html",
+      "seoTitle": "Aluminum Sheet Bending Service | Realjet",
+      "description": "REALJET offers aluminum sheet bending service. Review grain direction, alloy temper and visible bend surfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "148e02ad7cb59ef81fdc88aa8d5cb7fec7fb2e29ab77a0645b20cc01df61e413",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/bending-aluminum-sheet-metal01215436637.jpg",
+          "sourceSha256": "d32c6ff4c500ddd0df98d67ef14aebaef617b6d0e9fc3ac64eb0ee408d41c765",
+          "published": "/images/products/sheet-metal/bending-aluminum-sheet-metal.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/metal-bending-service.html",
+      "sourceTitle": "Metal Bending Service",
+      "cataloguePage": 6,
+      "slug": "metal-bending-service",
+      "title": "Metal Bending for Custom Equipment Parts",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-bending-service.md",
+      "canonical": "https://realjetech.com/products/metal-bending-service.html",
+      "seoTitle": "Metal Bending for Custom Equipment Parts | Realjet",
+      "description": "REALJET offers metal bending for custom equipment parts. Review tool access, bend order and springback allowance against your equipment drawings before production.",
+      "sourceHtmlSha256": "fc4551422ea70c181cb43388b02eec8d33c68411199715e2a7955510cbc41c38",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/metal-bending-service28466354874.jpg",
+          "sourceSha256": "74f90529edd8590d4af959b3a31fb28752b2d7daeb9f876fc4f9025b2cb6dd89",
+          "published": "/images/products/sheet-metal/metal-bending-service.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/bending-steel-plate.html",
+      "sourceTitle": "Bending Steel Plate",
+      "cataloguePage": 6,
+      "slug": "bending-steel-plate",
+      "title": "Steel Plate Bending Components",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/bending-steel-plate.md",
+      "canonical": "https://realjetech.com/products/bending-steel-plate.html",
+      "seoTitle": "Steel Plate Bending Components | Realjet",
+      "description": "REALJET offers steel plate bending components. Review plate thickness, bend radius and opening position near bends against your equipment drawings before production.",
+      "sourceHtmlSha256": "023e530c077a78b318cc1141eff6669fcc0a736820e04c008198a9f12a266585",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/bending-steel-plate50561478874.jpg",
+          "sourceSha256": "d2c192db5be3ea02ec62e6f83704d0c2de1fb908205ea6bca0da6ede768f5271",
+          "published": "/images/products/sheet-metal/bending-steel-plate.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/bending-stainless-steel-sheet.html",
+      "sourceTitle": "Bending Stainless Steel Sheet",
+      "cataloguePage": 6,
+      "slug": "bending-stainless-steel-sheet",
+      "title": "Stainless Steel Sheet Bending",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/bending-stainless-steel-sheet.md",
+      "canonical": "https://realjetech.com/products/bending-stainless-steel-sheet.html",
+      "seoTitle": "Stainless Steel Sheet Bending | Realjet",
+      "description": "REALJET offers stainless steel sheet bending. Review bend allowance, surface protection and mounting geometry against your equipment drawings before production.",
+      "sourceHtmlSha256": "0c4c8b3d2477ea901cdf5f7fff8959d840cb65a13e015d30905e37b962ce5823",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/bending-stainless-steel-sheet46305148408.jpg",
+          "sourceSha256": "e0d06a6c3ed8ecdcf44d00215beb17ea246168965f7f20e4975c7332743a5013",
+          "published": "/images/products/sheet-metal/bending-stainless-steel-sheet.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/bending-aluminium-sheet.html",
+      "sourceTitle": "Bending Aluminium Sheet",
+      "cataloguePage": 6,
+      "slug": "bending-aluminium-sheet",
+      "title": "Multi-Bend Aluminum Sheet Components",
+      "family": "bending",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/bending-aluminium-sheet.md",
+      "canonical": "https://realjetech.com/products/bending-aluminium-sheet.html",
+      "seoTitle": "Multi-Bend Aluminum Sheet Components | Realjet",
+      "description": "REALJET offers multi-bend aluminum sheet components. Review multi-bend sequence, clearance to tooling and edge alignment against your equipment drawings before production.",
+      "sourceHtmlSha256": "8ed5f2a3e072eb717ea9b0b110287b9ec9d24f00c332ef188666002d9512f054",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/bending-aluminium-sheet38110167819.jpg",
+          "sourceSha256": "141f33c69ce5edefa5705776f435a8db5d8650a8e95db4378a999f6562d313ce",
+          "published": "/images/products/sheet-metal/bending-aluminium-sheet.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-aluminum-box.html",
+      "sourceTitle": "Custom Aluminum Box",
+      "cataloguePage": 6,
+      "slug": "custom-aluminum-box",
+      "title": "Custom Aluminum Boxes",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-aluminum-box.md",
+      "canonical": "https://realjetech.com/products/custom-aluminum-box.html",
+      "seoTitle": "Custom Aluminum Boxes | Realjet",
+      "description": "REALJET offers custom aluminum boxes. Review box depth, folded corners and lid fasteners against your equipment drawings before production.",
+      "sourceHtmlSha256": "6b9ec0e309a77cd06ebba5348c367f8bc9d2b7772568461bf3f9615db958375f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-aluminum-box06020965446.jpg",
+          "sourceSha256": "1dc2cab6a59791c16ade290de841b01a9bfb14987adfffc785075eca488a749b",
+          "published": "/images/products/sheet-metal/custom-aluminum-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-box-fabrication.html",
+      "sourceTitle": "Sheet Metal Box Fabrication",
+      "cataloguePage": 6,
+      "slug": "sheet-metal-box-fabrication",
+      "title": "Sheet Metal Box Fabrication",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-box-fabrication.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-box-fabrication.html",
+      "seoTitle": "Sheet Metal Box Fabrication | Realjet",
+      "description": "REALJET offers sheet metal box fabrication. Review corner joints, bottom geometry and cover fit against your equipment drawings before production.",
+      "sourceHtmlSha256": "e4cee9929095718aa77c51ee1e77ad83e8100ad18c61b0a25b6b9fcfe9cfa300",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-box-fabrication27532110299.jpg",
+          "sourceSha256": "ca836594d2a97a543e06e4e53f3cf8ed414e1567c9713ed0b8f4831ef59a0c86",
+          "published": "/images/products/sheet-metal/sheet-metal-box-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-tool-box-fabrication.html",
+      "sourceTitle": "Steel Box Fabrication",
+      "cataloguePage": 6,
+      "slug": "custom-tool-box-fabrication",
+      "title": "Custom Steel Tool and Equipment Boxes",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-tool-box-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-tool-box-fabrication.html",
+      "seoTitle": "Custom Steel Tool and Equipment Boxes | Realjet",
+      "description": "REALJET offers custom steel tool and equipment boxes. Review lid access, handles, reinforcement and internal layout against your equipment drawings before production.",
+      "sourceHtmlSha256": "b8c3a7af82b542acae7acd30f5ecacf220755a8c27181f9dfa5cdd0f5afa216a",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-tool-box-fabrication10534207968.jpg",
+          "sourceSha256": "67c0fed06a77c998dbf605534f1afc57c2a0dbaa04da6877fd6218c770b2f14e",
+          "published": "/images/products/sheet-metal/custom-tool-box-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/aluminum-enclosure-box.html",
+      "sourceTitle": "Aluminum Enclosure Box",
+      "cataloguePage": 6,
+      "slug": "aluminum-enclosure-box",
+      "title": "Aluminum Enclosure Boxes",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/aluminum-enclosure-box.md",
+      "canonical": "https://realjetech.com/products/aluminum-enclosure-box.html",
+      "seoTitle": "Aluminum Enclosure Boxes | Realjet",
+      "description": "REALJET offers aluminum enclosure boxes. Review connector layout, cover interface and grounding provisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "6f7fbbf935ece73bdc2cb70c67bafdfac7f9cdc7185e448108262812af63833c",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/aluminum-enclosure-box26107567768.png",
+          "sourceSha256": "4e0c4d5d930d586994844cef21fe3b70b6b0db4128865d476ae73cd6c0cdc5d3",
+          "published": "/images/products/sheet-metal/aluminum-enclosure-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metal-box.html",
+      "sourceTitle": "Custom Metal Box",
+      "cataloguePage": 6,
+      "slug": "custom-metal-box",
+      "title": "Custom Metal Box Assemblies",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-box.md",
+      "canonical": "https://realjetech.com/products/custom-metal-box.html",
+      "seoTitle": "Custom Metal Box Assemblies | Realjet",
+      "description": "REALJET offers custom metal box assemblies. Review panel interfaces, screw positions and internal clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "2fa81228d38d1505ebaa2163e49d962dfbe180fefb26b8015fdb13cdd7437bcf",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-box48050109406.jpg",
+          "sourceSha256": "45bbe0c436f222ea354719cacffda1122c2ff46c87455fc864044d54a8296277",
+          "published": "/images/products/sheet-metal/custom-metal-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/steel-frame-fabrication.html",
+      "sourceTitle": "Steel Frame Fabrication",
+      "cataloguePage": 6,
+      "slug": "steel-frame-fabrication",
+      "title": "Steel Frame Fabrication for Machinery",
+      "family": "frames",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/steel-frame-fabrication.md",
+      "canonical": "https://realjetech.com/products/steel-frame-fabrication.html",
+      "seoTitle": "Steel Frame Fabrication for Machinery | Realjet",
+      "description": "REALJET offers steel frame fabrication for machinery. Review frame diagonals, base mounting planes and local reinforcement against your equipment drawings before production.",
+      "sourceHtmlSha256": "939a6892f9a4c793ecbe4a8d9f429280cffbba896c695de9a43e9412154db47f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/steel-frame-fabrication08234273412.jpg",
+          "sourceSha256": "a7fdb45de2cb9d5dff7f21f52d32d25254f4708b2d5702dbf23fa102863098cf",
+          "published": "/images/products/sheet-metal/steel-frame-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/aluminum-frame-welding.html",
+      "sourceTitle": "Aluminum Frame Welding",
+      "cataloguePage": 6,
+      "slug": "aluminum-frame-welding",
+      "title": "Welded Aluminum Frames",
+      "family": "frames",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/aluminum-frame-welding.md",
+      "canonical": "https://realjetech.com/products/aluminum-frame-welding.html",
+      "seoTitle": "Welded Aluminum Frames | Realjet",
+      "description": "REALJET offers welded aluminum frames. Review joint access, fixture points and post-weld alignment against your equipment drawings before production.",
+      "sourceHtmlSha256": "06bb69e5361147cbe43dcf4a2f5d402fc82f10472194f8f94a18a108a32260e4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/aluminum-frame-welding48299698600.jpg",
+          "sourceSha256": "13af6b4a78e113be8e2883a3a42c9ce5399ffc2a5c35ecb98e7843895b3c119f",
+          "published": "/images/products/sheet-metal/aluminum-frame-welding.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metal-plate.html",
+      "sourceTitle": "Custom Metal Plate",
+      "cataloguePage": 6,
+      "slug": "custom-metal-plate",
+      "title": "Custom Metal Mounting Plates",
+      "family": "plates",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-plate.md",
+      "canonical": "https://realjetech.com/products/custom-metal-plate.html",
+      "seoTitle": "Custom Metal Mounting Plates | Realjet",
+      "description": "REALJET offers custom metal mounting plates. Review cut profile, hole locations and required face condition against your equipment drawings before production.",
+      "sourceHtmlSha256": "55fd7537d077d954fcd201b35a3fa3ff54733ce0d7c271e1c7d9b57e106b3a0e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-plate35435465690.jpg",
+          "sourceSha256": "d9e84104f70e1d44812d0286e0afcce70ac70d409cb32af35d34d2a877adfd9e",
+          "published": "/images/products/sheet-metal/custom-metal-plate.webp",
+          "width": 730,
+          "height": 483,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/panel-fabrication.html",
+      "sourceTitle": "Panel Fabrication",
+      "cataloguePage": 7,
+      "slug": "panel-fabrication",
+      "title": "Custom Equipment Panel Fabrication",
+      "family": "panels",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/panel-fabrication.md",
+      "canonical": "https://realjetech.com/products/panel-fabrication.html",
+      "seoTitle": "Custom Equipment Panel Fabrication | Realjet",
+      "description": "REALJET offers custom equipment panel fabrication. Review switch apertures, edge flanges and operator-access clearances against your equipment drawings before production.",
+      "sourceHtmlSha256": "8391fe027a37e17465ec70234e52494874c88ae1509198420f6bbf88a4d3c456",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/panel-fabrication32096687872.jpg",
+          "sourceSha256": "83a04b54ab602b5cc200bacaea8d54bd4e58889153d1d759ad963df2fb70368f",
+          "published": "/images/products/sheet-metal/panel-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-frames.html",
+      "sourceTitle": "Sheet Metal Frames",
+      "cataloguePage": 7,
+      "slug": "sheet-metal-frames",
+      "title": "Fabricated Sheet Metal Frames",
+      "family": "frames",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-frames.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-frames.html",
+      "seoTitle": "Fabricated Sheet Metal Frames | Realjet",
+      "description": "REALJET offers fabricated sheet metal frames. Review section stiffness, joined corners and mounting patterns against your equipment drawings before production.",
+      "sourceHtmlSha256": "c49f6c66be7a81f2a883910b8de5b1047bbfb3bca43b01b7dba2a70e021b982d",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-frames48116812975.jpg",
+          "sourceSha256": "310b19df69ef2b5263a434c83bfec749b04c773cb91c6a669f127c3e62a97e97",
+          "published": "/images/products/sheet-metal/sheet-metal-frames.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-stainless-steel-cabinets.html",
+      "sourceTitle": "Custom Stainless Steel Cabinets",
+      "cataloguePage": 7,
+      "slug": "custom-stainless-steel-cabinets",
+      "title": "Custom Stainless Steel Cabinets",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-stainless-steel-cabinets.md",
+      "canonical": "https://realjetech.com/products/custom-stainless-steel-cabinets.html",
+      "seoTitle": "Custom Stainless Steel Cabinets | Realjet",
+      "description": "REALJET offers custom stainless steel cabinets. Review door fit, internal mounting and external finish direction against your equipment drawings before production.",
+      "sourceHtmlSha256": "1d6531fe1a4ccd8948ca6dc7266c799166b6f6fbdf540a3b86eef994db21b316",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-stainless-steel-cabinets27174804662.jpg",
+          "sourceSha256": "501a453cd6f5cb13db951e7c754fa67a1529ea2a5f29ec517f31f4890504fdb0",
+          "published": "/images/products/sheet-metal/custom-stainless-steel-cabinets.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-cabinet-manufacturer.html",
+      "sourceTitle": "Custom Cabinet Manufacturer",
+      "cataloguePage": 7,
+      "slug": "custom-cabinet-manufacturer",
+      "title": "Drawing-Based Equipment Cabinets",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-cabinet-manufacturer.md",
+      "canonical": "https://realjetech.com/products/custom-cabinet-manufacturer.html",
+      "seoTitle": "Drawing-Based Equipment Cabinets | Realjet",
+      "description": "REALJET offers drawing-based equipment cabinets. Review panel modularity, hinges, service openings and assembly sequence against your equipment drawings before production.",
+      "sourceHtmlSha256": "8f2c8731f111b099c082256f7fcb9ecf829f6d95009f14408380f58a68cbc632",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-cabinet-manufacturer08240126340.jpg",
+          "sourceSha256": "00cc6ca49f6e7b3e13077da17bb6b957ebb513228fa249917c5c2bade548f632",
+          "published": "/images/products/sheet-metal/custom-cabinet-manufacturer.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metal-cabinets.html",
+      "sourceTitle": "Custom Metal Cabinets",
+      "cataloguePage": 7,
+      "slug": "custom-metal-cabinets",
+      "title": "Custom Metal Cabinet Assemblies",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-cabinets.md",
+      "canonical": "https://realjetech.com/products/custom-metal-cabinets.html",
+      "seoTitle": "Custom Metal Cabinet Assemblies | Realjet",
+      "description": "REALJET offers custom metal cabinet assemblies. Review overall envelope, shelves or plates and door hardware against your equipment drawings before production.",
+      "sourceHtmlSha256": "c654fb9b002fcce89a625cb0e34c8e54a273880019af4624f9855e8fa3eb529e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-cabinets54197722057.png",
+          "sourceSha256": "68e877dbc3958183e897d50b4657c7ae965d81506c3265327dd775f627875ac9",
+          "published": "/images/products/sheet-metal/custom-metal-cabinets.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-chassis.html",
+      "sourceTitle": "Sheet Metal Chassis",
+      "cataloguePage": 7,
+      "slug": "sheet-metal-chassis",
+      "title": "Custom Sheet Metal Chassis Assemblies",
+      "family": "chassis",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-chassis.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-chassis.html",
+      "seoTitle": "Custom Sheet Metal Chassis Assemblies | Realjet",
+      "description": "REALJET offers custom sheet metal chassis assemblies. Review component datums, connector access and removable covers against your equipment drawings before production.",
+      "sourceHtmlSha256": "f329fe3309434c835553cc5fb4a212f6b78ad30e0fd1a5a41af17241b6d63520",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-chassis26559920743.png",
+          "sourceSha256": "1160bda78a99c93f648646d2b76eb8a235942c905610413eaeee4f9715e1f128",
+          "published": "/images/products/sheet-metal/sheet-metal-chassis.webp",
+          "width": 750,
+          "height": 750,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/custom-mounting-bracket.html",
+      "sourceTitle": "Custom Mounting Bracket",
+      "cataloguePage": 7,
+      "slug": "custom-mounting-bracket",
+      "title": "Custom Equipment Mounting Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-mounting-bracket.md",
+      "canonical": "https://realjetech.com/products/custom-mounting-bracket.html",
+      "seoTitle": "Custom Equipment Mounting Brackets | Realjet",
+      "description": "REALJET offers custom equipment mounting brackets. Review fastener pattern, offset and installation clearance against your equipment drawings before production.",
+      "sourceHtmlSha256": "01220e6f50f67d5b388aabaa28d6122e3292e6b20d582bb0d255d4f0af2e8d8a",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-mounting-bracket50478993413.jpg",
+          "sourceSha256": "009dfdf7bb6ac8d74b3bb18be1a3bdca7c92b7e1b00dd4782ecd6d2bb436b2ad",
+          "published": "/images/products/sheet-metal/custom-mounting-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/custom-shelf-bracket.html",
+      "sourceTitle": "Custom Shelf Bracket",
+      "cataloguePage": 7,
+      "slug": "custom-shelf-bracket",
+      "title": "Custom Shelf Support Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-shelf-bracket.md",
+      "canonical": "https://realjetech.com/products/custom-shelf-bracket.html",
+      "seoTitle": "Custom Shelf Support Brackets | Realjet",
+      "description": "REALJET offers custom shelf support brackets. Review support span, attachment pattern and local stiffening against your equipment drawings before production.",
+      "sourceHtmlSha256": "790b4407db1c28941d95324efd61cdb76000a5ce7cd464bddd9e0e18e645444e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-shelf-bracket43234688304.jpg",
+          "sourceSha256": "20ddf9cc62ba52833ea039db4bc456db34ca59d063426efe43d00a4ed5c691ac",
+          "published": "/images/products/sheet-metal/custom-shelf-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/custom-steel-bracket.html",
+      "sourceTitle": "Custom Steel Bracket",
+      "cataloguePage": 7,
+      "slug": "custom-steel-bracket",
+      "title": "Custom Steel Connection Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-steel-bracket.md",
+      "canonical": "https://realjetech.com/products/custom-steel-bracket.html",
+      "seoTitle": "Custom Steel Connection Brackets | Realjet",
+      "description": "REALJET offers custom steel connection brackets. Review leg geometry, gusset placement and bolt clearance against your equipment drawings before production.",
+      "sourceHtmlSha256": "8070f464836eb6430f299fe4310457a2d1fee7ab8baccfe34771e7d4d9ca2907",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-steel-bracket26072454492.jpg",
+          "sourceSha256": "9f817c70083ea03c6ca36c00fc303b3a4c235158cfe90a16fb8d8228a2e6032d",
+          "published": "/images/products/sheet-metal/custom-steel-bracket.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/custom-metal-bracket-fabricator.html",
+      "sourceTitle": "Custom Metal Bracket Fabricator",
+      "cataloguePage": 7,
+      "slug": "custom-metal-bracket-fabricator",
+      "title": "Multi-Feature Fabricated Metal Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-bracket-fabricator.md",
+      "canonical": "https://realjetech.com/products/custom-metal-bracket-fabricator.html",
+      "seoTitle": "Multi-Feature Fabricated Metal Brackets | Realjet",
+      "description": "REALJET offers multi-feature fabricated metal brackets. Review interacting bends, mounting faces and assembly access against your equipment drawings before production.",
+      "sourceHtmlSha256": "04061f30ead76a3f97a0cdae2a7cc81fcc95582a816fe90d65603a40acf20ccd",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-bracket13153737837.jpg",
+          "sourceSha256": "1f571c7eee2e6759229ae7524b908ef645661272d58a20441fbe7805bb959c92",
+          "published": "/images/products/sheet-metal/custom-metal-bracket-fabricator.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/sheet-metal-bracket.html",
+      "sourceTitle": "Sheet Metal Bracket",
+      "cataloguePage": 7,
+      "slug": "sheet-metal-bracket",
+      "title": "Formed Sheet Metal Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-bracket.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-bracket.html",
+      "seoTitle": "Formed Sheet Metal Brackets | Realjet",
+      "description": "REALJET offers formed sheet metal brackets. Review flange height, hole-to-edge distances and bend radii against your equipment drawings before production.",
+      "sourceHtmlSha256": "89d6d6152724d7083074ea83e9c3681c558871dc10af59807d1c23ea36b07099",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-bracket59268689787.jpg",
+          "sourceSha256": "2013bbb46d69e39f7f8b59a03933bd0fae08a2edda3fd0541c990dcb953228be",
+          "published": "/images/products/sheet-metal/sheet-metal-bracket.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-sheet-metal-electronic-enclosure.html",
+      "sourceTitle": "Custom Sheet Metal Electronic Enclosure",
+      "cataloguePage": 7,
+      "slug": "custom-sheet-metal-electronic-enclosure",
+      "title": "Custom Sheet Metal Electronic Enclosures",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-sheet-metal-electronic-enclosure.md",
+      "canonical": "https://realjetech.com/products/custom-sheet-metal-electronic-enclosure.html",
+      "seoTitle": "Custom Sheet Metal Electronic Enclosures | Realjet",
+      "description": "REALJET offers custom sheet metal electronic enclosures. Review board clearance, ventilation and panel interface positions against your equipment drawings before production.",
+      "sourceHtmlSha256": "952ce339c858168ac5dd146a02087e11c3cb8e39f6da7f94f92bef7edd8fe19e",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-sheet-metal-electronic-enclosure14122427628.jpg",
+          "sourceSha256": "5cc3859e977ca1739c7ff84c4c4af3918df0d7770a11fe655744f8af10acf766",
+          "published": "/images/products/sheet-metal/custom-sheet-metal-electronic-enclosure.webp",
+          "width": 750,
+          "height": 750,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-steel-plate-fabrication.html",
+      "sourceTitle": "Custom Steel Plate Fabrication",
+      "cataloguePage": 8,
+      "slug": "custom-steel-plate-fabrication",
+      "title": "Custom Steel Plate Fabrication",
+      "family": "plates",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-steel-plate-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-steel-plate-fabrication.html",
+      "seoTitle": "Custom Steel Plate Fabrication | Realjet",
+      "description": "REALJET offers custom steel plate fabrication. Review grade, thickness, edge profile and attachment holes against your equipment drawings before production.",
+      "sourceHtmlSha256": "7a4f324d35ae7c1c0d845097a818cf96e9855df95714125bec24463e7b4743fa",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-steel-plate-fabrication13341819406.jpg",
+          "sourceSha256": "be999d274974507f89f66694850c6841b1a1947144719460f65f6ba10b3bb5b0",
+          "published": "/images/products/sheet-metal/custom-steel-plate-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metal-shelves.html",
+      "sourceTitle": "Steel Bracket Fabrication",
+      "cataloguePage": 8,
+      "slug": "custom-metal-shelves",
+      "title": "Fabricated Steel Shelf Brackets",
+      "family": "brackets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-shelves.md",
+      "canonical": "https://realjetech.com/products/custom-metal-shelves.html",
+      "seoTitle": "Fabricated Steel Shelf Brackets | Realjet",
+      "description": "REALJET offers fabricated steel shelf brackets. Review shelf attachment, wall or frame fixings and bracket projection against your equipment drawings before production.",
+      "sourceHtmlSha256": "f530b83a264a0e9893d334b53046e3f7fd2832198145ec8c96d29f51f162666f",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-shelves27329914737.jpg",
+          "sourceSha256": "85fa583f213dac0e822f6433c74a93381bdc4e3d3f935d194f8e77fc81b52b8e",
+          "published": "/images/products/sheet-metal/custom-metal-shelves.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/sheet-metal-shelves.html",
+      "sourceTitle": "sheet metal shelves",
+      "cataloguePage": 8,
+      "slug": "sheet-metal-shelves",
+      "title": "Custom Sheet Metal Shelves and Trays",
+      "family": "shelves",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-shelves.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-shelves.html",
+      "seoTitle": "Custom Sheet Metal Shelves and Trays | Realjet",
+      "description": "REALJET offers custom sheet metal shelves and trays. Review support span, folded edges and mounting provisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "499a6627fca899cddcb4abcdc532bce4e20e9c87a31fab5bc7c2e11352c42f21",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-shelves28121727883.jpg",
+          "sourceSha256": "eaa386637161a2b9eef8710d753a7d610830bba67108ebfa911cec65ee0f49c4",
+          "published": "/images/products/sheet-metal/sheet-metal-shelves.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-aluminum-storage-box.html",
+      "sourceTitle": "Steel Box Fabrication",
+      "cataloguePage": 8,
+      "slug": "custom-aluminum-storage-box",
+      "title": "Custom Metal Storage Boxes",
+      "family": "boxes",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-aluminum-storage-box.md",
+      "canonical": "https://realjetech.com/products/custom-aluminum-storage-box.html",
+      "seoTitle": "Custom Metal Storage Boxes | Realjet",
+      "description": "REALJET offers custom metal storage boxes. Review lid arrangement, internal volume and carry or fixing provisions against your equipment drawings before production.",
+      "sourceHtmlSha256": "95dc14d351f17df4a82911076678d29eced41371cc73f351f5d4498585c92c4d",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-aluminum-storage-box52236980612.jpg",
+          "sourceSha256": "3f3723c297973ab5472efea20a42dcbc15d1660bdf8707387b519dac8c408b6e",
+          "published": "/images/products/sheet-metal/custom-aluminum-storage-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-cabinet-box.html",
+      "sourceTitle": "Sheet Metal Enclosure Fabrication",
+      "cataloguePage": 8,
+      "slug": "custom-cabinet-box",
+      "title": "Sheet Metal Enclosure Fabrication",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-cabinet-box.md",
+      "canonical": "https://realjetech.com/products/custom-cabinet-box.html",
+      "seoTitle": "Sheet Metal Enclosure Fabrication | Realjet",
+      "description": "REALJET offers sheet metal enclosure fabrication. Review panel joints, removable covers and internal mounting surfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "bb3f8d72819bf1d4a2b79a1472a140247f6c69e397f0814af8be71629f4ab4fc",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-cabinet-box56264481995.jpg",
+          "sourceSha256": "69ca0d7e8fdcf1ffc2831982170f17a63cad3f51bfe9591f5a7080abca480906",
+          "published": "/images/products/sheet-metal/custom-cabinet-box.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/metal-parts-fabrication.html",
+      "sourceTitle": "Metal Parts Fabrication",
+      "cataloguePage": 8,
+      "slug": "metal-parts-fabrication",
+      "title": "Mixed Metal Parts Fabrication",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-parts-fabrication.md",
+      "canonical": "https://realjetech.com/products/metal-parts-fabrication.html",
+      "seoTitle": "Mixed Metal Parts Fabrication | Realjet",
+      "description": "REALJET offers mixed metal parts fabrication. Review part-by-part process plans, revisions and inspection references against your equipment drawings before production.",
+      "sourceHtmlSha256": "67855bb4bde0e4f3e670b9ecc25bcb16a091533b4c4917c43e1daa8fa2cc4a53",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/metal-parts-fabrication00479249585.jpg",
+          "sourceSha256": "5b39b0103e91e831054ceae60cd5bbad2db92911dae0f36001bfd2df44bf1eee",
+          "published": "/images/products/sheet-metal/metal-parts-fabrication.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/metal-parts-fabrication01127126379.jpg",
+          "sourceSha256": "cbc0bba7756933109aab71195b415a84d6cfb8a1935369aa1a35c08ba1b245f5",
+          "published": "/images/products/sheet-metal/metal-parts-fabrication-detail-1.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/metal-parts-fabrication01357365993.jpg",
+          "sourceSha256": "55a8d1c6c9abeba8f5fbb8048b4295be6fc3d40c52b42519cede0c351634fd29",
+          "published": "/images/products/sheet-metal/metal-parts-fabrication-detail-2.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/structure-steel-fabrication.html",
+      "sourceTitle": "Structure Steel Fabrication",
+      "cataloguePage": 8,
+      "slug": "structure-steel-fabrication",
+      "title": "Welded Steel Machine Structures",
+      "family": "frames",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/structure-steel-fabrication.md",
+      "canonical": "https://realjetech.com/products/structure-steel-fabrication.html",
+      "seoTitle": "Welded Steel Machine Structures | Realjet",
+      "description": "REALJET offers welded steel machine structures. Review connection locations, weld access and final geometric references against your equipment drawings before production.",
+      "sourceHtmlSha256": "5801b9e9a90ca764df15be28ffc3cc768156e9bd10a331875b195414cff4f512",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202029238/structure-steel-fabrication59214400426.jpg",
+          "sourceSha256": "a3098a69b46d1882d15e6adb5064c3c44f17246bc62c803d984d751a6077ceb8",
+          "published": "/images/products/sheet-metal/structure-steel-fabrication.webp",
+          "width": 700,
+          "height": 933,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/metal-enclosure-fabrication.html",
+      "sourceTitle": "Metal Enclosure Fabrication",
+      "cataloguePage": 8,
+      "slug": "metal-enclosure-fabrication",
+      "title": "Fabricated Metal Equipment Enclosures",
+      "family": "enclosures",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/metal-enclosure-fabrication.md",
+      "canonical": "https://realjetech.com/products/metal-enclosure-fabrication.html",
+      "seoTitle": "Fabricated Metal Equipment Enclosures | Realjet",
+      "description": "REALJET offers fabricated metal equipment enclosures. Review cover joints, maintenance access and component interfaces against your equipment drawings before production.",
+      "sourceHtmlSha256": "e64346d4ffe1ffbc5934bc088619d96c384737f17cf8f263873105af8beec724",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/29238/metal-enclosure-fabricationbaa46.jpg",
+          "sourceSha256": "6ab708600c4d1cb0040b6c17c3279703122b79ee978fc6f4a77cf6b33f123f61",
+          "published": "/images/products/sheet-metal/metal-enclosure-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/aluminum-welding.html",
+      "sourceTitle": "Aluminum Welding",
+      "cataloguePage": 8,
+      "slug": "aluminum-welding",
+      "title": "Aluminum Welding for Equipment Components",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/aluminum-welding.md",
+      "canonical": "https://realjetech.com/products/aluminum-welding.html",
+      "seoTitle": "Aluminum Welding for Equipment Components | Realjet",
+      "description": "REALJET offers aluminum welding for equipment components. Review alloy compatibility, heat input and weld-area access against your equipment drawings before production.",
+      "sourceHtmlSha256": "fc4b8a8f67006ff003089f570543ae21f9ee4c6d4e72f9a678d9b02af62b7e55",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/aluminum-welding36383035645.jpg",
+          "sourceSha256": "d9231755f70887657bbdeefcb779a39dff48112d5a90193d33c337f51de18f92",
+          "published": "/images/products/sheet-metal/aluminum-welding.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-steel-cabinet.html",
+      "sourceTitle": "Custom Steel Cabinet",
+      "cataloguePage": 8,
+      "slug": "custom-steel-cabinet",
+      "title": "Custom Steel Equipment Cabinets",
+      "family": "cabinets",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-steel-cabinet.md",
+      "canonical": "https://realjetech.com/products/custom-steel-cabinet.html",
+      "seoTitle": "Custom Steel Equipment Cabinets | Realjet",
+      "description": "REALJET offers custom steel equipment cabinets. Review door construction, mounting plates and base or wall connections against your equipment drawings before production.",
+      "sourceHtmlSha256": "f3b2bcd0d27e8a23c0bcf9b40e0216284ee7972d760bc3a319b59e0ed76ef873",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-steel-cabinet47218966148.jpg",
+          "sourceSha256": "1bfc89861d551288fafed95e09af10be7d4e964c5103f3bdd178cec9dcac46a5",
+          "published": "/images/products/sheet-metal/custom-steel-cabinet.webp",
+          "width": 730,
+          "height": 552,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/steel-tank-fabrication.html",
+      "sourceTitle": "Steel Tank Fabrication",
+      "cataloguePage": 8,
+      "slug": "steel-tank-fabrication",
+      "title": "Fabricated Steel Tanks and Containers",
+      "family": "tanks",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/steel-tank-fabrication.md",
+      "canonical": "https://realjetech.com/products/steel-tank-fabrication.html",
+      "seoTitle": "Fabricated Steel Tanks and Containers | Realjet",
+      "description": "REALJET offers fabricated steel tanks and containers. Review seam design, ports, supports and internal cleanliness against your equipment drawings before production.",
+      "sourceHtmlSha256": "1edf7fc0312ee075b10cfe9286be7a7a29ae799f25daf39793c23b4eadba0967",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202029238/steel-tank-fabrication16246625383.jpg",
+          "sourceSha256": "2b74f74cc94f3f2ecca234443a303047b8e5fbd64c23acd000e0e69881ea3c2e",
+          "published": "/images/products/sheet-metal/steel-tank-fabrication.webp",
+          "width": 730,
+          "height": 486,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/custom-metal-fabrication.html",
+      "sourceTitle": "Custom Metal Fabrication",
+      "cataloguePage": 8,
+      "slug": "custom-metal-fabrication",
+      "title": "Custom Metal Fabrication for OEM Assemblies",
+      "family": "general",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/custom-metal-fabrication.md",
+      "canonical": "https://realjetech.com/products/custom-metal-fabrication.html",
+      "seoTitle": "Custom Metal Fabrication for OEM Assemblies | Realjet",
+      "description": "REALJET offers custom metal fabrication for OEM assemblies. Review process scope, assembly fit and interface coordination against your equipment drawings before production.",
+      "sourceHtmlSha256": "5c3c18a7d8a8fbbb5cef5a2444c25b14ef669fface761faab6456dca4c08576b",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/custom-metal-fabrication40311716595.jpg",
+          "sourceSha256": "7ffb5f0f52011dc1010d5b796edd1de3e568b4107f237a5fe995af5d8545d40c",
+          "published": "/images/products/sheet-metal/custom-metal-fabrication.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/welding-parts.html",
+      "sourceTitle": "Welding Parts",
+      "cataloguePage": 9,
+      "slug": "welding-parts",
+      "title": "Custom Welded Metal Parts",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/welding-parts.md",
+      "canonical": "https://realjetech.com/products/welding-parts.html",
+      "seoTitle": "Custom Welded Metal Parts | Realjet",
+      "description": "REALJET offers custom welded metal parts. Review fixture contact points, joint gaps and weld sequence against your equipment drawings before production.",
+      "sourceHtmlSha256": "4be94951c9cc75ff66a4baa67be295e1ad4ded166118887534a1a0b6707bbcad",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/welding-parts14104445478.jpg",
+          "sourceSha256": "0a53758660db7de98d52ab3332e924db7e80393f3624837487560b6e661ac50c",
+          "published": "/images/products/sheet-metal/welding-parts.webp",
+          "width": 700,
+          "height": 525,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/laser-cutting-part.html",
+      "sourceTitle": "Laser Cutting Part",
+      "cataloguePage": 9,
+      "slug": "laser-cutting-part",
+      "title": "Laser Cut Flat Metal Parts",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/laser-cutting-part.md",
+      "canonical": "https://realjetech.com/products/laser-cutting-part.html",
+      "seoTitle": "Laser Cut Flat Metal Parts | Realjet",
+      "description": "REALJET offers laser cut flat metal parts. Review outer contour, internal cutouts and burr direction against your equipment drawings before production.",
+      "sourceHtmlSha256": "077fedaa1c19a1cd7b71afa350a3a5fcac9b3802b2acb53f7b7704c38b8d46d4",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/laser-cutting-part48068005878.jpg",
+          "sourceSha256": "69eef1356ed88747b5f63f2d3f3a9d32f8f46452c8ef811bd8ab12ec1d24b81d",
+          "published": "/images/products/sheet-metal/laser-cutting-part.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/laser-cut-aluminum.html",
+      "sourceTitle": "Laser Cut Aluminum",
+      "cataloguePage": 9,
+      "slug": "laser-cut-aluminum",
+      "title": "Laser Cut Aluminum Parts",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/laser-cut-aluminum.md",
+      "canonical": "https://realjetech.com/products/laser-cut-aluminum.html",
+      "seoTitle": "Laser Cut Aluminum Parts | Realjet",
+      "description": "REALJET offers laser cut aluminum parts. Review alloy choice, fine webs and surface protection against your equipment drawings before production.",
+      "sourceHtmlSha256": "e1fe563cf5935975527c90557297fb8b820af65f6609141f5b450f5a3b6b4d93",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/laser-cut-aluminum22351809174.jpg",
+          "sourceSha256": "fab4d45d7778a0db17b9c85b3ffa32c27518cab467295bd0b2935c4c84566b15",
+          "published": "/images/products/sheet-metal/laser-cut-aluminum.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/sheet-metal-aluminum.html",
+      "sourceTitle": "Sheet Metal Aluminum",
+      "cataloguePage": 9,
+      "slug": "sheet-metal-aluminum",
+      "title": "Aluminum Sheet Equipment Components",
+      "family": "aluminum",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/sheet-metal-aluminum.md",
+      "canonical": "https://realjetech.com/products/sheet-metal-aluminum.html",
+      "seoTitle": "Aluminum Sheet Equipment Components | Realjet",
+      "description": "REALJET offers aluminum sheet equipment components. Review sheet stiffness, fastening method and mating geometry against your equipment drawings before production.",
+      "sourceHtmlSha256": "97c2cf799430b1a41e22bc40361c4c0bded82b549444960b9ff6c52c839b532b",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-aluminum42590411232.jpg",
+          "sourceSha256": "495cad86ab7505031c6256af2118c4c6cbadcf1014be8229b28a1c40d79b7e08",
+          "published": "/images/products/sheet-metal/sheet-metal-aluminum.webp",
+          "width": 730,
+          "height": 972,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-aluminum42594160447.jpg",
+          "sourceSha256": "c48d48478f8c947c789d4f2f672591c9839ee9bf8f6e48568c8a1713f1dedd6b",
+          "published": "/images/products/sheet-metal/sheet-metal-aluminum-detail-1.webp",
+          "width": 730,
+          "height": 973,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/sheet-metal-aluminum42596035457.jpg",
+          "sourceSha256": "23740ae9d4268dbff6d90bf52604bd24cc18fa07c7650bdfef46459acfddf6cd",
+          "published": "/images/products/sheet-metal/sheet-metal-aluminum-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/ss-fabrication.html",
+      "sourceTitle": "SS Fabrication",
+      "cataloguePage": 9,
+      "slug": "ss-fabrication",
+      "title": "Stainless Steel Fabrication for Equipment Parts",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/ss-fabrication.md",
+      "canonical": "https://realjetech.com/products/ss-fabrication.html",
+      "seoTitle": "Stainless Steel Fabrication for Equipment Parts | Realjet",
+      "description": "REALJET offers stainless steel fabrication for equipment parts. Review connection edges, assembly references and exposure conditions against your equipment drawings before production.",
+      "sourceHtmlSha256": "38746d3db43c7f964cb7aa23da3980a3d123b6027f5562419d8cc93ca6bc42b6",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/ss-fabrication58416147238.jpg",
+          "sourceSha256": "327d89d024cec38dc6779fb2934254db0d386028ae70395258fe2c64ca9ee0a4",
+          "published": "/images/products/sheet-metal/ss-fabrication.webp",
+          "width": 730,
+          "height": 486,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/bending/stainless-steel-custom.html",
+      "sourceTitle": "Stainless Steel Custom",
+      "cataloguePage": 9,
+      "slug": "stainless-steel-custom",
+      "title": "Custom Stainless Steel Formed Parts",
+      "family": "stainless",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/stainless-steel-custom.md",
+      "canonical": "https://realjetech.com/products/stainless-steel-custom.html",
+      "seoTitle": "Custom Stainless Steel Formed Parts | Realjet",
+      "description": "REALJET offers custom stainless steel formed parts. Review flange geometry, visible faces and fastener placement against your equipment drawings before production.",
+      "sourceHtmlSha256": "61a3b27168a799097967825ebeef11da126b883f15d99504045d013dee751ef2",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/stainless-steel-custom03470367503.jpg",
+          "sourceSha256": "2d2b22b89de18d9a7df85b82e993f1087309aa7fd4e16fb245fd9c146fb04d80",
+          "published": "/images/products/sheet-metal/stainless-steel-custom.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/ss-laser-cutting.html",
+      "sourceTitle": "SS Laser Cutting",
+      "cataloguePage": 9,
+      "slug": "ss-laser-cutting",
+      "title": "Stainless Steel Laser Cut Profiles",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/ss-laser-cutting.md",
+      "canonical": "https://realjetech.com/products/ss-laser-cutting.html",
+      "seoTitle": "Stainless Steel Laser Cut Profiles | Realjet",
+      "description": "REALJET offers stainless steel laser cut profiles. Review internal contours, cut-edge condition and protective film handling against your equipment drawings before production.",
+      "sourceHtmlSha256": "088114b9cf320281a6e7352780e6286ad7228ebbf63831ecad809ecd4721f290",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/ss-laser-cutting00393601243.jpg",
+          "sourceSha256": "30d557ef23907fc355ad2c5102635df9dcd19edff1e22c87e39a008855e5ada8",
+          "published": "/images/products/sheet-metal/ss-laser-cutting.webp",
+          "width": 730,
+          "height": 677,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202029238/ss-laser-cutting48168914088.jpg",
+          "sourceSha256": "ea443477dc9bba5f20f7c0c24fc50fad358e414f7c95fa29db94b1f91317c23d",
+          "published": "/images/products/sheet-metal/ss-laser-cutting-detail-1.webp",
+          "width": 700,
+          "height": 700,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        },
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/ss-laser-cutting00533397417.jpg",
+          "sourceSha256": "c9236385efb9379b60fd2221f8cd6f2c4e689a21dfa8bd29678403ef4cea8399",
+          "published": "/images/products/sheet-metal/ss-laser-cutting-detail-2.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/ss-welding.html",
+      "sourceTitle": "SS Welding",
+      "cataloguePage": 9,
+      "slug": "ss-welding",
+      "title": "Stainless Steel Welding Assemblies",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/ss-welding.md",
+      "canonical": "https://realjetech.com/products/ss-welding.html",
+      "seoTitle": "Stainless Steel Welding Assemblies | Realjet",
+      "description": "REALJET offers stainless steel welding assemblies. Review joint design, heat marking and post-weld finishing against your equipment drawings before production.",
+      "sourceHtmlSha256": "728d16c9831c84163f34bfb2b9f1ed6171c105bfaeb2e6db4169440fe07e1780",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/ss-welding01478553734.jpg",
+          "sourceSha256": "1443c2fbac60a062d88e4a5c2e855e67a80591f33d7557a5851abdaf4cb8b5e9",
+          "published": "/images/products/sheet-metal/ss-welding.webp",
+          "width": 730,
+          "height": 504,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/welding/iron-welding.html",
+      "sourceTitle": "Iron Welding",
+      "cataloguePage": 9,
+      "slug": "iron-welding",
+      "title": "Mild Steel Welded Equipment Parts",
+      "family": "welding",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/iron-welding.md",
+      "canonical": "https://realjetech.com/products/iron-welding.html",
+      "seoTitle": "Mild Steel Welded Equipment Parts | Realjet",
+      "description": "REALJET offers mild steel welded equipment parts. Review base material identity, joint preparation and connection geometry against your equipment drawings before production.",
+      "sourceHtmlSha256": "882925f2cd729dd6e5d9e970f0885dbd88997a0f8119c464eedec94ce2fa0df8",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/iron-welding19382607908.jpg",
+          "sourceSha256": "30c98acc9b6b6f1a4f49b141caca3ae82825b72712f5da1951da18cf98a576ea",
+          "published": "/images/products/sheet-metal/iron-welding.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/custom-box-and-case/iron-fabrication.html",
+      "sourceTitle": "Iron Fabrication",
+      "cataloguePage": 9,
+      "slug": "iron-fabrication",
+      "title": "Ferrous Metal Fabricated Components",
+      "family": "carbon",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/iron-fabrication.md",
+      "canonical": "https://realjetech.com/products/iron-fabrication.html",
+      "seoTitle": "Ferrous Metal Fabricated Components | Realjet",
+      "description": "REALJET offers ferrous metal fabricated components. Review material grade, section geometry and surface protection against your equipment drawings before production.",
+      "sourceHtmlSha256": "3d3cb8723b5f46656c21dead99ede5515ebb3a5693b92335148d1a1435b5f0cd",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/iron-fabrication40023288462.jpg",
+          "sourceSha256": "e0122301471a39ba96e720b6ef6256a11e5bd915fee59f4e9c797f76211ffb42",
+          "published": "/images/products/sheet-metal/iron-fabrication.webp",
+          "width": 730,
+          "height": 730,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    },
+    {
+      "source": "https://www.starwaymetals.com/sheet-metal-fabrication/laser-cutting-service/steel-laser-cutting.html",
+      "sourceTitle": "Steel Laser Cutting",
+      "cataloguePage": 9,
+      "slug": "steel-laser-cutting",
+      "title": "Steel Laser Cut Plates and Profiles",
+      "family": "cutting",
+      "status": "new rewritten REALJET page",
+      "contentFile": "content/products/steel-laser-cutting.md",
+      "canonical": "https://realjetech.com/products/steel-laser-cutting.html",
+      "seoTitle": "Steel Laser Cut Plates and Profiles | Realjet",
+      "description": "REALJET offers steel laser cut plates and profiles. Review plate grade, thickness, hole shape and cut-edge finish against your equipment drawings before production.",
+      "sourceHtmlSha256": "cb3c6510e8484c2d51c09c63620eeb2921e11a39622ea3bbdc412b44fa072785",
+      "images": [
+        {
+          "source": "https://www.starwaymetals.com/uploads/202129238/steel-laser-cutting02467265540.jpg",
+          "sourceSha256": "8546bf1e06ebe0a4bc2c0afd670ce4724705079c555c30dc20cb628e226d3aff",
+          "published": "/images/products/sheet-metal/steel-laser-cutting.webp",
+          "width": 730,
+          "height": 548,
+          "review": "visually reviewed; selected unbranded representative image",
+          "conversion": "WebP, maximum 1400 pixels on longest edge",
+          "crossSource": null
+        }
+      ]
+    }
+  ],
+  "imageEditing": {
+    "mode": "built-in image_gen tool, guided by imagegen skill",
+    "preservation": "Product photographs were reviewed before editing. Outputs were visually checked against originals; branding was removed and images are presented as representative custom-fabrication examples.",
+    "assets": [
+      {
+        "product": "custom-metalworks",
+        "file": "public/images/products/sheet-metal/custom-metalworks.webp",
+        "prompt": "Remove both brand and warning labels; retain black case geometry, cover seams, camera angle, red background and white tabletop."
+      },
+      {
+        "product": "black-sheet-metal",
+        "file": "public/images/products/sheet-metal/black-sheet-metal.webp",
+        "prompt": "Remove only JETWAVE lettering by filling letter-shaped openings with matching metal; retain all other holes, contours, folds, finish and background."
+      },
+      {
+        "product": "commercial-sheet-metal",
+        "file": "public/images/products/sheet-metal/commercial-sheet-metal.webp",
+        "prompt": "Remove only the brand lettering on the pink panel; retain box geometry, openings, colour, camera angle and background."
+      }
+    ]
+  }
+}

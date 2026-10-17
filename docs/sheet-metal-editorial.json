@@ -1,0 +1,965 @@
+[
+  {
+    "sourceSlug": "sheet-metal-service-1",
+    "title": "Custom Sheet Metal Processing Service",
+    "family": "general",
+    "purpose": "coordinate cut, formed and joined parts for a new equipment assembly",
+    "features": "prototype scope, mating components and drawing revisions",
+    "review": "Approve the manufacturing definition before ordering repeat batches.",
+    "material": "steel, stainless steel, aluminum and specified nonferrous sheet"
+  },
+  {
+    "sourceSlug": "custom-laser-cut-metal-frame-chassis",
+    "title": "Custom Laser Cut Metal Frame Chassis",
+    "family": "chassis",
+    "purpose": "combine mounting points, ventilation and connector access in an equipment chassis",
+    "features": "internal mounting positions, flanges and panel cutouts",
+    "review": "Check formed dimensions against the installation layout.",
+    "material": "steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "custom-automotive-metal-mounting-bracket",
+    "title": "Custom Automotive Metal Mounting Brackets",
+    "family": "brackets",
+    "purpose": "position vehicle components around restricted mounting spaces",
+    "features": "offset bends, slotted fastener holes and reinforcement tabs",
+    "review": "Review load direction, vibration exposure and access to fasteners; vehicle validation remains part of the agreed project scope.",
+    "material": "carbon steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "precision-cnc-bending-aluminum-chassis",
+    "title": "CNC Bent Aluminum Chassis",
+    "family": "chassis",
+    "purpose": "house industrial electronics while reducing enclosure weight",
+    "features": "alloy and temper, bend radii and board clearances",
+    "review": "Review bendability before choosing the aluminum grade; measure hole-to-bend relationships after forming.",
+    "material": "specified aluminum sheet"
+  },
+  {
+    "sourceSlug": "stainless-steel-angle-support-bracket",
+    "title": "Stainless Steel Angle Support Brackets",
+    "family": "brackets",
+    "purpose": "support equipment panels and corner joints in moisture-exposed installations",
+    "features": "leg lengths, angle, hole spacing and edge condition",
+    "review": "Confirm the grade against the service environment and inspect the included angle after bending.",
+    "material": "specified stainless steel sheet or plate"
+  },
+  {
+    "sourceSlug": "precision-19-inch-rackmount-server-chassis",
+    "title": "Custom 19-Inch Rackmount Server Chassis",
+    "family": "chassis",
+    "purpose": "fit electronics into a rack while accommodating nonstandard internal layouts",
+    "features": "rack interfaces, equipment depth, airflow openings and slide-rail attachment",
+    "review": "Confirm rack mounting references and test the assembly with its intended internal components.",
+    "material": "steel or aluminum to the approved chassis design"
+  },
+  {
+    "sourceSlug": "custom-heavy-duty-steel-mounting-bracket",
+    "title": "Heavy Duty Steel Mounting Brackets",
+    "family": "brackets",
+    "purpose": "connect machinery components to frames through defined load paths",
+    "features": "gussets, cantilever reach, bolt patterns and mounting planes",
+    "review": "Supply the load case; thickness and reinforcement need engineering review rather than selection from appearance.",
+    "material": "specified structural or carbon steel"
+  },
+  {
+    "sourceSlug": "wall-mount-sheet-metal-cabinet",
+    "title": "Wall Mount Sheet Metal Cabinets",
+    "family": "cabinets",
+    "purpose": "locate control hardware near machinery without using floor space",
+    "features": "wall attachments, door swing, removable mounting plates and gland entries",
+    "review": "Review loaded cabinet mass, wall fixings and clearance for door opening.",
+    "material": "carbon steel, stainless steel or galvanized sheet"
+  },
+  {
+    "sourceSlug": "custom-ip65-waterproof-metal-box",
+    "title": "Custom Metal Boxes for IP65 Projects",
+    "family": "enclosures",
+    "purpose": "develop a sealed enclosure around a defined ingress-protection requirement",
+    "features": "gasket continuity, latch compression and cable gland interfaces",
+    "review": "IP65 is a project target: final assembly testing and applicable evidence must be agreed; openings and fitted hardware affect the result.",
+    "material": "coated steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "stainless-steel-electronics-junction-box",
+    "title": "Stainless Steel Electronics Junction Boxes",
+    "family": "enclosures",
+    "purpose": "organize electrical terminations in a corrosion-conscious housing",
+    "features": "cable entry layout, earth studs and accessible terminal mounting",
+    "review": "Select grade for the exposure, check gland interfaces and specify any enclosure protection test before ordering.",
+    "material": "specified stainless steel"
+  },
+  {
+    "sourceSlug": "powder-coated-aluminum-equipment-enclosure",
+    "title": "Powder Coated Aluminum Equipment Enclosures",
+    "family": "enclosures",
+    "purpose": "combine lightweight equipment housing with a specified exterior finish",
+    "features": "panel fit, coating colour, masking and grounding contact areas",
+    "review": "Account for coating build at fitted edges and leave defined electrical contact areas uncoated where required.",
+    "material": "aluminum sheet with a compatible coating system"
+  },
+  {
+    "sourceSlug": "heavy-duty-sheet-metal-control-box",
+    "title": "Heavy Duty Sheet Metal Control Boxes",
+    "family": "enclosures",
+    "purpose": "protect control hardware in machinery installations with substantial mounting requirements",
+    "features": "reinforced mounting surfaces, removable panels and cable management",
+    "review": "Confirm hardware mass, mounting orientation and vibration conditions before selecting wall and panel construction.",
+    "material": "carbon steel or stainless steel to drawing"
+  },
+  {
+    "sourceSlug": "custom-outdoor-electrical-enclosure",
+    "title": "Custom Outdoor Electrical Enclosures",
+    "family": "enclosures",
+    "purpose": "configure an electrical housing for a specified outdoor installation",
+    "features": "door sealing, rain exposure, cable entries and mounting brackets",
+    "review": "Specify exposure, condensation control and required testing; an outdoor location alone does not define the enclosure rating.",
+    "material": "coated steel, stainless steel or aluminum as specified"
+  },
+  {
+    "sourceSlug": "custom-injection-mold",
+    "title": "Custom Injection Moulded Components",
+    "family": "tooling",
+    "purpose": "produce nonmetallic equipment parts from an approved moulded-part design",
+    "features": "resin selection, parting lines, draft, shrinkage and tooling ownership",
+    "review": "This supply concerns moulded parts and project tooling, separate from sheet-metal fabrication; confirm tooling and sample acceptance before production.",
+    "material": "customer-specified moulding resin after feasibility review"
+  },
+  {
+    "sourceSlug": "sheet-metal-for-stamping",
+    "title": "Sheet Metal Stamping Components",
+    "family": "stamping",
+    "purpose": "repeat formed component geometry across a planned production quantity",
+    "features": "die features, hole patterns, material feed and edge requirements",
+    "review": "Compare tooling cost with expected volume and approve initial parts before releasing the batch.",
+    "material": "steel, stainless steel, aluminum or copper to drawing"
+  },
+  {
+    "sourceSlug": "custom-metal-stampings",
+    "title": "Custom Metal Stampings",
+    "family": "stamping",
+    "purpose": "combine cutouts, embossing and formed details in repeat-order OEM parts",
+    "features": "forming sequence, burr direction and assembled fit",
+    "review": "Define which dimensions are measured before and after forming and establish die maintenance requirements for repeat orders.",
+    "material": "specified formable metal stock"
+  },
+  {
+    "sourceSlug": "aluminum-sheet-fabrication",
+    "title": "Aluminum Sheet Fabrication for OEM Parts",
+    "family": "aluminum",
+    "purpose": "supply lightweight brackets, panels and formed housings for equipment builders",
+    "features": "alloy, temper, stiffness and fastening interfaces",
+    "review": "Review small bend radii and hardware engagement before freezing the design.",
+    "material": "specified aluminum alloy and temper"
+  },
+  {
+    "sourceSlug": "laser-cutting-service-parts",
+    "title": "Laser Cut and Formed Equipment Parts",
+    "family": "cutting",
+    "purpose": "turn custom profiles into equipment brackets and mounting parts",
+    "features": "cut edges, internal openings and downstream forming allowances",
+    "review": "Use the final drawing for acceptance and keep drawing revision control across cutting and bending.",
+    "material": "steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "custom-precision-stainless-steel-fabrication",
+    "title": "Precision Stainless Steel Fabricated Parts",
+    "family": "stainless",
+    "purpose": "integrate cut and formed stainless parts with close assembly interfaces",
+    "features": "reference datums, weld access and finish continuity",
+    "review": "Identify the functional dimensions separately from cosmetic surfaces and confirm the inspection method.",
+    "material": "specified stainless steel grade"
+  },
+  {
+    "sourceSlug": "cnc-cutting-sheet-metal",
+    "title": "CNC Cut Sheet Metal Profiles",
+    "family": "cutting",
+    "purpose": "prepare detailed flat patterns for machinery and enclosure assemblies",
+    "features": "small cutouts, hole spacing, narrow webs and deburring",
+    "review": "Distinguish laser-cut features from those needing secondary machining; sheet thickness influences achievable detail.",
+    "material": "specified steel, stainless steel or aluminum sheet"
+  },
+  {
+    "sourceSlug": "sheet-metal-bending-service",
+    "title": "Sheet Metal Bending Service",
+    "family": "bending",
+    "purpose": "form flat blanks into brackets and multi-flange equipment parts",
+    "features": "bend sequence, minimum flange access and springback",
+    "review": "Check overall geometry after bending instead of relying only on the flat-pattern dimensions.",
+    "material": "metal sheet selected for the bend geometry"
+  },
+  {
+    "sourceSlug": "welding-machining",
+    "title": "Welded Components with Machined Interfaces",
+    "family": "welding",
+    "purpose": "combine fabricated structures with accurate mounting and locating surfaces",
+    "features": "welding sequence, machining datums and allowance after welding",
+    "review": "Plan the relationship between weld distortion and final machining before production.",
+    "material": "weldable steel or stainless steel to drawing"
+  },
+  {
+    "sourceSlug": "welding-sheet-metal",
+    "title": "Welded Sheet Metal Housings and Covers",
+    "family": "welding",
+    "purpose": "join formed sheet sections into equipment housings and protective covers",
+    "features": "seam position, joint access and appearance requirements",
+    "review": "Define weld continuity and permitted distortion; a visually closed seam is not evidence of a sealed assembly.",
+    "material": "weldable sheet metal matched to the application"
+  },
+  {
+    "sourceSlug": "sheet-metal-forming",
+    "title": "Formed Sheet Metal Mounting Parts",
+    "family": "forming",
+    "purpose": "create raised tabs, channels and mounting features in a sheet component",
+    "features": "feature height, material flow and flatness of attachment surfaces",
+    "review": "Check formed features against mating parts and evaluate whether local tooling is needed.",
+    "material": "specified formable steel or aluminum sheet"
+  },
+  {
+    "sourceSlug": "sheet-metal-laser-cutting",
+    "title": "Sheet Metal Laser Cutting Service",
+    "family": "cutting",
+    "purpose": "cut profiles and repeated openings without dedicated stamping dies",
+    "features": "nesting, kerf allowances and cut-edge quality",
+    "review": "Supply native profiles with units and revision details; identify features requiring tighter secondary processing.",
+    "material": "laser-compatible metal sheet to specification"
+  },
+  {
+    "sourceSlug": "metal-manufacturing",
+    "title": "Metal Panel and Tray Manufacturing",
+    "family": "panels",
+    "purpose": "supply cut-and-folded panels and trays for equipment integration",
+    "features": "perimeter flanges, openings and installation datum edges",
+    "review": "Inspect flange-to-opening relationships so the finished panel fits its adjacent housing.",
+    "material": "specified steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "custom-metalworks",
+    "title": "Custom Fabricated Metal Equipment Cases",
+    "family": "boxes",
+    "purpose": "build a fitted metal case around the space and access needs of equipment",
+    "features": "cover seams, internal envelope and surface appearance",
+    "review": "The photograph represents a fabricated case only; electrical contents and performance are outside this component description.",
+    "material": "formed and finished steel or other specified sheet"
+  },
+  {
+    "sourceSlug": "metal-fabs",
+    "title": "Custom Formed Metal Angle Parts",
+    "family": "brackets",
+    "purpose": "provide repeatable angle connections between equipment panels",
+    "features": "hole centres, bend line and included angle",
+    "review": "Review the effect of bend position on the final hole-to-hole mounting distance.",
+    "material": "steel or other specified formable sheet"
+  },
+  {
+    "sourceSlug": "steel-sheet-metal",
+    "title": "Fabricated Steel Sheet Covers",
+    "family": "carbon",
+    "purpose": "produce stiffened steel covers and folded machine panels",
+    "features": "flange depth, corner relief and attachment tabs",
+    "review": "Confirm fit around the protected equipment and finish the exposed cut edges.",
+    "material": "carbon steel sheet with the specified finish"
+  },
+  {
+    "sourceSlug": "bend-plate",
+    "title": "Custom Bent Plate Assemblies",
+    "family": "bending",
+    "purpose": "form plate-based housings and angled equipment structures",
+    "features": "bend radius, section stiffness and joining access",
+    "review": "Confirm tooling reach and check diagonal dimensions after forming and assembly.",
+    "material": "specified metal plate appropriate to the bend design"
+  },
+  {
+    "sourceSlug": "zinc-sheet-metal",
+    "title": "Galvanized Sheet Metal Fabrication",
+    "family": "carbon",
+    "purpose": "fabricate protective panels from zinc-coated steel sheet",
+    "features": "cut-edge condition, formed corners and joining method",
+    "review": "Review coating damage at bends and joints and agree any local coating repair.",
+    "material": "specified galvanized steel sheet"
+  },
+  {
+    "sourceSlug": "sheet-metal-folding",
+    "title": "Sheet Metal Folding Service",
+    "family": "bending",
+    "purpose": "fold long edges and returns for equipment panels and enclosures",
+    "features": "flange straightness, bend sequence and mating-edge position",
+    "review": "Specify the measurement datums for long folded parts and inspect twist as well as local dimensions.",
+    "material": "specified formable metal sheet"
+  },
+  {
+    "sourceSlug": "thin-sheet-metal",
+    "title": "Thin Sheet Metal Component Fabrication",
+    "family": "forming",
+    "purpose": "make light-gauge cut and formed components with limited section stiffness",
+    "features": "small tabs, edge condition and handling distortion",
+    "review": "Review thin webs and unsupported features; packaging should prevent bending in transit.",
+    "material": "specified thin-gauge metal sheet"
+  },
+  {
+    "sourceSlug": "thick-sheet-metal",
+    "title": "Thick Sheet Metal and Plate Components",
+    "family": "plates",
+    "purpose": "produce heavier flat and formed parts for equipment mounting",
+    "features": "plate grade, cut profile and required flatness",
+    "review": "Agree how flatness and hole geometry will be verified; precision interfaces may need machining.",
+    "material": "specified plate material and thickness"
+  },
+  {
+    "sourceSlug": "black-sheet-metal",
+    "title": "Black Finished Sheet Metal Panels",
+    "family": "panels",
+    "purpose": "supply equipment panels with a defined dark exterior finish",
+    "features": "visible surfaces, edge coverage and masked interfaces",
+    "review": "State colour, gloss and appearance zones; coating selection is separate from the base-metal specification.",
+    "material": "specified sheet metal with a black finish"
+  },
+  {
+    "sourceSlug": "sheet-metal-solutions",
+    "title": "Sheet Metal Equipment Assembly Solutions",
+    "family": "general",
+    "purpose": "coordinate several fabricated parts into an equipment housing or subassembly",
+    "features": "part interfaces, assembly order and shared drawing revisions",
+    "review": "Review the assembled configuration instead of quoting each part without its mating references.",
+    "material": "materials defined for each part in the bill of materials"
+  },
+  {
+    "sourceSlug": "sheet-metal-company",
+    "title": "Drawing-Based Sheet Metal Manufacturing",
+    "family": "general",
+    "purpose": "transfer an approved component design into a defined fabrication order",
+    "features": "drawing completeness, process scope and inspection responsibility",
+    "review": "Agree what is supplied as a loose part, a subassembly or a finished component before costing.",
+    "material": "metal sheet and hardware specified by the buyer"
+  },
+  {
+    "sourceSlug": "commercial-sheet-metal",
+    "title": "Custom Finished Sheet Metal Housings",
+    "family": "enclosures",
+    "purpose": "combine a formed housing with a customer-specified external appearance",
+    "features": "visible faces, open-top geometry and panel finish",
+    "review": "Approve colour and texture against a sample; the illustrated finish is a representative option.",
+    "material": "specified sheet metal with an agreed finish"
+  },
+  {
+    "sourceSlug": "custom-stainless-steel-fabrication",
+    "title": "Custom Stainless Steel Equipment Fabrication",
+    "family": "stainless",
+    "purpose": "supply stainless components for equipment assemblies with exposed surfaces",
+    "features": "joint design, mounting edges and surface condition",
+    "review": "Review handling and finishing to limit cross-contamination and visible scratches.",
+    "material": "specified stainless steel grade"
+  },
+  {
+    "sourceSlug": "custom-sheet-metal",
+    "title": "Custom Sheet Metal OEM Components",
+    "family": "general",
+    "purpose": "adapt individual cut and formed components to a buyer's equipment design",
+    "features": "hole pattern, bend geometry and connected parts",
+    "review": "Confirm the component function and acceptance drawing before choosing a manufacturing route.",
+    "material": "steel, aluminum or stainless steel to drawing"
+  },
+  {
+    "sourceSlug": "custom-steel-fabrication",
+    "title": "Custom Steel Fabrication for Machinery",
+    "family": "carbon",
+    "purpose": "manufacture steel equipment parts requiring cutting, forming and joining",
+    "features": "section layout, stiffening details and connection locations",
+    "review": "Identify load-bearing interfaces and distinguish fabrication tolerances from machined fits.",
+    "material": "specified steel grades and sections"
+  },
+  {
+    "sourceSlug": "stainless-steel-sheet-metal-fabrication",
+    "title": "Stainless Steel Sheet Fabrication",
+    "family": "stainless",
+    "purpose": "make formed stainless sheet parts with coordinated openings and flanges",
+    "features": "material thickness, grain direction and mating clearances",
+    "review": "Define the finish direction and which dimensions apply to the finished formed part.",
+    "material": "specified stainless sheet stock"
+  },
+  {
+    "sourceSlug": "stainless-steel-fabrication",
+    "title": "Stainless Steel Welded Components",
+    "family": "stainless",
+    "purpose": "join stainless parts into equipment-ready fabricated assemblies",
+    "features": "weld placement, heat distortion and post-weld surface condition",
+    "review": "Specify weld acceptance and surface treatment for the intended exposure.",
+    "material": "weldable stainless steel grades to drawing"
+  },
+  {
+    "sourceSlug": "laser-cutting",
+    "title": "Laser Cut Custom Metal Components",
+    "family": "cutting",
+    "purpose": "produce detailed component profiles and varied batch geometries",
+    "features": "cut-path definition, piercing locations and small internal features",
+    "review": "Quote against a dimensioned drawing together with the cutting file, rather than a profile file alone.",
+    "material": "specified laser-compatible metal stock"
+  },
+  {
+    "sourceSlug": "metal-bend",
+    "title": "Custom Metal Bend Components",
+    "family": "bending",
+    "purpose": "produce angled and offset connections for equipment installation",
+    "features": "included angles, offset height and bolt clearance",
+    "review": "Use functional datums to check the final position of interfaces on different faces.",
+    "material": "specified metal sheet or plate"
+  },
+  {
+    "sourceSlug": "sheet-metal-suppliers",
+    "title": "Sheet Metal Component Supply for OEMs",
+    "family": "general",
+    "purpose": "organize repeat delivery of approved sheet-metal component sets",
+    "features": "part numbering, revision status and delivery condition",
+    "review": "Define lot identification and packing by component so production staff can receive parts against the assembly bill.",
+    "material": "buyer-approved material grades"
+  },
+  {
+    "sourceSlug": "sheet-metal-manufacturing",
+    "title": "Sheet Metal Manufacturing for Equipment Builders",
+    "family": "general",
+    "purpose": "link profiling, forming and assembly for new or repeat OEM orders",
+    "features": "process sequencing, hardware sourcing and production release",
+    "review": "Agree the sample approval and change-control steps before scaling the order.",
+    "material": "metal sheet selected per component drawing"
+  },
+  {
+    "sourceSlug": "sheet-metal-cabinet",
+    "title": "Custom Sheet Metal Cabinet Panels",
+    "family": "cabinets",
+    "purpose": "create the shell and panels of a fitted equipment cabinet",
+    "features": "door-to-frame fit, panel returns and mounting features",
+    "review": "Confirm the cabinet envelope and access requirements before detailing panel joints.",
+    "material": "steel, stainless steel or aluminum to specification"
+  },
+  {
+    "sourceSlug": "fabrication-welding",
+    "title": "Fabrication Welding for Equipment Assemblies",
+    "family": "welding",
+    "purpose": "join fabricated parts into machinery-ready metal assemblies",
+    "features": "joint preparation, weld sequence and fixture references",
+    "review": "Specify which welds require examination and agree accessible inspection points.",
+    "material": "weldable metal selected for the assembly"
+  },
+  {
+    "sourceSlug": "copper-sheet-metal-fabrication",
+    "title": "Copper Sheet Metal Components",
+    "family": "copper",
+    "purpose": "make formed copper parts for defined electrical or thermal interfaces",
+    "features": "contact surfaces, bend radii and fastening clearances",
+    "review": "Electrical loading and insulation requirements belong in the project design; confirm contact-area finish and inspection.",
+    "material": "specified copper grade and temper"
+  },
+  {
+    "sourceSlug": "custom-sheet-metal-fabrication",
+    "title": "Custom Sheet Metal Fabricated Assemblies",
+    "family": "general",
+    "purpose": "bring multiple cut, bent and joined parts into one supply package",
+    "features": "subassembly boundaries, hardware and installation references",
+    "review": "List assembly operations explicitly so the delivered condition matches the customer's production line.",
+    "material": "drawing-specified metals and purchased hardware"
+  },
+  {
+    "sourceSlug": "structural-steel-fabrication",
+    "title": "Structural Steel Equipment Supports",
+    "family": "frames",
+    "purpose": "fabricate supporting structures for machinery and industrial equipment",
+    "features": "load path, base connections and section alignment",
+    "review": "Provide the structural design basis; load capacity is confirmed for the approved design rather than the example photograph.",
+    "material": "specified structural steel sections and plate"
+  },
+  {
+    "sourceSlug": "the-importance-of-providing-customers-with",
+    "title": "Sheet Metal Welded Assemblies",
+    "family": "welding",
+    "purpose": "join folded sheet components where seam layout affects fit and appearance",
+    "features": "weld access, heat input and local stiffening",
+    "review": "Review the permitted distortion and finish quality on each face before defining the joining sequence.",
+    "material": "weldable sheet steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "sheet-metal-service",
+    "title": "Sheet Metal Prototype and Batch Service",
+    "family": "general",
+    "purpose": "move a sheet-metal component from an initial sample to repeat supply",
+    "features": "prototype learning, drawing updates and batch acceptance",
+    "review": "Record changes made during sample approval and issue a controlled production revision.",
+    "material": "metal sheet and hardware agreed during review"
+  },
+  {
+    "sourceSlug": "sheet-metal-fabrication-service",
+    "title": "Integrated Sheet Metal Fabrication Service",
+    "family": "general",
+    "purpose": "coordinate cutting, bending, finishing and component assembly in one order",
+    "features": "scope boundaries, supplier interfaces and packing requirements",
+    "review": "Confirm which operations and documentation are included in the quotation.",
+    "material": "materials specified across the fabrication package"
+  },
+  {
+    "sourceSlug": "sheet-metal-part",
+    "title": "Custom Sheet Metal Parts",
+    "family": "forming",
+    "purpose": "produce a single equipment part with application-specific cut and formed features",
+    "features": "functional edges, tabs and assembly clearances",
+    "review": "Identify the surfaces that locate the part in its final assembly and inspect from those datums.",
+    "material": "specified formable metal stock"
+  },
+  {
+    "sourceSlug": "sheet-metal-component",
+    "title": "Sheet Metal Subassembly Components",
+    "family": "general",
+    "purpose": "supply fabrication-ready components for a larger machinery assembly",
+    "features": "part identification, mating hardware and final assembly references",
+    "review": "Review tolerance accumulation where several sheet-metal parts meet.",
+    "material": "metal grades and thicknesses defined by the component drawings"
+  },
+  {
+    "sourceSlug": "custom-aluminum-case",
+    "title": "Custom Aluminum Equipment Cases",
+    "family": "boxes",
+    "purpose": "house equipment in a lightweight fabricated case",
+    "features": "cover alignment, fixing points and external dimensions",
+    "review": "Confirm internal usable space after forming, hardware installation and finishing.",
+    "material": "specified aluminum alloy and temper"
+  },
+  {
+    "sourceSlug": "sheet-metal-case",
+    "title": "Custom Sheet Metal Cases",
+    "family": "boxes",
+    "purpose": "provide a formed case around controls or mechanical equipment",
+    "features": "body-to-cover seams, access openings and mounting provisions",
+    "review": "Define whether the order covers a bare shell or an assembled case with hardware.",
+    "material": "specified sheet steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "bending-aluminum-sheet-metal",
+    "title": "Aluminum Sheet Bending Service",
+    "family": "bending",
+    "purpose": "form aluminum panels where appearance and weight both matter",
+    "features": "grain direction, alloy temper and visible bend surfaces",
+    "review": "Approve bend radii for the selected alloy and check for surface marking.",
+    "material": "specified aluminum sheet grade and temper"
+  },
+  {
+    "sourceSlug": "metal-bending-service",
+    "title": "Metal Bending for Custom Equipment Parts",
+    "family": "bending",
+    "purpose": "form bracket, channel and panel geometries from a released flat pattern",
+    "features": "tool access, bend order and springback allowance",
+    "review": "Confirm the inspection state and measure the part in the agreed free or restrained condition.",
+    "material": "specified metal sheet or plate suitable for forming"
+  },
+  {
+    "sourceSlug": "bending-steel-plate",
+    "title": "Steel Plate Bending Components",
+    "family": "bending",
+    "purpose": "produce stiff angled parts and formed plate sections",
+    "features": "plate thickness, bend radius and opening position near bends",
+    "review": "Confirm material strength and tooling feasibility before release; examine the bend area to the specified criteria.",
+    "material": "specified carbon or structural steel plate"
+  },
+  {
+    "sourceSlug": "bending-stainless-steel-sheet",
+    "title": "Stainless Steel Sheet Bending",
+    "family": "bending",
+    "purpose": "form stainless panels and brackets with defined surface appearance",
+    "features": "bend allowance, surface protection and mounting geometry",
+    "review": "Check springback, tool marks and finished angle for the selected grade.",
+    "material": "specified stainless steel sheet"
+  },
+  {
+    "sourceSlug": "bending-aluminium-sheet",
+    "title": "Multi-Bend Aluminum Sheet Components",
+    "family": "bending",
+    "purpose": "create several connected flanges in lightweight equipment parts",
+    "features": "multi-bend sequence, clearance to tooling and edge alignment",
+    "review": "Review closed and narrow sections early so all bends remain accessible.",
+    "material": "specified formable aluminum alloy"
+  },
+  {
+    "sourceSlug": "custom-aluminum-box",
+    "title": "Custom Aluminum Boxes",
+    "family": "boxes",
+    "purpose": "create lightweight boxes with application-specific fixing and access points",
+    "features": "box depth, folded corners and lid fasteners",
+    "review": "Review the lid seating and screw engagement after finishing.",
+    "material": "specified aluminum sheet and compatible hardware"
+  },
+  {
+    "sourceSlug": "sheet-metal-box-fabrication",
+    "title": "Sheet Metal Box Fabrication",
+    "family": "boxes",
+    "purpose": "build a repeatable box body from cut and formed panels",
+    "features": "corner joints, bottom geometry and cover fit",
+    "review": "Confirm joint style and the required assembled condition, including any seal or hardware.",
+    "material": "steel, stainless steel or aluminum to drawing"
+  },
+  {
+    "sourceSlug": "custom-tool-box-fabrication",
+    "title": "Custom Steel Tool and Equipment Boxes",
+    "family": "boxes",
+    "purpose": "organize tools or equipment within a fabricated steel box",
+    "features": "lid access, handles, reinforcement and internal layout",
+    "review": "Specify carrying loads and lifting points where used; the photo does not establish a rated load.",
+    "material": "specified steel sheet with a protective finish"
+  },
+  {
+    "sourceSlug": "aluminum-enclosure-box",
+    "title": "Aluminum Enclosure Boxes",
+    "family": "enclosures",
+    "purpose": "enclose equipment with a low-mass metal shell and fitted access",
+    "features": "connector layout, cover interface and grounding provisions",
+    "review": "Allow for finishing at fitted surfaces and specify electrical contact masking if needed.",
+    "material": "specified aluminum alloy"
+  },
+  {
+    "sourceSlug": "custom-metal-box",
+    "title": "Custom Metal Box Assemblies",
+    "family": "boxes",
+    "purpose": "combine a box body, cover and selected hardware into a ready-to-fit component",
+    "features": "panel interfaces, screw positions and internal clearances",
+    "review": "Check hardware access and verify the closed box envelope.",
+    "material": "buyer-specified sheet metal and hardware"
+  },
+  {
+    "sourceSlug": "steel-frame-fabrication",
+    "title": "Steel Frame Fabrication for Machinery",
+    "family": "frames",
+    "purpose": "supply welded support frames around approved machinery mounting positions",
+    "features": "frame diagonals, base mounting planes and local reinforcement",
+    "review": "Confirm weld and machining scope and define the datums used for final geometry checks.",
+    "material": "specified steel sections and plate"
+  },
+  {
+    "sourceSlug": "aluminum-frame-welding",
+    "title": "Welded Aluminum Frames",
+    "family": "frames",
+    "purpose": "join lightweight members into equipment frames and supports",
+    "features": "joint access, fixture points and post-weld alignment",
+    "review": "Review alloy weldability and distortion; strength requirements must account for the welded condition.",
+    "material": "specified weldable aluminum alloy"
+  },
+  {
+    "sourceSlug": "custom-metal-plate",
+    "title": "Custom Metal Mounting Plates",
+    "family": "plates",
+    "purpose": "provide a flat mounting reference for equipment components",
+    "features": "cut profile, hole locations and required face condition",
+    "review": "Separate cut features from precision holes and agree whether surface machining is needed.",
+    "material": "specified steel, stainless steel or aluminum plate"
+  },
+  {
+    "sourceSlug": "panel-fabrication",
+    "title": "Custom Equipment Panel Fabrication",
+    "family": "panels",
+    "purpose": "integrate openings and mounting features into machinery panels",
+    "features": "switch apertures, edge flanges and operator-access clearances",
+    "review": "Inspect the panel against the approved interface layout, including visible finish zones.",
+    "material": "specified sheet metal and finish"
+  },
+  {
+    "sourceSlug": "sheet-metal-frames",
+    "title": "Fabricated Sheet Metal Frames",
+    "family": "frames",
+    "purpose": "use folded and joined sheet sections to locate equipment components",
+    "features": "section stiffness, joined corners and mounting patterns",
+    "review": "Check the final frame geometry and how mating panels seat against it.",
+    "material": "specified steel, stainless steel or aluminum sheet"
+  },
+  {
+    "sourceSlug": "custom-stainless-steel-cabinets",
+    "title": "Custom Stainless Steel Cabinets",
+    "family": "cabinets",
+    "purpose": "combine equipment access and corrosion-conscious cabinet construction",
+    "features": "door fit, internal mounting and external finish direction",
+    "review": "Specify environment and cleaning requirements; any sealing performance needs separate confirmation.",
+    "material": "specified stainless steel grade"
+  },
+  {
+    "sourceSlug": "custom-cabinet-manufacturer",
+    "title": "Drawing-Based Equipment Cabinets",
+    "family": "cabinets",
+    "purpose": "develop a cabinet around nonstandard equipment and access requirements",
+    "features": "panel modularity, hinges, service openings and assembly sequence",
+    "review": "Approve the cabinet arrangement before releasing detailed panel drawings.",
+    "material": "specified sheet metal with compatible cabinet hardware"
+  },
+  {
+    "sourceSlug": "custom-metal-cabinets",
+    "title": "Custom Metal Cabinet Assemblies",
+    "family": "cabinets",
+    "purpose": "supply cabinet shells with the selected doors, panels and internal supports",
+    "features": "overall envelope, shelves or plates and door hardware",
+    "review": "Confirm fitted hardware and delivery condition so a shell-only quote is not confused with a complete cabinet.",
+    "material": "buyer-selected steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "sheet-metal-chassis",
+    "title": "Custom Sheet Metal Chassis Assemblies",
+    "family": "chassis",
+    "purpose": "locate electronic or mechanical equipment within a formed support shell",
+    "features": "component datums, connector access and removable covers",
+    "review": "Measure the finished chassis against the equipment mounting layout.",
+    "material": "specified sheet metal and mounting hardware"
+  },
+  {
+    "sourceSlug": "custom-mounting-bracket",
+    "title": "Custom Equipment Mounting Brackets",
+    "family": "brackets",
+    "purpose": "locate an equipment component between two defined mounting interfaces",
+    "features": "fastener pattern, offset and installation clearance",
+    "review": "Share mating-part details so the bracket geometry can be checked in assembly.",
+    "material": "steel, stainless steel or aluminum to drawing"
+  },
+  {
+    "sourceSlug": "custom-shelf-bracket",
+    "title": "Custom Shelf Support Brackets",
+    "family": "brackets",
+    "purpose": "connect shelves or equipment trays to supporting structures",
+    "features": "support span, attachment pattern and local stiffening",
+    "review": "Provide the intended loading and fixing arrangement; load ratings are design-specific.",
+    "material": "specified sheet or plate material"
+  },
+  {
+    "sourceSlug": "custom-steel-bracket",
+    "title": "Custom Steel Connection Brackets",
+    "family": "brackets",
+    "purpose": "connect steel equipment members through formed or welded brackets",
+    "features": "leg geometry, gusset placement and bolt clearance",
+    "review": "Check the relationship of connection faces and specify the protective finish.",
+    "material": "specified carbon or structural steel"
+  },
+  {
+    "sourceSlug": "custom-metal-bracket-fabricator",
+    "title": "Multi-Feature Fabricated Metal Brackets",
+    "family": "brackets",
+    "purpose": "combine cutouts, bends and attachment tabs in one equipment bracket",
+    "features": "interacting bends, mounting faces and assembly access",
+    "review": "Review whether all cut and formed features remain accessible for production and inspection.",
+    "material": "drawing-specified metal sheet or plate"
+  },
+  {
+    "sourceSlug": "sheet-metal-bracket",
+    "title": "Formed Sheet Metal Brackets",
+    "family": "brackets",
+    "purpose": "provide compact attachment points using folded sheet geometry",
+    "features": "flange height, hole-to-edge distances and bend radii",
+    "review": "Identify the functional mounting datum and check the finished bend angle.",
+    "material": "specified formable metal sheet"
+  },
+  {
+    "sourceSlug": "custom-sheet-metal-electronic-enclosure",
+    "title": "Custom Sheet Metal Electronic Enclosures",
+    "family": "enclosures",
+    "purpose": "fit boards, connectors and service openings around an electronic layout",
+    "features": "board clearance, ventilation and panel interface positions",
+    "review": "Confirm thermal and electrical design requirements with the equipment designer; the scope is the fabricated housing.",
+    "material": "specified sheet metal and enclosure hardware"
+  },
+  {
+    "sourceSlug": "custom-steel-plate-fabrication",
+    "title": "Custom Steel Plate Fabrication",
+    "family": "plates",
+    "purpose": "prepare steel plate components for installation in machinery structures",
+    "features": "grade, thickness, edge profile and attachment holes",
+    "review": "State the final mounting tolerances and any requirements for machined faces.",
+    "material": "specified carbon or structural steel plate"
+  },
+  {
+    "sourceSlug": "custom-metal-shelves",
+    "title": "Fabricated Steel Shelf Brackets",
+    "family": "brackets",
+    "purpose": "support equipment shelves through project-specific steel connections",
+    "features": "shelf attachment, wall or frame fixings and bracket projection",
+    "review": "Review loading and fastener access together; shelf support performance depends on the complete installation.",
+    "material": "specified steel sheet or plate"
+  },
+  {
+    "sourceSlug": "sheet-metal-shelves",
+    "title": "Custom Sheet Metal Shelves and Trays",
+    "family": "shelves",
+    "purpose": "organize equipment or components within a defined cabinet or frame space",
+    "features": "support span, folded edges and mounting provisions",
+    "review": "Specify distributed or point loading and check deflection criteria for the complete support arrangement.",
+    "material": "specified steel, stainless steel or aluminum sheet"
+  },
+  {
+    "sourceSlug": "custom-aluminum-storage-box",
+    "title": "Custom Metal Storage Boxes",
+    "family": "boxes",
+    "purpose": "provide storage volume and access within a fabricated equipment box",
+    "features": "lid arrangement, internal volume and carry or fixing provisions",
+    "review": "The material must be specified in the RFQ; the source name alone does not establish an aluminum construction.",
+    "material": "buyer-specified steel, aluminum or stainless steel"
+  },
+  {
+    "sourceSlug": "custom-cabinet-box",
+    "title": "Sheet Metal Enclosure Fabrication",
+    "family": "enclosures",
+    "purpose": "produce a fitted enclosure body with application-specific access panels",
+    "features": "panel joints, removable covers and internal mounting surfaces",
+    "review": "Agree the usable internal dimensions and assembly interfaces before quoting.",
+    "material": "specified sheet metal with selected enclosure hardware"
+  },
+  {
+    "sourceSlug": "metal-parts-fabrication",
+    "title": "Mixed Metal Parts Fabrication",
+    "family": "general",
+    "purpose": "coordinate varied fabricated component geometries within one equipment order",
+    "features": "part-by-part process plans, revisions and inspection references",
+    "review": "Provide a separate drawing and quantity for each part number to avoid mixing similar components.",
+    "material": "material specified individually for each part"
+  },
+  {
+    "sourceSlug": "structure-steel-fabrication",
+    "title": "Welded Steel Machine Structures",
+    "family": "frames",
+    "purpose": "build frame and support assemblies for machine integration",
+    "features": "connection locations, weld access and final geometric references",
+    "review": "Identify which surfaces need post-weld machining and which remain as fabricated.",
+    "material": "specified structural steel members and plate"
+  },
+  {
+    "sourceSlug": "metal-enclosure-fabrication",
+    "title": "Fabricated Metal Equipment Enclosures",
+    "family": "enclosures",
+    "purpose": "combine sheet sections into an equipment protection and access shell",
+    "features": "cover joints, maintenance access and component interfaces",
+    "review": "Define whether seals, fasteners and internal hardware form part of the supplied assembly.",
+    "material": "specified steel, stainless steel or aluminum"
+  },
+  {
+    "sourceSlug": "aluminum-welding",
+    "title": "Aluminum Welding for Equipment Components",
+    "family": "welding",
+    "purpose": "join aluminum parts into machinery-ready subassemblies",
+    "features": "alloy compatibility, heat input and weld-area access",
+    "review": "Confirm the welded design condition and dimensional acceptance after cooling.",
+    "material": "specified weldable aluminum alloy"
+  },
+  {
+    "sourceSlug": "custom-steel-cabinet",
+    "title": "Custom Steel Equipment Cabinets",
+    "family": "cabinets",
+    "purpose": "house machinery controls or accessories in a steel cabinet",
+    "features": "door construction, mounting plates and base or wall connections",
+    "review": "Review cabinet weight with equipment installed and specify the coating environment.",
+    "material": "specified steel sheet and cabinet hardware"
+  },
+  {
+    "sourceSlug": "steel-tank-fabrication",
+    "title": "Fabricated Steel Tanks and Containers",
+    "family": "tanks",
+    "purpose": "make welded steel containers around a defined storage or equipment function",
+    "features": "seam design, ports, supports and internal cleanliness",
+    "review": "Specify contents and service conditions; pressure, hazardous-fluid or leak-test requirements need explicit engineering review.",
+    "material": "specified steel grade suitable for the intended contents"
+  },
+  {
+    "sourceSlug": "custom-metal-fabrication",
+    "title": "Custom Metal Fabrication for OEM Assemblies",
+    "family": "general",
+    "purpose": "combine different fabrication processes for a machinery component package",
+    "features": "process scope, assembly fit and interface coordination",
+    "review": "Confirm design ownership, approval stages and the condition of each delivered component.",
+    "material": "metals defined by the approved bill of materials"
+  },
+  {
+    "sourceSlug": "welding-parts",
+    "title": "Custom Welded Metal Parts",
+    "family": "welding",
+    "purpose": "join small metal parts into a repeatable fitted assembly",
+    "features": "fixture contact points, joint gaps and weld sequence",
+    "review": "Agree which dimensions are checked on the free assembly and which use a checking fixture.",
+    "material": "specified weldable metals"
+  },
+  {
+    "sourceSlug": "laser-cutting-part",
+    "title": "Laser Cut Flat Metal Parts",
+    "family": "cutting",
+    "purpose": "supply individual profiled parts with drawing-defined openings",
+    "features": "outer contour, internal cutouts and burr direction",
+    "review": "Define units, scale and dimensional inspection for each profile.",
+    "material": "specified metal sheet or plate"
+  },
+  {
+    "sourceSlug": "laser-cut-aluminum",
+    "title": "Laser Cut Aluminum Parts",
+    "family": "cutting",
+    "purpose": "produce lightweight flat profiles before assembly or secondary forming",
+    "features": "alloy choice, fine webs and surface protection",
+    "review": "Review cut-edge condition and specify which faces must remain free of handling marks.",
+    "material": "specified aluminum alloy and thickness"
+  },
+  {
+    "sourceSlug": "sheet-metal-aluminum",
+    "title": "Aluminum Sheet Equipment Components",
+    "family": "aluminum",
+    "purpose": "provide formed aluminum panels and mounting components for machinery",
+    "features": "sheet stiffness, fastening method and mating geometry",
+    "review": "Review material temper against both forming and service requirements.",
+    "material": "specified aluminum sheet grade and temper"
+  },
+  {
+    "sourceSlug": "ss-fabrication",
+    "title": "Stainless Steel Fabrication for Equipment Parts",
+    "family": "stainless",
+    "purpose": "supply stainless cut and joined components for industrial equipment",
+    "features": "connection edges, assembly references and exposure conditions",
+    "review": "Choose the grade for the actual environment and state the required post-fabrication surface condition.",
+    "material": "specified stainless steel"
+  },
+  {
+    "sourceSlug": "stainless-steel-custom",
+    "title": "Custom Stainless Steel Formed Parts",
+    "family": "stainless",
+    "purpose": "adapt formed stainless components to nonstandard equipment interfaces",
+    "features": "flange geometry, visible faces and fastener placement",
+    "review": "Agree finish direction and verify the locations of holes on different formed faces.",
+    "material": "specified stainless sheet or plate"
+  },
+  {
+    "sourceSlug": "ss-laser-cutting",
+    "title": "Stainless Steel Laser Cut Profiles",
+    "family": "cutting",
+    "purpose": "cut stainless profiles for brackets, panels and assembly plates",
+    "features": "internal contours, cut-edge condition and protective film handling",
+    "review": "State whether the part is supplied as-cut, deburred or prepared for welding and forming.",
+    "material": "specified stainless steel sheet or plate"
+  },
+  {
+    "sourceSlug": "ss-welding",
+    "title": "Stainless Steel Welding Assemblies",
+    "family": "welding",
+    "purpose": "join stainless equipment parts with controlled fit and surface condition",
+    "features": "joint design, heat marking and post-weld finishing",
+    "review": "Define weld acceptance, permitted distortion and the required surface treatment in the RFQ.",
+    "material": "specified weldable stainless steel"
+  },
+  {
+    "sourceSlug": "iron-welding",
+    "title": "Mild Steel Welded Equipment Parts",
+    "family": "welding",
+    "purpose": "join ferrous parts for machinery installation and component support",
+    "features": "base material identity, joint preparation and connection geometry",
+    "review": "Confirm the actual steel grade; the term iron does not establish cast-iron weldability or a suitable welding procedure.",
+    "material": "specified weldable ferrous material after grade review"
+  },
+  {
+    "sourceSlug": "iron-fabrication",
+    "title": "Ferrous Metal Fabricated Components",
+    "family": "carbon",
+    "purpose": "produce cut, formed and joined ferrous parts for equipment assemblies",
+    "features": "material grade, section geometry and surface protection",
+    "review": "Identify the stock material precisely before process selection; ferrous components vary in forming and welding behaviour.",
+    "material": "specified ferrous metal grade after feasibility review"
+  },
+  {
+    "sourceSlug": "steel-laser-cutting",
+    "title": "Steel Laser Cut Plates and Profiles",
+    "family": "cutting",
+    "purpose": "prepare steel component blanks with repeated holes and custom outlines",
+    "features": "plate grade, thickness, hole shape and cut-edge finish",
+    "review": "Agree when drilled or machined features are needed in place of a laser-cut finish.",
+    "material": "specified steel sheet or plate"
+  }
+]

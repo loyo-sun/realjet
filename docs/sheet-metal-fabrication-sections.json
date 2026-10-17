@@ -1,0 +1,317 @@
+{
+  "general": {
+    "title": "Integrated component supply",
+    "what": "Sheet metal fabrication converts flat stock into equipment parts through profiling, forming, joining and finishing. A coordinated order connects those operations to the customer's assembly drawing rather than treating each operation as an isolated purchase.",
+    "theme": "scope, interfaces, revisions",
+    "advantage": "Cutting and forming are planned around the same mating references, so changes to one part can be reviewed against the rest of the assembly.",
+    "process": [
+      "Agree part numbers and supply boundaries",
+      "Review material, quantities and manufacturing route",
+      "Prepare cut and formed components",
+      "Join parts and install agreed hardware",
+      "Inspect the approved configuration and pack by part number"
+    ],
+    "check": "assembly definition, fit references and identification",
+    "note": "A drawing, material list and quantity schedule allow a component package to be quoted consistently."
+  },
+  "chassis": {
+    "title": "Equipment chassis fabrication",
+    "what": "Chassis fabrication turns a flat pattern into a support shell for internal components. The formed geometry must coordinate openings, fasteners and mounting planes across several faces, so an accurate flat blank is only one stage of the work.",
+    "theme": "internal layout, formed interfaces, hardware",
+    "advantage": "Reference features are considered in the assembled state, with space for connectors, fasteners and access to equipment during installation.",
+    "process": [
+      "Review internal component layout and mounting datums",
+      "Cut the flat pattern and prepare edges",
+      "Form flanges in an accessible sequence",
+      "Join supports and install specified inserts",
+      "Check chassis geometry and mating interfaces"
+    ],
+    "check": "mounting planes, hole-to-bend relationships and cover fit",
+    "note": "Send component locations and the required internal envelope in addition to overall outside dimensions."
+  },
+  "brackets": {
+    "title": "Bracket fabrication",
+    "what": "A fabricated bracket uses cut profiles, bends and sometimes welded reinforcement to connect two mounting interfaces. Its function depends on the relationship between those interfaces and the loads transmitted through the installation.",
+    "theme": "connection geometry, load direction, access",
+    "advantage": "Hole patterns, mounting faces and tool access are reviewed together so fasteners can be installed without unplanned interference.",
+    "process": [
+      "Review mating parts, load direction and attachment method",
+      "Profile the blank and prepare hole features",
+      "Form the connection faces and add specified reinforcement",
+      "Complete joining and surface treatment",
+      "Check angles, offsets and hole positions against datums"
+    ],
+    "check": "connection-face alignment, reinforcement details and fastener access",
+    "note": "Provide loading and mounting information where structural performance is part of the component design."
+  },
+  "cabinets": {
+    "title": "Cabinet fabrication",
+    "what": "A sheet-metal cabinet combines an outer shell with doors, removable panels and internal mounting features. Panel interfaces, hardware and installation access need to be considered as one assembly before detailed parts are released.",
+    "theme": "door fit, internal mounting, installation",
+    "advantage": "The cabinet arrangement establishes service access, mounting-plate position and the relationship between doors and seals before fabrication begins.",
+    "process": [
+      "Confirm the equipment envelope and access arrangement",
+      "Cut and form body panels and doors",
+      "Join the shell and fit mounting details",
+      "Apply the finish and install agreed hardware",
+      "Verify panel fit, door operation and final dimensions"
+    ],
+    "check": "door clearances, hardware positions and mounting references",
+    "note": "Include the cabinet layout and the equipment installation arrangement, identifying which accessories are in scope."
+  },
+  "enclosures": {
+    "title": "Enclosure fabrication",
+    "what": "A fabricated enclosure brings panels, covers and component access into one protective shell. Its physical construction can be manufactured to drawing, while any environmental, electrical or ingress-protection requirement must be defined and validated for the complete assembly.",
+    "theme": "cover interfaces, access, environmental design",
+    "advantage": "Openings, fitted components and closure details are reviewed together; protection requirements are treated as project acceptance conditions.",
+    "process": [
+      "Review equipment layout and protection requirements",
+      "Cut profiles and form the enclosure panels",
+      "Join the body and prepare hardware positions",
+      "Finish surfaces and fit specified covers or seals",
+      "Inspect dimensions and perform agreed assembly tests"
+    ],
+    "check": "cover fit, cable-entry positions and specified sealing interfaces",
+    "note": "State protection targets and required test evidence before order acceptance; an example photo does not establish a rating."
+  },
+  "boxes": {
+    "title": "Box and case fabrication",
+    "what": "A fabricated box uses formed or joined panels to create an internal volume with a defined cover or opening. A useful specification describes both the external envelope and the space left after flanges, seams and hardware are installed.",
+    "theme": "internal space, cover fit, hardware",
+    "advantage": "The body, lid and fixing details are coordinated to preserve usable space and allow assembly with the selected hardware.",
+    "process": [
+      "Define internal and external dimensions",
+      "Cut and form the body and cover",
+      "Join corners and prepare mounting positions",
+      "Apply the finish and install agreed fittings",
+      "Check closure, envelope and accessible space"
+    ],
+    "check": "lid seating, corner condition and hardware access",
+    "note": "Identify whether the requested supply is a shell, a body-and-cover set or a complete box assembly."
+  },
+  "cutting": {
+    "title": "Laser-cut component manufacture",
+    "what": "Laser cutting follows a digital profile through metal sheet or plate to make outlines, holes and slots. The selected stock, feature size and edge specification determine whether a part can be used as cut or needs secondary processing.",
+    "theme": "profiles, edges, downstream interfaces",
+    "advantage": "Cutting requirements are connected to the next manufacturing step, including bends, threads, welding preparation or a visible edge finish.",
+    "process": [
+      "Review profiles, units, material and drawing revisions",
+      "Plan nesting and cut-path features",
+      "Cut profiles with the selected process settings",
+      "Remove burrs and complete agreed secondary operations",
+      "Inspect critical contours and package flat parts"
+    ],
+    "check": "profile dimensions, hole geometry and cut-edge condition",
+    "note": "Mark precision interfaces explicitly; a nominal hole in a cutting file does not define the required final fit."
+  },
+  "bending": {
+    "title": "Bending and folding manufacture",
+    "what": "Bending changes a flat blank into an angled or multi-flange component. The final shape depends on material behaviour, bend allowance, tooling access and the sequence used to create connected bends.",
+    "theme": "bend sequence, springback, final geometry",
+    "advantage": "The formed part is assessed in its installation condition, with attention to adjacent bends and holes close to the bend line.",
+    "process": [
+      "Confirm material, radius and formed dimensions",
+      "Review the flat pattern and tooling access",
+      "Prepare blanks and protect visible surfaces",
+      "Form bends in the agreed sequence",
+      "Inspect angles, offsets and final geometry"
+    ],
+    "check": "bend angles, flange positions and surface condition",
+    "note": "Provide formed-part dimensions and datums as well as the flat pattern when both are available."
+  },
+  "forming": {
+    "title": "Formed component manufacture",
+    "what": "Forming changes local or overall sheet geometry to create tabs, flanges, channels or other features. Feature interaction and the way the part sits against its mating component determine the practical inspection plan.",
+    "theme": "formed features, material movement, mating fit",
+    "advantage": "The forming sequence considers feature interaction so the functional surfaces remain accessible for production and inspection.",
+    "process": [
+      "Review the feature geometry and material formability",
+      "Define blanks and any local tooling",
+      "Cut and prepare profiles",
+      "Form and deburr the specified features",
+      "Check feature location and mating fit"
+    ],
+    "check": "formed-feature locations, edge condition and attachment surfaces",
+    "note": "Identify whether dimensions apply to the free part or to a part held in its assembly position."
+  },
+  "aluminum": {
+    "title": "Aluminum component fabrication",
+    "what": "Aluminum fabrication uses cutting, bending and joining to produce lightweight equipment parts. Alloy and temper affect forming, welding and finishing, so they must be specified rather than inferred from the appearance of a sample.",
+    "theme": "alloy and temper, stiffness, surface condition",
+    "advantage": "Material selection is reviewed against both the fabrication route and the service function, including fasteners and any electrical contact requirements.",
+    "process": [
+      "Confirm alloy, temper and part function",
+      "Review cut features and bend radii",
+      "Cut and form the approved geometry",
+      "Complete specified joining and finishing",
+      "Check fit and protect visible surfaces for packing"
+    ],
+    "check": "alloy identity, formed geometry and surface condition",
+    "note": "Send the material grade and temper, or describe the requirements so a suitable option can be reviewed."
+  },
+  "stainless": {
+    "title": "Stainless steel component fabrication",
+    "what": "Stainless fabrication combines cutting, forming or welding with control of the final surface condition. Grade selection and finishing depend on the actual exposure and appearance requirements, including the condition of joints and cut edges.",
+    "theme": "grade, exposure, surface finish",
+    "advantage": "Handling and finishing requirements are considered alongside geometry to reduce contamination and maintain the specified appearance.",
+    "process": [
+      "Confirm stainless grade and finish requirements",
+      "Cut profiles and prepare edges",
+      "Form or join parts to the approved drawing",
+      "Complete agreed post-fabrication treatment",
+      "Inspect geometry and final surface condition"
+    ],
+    "check": "grade identity, joint condition and specified finish",
+    "note": "Describe exposure and cleaning requirements; stainless steel is a material family rather than a single corrosion-performance specification."
+  },
+  "carbon": {
+    "title": "Steel and ferrous component fabrication",
+    "what": "Steel fabrication turns specified sheet, plate or sections into equipment components. The grade, thickness and condition of the stock guide the cutting, forming, welding and protection route.",
+    "theme": "grade, fabrication sequence, coating",
+    "advantage": "Fabrication and corrosion protection are planned together, with machining reserved for interfaces that need a defined final fit.",
+    "process": [
+      "Confirm stock grade and component function",
+      "Cut profiles and prepare connection features",
+      "Form or join the specified sections",
+      "Complete machining or finishing where required",
+      "Inspect final geometry and protective treatment"
+    ],
+    "check": "material identity, connection dimensions and edge protection",
+    "note": "Identify the material grade precisely and describe any load-bearing or corrosion-related requirements."
+  },
+  "copper": {
+    "title": "Copper component fabrication",
+    "what": "Copper sheet can be cut and formed into components where conductivity or thermal transfer matters. Material temper, joint construction and surface treatment need review against the equipment design and its contact interfaces.",
+    "theme": "contact areas, temper, bendability",
+    "advantage": "Contact surfaces and fastening details are identified before fabrication so finishing does not unintentionally change a functional interface.",
+    "process": [
+      "Confirm copper grade, temper and component function",
+      "Review profiles and forming requirements",
+      "Cut, deburr and form the part",
+      "Complete agreed joining or surface preparation",
+      "Inspect geometry and defined contact surfaces"
+    ],
+    "check": "material identity, bend condition and functional surfaces",
+    "note": "Electrical and thermal performance requirements must be supplied by the equipment designer and included in the acceptance scope where applicable."
+  },
+  "stamping": {
+    "title": "Stamped component manufacture",
+    "what": "Stamping uses tooling to cut or form repeat component features. Tooling design, material feed and production quantity influence whether stamping is appropriate compared with a cutting-and-bending route.",
+    "theme": "tooling, quantity, repeatability",
+    "advantage": "Production tooling and sample acceptance are reviewed against the planned order volume and repeat-order requirements.",
+    "process": [
+      "Review part geometry and annual quantity",
+      "Define tooling scope and material specification",
+      "Produce and inspect initial samples",
+      "Agree sample corrections and release the production revision",
+      "Run and inspect batches against the approved requirements"
+    ],
+    "check": "die-produced features, burr direction and batch consistency",
+    "note": "State expected batch and repeat quantities so tooling investment can be considered alongside piece cost."
+  },
+  "frames": {
+    "title": "Frame and support fabrication",
+    "what": "A fabricated frame locates equipment through an arrangement of connected members or formed sections. Alignment of the complete assembly and the condition of its mounting interfaces matter as much as the dimensions of individual pieces.",
+    "theme": "datums, joints, mounting geometry",
+    "advantage": "Fixture references and any post-weld machining are planned around the final installation datums.",
+    "process": [
+      "Review frame layout, load basis and mounting references",
+      "Prepare sections, plates or formed members",
+      "Fit and join parts using the agreed sequence",
+      "Machine or finish designated interfaces",
+      "Check diagonals, mounting planes and assembly fit"
+    ],
+    "check": "frame alignment, joint acceptance and mounting datums",
+    "note": "Provide the approved structural arrangement and load cases where required; rated performance must be established for that design."
+  },
+  "plates": {
+    "title": "Plate component manufacture",
+    "what": "Plate fabrication creates mounting or connection parts from a specified stock thickness. Cut profiles, machined features and surface condition are separated in the scope so a flat blank is not confused with a precision mounting interface.",
+    "theme": "profile, thickness, final fit",
+    "advantage": "The process plan distinguishes cut features from holes or faces that need drilling, machining or additional finishing.",
+    "process": [
+      "Confirm plate grade, thickness and datum scheme",
+      "Prepare the cut profile and openings",
+      "Complete designated drilling or machining",
+      "Deburr and apply the agreed finish",
+      "Inspect functional geometry and surface condition"
+    ],
+    "check": "hole positions, flatness where specified and mating surfaces",
+    "note": "Mark the final tolerances on the drawing and identify features needing a machined finish."
+  },
+  "panels": {
+    "title": "Equipment panel fabrication",
+    "what": "A fabricated panel provides a surface for covers, controls, access or attachment. Its openings must line up with fitted parts after any edge forming and finishing, while the visible surfaces meet the specified appearance.",
+    "theme": "openings, edge returns, visible finish",
+    "advantage": "Cutouts and edge geometry are reviewed against the installed hardware, with coating allowances considered at fitted interfaces.",
+    "process": [
+      "Review the interface layout and visible faces",
+      "Cut openings and the outer profile",
+      "Form edge returns and attachment details",
+      "Complete finishing and hardware installation",
+      "Check cutout positions and assembled fit"
+    ],
+    "check": "opening locations, edge geometry and appearance zones",
+    "note": "Provide the panel layout and identify fitted controls, connectors or adjacent covers."
+  },
+  "shelves": {
+    "title": "Shelf and tray fabrication",
+    "what": "Sheet-metal shelves and trays use folded edges and attachment details to support or organize equipment. The complete mounting arrangement determines their behaviour under distributed or concentrated loads.",
+    "theme": "span, support points, deflection",
+    "advantage": "Support geometry and installation details are reviewed together, including access to fasteners and the edges that locate the tray.",
+    "process": [
+      "Define the installation space and loading arrangement",
+      "Cut the shelf profile and mounting openings",
+      "Form edges and add specified reinforcement",
+      "Finish the part and fit agreed hardware",
+      "Check support interfaces and final dimensions"
+    ],
+    "check": "support-point positions, edge condition and specified deflection criteria",
+    "note": "Describe the intended loading and support arrangement rather than relying on the size of the example photo."
+  },
+  "tanks": {
+    "title": "Tank and container fabrication",
+    "what": "A fabricated tank or container joins metal panels around a defined storage or equipment function. Contents, pressure, temperature and cleanliness requirements determine the necessary design and verification scope.",
+    "theme": "contents, joints, inspection",
+    "advantage": "Ports, supports and test access are reviewed before manufacture so inspection can address the intended service conditions.",
+    "process": [
+      "Confirm contents, service conditions and design responsibility",
+      "Prepare panels, openings and connection details",
+      "Fit and weld the approved container geometry",
+      "Complete specified cleaning and finishing",
+      "Perform the agreed dimensional and integrity checks"
+    ],
+    "check": "joint condition, port locations and specified leak or integrity tests",
+    "note": "Pressure-rated or hazardous-fluid service requires an explicitly agreed design and acceptance basis."
+  },
+  "welding": {
+    "title": "Welded component manufacture",
+    "what": "Welding joins prepared metal parts into a component or subassembly. The joint design, access, material and sequence determine the practical process, while inspection should address the functional requirements of the finished assembly.",
+    "theme": "joint access, distortion, acceptance",
+    "advantage": "Joining is planned around final fit and accessible inspection points, with fixture datums established before production.",
+    "process": [
+      "Confirm material, joints and acceptance requirements",
+      "Prepare edges and fit the components",
+      "Establish fixtures and the welding sequence",
+      "Join parts and complete agreed post-weld operations",
+      "Inspect welds and final assembly geometry"
+    ],
+    "check": "weld condition, distortion and finished mounting relationships",
+    "note": "Identify any required welding qualification, examination or documentation during the enquiry review."
+  },
+  "tooling": {
+    "title": "Moulded component and tooling supply",
+    "what": "Injection moulding forms a specified resin in project tooling to create a component. The moulded-part design, resin behaviour and tooling scope must be defined together; it is a different production route from sheet-metal cutting and forming.",
+    "theme": "resin, tooling scope, sample approval",
+    "advantage": "Part function, mould features and trial samples are reviewed before the tooling and batch-production scope is released.",
+    "process": [
+      "Review component geometry and resin requirements",
+      "Define mould scope, ownership and release conditions",
+      "Review draft, parting lines and critical features",
+      "Produce trial parts and agree corrections",
+      "Inspect approved samples before repeat production"
+    ],
+    "check": "resin identity, critical moulded dimensions and sample acceptance",
+    "note": "Identify the intended resin, appearance zones and required part tests; the tooling and component supply scopes are confirmed separately."
+  }
+}

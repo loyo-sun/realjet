@@ -133,7 +133,7 @@
     </script>
     {% endif %}
   </head>
-  <body data-page-type="{{ pageType or 'page' }}"{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}>
+  <body data-page-type="{{ pageType or 'page' }}"{% if sheetMetalProduct %} data-sheet-metal-product="true"{% endif %}{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include "components/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>

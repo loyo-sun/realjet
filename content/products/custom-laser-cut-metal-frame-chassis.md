@@ -9,6 +9,8 @@ featured: false
 slug: custom-laser-cut-metal-frame-chassis
 productSeries: contract-manufacturing
 sheetMetalProduct: true
+sheetMetalFamily: chassis
+productSourceBatch: sheet-metal-2026-10-17
 image: /images/products/custom-laser-cut-metal-frame-chassis.webp
 imageAlt: Black formed sheet metal chassis with ventilation slots, connector openings and internal mounting points
 imageCaption: Representative chassis configuration. Dimensions, openings, hardware and finish are customized to the approved drawing.

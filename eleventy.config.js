@@ -108,6 +108,13 @@ export default function (eleventyConfig) {
       .sort((a, b) => toDate(b.data.date) - toDate(a.data.date)),
   );
 
+  eleventyConfig.addFilter("relatedComponents", (items, slug, family) => {
+    const candidates = items.filter((item) => item.data.productSeries === "contract-manufacturing" && item.data.slug !== slug);
+    const matching = family ? candidates.filter((item) => item.data.sheetMetalFamily === family) : [];
+    const otherSheetMetal = family ? candidates.filter((item) => item.data.sheetMetalProduct && !matching.includes(item)) : [];
+    return [...matching, ...otherSheetMetal, ...candidates.filter((item) => !matching.includes(item) && !otherSheetMetal.includes(item))].slice(0, 6);
+  });
+
   eleventyConfig.addFilter("relatedEquipment", (items, slugs = []) =>
     slugs.map((slug) => items.find((item) => item.data.slug === slug)).filter(Boolean),
   );

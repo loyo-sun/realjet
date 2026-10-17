@@ -1140,8 +1140,8 @@ body.has-enquiry-modal { overflow: hidden; }
   .fabrication-feature-grid { grid-template-columns: 1fr; }
   .product-page-sheet-metal .breadcrumbs { flex-wrap: wrap; }
 }
-@media (min-width: 701px) and (max-width: 1100px) {
-  body[data-product-slug="custom-laser-cut-metal-frame-chassis"] .site-floating-contact-actions { top: auto; bottom: 18px; display: flex; transform: none; }
+@media (min-width: 701px) and (max-width: 1380px) {
+  body[data-sheet-metal-product="true"] .site-floating-contact-actions { top: auto; bottom: 18px; display: flex; transform: none; }
 }
 
 /* Full catalogue: shared category counts, server-generated pages and 12 products per page. */
@@ -1169,4 +1169,8 @@ body.has-enquiry-modal { overflow: hidden; }
   .catalogue-categories a { width: 100%; justify-content: space-between; padding: 10px 13px; }
   .catalogue-pagination ol { flex-wrap: wrap; }
   .catalogue-listing { padding-block: 32px 48px; }
+}
+
+@media (max-width: 700px) {
+  body[data-sheet-metal-product="true"] .site-floating-contact-actions { display: none; }
 }
