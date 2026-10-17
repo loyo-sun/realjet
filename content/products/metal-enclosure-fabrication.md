@@ -1,29 +1,31 @@
 ---
-title: "Fabricated Metal Equipment Enclosures"
-landingSeoTitle: "Fabricated Metal Equipment Enclosures | Realjet"
-description: "REALJET offers fabricated metal equipment enclosures. Review cover joints, maintenance access and component interfaces against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Fabricated Metal Equipment Enclosures
+landingSeoTitle: Custom Fabricated Metal Equipment Enclosures for OEMs | Realjet
+description: REALJET offers custom fabricated metal equipment enclosures to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 191
 featured: false
-slug: "metal-enclosure-fabrication"
-productSeries: "contract-manufacturing"
+slug: metal-enclosure-fabrication
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "enclosures"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/metal-enclosure-fabrication.webp"
-imageAlt: "Representative fabricated metal equipment enclosures configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: enclosures
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/metal-enclosure-fabrication.webp
+imageAlt: Representative fabricated metal equipment enclosures configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom fabricated metal equipment enclosures
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers fabricated metal equipment enclosures to combine sheet sections into an equipment protection and access shell. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom fabricated metal equipment enclosures to your drawings for OEM and contract manufacturing orders. We review cover joints, maintenance access and component interfaces before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **cover joints, maintenance access and component interfaces**. Define whether seals, fasteners and internal hardware form part of the supplied assembly. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about fabricated metal equipment enclosures</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Custom Metal Boxes for IP65 Projects](/products/custom-ip65-waterproof-metal-box.html) · [Stainless Steel Electronics Junction Boxes](/products/stainless-steel-electronics-junction-box.html) · [Powder Coated Aluminum Equipment Enclosures](/products/powder-coated-aluminum-equipment-enclosure.html)
+[Custom Metal Boxes for IP65 Projects](/products/custom-ip65-waterproof-metal-box.html) · [Custom Stainless Steel Electronics Junction Boxes](/products/stainless-steel-electronics-junction-box.html) · [Custom Powder Coated Aluminum Equipment Enclosures](/products/powder-coated-aluminum-equipment-enclosure.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your fabricated metal equipment enclosures project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with cover joints, maintenance access and component interfaces, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Fabricated Metal Equipment Enclosures" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Fabricated Metal Equipment Enclosures" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

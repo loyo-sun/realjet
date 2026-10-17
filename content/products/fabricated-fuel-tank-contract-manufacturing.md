@@ -1,21 +1,23 @@
 ---
-title: Fabricated Fuel Tank Contract Manufacturing
-description: Contract manufacturing of fabricated fuel tanks for mobile and
-  industrial machinery, produced to authorised drawings with controlled welding
-  and inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Fabricated Fuel Tanks
+description: REALJET offers custom fabricated fuel tanks to your drawings, with OEM contract manufacturing covering tank welding and finishing.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 16
 featured: true
 slug: fabricated-fuel-tank-contract-manufacturing
 productSeries: contract-manufacturing
 image: /images/products/fabricated-fuel-tank-contract-manufacturing.webp
-imageAlt: Rectangular welded fuel tank with lifting and mounting features for
-  machinery installation
+imageAlt: Rectangular welded fuel tank with lifting and mounting features for machinery installation
 draft: false
+landingSeoTitle: Custom Fabricated Fuel Tanks | Contract Manufacturing | Realjet
+primaryKeyword: custom fabricated fuel tanks
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Drawing-based fuel tank fabrication
+
+REALJET provides custom fabricated fuel tanks to your drawings for OEM and contract manufacturing orders. The scope combines tank welding and finishing around the approved part and assembly requirements.
 
 Machinery fuel tanks often combine a constrained installation envelope with defined capacity, mounting, filling, venting and outlet requirements. Realjet provides contract manufacturing for fabricated tanks when customers supply authorised drawings, material specifications and validation criteria.
 

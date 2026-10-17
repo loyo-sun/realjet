@@ -1,29 +1,31 @@
 ---
-title: "Galvanized Sheet Metal Fabrication"
-landingSeoTitle: "Galvanized Sheet Metal Fabrication | Realjet"
-description: "REALJET offers galvanized sheet metal fabrication. Review cut-edge condition, formed corners and joining method against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Galvanized Sheet Metal Fabrication
+landingSeoTitle: Custom Galvanized Sheet Metal Fabrication for OEMs | Realjet
+description: REALJET offers custom galvanized sheet metal fabrication to your drawings, with OEM contract manufacturing covering steel fabrication and coating.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 130
 featured: false
-slug: "zinc-sheet-metal"
-productSeries: "contract-manufacturing"
+slug: zinc-sheet-metal
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "carbon"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/zinc-sheet-metal.webp"
-imageAlt: "Representative galvanized sheet metal fabrication configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: carbon
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/zinc-sheet-metal.webp
+imageAlt: Representative galvanized sheet metal fabrication configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom galvanized sheet metal fabrication
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers galvanized sheet metal fabrication to fabricate protective panels from zinc-coated steel sheet. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom galvanized sheet metal fabrication to your drawings for OEM and contract manufacturing orders. We review cut-edge condition, formed corners and joining method before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **cut-edge condition, formed corners and joining method**. Review coating damage at bends and joints and agree any local coating repair. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about galvanized sheet metal fabrication</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Fabricated Steel Sheet Covers](/products/steel-sheet-metal.html) · [Custom Steel Fabrication for Machinery](/products/custom-steel-fabrication.html) · [Ferrous Metal Fabricated Components](/products/iron-fabrication.html)
+[Custom Fabricated Steel Sheet Covers](/products/steel-sheet-metal.html) · [Custom Steel Fabrication for Machinery](/products/custom-steel-fabrication.html) · [Custom Ferrous Metal Fabrication](/products/iron-fabrication.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your galvanized sheet metal fabrication project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with cut-edge condition, formed corners and joining method, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Galvanized Sheet Metal Fabrication" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Galvanized Sheet Metal Fabrication" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

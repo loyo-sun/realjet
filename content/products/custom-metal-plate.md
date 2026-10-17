@@ -1,29 +1,31 @@
 ---
-title: "Custom Metal Mounting Plates"
-landingSeoTitle: "Custom Metal Mounting Plates | Realjet"
-description: "REALJET offers custom metal mounting plates. Review cut profile, hole locations and required face condition against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Metal Mounting Plates
+landingSeoTitle: Custom Metal Mounting Plates for OEMs | Realjet
+description: REALJET offers custom metal mounting plates to your drawings, with OEM contract manufacturing covering plate cutting and machining.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 171
 featured: false
-slug: "custom-metal-plate"
-productSeries: "contract-manufacturing"
+slug: custom-metal-plate
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "plates"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/custom-metal-plate.webp"
-imageAlt: "Representative custom metal mounting plates configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: plates
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/custom-metal-plate.webp
+imageAlt: Representative custom metal mounting plates configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom metal mounting plates
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers custom metal mounting plates to provide a flat mounting reference for equipment components. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom metal mounting plates to your drawings for OEM and contract manufacturing orders. We review cut profile, hole locations and required face condition before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **cut profile, hole locations and required face condition**. Separate cut features from precision holes and agree whether surface machining is needed. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about custom metal mounting plates</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Thick Sheet Metal and Plate Components](/products/thick-sheet-metal.html) · [Custom Steel Plate Fabrication](/products/custom-steel-plate-fabrication.html)
+[Custom Thick Sheet Metal and Plate Components](/products/thick-sheet-metal.html) · [Custom Steel Plate Fabrication](/products/custom-steel-plate-fabrication.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your custom metal mounting plates project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with cut profile, hole locations and required face condition, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Custom Metal Mounting Plates" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Metal Mounting Plates" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

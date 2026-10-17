@@ -1,29 +1,31 @@
 ---
-title: "Custom Injection Moulded Components"
-landingSeoTitle: "Custom Injection Moulded Components | Realjet"
-description: "REALJET offers custom injection moulded components. Review resin selection, parting lines, draft, shrinkage and tooling ownership against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Injection Moulded Components
+landingSeoTitle: Custom Injection Moulded Components | Contract Manufacturing | Realjet
+description: REALJET offers custom injection moulded components to your drawings, with OEM contract manufacturing covering tooling review and moulded parts.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 113
 featured: false
-slug: "custom-injection-mold"
-productSeries: "contract-manufacturing"
+slug: custom-injection-mold
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "tooling"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/custom-injection-mold.webp"
-imageAlt: "Examples of coloured custom moulded plastic components"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: tooling
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/custom-injection-mold.webp
+imageAlt: Examples of coloured custom moulded plastic components
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom injection moulded components
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers custom injection moulded components to produce nonmetallic equipment parts from an approved moulded-part design. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom injection moulded components to your drawings for OEM and contract manufacturing orders. We review resin selection, parting lines, draft, shrinkage and tooling ownership before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **resin selection, parting lines, draft, shrinkage and tooling ownership**. This supply concerns moulded parts and project tooling, separate from sheet-metal fabrication; confirm tooling and sample acceptance before production. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about custom injection moulded components</h2>
 
@@ -112,8 +114,8 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 [Browse Custom Machinery Components](/products/custom-machinery-components/)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your custom injection moulded components project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with resin selection, parting lines, draft, shrinkage and tooling ownership, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Custom Injection Moulded Components" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Injection Moulded Components" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

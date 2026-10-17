@@ -1,20 +1,23 @@
 ---
-title: Hydraulic Oil Tank Contract Manufacturing for Machinery
-description: Made-to-drawing hydraulic oil tank manufacturing with formed steel
-  panels, controlled welding, port interfaces, surface finishing and inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Hydraulic Oil Tanks
+description: REALJET offers custom hydraulic oil tanks to your drawings, with OEM contract manufacturing covering tank welding and port machining.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 15
 featured: true
 slug: hydraulic-oil-tank-contract-manufacturing
 productSeries: contract-manufacturing
 image: /images/products/hydraulic-oil-tank-contract-manufacturing.webp
-imageAlt: Fabricated hydraulic oil tank with multiple ports for mobile and
-  industrial machinery
+imageAlt: Fabricated hydraulic oil tank with multiple ports for mobile and industrial machinery
 draft: false
+landingSeoTitle: Custom Hydraulic Oil Tanks | Contract Manufacturing | Realjet
+primaryKeyword: custom hydraulic oil tanks
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Custom tanks for hydraulic machinery systems
+
+REALJET provides custom hydraulic oil tanks to your drawings for OEM and contract manufacturing orders. The scope combines tank welding and port machining around the approved part and assembly requirements.
 
 Hydraulic oil tanks must fit the available machine envelope while providing the specified capacity, port arrangement, mounting interfaces and service access. Realjet undertakes contract manufacturing of fabricated tanks and machinery components from customer-authorised drawings and technical requirements.
 

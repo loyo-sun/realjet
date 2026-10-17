@@ -1,7 +1,7 @@
 export const manufacturingFaqs = [
   {
     question: "Do you manufacture components to customer drawings?",
-    answer: "Yes. Realjet provides build-to-print manufacturing for custom metal components, including welded structures, machinery chassis, tanks and assemblies. Drawings, materials, critical dimensions and acceptance requirements are reviewed before the manufacturing scope is agreed.",
+    answer: "Yes. Realjet provides OEM contract manufacturing to customer drawings for custom metal components, including welded structures, machinery chassis, tanks and assemblies. Drawings, materials, critical dimensions and acceptance requirements are reviewed before the manufacturing scope is agreed.",
   },
   {
     question: "Can I enquire about samples, small batches or recurring orders?",

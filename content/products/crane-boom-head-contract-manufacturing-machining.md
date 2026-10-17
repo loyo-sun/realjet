@@ -1,8 +1,8 @@
 ---
-title: Crane Boom Head Contract Manufacturing and Machining
-description: Contract manufacturing of crane boom head structures with fixture-controlled welding, precision interface machining, coating and inspection to customer drawings.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Crane Boom Heads
+description: REALJET offers custom crane boom heads to your drawings, with OEM contract manufacturing covering boom head welding and machining.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 13
 featured: false
 slug: crane-boom-head-contract-manufacturing-machining
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/crane-boom-head-contract-manufacturing.webp
 imageAlt: Red lattice crane boom head manufactured as a welded construction machinery component
 draft: false
+landingSeoTitle: Custom Crane Boom Heads | Contract Manufacturing | Realjet
+primaryKeyword: custom crane boom heads
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Crane structural components manufactured to customer drawings
+
+REALJET provides custom crane boom heads to your drawings for OEM and contract manufacturing orders. The scope combines boom head welding and machining around the approved part and assembly requirements.
 
 Crane boom heads and end sections transfer working loads through welded members, pin joints and connection interfaces. Realjet supplies contract machinery manufacturing for these project-specific structures, coordinating steel preparation, jig welding, machining and coating around the approved design.
 

@@ -1,29 +1,31 @@
 ---
-title: "Copper Sheet Metal Components"
-landingSeoTitle: "Copper Sheet Metal Components | Realjet"
-description: "REALJET offers copper sheet metal components. Review contact surfaces, bend radii and fastening clearances against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Copper Sheet Metal Components
+landingSeoTitle: Custom Copper Sheet Metal Components for OEMs | Realjet
+description: REALJET offers custom copper sheet metal components to your drawings, with OEM contract manufacturing covering copper cutting and forming.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 149
 featured: false
-slug: "copper-sheet-metal-fabrication"
-productSeries: "contract-manufacturing"
+slug: copper-sheet-metal-fabrication
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "copper"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/copper-sheet-metal-fabrication.webp"
-imageAlt: "Representative copper sheet metal components configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: copper
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/copper-sheet-metal-fabrication.webp
+imageAlt: Representative copper sheet metal components configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom copper sheet metal components
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers copper sheet metal components to make formed copper parts for defined electrical or thermal interfaces. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom copper sheet metal components to your drawings for OEM and contract manufacturing orders. We review contact surfaces, bend radii and fastening clearances before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **contact surfaces, bend radii and fastening clearances**. Electrical loading and insulation requirements belong in the project design; confirm contact-area finish and inspection. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about copper sheet metal components</h2>
 
@@ -112,8 +114,8 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 [Browse Custom Machinery Components](/products/custom-machinery-components/)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your copper sheet metal components project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with contact surfaces, bend radii and fastening clearances, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Copper Sheet Metal Components" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Copper Sheet Metal Components" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

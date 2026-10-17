@@ -1,29 +1,31 @@
 ---
-title: "Custom Sheet Metal Parts"
-landingSeoTitle: "Custom Sheet Metal Parts | Realjet"
-description: "REALJET offers custom sheet metal parts. Review functional edges, tabs and assembly clearances against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Sheet Metal Parts
+landingSeoTitle: Custom Sheet Metal Parts for OEMs | Realjet
+description: REALJET offers custom sheet metal parts to your drawings, with OEM contract manufacturing covering cutting and forming.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 155
 featured: false
-slug: "sheet-metal-part"
-productSeries: "contract-manufacturing"
+slug: sheet-metal-part
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "forming"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/sheet-metal-part.webp"
-imageAlt: "Representative custom sheet metal parts configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: forming
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/sheet-metal-part.webp
+imageAlt: Representative custom sheet metal parts configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom sheet metal parts
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers custom sheet metal parts to produce a single equipment part with application-specific cut and formed features. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom sheet metal parts to your drawings for OEM and contract manufacturing orders. We review functional edges, tabs and assembly clearances before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **functional edges, tabs and assembly clearances**. Identify the surfaces that locate the part in its final assembly and inspect from those datums. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about custom sheet metal parts</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Formed Sheet Metal Mounting Parts](/products/sheet-metal-forming.html) · [Thin Sheet Metal Component Fabrication](/products/thin-sheet-metal.html)
+[Custom Formed Sheet Metal Mounting Parts](/products/sheet-metal-forming.html) · [Custom Thin Sheet Metal Component Fabrication](/products/thin-sheet-metal.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your custom sheet metal parts project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with functional edges, tabs and assembly clearances, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Custom Sheet Metal Parts" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Sheet Metal Parts" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

@@ -1,8 +1,8 @@
 ---
-title: Concrete Pump Chassis Contract Manufacturing
-description: Project-specific concrete pump chassis fabrication and machining for construction machinery, from plate processing and welding to coating and final inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Concrete Pump Chassis
+description: REALJET offers custom concrete pump chassis to your drawings, with OEM contract manufacturing covering chassis fabrication and machining.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 14
 featured: false
 slug: concrete-pump-chassis-contract-manufacturing
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/concrete-pump-chassis-contract-manufacturing.webp
 imageAlt: Fabricated concrete pump chassis assembly for construction machinery contract manufacturing
 draft: false
+landingSeoTitle: Custom Concrete Pump Chassis | Contract Manufacturing | Realjet
+primaryKeyword: custom concrete pump chassis
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Integrated chassis fabrication for concrete machinery
+
+REALJET provides custom concrete pump chassis to your drawings for OEM and contract manufacturing orders. The scope combines chassis fabrication and machining around the approved part and assembly requirements.
 
 A concrete pump chassis must provide stable mounting references for structural, hydraulic and operating systems while carrying loads through a large welded assembly. Realjet offers contract manufacturing of machinery chassis to customer drawings, combining heavy steel fabrication with machining of critical interfaces and final assembly checks.
 

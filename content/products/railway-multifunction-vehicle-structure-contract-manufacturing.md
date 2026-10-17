@@ -1,8 +1,8 @@
 ---
-title: Railway Multifunction Vehicle Structure Contract Manufacturing
-description: Large welded railway service vehicle structures manufactured to project drawings with plate forming, welding, interface machining, coating and inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Railway Vehicle Structures
+description: REALJET offers custom railway vehicle structures to your drawings, with OEM contract manufacturing covering vehicle structure fabrication.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 17
 featured: false
 slug: railway-multifunction-vehicle-structure-contract-manufacturing
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/railway-multifunction-vehicle-contract-manufacturing.webp
 imageAlt: Large yellow railway multifunction service vehicle body fabricated as a project-specific welded structure
 draft: false
+landingSeoTitle: Custom Railway Vehicle Structures | Contract Manufacturing | Realjet
+primaryKeyword: custom railway vehicle structures
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Large fabricated structures for rail service equipment
+
+REALJET provides custom railway vehicle structures to your drawings for OEM and contract manufacturing orders. The scope combines vehicle structure fabrication around the approved part and assembly requirements.
 
 Railway multifunction and maintenance vehicles can require large welded bodies that integrate load-bearing frames, equipment spaces, access openings and numerous installation interfaces. Realjet provides project-based machinery contract manufacturing for these complex structures from customer drawings and inspection requirements.
 

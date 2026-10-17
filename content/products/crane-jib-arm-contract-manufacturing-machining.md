@@ -1,8 +1,8 @@
 ---
-title: Crane Jib Arm Contract Manufacturing and Machining
-description: Made-to-drawing crane jib arm manufacturing with tubular lattice fabrication, controlled welding, pin-interface machining, coating and inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Crane Jib Arms
+description: REALJET offers custom crane jib arms to your drawings, with OEM contract manufacturing covering lattice welding and pin machining.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 19
 featured: false
 slug: crane-jib-arm-contract-manufacturing-machining
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/crane-jib-arm-contract-manufacturing.webp
 imageAlt: Pair of red tubular lattice crane jib arm sections prepared for heavy equipment assembly
 draft: false
+landingSeoTitle: Custom Crane Jib Arms | Contract Manufacturing | Realjet
+primaryKeyword: custom crane jib arms
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Tubular lattice jib structures made to drawing
+
+REALJET provides custom crane jib arms to your drawings for OEM and contract manufacturing orders. The scope combines lattice welding and pin machining around the approved part and assembly requirements.
 
 Crane jib arms depend on consistent lattice geometry, controlled welded joints and accurate end connections. Realjet provides contract manufacturing and selective machining for crane and construction machinery structures based on customer-owned designs and approved production documents.
 

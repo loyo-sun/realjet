@@ -4,7 +4,7 @@ export const productCategories = [
   { series: "precast-concrete-moulds", slug: "precast-concrete-moulds", name: "Precast Concrete Moulds", description: "Steel moulds and formwork for bridge, building, tunnel, municipal and marine concrete components. Browse by product or explore our mould application guide." },
   { series: "precast-production-equipment", slug: "precast-beam-production-equipment", name: "Precast Beam Production Equipment", description: "Project-specific beam formwork, hydraulic operating systems, mould transfer equipment and station-based production systems." },
   { series: "spun-pile-equipment", slug: "spun-pile-production-equipment", name: "Spun Pile Production Equipment", description: "Equipment for reinforcement preparation, concrete batching, moulding, tensioning, spinning, curing and material transfer in spun pile plants." },
-  { series: "contract-manufacturing", slug: "custom-machinery-components", name: "Custom Machinery Components", description: "Drawing-based sheet metal chassis, welded structures, machinery frames, tanks and component assemblies for equipment manufacturers." },
+  { series: "contract-manufacturing", slug: "custom-machinery-components", name: "Custom Machinery Components", seoTitle: "Custom OEM Parts and Sheet Metal Fabrication", heading: "Custom Machinery Components for OEMs", description: "OEM contract manufacturing of custom machinery parts, sheet metal chassis, welded structures and tanks, made to your drawings. Send CAD files for a custom quote." },
 ];
 
 export function catalogueProducts(items) {
@@ -42,8 +42,8 @@ export function buildCataloguePages(items) {
         ...(category.slug === "all" ? [] : [{ name: category.name, url: category.url }]),
         ...(index ? [{ name: `Page ${index + 1}`, url: link.url }] : []),
       ].map((entry, position) => ({ "@type": "ListItem", position: position + 1, name: entry.name, item: `https://realjetech.com${entry.url}` })),
-      heading: category.slug === "all" ? "Products" : category.name,
-      seoTitle: `${category.slug === "all" ? "Precast Equipment, Moulds and Machinery Components" : category.name}${index ? ` — Page ${index + 1}` : ""} | Realjet`,
+      heading: category.slug === "all" ? "Products" : (category.heading || category.name),
+      seoTitle: `${category.slug === "all" ? "Precast Equipment, Moulds and Custom OEM Parts" : (category.seoTitle || category.name)}${index ? ` — Page ${index + 1}` : ""} | Realjet`,
       description: `${category.description || "Browse Realjet precast concrete moulds, beam production equipment, spun pile equipment and custom machinery components."}${index ? ` Page ${index + 1} of ${totalPages}.` : ""}`,
     }));
   });

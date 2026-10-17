@@ -1,8 +1,8 @@
 ---
-title: Industrial Chain Conveyor Contract Manufacturing
-description: Custom chain conveyor manufacturing for production lines, covering fabricated frames, drive and wear components, assembly, alignment and trial inspection.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Industrial Chain Conveyors
+description: REALJET offers custom industrial chain conveyors to your drawings, with OEM contract manufacturing covering conveyor fabrication and assembly.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 18
 featured: false
 slug: industrial-chain-conveyor-contract-manufacturing
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/industrial-chain-conveyor-contract-manufacturing.webp
 imageAlt: Long industrial chain conveyor assembled with fabricated steel frames and drive units
 draft: false
+landingSeoTitle: Custom Industrial Chain Conveyors | Contract Manufacturing | Realjet
+primaryKeyword: custom industrial chain conveyors
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Chain conveyors built around the production interface
+
+REALJET provides custom industrial chain conveyors to your drawings for OEM and contract manufacturing orders. The scope combines conveyor fabrication and assembly around the approved part and assembly requirements.
 
 Industrial chain conveyors move heavy products, pallets or tooling between defined process positions. Realjet manufactures project-specific conveyor equipment and assemblies from customer drawings or an agreed design boundary, connecting fabricated frames, machined interfaces, purchased drive components and workshop assembly.
 

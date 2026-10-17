@@ -1,29 +1,31 @@
 ---
-title: "Ferrous Metal Fabricated Components"
-landingSeoTitle: "Ferrous Metal Fabricated Components | Realjet"
-description: "REALJET offers ferrous metal fabricated components. Review material grade, section geometry and surface protection against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Ferrous Metal Fabrication
+landingSeoTitle: Custom Ferrous Metal Fabrication for OEMs | Realjet
+description: REALJET offers custom ferrous metal fabrication to your drawings, with OEM contract manufacturing covering steel fabrication and coating.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 205
 featured: false
-slug: "iron-fabrication"
-productSeries: "contract-manufacturing"
+slug: iron-fabrication
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "carbon"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/iron-fabrication.webp"
-imageAlt: "Dark fabricated mounting bracket with several fixing holes"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: carbon
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/iron-fabrication.webp
+imageAlt: Dark fabricated mounting bracket with several fixing holes
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom ferrous metal fabrication
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers ferrous metal fabricated components to produce cut, formed and joined ferrous parts for equipment assemblies. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom ferrous metal fabrication to your drawings for OEM and contract manufacturing orders. We review material grade, section geometry and surface protection before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **material grade, section geometry and surface protection**. Identify the stock material precisely before process selection; ferrous components vary in forming and welding behaviour. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about ferrous metal fabricated components</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Fabricated Steel Sheet Covers](/products/steel-sheet-metal.html) · [Galvanized Sheet Metal Fabrication](/products/zinc-sheet-metal.html) · [Custom Steel Fabrication for Machinery](/products/custom-steel-fabrication.html)
+[Custom Fabricated Steel Sheet Covers](/products/steel-sheet-metal.html) · [Custom Galvanized Sheet Metal Fabrication](/products/zinc-sheet-metal.html) · [Custom Steel Fabrication for Machinery](/products/custom-steel-fabrication.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your ferrous metal fabricated components project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with material grade, section geometry and surface protection, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Ferrous Metal Fabricated Components" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Ferrous Metal Fabrication" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

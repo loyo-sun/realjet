@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { load } from 'js-yaml';
+const root=join(dirname(fileURLToPath(import.meta.url)),'..');
+const plan=JSON.parse(await readFile(join(root,'docs/custom-manufacturing-keywords.json'),'utf8'));
+const titles=new Set(), descriptions=new Set();
+for(const record of plan.products){
+ const source=await readFile(join(root,'content/products',record.slug+'.md'),'utf8');
+ const [,front,body]=source.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+ const data=load(front);
+ assert(data.title.startsWith('Custom '),`${record.slug}: custom product intent`);
+ assert.equal(data.title,record.title);
+ assert.equal(data.landingSeoTitle,record.seoTitle);
+ assert.equal(data.description,record.description);
+ assert(data.description.length>=90 && data.description.length<=190);
+ assert(data.landingSeoTitle.length<=75);
+ assert(!titles.has(data.landingSeoTitle));titles.add(data.landingSeoTitle);
+ assert(!descriptions.has(data.description));descriptions.add(data.description);
+ for(const keyword of ['custom','OEM','contract manufacturing','to your drawings']) assert(data.description.toLowerCase().includes(keyword.toLowerCase()),`${record.slug}: description missing ${keyword}`);
+ const lead=body.replace(/<[^>]*>/g,' ').slice(0,2200).toLowerCase();
+ for(const keyword of ['oem','contract manufacturing','to your drawings']) assert(lead.includes(keyword),`${record.slug}: visible lead missing ${keyword}`);
+ const html=await readFile(join(root,'dist/products',record.slug+'.html'),'utf8');
+ assert(html.includes(`<link rel="canonical" href="${record.url}"`),`${record.slug}: URL changed`);
+ assert(html.includes(`<h1>${data.title}</h1>`),`${record.slug}: visible title`);
+ assert(html.includes(`<title>${data.landingSeoTitle}</title>`),`${record.slug}: search title`);
+ const graphs=[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(match=>JSON.parse(match[1])['@graph']||[]);
+ const service=graphs.find(item=>item.mainEntity?.['@type']==='Service')?.mainEntity;
+ assert(service?.serviceType.includes('OEM contract manufacturing'),`${record.slug}: service metadata`);
+}
+const category=await readFile(join(root,'dist/products/custom-machinery-components/index.html'),'utf8');
+assert(category.includes('Custom OEM Parts and Sheet Metal Fabrication | Realjet'));
+assert(category.includes('made to your drawings'));
+const landing=await readFile(join(root,'dist/marketing/contract_manufacturing/index.html'),'utf8');
+assert(landing.includes('Custom Metal Fabrication | OEM Contract Manufacturing | Realjet'));
+console.log(`Validated custom, OEM, contract manufacturing and drawing-based procurement intent on ${plan.products.length} product pages, the category and service landing page; existing URLs preserved.`);

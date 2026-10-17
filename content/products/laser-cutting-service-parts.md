@@ -1,30 +1,36 @@
 ---
-title: "Laser Cut and Formed Equipment Parts"
-landingSeoTitle: "Laser Cut and Formed Equipment Parts | Realjet"
-description: "REALJET offers laser cut and formed equipment parts. Review cut edges, internal openings and downstream forming allowances against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom Laser Cut and Formed Equipment Parts
+landingSeoTitle: Custom Laser Cut and Formed Equipment Parts for OEMs | Realjet
+description: REALJET offers custom laser cut and formed equipment parts to your drawings, with OEM contract manufacturing covering profile cutting and deburring.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 117
 featured: false
-slug: "laser-cutting-service-parts"
-productSeries: "contract-manufacturing"
+slug: laser-cutting-service-parts
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "cutting"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/laser-cutting-service-parts.webp"
-imageAlt: "Black formed equipment mounting plate with a rectangular cutout and mounting flange"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: cutting
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/laser-cutting-service-parts.webp
+imageAlt: Black formed equipment mounting plate with a rectangular cutout and mounting flange
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
-gallery: [{"image": "/images/products/sheet-metal/laser-cutting-service-parts-detail-1.webp", "alt": "Representative component detail for laser cut and formed equipment parts"}, {"image": "/images/products/sheet-metal/laser-cutting-service-parts-detail-2.webp", "alt": "Representative component detail for laser cut and formed equipment parts"}]
+gallery:
+  - image: /images/products/sheet-metal/laser-cutting-service-parts-detail-1.webp
+    alt: Representative component detail for laser cut and formed equipment parts
+  - image: /images/products/sheet-metal/laser-cutting-service-parts-detail-2.webp
+    alt: Representative component detail for laser cut and formed equipment parts
+primaryKeyword: custom laser cut and formed equipment parts
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers laser cut and formed equipment parts to turn custom profiles into equipment brackets and mounting parts. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom laser cut and formed equipment parts to your drawings for OEM and contract manufacturing orders. We review cut edges, internal openings and downstream forming allowances before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **cut edges, internal openings and downstream forming allowances**. Use the final drawing for acceptance and keep drawing revision control across cutting and bending. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -88,7 +94,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about laser cut and formed equipment parts</h2>
 
@@ -110,11 +116,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[CNC Cut Sheet Metal Profiles](/products/cnc-cutting-sheet-metal.html) · [Sheet Metal Laser Cutting Service](/products/sheet-metal-laser-cutting.html) · [Laser Cut Custom Metal Components](/products/laser-cutting.html)
+[Custom CNC Cut Sheet Metal Profiles](/products/cnc-cutting-sheet-metal.html) · [Custom Sheet Metal Laser Cutting Service](/products/sheet-metal-laser-cutting.html) · [Custom Laser Cut Custom Metal Components](/products/laser-cutting.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your laser cut and formed equipment parts project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with cut edges, internal openings and downstream forming allowances, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Laser Cut and Formed Equipment Parts" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom Laser Cut and Formed Equipment Parts" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>

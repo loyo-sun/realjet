@@ -1,8 +1,8 @@
 ---
-title: Crane Mast Contract Manufacturing for Construction Machinery
-description: Contract manufacturing of crane mast and base structures with heavy plate fabrication, welded assembly, precision interface machining and coating.
-date: 2026-08-08
-updated: 2026-08-08
+title: Custom Crane Mast and Base Structures
+description: REALJET offers custom crane mast and base structures to your drawings, with OEM contract manufacturing covering welding and interface machining.
+date: 2026-08-08T00:00:00.000Z
+updated: '2026-10-17'
 order: 20
 featured: false
 slug: crane-mast-contract-manufacturing
@@ -10,9 +10,14 @@ productSeries: contract-manufacturing
 image: /images/products/crane-mast-contract-manufacturing.webp
 imageAlt: Red fabricated crane mast and base structure with machined pin and mounting interfaces
 draft: false
+landingSeoTitle: Custom Crane Mast and Base Structures | Contract Manufacturing | Realjet
+primaryKeyword: custom crane mast and base structures
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 ## Fabricated mast structures for heavy lifting equipment
+
+REALJET provides custom crane mast and base structures to your drawings for OEM and contract manufacturing orders. The scope combines welding and interface machining around the approved part and assembly requirements.
 
 Crane mast and base structures connect major machine systems through a compact, highly loaded welded assembly. Realjet undertakes construction machinery contract manufacturing for these components, following customer drawings from plate processing and structural welding through interface machining, finishing and inspection.
 

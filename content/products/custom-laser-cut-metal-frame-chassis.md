@@ -1,9 +1,9 @@
 ---
 title: Custom Laser Cut Metal Frame Chassis
-landingSeoTitle: Custom Sheet Metal Chassis & Laser Cut Frames | Realjet
-description: Custom sheet metal chassis for machinery and industrial electronics, with laser cutting, CNC bending, joining, hardware installation and finishing to your drawings.
-date: 2026-10-17
-updated: 2026-10-17
+landingSeoTitle: Custom Laser Cut Metal Frame Chassis for OEMs | Realjet
+description: REALJET offers custom laser cut metal frame chassis to your drawings, with OEM contract manufacturing covering cutting, bending and hardware installation.
+date: 2026-10-17T00:00:00.000Z
+updated: '2026-10-17'
 order: 11.5
 featured: false
 slug: custom-laser-cut-metal-frame-chassis
@@ -15,6 +15,8 @@ image: /images/products/custom-laser-cut-metal-frame-chassis.webp
 imageAlt: Black formed sheet metal chassis with ventilation slots, connector openings and internal mounting points
 imageCaption: Representative chassis configuration. Dimensions, openings, hardware and finish are customized to the approved drawing.
 draft: false
+primaryKeyword: custom laser cut metal frame chassis
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
@@ -23,7 +25,7 @@ draft: false
 
 <h2 id="product-overview">Sheet metal chassis built around your equipment</h2>
 
-REALJET supplies custom laser-cut and formed metal chassis for machinery controls, automation equipment and industrial electronics. The chassis brings mounting points, cable access, ventilation and enclosure interfaces into one assembly, helping your equipment fit together as designed.
+REALJET provides custom laser cut metal frame chassis to your drawings for OEM and contract manufacturing orders. We review internal mounting positions, flanges and panel cutouts before confirming the custom manufacturing scope. The chassis brings mounting points, cable access, ventilation and enclosure interfaces into one assembly, helping your equipment fit together as designed.
 
 Supply can cover a formed chassis, a joined frame or a finished assembly with specified hardware. Share your equipment layout and drawings so we can review the material, manufacturing route and inspection scope before quotation.
 
@@ -93,7 +95,7 @@ Material records, dimensional inspection reports, first-article documentation an
 
 REALJET works with machinery manufacturers and equipment integrators on drawing-based metal components. We coordinate the chassis requirements with the wider assembly: adjacent fabricated parts, machined interfaces, purchased hardware, finish and delivery condition.
 
-For a package that includes larger welded structures or machined assemblies, explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/). You can also browse [Custom Machinery Components](/products/custom-machinery-components/) for related component examples.
+For a package that includes larger welded structures or machined assemblies, explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/). You can also browse [Custom Machinery Components](/products/custom-machinery-components/) for related component examples.
 
 <h2 id="chassis-faq">Custom sheet metal chassis FAQ</h2>
 
@@ -117,5 +119,5 @@ Material, part size, cut complexity, bend count, joining, hardware, finishing, q
   <span class="eyebrow">Start with your drawing</span>
   <h2>Request a custom chassis quotation</h2>
   <p>Send your drawings, material and thickness, order quantity, critical tolerances, hardware list, finish and delivery destination to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Our team can review the scope and identify the details needed for quotation.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom laser cut metal frame chassis quotation" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Discuss Your Chassis Project <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom laser cut metal frame chassis quotation" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom Chassis Quote <span aria-hidden="true">→</span></button>
 </div>

@@ -1,0 +1,1875 @@
+{
+  "updated": "2026-10-17",
+  "scope": "All 116 Custom Machinery Components product pages and their category",
+  "intentMapping": {
+    "custom": "定制",
+    "madeToDrawing": "来图定制",
+    "OEM": "OEM 制造",
+    "contractManufacturing": "代加工、合同制造"
+  },
+  "policy": [
+    "Keep existing URLs and canonicals",
+    "Use custom product wording in H1 and catalogue cards",
+    "Distribute OEM and contract manufacturing naturally across search titles, descriptions, lead copy and enquiry actions",
+    "Preserve factual image Alt text",
+    "No search-volume or ranking claims"
+  ],
+  "products": [
+    {
+      "slug": "aluminum-enclosure-box",
+      "url": "https://realjetech.com/products/aluminum-enclosure-box.html",
+      "previousTitle": "Aluminum Enclosure Boxes",
+      "title": "Custom Aluminum Enclosure Boxes",
+      "seoTitle": "Custom Aluminum Enclosure Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom aluminum enclosure boxes to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom aluminum enclosure boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "aluminum-frame-welding",
+      "url": "https://realjetech.com/products/aluminum-frame-welding.html",
+      "previousTitle": "Welded Aluminum Frames",
+      "title": "Custom Welded Aluminum Frames",
+      "seoTitle": "Custom Welded Aluminum Frames | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom welded aluminum frames to your drawings, with OEM contract manufacturing covering frame fabrication and machining.",
+      "primaryKeyword": "custom welded aluminum frames",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "frame fabrication and machining"
+    },
+    {
+      "slug": "aluminum-sheet-fabrication",
+      "url": "https://realjetech.com/products/aluminum-sheet-fabrication.html",
+      "previousTitle": "Aluminum Sheet Fabrication for OEM Parts",
+      "title": "Custom Aluminum Sheet Fabrication for OEM Parts",
+      "seoTitle": "Custom Aluminum Sheet Fabrication for OEM Parts | Realjet",
+      "description": "REALJET offers custom aluminum sheet fabrication for OEM parts to your drawings, with OEM contract manufacturing covering aluminum cutting and forming.",
+      "primaryKeyword": "custom aluminum sheet fabrication for OEM parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "aluminum cutting and forming"
+    },
+    {
+      "slug": "aluminum-welding",
+      "url": "https://realjetech.com/products/aluminum-welding.html",
+      "previousTitle": "Aluminum Welding for Equipment Components",
+      "title": "Custom Aluminum Welding for Equipment Components",
+      "seoTitle": "Custom Aluminum Welding for Equipment Components | Realjet",
+      "description": "REALJET offers custom aluminum welding for equipment components to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom aluminum welding for equipment components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "bend-plate",
+      "url": "https://realjetech.com/products/bend-plate.html",
+      "previousTitle": "Custom Bent Plate Assemblies",
+      "title": "Custom Bent Plate Assemblies",
+      "seoTitle": "Custom Bent Plate Assemblies for OEMs | Realjet",
+      "description": "REALJET offers custom bent plate assemblies to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom bent plate assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "bending-aluminium-sheet",
+      "url": "https://realjetech.com/products/bending-aluminium-sheet.html",
+      "previousTitle": "Multi-Bend Aluminum Sheet Components",
+      "title": "Custom Multi-Bend Aluminum Sheet Components",
+      "seoTitle": "Custom Multi-Bend Aluminum Sheet Components for OEMs | Realjet",
+      "description": "REALJET offers custom multi-bend aluminum sheet components to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom multi-bend aluminum sheet components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "bending-aluminum-sheet-metal",
+      "url": "https://realjetech.com/products/bending-aluminum-sheet-metal.html",
+      "previousTitle": "Aluminum Sheet Bending Service",
+      "title": "Custom Aluminum Sheet Bending Service",
+      "seoTitle": "Custom Aluminum Sheet Bending Service for OEMs | Realjet",
+      "description": "REALJET offers custom aluminum sheet bending service to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom aluminum sheet bending service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "bending-stainless-steel-sheet",
+      "url": "https://realjetech.com/products/bending-stainless-steel-sheet.html",
+      "previousTitle": "Stainless Steel Sheet Bending",
+      "title": "Custom Stainless Steel Bending Service",
+      "seoTitle": "Custom Stainless Steel Bending Service for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel bending service to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom stainless steel bending service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "bending-steel-plate",
+      "url": "https://realjetech.com/products/bending-steel-plate.html",
+      "previousTitle": "Steel Plate Bending Components",
+      "title": "Custom Steel Plate Bending Components",
+      "seoTitle": "Custom Steel Plate Bending Components for OEMs | Realjet",
+      "description": "REALJET offers custom steel plate bending components to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom steel plate bending components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "black-sheet-metal",
+      "url": "https://realjetech.com/products/black-sheet-metal.html",
+      "previousTitle": "Black Finished Sheet Metal Panels",
+      "title": "Custom Black Finished Sheet Metal Panels",
+      "seoTitle": "Custom Black Finished Sheet Metal Panels for OEMs | Realjet",
+      "description": "REALJET offers custom black finished sheet metal panels to your drawings, with OEM contract manufacturing covering panel cutting and finishing.",
+      "primaryKeyword": "custom black finished sheet metal panels",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "panel cutting and finishing"
+    },
+    {
+      "slug": "cnc-cutting-sheet-metal",
+      "url": "https://realjetech.com/products/cnc-cutting-sheet-metal.html",
+      "previousTitle": "CNC Cut Sheet Metal Profiles",
+      "title": "Custom CNC Cut Sheet Metal Profiles",
+      "seoTitle": "Custom CNC Cut Sheet Metal Profiles for OEMs | Realjet",
+      "description": "REALJET offers custom CNC cut sheet metal profiles to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom CNC cut sheet metal profiles",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "commercial-sheet-metal",
+      "url": "https://realjetech.com/products/commercial-sheet-metal.html",
+      "previousTitle": "Custom Finished Sheet Metal Housings",
+      "title": "Custom Finished Sheet Metal Housings",
+      "seoTitle": "Custom Finished Sheet Metal Housings for OEMs | Realjet",
+      "description": "REALJET offers custom finished sheet metal housings to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom finished sheet metal housings",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "concrete-pump-chassis-contract-manufacturing",
+      "url": "https://realjetech.com/products/concrete-pump-chassis-contract-manufacturing.html",
+      "previousTitle": "Concrete Pump Chassis Contract Manufacturing",
+      "title": "Custom Concrete Pump Chassis",
+      "seoTitle": "Custom Concrete Pump Chassis | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom concrete pump chassis to your drawings, with OEM contract manufacturing covering chassis fabrication and machining.",
+      "primaryKeyword": "custom concrete pump chassis",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "chassis fabrication and machining"
+    },
+    {
+      "slug": "contract-manufactured-aerial-work-platform-turntable",
+      "url": "https://realjetech.com/products/contract-manufactured-aerial-work-platform-turntable.html",
+      "previousTitle": "Contract-Manufactured Aerial Work Platform Turntable",
+      "title": "Custom Aerial Work Platform Turntables",
+      "seoTitle": "Custom Aerial Work Platform Turntables | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom aerial work platform turntables to your drawings, with OEM contract manufacturing covering turntable welding and machining.",
+      "primaryKeyword": "custom aerial work platform turntables",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "turntable welding and machining"
+    },
+    {
+      "slug": "copper-sheet-metal-fabrication",
+      "url": "https://realjetech.com/products/copper-sheet-metal-fabrication.html",
+      "previousTitle": "Copper Sheet Metal Components",
+      "title": "Custom Copper Sheet Metal Components",
+      "seoTitle": "Custom Copper Sheet Metal Components for OEMs | Realjet",
+      "description": "REALJET offers custom copper sheet metal components to your drawings, with OEM contract manufacturing covering copper cutting and forming.",
+      "primaryKeyword": "custom copper sheet metal components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "copper cutting and forming"
+    },
+    {
+      "slug": "crane-boom-head-contract-manufacturing-machining",
+      "url": "https://realjetech.com/products/crane-boom-head-contract-manufacturing-machining.html",
+      "previousTitle": "Crane Boom Head Contract Manufacturing and Machining",
+      "title": "Custom Crane Boom Heads",
+      "seoTitle": "Custom Crane Boom Heads | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom crane boom heads to your drawings, with OEM contract manufacturing covering boom head welding and machining.",
+      "primaryKeyword": "custom crane boom heads",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "boom head welding and machining"
+    },
+    {
+      "slug": "crane-jib-arm-contract-manufacturing-machining",
+      "url": "https://realjetech.com/products/crane-jib-arm-contract-manufacturing-machining.html",
+      "previousTitle": "Crane Jib Arm Contract Manufacturing and Machining",
+      "title": "Custom Crane Jib Arms",
+      "seoTitle": "Custom Crane Jib Arms | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom crane jib arms to your drawings, with OEM contract manufacturing covering lattice welding and pin machining.",
+      "primaryKeyword": "custom crane jib arms",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "lattice welding and pin machining"
+    },
+    {
+      "slug": "crane-mast-contract-manufacturing",
+      "url": "https://realjetech.com/products/crane-mast-contract-manufacturing.html",
+      "previousTitle": "Crane Mast Contract Manufacturing for Construction Machinery",
+      "title": "Custom Crane Mast and Base Structures",
+      "seoTitle": "Custom Crane Mast and Base Structures | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom crane mast and base structures to your drawings, with OEM contract manufacturing covering welding and interface machining.",
+      "primaryKeyword": "custom crane mast and base structures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and interface machining"
+    },
+    {
+      "slug": "custom-aluminum-box",
+      "url": "https://realjetech.com/products/custom-aluminum-box.html",
+      "previousTitle": "Custom Aluminum Boxes",
+      "title": "Custom Aluminum Boxes",
+      "seoTitle": "Custom Aluminum Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom aluminum boxes to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom aluminum boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "custom-aluminum-case",
+      "url": "https://realjetech.com/products/custom-aluminum-case.html",
+      "previousTitle": "Custom Aluminum Equipment Cases",
+      "title": "Custom Aluminum Equipment Cases",
+      "seoTitle": "Custom Aluminum Equipment Cases for OEMs | Realjet",
+      "description": "REALJET offers custom aluminum equipment cases to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom aluminum equipment cases",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "custom-aluminum-storage-box",
+      "url": "https://realjetech.com/products/custom-aluminum-storage-box.html",
+      "previousTitle": "Custom Metal Storage Boxes",
+      "title": "Custom Metal Storage Boxes",
+      "seoTitle": "Custom Metal Storage Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom metal storage boxes to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom metal storage boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "custom-automotive-metal-mounting-bracket",
+      "url": "https://realjetech.com/products/custom-automotive-metal-mounting-bracket.html",
+      "previousTitle": "Custom Automotive Metal Mounting Brackets",
+      "title": "Custom Automotive Metal Mounting Brackets",
+      "seoTitle": "Custom Automotive Metal Mounting Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom automotive metal mounting brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom automotive metal mounting brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-cabinet-box",
+      "url": "https://realjetech.com/products/custom-cabinet-box.html",
+      "previousTitle": "Sheet Metal Enclosure Fabrication",
+      "title": "Custom Sheet Metal Enclosure Fabrication",
+      "seoTitle": "Custom Sheet Metal Enclosure Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal enclosure fabrication to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom sheet metal enclosure fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "custom-cabinet-manufacturer",
+      "url": "https://realjetech.com/products/custom-cabinet-manufacturer.html",
+      "previousTitle": "Drawing-Based Equipment Cabinets",
+      "title": "Custom OEM Equipment Cabinets",
+      "seoTitle": "Custom OEM Equipment Cabinets | Realjet",
+      "description": "REALJET offers custom OEM equipment cabinets to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom OEM equipment cabinets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "custom-heavy-duty-steel-mounting-bracket",
+      "url": "https://realjetech.com/products/custom-heavy-duty-steel-mounting-bracket.html",
+      "previousTitle": "Heavy Duty Steel Mounting Brackets",
+      "title": "Custom Heavy Duty Steel Mounting Brackets",
+      "seoTitle": "Custom Heavy Duty Steel Mounting Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom heavy duty steel mounting brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom heavy duty steel mounting brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-injection-mold",
+      "url": "https://realjetech.com/products/custom-injection-mold.html",
+      "previousTitle": "Custom Injection Moulded Components",
+      "title": "Custom Injection Moulded Components",
+      "seoTitle": "Custom Injection Moulded Components | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom injection moulded components to your drawings, with OEM contract manufacturing covering tooling review and moulded parts.",
+      "primaryKeyword": "custom injection moulded components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tooling review and moulded parts"
+    },
+    {
+      "slug": "custom-ip65-waterproof-metal-box",
+      "url": "https://realjetech.com/products/custom-ip65-waterproof-metal-box.html",
+      "previousTitle": "Custom Metal Boxes for IP65 Projects",
+      "title": "Custom Metal Boxes for IP65 Projects",
+      "seoTitle": "Custom Metal Boxes for IP65 Projects for OEMs | Realjet",
+      "description": "REALJET offers custom metal boxes for IP65 projects to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom metal boxes for IP65 projects",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "custom-laser-cut-metal-frame-chassis",
+      "url": "https://realjetech.com/products/custom-laser-cut-metal-frame-chassis.html",
+      "previousTitle": "Custom Laser Cut Metal Frame Chassis",
+      "title": "Custom Laser Cut Metal Frame Chassis",
+      "seoTitle": "Custom Laser Cut Metal Frame Chassis for OEMs | Realjet",
+      "description": "REALJET offers custom laser cut metal frame chassis to your drawings, with OEM contract manufacturing covering cutting, bending and hardware installation.",
+      "primaryKeyword": "custom laser cut metal frame chassis",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and hardware installation"
+    },
+    {
+      "slug": "custom-metal-box",
+      "url": "https://realjetech.com/products/custom-metal-box.html",
+      "previousTitle": "Custom Metal Box Assemblies",
+      "title": "Custom Metal Box Assemblies",
+      "seoTitle": "Custom Metal Box Assemblies for OEMs | Realjet",
+      "description": "REALJET offers custom metal box assemblies to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom metal box assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "custom-metal-bracket-fabricator",
+      "url": "https://realjetech.com/products/custom-metal-bracket-fabricator.html",
+      "previousTitle": "Multi-Feature Fabricated Metal Brackets",
+      "title": "Custom Multi-Feature Fabricated Metal Brackets",
+      "seoTitle": "Custom Multi-Feature Fabricated Metal Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom multi-feature fabricated metal brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom multi-feature fabricated metal brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-metal-cabinets",
+      "url": "https://realjetech.com/products/custom-metal-cabinets.html",
+      "previousTitle": "Custom Metal Cabinet Assemblies",
+      "title": "Custom Metal Cabinet Assemblies",
+      "seoTitle": "Custom Metal Cabinet Assemblies for OEMs | Realjet",
+      "description": "REALJET offers custom metal cabinet assemblies to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom metal cabinet assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "custom-metal-fabrication",
+      "url": "https://realjetech.com/products/custom-metal-fabrication.html",
+      "previousTitle": "Custom Metal Fabrication for OEM Assemblies",
+      "title": "Custom Metal Fabrication for OEM Assemblies",
+      "seoTitle": "Custom Metal Fabrication for OEM Assemblies | Realjet",
+      "description": "REALJET offers custom metal fabrication for OEM assemblies to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom metal fabrication for OEM assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "custom-metal-plate",
+      "url": "https://realjetech.com/products/custom-metal-plate.html",
+      "previousTitle": "Custom Metal Mounting Plates",
+      "title": "Custom Metal Mounting Plates",
+      "seoTitle": "Custom Metal Mounting Plates for OEMs | Realjet",
+      "description": "REALJET offers custom metal mounting plates to your drawings, with OEM contract manufacturing covering plate cutting and machining.",
+      "primaryKeyword": "custom metal mounting plates",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "plate cutting and machining"
+    },
+    {
+      "slug": "custom-metal-shelves",
+      "url": "https://realjetech.com/products/custom-metal-shelves.html",
+      "previousTitle": "Fabricated Steel Shelf Brackets",
+      "title": "Custom Fabricated Steel Shelf Brackets",
+      "seoTitle": "Custom Fabricated Steel Shelf Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom fabricated steel shelf brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom fabricated steel shelf brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-metal-stampings",
+      "url": "https://realjetech.com/products/custom-metal-stampings.html",
+      "previousTitle": "Custom Metal Stampings",
+      "title": "Custom Metal Stampings",
+      "seoTitle": "Custom Metal Stampings for OEMs | Realjet",
+      "description": "REALJET offers custom metal stampings to your drawings, with OEM contract manufacturing covering tooling review and stamping.",
+      "primaryKeyword": "custom metal stampings",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tooling review and stamping"
+    },
+    {
+      "slug": "custom-metalworks",
+      "url": "https://realjetech.com/products/custom-metalworks.html",
+      "previousTitle": "Custom Fabricated Metal Equipment Cases",
+      "title": "Custom Fabricated Metal Equipment Cases",
+      "seoTitle": "Custom Fabricated Metal Equipment Cases for OEMs | Realjet",
+      "description": "REALJET offers custom fabricated metal equipment cases to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom fabricated metal equipment cases",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "custom-mounting-bracket",
+      "url": "https://realjetech.com/products/custom-mounting-bracket.html",
+      "previousTitle": "Custom Equipment Mounting Brackets",
+      "title": "Custom Equipment Mounting Brackets",
+      "seoTitle": "Custom Equipment Mounting Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom equipment mounting brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom equipment mounting brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-outdoor-electrical-enclosure",
+      "url": "https://realjetech.com/products/custom-outdoor-electrical-enclosure.html",
+      "previousTitle": "Custom Outdoor Electrical Enclosures",
+      "title": "Custom Outdoor Electrical Enclosures",
+      "seoTitle": "Custom Outdoor Electrical Enclosures for OEMs | Realjet",
+      "description": "REALJET offers custom outdoor electrical enclosures to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom outdoor electrical enclosures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "custom-precision-stainless-steel-fabrication",
+      "url": "https://realjetech.com/products/custom-precision-stainless-steel-fabrication.html",
+      "previousTitle": "Precision Stainless Steel Fabricated Parts",
+      "title": "Custom Precision Stainless Steel Fabricated Parts",
+      "seoTitle": "Custom Precision Stainless Steel Fabricated Parts for OEMs | Realjet",
+      "description": "REALJET offers custom precision stainless steel fabricated parts to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom precision stainless steel fabricated parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "custom-sheet-metal-electronic-enclosure",
+      "url": "https://realjetech.com/products/custom-sheet-metal-electronic-enclosure.html",
+      "previousTitle": "Custom Sheet Metal Electronic Enclosures",
+      "title": "Custom Sheet Metal Electronic Enclosures",
+      "seoTitle": "Custom Sheet Metal Electronic Enclosures for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal electronic enclosures to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom sheet metal electronic enclosures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "custom-sheet-metal-fabrication",
+      "url": "https://realjetech.com/products/custom-sheet-metal-fabrication.html",
+      "previousTitle": "Custom Sheet Metal Fabricated Assemblies",
+      "title": "Custom Sheet Metal Fabricated Assemblies",
+      "seoTitle": "Custom Sheet Metal Fabricated Assemblies | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal fabricated assemblies to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal fabricated assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "custom-sheet-metal-processing-service",
+      "url": "https://realjetech.com/products/custom-sheet-metal-processing-service.html",
+      "previousTitle": "Custom Sheet Metal Processing Service",
+      "title": "Custom Sheet Metal Processing Service",
+      "seoTitle": "Custom Sheet Metal Processing Service | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal processing service to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal processing service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "custom-sheet-metal",
+      "url": "https://realjetech.com/products/custom-sheet-metal.html",
+      "previousTitle": "Custom Sheet Metal OEM Components",
+      "title": "Custom Sheet Metal OEM Components",
+      "seoTitle": "Custom Sheet Metal OEM Components | Realjet",
+      "description": "REALJET offers custom sheet metal OEM components to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal OEM components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "custom-shelf-bracket",
+      "url": "https://realjetech.com/products/custom-shelf-bracket.html",
+      "previousTitle": "Custom Shelf Support Brackets",
+      "title": "Custom Shelf Support Brackets",
+      "seoTitle": "Custom Shelf Support Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom shelf support brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom shelf support brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-stainless-steel-cabinets",
+      "url": "https://realjetech.com/products/custom-stainless-steel-cabinets.html",
+      "previousTitle": "Custom Stainless Steel Cabinets",
+      "title": "Custom Stainless Steel Cabinets",
+      "seoTitle": "Custom Stainless Steel Cabinets for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel cabinets to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom stainless steel cabinets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "custom-stainless-steel-fabrication",
+      "url": "https://realjetech.com/products/custom-stainless-steel-fabrication.html",
+      "previousTitle": "Custom Stainless Steel Equipment Fabrication",
+      "title": "Custom Stainless Steel Equipment Fabrication",
+      "seoTitle": "Custom Stainless Steel Equipment Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel equipment fabrication to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel equipment fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "custom-steel-bracket",
+      "url": "https://realjetech.com/products/custom-steel-bracket.html",
+      "previousTitle": "Custom Steel Connection Brackets",
+      "title": "Custom Steel Connection Brackets",
+      "seoTitle": "Custom Steel Connection Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom steel connection brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom steel connection brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "custom-steel-cabinet",
+      "url": "https://realjetech.com/products/custom-steel-cabinet.html",
+      "previousTitle": "Custom Steel Equipment Cabinets",
+      "title": "Custom Steel Equipment Cabinets",
+      "seoTitle": "Custom Steel Equipment Cabinets for OEMs | Realjet",
+      "description": "REALJET offers custom steel equipment cabinets to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom steel equipment cabinets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "custom-steel-fabrication",
+      "url": "https://realjetech.com/products/custom-steel-fabrication.html",
+      "previousTitle": "Custom Steel Fabrication for Machinery",
+      "title": "Custom Steel Fabrication for Machinery",
+      "seoTitle": "Custom Steel Fabrication for Machinery for OEMs | Realjet",
+      "description": "REALJET offers custom steel fabrication for machinery to your drawings, with OEM contract manufacturing covering steel fabrication and coating.",
+      "primaryKeyword": "custom steel fabrication for machinery",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "steel fabrication and coating"
+    },
+    {
+      "slug": "custom-steel-plate-fabrication",
+      "url": "https://realjetech.com/products/custom-steel-plate-fabrication.html",
+      "previousTitle": "Custom Steel Plate Fabrication",
+      "title": "Custom Steel Plate Fabrication",
+      "seoTitle": "Custom Steel Plate Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom steel plate fabrication to your drawings, with OEM contract manufacturing covering plate cutting and machining.",
+      "primaryKeyword": "custom steel plate fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "plate cutting and machining"
+    },
+    {
+      "slug": "custom-tool-box-fabrication",
+      "url": "https://realjetech.com/products/custom-tool-box-fabrication.html",
+      "previousTitle": "Custom Steel Tool and Equipment Boxes",
+      "title": "Custom Steel Tool and Equipment Boxes",
+      "seoTitle": "Custom Steel Tool and Equipment Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom steel tool and equipment boxes to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom steel tool and equipment boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "fabricated-fuel-tank-contract-manufacturing",
+      "url": "https://realjetech.com/products/fabricated-fuel-tank-contract-manufacturing.html",
+      "previousTitle": "Fabricated Fuel Tank Contract Manufacturing",
+      "title": "Custom Fabricated Fuel Tanks",
+      "seoTitle": "Custom Fabricated Fuel Tanks | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom fabricated fuel tanks to your drawings, with OEM contract manufacturing covering tank welding and finishing.",
+      "primaryKeyword": "custom fabricated fuel tanks",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tank welding and finishing"
+    },
+    {
+      "slug": "fabrication-welding",
+      "url": "https://realjetech.com/products/fabrication-welding.html",
+      "previousTitle": "Fabrication Welding for Equipment Assemblies",
+      "title": "Custom Fabrication Welding for Equipment Assemblies",
+      "seoTitle": "Custom Fabrication Welding for Equipment Assemblies | Realjet",
+      "description": "REALJET offers custom fabrication welding for equipment assemblies to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom fabrication welding for equipment assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "heavy-duty-sheet-metal-control-box",
+      "url": "https://realjetech.com/products/heavy-duty-sheet-metal-control-box.html",
+      "previousTitle": "Heavy Duty Sheet Metal Control Boxes",
+      "title": "Custom Heavy Duty Sheet Metal Control Boxes",
+      "seoTitle": "Custom Heavy Duty Sheet Metal Control Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom heavy duty sheet metal control boxes to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom heavy duty sheet metal control boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "hydraulic-oil-tank-contract-manufacturing",
+      "url": "https://realjetech.com/products/hydraulic-oil-tank-contract-manufacturing.html",
+      "previousTitle": "Hydraulic Oil Tank Contract Manufacturing for Machinery",
+      "title": "Custom Hydraulic Oil Tanks",
+      "seoTitle": "Custom Hydraulic Oil Tanks | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom hydraulic oil tanks to your drawings, with OEM contract manufacturing covering tank welding and port machining.",
+      "primaryKeyword": "custom hydraulic oil tanks",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tank welding and port machining"
+    },
+    {
+      "slug": "industrial-chain-conveyor-contract-manufacturing",
+      "url": "https://realjetech.com/products/industrial-chain-conveyor-contract-manufacturing.html",
+      "previousTitle": "Industrial Chain Conveyor Contract Manufacturing",
+      "title": "Custom Industrial Chain Conveyors",
+      "seoTitle": "Custom Industrial Chain Conveyors | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom industrial chain conveyors to your drawings, with OEM contract manufacturing covering conveyor fabrication and assembly.",
+      "primaryKeyword": "custom industrial chain conveyors",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "conveyor fabrication and assembly"
+    },
+    {
+      "slug": "iron-fabrication",
+      "url": "https://realjetech.com/products/iron-fabrication.html",
+      "previousTitle": "Ferrous Metal Fabricated Components",
+      "title": "Custom Ferrous Metal Fabrication",
+      "seoTitle": "Custom Ferrous Metal Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom ferrous metal fabrication to your drawings, with OEM contract manufacturing covering steel fabrication and coating.",
+      "primaryKeyword": "custom ferrous metal fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "steel fabrication and coating"
+    },
+    {
+      "slug": "iron-welding",
+      "url": "https://realjetech.com/products/iron-welding.html",
+      "previousTitle": "Mild Steel Welded Equipment Parts",
+      "title": "Custom Mild Steel Welded Equipment Parts",
+      "seoTitle": "Custom Mild Steel Welded Equipment Parts | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom mild steel welded equipment parts to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom mild steel welded equipment parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "laser-cut-aluminum",
+      "url": "https://realjetech.com/products/laser-cut-aluminum.html",
+      "previousTitle": "Laser Cut Aluminum Parts",
+      "title": "Custom Laser Cut Aluminum Parts",
+      "seoTitle": "Custom Laser Cut Aluminum Parts for OEMs | Realjet",
+      "description": "REALJET offers custom laser cut aluminum parts to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom laser cut aluminum parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "laser-cutting-part",
+      "url": "https://realjetech.com/products/laser-cutting-part.html",
+      "previousTitle": "Laser Cut Flat Metal Parts",
+      "title": "Custom Laser Cut Metal Parts",
+      "seoTitle": "Custom Laser Cut Metal Parts for OEMs | Realjet",
+      "description": "REALJET offers custom laser cut metal parts to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom laser cut metal parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "laser-cutting-service-parts",
+      "url": "https://realjetech.com/products/laser-cutting-service-parts.html",
+      "previousTitle": "Laser Cut and Formed Equipment Parts",
+      "title": "Custom Laser Cut and Formed Equipment Parts",
+      "seoTitle": "Custom Laser Cut and Formed Equipment Parts for OEMs | Realjet",
+      "description": "REALJET offers custom laser cut and formed equipment parts to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom laser cut and formed equipment parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "laser-cutting",
+      "url": "https://realjetech.com/products/laser-cutting.html",
+      "previousTitle": "Laser Cut Custom Metal Components",
+      "title": "Custom Laser Cut Custom Metal Components",
+      "seoTitle": "Custom Laser Cut Custom Metal Components for OEMs | Realjet",
+      "description": "REALJET offers custom laser cut custom metal components to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom laser cut custom metal components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "metal-bend",
+      "url": "https://realjetech.com/products/metal-bend.html",
+      "previousTitle": "Custom Metal Bend Components",
+      "title": "Custom Metal Bend Components",
+      "seoTitle": "Custom Metal Bend Components for OEMs | Realjet",
+      "description": "REALJET offers custom metal bend components to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom metal bend components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "metal-bending-service",
+      "url": "https://realjetech.com/products/metal-bending-service.html",
+      "previousTitle": "Metal Bending for Custom Equipment Parts",
+      "title": "Custom Metal Bending for Custom Equipment Parts",
+      "seoTitle": "Custom Metal Bending for Custom Equipment Parts for OEMs | Realjet",
+      "description": "REALJET offers custom metal bending for custom equipment parts to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom metal bending for custom equipment parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "metal-enclosure-fabrication",
+      "url": "https://realjetech.com/products/metal-enclosure-fabrication.html",
+      "previousTitle": "Fabricated Metal Equipment Enclosures",
+      "title": "Custom Fabricated Metal Equipment Enclosures",
+      "seoTitle": "Custom Fabricated Metal Equipment Enclosures for OEMs | Realjet",
+      "description": "REALJET offers custom fabricated metal equipment enclosures to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom fabricated metal equipment enclosures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "metal-fabs",
+      "url": "https://realjetech.com/products/metal-fabs.html",
+      "previousTitle": "Custom Formed Metal Angle Parts",
+      "title": "Custom Formed Metal Angle Parts",
+      "seoTitle": "Custom Formed Metal Angle Parts for OEMs | Realjet",
+      "description": "REALJET offers custom formed metal angle parts to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom formed metal angle parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "metal-manufacturing",
+      "url": "https://realjetech.com/products/metal-manufacturing.html",
+      "previousTitle": "Metal Panel and Tray Manufacturing",
+      "title": "Custom Metal Panels and Trays",
+      "seoTitle": "Custom Metal Panels and Trays for OEMs | Realjet",
+      "description": "REALJET offers custom metal panels and trays to your drawings, with OEM contract manufacturing covering panel cutting and finishing.",
+      "primaryKeyword": "custom metal panels and trays",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "panel cutting and finishing"
+    },
+    {
+      "slug": "metal-parts-fabrication",
+      "url": "https://realjetech.com/products/metal-parts-fabrication.html",
+      "previousTitle": "Mixed Metal Parts Fabrication",
+      "title": "Custom Mixed Metal Parts Fabrication",
+      "seoTitle": "Custom Mixed Metal Parts Fabrication | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom mixed metal parts fabrication to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom mixed metal parts fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "panel-fabrication",
+      "url": "https://realjetech.com/products/panel-fabrication.html",
+      "previousTitle": "Custom Equipment Panel Fabrication",
+      "title": "Custom Equipment Panel Fabrication",
+      "seoTitle": "Custom Equipment Panel Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom equipment panel fabrication to your drawings, with OEM contract manufacturing covering panel cutting and finishing.",
+      "primaryKeyword": "custom equipment panel fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "panel cutting and finishing"
+    },
+    {
+      "slug": "powder-coated-aluminum-equipment-enclosure",
+      "url": "https://realjetech.com/products/powder-coated-aluminum-equipment-enclosure.html",
+      "previousTitle": "Powder Coated Aluminum Equipment Enclosures",
+      "title": "Custom Powder Coated Aluminum Equipment Enclosures",
+      "seoTitle": "Custom Powder Coated Aluminum Equipment Enclosures for OEMs | Realjet",
+      "description": "REALJET offers custom powder coated aluminum equipment enclosures to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom powder coated aluminum equipment enclosures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "precision-19-inch-rackmount-server-chassis",
+      "url": "https://realjetech.com/products/precision-19-inch-rackmount-server-chassis.html",
+      "previousTitle": "Custom 19-Inch Rackmount Server Chassis",
+      "title": "Custom 19-Inch Rackmount Server Chassis",
+      "seoTitle": "Custom 19-Inch Rackmount Server Chassis for OEMs | Realjet",
+      "description": "REALJET offers custom 19-inch rackmount server chassis to your drawings, with OEM contract manufacturing covering cutting, bending and hardware installation.",
+      "primaryKeyword": "custom 19-inch rackmount server chassis",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and hardware installation"
+    },
+    {
+      "slug": "precision-cnc-bending-aluminum-chassis",
+      "url": "https://realjetech.com/products/precision-cnc-bending-aluminum-chassis.html",
+      "previousTitle": "CNC Bent Aluminum Chassis",
+      "title": "Custom CNC Bent Aluminum Chassis",
+      "seoTitle": "Custom CNC Bent Aluminum Chassis for OEMs | Realjet",
+      "description": "REALJET offers custom CNC bent aluminum chassis to your drawings, with OEM contract manufacturing covering cutting, bending and hardware installation.",
+      "primaryKeyword": "custom CNC bent aluminum chassis",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and hardware installation"
+    },
+    {
+      "slug": "railway-multifunction-vehicle-structure-contract-manufacturing",
+      "url": "https://realjetech.com/products/railway-multifunction-vehicle-structure-contract-manufacturing.html",
+      "previousTitle": "Railway Multifunction Vehicle Structure Contract Manufacturing",
+      "title": "Custom Railway Vehicle Structures",
+      "seoTitle": "Custom Railway Vehicle Structures | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom railway vehicle structures to your drawings, with OEM contract manufacturing covering vehicle structure fabrication.",
+      "primaryKeyword": "custom railway vehicle structures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "vehicle structure fabrication"
+    },
+    {
+      "slug": "sheet-metal-aluminum",
+      "url": "https://realjetech.com/products/sheet-metal-aluminum.html",
+      "previousTitle": "Aluminum Sheet Equipment Components",
+      "title": "Custom Aluminum Sheet Equipment Components",
+      "seoTitle": "Custom Aluminum Sheet Equipment Components for OEMs | Realjet",
+      "description": "REALJET offers custom aluminum sheet equipment components to your drawings, with OEM contract manufacturing covering aluminum cutting and forming.",
+      "primaryKeyword": "custom aluminum sheet equipment components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "aluminum cutting and forming"
+    },
+    {
+      "slug": "sheet-metal-bending-service",
+      "url": "https://realjetech.com/products/sheet-metal-bending-service.html",
+      "previousTitle": "Sheet Metal Bending Service",
+      "title": "Custom Sheet Metal Bending Service",
+      "seoTitle": "Custom Sheet Metal Bending Service for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal bending service to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom sheet metal bending service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "sheet-metal-box-fabrication",
+      "url": "https://realjetech.com/products/sheet-metal-box-fabrication.html",
+      "previousTitle": "Sheet Metal Box Fabrication",
+      "title": "Custom Sheet Metal Box Fabrication",
+      "seoTitle": "Custom Sheet Metal Box Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal box fabrication to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom sheet metal box fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "sheet-metal-bracket",
+      "url": "https://realjetech.com/products/sheet-metal-bracket.html",
+      "previousTitle": "Formed Sheet Metal Brackets",
+      "title": "Custom Formed Sheet Metal Brackets",
+      "seoTitle": "Custom Formed Sheet Metal Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom formed sheet metal brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom formed sheet metal brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "sheet-metal-cabinet",
+      "url": "https://realjetech.com/products/sheet-metal-cabinet.html",
+      "previousTitle": "Custom Sheet Metal Cabinet Panels",
+      "title": "Custom Sheet Metal Cabinet Panels",
+      "seoTitle": "Custom Sheet Metal Cabinet Panels for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal cabinet panels to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom sheet metal cabinet panels",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "sheet-metal-case",
+      "url": "https://realjetech.com/products/sheet-metal-case.html",
+      "previousTitle": "Custom Sheet Metal Cases",
+      "title": "Custom Sheet Metal Cases",
+      "seoTitle": "Custom Sheet Metal Cases for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal cases to your drawings, with OEM contract manufacturing covering box fabrication and assembly.",
+      "primaryKeyword": "custom sheet metal cases",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "box fabrication and assembly"
+    },
+    {
+      "slug": "sheet-metal-chassis",
+      "url": "https://realjetech.com/products/sheet-metal-chassis.html",
+      "previousTitle": "Custom Sheet Metal Chassis Assemblies",
+      "title": "Custom Sheet Metal Chassis Assemblies",
+      "seoTitle": "Custom Sheet Metal Chassis Assemblies for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal chassis assemblies to your drawings, with OEM contract manufacturing covering cutting, bending and hardware installation.",
+      "primaryKeyword": "custom sheet metal chassis assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and hardware installation"
+    },
+    {
+      "slug": "sheet-metal-company",
+      "url": "https://realjetech.com/products/sheet-metal-company.html",
+      "previousTitle": "Drawing-Based Sheet Metal Manufacturing",
+      "title": "Custom Sheet Metal Contract Manufacturing",
+      "seoTitle": "Custom Sheet Metal Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal contract manufacturing to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal contract manufacturing",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-component",
+      "url": "https://realjetech.com/products/sheet-metal-component.html",
+      "previousTitle": "Sheet Metal Subassembly Components",
+      "title": "Custom Sheet Metal Subassembly Components",
+      "seoTitle": "Custom Sheet Metal Subassembly Components | OEM Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal subassembly components to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal subassembly components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-fabrication-service",
+      "url": "https://realjetech.com/products/sheet-metal-fabrication-service.html",
+      "previousTitle": "Integrated Sheet Metal Fabrication Service",
+      "title": "Custom Sheet Metal Fabrication Service",
+      "seoTitle": "Custom Sheet Metal Fabrication Service | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal fabrication service to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal fabrication service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-folding",
+      "url": "https://realjetech.com/products/sheet-metal-folding.html",
+      "previousTitle": "Sheet Metal Folding Service",
+      "title": "Custom Sheet Metal Folding Service",
+      "seoTitle": "Custom Sheet Metal Folding Service for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal folding service to your drawings, with OEM contract manufacturing covering bending and dimensional inspection.",
+      "primaryKeyword": "custom sheet metal folding service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "bending and dimensional inspection"
+    },
+    {
+      "slug": "sheet-metal-for-stamping",
+      "url": "https://realjetech.com/products/sheet-metal-for-stamping.html",
+      "previousTitle": "Sheet Metal Stamping Components",
+      "title": "Custom Sheet Metal Stamping Components",
+      "seoTitle": "Custom Sheet Metal Stamping Components for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal stamping components to your drawings, with OEM contract manufacturing covering tooling review and stamping.",
+      "primaryKeyword": "custom sheet metal stamping components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tooling review and stamping"
+    },
+    {
+      "slug": "sheet-metal-forming",
+      "url": "https://realjetech.com/products/sheet-metal-forming.html",
+      "previousTitle": "Formed Sheet Metal Mounting Parts",
+      "title": "Custom Formed Sheet Metal Mounting Parts",
+      "seoTitle": "Custom Formed Sheet Metal Mounting Parts for OEMs | Realjet",
+      "description": "REALJET offers custom formed sheet metal mounting parts to your drawings, with OEM contract manufacturing covering cutting and forming.",
+      "primaryKeyword": "custom formed sheet metal mounting parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting and forming"
+    },
+    {
+      "slug": "sheet-metal-frames",
+      "url": "https://realjetech.com/products/sheet-metal-frames.html",
+      "previousTitle": "Fabricated Sheet Metal Frames",
+      "title": "Custom Fabricated Sheet Metal Frames",
+      "seoTitle": "Custom Fabricated Sheet Metal Frames | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom fabricated sheet metal frames to your drawings, with OEM contract manufacturing covering frame fabrication and machining.",
+      "primaryKeyword": "custom fabricated sheet metal frames",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "frame fabrication and machining"
+    },
+    {
+      "slug": "sheet-metal-laser-cutting",
+      "url": "https://realjetech.com/products/sheet-metal-laser-cutting.html",
+      "previousTitle": "Sheet Metal Laser Cutting Service",
+      "title": "Custom Sheet Metal Laser Cutting Service",
+      "seoTitle": "Custom Sheet Metal Laser Cutting Service for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal laser cutting service to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom sheet metal laser cutting service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "sheet-metal-manufacturing",
+      "url": "https://realjetech.com/products/sheet-metal-manufacturing.html",
+      "previousTitle": "Sheet Metal Manufacturing for Equipment Builders",
+      "title": "Custom OEM Sheet Metal Manufacturing",
+      "seoTitle": "Custom OEM Sheet Metal Manufacturing | Realjet",
+      "description": "REALJET offers custom OEM sheet metal manufacturing to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom OEM sheet metal manufacturing",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-part",
+      "url": "https://realjetech.com/products/sheet-metal-part.html",
+      "previousTitle": "Custom Sheet Metal Parts",
+      "title": "Custom Sheet Metal Parts",
+      "seoTitle": "Custom Sheet Metal Parts for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal parts to your drawings, with OEM contract manufacturing covering cutting and forming.",
+      "primaryKeyword": "custom sheet metal parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting and forming"
+    },
+    {
+      "slug": "sheet-metal-service",
+      "url": "https://realjetech.com/products/sheet-metal-service.html",
+      "previousTitle": "Sheet Metal Prototype and Batch Service",
+      "title": "Custom Sheet Metal Prototype and Batch Service",
+      "seoTitle": "Custom Sheet Metal Prototype and Batch Service | Realjet",
+      "description": "REALJET offers custom sheet metal prototype and batch service to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal prototype and batch service",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-shelves",
+      "url": "https://realjetech.com/products/sheet-metal-shelves.html",
+      "previousTitle": "Custom Sheet Metal Shelves and Trays",
+      "title": "Custom Sheet Metal Shelves and Trays",
+      "seoTitle": "Custom Sheet Metal Shelves and Trays for OEMs | Realjet",
+      "description": "REALJET offers custom sheet metal shelves and trays to your drawings, with OEM contract manufacturing covering forming and support fabrication.",
+      "primaryKeyword": "custom sheet metal shelves and trays",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "forming and support fabrication"
+    },
+    {
+      "slug": "sheet-metal-solutions",
+      "url": "https://realjetech.com/products/sheet-metal-solutions.html",
+      "previousTitle": "Sheet Metal Equipment Assembly Solutions",
+      "title": "Custom OEM Sheet Metal Assembly",
+      "seoTitle": "Custom OEM Sheet Metal Assembly | Realjet",
+      "description": "REALJET offers custom OEM sheet metal assembly to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom OEM sheet metal assembly",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-suppliers",
+      "url": "https://realjetech.com/products/sheet-metal-suppliers.html",
+      "previousTitle": "Sheet Metal Component Supply for OEMs",
+      "title": "Custom Sheet Metal Parts for OEMs",
+      "seoTitle": "Custom Sheet Metal Parts for OEMs | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal parts for oems to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.",
+      "primaryKeyword": "custom sheet metal parts for oems",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, forming and assembly"
+    },
+    {
+      "slug": "sheet-metal-welded-assemblies",
+      "url": "https://realjetech.com/products/sheet-metal-welded-assemblies.html",
+      "previousTitle": "Sheet Metal Welded Assemblies",
+      "title": "Custom Sheet Metal Welded Assemblies",
+      "seoTitle": "Custom Sheet Metal Welded Assemblies | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom sheet metal welded assemblies to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom sheet metal welded assemblies",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "ss-fabrication",
+      "url": "https://realjetech.com/products/ss-fabrication.html",
+      "previousTitle": "Stainless Steel Fabrication for Equipment Parts",
+      "title": "Custom Stainless Steel Fabrication for Equipment Parts",
+      "seoTitle": "Custom Stainless Steel Fabrication for Equipment Parts for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel fabrication for equipment parts to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel fabrication for equipment parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "ss-laser-cutting",
+      "url": "https://realjetech.com/products/ss-laser-cutting.html",
+      "previousTitle": "Stainless Steel Laser Cut Profiles",
+      "title": "Custom Stainless Steel Laser Cut Profiles",
+      "seoTitle": "Custom Stainless Steel Laser Cut Profiles for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel laser cut profiles to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom stainless steel laser cut profiles",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "ss-welding",
+      "url": "https://realjetech.com/products/ss-welding.html",
+      "previousTitle": "Stainless Steel Welding Assemblies",
+      "title": "Custom Stainless Steel Welding Services",
+      "seoTitle": "Custom Stainless Steel Welding Services | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom stainless steel welding services to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom stainless steel welding services",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "stainless-steel-angle-support-bracket",
+      "url": "https://realjetech.com/products/stainless-steel-angle-support-bracket.html",
+      "previousTitle": "Stainless Steel Angle Support Brackets",
+      "title": "Custom Stainless Steel Angle Support Brackets",
+      "seoTitle": "Custom Stainless Steel Angle Support Brackets for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel angle support brackets to your drawings, with OEM contract manufacturing covering cutting, bending and finishing.",
+      "primaryKeyword": "custom stainless steel angle support brackets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting, bending and finishing"
+    },
+    {
+      "slug": "stainless-steel-custom",
+      "url": "https://realjetech.com/products/stainless-steel-custom.html",
+      "previousTitle": "Custom Stainless Steel Formed Parts",
+      "title": "Custom Stainless Steel Formed Parts",
+      "seoTitle": "Custom Stainless Steel Formed Parts for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel formed parts to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel formed parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "stainless-steel-electronics-junction-box",
+      "url": "https://realjetech.com/products/stainless-steel-electronics-junction-box.html",
+      "previousTitle": "Stainless Steel Electronics Junction Boxes",
+      "title": "Custom Stainless Steel Electronics Junction Boxes",
+      "seoTitle": "Custom Stainless Steel Electronics Junction Boxes for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel electronics junction boxes to your drawings, with OEM contract manufacturing covering enclosure fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel electronics junction boxes",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "enclosure fabrication and finishing"
+    },
+    {
+      "slug": "stainless-steel-fabrication",
+      "url": "https://realjetech.com/products/stainless-steel-fabrication.html",
+      "previousTitle": "Stainless Steel Welded Components",
+      "title": "Custom Stainless Steel Welded Components",
+      "seoTitle": "Custom Stainless Steel Welded Components for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel welded components to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel welded components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "stainless-steel-sheet-metal-fabrication",
+      "url": "https://realjetech.com/products/stainless-steel-sheet-metal-fabrication.html",
+      "previousTitle": "Stainless Steel Sheet Fabrication",
+      "title": "Custom Stainless Steel Sheet Fabrication",
+      "seoTitle": "Custom Stainless Steel Sheet Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom stainless steel sheet fabrication to your drawings, with OEM contract manufacturing covering stainless fabrication and finishing.",
+      "primaryKeyword": "custom stainless steel sheet fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "stainless fabrication and finishing"
+    },
+    {
+      "slug": "steel-frame-fabrication",
+      "url": "https://realjetech.com/products/steel-frame-fabrication.html",
+      "previousTitle": "Steel Frame Fabrication for Machinery",
+      "title": "Custom Steel Frame Fabrication for Machinery",
+      "seoTitle": "Custom Steel Frame Fabrication for Machinery | OEM Manufacturing | Realjet",
+      "description": "REALJET offers custom steel frame fabrication for machinery to your drawings, with OEM contract manufacturing covering frame fabrication and machining.",
+      "primaryKeyword": "custom steel frame fabrication for machinery",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "frame fabrication and machining"
+    },
+    {
+      "slug": "steel-laser-cutting",
+      "url": "https://realjetech.com/products/steel-laser-cutting.html",
+      "previousTitle": "Steel Laser Cut Plates and Profiles",
+      "title": "Custom Steel Laser Cut Plates and Profiles",
+      "seoTitle": "Custom Steel Laser Cut Plates and Profiles for OEMs | Realjet",
+      "description": "REALJET offers custom steel laser cut plates and profiles to your drawings, with OEM contract manufacturing covering profile cutting and deburring.",
+      "primaryKeyword": "custom steel laser cut plates and profiles",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "profile cutting and deburring"
+    },
+    {
+      "slug": "steel-sheet-metal",
+      "url": "https://realjetech.com/products/steel-sheet-metal.html",
+      "previousTitle": "Fabricated Steel Sheet Covers",
+      "title": "Custom Fabricated Steel Sheet Covers",
+      "seoTitle": "Custom Fabricated Steel Sheet Covers for OEMs | Realjet",
+      "description": "REALJET offers custom fabricated steel sheet covers to your drawings, with OEM contract manufacturing covering steel fabrication and coating.",
+      "primaryKeyword": "custom fabricated steel sheet covers",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "steel fabrication and coating"
+    },
+    {
+      "slug": "steel-tank-fabrication",
+      "url": "https://realjetech.com/products/steel-tank-fabrication.html",
+      "previousTitle": "Fabricated Steel Tanks and Containers",
+      "title": "Custom Fabricated Steel Tanks and Containers",
+      "seoTitle": "Custom Fabricated Steel Tanks and Containers for OEMs | Realjet",
+      "description": "REALJET offers custom fabricated steel tanks and containers to your drawings, with OEM contract manufacturing covering tank fabrication and inspection.",
+      "primaryKeyword": "custom fabricated steel tanks and containers",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "tank fabrication and inspection"
+    },
+    {
+      "slug": "structural-steel-fabrication",
+      "url": "https://realjetech.com/products/structural-steel-fabrication.html",
+      "previousTitle": "Structural Steel Equipment Supports",
+      "title": "Custom Structural Steel Equipment Supports",
+      "seoTitle": "Custom Structural Steel Equipment Supports | OEM Manufacturing | Realjet",
+      "description": "REALJET offers custom structural steel equipment supports to your drawings, with OEM contract manufacturing covering frame fabrication and machining.",
+      "primaryKeyword": "custom structural steel equipment supports",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "frame fabrication and machining"
+    },
+    {
+      "slug": "structure-steel-fabrication",
+      "url": "https://realjetech.com/products/structure-steel-fabrication.html",
+      "previousTitle": "Welded Steel Machine Structures",
+      "title": "Custom Welded Steel Machine Structures",
+      "seoTitle": "Custom Welded Steel Machine Structures | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom welded steel machine structures to your drawings, with OEM contract manufacturing covering frame fabrication and machining.",
+      "primaryKeyword": "custom welded steel machine structures",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "frame fabrication and machining"
+    },
+    {
+      "slug": "thick-sheet-metal",
+      "url": "https://realjetech.com/products/thick-sheet-metal.html",
+      "previousTitle": "Thick Sheet Metal and Plate Components",
+      "title": "Custom Thick Sheet Metal and Plate Components",
+      "seoTitle": "Custom Thick Sheet Metal and Plate Components for OEMs | Realjet",
+      "description": "REALJET offers custom thick sheet metal and plate components to your drawings, with OEM contract manufacturing covering plate cutting and machining.",
+      "primaryKeyword": "custom thick sheet metal and plate components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "plate cutting and machining"
+    },
+    {
+      "slug": "thin-sheet-metal",
+      "url": "https://realjetech.com/products/thin-sheet-metal.html",
+      "previousTitle": "Thin Sheet Metal Component Fabrication",
+      "title": "Custom Thin Sheet Metal Component Fabrication",
+      "seoTitle": "Custom Thin Sheet Metal Component Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom thin sheet metal component fabrication to your drawings, with OEM contract manufacturing covering cutting and forming.",
+      "primaryKeyword": "custom thin sheet metal component fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cutting and forming"
+    },
+    {
+      "slug": "wall-mount-sheet-metal-cabinet",
+      "url": "https://realjetech.com/products/wall-mount-sheet-metal-cabinet.html",
+      "previousTitle": "Wall Mount Sheet Metal Cabinets",
+      "title": "Custom Wall Mount Sheet Metal Cabinets",
+      "seoTitle": "Custom Wall Mount Sheet Metal Cabinets for OEMs | Realjet",
+      "description": "REALJET offers custom wall mount sheet metal cabinets to your drawings, with OEM contract manufacturing covering cabinet fabrication and assembly.",
+      "primaryKeyword": "custom wall mount sheet metal cabinets",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "cabinet fabrication and assembly"
+    },
+    {
+      "slug": "welding-machining",
+      "url": "https://realjetech.com/products/welding-machining.html",
+      "previousTitle": "Welded Components with Machined Interfaces",
+      "title": "Custom Welded and Machined Components",
+      "seoTitle": "Custom Welded and Machined Components | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom welded and machined components to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom welded and machined components",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "welding-parts",
+      "url": "https://realjetech.com/products/welding-parts.html",
+      "previousTitle": "Custom Welded Metal Parts",
+      "title": "Custom Welded Metal Parts",
+      "seoTitle": "Custom Welded Metal Parts | Contract Manufacturing | Realjet",
+      "description": "REALJET offers custom welded metal parts to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom welded metal parts",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "welding-sheet-metal",
+      "url": "https://realjetech.com/products/welding-sheet-metal.html",
+      "previousTitle": "Welded Sheet Metal Housings and Covers",
+      "title": "Custom Welded Sheet Metal Housings and Covers",
+      "seoTitle": "Custom Welded Sheet Metal Housings and Covers | OEM Manufacturing | Realjet",
+      "description": "REALJET offers custom welded sheet metal housings and covers to your drawings, with OEM contract manufacturing covering welding and assembly inspection.",
+      "primaryKeyword": "custom welded sheet metal housings and covers",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "welding and assembly inspection"
+    },
+    {
+      "slug": "zinc-sheet-metal",
+      "url": "https://realjetech.com/products/zinc-sheet-metal.html",
+      "previousTitle": "Galvanized Sheet Metal Fabrication",
+      "title": "Custom Galvanized Sheet Metal Fabrication",
+      "seoTitle": "Custom Galvanized Sheet Metal Fabrication for OEMs | Realjet",
+      "description": "REALJET offers custom galvanized sheet metal fabrication to your drawings, with OEM contract manufacturing covering steel fabrication and coating.",
+      "primaryKeyword": "custom galvanized sheet metal fabrication",
+      "secondaryKeywords": [
+        "made to drawing",
+        "manufactured to your drawings",
+        "OEM manufacturing",
+        "contract manufacturing"
+      ],
+      "scope": "steel fabrication and coating"
+    }
+  ]
+}

@@ -1,29 +1,31 @@
 ---
-title: "Sheet Metal Manufacturing for Equipment Builders"
-landingSeoTitle: "Sheet Metal Manufacturing for Equipment Builders | Realjet"
-description: "REALJET offers sheet metal manufacturing for equipment builders. Review process sequencing, hardware sourcing and production release against your equipment drawings before production."
-date: "2026-10-17"
-updated: "2026-10-17"
+title: Custom OEM Sheet Metal Manufacturing
+landingSeoTitle: Custom OEM Sheet Metal Manufacturing | Realjet
+description: REALJET offers custom OEM sheet metal manufacturing to your drawings, with OEM contract manufacturing covering cutting, forming and assembly.
+date: '2026-10-17'
+updated: '2026-10-17'
 order: 146
 featured: false
-slug: "sheet-metal-manufacturing"
-productSeries: "contract-manufacturing"
+slug: sheet-metal-manufacturing
+productSeries: contract-manufacturing
 sheetMetalProduct: true
-sheetMetalFamily: "general"
-productSourceBatch: "sheet-metal-2026-10-17"
-image: "/images/products/sheet-metal/sheet-metal-manufacturing.webp"
-imageAlt: "Representative sheet metal manufacturing for equipment builders configuration for custom component manufacture"
-imageCaption: "Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project."
+sheetMetalFamily: general
+productSourceBatch: sheet-metal-2026-10-17
+image: /images/products/sheet-metal/sheet-metal-manufacturing.webp
+imageAlt: Representative sheet metal manufacturing for equipment builders configuration for custom component manufacture
+imageCaption: Representative manufacturing example. Material, dimensions, hardware and finish are specified for each approved project.
 draft: false
+primaryKeyword: custom OEM sheet metal manufacturing
+manufacturingServiceType: OEM contract manufacturing and custom fabrication to drawings
 ---
 
 <nav class="fabrication-jump-links" aria-label="On this page">
   <a href="#product-overview">Product</a><a href="#specification">Specification</a><a href="#sheet-metal-fabrication">About the process</a><a href="#fabrication-advantages">Advantages</a><a href="#fabrication-technology">Technology</a><a href="#quality">Quality</a><a href="#request-quotation">Request a quote</a>
 </nav>
 
-<h2 id="product-overview">Application and component scope</h2>
+<h2 id="product-overview">Custom OEM supply to your drawings</h2>
 
-REALJET offers sheet metal manufacturing for equipment builders to link profiling, forming and assembly for new or repeat OEM orders. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
+REALJET provides custom OEM sheet metal manufacturing to your drawings for OEM and contract manufacturing orders. We review process sequencing, hardware sourcing and production release before confirming the custom manufacturing scope. The manufacturing definition starts with the part's function, its installation space and the components it connects to. We review the requested geometry and delivery condition against those interfaces before defining the supply scope.
 
 For this application, the drawing review focuses on **process sequencing, hardware sourcing and production release**. Agree the sample approval and change-control steps before scaling the order. A photograph provides a configuration example; your approved documentation defines the material, dimensions, performance requirements and acceptance criteria for the ordered component.
 
@@ -87,7 +89,7 @@ Agree whether the order requires material identification records, dimensional re
 
 <h2 id="about-realjet-fabrication">About REALJET component supply</h2>
 
-REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [custom machinery component manufacturing service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
+REALJET supports machinery manufacturers and equipment integrators with drawing-based component supply. We coordinate the requested manufacturing operations, fit requirements, finishing and delivery condition around the customer's assembly needs. Explore our [OEM contract manufacturing and made-to-drawing fabrication service](/marketing/contract_manufacturing/) for a wider fabrication and assembly package.
 
 <h2 id="component-faq">Questions about sheet metal manufacturing for equipment builders</h2>
 
@@ -109,11 +111,11 @@ A prototype or pilot batch can be reviewed against the design and requested quan
 
 ## Related component examples
 
-[Custom Sheet Metal Processing Service](/products/custom-sheet-metal-processing-service.html) · [Sheet Metal Equipment Assembly Solutions](/products/sheet-metal-solutions.html) · [Drawing-Based Sheet Metal Manufacturing](/products/sheet-metal-company.html)
+[Custom Sheet Metal Processing Service](/products/custom-sheet-metal-processing-service.html) · [Custom OEM Sheet Metal Assembly](/products/sheet-metal-solutions.html) · [Custom Sheet Metal Contract Manufacturing](/products/sheet-metal-company.html)
 
 <div class="fabrication-quote-panel" id="request-quotation">
-  <span class="eyebrow">Drawing-based quotation</span>
+  <span class="eyebrow">Custom OEM quotation</span>
   <h2>Discuss your sheet metal manufacturing for equipment builders project</h2>
   <p>Send the drawing, material, quantity and required delivery date, together with process sequencing, hardware sourcing and production release, to <a href="mailto:sales@realjetech.com">sales@realjetech.com</a>. Identify critical tolerances, finishing and inspection requirements so we can review the quotation scope.</p>
-  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Quotation: Sheet Metal Manufacturing for Equipment Builders" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Component Quote <span aria-hidden="true">→</span></button>
+  <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Custom OEM quotation: Custom OEM Sheet Metal Manufacturing" data-product-conversion data-conversion-type="enquiry" data-conversion-position="bottom">Request a Custom OEM Quote <span aria-hidden="true">→</span></button>
 </div>
