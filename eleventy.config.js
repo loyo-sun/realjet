@@ -1,11 +1,24 @@
 import { buildCataloguePages } from "./scripts/product-catalogue.mjs";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import MarkdownIt from "markdown-it";
 
 const isProduction = process.env.ELEVENTY_ENV === "production";
 const toDate = (value) =>
   value instanceof Date ? value : new Date(`${value}T00:00:00Z`);
 
 export default function (eleventyConfig) {
+  const equipmentMarkdown = new MarkdownIt({ html: false });
+  eleventyConfig.addFilter("pcEquipmentMarkdown", (source) => {
+    // Notion returns paragraphs without blank lines. Keep adjacent list items
+    // together, but stop prose following a list from becoming its final item.
+    const lines = String(source).split("\n");
+    const normalized = lines.map((line, index) => {
+      const isList = /^(?:- |\d+\. )/.test(line);
+      const nextIsList = /^(?:- |\d+\. )/.test(lines[index + 1] || "");
+      return line + (isList && nextIsList ? "\n" : "\n\n");
+    }).join("");
+    return equipmentMarkdown.render(normalized);
+  });
   eleventyConfig.ignores.add(".github/**");
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("DESIGN_TOKENS.md");

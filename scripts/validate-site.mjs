@@ -48,10 +48,20 @@ function resolveOutputReference(reference, htmlPath) {
 }
 
 const htmlFiles = (await walk(outputRoot)).filter((file) => file.endsWith(".html"));
+// These made-to-order equipment pages describe products without prices or
+// reviews. They use Product for entity semantics, not Google product snippets:
+// https://developers.google.com/search/docs/appearance/structured-data/product-snippet
+const informationalProductUrls = new Set(JSON.parse(
+  await readFile(join(projectRoot, "site/_data/pcEquipment.json"), "utf8"),
+).map((equipment) => equipment.canonical));
 function validateStructuredData(value, path) {
   if (!value || typeof value !== "object") return;
   const types = [].concat(value["@type"] || []);
-  if (types.includes("Product") && !["offers", "review", "aggregateRating"].some((key) => value[key])) {
+  if (types.includes("Product") && informationalProductUrls.has(value.url)) {
+    if (!value.name || !value.description || !value.image || !value.additionalProperty?.length) {
+      failures.push(`${path}: informational Product requires name, description, image and reference specifications`);
+    }
+  } else if (types.includes("Product") && !["offers", "review", "aggregateRating"].some((key) => value[key])) {
     failures.push(`${path}: Product requires offers, review or aggregateRating for Google product snippets`);
   }
   for (const child of Object.values(value)) validateStructuredData(child, path);

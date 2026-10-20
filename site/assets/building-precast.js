@@ -1,4 +1,6 @@
 (() => {
+  const pageType = document.body.dataset.pageType || 'building_precast_plant';
+  const equipmentId = document.body.dataset.equipmentId;
   const form = document.querySelector('[data-pc-form]');
   if (!form) return;
   const menuButton = document.querySelector('[data-pc-menu]');
@@ -18,7 +20,7 @@
     try { allowed = ['all', 'analytics'].includes(localStorage.getItem('realjet_consent_v2')); } catch { /* Forms remain usable without storage. */ }
     if (!allowed) return;
     if (typeof window.trackEvent === 'function') {
-      window.trackEvent(name, { page_type: 'building_precast_plant', locale: 'en', ...parameters });
+      window.trackEvent(name, { page_type: pageType, locale: 'en', ...(equipmentId ? { equipment_id: equipmentId } : {}), ...parameters });
     }
   }
 
@@ -87,7 +89,7 @@
   function start() {
     if (started) return;
     started = true;
-    track('form_start', { form_id: 'building_precast_plant' });
+    track('form_start', { form_id: pageType });
   }
   form.addEventListener('input', start, { once: true });
   form.addEventListener('change', start, { once: true });
@@ -152,8 +154,8 @@
       });
       if (!response.ok) throw new Error('server_error');
       succeeded = true;
-      track('enquiry_success', { lead_id: submissionId, need_type: payload.get('project_need') || 'Plant proposal', variant: 'plant_v2' });
-      track('generate_lead', { lead_id: submissionId, lead_source: 'building_precast_plant' });
+      track('enquiry_success', { lead_id: submissionId, need_type: payload.get('project_need') || 'Plant proposal', variant: equipmentId ? 'equipment_v1' : 'plant_v2' });
+      track('generate_lead', { lead_id: submissionId, lead_source: pageType });
       form.hidden = true;
       success.hidden = false;
       success.focus();
@@ -167,5 +169,5 @@
       track('form_error', { error_code: error.name === 'AbortError' ? 'timeout' : 'submission_failed' });
     } finally { clearTimeout(timeout); sending = false; }
   });
-  track('lp_view', { variant: 'plant_v2' });
+  track('lp_view', { variant: equipmentId ? 'equipment_v1' : 'plant_v2' });
 })();

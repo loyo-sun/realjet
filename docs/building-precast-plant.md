@@ -4,6 +4,33 @@ eleventyExcludeFromCollections: true
 ---
 # Building precast plant landing page
 
+## Equipment detail pages (2026-10-20)
+
+All 12 Equipment integration cards now link by image and title to their matching
+`/products/precast-concrete-equipment/{slug}/` pages. `site/pc-equipment/index.njk`
+generates the pages from `site/_data/pcEquipment.json`; each record retains its
+Notion source-page ID. Content follows the 12 English Notion drafts under task
+`26bb636f27b94dc3beaeb28cd4b3b546`. Internal editorial notes are excluded.
+
+Pages reuse the PC design, equipment WebP assets and four-field Netlify enquiry
+form. Hidden equipment ID, source URL and `page_type=precast_equipment` identify
+the enquiry. The shared PC script preserves submitted notes and retry IDs and
+uses page-specific consent-controlled analytics. No scroll-email popup is added
+to equipment pages. Product, WebPage and breadcrumb entity data match the visible
+content; no offer, review or manufacturer claim is invented. These informational
+Product entities do not target Google shopping/product-snippet eligibility.
+
+The sitemap includes all 12 canonical URLs. The production build runs
+`scripts/validate-pc-equipment.mjs` to check coverage, 24 card links, 48 FAQs,
+enquiry context, related links and JSON-LD. Full build and existing scroll-email
+regression checks pass. Browser QA covered all 12 pages at 1440, 390 and 320 px,
+image loading, overflow, card navigation, mobile menu and local-preview errors.
+Locally fulfilled browser requests verified failed-submit retention, retry and
+success with the correct equipment context; no real enquiries were submitted.
+
+The source's ambiguous dimensions, stressing-force unit and transport-bucket
+model pairings remain omitted. Reference figures are not line-capacity guarantees.
+
 Route: `/solutions/precast-concrete-plant/`.
 
 The English page covers building wall panels and floor slabs. It follows the REALJET Notion PRD dated 2026-10-12 and uses the REALJET brand throughout. The footer does not link to other production lines. It is excluded from Eleventy collections. Its canonical URL is included in the sitemap following the user request on 2026-10-14.

@@ -1,0 +1,2213 @@
+[
+  {
+    "order": 1,
+    "notionId": "3ff41f739488813eb055ce7967a53a8a",
+    "name": "Concrete Distributor",
+    "slug": "concrete-distributor",
+    "url": "/products/precast-concrete-equipment/concrete-distributor/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/",
+    "title": "Concrete Distributor for Precast Walls & Slabs | REALJET",
+    "description": "Explore a concrete distributor for precast wall and slab production. Compare discharge options, reference specifications and plant integration with REALJET.",
+    "h1": "Concrete Distributor for Precast Wall and Slab Production",
+    "intro": "A concrete distributor receives fresh concrete and places it across a precast production pallet. The reference configuration offered through REALJET combines weighing, controlled discharge and gantry travel for wall and slab production. Spreading and screw discharge options allow the equipment concept to be reviewed against the concrete mix, element geometry and casting process.",
+    "image": "/images/building-precast/distributor.webp",
+    "alt": "Concrete distributor with gantry structure and hopper for precast wall and slab casting",
+    "caption": "Reference concrete distributor arrangement for a precast casting station.",
+    "sections": [
+      {
+        "heading": "Where the distributor fits in your plant",
+        "text": "The distributor works at the casting stage, after shuttering and reinforcement preparation. Concrete arrives at its hopper, the machine moves into position, and discharge is coordinated with the casting area. The pallet then proceeds to the compaction and finishing operations required by the production process.\nFor a carousel plant producing solid walls, sandwich walls or lattice girder slabs, the review starts with pallet size and the space available above the casting station. Sandwich wall production also needs a defined sequence for the insulation and second concrete layer. These product requirements determine the configuration; the distributor alone does not define the capability of the complete line."
+      },
+      {
+        "heading": "Controlled loading, weighing and discharge",
+        "text": "- **One-touch loading and return:** return-to-loading operation supports repeated concrete receiving cycles.\n- **Intelligent weighing:** the weighing function supports control of the concrete quantity handled at the station.\n- **Spreading or screw discharge:** select the discharge arrangement around the product and concrete placing requirements.\n- **Concrete setting alarm and fault self-diagnosis:** operators can respond to the equipment's reported condition during production.\n- **Remote and control-panel operation:** the reference design includes both operating interfaces and automatic lubrication.\nThe quoted equipment scope should identify which functions are included and how signals are exchanged with the concrete supply and vibration station."
+      },
+      {
+        "heading": "How a casting cycle is organized",
+        "text": "1. Receive concrete at the loading position and review the required quantity.\n2. Move the gantry and trolley to the casting area.\n3. Discharge through the selected spreading or screw arrangement.\n4. Coordinate the completed placing operation with the next production step.\n5. Return for the next load and carry out the cleaning required by the operating procedure.\nThe final sequence and operator responsibilities are defined for the selected plant layout."
+      },
+      {
+        "heading": "Select the distributor around the casting station",
+        "text": "Send REALJET the pallet dimensions, element drawings, concrete supply method and required casting sequence. The plant span, track position and available headroom help define the travelling structure. The casting width must also suit the usable mould area and the reinforcement arrangement.\nA maximum discharge rate is an equipment reference, rather than a finished-element output guarantee. Concrete delivery, movement between positions, placing requirements and cleaning all belong in the cycle review. For an existing plant, include photographs and drawings of the receiving hopper, track supports and vibration station."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "13,220 × 5,700 × 3,680 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Discharge arrangement",
+        "value": "Spreading / screw"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Maximum hopper volume",
+        "value": "3 m³"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Reference casting widths",
+        "value": "1.6 m / 2.7 m"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Discharge gates",
+        "value": "8–12"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Maximum distribution rate",
+        "value": "1.5 m³/min"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Gantry / trolley travel speed",
+        "value": "0–25 m/min"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the difference between a concrete distributor and a concrete transport bucket?",
+        "answer": "A transport bucket moves fresh concrete between supply and receiving points. A distributor places concrete over the casting pallet. Their capacities, receiving positions and operating signals need to be coordinated."
+      },
+      {
+        "question": "Is spreading or screw discharge better for my precast product?",
+        "answer": "The choice depends on the concrete mix, the required placing pattern and access around the mould and reinforcement. Share the product and casting requirements so the discharge arrangement can be reviewed."
+      },
+      {
+        "question": "Does a 3 m³ hopper mean every load contains 3 m³ of concrete?",
+        "answer": "No. The figure is the reference maximum hopper volume. The usable working quantity depends on the selected equipment and operating conditions."
+      },
+      {
+        "question": "Can the distributor be added to an existing line?",
+        "answer": "An upgrade can be assessed from the pallet layout, track supports, headroom, concrete supply and control interfaces. Compatibility is confirmed through that review."
+      }
+    ],
+    "related": [
+      {
+        "name": "Concrete Transport Bucket",
+        "url": "/products/precast-concrete-equipment/concrete-transport-bucket/",
+        "description": "Coordinate concrete delivery to the distributor."
+      },
+      {
+        "name": "Pallet Vibration Station",
+        "url": "/products/precast-concrete-equipment/pallet-vibration-station/",
+        "description": "Review the next stage of concrete compaction."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Discuss Your Casting Station",
+      "text": "Tell us which wall or slab elements you make, your pallet size and how concrete reaches the casting area. REALJET can review the distributor configuration and its interfaces with your production line."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/",
+          "name": "Concrete Distributor for Precast Walls & Slabs | REALJET",
+          "description": "Explore a concrete distributor for precast wall and slab production. Compare discharge options, reference specifications and plant integration with REALJET.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/#product",
+          "name": "Concrete Distributor",
+          "description": "A concrete distributor receives fresh concrete and places it across a precast production pallet. The reference configuration offered through REALJET combines weighing, controlled discharge and gantry travel for wall and slab production. Spreading and screw discharge options allow the equipment concept to be reviewed against the concrete mix, element geometry and casting process.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "13,220 × 5,700 × 3,680 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Discharge arrangement",
+              "value": "Spreading / screw"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Maximum hopper volume",
+              "value": "3 m³"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Reference casting widths",
+              "value": "1.6 m / 2.7 m"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Discharge gates",
+              "value": "8–12"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Maximum distribution rate",
+              "value": "1.5 m³/min"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Gantry / trolley travel speed",
+              "value": "0–25 m/min"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/distributor.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Concrete Distributor",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 2,
+    "notionId": "3ff41f73948881e2bc37e7b7d4e10533",
+    "name": "Pallet Vibration Station",
+    "slug": "pallet-vibration-station",
+    "url": "/products/precast-concrete-equipment/pallet-vibration-station/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/",
+    "title": "Pallet Vibration Station for Precast Concrete | REALJET",
+    "description": "Review a pallet vibration station for precast concrete compaction, with adjustable frequency, clamping vibration and reference equipment specifications.",
+    "h1": "Pallet Vibration Station for Precast Concrete Compaction",
+    "intro": "A pallet vibration station compacts fresh concrete through vibration applied to the production pallet. The reference design offered through REALJET uses clamping vibration, eight vibration units and an adjustable frequency range of 0–50 Hz. It is reviewed as part of the casting and compaction stage of a precast wall or slab line.",
+    "image": "/images/building-precast/compaction.webp",
+    "alt": "Clamping pallet vibration station with multiple vibration units for precast concrete compaction",
+    "caption": "Reference vibration station arrangement for a production pallet.",
+    "sections": [
+      {
+        "heading": "Compaction at the casting station",
+        "text": "The vibration station works with the pallet, mould and concrete placing method. Its role is to provide the vibration needed by the agreed compaction process before the element moves into subsequent finishing and curing operations.\nSelecting the station requires more than matching the pallet footprint. The total moving load, shutter arrangement, concrete process and supporting foundation also affect the equipment review. The reference dimensions and vibration settings provide a starting point for that discussion, rather than a universal setting for every wall or slab."
+      },
+      {
+        "heading": "Clamping vibration with adjustable settings",
+        "text": "- **Clamping vibration:** the reference station uses a clamping arrangement to apply vibration to the pallet.\n- **Eight vibration units:** the equipment distributes vibration through a defined multi-unit arrangement.\n- **Adjustable frequency:** operators can use the available frequency range within the approved production procedure.\n- **Multi-stage cushioning:** the design includes cushioning between relevant parts of the vibration assembly.\n- **Adjustable installation height:** station height can be reviewed against the pallet transport system and working level.\nThe equipment arrangement, foundation and pallet support points should be checked together. A frequency setting by itself does not establish the resulting concrete quality."
+      },
+      {
+        "heading": "How the station fits into a production cycle",
+        "text": "1. Bring the pallet to the compaction position and check its interface with the station.\n2. Engage the clamping arrangement according to the operating procedure.\n3. Apply the selected vibration settings during the agreed casting or compaction sequence.\n4. End the vibration cycle and release the pallet for the next operation.\nThe timing of concrete placing and vibration depends on the element and concrete process. This sequence describes the equipment's role; the final production procedure is set during technical review and commissioning."
+      },
+      {
+        "heading": "What to check before specifying a vibration station",
+        "text": "Provide the pallet size, its support layout and the combined operating load. Include drawings of the element and shutters, the concrete placing method and the height of the adjoining transfer equipment. For a retrofit, photographs of the current foundations and clearances help reveal installation constraints.\nThe vibration station and concrete distributor should be reviewed as a working pair. The assessment should identify the required casting sequence and how the operator controls each operation. Foundation details and the setting procedure belong in the agreed technical package, rather than being inferred from a catalogue photograph."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "8,786 × 3,590 × 457 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Vibration units",
+        "value": "8"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Working frequency range",
+        "value": "0–50 Hz"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Excitation force, as specified per unit arrangement",
+        "value": "13 kN × 8"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does a pallet vibration station do?",
+        "answer": "It applies vibration to a production pallet to support the compaction of freshly placed concrete. Its settings and operating sequence need to suit the selected pallet, mould and concrete process."
+      },
+      {
+        "question": "Is 50 Hz the recommended setting for every product?",
+        "answer": "No. It is the upper end of the reference adjustable range. A suitable working setting is established for the actual product and production procedure."
+      },
+      {
+        "question": "Does 13 kN × 8 mean 104 kN acts uniformly on the concrete?",
+        "answer": "No. The catalogue describes the vibration-unit arrangement as 13 kN × 8. That notation should not be treated as a verified uniform effective force throughout the pallet or element."
+      },
+      {
+        "question": "What information is needed to replace an existing vibration station?",
+        "answer": "Start with pallet dimensions, total operating load, support points, foundation drawings and station height. The existing casting sequence and controls also need review."
+      }
+    ],
+    "related": [
+      {
+        "name": "Concrete Distributor",
+        "url": "/products/precast-concrete-equipment/concrete-distributor/",
+        "description": "Coordinate concrete placing with compaction."
+      },
+      {
+        "name": "Pallet Transfer Trolley",
+        "url": "/products/precast-concrete-equipment/pallet-transfer-trolley/",
+        "description": "Check pallet movement and station heights."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Review Your Compaction Station",
+      "text": "Share your pallet drawing, product type and current compaction arrangement. REALJET can review the vibration station and its connection to the casting and pallet circulation system."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/",
+          "name": "Pallet Vibration Station for Precast Concrete | REALJET",
+          "description": "Review a pallet vibration station for precast concrete compaction, with adjustable frequency, clamping vibration and reference equipment specifications.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/#product",
+          "name": "Pallet Vibration Station",
+          "description": "A pallet vibration station compacts fresh concrete through vibration applied to the production pallet. The reference design offered through REALJET uses clamping vibration, eight vibration units and an adjustable frequency range of 0–50 Hz. It is reviewed as part of the casting and compaction stage of a precast wall or slab line.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "8,786 × 3,590 × 457 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Vibration units",
+              "value": "8"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Working frequency range",
+              "value": "0–50 Hz"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Excitation force, as specified per unit arrangement",
+              "value": "13 kN × 8"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/compaction.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pallet Vibration Station",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 3,
+    "notionId": "3ff41f7394888193816ce157cb89f143",
+    "name": "Pallet Stacker",
+    "slug": "pallet-stacker",
+    "url": "/products/precast-concrete-equipment/pallet-stacker/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/",
+    "title": "Pallet Stacker for Precast Curing Chambers | REALJET",
+    "description": "Explore a pallet stacker for precast curing chambers, with servo positioning, storage-bay recognition and a 25 t reference rated load.",
+    "h1": "Pallet Stacker for Precast Concrete Curing Chambers",
+    "intro": "A precast pallet stacker transfers loaded production pallets into and out of a multi-level curing chamber. The reference configuration offered through REALJET combines servo-driven rack-and-pinion positioning, automatic storage-bay recognition and station safety interlocks. Its catalogue rated load is 25 t, with the final handling arrangement matched to the pallet and curing layout.",
+    "image": "/images/building-precast/stacker.webp",
+    "alt": "Overhead pallet stacker structure for storage and retrieval at a precast curing chamber",
+    "caption": "Reference pallet stacker arrangement for a multi-level curing system.",
+    "sections": [
+      {
+        "heading": "Connect pallet circulation with curing storage",
+        "text": "A curing chamber needs a defined route for pallets entering storage and returning to production. The stacker coordinates this interface by positioning the pallet at the selected storage level and bay. Its layout must work with the chamber structure, pallet transfer positions and available building height.\nFor a carousel wall or slab plant, stacker selection is part of the curing and handling review. The number of storage positions alone does not determine the plant's output. Pallet arrival patterns, storage time and retrieval movements also need to fit the production plan."
+      },
+      {
+        "heading": "Positioning and chamber coordination",
+        "text": "- **Servo-driven rack-and-pinion positioning:** travel and positioning use the specified servo and mechanical arrangement.\n- **Automatic storage-bay recognition:** the control concept identifies the required chamber position.\n- **Coordinated control:** stacker movements are reviewed with the adjoining pallet and chamber operations.\n- **Station safety interlocks:** the reference design includes interlocking for relevant station conditions.\n- **Automatic or semi-automatic operation:** the operating mode can be defined in the equipment scope.\nThe reference machine uses an overhead suspended structure. Building support conditions and installation clearances therefore belong in the layout review."
+      },
+      {
+        "heading": "Pallet storage and retrieval sequence",
+        "text": "1. Receive a pallet at the agreed handover position.\n2. Identify the required curing bay and storage level.\n3. Position and transfer the pallet into the selected location.\n4. Retrieve the pallet after the approved curing and release conditions have been met.\n5. Return it to the defined downstream transfer point.\nThe final controls must define handover conditions between the stacker and the adjoining equipment. The stacker transports the pallet; the concrete curing and release decision follows the plant's approved procedure."
+      },
+      {
+        "heading": "Size the stacker with the chamber",
+        "text": "Send the pallet drawing, maximum loaded handling condition, chamber arrangement and building section. The review should establish storage positions, travel distances, lifting levels and transfer interfaces. Confirm whether the rated load includes the pallet and all items carried during the handling cycle.\nThe catalogue's single-cycle figure is a reference for technical discussion. It is not a guarantee that a complete line will release a finished pallet every eight minutes. The movement path and the definition of a cycle must be agreed for the actual layout."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "11,150 × 6,000 × 12,050 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Reference rated load",
+        "value": "25 t"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Catalogue single-cycle time",
+        "value": "≤8 min; operating conditions to be agreed"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operating modes",
+        "value": "Automatic / semi-automatic"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Positioning arrangement",
+        "value": "Servo-driven rack and pinion"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does a precast pallet stacker handle?",
+        "answer": "It handles production pallets at the curing chamber interface. It positions loaded pallets for storage and retrieves them for the next production operation."
+      },
+      {
+        "question": "Is the reference stacker rated at 25 t or 30 t?",
+        "answer": "The configuration described on this page uses a 25 t catalogue rated load. A requirement above that figure needs a separate technical review and an agreed equipment specification."
+      },
+      {
+        "question": "Does the stacker determine curing capacity?",
+        "answer": "It affects the handling flow, but chamber arrangement, curing time, pallet quantities and production scheduling also determine how the curing system works."
+      },
+      {
+        "question": "Can it work with an existing curing chamber?",
+        "answer": "Compatibility depends on the chamber geometry, storage structure, pallet interfaces, load conditions and control arrangement. Provide the existing drawings for review."
+      }
+    ],
+    "related": [
+      {
+        "name": "Curing Chamber & Climate Control",
+        "url": "/products/precast-concrete-equipment/curing-chamber-climate-control/",
+        "description": "Coordinate chamber storage and handling."
+      },
+      {
+        "name": "Pallet Transfer Trolley",
+        "url": "/products/precast-concrete-equipment/pallet-transfer-trolley/",
+        "description": "Review the pallet handover arrangement."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Plan Your Pallet Storage and Retrieval",
+      "text": "Send your pallet size, loaded handling condition and curing chamber layout. REALJET can review the stacker arrangement and the transfer points around it."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/",
+          "name": "Pallet Stacker for Precast Curing Chambers | REALJET",
+          "description": "Explore a pallet stacker for precast curing chambers, with servo positioning, storage-bay recognition and a 25 t reference rated load.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/#product",
+          "name": "Pallet Stacker",
+          "description": "A precast pallet stacker transfers loaded production pallets into and out of a multi-level curing chamber. The reference configuration offered through REALJET combines servo-driven rack-and-pinion positioning, automatic storage-bay recognition and station safety interlocks. Its catalogue rated load is 25 t, with the final handling arrangement matched to the pallet and curing layout.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "11,150 × 6,000 × 12,050 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Reference rated load",
+              "value": "25 t"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Catalogue single-cycle time",
+              "value": "≤8 min; operating conditions to be agreed"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operating modes",
+              "value": "Automatic / semi-automatic"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Positioning arrangement",
+              "value": "Servo-driven rack and pinion"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/stacker.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pallet Stacker",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 4,
+    "notionId": "3ff41f739488813088e3f7ffd7723654",
+    "name": "Curing Chamber & Climate Control",
+    "slug": "curing-chamber-climate-control",
+    "url": "/products/precast-concrete-equipment/curing-chamber-climate-control/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/",
+    "title": "Precast Curing Chamber & Climate Control | REALJET",
+    "description": "Plan a precast curing chamber with multi-level pallet storage, temperature and humidity control, hot-air circulation and coordinated pallet handling.",
+    "h1": "Precast Concrete Curing Chamber and Climate Control",
+    "intro": "A precast curing chamber provides an enclosed environment for loaded production pallets during concrete curing. The reference system offered through REALJET combines a multi-level rack structure, independent temperature and humidity control for each chamber row, and hot-air circulation. Steam curing is supported, with the chamber and heat-supply interfaces defined for the project.",
+    "image": "/images/building-precast/curing.webp",
+    "alt": "Multi-level precast curing chamber enclosure with pallet storage structure",
+    "caption": "Reference multi-level curing chamber arrangement; storage layout is project-specific.",
+    "sections": [
+      {
+        "heading": "Plan curing around your pallet flow",
+        "text": "In a carousel wall or slab plant, pallets move from casting into the curing system and return to production after the agreed release conditions have been met. A multi-level chamber provides storage positions within this flow. A pallet stacker handles the storage and retrieval interface.\nThe chamber arrangement should follow the product mix, pallet dimensions, production schedule and curing process. A reference rack layout is useful for discussing space and storage, but the required chamber size depends on how the plant actually operates. Available building height and stacker access also need to be checked."
+      },
+      {
+        "heading": "Multi-level storage with controlled chamber conditions",
+        "text": "- **Integrated rack structure:** a multi-level arrangement accommodates production pallets during curing.\n- **Independent row control:** temperature and humidity can be regulated for each chamber row in the reference design.\n- **Hot-air circulation:** the circulation arrangement supports temperature distribution between levels.\n- **Steam-curing compatibility:** steam supply and its interfaces can be included in the curing-system review.\nThe equipment scope should state which chamber, controls and heat-supply components are included. Civil works, local utility connections and any separately supplied heat source should be identified in the project responsibilities."
+      },
+      {
+        "heading": "The chamber's place in the curing cycle",
+        "text": "1. Transfer the loaded pallet to its assigned storage position using the agreed handling system.\n2. Operate the chamber according to the approved temperature and humidity programme.\n3. Follow the plant's process for confirming the required concrete release condition.\n4. Retrieve the pallet and hand it over to the next station.\nThe chamber controls the curing environment. The project's concrete process determines the temperature programme, duration and release requirements; these are established separately from a catalogue storage arrangement."
+      },
+      {
+        "heading": "Define storage, heat supply and handling together",
+        "text": "Start with pallet size, the number of pallets in circulation, shift patterns and the intended curing process. Include the product range, available utilities and plant building section. The proposed stacker needs a clear route to each usable storage position.\nWhen comparing layouts, ask for a definition of bays, levels, chambers and usable pallet positions. Those terms must refer to the same arrangement before storage counts can be compared. The review should also identify the heat source and control boundary so that the chamber quotation can be compared with the complete installation requirement."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference storage arrangement",
+        "value": "5 bays × 9 levels × 2 chambers"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Structure",
+        "value": "Integrated multi-level rack"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Temperature / humidity control",
+        "value": "Independent control for each chamber row"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Air circulation",
+        "value": "Hot-air circulation"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Supported curing method",
+        "value": "Steam curing"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is a curing chamber the same as a retractable curing cover?",
+        "answer": "No. This chamber uses a multi-level rack arrangement for production pallets. A retractable cover encloses a casting-bed area and retracts to provide access. They belong to different handling and layout concepts."
+      },
+      {
+        "question": "Does the reference arrangement guarantee a fixed number of usable pallet positions?",
+        "answer": "The bay, level and chamber notation describes a reference layout. Usable positions must be confirmed from the final storage drawing, pallet geometry and handling arrangement."
+      },
+      {
+        "question": "How is the curing temperature selected?",
+        "answer": "The temperature and humidity programme follows the approved concrete curing process for the actual products. It cannot be selected from storage capacity or chamber dimensions alone."
+      },
+      {
+        "question": "Is the steam generator included?",
+        "answer": "The heat source, utility connections and controls are defined in the agreed equipment package. Ask for these responsibilities to be identified when reviewing the curing proposal."
+      }
+    ],
+    "related": [
+      {
+        "name": "Pallet Stacker",
+        "url": "/products/precast-concrete-equipment/pallet-stacker/",
+        "description": "Review storage and retrieval at each chamber position."
+      },
+      {
+        "name": "Retractable Curing Cover",
+        "url": "/products/precast-concrete-equipment/retractable-curing-cover/",
+        "description": "Compare a cover arrangement for long-line casting beds."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Plan Your Curing Chamber",
+      "text": "Share your pallet dimensions, production schedule, intended curing process and available heat source. REALJET can review the storage layout, chamber controls and pallet-handling interfaces."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/",
+          "name": "Precast Curing Chamber & Climate Control | REALJET",
+          "description": "Plan a precast curing chamber with multi-level pallet storage, temperature and humidity control, hot-air circulation and coordinated pallet handling.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/#product",
+          "name": "Curing Chamber & Climate Control",
+          "description": "A precast curing chamber provides an enclosed environment for loaded production pallets during concrete curing. The reference system offered through REALJET combines a multi-level rack structure, independent temperature and humidity control for each chamber row, and hot-air circulation. Steam curing is supported, with the chamber and heat-supply interfaces defined for the project.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference storage arrangement",
+              "value": "5 bays × 9 levels × 2 chambers"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Structure",
+              "value": "Integrated multi-level rack"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Temperature / humidity control",
+              "value": "Independent control for each chamber row"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Air circulation",
+              "value": "Hot-air circulation"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Supported curing method",
+              "value": "Steam curing"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/curing.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Curing Chamber & Climate Control",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 5,
+    "notionId": "3ff41f73948881f9820fef39df7e225a",
+    "name": "Tilting Station",
+    "slug": "tilting-station",
+    "url": "/products/precast-concrete-equipment/tilting-station/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/",
+    "title": "Tilting Station for Precast Wall Panel Demoulding | REALJET",
+    "description": "Explore a precast pallet tilting station with hydraulic synchronization, automatic pallet locking, a 30 t reference load and 80° ±5° tilting angle.",
+    "h1": "Tilting Station for Precast Wall Panel Demoulding",
+    "intro": "A tilting station raises a production pallet toward an upright position as part of a precast wall panel demoulding and handling process. The reference machine offered through REALJET uses synchronized hydraulic cylinders, automatic pallet locking and one-touch automatic tilting. Catalogue figures specify a 30 t tilting load and an angle of 80° ±5°.",
+    "image": "/images/building-precast/tilting.webp",
+    "alt": "Hydraulic pallet tilting station for precast wall panel demoulding",
+    "caption": "Reference tilting station with a catalogue tilting angle of 80° ±5°.",
+    "sections": [
+      {
+        "heading": "Move from horizontal casting to wall panel handling",
+        "text": "Wall panels are cast on horizontal pallets, while the agreed demoulding procedure may require the pallet to tilt before the element is lifted away. The tilting station provides this change of orientation. Its relationship with the pallet, wall panel and lifting equipment needs to be reviewed as one handling operation.\nThe station is specified around the actual panel and pallet arrangement. Panel dimensions, openings, lifting provisions and the concrete release condition affect the handling review. The catalogue load and angle help identify the reference equipment; they do not replace the project's approved lifting and demoulding procedure."
+      },
+      {
+        "heading": "Hydraulic movement and pallet restraint",
+        "text": "- **One-touch automatic tilting:** the reference controls provide a defined tilting operation from the operator interface.\n- **Automatic pallet locking:** the pallet restraint is part of the reference station arrangement.\n- **Synchronized hydraulic-cylinder control:** cylinder movements are coordinated during the tilting operation.\n- **Remote and control-panel operation:** operators have the specified control interfaces available for the station.\nThe required restraints and handover conditions must be compatible with the production pallet. The equipment scope should describe the station controls and its interface with adjoining pallet transfer and lifting operations."
+      },
+      {
+        "heading": "A station sequence to review with your handling plan",
+        "text": "1. Position the production pallet at the tilting station.\n2. Engage the pallet-locking arrangement and check the agreed operating conditions.\n3. Tilt the pallet using the synchronized hydraulic system.\n4. Hand over the wall panel to the lifting process defined for the product.\n5. Return the pallet to the required position for the next production operation.\nThis describes the station's role in production. Detailed lifting, release and operator procedures are established for the actual element and equipment package."
+      },
+      {
+        "heading": "Check the complete load and lifting interface",
+        "text": "Send the pallet drawing, wall panel drawings and the maximum handling condition. Confirm what is included in the specified tilting load, including the pallet and associated tooling where applicable. The installation review also needs station height, foundation conditions, travel clearances and lifting-equipment access.\nFor an existing factory, include the current demoulding sequence and photographs of the pallet restraint. A compatible footprint alone is insufficient: the pallet-locking interface and handling arrangement must also match. REALJET can use these inputs to review the proposed station within the complete wall panel line."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "9,000 × 4,388 × 1,570 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Catalogue tilting load",
+        "value": "30 t"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Reference tilting angle",
+        "value": "80° ±5°"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Drive / movement control",
+        "value": "Synchronized hydraulic cylinders"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operation",
+        "value": "Remote control / control panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the tilting station lift the finished panel off the pallet?",
+        "answer": "Its role is to tilt the production pallet. Removing and transporting the panel requires the lifting arrangement defined for the product and factory."
+      },
+      {
+        "question": "Does this station rotate the pallet through 180°?",
+        "answer": "The reference tilting angle is 80° ±5°. It should not be specified as a 180° turnover device."
+      },
+      {
+        "question": "Is 30 t the allowable concrete panel weight?",
+        "answer": "The catalogue states a tilting load. The load boundary must be confirmed for the complete handling condition before interpreting it as a limit for the panel alone."
+      },
+      {
+        "question": "Can the station be used for every wall panel geometry?",
+        "answer": "Compatibility depends on panel and pallet dimensions, load distribution, restraint and lifting provisions. Product drawings are needed for a technical review."
+      }
+    ],
+    "related": [
+      {
+        "name": "Pallet Transfer Trolley",
+        "url": "/products/precast-concrete-equipment/pallet-transfer-trolley/",
+        "description": "Coordinate pallet delivery to the tilting area."
+      },
+      {
+        "name": "Curing Chamber & Climate Control",
+        "url": "/products/precast-concrete-equipment/curing-chamber-climate-control/",
+        "description": "Review the curing stage before demoulding."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Review Your Wall Panel Demoulding Arrangement",
+      "text": "Send your panel and pallet drawings, expected handling load and lifting method. REALJET can review a tilting station around the demoulding sequence used in your factory."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/",
+          "name": "Tilting Station for Precast Wall Panel Demoulding | REALJET",
+          "description": "Explore a precast pallet tilting station with hydraulic synchronization, automatic pallet locking, a 30 t reference load and 80° ±5° tilting angle.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/#product",
+          "name": "Tilting Station",
+          "description": "A tilting station raises a production pallet toward an upright position as part of a precast wall panel demoulding and handling process. The reference machine offered through REALJET uses synchronized hydraulic cylinders, automatic pallet locking and one-touch automatic tilting. Catalogue figures specify a 30 t tilting load and an angle of 80° ±5°.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "9,000 × 4,388 × 1,570 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Catalogue tilting load",
+              "value": "30 t"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Reference tilting angle",
+              "value": "80° ±5°"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Drive / movement control",
+              "value": "Synchronized hydraulic cylinders"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operation",
+              "value": "Remote control / control panel"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/tilting.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Tilting Station",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 6,
+    "notionId": "3ff41f73948881c385ebee7bc54e12cb",
+    "name": "Pallet Transfer Trolley",
+    "slug": "pallet-transfer-trolley",
+    "url": "/products/precast-concrete-equipment/pallet-transfer-trolley/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/",
+    "title": "Pallet Transfer Trolley for Precast Production | REALJET",
+    "description": "Review a precast pallet transfer trolley with synchronized lifting, servo-controlled travel, a 25 t reference load and 13 m/min travel speed.",
+    "h1": "Pallet Transfer Trolley for Precast Production Lines",
+    "intro": "A pallet transfer trolley moves production pallets across designated transfer positions in a precast concrete line. The reference design offered through REALJET uses synchronized lifting by dual drives, servo-controlled travel and separate sensing for deceleration and stopping. The catalogue specifies a maximum load of 25 t and a travel speed of 13 m/min.",
+    "image": "/images/building-precast/pallet-transfer.webp",
+    "alt": "Low-profile pallet transfer trolley for transverse movement in a precast concrete line",
+    "caption": "Reference pallet transfer trolley for a defined pallet handling route.",
+    "sections": [
+      {
+        "heading": "Transfer pallets between production positions",
+        "text": "Pallet movement needs to suit the way the factory arranges its preparation, casting, curing and handling stations. A transfer trolley provides a defined pallet movement within that layout. For this reference equipment, the review focuses on the transverse transfer duty and the lifting interface with the production pallet.\nAn existing line may have the right overall space but incompatible support positions or working heights. The trolley, pallet and receiving station therefore need to be checked together. This is particularly important when planning a local upgrade around equipment that will remain in service."
+      },
+      {
+        "heading": "Synchronized lifting and controlled travel",
+        "text": "- **Dual-drive synchronized lifting:** the lifting arrangement coordinates the drives used at the pallet interface.\n- **Servo-controlled travel:** the reference equipment uses servo control for its movement.\n- **Separate deceleration and stop sensing:** the control arrangement distinguishes slowing down from the final stopping point.\n- **Low-profile reference structure:** the catalogue equipment dimensions provide a starting point for checking under-pallet clearance and transfer height.\nThe selected configuration should identify support locations, load conditions and the interface with adjoining stations. A reference load rating is only useful when its boundary matches the actual pallet-handling duty."
+      },
+      {
+        "heading": "How a pallet transfer is arranged",
+        "text": "1. Position the trolley at the pallet pickup point.\n2. Lift through the agreed pallet support interface using the synchronized drive arrangement.\n3. Travel to the receiving position, with the deceleration and stopping points defined in the control sequence.\n4. Lower and hand over the pallet to the receiving station.\nThe final sequence depends on the track and station arrangement. This overview describes the intended transfer function without replacing the equipment's operating instructions."
+      },
+      {
+        "heading": "Define the transfer route and pallet interface",
+        "text": "Provide the pallet drawing, loaded handling condition, transfer direction and travel distance. The technical review also needs track geometry, station levels, pickup and handover points, and the available control interfaces. State whether any existing foundations or tracks must be retained.\nWhere the plant uses several types of pallet movement, identify each duty on the layout drawing. This transfer trolley and a pallet ferry car may serve different interfaces; similar load figures do not establish interchangeability. The quotation should describe the actual movement and equipment arrangement rather than relying on a general transfer-equipment label."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "3,842 × 1,077 × 330 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Maximum catalogue load",
+        "value": "25 t"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Reference travel speed",
+        "value": "13 m/min"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Lifting arrangement",
+        "value": "Dual-drive synchronized lifting"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Travel control",
+        "value": "Servo control"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Position sensing",
+        "value": "Separate deceleration and stopping detection"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the trolley used for in a precast line?",
+        "answer": "It carries a production pallet between defined transfer positions, using its lifting and travelling arrangement to pick up and hand over the pallet."
+      },
+      {
+        "question": "Is this the same as the pallet ferry transfer car?",
+        "answer": "They are separate catalogue equipment items. This trolley is described by synchronized lifting and servo-controlled travel, while the ferry car has a hydraulic position-locking arrangement for its assigned line transfer duty."
+      },
+      {
+        "question": "Does a 13 m/min travel speed define the transfer cycle?",
+        "answer": "No. A complete transfer also includes positioning, lifting, deceleration, stopping and handover. The cycle depends on the actual route and operating sequence."
+      },
+      {
+        "question": "What needs checking before a retrofit?",
+        "answer": "Review pallet support points, loaded weight, station heights, tracks, foundations and controls. Confirm how the new trolley will hand pallets to the equipment already installed."
+      }
+    ],
+    "related": [
+      {
+        "name": "Pallet Ferry Transfer Car",
+        "url": "/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+        "description": "Compare the separate ferry-car transfer arrangement."
+      },
+      {
+        "name": "Tilting Station",
+        "url": "/products/precast-concrete-equipment/tilting-station/",
+        "description": "Review pallet delivery to wall panel demoulding."
+      },
+      {
+        "name": "Pallet Stacker",
+        "url": "/products/precast-concrete-equipment/pallet-stacker/",
+        "description": "Coordinate handover at curing storage."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Discuss Your Pallet Transfer Route",
+      "text": "Share a layout marking pickup and handover positions, pallet dimensions and the loaded handling condition. REALJET can review the transfer trolley and the interfaces around it."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/",
+          "name": "Pallet Transfer Trolley for Precast Production | REALJET",
+          "description": "Review a precast pallet transfer trolley with synchronized lifting, servo-controlled travel, a 25 t reference load and 13 m/min travel speed.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/#product",
+          "name": "Pallet Transfer Trolley",
+          "description": "A pallet transfer trolley moves production pallets across designated transfer positions in a precast concrete line. The reference design offered through REALJET uses synchronized lifting by dual drives, servo-controlled travel and separate sensing for deceleration and stopping. The catalogue specifies a maximum load of 25 t and a travel speed of 13 m/min.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "3,842 × 1,077 × 330 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Maximum catalogue load",
+              "value": "25 t"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Reference travel speed",
+              "value": "13 m/min"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Lifting arrangement",
+              "value": "Dual-drive synchronized lifting"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Travel control",
+              "value": "Servo control"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Position sensing",
+              "value": "Separate deceleration and stopping detection"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/pallet-transfer.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pallet Transfer Trolley",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 7,
+    "notionId": "3ff41f73948881868ee4c3126c06c00b",
+    "name": "Concrete Transport Bucket",
+    "slug": "concrete-transport-bucket",
+    "url": "/products/precast-concrete-equipment/concrete-transport-bucket/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/",
+    "title": "Concrete Transport Bucket for Precast Plants | REALJET",
+    "description": "Explore a concrete transport bucket for precast plant supply routes. Review hopper volume options, positioning functions and distributor interfaces.",
+    "h1": "Concrete Transport Bucket for Precast Plant Supply",
+    "intro": "A concrete transport bucket carries fresh concrete between a supply point and a receiving station in a precast plant. The reference equipment offered through REALJET, also described as a concrete flying bucket, combines an easy-clean hopper, coordinated control, remote operation and positioning functions. Catalogue volume options are 1.8, 2.5 and 3.5 m³.",
+    "image": "/images/building-precast/bucket.webp",
+    "alt": "Concrete transport bucket with hopper for fresh concrete supply in a precast plant",
+    "caption": "Reference concrete transport bucket; volume and travel configuration are selected together.",
+    "sections": [
+      {
+        "heading": "Connect concrete supply to the casting area",
+        "text": "The transport bucket works on the concrete supply route. It receives concrete, travels to the receiving point and hands the material over to the next machine. At a pallet casting station, that receiving machine can be a concrete distributor, which then places concrete over the mould area.\nThe transport route needs to be reviewed alongside the batching or mixing arrangement and the distributor's loading position. A suitable bucket must fit the receiving quantity and the physical interfaces at both ends. The travelling structure, clearances and operating sequence belong in the same review."
+      },
+      {
+        "heading": "Hopper access and coordinated movement",
+        "text": "- **Easy-clean hopper:** the reference design provides a hopper arrangement intended to support cleaning between production operations.\n- **Coordinated control:** bucket movements can be reviewed with the equipment supplying and receiving concrete.\n- **Positioning functions:** the reference equipment includes precise positioning as a stated feature, with the required acceptance criteria agreed for the project.\n- **Remote operation:** the control arrangement supports operator commands from the specified remote interface.\n- **Automatic tracking and stopping:** these functions form part of the catalogue control description.\nThe final specification should identify the route, receiving positions and control responsibilities. The presence of automatic functions does not define a complete unattended concrete supply system."
+      },
+      {
+        "heading": "From receiving concrete to distributor loading",
+        "text": "1. Bring the bucket to the agreed concrete receiving position.\n2. Receive the quantity specified for the transport operation.\n3. Travel along the defined route to the discharge position.\n4. Transfer the concrete to the receiving equipment.\n5. Return for the next operation and carry out the required hopper cleaning.\nMovement, discharge and handover details depend on the selected bucket and plant arrangement. The source volume options do not establish the usable load or complete travel cycle for every configuration."
+      },
+      {
+        "heading": "Choose the bucket around the supply route",
+        "text": "Share the concrete quantity needed at each receiving point, route length and layout, mixing-plant discharge position and distributor loading height. Include drawings showing the travel path and support conditions. The review should establish the bucket's working volume, loaded condition and travel requirements as a matched configuration.\nA faster travel figure does not automatically shorten the complete supply cycle. Receiving, positioning, discharge and return movements also consume time. To compare equipment proposals, ask for the same route, load condition and handover definition rather than comparing maximum speeds alone."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Catalogue nominal volume options",
+        "value": "1.8 m³ / 2.5 m³ / 3.5 m³"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Catalogue travel speed options",
+        "value": "0–42 m/min or 0–60 m/min; configuration-specific"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Control",
+        "value": "Coordinated control / remote operation"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Positioning features",
+        "value": "Automatic tracking and stopping"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Hopper feature",
+        "value": "Easy-clean arrangement"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a concrete flying bucket?",
+        "answer": "In this plant context, it is a travelling concrete transport bucket that moves fresh concrete along a defined route between supply and receiving points. The supporting and travelling arrangement is specified for the factory."
+      },
+      {
+        "question": "Does the bucket distribute concrete across the pallet?",
+        "answer": "Its principal role is transport and handover. A concrete distributor performs controlled placing over the casting pallet. The two machines need compatible loading interfaces."
+      },
+      {
+        "question": "Can the 3.5 m³ option be combined with the 60 m/min figure?",
+        "answer": "The catalogue lists volume and speed options without a complete model-pairing table. Those figures must not be assumed to describe one configuration; request a matched specification."
+      },
+      {
+        "question": "What is needed for an existing-plant upgrade?",
+        "answer": "Provide the supply and receiving drawings, route, supports, clearances and required concrete quantities. Existing control and handover conditions also need to be checked."
+      }
+    ],
+    "related": [
+      {
+        "name": "Concrete Distributor",
+        "url": "/products/precast-concrete-equipment/concrete-distributor/",
+        "description": "Match transport-bucket discharge to distributor loading."
+      },
+      {
+        "name": "Pallet Vibration Station",
+        "url": "/products/precast-concrete-equipment/pallet-vibration-station/",
+        "description": "Review the casting and compaction operation downstream."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Review Your Concrete Supply Route",
+      "text": "Send the route between your mixer and casting station, the required receiving quantities and loading interfaces. REALJET can review the bucket configuration and its coordination with the distributor."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/",
+          "name": "Concrete Transport Bucket for Precast Plants | REALJET",
+          "description": "Explore a concrete transport bucket for precast plant supply routes. Review hopper volume options, positioning functions and distributor interfaces.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/#product",
+          "name": "Concrete Transport Bucket",
+          "description": "A concrete transport bucket carries fresh concrete between a supply point and a receiving station in a precast plant. The reference equipment offered through REALJET, also described as a concrete flying bucket, combines an easy-clean hopper, coordinated control, remote operation and positioning functions. Catalogue volume options are 1.8, 2.5 and 3.5 m³.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Catalogue nominal volume options",
+              "value": "1.8 m³ / 2.5 m³ / 3.5 m³"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Catalogue travel speed options",
+              "value": "0–42 m/min or 0–60 m/min; configuration-specific"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Control",
+              "value": "Coordinated control / remote operation"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Positioning features",
+              "value": "Automatic tracking and stopping"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Hopper feature",
+              "value": "Easy-clean arrangement"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/bucket.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Concrete Transport Bucket",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 8,
+    "notionId": "3ff41f73948881beace7c3372259311e",
+    "name": "Automatic Gang Stressing Machine",
+    "slug": "automatic-gang-stressing-machine",
+    "url": "/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+    "title": "Automatic Gang Stressing Machine for Precast Slabs | REALJET",
+    "description": "Review automatic gang stressing for prestressed composite slabs, with pin operation, force and stroke monitoring, and project-specific bed integration.",
+    "h1": "Automatic Gang Stressing Machine for Prestressed Composite Slabs",
+    "intro": "An automatic gang stressing machine applies the specified stressing operation to the reinforcement arrangement of a prestressed composite slab line. The reference design offered through REALJET includes automatic pin insertion and withdrawal, two stressing modes, one-touch return and real-time monitoring of stressing force and cylinder stroke. It is selected together with the production bed and anchorage system.",
+    "image": "/images/building-precast/tensioning.webp",
+    "alt": "Automatic gang stressing machine for a prestressed composite slab production line",
+    "caption": "Reference gang stressing machine; force, engagement and bed interfaces require project review.",
+    "sections": [
+      {
+        "heading": "Stressing as part of a prestressed slab line",
+        "text": "Gang stressing belongs to the prestressing stage of the production process. The machine operates at the interface between the reinforcement arrangement and the bed's stressing and anchorage components. Product drawings, reinforcement specifications and the approved stressing procedure define the required duty.\nThe equipment must therefore be reviewed as part of a coordinated system. A machine's force rating alone cannot establish that a production bed, anchorage arrangement or slab design is suitable. The scope needs to identify how these components work together and who provides each part of the installation."
+      },
+      {
+        "heading": "Pin operation and monitored stressing",
+        "text": "- **Automatic pin insertion and withdrawal:** the reference design includes the pin-operation mechanism described in the catalogue.\n- **Two stressing modes:** two modes are provided; the required operation is confirmed against the approved process.\n- **One-touch return:** the machine can return to its starting position using the specified control function.\n- **Force monitoring:** sensors monitor reinforcement stressing force in real time.\n- **Cylinder-stroke monitoring:** the control arrangement also monitors cylinder travel during the operation.\nThese features describe the available equipment functions. The stressing sequence, target values, instrumentation requirements and acceptance criteria are defined in the technical package for the actual line."
+      },
+      {
+        "heading": "Equipment sequence within the approved process",
+        "text": "1. Prepare the reinforcement, bed and anchorage interfaces for the agreed stressing operation.\n2. Use the pin mechanism in the defined engagement sequence.\n3. Run the selected stressing mode while monitoring force and cylinder stroke.\n4. Complete the approved handover to the anchorage arrangement and return the machine as specified.\nThis is a functional overview for equipment selection. Production stressing and release procedures must follow the engineered system and product requirements."
+      },
+      {
+        "heading": "Define the required force and system interfaces",
+        "text": "Provide slab drawings, reinforcement material and size, the number and arrangement of stressing elements, and the required force and stroke. Include production-bed geometry and anchorage details. State which components are already installed and which are required in the new package.\nThe review should establish the rated force in agreed engineering units, the force and stroke monitoring requirements and the physical engagement interface. It should also define the responsibilities for the bed, reaction structure, anchorage and machine controls. This makes equipment proposals comparable on the actual stressing duty rather than on an isolated catalogue figure."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Equipment function",
+        "value": "Gang stressing for a prestressed composite slab line"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Pin operation",
+        "value": "Automatic insertion and withdrawal"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Stressing modes",
+        "value": "Two modes; operating details project-specific"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Return function",
+        "value": "One-touch return to starting position"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Monitored variables",
+        "value": "Reinforcement stressing force and cylinder stroke"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does gang stressing mean in this application?",
+        "answer": "It refers to the stressing operation for a group of reinforcement elements in the specified slab-production arrangement. The compatible reinforcement layout and engagement system need to be defined for the line."
+      },
+      {
+        "question": "Does the machine include the complete prestressing bed?",
+        "answer": "The machine and bed are separate scope items unless the project package explicitly includes both. Bed, anchorage, reaction structure and controls should each have an agreed supply boundary."
+      },
+      {
+        "question": "Which measurements does the reference design monitor?",
+        "answer": "The catalogue describes real-time monitoring of reinforcement stressing force and cylinder stroke. Required measurement ranges and acceptance criteria are confirmed during technical review."
+      },
+      {
+        "question": "Can the two stressing modes be used with any reinforcement system?",
+        "answer": "The catalogue does not establish universal compatibility. The operating mode must match the selected reinforcement, anchorage arrangement and approved stressing procedure."
+      }
+    ],
+    "related": [
+      {
+        "name": "Reinforcement & Film Laying Machine",
+        "url": "/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+        "description": "Coordinate reinforcement preparation on the slab bed."
+      },
+      {
+        "name": "Surface Roughening & Shutter Handling Machine",
+        "url": "/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+        "description": "Review other equipment duties on the slab line."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Discuss Your Prestressed Slab Stressing System",
+      "text": "Share your slab and reinforcement drawings, required stressing duty and bed arrangement. REALJET can review the gang stressing machine and the interfaces included in your proposed line."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+          "name": "Automatic Gang Stressing Machine for Precast Slabs | REALJET",
+          "description": "Review automatic gang stressing for prestressed composite slabs, with pin operation, force and stroke monitoring, and project-specific bed integration.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/#product",
+          "name": "Automatic Gang Stressing Machine",
+          "description": "An automatic gang stressing machine applies the specified stressing operation to the reinforcement arrangement of a prestressed composite slab line. The reference design offered through REALJET includes automatic pin insertion and withdrawal, two stressing modes, one-touch return and real-time monitoring of stressing force and cylinder stroke. It is selected together with the production bed and anchorage system.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Equipment function",
+              "value": "Gang stressing for a prestressed composite slab line"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Pin operation",
+              "value": "Automatic insertion and withdrawal"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Stressing modes",
+              "value": "Two modes; operating details project-specific"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Return function",
+              "value": "One-touch return to starting position"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Monitored variables",
+              "value": "Reinforcement stressing force and cylinder stroke"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/tensioning.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Automatic Gang Stressing Machine",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 9,
+    "notionId": "3ff41f7394888190b870f2ef380663d8",
+    "name": "Reinforcement & Film Laying Machine",
+    "slug": "reinforcement-film-laying-machine",
+    "url": "/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+    "title": "Reinforcement & Film Laying Machine for Slabs | REALJET",
+    "description": "Explore reinforcement and film laying for prestressed slab beds, with automatic film laying, quick-release rollers and reinforcement clamping.",
+    "h1": "Reinforcement and Film Laying Machine for Precast Slab Beds",
+    "intro": "A reinforcement and film laying machine combines reinforcement-handling features with automatic film laying on a prestressed composite slab production bed. The reference equipment offered through REALJET includes quick-release film rollers, fast reinforcement clamping, an anti-disengagement comb arrangement and polyurethane-coated wheels. Catalogue travel speed is 0–40 m/min, with conductor-rail power supply.",
+    "image": "/images/building-precast/reinforcement-film.webp",
+    "alt": "Reinforcement and film laying machine with film roller and travelling frame for a precast slab bed",
+    "caption": "Reference reinforcement and film laying equipment for prestressed composite slab production.",
+    "sections": [
+      {
+        "heading": "Prepare the slab bed for subsequent operations",
+        "text": "The machine belongs to the bed-preparation stage of the prestressed slab line. Its equipment functions address placing the selected film and handling the reinforcement through the specified clamping and comb arrangements. The final preparation sequence needs to suit the actual bed, reinforcement layout and product process.\nThe film material and its purpose must be defined in the production specification. The machine description does not establish that every film type or reinforcement arrangement is compatible. Material dimensions and the way they are handled need to be checked before the equipment is selected."
+      },
+      {
+        "heading": "Film access and reinforcement handling",
+        "text": "- **Automatic film laying:** the reference design provides an automatic film-laying function along the production bed.\n- **Quick-release film rollers:** the roller arrangement supports film-roll removal and replacement.\n- **Fast reinforcement clamping:** the specified clamping arrangement supports the reinforcement-handling task.\n- **Anti-disengagement comb design:** the comb arrangement includes the feature described in the source catalogue.\n- **Polyurethane-coated wheels:** the travelling equipment uses the stated wheel construction.\n- **Remote-control operation:** the reference machine is operated through a remote-control interface.\nThe supply package should identify the compatible roll, reinforcement and bed interfaces. These details define the practical use of the machine more clearly than the travel-speed range alone."
+      },
+      {
+        "heading": "A preparation sequence to confirm for your bed",
+        "text": "1. Fit the specified film roll using the roller arrangement.\n2. Prepare the reinforcement in the agreed clamping and comb interfaces.\n3. Travel along the defined bed route while carrying out the required laying operation.\n4. Complete the material handover and reset the equipment for the next preparation cycle.\nThe exact order and the division of tasks between the machine and operators follow the selected production process. This functional outline does not imply automatic reinforcement manufacture, welding or tying."
+      },
+      {
+        "heading": "Match the machine to film, reinforcement and bed",
+        "text": "Send the production-bed dimensions, reinforcement layout and film specification, including roll dimensions where available. The review also needs the travel route, available clearances and conductor-rail arrangement. Identify the equipment used before and after this preparation operation.\nFor an upgrade, provide drawings or photographs of the current bed edge, travel path and material loading area. The assessment should establish how film rolls and reinforcement reach the machine and how operators access the loading interfaces. A complete preparation cycle includes these tasks as well as the machine's travelling movement."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference travel speed",
+        "value": "0–40 m/min"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Power supply",
+        "value": "Conductor rail"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Film laying",
+        "value": "Automatic"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Film roller arrangement",
+        "value": "Quick release"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Reinforcement handling",
+        "value": "Fast clamping / anti-disengagement comb"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Wheel construction",
+        "value": "Polyurethane-coated wheels"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operation",
+        "value": "Remote control"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this machine manufacture the reinforcement?",
+        "answer": "The described functions concern reinforcement handling and film laying on the slab bed. The source does not describe reinforcement cutting, welding or tying as machine functions."
+      },
+      {
+        "question": "What film can be used?",
+        "answer": "Film type, width, roll dimensions and production purpose need to be specified for compatibility review. The catalogue's automatic laying feature does not establish universal material compatibility."
+      },
+      {
+        "question": "Does 40 m/min mean the film is laid at that speed?",
+        "answer": "The figure is the upper end of the catalogue travel-speed range. The working laying speed depends on the selected material, task and production procedure."
+      },
+      {
+        "question": "What power-supply arrangement is specified?",
+        "answer": "The reference equipment uses a conductor rail. Its installation route and interfaces are confirmed with the plant layout."
+      }
+    ],
+    "related": [
+      {
+        "name": "Automatic Gang Stressing Machine",
+        "url": "/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+        "description": "Coordinate the reinforcement arrangement with the stressing system."
+      },
+      {
+        "name": "Surface Roughening & Shutter Handling Machine",
+        "url": "/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+        "description": "Review another combined equipment duty on the slab line."
+      },
+      {
+        "name": "Pallet Ferry Transfer Car",
+        "url": "/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+        "description": "Review transfers within the selected slab-line layout."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Review Your Slab Bed Preparation",
+      "text": "Send your slab bed dimensions, reinforcement layout and film requirements. REALJET can review the laying machine and its interfaces with the other prestressed slab equipment."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+          "name": "Reinforcement & Film Laying Machine for Slabs | REALJET",
+          "description": "Explore reinforcement and film laying for prestressed slab beds, with automatic film laying, quick-release rollers and reinforcement clamping.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/#product",
+          "name": "Reinforcement & Film Laying Machine",
+          "description": "A reinforcement and film laying machine combines reinforcement-handling features with automatic film laying on a prestressed composite slab production bed. The reference equipment offered through REALJET includes quick-release film rollers, fast reinforcement clamping, an anti-disengagement comb arrangement and polyurethane-coated wheels. Catalogue travel speed is 0–40 m/min, with conductor-rail power supply.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference travel speed",
+              "value": "0–40 m/min"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Power supply",
+              "value": "Conductor rail"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Film laying",
+              "value": "Automatic"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Film roller arrangement",
+              "value": "Quick release"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Reinforcement handling",
+              "value": "Fast clamping / anti-disengagement comb"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Wheel construction",
+              "value": "Polyurethane-coated wheels"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operation",
+              "value": "Remote control"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/reinforcement-film.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Reinforcement & Film Laying Machine",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 10,
+    "notionId": "3ff41f7394888103a9e5dcec963aefb7",
+    "name": "Surface Roughening & Shutter Handling Machine",
+    "slug": "surface-roughening-shutter-handling-machine",
+    "url": "/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+    "title": "Precast Surface Roughening & Shutter Handling | REALJET",
+    "description": "Review a combined machine for slab surface roughening and shutter collection, with assisted lifting, a storage platform and adjustable roughening-unit height.",
+    "h1": "Surface Roughening and Shutter Handling Machine for Precast Slabs",
+    "intro": "A surface roughening and shutter handling machine combines slab-surface treatment with the collection of stop-end and side shutters. The reference design offered through REALJET includes assisted lifting, a dedicated shutter storage platform and one-touch raising and lowering of the roughening unit. It is intended for the defined process on a prestressed composite slab line.",
+    "image": "/images/building-precast/surface-roughening.webp",
+    "alt": "Travelling surface roughening and shutter handling machine with assisted hoist and storage platform",
+    "caption": "Reference combined equipment for slab surface roughening and shutter collection.",
+    "sections": [
+      {
+        "heading": "Two equipment duties on the slab line",
+        "text": "The machine brings the roughening unit and shutter-handling facilities onto one travelling arrangement. The required surface treatment, shutter type and handling sequence need to suit the slab design and production process. These details determine how the combined equipment is used on the bed.\nThe source describes combined roughening and shutter collection, but the exact working sequence remains specific to the plant. The process review should establish when each task takes place, how the shutters are presented for collection and where they are stored. The machine should be specified around those tasks rather than described as a general concrete surface-preparation tool."
+      },
+      {
+        "heading": "Roughening adjustment and shutter collection",
+        "text": "- **Combined working arrangement:** surface roughening and stop-end or side shutter collection are included in the equipment concept.\n- **Assisted lifting:** the reference hoist supports the defined shutter-handling task within its specified capacity.\n- **One-touch roughening-unit movement:** the unit can be raised or lowered through the control function described in the catalogue.\n- **Dedicated storage platform:** the arrangement provides a place for collected shutters.\n- **Remote and control-panel operation:** both interfaces are included in the source description.\nThe plant review should establish compatible shutters, handling weights and operator access. The roughening-unit adjustment must also match the bed and the required working position."
+      },
+      {
+        "heading": "Organize the work around the slab process",
+        "text": "1. Prepare the roughening unit and shutter-handling arrangement for the selected bed.\n2. Position the machine at the defined working area.\n3. Use the roughening and shutter-collection functions at the stages required by the approved process.\n4. Place collected shutters on the designated platform and clear the equipment for the next operation.\nThe concrete condition, surface requirement and permitted shutter-removal stage need to be defined for the actual slab. This overview describes equipment functions without prescribing a universal process window or removal order."
+      },
+      {
+        "heading": "Check surface requirements and shutter weights",
+        "text": "Send the slab drawings, bed dimensions and required surface finish. Provide shutter details, individual handling weights and the proposed storage method. The review also needs the machine's travel path, conductor-rail position and clearances around the bed.\nKeep travel speed, hoist capacity and roughening adjustment separate when comparing proposals. The travel figure does not establish the working treatment speed. The hoist rating applies to its defined lifting duty, while the roughening stroke describes unit movement rather than a guaranteed treatment depth. Each parameter should be connected to the actual task."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference hoist capacity",
+        "value": "80 kg"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Travel speed range",
+        "value": "0–40 m/min"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Roughening-unit lifting stroke",
+        "value": "0–250 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Power supply",
+        "value": "Conductor rail"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Shutter storage",
+        "value": "Dedicated platform"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operation",
+        "value": "Remote control / control panel"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the machine roughen hardened concrete?",
+        "answer": "The source describes a roughening duty within a precast slab production line. It does not establish capability for milling, blasting or scarifying hardened concrete. Share the required surface treatment for review."
+      },
+      {
+        "question": "Does the 250 mm stroke describe surface roughness depth?",
+        "answer": "No. It is the reference lifting stroke of the roughening unit. The required surface texture and treatment method need to be defined separately."
+      },
+      {
+        "question": "Can the hoist lift an 80 kg concrete element?",
+        "answer": "The catalogue's 80 kg figure is the hoist capacity for the equipment's defined handling duty. It does not make the machine a finished-element lifting system."
+      },
+      {
+        "question": "Can roughening and shutter collection always happen at the same time?",
+        "answer": "The catalogue describes combined functions. The actual timing depends on the shutter arrangement, concrete process and plant procedure, and needs to be reviewed for the line."
+      }
+    ],
+    "related": [
+      {
+        "name": "Reinforcement & Film Laying Machine",
+        "url": "/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+        "description": "Review bed-preparation duties on the same slab line."
+      },
+      {
+        "name": "Automatic Gang Stressing Machine",
+        "url": "/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+        "description": "Coordinate equipment selection around the prestressed slab process."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Review Your Roughening and Shutter-Handling Tasks",
+      "text": "Share the required slab surface finish, bed layout and shutter drawings with their handling weights. REALJET can review the combined machine around the tasks performed on your production line."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+          "name": "Precast Surface Roughening & Shutter Handling | REALJET",
+          "description": "Review a combined machine for slab surface roughening and shutter collection, with assisted lifting, a storage platform and adjustable roughening-unit height.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/#product",
+          "name": "Surface Roughening & Shutter Handling Machine",
+          "description": "A surface roughening and shutter handling machine combines slab-surface treatment with the collection of stop-end and side shutters. The reference design offered through REALJET includes assisted lifting, a dedicated shutter storage platform and one-touch raising and lowering of the roughening unit. It is intended for the defined process on a prestressed composite slab line.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference hoist capacity",
+              "value": "80 kg"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Travel speed range",
+              "value": "0–40 m/min"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Roughening-unit lifting stroke",
+              "value": "0–250 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Power supply",
+              "value": "Conductor rail"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Shutter storage",
+              "value": "Dedicated platform"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operation",
+              "value": "Remote control / control panel"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/surface-roughening.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Surface Roughening & Shutter Handling Machine",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 11,
+    "notionId": "3ff41f739488811b80a2e05b90aff3ca",
+    "name": "Pallet Ferry Transfer Car",
+    "slug": "pallet-ferry-transfer-car",
+    "url": "/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+    "title": "Pallet Ferry Transfer Car for Precast Slab Lines | REALJET",
+    "description": "Explore a pallet ferry transfer car for prestressed slab production, with hydraulic position locking, conductor-rail power and a 25 t reference load.",
+    "h1": "Pallet Ferry Transfer Car for Precast Slab Production",
+    "intro": "A pallet ferry transfer car provides a defined transfer link within a precast slab production layout. The reference equipment offered through REALJET is listed for a prestressed composite slab line and includes hydraulic position locking, coordinated transfer, conductor-rail power and remote or control-panel operation. Its catalogue load is 25 t.",
+    "image": "/images/building-precast/pallet-ferry.webp",
+    "alt": "Pallet ferry transfer car for a prestressed composite slab production layout",
+    "caption": "Reference pallet ferry car; transfer positions and hydraulic locking are defined for the layout.",
+    "sections": [
+      {
+        "heading": "Connect the transfer points in your slab-line layout",
+        "text": "The ferry car is specified around the route between its pickup and receiving interfaces. It needs to reach the required position, align with the adjoining equipment and hold the defined position for pallet transfer. Hydraulic locking is one of the reference design's stated features.\nThe arrangement of beds and pallet movements determines where a ferry car is needed. Its selection should follow a layout showing the transfer duty, rather than a general requirement for a 25 t carrier. The engineering review should identify what moves, where it moves and how the adjoining equipment supports the pallet during handover."
+      },
+      {
+        "heading": "Position locking and transfer control",
+        "text": "- **Hydraulic position locking:** the reference arrangement locks the car at the defined operating position.\n- **Coordinated transfer:** the control concept supports the assigned transfer duty within the selected slab line.\n- **Conductor-rail supply:** electrical power is supplied through the arrangement described in the catalogue.\n- **Remote and control-panel operation:** operators can use the specified control interfaces.\nThe quoted package should identify the ferry car, the receiving and discharge interfaces, the power-supply boundary and the control handover conditions. These details make the transfer duty clear to both the equipment supplier and the factory team."
+      },
+      {
+        "heading": "Define the transfer sequence at each interface",
+        "text": "1. Move the car to the required handover location.\n2. Establish the alignment and position-locking conditions specified for that interface.\n3. Carry out the pallet handover using the agreed transfer arrangement.\n4. Release and move to the next assigned position as required by the line sequence.\nThe precise order of loading, travel and unloading depends on the chosen configuration. Catalogue descriptions do not replace a transfer drawing showing the supported load and equipment responsibility at each stage."
+      },
+      {
+        "heading": "Specify the route before selecting the car",
+        "text": "Provide the production layout, pallet dimensions and maximum loaded handling condition. Mark every pickup and handover point, track or bed interface, required travel direction and station level. Include available space for the car and the conductor-rail installation.\nIf the plant already uses a pallet transfer trolley, show its duty separately. The two catalogue machines have different stated features and should be checked against their respective interfaces. The ferry car's locking arrangement is not, on its own, a basis for assuming compatibility with an existing pallet or transfer station."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference catalogue load",
+        "value": "25 t"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Position locking",
+        "value": "Hydraulic"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Power supply",
+        "value": "Conductor rail"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Control",
+        "value": "Coordinated transfer"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operation",
+        "value": "Remote control / control panel"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Catalogue application",
+        "value": "Prestressed composite slab production line"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a pallet ferry transfer car used for?",
+        "answer": "It connects defined transfer positions within the selected slab-line layout. Its route and handover arrangement are established from the plant's pallet movement requirements."
+      },
+      {
+        "question": "How does it differ from the pallet transfer trolley?",
+        "answer": "The ferry car reference includes hydraulic position locking and conductor-rail supply for its assigned slab-line duty. The separate trolley reference emphasizes synchronized lifting and servo-controlled travel. Actual compatibility depends on the layout and interfaces."
+      },
+      {
+        "question": "Does the 25 t figure include the pallet?",
+        "answer": "The catalogue states the equipment load without a complete boundary definition. The project specification must confirm which carried components are included in the rated handling condition."
+      },
+      {
+        "question": "Is the ferry car suitable for any rail spacing?",
+        "answer": "The source does not state universal track compatibility. Rail or bed interfaces, station levels and handover positions must be checked for the actual plant."
+      }
+    ],
+    "related": [
+      {
+        "name": "Pallet Transfer Trolley",
+        "url": "/products/precast-concrete-equipment/pallet-transfer-trolley/",
+        "description": "Compare the separate synchronized-lifting trolley configuration."
+      },
+      {
+        "name": "Reinforcement & Film Laying Machine",
+        "url": "/products/precast-concrete-equipment/reinforcement-film-laying-machine/",
+        "description": "Review preparation equipment in the slab-line layout."
+      },
+      {
+        "name": "Automatic Gang Stressing Machine",
+        "url": "/products/precast-concrete-equipment/automatic-gang-stressing-machine/",
+        "description": "Review the stressing-system interface requirements."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Plan Your Slab-Line Transfer Connection",
+      "text": "Send a layout showing the ferry route, pallet dimensions and transfer interfaces. REALJET can review the car, locking arrangement and adjoining equipment as a coordinated package."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+          "name": "Pallet Ferry Transfer Car for Precast Slab Lines | REALJET",
+          "description": "Explore a pallet ferry transfer car for prestressed slab production, with hydraulic position locking, conductor-rail power and a 25 t reference load.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/#product",
+          "name": "Pallet Ferry Transfer Car",
+          "description": "A pallet ferry transfer car provides a defined transfer link within a precast slab production layout. The reference equipment offered through REALJET is listed for a prestressed composite slab line and includes hydraulic position locking, coordinated transfer, conductor-rail power and remote or control-panel operation. Its catalogue load is 25 t.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference catalogue load",
+              "value": "25 t"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Position locking",
+              "value": "Hydraulic"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Power supply",
+              "value": "Conductor rail"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Control",
+              "value": "Coordinated transfer"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operation",
+              "value": "Remote control / control panel"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Catalogue application",
+              "value": "Prestressed composite slab production line"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/pallet-ferry.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Pallet Ferry Transfer Car",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "order": 12,
+    "notionId": "3ff41f73948881e08c2ce2ce42445014",
+    "name": "Retractable Curing Cover",
+    "slug": "retractable-curing-cover",
+    "url": "/products/precast-concrete-equipment/retractable-curing-cover/",
+    "canonical": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/",
+    "title": "Retractable Curing Cover for Precast Casting Beds | REALJET",
+    "description": "Explore a motor-driven retractable curing cover for long-line precast casting beds. Review steam-curing integration, reference dimensions and bed access.",
+    "h1": "Retractable Curing Cover for Long-Line Precast Casting Beds",
+    "intro": "A retractable curing cover encloses the casting-bed area during the defined steam-curing process and retracts to provide working access. The reference equipment offered through REALJET uses a motor-driven arrangement with one-touch automatic extension and retraction. It is listed for a long-line casting-table production system, with dimensions matched to the selected bed layout.",
+    "image": "/images/building-precast/retractable-curing.webp",
+    "alt": "Retractable curing cover positioned over a casting bed in a precast concrete workshop",
+    "caption": "Reference retractable cover for casting-bed steam curing.",
+    "sections": [
+      {
+        "heading": "Cover the bed during the curing stage",
+        "text": "A long-line layout keeps production activities around the casting bed. The curing cover must fit that bed and allow the required access when retracted. Its extended position, stored position and interfaces with neighbouring equipment need to be considered together.\nThe cover provides the enclosure function within a curing arrangement. Steam generation, distribution and process control need their own defined scope. This distinction helps the plant team compare a cover-only proposal with a complete curing package and identify which installation items remain to be provided."
+      },
+      {
+        "heading": "Motor-driven extension and retraction",
+        "text": "- **Motor-driven movement:** the reference design uses a motor to move the cover arrangement.\n- **One-touch extension and retraction:** the stated automatic movement function covers opening and closing the enclosure.\n- **Steam-curing application:** the cover is intended for the steam-curing arrangement described for the selected production bed.\n- **Access planning around the bed:** the retracted position must be considered alongside the work performed on the casting table.\nThe final equipment drawing should identify the covered area and the space occupied by the retracted cover. Material, sealing, movement and utility details belong in the agreed specification for the selected configuration."
+      },
+      {
+        "heading": "Opening and closing within the production sequence",
+        "text": "1. Clear the cover's movement path according to the plant's operating procedure.\n2. Extend the cover over the defined bed area using the specified control function.\n3. Operate the separate steam-curing system in accordance with the approved process.\n4. Retract the cover when the process permits access to the casting bed.\nAutomatic cover movement does not define the temperature programme, curing duration or concrete release criteria. These follow the production process and the controls included in the complete curing system."
+      },
+      {
+        "heading": "Match coverage, access and steam-supply scope",
+        "text": "Send the casting-bed length and width, required coverage, product clearance and available retraction space. Include the layout of distribution, reinforcement and handling equipment around the bed. The review should confirm whether the reference dimensions describe the selected cover section or the complete proposed arrangement.\nState whether the project needs a cover only or a wider curing package. Identify the steam source, pipework and process-control responsibilities in the proposal. Where sectional curing is required, the arrangement needs a specific review; the reference cover dimensions do not establish independent control of multiple curing zones."
+      }
+    ],
+    "specs": [
+      {
+        "@type": "PropertyValue",
+        "name": "Reference overall dimensions",
+        "value": "10,000 × 3,600 × 1,250 mm"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Application",
+        "value": "Long-line casting-table production"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Cover movement",
+        "value": "Motor-driven extension / retraction"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Operation",
+        "value": "One-touch automatic movement"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Curing method",
+        "value": "Steam curing"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does the cover generate steam?",
+        "answer": "No steam-generation function is established by the cover description. The steam source and its connections need to be specified as separate items or explicitly included in the agreed curing package."
+      },
+      {
+        "question": "How is it different from a multi-level curing chamber?",
+        "answer": "A retractable cover works over a casting-bed area. A multi-level chamber stores loaded production pallets in a rack arrangement and requires its own storage and retrieval interface."
+      },
+      {
+        "question": "Is 10 m the maximum length of a complete long-line curing system?",
+        "answer": "The 10,000 mm figure is a reference equipment dimension. The required covered length, section arrangement and retraction space are defined for the actual bed."
+      },
+      {
+        "question": "Does automatic movement mean automatic concrete curing?",
+        "answer": "It describes extension and retraction of the cover. Temperature control, curing duration and release conditions depend on the separate process and the equipment included in the package."
+      }
+    ],
+    "related": [
+      {
+        "name": "Curing Chamber & Climate Control",
+        "url": "/products/precast-concrete-equipment/curing-chamber-climate-control/",
+        "description": "Compare a multi-level pallet curing arrangement."
+      },
+      {
+        "name": "Concrete Distributor",
+        "url": "/products/precast-concrete-equipment/concrete-distributor/",
+        "description": "Review the separate pallet-line placing option when comparing production concepts."
+      },
+      {
+        "name": "Precast Concrete Plant Solutions",
+        "url": "/solutions/precast-concrete-plant/",
+        "description": "review equipment in the context of the complete line."
+      }
+    ],
+    "cta": {
+      "heading": "Discuss Your Casting-Bed Curing Cover",
+      "text": "Share the bed dimensions, required coverage, retraction space and steam-supply conditions. REALJET can review the cover arrangement and the scope needed for your long-line production layout."
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/#webpage",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/",
+          "name": "Retractable Curing Cover for Precast Casting Beds | REALJET",
+          "description": "Explore a motor-driven retractable curing cover for long-line precast casting beds. Review steam-curing integration, reference dimensions and bed access.",
+          "inLanguage": "en",
+          "mainEntity": {
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/#product"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/#product",
+          "name": "Retractable Curing Cover",
+          "description": "A retractable curing cover encloses the casting-bed area during the defined steam-curing process and retracts to provide working access. The reference equipment offered through REALJET uses a motor-driven arrangement with one-touch automatic extension and retraction. It is listed for a long-line casting-table production system, with dimensions matched to the selected bed layout.",
+          "url": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/",
+          "brand": {
+            "@type": "Brand",
+            "name": "REALJET"
+          },
+          "category": "Precast concrete production equipment",
+          "additionalProperty": [
+            {
+              "@type": "PropertyValue",
+              "name": "Reference overall dimensions",
+              "value": "10,000 × 3,600 × 1,250 mm"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Application",
+              "value": "Long-line casting-table production"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Cover movement",
+              "value": "Motor-driven extension / retraction"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Operation",
+              "value": "One-touch automatic movement"
+            },
+            {
+              "@type": "PropertyValue",
+              "name": "Curing method",
+              "value": "Steam curing"
+            }
+          ],
+          "image": "https://realjetech.com/images/building-precast/retractable-curing.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://realjetech.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Precast Concrete Plant Solutions",
+              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Retractable Curing Cover",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

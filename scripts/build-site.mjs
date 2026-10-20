@@ -592,5 +592,6 @@ if (sitemap.includes('/ppvc-mic-production-line/thank-you/')) throw new Error("P
 await run(process.execPath, ["scripts/validate-site.mjs"]);
 
 await run(process.execPath, ["scripts/validate-product-catalogue.mjs"]);
+await run(process.execPath, ["scripts/validate-pc-equipment.mjs"]);
 
 console.log("Realjet website build merged successfully into dist/.");

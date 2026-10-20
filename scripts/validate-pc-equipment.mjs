@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import { readFile, access } from 'node:fs/promises';
+import { resolve } from 'node:path';
+
+const root = resolve(import.meta.dirname, '..');
+const equipment = JSON.parse(await readFile(`${root}/site/_data/pcEquipment.json`, 'utf8'));
+const cards = JSON.parse(await readFile(`${root}/site/_data/buildingPrecast.json`, 'utf8')).equipment;
+const landing = await readFile(`${root}/dist/solutions/precast-concrete-plant/index.html`, 'utf8');
+const sitemap = await readFile(`${root}/dist/sitemap.xml`, 'utf8');
+const grid = landing.split('<div class="pc-equipment-grid">')[1].split('<div class="pc-single">')[0];
+assert.equal(equipment.length, 12);
+assert.deepEqual(equipment.map(item => item.name), cards.map(item => item[0]), 'Detail data must retain the landing-card order');
+assert.equal(new Set(equipment.map(item => item.url)).size, 12);
+assert.equal(new Set(equipment.map(item => item.title)).size, 12);
+
+for (const item of equipment) {
+  const html = await readFile(`${root}/dist${item.url}index.html`, 'utf8');
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
+  assert.equal((html.match(/<h1\b/g) || []).length, 1, `${item.slug}: one H1`);
+  assert.equal((html.match(/<details\b/g) || []).length, 4, `${item.slug}: four FAQs`);
+  assert.equal((grid.match(new RegExp(`href="${item.url}"`, 'g')) || []).length, 2, `${item.slug}: image and title links`);
+  assert.equal(sitemap.split(`<loc>${item.canonical}</loc>`).length - 1, 1, `${item.slug}: sitemap`);
+  assert.ok(html.includes(`<link rel="canonical" href="${item.canonical}"`));
+  assert.ok(!/[\u4e00-\u9fff]/.test(main), `${item.slug}: internal notes leaked`);
+  assert.ok(!/Primary button:|Secondary button:|sourceFile|notionId/.test(main));
+  assert.ok(html.includes(`name="equipment_id" value="${item.slug}"`));
+  assert.ok(html.includes(`name="source_url" value="${item.canonical}"`));
+  assert.ok(main.includes('name="message"') && main.includes(`name="email"`));
+  const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+  const product = graph.find(node => node['@type'] === 'Product');
+  assert.equal(product.url, item.canonical);
+  assert.equal(product.name, item.name);
+  assert.equal(product.additionalProperty.length, item.specs.length);
+  for (const field of ['offers', 'review', 'aggregateRating', 'manufacturer']) assert.ok(!(field in product));
+  for (const link of item.related) await access(`${root}/dist${link.url}index.html`);
+  await access(`${root}/public${item.image}`);
+}
+console.log('Validated 12 PC equipment pages, 24 card links, 48 FAQs, sitemap, enquiry context and structured data.');
