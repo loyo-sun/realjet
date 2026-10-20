@@ -15,6 +15,10 @@ for (const name of (await readdir(join(root, 'content/products'))).filter(name =
   const url = data.marketingPath || (data.productSeries === 'precast-concrete-moulds' ? `/precast-concrete-molds/${data.slug}/` : `/products/${data.slug}.html`);
   sourceProducts.push({ ...data, url: `https://realjetech.com${url}` });
 }
+const pcEquipment = JSON.parse(await readFile(join(root, 'site/_data/pcEquipment.json'), 'utf8'));
+sourceProducts.push(...pcEquipment.map(item => ({
+  title: item.name, productSeries: 'precast-wall-slab-equipment', url: item.canonical,
+})));
 const sitemap = await readFile(join(output, 'sitemap.xml'), 'utf8');
 const expectedSitemap = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 assert.equal(new Set(expectedSitemap).size, expectedSitemap.length, 'Duplicate sitemap URLs');
@@ -49,7 +53,7 @@ for (const bucket of buckets) {
       seenUrls.push(cardUrl);
     }
     const nav = html.match(/<nav class="catalogue-categories"[\s\S]*?<\/nav>/)[0];
-    assert.equal((nav.match(/<a /g) || []).length, 5, `${url}: all categories available`);
+    assert.equal((nav.match(/<a /g) || []).length, buckets.length, `${url}: all categories available`);
     for (const category of buckets) {
       const count = category.slug === 'all' ? sourceProducts.length : sourceProducts.filter(product => product.productSeries === category.series).length;
       assert(nav.includes(`aria-label="${count} products"`), `${url}: category count`);

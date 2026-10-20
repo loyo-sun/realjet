@@ -3,9 +3,23 @@ export const cataloguePageSize = 12;
 export const productCategories = [
   { series: "precast-concrete-moulds", slug: "precast-concrete-moulds", name: "Precast Concrete Moulds", description: "Steel moulds and formwork for bridge, building, tunnel, municipal and marine concrete components. Browse by product or explore our mould application guide." },
   { series: "precast-production-equipment", slug: "precast-beam-production-equipment", name: "Precast Beam Production Equipment", description: "Project-specific beam formwork, hydraulic operating systems, mould transfer equipment and station-based production systems." },
+  { series: "precast-wall-slab-equipment", slug: "precast-concrete-equipment", name: "Wall & Slab Production Equipment", seoTitle: "Precast Wall & Slab Production Equipment", description: "Compare 12 machines for precast wall and slab plants: concrete distribution, pallet handling, curing and prestressed slab preparation. Review reference specifications and plant interfaces." },
   { series: "spun-pile-equipment", slug: "spun-pile-production-equipment", name: "Spun Pile Production Equipment", description: "Equipment for reinforcement preparation, concrete batching, moulding, tensioning, spinning, curing and material transfer in spun pile plants." },
   { series: "contract-manufacturing", slug: "custom-machinery-components", name: "Custom Machinery Components", seoTitle: "Custom OEM Parts and Sheet Metal Fabrication", heading: "Custom Machinery Components for OEMs", description: "OEM contract manufacturing of custom machinery parts, sheet metal chassis, welded structures and tanks, made to your drawings. Send CAD files for a custom quote." },
 ];
+
+// PC detail pages have their own template and one content data source. Adapt
+// them for catalogue cards without creating duplicate product routes or copies.
+export function pcEquipmentCatalogueEntries(equipment) {
+  return equipment.map((item) => ({
+    url: item.url,
+    data: {
+      title: item.name, slug: item.slug, description: item.description,
+      image: item.responsiveImage, imageAlt: item.alt, order: 100 + item.order,
+      productSeries: "precast-wall-slab-equipment",
+    },
+  }));
+}
 
 export function catalogueProducts(items) {
   return items

@@ -35,6 +35,7 @@ eleventyComputed:
     <div class="catalogue-toolbar">
       <p class="catalogue-result-count">Showing <strong>{{ catalogue.start }}–{{ catalogue.end }}</strong> of <strong>{{ catalogue.total }}</strong> products{% if catalogue.category.slug != "all" %} in {{ catalogue.category.name }}{% endif %}</p>
       {% if catalogue.category.series == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Explore moulds by application <span aria-hidden="true">→</span></a>{% endif %}
+      {% if catalogue.category.series == "precast-wall-slab-equipment" %}<a href="/solutions/precast-concrete-plant/">Plan a wall and slab production line</a>{% endif %}
     </div>
     {% if catalogue.products.length %}
     <h2 class="sr-only">{{ catalogue.category.name }} catalogue</h2>

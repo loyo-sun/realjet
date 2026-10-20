@@ -6,6 +6,35 @@ eleventyExcludeFromCollections: true
 
 ## Equipment detail pages (2026-10-20)
 
+### SEO and GEO follow-up (2026-10-20)
+
+The main catalogue now includes a Wall & Slab Production Equipment category at
+`/products/precast-concrete-equipment/`, with all 12 detail pages represented in
+the all-products catalogue, category counts, pagination and ItemList markup.
+These are catalogue adapters over the same PC data, not duplicate detail pages.
+Breadcrumbs and equipment navigation use the new category, and llms.txt lists
+the 12 pages as an optional inventory. Sitemap validation checks unique URLs.
+
+The unconfirmed “160 t” stressing-force figure is removed from the plant card;
+it now displays the documented force/stroke monitoring feature. Each detail page
+visibly identifies the publishing company and actual content-update date, with
+matching Organization/publisher/dateModified entity data. No technical reviewer,
+manufacturer claim, offer or rating is invented. Product rich-result eligibility
+and actual indexing are not claimed by these changes.
+
+Each equipment image has a 640px WebP delivery variant plus the existing 1200px
+asset. Matching srcset/sizes and responsive preload avoid a separate oversized
+hero request on smaller screens. The 12 small variants total 240,488 bytes,
+compared with 773,900 bytes for the originals; this is an asset-size comparison,
+not a measured page-speed or ranking improvement. Catalogue cards also use the
+smaller variants. Build validation covers 175 products across 31 catalogue pages.
+Browser QA passed all 12 pages at 1440/390/320px plus catalogue-to-detail navigation,
+responsive-image selection and mocked enquiry retry/success.
+
+Remaining evidence work requires confirmed model/force/size data and approved
+drawings, operating videos or project records. Actual search indexing, AI citation
+activity and field Core Web Vitals require separate performance/account evidence.
+
 All 12 Equipment integration cards now link by image and title to their matching
 `/products/precast-concrete-equipment/{slug}/` pages. `site/pc-equipment/index.njk`
 generates the pages from `site/_data/pcEquipment.json`; each record retains its

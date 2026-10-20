@@ -234,9 +234,9 @@
       "Automatic pin insertion and withdrawal, two stressing modes and one-touch return to the starting position. Sensors monitor reinforcement stressing force and cylinder stroke in real time.",
       [
         {
-          "label": "Maximum stressing force",
-          "value": "160 t",
-          "wide": false
+          "label": "Monitoring",
+          "value": "Stressing force / cylinder stroke",
+          "wide": true
         }
       ]
     ],

@@ -7,11 +7,16 @@ const equipment = JSON.parse(await readFile(`${root}/site/_data/pcEquipment.json
 const cards = JSON.parse(await readFile(`${root}/site/_data/buildingPrecast.json`, 'utf8')).equipment;
 const landing = await readFile(`${root}/dist/solutions/precast-concrete-plant/index.html`, 'utf8');
 const sitemap = await readFile(`${root}/dist/sitemap.xml`, 'utf8');
+const catalogue = await readFile(`${root}/dist/products/precast-concrete-equipment/index.html`, 'utf8');
+const productsIndex = await readFile(`${root}/dist/products/index.html`, 'utf8');
+const llms = await readFile(`${root}/dist/llms.txt`, 'utf8');
 const grid = landing.split('<div class="pc-equipment-grid">')[1].split('<div class="pc-single">')[0];
 assert.equal(equipment.length, 12);
 assert.deepEqual(equipment.map(item => item.name), cards.map(item => item[0]), 'Detail data must retain the landing-card order');
 assert.equal(new Set(equipment.map(item => item.url)).size, 12);
 assert.equal(new Set(equipment.map(item => item.title)).size, 12);
+assert.ok(productsIndex.includes('href="/products/precast-concrete-equipment/"'), 'Main product catalogue links to PC equipment');
+assert.ok(!landing.includes('160 t'), 'Do not expose unconfirmed stressing-force units');
 
 for (const item of equipment) {
   const html = await readFile(`${root}/dist${item.url}index.html`, 'utf8');
@@ -21,6 +26,10 @@ for (const item of equipment) {
   assert.equal((grid.match(new RegExp(`href="${item.url}"`, 'g')) || []).length, 2, `${item.slug}: image and title links`);
   assert.equal(sitemap.split(`<loc>${item.canonical}</loc>`).length - 1, 1, `${item.slug}: sitemap`);
   assert.ok(html.includes(`<link rel="canonical" href="${item.canonical}"`));
+  assert.ok(catalogue.includes(`href="${item.url}"`), `${item.slug}: category entry`);
+  assert.ok(llms.includes(item.canonical), `${item.slug}: machine-readable inventory`);
+  assert.ok(html.includes(`srcset="${item.responsiveImage} 640w, ${item.image} 1200w"`));
+  assert.ok(html.includes(`imagesrcset="${item.responsiveImage} 640w, ${item.image} 1200w"`), 'Preload matches responsive image');
   assert.ok(!/[\u4e00-\u9fff]/.test(main), `${item.slug}: internal notes leaked`);
   assert.ok(!/Primary button:|Secondary button:|sourceFile|notionId/.test(main));
   assert.ok(html.includes(`name="equipment_id" value="${item.slug}"`));
@@ -28,11 +37,20 @@ for (const item of equipment) {
   assert.ok(main.includes('name="message"') && main.includes(`name="email"`));
   const graph = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
   const product = graph.find(node => node['@type'] === 'Product');
+  const webPage = graph.find(node => node['@type'] === 'WebPage');
+  const organization = graph.find(node => node['@type'] === 'Organization');
+  assert.equal(webPage.publisher['@id'], organization['@id']);
+  assert.equal(webPage.dateModified, item.updated);
+  assert.ok(main.includes(organization.name), `${item.slug}: visible publisher matches entity data`);
+  assert.ok(main.includes(`datetime="${item.updated}"`));
+  const breadcrumbs = graph.find(node => node['@type'] === 'BreadcrumbList').itemListElement;
+  assert.equal(breadcrumbs[2].item, 'https://realjetech.com/products/precast-concrete-equipment/');
   assert.equal(product.url, item.canonical);
   assert.equal(product.name, item.name);
   assert.equal(product.additionalProperty.length, item.specs.length);
   for (const field of ['offers', 'review', 'aggregateRating', 'manufacturer']) assert.ok(!(field in product));
   for (const link of item.related) await access(`${root}/dist${link.url}index.html`);
   await access(`${root}/public${item.image}`);
+  await access(`${root}/public${item.responsiveImage}`);
 }
 console.log('Validated 12 PC equipment pages, 24 card links, 48 FAQs, sitemap, enquiry context and structured data.');

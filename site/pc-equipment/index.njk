@@ -23,7 +23,10 @@ eleventyExcludeFromCollections: true
   <meta property="og:url" content="{{ equipment.canonical | escape }}" />
   <meta property="og:image" content="https://realjetech.com{{ equipment.image }}" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preload" as="image" href="{{ equipment.image }}" fetchpriority="high" />
+  <meta name="twitter:title" content="{{ equipment.title | escape }}" />
+  <meta name="twitter:description" content="{{ equipment.description | escape }}" />
+  <meta name="twitter:image" content="https://realjetech.com{{ equipment.image }}" />
+  <link rel="preload" as="image" href="{{ equipment.image }}" imagesrcset="{{ equipment.responsiveImage }} 640w, {{ equipment.image }} 1200w" imagesizes="(max-width: 850px) calc(100vw - 48px), (max-width: 1300px) 45vw, 570px" fetchpriority="high" />
   <link rel="stylesheet" href="/assets/site/site.css" />
   <link rel="stylesheet" href="/assets/site/building-precast.css" />
   <script>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});</script>
@@ -37,18 +40,19 @@ eleventyExcludeFromCollections: true
     <a class="pc-brand" href="/" aria-label="REALJET home"><img src="/images/realjet-logo.webp" width="1351" height="184" alt="REALJET" /></a>
     <button type="button" class="pc-menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="pc-navigation" data-pc-menu><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" /></svg></button>
     <nav id="pc-navigation" class="pc-navigation" aria-label="Production line navigation">
-      <a href="/solutions/precast-concrete-plant/">Plant Solutions</a><a href="/solutions/precast-concrete-plant/#equipment">All Equipment</a><a href="#specifications">Specifications</a><a href="#faqs">FAQs</a>
+      <a href="/solutions/precast-concrete-plant/">Plant Solutions</a><a href="/products/precast-concrete-equipment/">All Equipment</a><a href="#specifications">Specifications</a><a href="#faqs">FAQs</a>
       <a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="equipment_nav">Request Equipment Details</a>
     </nav>
   </div>
 </header>
 <main id="main-content">
-  <div class="pc-container"><nav class="pce-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/solutions/precast-concrete-plant/">Precast Concrete Plants</a><span aria-hidden="true">/</span><span aria-current="page">{{ equipment.name | escape }}</span></nav></div>
+  <div class="pc-container"><nav class="pce-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><a href="/products/">Products</a><span aria-hidden="true">/</span><a href="/products/precast-concrete-equipment/">Wall &amp; Slab Equipment</a><span aria-hidden="true">/</span><span aria-current="page">{{ equipment.name | escape }}</span></nav></div>
   <section class="pce-hero" aria-labelledby="equipment-title">
     <div class="pc-container pce-hero-grid">
       <div class="pce-hero-copy"><div class="pc-eyebrow">Precast production equipment</div><h1 id="equipment-title">{{ equipment.h1 | escape }}</h1><p>{{ equipment.intro | escape }}</p>
+      <p class="pce-meta">Published by <a href="/">{{ site.legalName }}</a><br>Content updated <time datetime="{{ equipment.updated }}">{{ equipment.updated | readableDate }}</time></p>
       <div class="pc-actions"><a class="pc-button pc-button-primary" href="#plant-proposal" data-pc-cta="equipment_hero">Request Equipment Details</a><a class="pc-text-link" href="#specifications">View Specifications <span aria-hidden="true">↓</span></a></div></div>
-      <figure class="pce-product-figure"><div class="pce-product-image"><img src="{{ equipment.image }}" alt="{{ equipment.alt | escape }}" width="1200" height="750" fetchpriority="high" decoding="async" /></div><figcaption>{{ equipment.caption | escape }}</figcaption></figure>
+      <figure class="pce-product-figure"><div class="pce-product-image"><img src="{{ equipment.image }}" srcset="{{ equipment.responsiveImage }} 640w, {{ equipment.image }} 1200w" sizes="(max-width: 850px) calc(100vw - 48px), (max-width: 1300px) 45vw, 570px" alt="{{ equipment.alt | escape }}" width="1200" height="750" fetchpriority="high" decoding="async" /></div><figcaption>{{ equipment.caption | escape }}</figcaption></figure>
     </div>
   </section>
   <div class="pc-container pce-detail-grid">
@@ -60,7 +64,7 @@ eleventyExcludeFromCollections: true
       {% endif %}
       {% endfor %}
     </div>
-    <aside class="pce-sidebar"><nav aria-label="On this page"><strong>On this page</strong><a href="#application">Application</a><a href="#features">Equipment Features</a><a href="#operation">Working Sequence</a><a href="#specifications">Specifications</a><a href="#selection">Equipment Selection</a><a href="#faqs">FAQs</a><a href="#plant-proposal">Request Equipment Details</a></nav><a class="pce-back" href="/solutions/precast-concrete-plant/#equipment">← View All PC Equipment</a></aside>
+    <aside class="pce-sidebar"><nav aria-label="On this page"><strong>On this page</strong><a href="#application">Application</a><a href="#features">Equipment Features</a><a href="#operation">Working Sequence</a><a href="#specifications">Specifications</a><a href="#selection">Equipment Selection</a><a href="#faqs">FAQs</a><a href="#plant-proposal">Request Equipment Details</a></nav><a class="pce-back" href="/products/precast-concrete-equipment/">← Compare All PC Equipment</a></aside>
   </div>
   <section class="pc-section pc-section-soft" id="faqs"><div class="pc-container pc-faq-grid"><div class="pc-section-head"><div class="pc-eyebrow">Equipment questions</div><h2>Frequently Asked Questions</h2></div><div class="pc-faq-list">{% for faq in equipment.faqs %}<details{% if loop.first %} open{% endif %}><summary>{{ faq.question | escape }}<span aria-hidden="true">+</span></summary><p>{{ faq.answer | escape }}</p></details>{% endfor %}</div></div></section>
   <section class="pc-section" id="related-equipment"><div class="pc-container"><div class="pc-section-head"><div class="pc-eyebrow">Connected production</div><h2>Related Equipment and Plant Planning</h2></div><div class="pce-related-grid">{% for related in equipment.related %}<article class="pce-related-card"><h3><a href="{{ related.url }}">{{ related.name | escape }}</a></h3><p>{{ related.description | escape }}</p></article>{% endfor %}</div></div></section>

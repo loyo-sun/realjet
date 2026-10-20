@@ -1,4 +1,5 @@
-import { buildCataloguePages } from "./scripts/product-catalogue.mjs";
+import { buildCataloguePages, pcEquipmentCatalogueEntries } from "./scripts/product-catalogue.mjs";
+import { readFileSync } from "node:fs";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import MarkdownIt from "markdown-it";
 
@@ -75,7 +76,10 @@ export default function (eleventyConfig) {
   );
 
   eleventyConfig.addCollection("productCataloguePages", (collectionApi) =>
-    buildCataloguePages(collectionApi.getFilteredByGlob("./content/products/*.md")),
+    buildCataloguePages([
+      ...collectionApi.getFilteredByGlob("./content/products/*.md"),
+      ...pcEquipmentCatalogueEntries(JSON.parse(readFileSync(new URL("./site/_data/pcEquipment.json", import.meta.url), "utf8"))),
+    ]),
   );
 
   eleventyConfig.addCollection("publishedProducts", (collectionApi) =>

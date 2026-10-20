@@ -29,6 +29,17 @@ Realjet serves infrastructure contractors, precast producers and machinery manuf
 {% endif %}{% endfor %}
 ## Precast concrete production equipment
 
+### Wall and slab production equipment
+
+These 12 equipment pages describe reference configurations, their production roles and interfaces. Final equipment scope and operating conditions are confirmed for the project.
+
+- [Wall and slab equipment catalogue](https://realjetech.com/products/precast-concrete-equipment/): Compare the 12 equipment items.
+- [Precast wall and slab plant solutions](https://realjetech.com/solutions/precast-concrete-plant/): Review carousel, prestressed slab and long-line production concepts.
+{% for equipment in pcEquipment %}- [{{ equipment.name | safe }}]({{ equipment.canonical }}): {{ equipment.description | safe }}
+{% endfor %}
+
+### Other precast production equipment and machinery components
+
 {% for product in collections.publishedProducts %}- [{{ product.data.title | safe }}]({{ product.url | absoluteUrl(site.url) }}): {{ product.data.description | safe }}
 {% endfor %}
 ## Precast mould categories

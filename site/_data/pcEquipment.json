@@ -119,6 +119,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -183,19 +193,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Concrete Distributor",
               "item": "https://realjetech.com/products/precast-concrete-equipment/concrete-distributor/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/distributor-640.webp"
   },
   {
     "order": 2,
@@ -302,6 +329,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -351,19 +388,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Pallet Vibration Station",
               "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-vibration-station/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/compaction-640.webp"
   },
   {
     "order": 3,
@@ -475,6 +529,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -529,19 +593,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Pallet Stacker",
               "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-stacker/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/stacker-640.webp"
   },
   {
     "order": 4,
@@ -653,6 +734,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -707,19 +798,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Curing Chamber & Climate Control",
               "item": "https://realjetech.com/products/precast-concrete-equipment/curing-chamber-climate-control/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/curing-640.webp"
   },
   {
     "order": 5,
@@ -831,6 +939,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -885,19 +1003,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Tilting Station",
               "item": "https://realjetech.com/products/precast-concrete-equipment/tilting-station/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/tilting-640.webp"
   },
   {
     "order": 6,
@@ -1019,6 +1154,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -1078,19 +1223,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Pallet Transfer Trolley",
               "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-transfer-trolley/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/pallet-transfer-640.webp"
   },
   {
     "order": 7,
@@ -1202,6 +1364,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -1256,19 +1428,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Concrete Transport Bucket",
               "item": "https://realjetech.com/products/precast-concrete-equipment/concrete-transport-bucket/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/bucket-640.webp"
   },
   {
     "order": 8,
@@ -1380,6 +1569,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -1434,19 +1633,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Automatic Gang Stressing Machine",
               "item": "https://realjetech.com/products/precast-concrete-equipment/automatic-gang-stressing-machine/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/tensioning-640.webp"
   },
   {
     "order": 9,
@@ -1573,6 +1789,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -1637,19 +1863,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Reinforcement & Film Laying Machine",
               "item": "https://realjetech.com/products/precast-concrete-equipment/reinforcement-film-laying-machine/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/reinforcement-film-640.webp"
   },
   {
     "order": 10,
@@ -1766,6 +2009,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -1825,19 +2078,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Surface Roughening & Shutter Handling Machine",
               "item": "https://realjetech.com/products/precast-concrete-equipment/surface-roughening-shutter-handling-machine/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/surface-roughening-640.webp"
   },
   {
     "order": 11,
@@ -1959,6 +2229,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -2018,19 +2298,36 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Pallet Ferry Transfer Car",
               "item": "https://realjetech.com/products/precast-concrete-equipment/pallet-ferry-transfer-car/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/pallet-ferry-640.webp"
   },
   {
     "order": 12,
@@ -2142,6 +2439,16 @@
           "inLanguage": "en",
           "mainEntity": {
             "@id": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/#product"
+          },
+          "dateModified": "2026-10-20",
+          "publisher": {
+            "@id": "https://realjetech.com/#organization"
+          },
+          "isPartOf": {
+            "@type": "CollectionPage",
+            "@id": "https://realjetech.com/products/precast-concrete-equipment/#webpage",
+            "url": "https://realjetech.com/products/precast-concrete-equipment/",
+            "name": "Wall & Slab Production Equipment"
           }
         },
         {
@@ -2196,18 +2503,35 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Precast Concrete Plant Solutions",
-              "item": "https://realjetech.com/solutions/precast-concrete-plant/"
+              "name": "Products",
+              "item": "https://realjetech.com/products/"
             },
             {
               "@type": "ListItem",
               "position": 3,
+              "name": "Wall & Slab Production Equipment",
+              "item": "https://realjetech.com/products/precast-concrete-equipment/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "Retractable Curing Cover",
               "item": "https://realjetech.com/products/precast-concrete-equipment/retractable-curing-cover/"
             }
           ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://realjetech.com/#organization",
+          "name": "Changsha Ruijie Machinery Technology Co., Ltd",
+          "alternateName": "REALJET",
+          "url": "https://realjetech.com/",
+          "logo": "https://realjetech.com/images/realjet-logo.webp",
+          "email": "sales@realjetech.com"
         }
       ]
-    }
+    },
+    "updated": "2026-10-20",
+    "responsiveImage": "/images/building-precast/retractable-curing-640.webp"
   }
 ]
