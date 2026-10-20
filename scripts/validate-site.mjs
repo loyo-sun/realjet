@@ -60,6 +60,18 @@ function validateStructuredData(value, path) {
 for (const htmlPath of htmlFiles) {
   const html = await readFile(htmlPath, "utf8");
   const relativePath = htmlPath.slice(outputRoot.length + 1);
+  // Netlify derives notification Reply-To from the submitted email field.
+  for (const match of html.matchAll(/<form\b([^>]*)>([\s\S]*?)<\/form>/gi)) {
+    if (!/\bname=["']universal-enquiry["']/i.test(match[1])) continue;
+    const inputs = [...match[2].matchAll(/<input\b[^>]*>/gi)].map((input) => input[0]);
+    const emailInputs = inputs.filter((input) => /\bname=["']email["']/i.test(input));
+    if (emailInputs.length !== 1 || !/\btype=["']email["']/i.test(emailInputs[0])) {
+      failures.push(`${relativePath}: enquiry must contain exactly one type="email" name="email" input for Netlify Reply-To`);
+    }
+    if (!inputs.some((input) => /\bname=["']form-name["']/i.test(input) && /\bvalue=["']universal-enquiry["']/i.test(input))) {
+      failures.push(`${relativePath}: enquiry must submit form-name="universal-enquiry"`);
+    }
+  }
   for (const match of html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     try {
       validateStructuredData(JSON.parse(match[1]), relativePath);

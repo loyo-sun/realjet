@@ -41,6 +41,16 @@ npm run build
 
 构建产物输出至 `dist/`。脚本会合并 Vite 与 Eleventy 产物，并检查首页、CMS、SEO 文件、7 语种落地页和机械制造询盘按钮。Netlify 使用 Node.js 22 执行同一命令。
 
+## 询盘邮件直接回复
+
+所有询盘共用 Netlify Forms 的 `universal-enquiry` 表单。客户邮箱字段统一为 `type="email" name="email"`；React 表单、静态注册表单和提交数据必须使用相同字段名。Netlify 根据提交的 `email` 设置通知邮件的 `Reply-To`，点击“回复”即可发给客户。发件人仍为 `formresponses@netlify.com`，无需增加邮件代理或自定义 `reply-to` 隐藏字段。
+
+生产构建会检查生成页面中每个询盘表单的邮箱字段和表单名称。此检查不能验证 Netlify 实际发出的邮件头。
+
+部署后验收：在 Netlify 的 Forms → Submission notifications 确认已为 `universal-enquiry` 配置邮件通知；用自己可收信的邮箱提交一次询盘，查看通知原始邮件的 `Reply-To` 是否等于填写的邮箱，再点击“回复”确认收件人正确。不要仅根据显示的发件人判断回复地址。
+
+官方说明：https://docs.netlify.com/manage/forms/notifications/
+
 ## 发布 Insights
 
 1. 访问 `https://realjetech.com/admin/` 并使用 GitHub 登录。
