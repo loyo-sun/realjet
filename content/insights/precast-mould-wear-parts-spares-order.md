@@ -77,7 +77,7 @@ A mould that arrives with a spare parts list, part numbers stamped on the parts,
 - The recommended spare quantity per item, with the assumption behind it stated.
 - A maintenance schedule tied to cycle count rather than calendar time.
 
-This is the same discipline that a [mould RFQ for chambers](/insights/manhole-inspection-chamber-mould-rfq) needs in order to be answerable at all, and it overlaps with what drainage and channel mould buyers should specify about profile inserts and joint formers.
+This is the same discipline that a [mould RFQ for chambers](/insights/manhole-inspection-chamber-mould-rfq/) needs in order to be answerable at all, and it overlaps with what drainage and channel mould buyers should specify about profile inserts and joint formers.
 
 ## Who owns which decision
 
