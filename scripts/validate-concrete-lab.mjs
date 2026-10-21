@@ -17,8 +17,8 @@ for (const page of pages) {
   const title = html.match(/<title>(.*?)<\/title>/s)?.[1];
   assert(title && !titles.has(title), `${page.id}: unique title`); titles.add(title);
   assert(sitemap.includes(`<loc>https://realjetech.com${page.path}</loc>`), `${page.id}: sitemap`);
-  const navigation = html.match(/id="solutions-submenu"[\s\S]*?<\/div>/)?.[0];
-  assert(navigation?.match(/ppvc-mic-production-line\/[\s\S]*?<\/a>\s*<a href="\/solutions\/concrete-lab-automation\/"/), `${page.id}: entry directly below MiC`);
+  const navigation = html.match(/id="solutions-submenu"[\s\S]*?<\/nav>/)?.[0];
+  assert(navigation?.includes('href="/solutions/concrete-lab-automation/"') && navigation.includes('Testing &amp; Manufacturing'), `${page.id}: laboratory entry in testing and manufacturing group`);
   assert(html.includes('"publisher":{"@type":"Organization","name":"REALJET"'), `${page.id}: publisher`);
   assert(!/Source:|Image source|Courtesy of|集思|协金|Azimuth|Novatiq/i.test(html), `${page.id}: customer-facing ownership`);
   for (const anchor of html.matchAll(/href="#([^"\s]+)"/g)) assert(html.includes(`id="${anchor[1]}"`), `${page.id}: working anchor ${anchor[1]}`);

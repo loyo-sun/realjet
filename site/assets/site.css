@@ -39,15 +39,35 @@ button, input, textarea, select { font: inherit; }
 .navigation-item { position: relative; display: flex; min-height: 70px; align-items: center; }
 .submenu-toggle { display: inline-flex; align-items: center; gap: 7px; padding: 0; border: 0; background: transparent; cursor: pointer; }
 .submenu-chevron { transition: transform 180ms ease; }
-.navigation-item-has-submenu:hover .submenu-chevron, .navigation-item-has-submenu.is-open .submenu-chevron { transform: rotate(180deg); }
+.navigation-item-has-submenu.is-open .submenu-chevron { transform: rotate(180deg); }
 .site-submenu { position: absolute; top: 100%; left: 50%; width: max-content; min-width: 280px; max-width: 360px; padding: 8px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: rgba(6,27,44,.99); box-shadow: 0 18px 48px rgba(0,0,0,.28); opacity: 0; visibility: hidden; pointer-events: none; transform: translate(-50%,-7px); transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease; }
 .site-submenu a { display: block; padding: 12px 13px; border-radius: 8px; color: rgba(255,255,255,.76); font-size: 12px; font-weight: 750; line-height: 1.35; text-decoration: none; }
 .site-submenu a:hover, .site-submenu a:focus-visible { color: var(--white); background: rgba(255,255,255,.08); }
-.navigation-item-has-submenu:hover .site-submenu, .navigation-item-has-submenu.is-open .site-submenu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%,0); }
-.moulds-submenu { right: 0; left: auto; display: grid; width: min(520px,calc(100vw - 44px)); max-width: none; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2px; transform: translateY(-7px); }
-.navigation-item-has-submenu:hover .moulds-submenu, .navigation-item-has-submenu.is-open .moulds-submenu { transform: translateY(0); }
+.navigation-item-has-submenu.is-open .site-submenu { opacity: 1; visibility: visible; pointer-events: auto; transform: translate(-50%,0); }
 .site-submenu .submenu-heading { padding: 8px; color: var(--white); font-size: 13px; font-weight: 850; }
-.moulds-submenu .submenu-heading { grid-column: 1 / -1; border-bottom: 1px solid rgba(255,255,255,.08); }
+.header-inner { position: static; }
+.navigation-item-solutions, .navigation-item-moulds { position: static; }
+.solutions-submenu { left: 0; right: 0; width: 100%; min-width: 0; max-width: none; margin: 0; padding: 0 max(22px, calc((100% - var(--container)) / 2)); border-inline: 0; border-radius: 0; max-height: calc(100dvh - 70px); overflow-y: auto; overscroll-behavior: contain; transform: translateY(-7px); }
+.navigation-item-has-submenu.is-open .solutions-submenu { transform: translateY(0); }
+.solutions-menu-intro { padding: 22px 26px 18px; border-bottom: 1px solid rgba(255,255,255,.1); }
+.solutions-menu-label { color: #69d5de; font-size: 10px; font-weight: 800; letter-spacing: .14em; }
+.solutions-menu-intro p { margin: 7px 0 0; color: var(--white); font-size: 17px; line-height: 1.4; font-weight: 650; }
+.moulds-menu-intro { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.moulds-menu-intro > div { min-width: 0; }
+.site-submenu .moulds-menu-intro > a { flex-shrink: 0; padding: 10px 12px; border: 1px solid rgba(105,213,222,.3); color: #69d5de; font-size: 11px; }
+.solutions-menu-groups { display: grid; grid-template-columns: 1.65fr 1fr; }
+.solutions-menu-group { min-width: 0; padding: 22px 18px; }
+.solutions-menu-group h2 { margin: 0 8px; color: var(--white); font-size: 14px; line-height: 1.4; }
+.solutions-group-description { margin: 6px 8px 14px; color: rgba(255,255,255,.55); font-size: 11px; line-height: 1.6; }
+.solutions-production-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px; }
+.solutions-menu-services { border-left: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.025); }
+.solutions-submenu .solutions-menu-group a { padding: 13px 9px; }
+.solution-link-title { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; color: rgba(255,255,255,.94); font-size: 13px; font-weight: 750; }
+.solution-link-title > span { color: #69d5de; }
+.solution-link-description { display: block; margin-top: 7px; color: rgba(255,255,255,.6); font-size: 11px; font-weight: 400; line-height: 1.6; }
+.solutions-menu-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 26px; border-top: 1px solid rgba(255,255,255,.1); }
+.solutions-menu-footer > span { color: rgba(255,255,255,.6); font-size: 11px; }
+.solutions-submenu .solutions-menu-footer a { padding: 8px 0; color: #69d5de; font-size: 12px; }
 .menu-toggle { display: none; width: 42px; height: 42px; border: 0; color: var(--white); background: transparent; }
 .menu-toggle > span:not(.sr-only) { display: block; width: 22px; height: 2px; margin: 5px auto; background: currentColor; }
 .mobile-menu-backdrop { display: none; }
@@ -872,8 +892,20 @@ body.has-enquiry-modal { overflow: hidden; }
   .site-submenu a:last-child { border-bottom: 0; }
   .navigation-item-has-submenu:hover .site-submenu { display: none; transform: none; }
   .navigation-item-has-submenu.is-open .site-submenu, .navigation-item-has-submenu.is-open:hover .site-submenu { display: block; }
+  .header-inner { position: static; }
+  .site-navigation { max-height: calc(100dvh - 62px); overflow-y: auto; overscroll-behavior: contain; }
+  .solutions-submenu { width: auto; padding: 0; max-height: none; overflow: visible; border-radius: 8px; }
+  .solutions-menu-intro { padding: 16px 14px; }
+  .solutions-menu-intro p { font-size: 14px; }
+  .solutions-menu-groups { grid-template-columns: 1fr; }
+  .solutions-menu-group { padding: 16px 6px; }
+  .solutions-menu-services { border-left: 0; border-top: 1px solid rgba(255,255,255,.1); }
+  .solutions-production-links { grid-template-columns: 1fr; gap: 0; }
+  .solutions-submenu .solutions-menu-group a { padding: 12px 8px; }
+  .solution-link-description { margin-top: 4px; }
+  .solutions-menu-footer { align-items: flex-start; flex-direction: column; gap: 4px; padding: 14px; }
   .moulds-submenu { width: auto; }
-  .moulds-submenu .submenu-heading { border-bottom: 1px solid rgba(255,255,255,.06); }
+  .moulds-menu-intro { align-items: flex-start; flex-direction: column; gap: 12px; }
   .mobile-menu-backdrop { position: fixed; inset: 62px 0 0; z-index: 300; display: block; padding: 0; border: 0; background: rgba(0,0,0,.62); backdrop-filter: blur(2px); }
   body.has-mobile-menu .site-header { z-index: 310; }
   body.has-mobile-menu { overflow: hidden; }
