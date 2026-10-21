@@ -1,0 +1,82 @@
+{
+  "scope": "Solution S01 and product pages P01/P02/P03; content imagery only. REALJET site branding retained.",
+  "checkedCount": 12,
+  "editedCount": 3,
+  "method": "Built-in image_gen image editing; converted back to original WebP dimensions.",
+  "promptSummary": "Remove manufacturer logos, wordmarks, slogans and design attribution; preserve equipment, technical labels, layout and lighting.",
+  "originalBackup": "../tmp/realjet-logo-removal-20261021/originals",
+  "images": [
+    {
+      "path": "public/images/concrete-lab/concrete-cube-compression-test.webp",
+      "status": "logo-removed",
+      "notes": "Removed blue manufacturer emblem at upper left. Kept specimen identification labels.",
+      "sha256": "a3e0cf83b296ab575a6c50dc0c581296f0d3538475f708937f0afba6a1d09aa9"
+    },
+    {
+      "path": "public/images/concrete-lab/cube-demoulding-station.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "4bea713a005966a21058b34c433647eac9b976a915f649810b1285d6108f515e"
+    },
+    {
+      "path": "public/images/concrete-lab/cube-filling-station.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "176677711c4c1bc91b84926db7aabc3e935acf6419e59e708699c55008016037"
+    },
+    {
+      "path": "public/images/concrete-lab/cube-preparation-cell.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "c0d2adcc1ebfa7a2e059dfadeef417f5be57df7dd3c9320db13706bc48ad32f6"
+    },
+    {
+      "path": "public/images/concrete-lab/curing-robot-system.webp",
+      "status": "logo-removed",
+      "notes": "Removed cabinet, robot and trolley logos, slogans and design attribution. Kept functional labels.",
+      "sha256": "b90f95507c568eeebde3f4aeba3f5b7c6f9e28497a75b9422fb46064d72e601d"
+    },
+    {
+      "path": "public/images/concrete-lab/elevated-concrete-feeding.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "ab98b70c7159be27dfdce48805ebf73c24d1939875d17adcc09de837eb3fa54b"
+    },
+    {
+      "path": "public/images/concrete-lab/laboratory-hero.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "276d89859023cabf6cee6004dcb32ff9bc26b504ecdbee201659b9c1f8949c11"
+    },
+    {
+      "path": "public/images/concrete-lab/laboratory-layout.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "4c3b1eff4abc0c33c787dd0f3fa0f0f1ba69bbeed8cef3edec9b46ec3f14f229"
+    },
+    {
+      "path": "public/images/concrete-lab/mould-cleaning-station.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "fa387995f88db9f949d618e1ee0e0f0bb21c18dfb59d8f055679b95b6768a007"
+    },
+    {
+      "path": "public/images/concrete-lab/mould-paper-insertion.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "050732e7cc69410ae2a4be8827b56c673f7a4bc9b89af7eac15f5951ba91e333"
+    },
+    {
+      "path": "public/images/concrete-lab/robotic-compression-cell.webp",
+      "status": "visually-checked-no-visible-logo",
+      "notes": "",
+      "sha256": "95cc9b8143a23aa2974788affbe3930d53f1803e35c2f61efc62632da1a26591"
+    },
+    {
+      "path": "public/images/concrete-lab/specimen-curing-cabinet.webp",
+      "status": "logo-removed",
+      "notes": "Removed front, drawer and side manufacturer wordmarks, slogans and design attribution. Kept functional label.",
+      "sha256": "a20f2bdc56745855923a31f6786e8c3f8442ff37fa0c93b4cb069e1ca854e3cf"
+    }
+  ]
+}
