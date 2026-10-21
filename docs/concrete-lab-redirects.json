@@ -1,0 +1,42 @@
+[
+  {
+    "from": "/products/concrete-specimen-handling-system/",
+    "to": "/solutions/concrete-lab-automation/#interfaces"
+  },
+  {
+    "from": "/products/concrete-sample-feeding-system/",
+    "to": "/solutions/concrete-lab-automation/#interfaces"
+  },
+  {
+    "from": "/products/concrete-lab-control-traceability/",
+    "to": "/solutions/concrete-lab-automation/#interfaces"
+  },
+  {
+    "from": "/applications/ready-mix-concrete-lab-automation/",
+    "to": "/solutions/concrete-lab-automation/#applications"
+  },
+  {
+    "from": "/applications/precast-concrete-lab-automation/",
+    "to": "/solutions/concrete-lab-automation/#applications"
+  },
+  {
+    "from": "/applications/concrete-testing-lab-automation/",
+    "to": "/solutions/concrete-lab-automation/#applications"
+  },
+  {
+    "from": "/case-studies/concrete-laboratory-automation-project/",
+    "to": "/solutions/concrete-lab-automation/#project-planning"
+  },
+  {
+    "from": "/resources/concrete-lab-automation-cost-roi/",
+    "to": "/solutions/concrete-lab-automation/#capacity-calculator"
+  },
+  {
+    "from": "/resources/manual-vs-automated-concrete-testing/",
+    "to": "/solutions/concrete-lab-automation/#automation-scopes"
+  },
+  {
+    "from": "/resources/concrete-specimen-standards-automation/",
+    "to": "/solutions/concrete-lab-automation/#questions"
+  }
+]

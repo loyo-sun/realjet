@@ -1,0 +1,65 @@
+{
+  "status": "complete-local",
+  "productionPublished": false,
+  "githubCommitCreated": false,
+  "githubPushed": false,
+  "pageCount": 5,
+  "cataloguePath": "/products/concrete-laboratory-equipment/",
+  "localPreview": "http://127.0.0.1:5188/solutions/concrete-lab-automation/",
+  "navigation": "Solutions > immediately after PPVC / MiC Production Line",
+  "publisherAndDeliveryLead": "REALJET",
+  "pages": [
+    {
+      "id": "S01",
+      "name": "Concrete Cube Laboratory Automation",
+      "path": "/solutions/concrete-lab-automation/",
+      "output": "dist/solutions/concrete-lab-automation/index.html"
+    },
+    {
+      "id": "P01",
+      "name": "Automatic Concrete Cube Making Machine",
+      "path": "/products/automatic-concrete-cube-making-machine/",
+      "output": "dist/products/automatic-concrete-cube-making-machine/index.html"
+    },
+    {
+      "id": "P02",
+      "name": "Concrete Specimen Curing & Storage System",
+      "path": "/products/concrete-specimen-curing-system/",
+      "output": "dist/products/concrete-specimen-curing-system/index.html"
+    },
+    {
+      "id": "P03",
+      "name": "Robotic Concrete Compression Testing Workstation",
+      "path": "/products/robotic-concrete-compression-testing/",
+      "output": "dist/products/robotic-concrete-compression-testing/index.html"
+    },
+    {
+      "id": "Q01",
+      "name": "Request a Concrete Laboratory Proposal",
+      "path": "/request-concrete-lab-proposal/",
+      "output": "dist/request-concrete-lab-proposal/index.html"
+    }
+  ],
+  "previewScreenshot": "docs/concrete-lab-preview.png",
+  "updated": "2026-10-21",
+  "consolidatedRoutes": 10,
+  "marketingSkillRepository": "https://github.com/coreyhaines31/marketingskills",
+  "validation": {
+    "date": "2026-10-21",
+    "fullBuild": "passed",
+    "corePages": 5,
+    "productPages": 3,
+    "consolidatedUrls": 10,
+    "mobileWidth": 390,
+    "desktopWidth": 1440,
+    "pageOverflow": "not observed in checked pages",
+    "brokenImages": "none observed",
+    "calculator": "12 groups/day × 28 days = 336 groups; 3 specimens/group = 1008 specimens",
+    "imageDialog": "open and close verified",
+    "enquiryPrefill": "cube preparation intent carried into form",
+    "enquiryLocalFailure": "error shown and values retained",
+    "enquirySuccess": "mock verified; no live enquiry sent",
+    "searchVisibility": "not measured; content remains local"
+  },
+  "recordScope": "Local verification snapshot before the user authorized GitHub publication on 2026-10-21. Publication status fields describe that snapshot."
+}

@@ -8,6 +8,7 @@ const toDate = (value) =>
   value instanceof Date ? value : new Date(`${value}T00:00:00Z`);
 
 export default function (eleventyConfig) {
+  eleventyConfig.addFilter("concreteLabById", (items, id) => Array.isArray(items) ? items.find(item => item.id === id) : null);
   const equipmentMarkdown = new MarkdownIt({ html: false });
   eleventyConfig.addFilter("pcEquipmentMarkdown", (source) => {
     // Notion returns paragraphs without blank lines. Keep adjacent list items

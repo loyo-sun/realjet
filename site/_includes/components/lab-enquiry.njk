@@ -1,0 +1,23 @@
+<section class="lab-enquiry-section" id="lab-enquiry"><div class="container lab-enquiry-layout">
+  <aside><span class="lab-eyebrow">REALJET engineering</span><h2>Request a laboratory layout review.</h2><p>REALJET will review your automation scope and follow up on the information needed for a laboratory layout and equipment proposal.</p><a href="mailto:sales@realjetech.com">sales@realjetech.com</a><p class="lab-note">You can email layout drawings and machine lists after submitting. Include your company and project name.</p></aside>
+  <div class="lab-enquiry-shell" data-lab-form-shell>
+  <form name="universal-enquiry" method="POST" action="/request-concrete-lab-proposal/" data-netlify="true" netlify-honeypot="bot-field" data-lab-form>
+    <input type="hidden" name="form-name" value="universal-enquiry" /><input type="hidden" name="keyword" value="Concrete Laboratory Automation" /><input type="hidden" name="subject" value="Website enquiry: Concrete Laboratory Automation" />
+    <p class="honeypot"><label>Leave this empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+    <fieldset><div class="lab-form-grid">
+      <label for="lab-name">Name *<input id="lab-name" name="name" type="text" autocomplete="name" maxlength="120" required /></label>
+      <label for="lab-email">Work email *<input id="lab-email" name="email" type="email" autocomplete="email" maxlength="254" required /></label>
+      <label for="lab-company">Company (optional)<input id="lab-company" name="company" type="text" autocomplete="organization" maxlength="160" /></label>
+      <label for="lab-country">Project country *<input id="lab-country" name="country" type="text" autocomplete="country-name" maxlength="100" required /></label>
+      <label class="lab-form-wide" for="lab-module">What would you like to discuss?<select id="lab-module" name="module"><option value="Concrete Cube Laboratory Automation">Complete laboratory</option>{% for item in concreteLab %}{% if item.type == 'product' %}<option value="{{ item.name }}">{{ item.name }}</option>{% endif %}{% endfor %}<option value="Existing laboratory upgrade">Existing laboratory upgrade</option><option value="Not sure yet">Not sure yet</option></select></label>
+      <label class="lab-form-wide" for="lab-message">Project requirements *<textarea id="lab-message" name="message" rows="6" maxlength="4000" required placeholder="Which task would you like to automate? Add your daily volume or available space if known."></textarea></label>
+    </div><details class="lab-form-technical"><summary>Add specimen details (optional)</summary><div class="lab-form-grid">
+      <label for="lab-specimen">Specimen type<select id="lab-specimen" name="specimen"><option value="Not yet specified">Not yet specified</option><option value="150 mm concrete cubes">150 mm concrete cubes</option><option value="Other cube sizes">Other cube sizes</option><option value="Cylinders - adaptation review">Cylinders — adaptation review</option><option value="Cores - adaptation review">Cores — adaptation review</option><option value="Mixed or not yet defined">Mixed / not yet defined</option></select></label>
+      <label for="lab-volume">Individual specimens per day<input id="lab-volume" name="daily_specimens" type="number" min="1" max="100000" step="1" placeholder="If known" /></label>
+    </div></details><label class="lab-consent"><input name="privacy_consent" type="checkbox" value="accepted" required /><span>I agree that REALJET may use these details to respond to my enquiry, as described in the <a href="/marketing/privacy/en/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>. *</span></label>
+    <p class="lab-form-error" role="alert" data-lab-error hidden>We could not send your enquiry. Please try again or email sales@realjetech.com.</p>
+    <button class="lab-button lab-button-navy" type="submit">Request My Layout Review <span aria-hidden="true">↗</span></button></fieldset>
+  </form>
+  <section class="lab-form-success" data-lab-success role="status" tabindex="-1" hidden><span aria-hidden="true">✓</span><h2>Your enquiry has been sent.</h2><p>A REALJET specialist will review your laboratory requirements and contact you using the details provided.</p><a class="lab-button lab-button-navy" href="/solutions/concrete-lab-automation/">Explore the system ↗</a></section>
+  </div>
+</div></section>

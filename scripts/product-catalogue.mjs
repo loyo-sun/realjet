@@ -1,6 +1,7 @@
 export const cataloguePageSize = 12;
 
 export const productCategories = [
+  { series: "concrete-laboratory", slug: "concrete-laboratory-equipment", name: "Concrete Laboratory Equipment", description: "Automatic concrete cube preparation, specimen curing and storage, and robotic compression testing equipment, integrated by REALJET." },
   { series: "precast-concrete-moulds", slug: "precast-concrete-moulds", name: "Precast Concrete Moulds", description: "Steel moulds and formwork for bridge, building, tunnel, municipal and marine concrete components. Browse by product or explore our mould application guide." },
   { series: "precast-production-equipment", slug: "precast-beam-production-equipment", name: "Precast Beam Production Equipment", description: "Project-specific beam formwork, hydraulic operating systems, mould transfer equipment and station-based production systems." },
   { series: "precast-wall-slab-equipment", slug: "precast-concrete-equipment", name: "Wall & Slab Production Equipment", seoTitle: "Precast Wall & Slab Production Equipment", description: "Compare 12 machines for precast wall and slab plants: concrete distribution, pallet handling, curing and prestressed slab preparation. Review reference specifications and plant interfaces." },

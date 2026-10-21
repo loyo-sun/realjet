@@ -1,0 +1,8 @@
+<form class="lab-calculator" data-lab-calculator aria-label="Single-age curing capacity calculator">
+  <div><label for="lab-daily">Groups received per day</label><input id="lab-daily" name="daily" type="number" min="1" max="10000" step="1" value="30" required /></div>
+  <div><label for="lab-days">Days held in curing</label><input id="lab-days" name="days" type="number" min="1" max="365" step="1" value="28" required /></div>
+  <div><label for="lab-size">Specimens in each group</label><input id="lab-size" name="size" type="number" min="1" max="100" step="1" value="3" required /></div>
+  <button class="lab-button lab-button-navy" type="submit">Calculate inventory</button>
+  <output aria-live="polite" data-lab-capacity><strong>840 groups</strong><span>2,520 individual specimens before peak, reserve and access allowances.</span></output>
+  <p>Single-age planning scenario. A mixed test-age schedule needs a separate calculation for each age group.</p>
+</form>

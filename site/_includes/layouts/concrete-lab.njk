@@ -1,0 +1,59 @@
+---
+layout: layouts/base.njk
+---
+{% set lp = concreteLab | concreteLabById(labId) %}
+<article class="lab-page lab-page-{{ lp.type }}" data-lab-page="{{ lp.id }}">
+  {% if lp.type == 'solution' %}
+  <header class="lab-hero lab-hero-panoramic">
+    <img class="lab-hero-background" src="{{ lp.hero }}" alt="{{ lp.alt }}" width="1672" height="941" fetchpriority="high" />
+    <div class="container lab-hero-content">
+      <nav class="lab-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Solutions</span><span>/</span><span aria-current="page">Concrete Laboratory</span></nav>
+      <span class="lab-eyebrow">REALJET / {{ lp.label }}</span>
+      <h1>{{ lp.h1 }}</h1><p class="lab-hero-intro">{{ lp.intro }}</p>
+      <div class="lab-actions"><a class="lab-button lab-button-yellow" href="/request-concrete-lab-proposal/?module={{ lp.name | urlencode }}">{{ lp.cta }} <span aria-hidden="true">↗</span></a><a class="lab-text-link" href="{{ lp.secondaryHref }}">{{ lp.secondary }} <span aria-hidden="true">↓</span></a></div>
+      <p class="lab-hero-signature">Plant planning · Equipment integration · Installation &amp; commissioning</p>
+    </div>
+  </header>
+  {% else %}
+  <header class="lab-detail-hero">
+    <div class="container">
+      <nav class="lab-breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/solutions/concrete-lab-automation/">Concrete Laboratory</a><span>/</span><span aria-current="page">{{ lp.label }}</span></nav>
+      <div class="lab-detail-hero-grid">
+        <div><span class="lab-eyebrow">REALJET / {{ lp.label }}</span><h1>{{ lp.h1 }}</h1><p class="lab-hero-intro">{{ lp.intro }}</p><div class="lab-actions"><a class="lab-button lab-button-navy" href="{% if lp.type == 'enquiry' %}#lab-enquiry{% else %}/request-concrete-lab-proposal/?module={{ lp.name | urlencode }}{% endif %}">{{ lp.cta }} <span aria-hidden="true">↗</span></a>{% if lp.type == 'product' %}<a class="lab-text-link" href="#specifications">Specifications ↓</a>{% endif %}</div></div>
+        <figure class="lab-detail-image{% if lp.type == 'application' or lp.type == 'resource' %} lab-detail-image-editorial{% endif %}"{% if lp.type == 'product' %} data-product-gallery{% endif %}><img src="{{ lp.hero }}" alt="{{ lp.alt }}" width="1200" height="800" fetchpriority="high" /></figure>
+      </div>
+    </div>
+  </header>
+  {% endif %}
+  <div class="lab-facts"><div class="container">{% for fact in lp.facts %}<div><strong>{{ fact[0] }}</strong><span>{{ fact[1] }}</span></div>{% endfor %}</div></div>
+  <nav class="lab-section-nav" aria-label="On this page"><div class="container"><a href="#overview">Overview</a>{% if lp.type == 'solution' %}<a href="#automation-scopes">Choose your scope</a><a href="#equipment">Equipment</a><a href="#capacity-calculator">Storage planning</a>{% endif %}{% if lp.type == 'product' %}<a href="#specifications">Specifications</a>{% endif %}{% if lp.id == 'K01' %}<a href="#capacity-calculator">Capacity Calculator</a>{% endif %}<a href="#questions">Questions</a><a href="{% if lp.type == 'enquiry' %}#lab-enquiry{% else %}/request-concrete-lab-proposal/?module={{ lp.name | urlencode }}{% endif %}">Request a layout ↗</a></div></nav>
+  {% if lp.type == 'enquiry' %}{% include 'components/lab-enquiry.njk' %}{% endif %}
+  <div class="lab-body">
+  {% for section in lp.sections %}
+  <section class="lab-section{% if section.image %} lab-section-illustrated{% endif %}{% if section.modules %} lab-equipment-section{% endif %}" id="{% if section.id %}{{ section.id }}{% elif loop.first %}overview{% elif section.modules %}equipment{% elif section.workflow %}workflow{% elif section.table and lp.type == 'product' %}specifications{% elif section.calculator %}capacity-calculator{% else %}section-{{ loop.index }}{% endif %}">
+    <div class="container">
+      <div class="lab-section-layout">
+        <div class="lab-section-copy"><span class="lab-section-number">{{ loop.index }} / {{ lp.sections.length }}</span><h2>{{ section.heading }}</h2>{% for paragraph in section.body %}<p>{{ paragraph }}</p>{% endfor %}
+          {% if section.points %}<div class="lab-points">{% for point in section.points %}<div><h3>{{ point.title }}</h3><p>{{ point.text }}</p></div>{% endfor %}</div>{% endif %}
+        </div>
+        {% if section.image %}<figure class="lab-figure"><a href="{{ section.image }}" data-lab-image data-image-alt="{{ section.alt }}" aria-label="Enlarge image: {{ section.alt }}"><img src="{{ section.image }}" alt="{{ section.alt }}" width="1200" height="800" loading="lazy" decoding="async" /><span class="lab-zoom" aria-hidden="true">↗</span></a>{% if section.caption %}<figcaption>{{ section.caption }}</figcaption>{% endif %}</figure>{% endif %}
+      </div>
+      {% if section.gallery %}<div class="lab-gallery">{% for item in section.gallery %}<a href="{{ item.image }}" data-lab-image data-image-alt="{{ item.alt }}" aria-label="Enlarge image: {{ item.alt }}"><img src="{{ item.image }}" alt="{{ item.alt }}" width="800" height="600" loading="lazy" decoding="async" /><span>{{ item.alt }}</span></a>{% endfor %}</div>{% endif %}
+      {% if section.workflow %}<ol class="lab-workflow">{% for stage in ['Collect & feed','Fill & compact','Initial cure','Demould & identify','Cure & store','Test & record'] %}<li><span>0{{ loop.index }}</span><strong>{{ stage }}</strong></li>{% endfor %}</ol><p class="lab-cycle-note">Mould return: clean → prepare → refill.</p>{% endif %}
+      {% if section.steps %}<ol class="lab-steps">{% for step in section.steps %}<li><span>0{{ loop.index }}</span><div><h3>{{ step.title }}</h3><p>{{ step.text }}</p></div></li>{% endfor %}</ol>{% endif %}
+      {% if section.table %}<div class="lab-table-wrap" tabindex="0" role="region" aria-label="{{ section.heading }} table"><table><caption class="sr-only">{{ section.heading }}</caption><thead><tr>{% for head in section.table.heads %}<th scope="col">{{ head }}</th>{% endfor %}</tr></thead><tbody>{% for row in section.table.rows %}<tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody></table></div>{% endif %}
+      {% if section.note %}<p class="lab-note">{{ section.note }}</p>{% endif %}
+      {% if section.modules %}<div class="lab-equipment-grid">{% for item in concreteLab %}{% if item.type == 'product' %}<article><a class="lab-equipment-image" href="{{ item.path }}"><img src="{{ item.hero }}" alt="{{ item.alt }}" width="800" height="560" loading="lazy" decoding="async" /></a><div><span class="lab-eyebrow">{{ item.label }}</span><h3><a href="{{ item.path }}">{{ item.name }}</a></h3><p>{{ item.description }}</p><a class="lab-inline-link" href="{{ item.path }}">{{ item.linkLabel }} <span aria-hidden="true">↗</span></a></div></article>{% endif %}{% endfor %}</div>{% endif %}
+      {% if section.applications %}<div class="lab-applications">{% for item in concreteLab %}{% if item.type == 'application' %}<a href="{{ item.path }}"><span>{{ item.label }}</span><h3>{{ item.name }}</h3><p>{{ item.intro }}</p><b aria-hidden="true">↗</b></a>{% endif %}{% endfor %}</div>{% endif %}
+      {% if section.trace %}<ol class="lab-trace">{% for record in [['Batch','Concrete and collection identity'],['Specimen','Unique identity and test age'],['Location','Storage position and transfers'],['Test','Machine, curve and result'],['Record','Review, export and retention']] %}<li><span>0{{ loop.index }}</span><h3>{{ record[0] }}</h3><p>{{ record[1] }}</p></li>{% endfor %}</ol>{% endif %}
+      {% if section.calculator %}{% include 'components/lab-capacity-calculator.njk' %}{% endif %}
+    </div>
+  </section>
+  {% endfor %}
+  </div>
+  <section class="lab-section lab-faq" id="questions"><div class="container lab-faq-layout"><div><span class="lab-eyebrow">Practical questions</span><h2>Concrete laboratory questions.</h2><p>Start with the operation you need to change. REALJET will help define the equipment and interfaces.</p></div><div>{% for faq in lp.faq %}<details><summary>{{ faq[0] }}<span aria-hidden="true">+</span></summary><p>{{ faq[1] }}</p></details>{% endfor %}</div></div></section>
+  <section class="lab-related"><div class="container"><span class="lab-eyebrow">Continue planning</span><h2>Review the next work area.</h2><div class="lab-related-grid">{% for code in lp.related %}{% set item = concreteLab | concreteLabById(code) %}{% if item %}<a href="{{ item.path }}"><span>{{ item.label }}</span><strong>{{ item.name }}</strong><b aria-hidden="true">↗</b></a>{% endif %}{% endfor %}</div></div></section>
+  {% if lp.type != 'enquiry' %}<section class="lab-final-cta"><div class="container"><div><span class="lab-eyebrow">REALJET / engineering your next step</span><h2>Get a layout for your<br />specimen workflow.</h2><p>Tell REALJET your daily intake, test ages and available space. Start with the details you have.</p></div><a class="lab-button lab-button-yellow" href="/request-concrete-lab-proposal/?module={{ lp.name | urlencode }}">{{ lp.cta }} <span aria-hidden="true">↗</span></a></div></section>{% endif %}
+</article>
+<dialog class="lab-image-dialog" aria-label="Equipment image viewer" data-lab-dialog><button type="button" aria-label="Close image viewer" data-lab-dialog-close>Close ×</button><img src="" alt="" /><p></p></dialog>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"{% if lp.type == 'enquiry' %}ContactPage{% else %}WebPage{% endif %}","name":{{ lp.name | json | safe }},"description":{{ lp.description | json | safe }},"url":{{ canonical | json | safe }},"@id":{{ (canonical + '#webpage') | json | safe }},"inLanguage":"en","publisher":{"@type":"Organization","name":"REALJET","url":"https://realjetech.com/","@id":"https://realjetech.com/#organization"}{% if lp.type == 'solution' %},"mainEntity":{"@type":"Service","name":"Concrete Laboratory Automation Engineering","provider":{"@type":"Organization","name":"REALJET","url":"https://realjetech.com/","@id":"https://realjetech.com/#organization"}}{% endif %}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://realjetech.com/"},{"@type":"ListItem","position":2,"name":"Concrete Laboratory Automation","item":"https://realjetech.com/solutions/concrete-lab-automation/"}{% if lp.id != 'S01' %},{"@type":"ListItem","position":3,"name":{{ lp.name | json | safe }},"item":{{ canonical | json | safe }}}{% endif %}]}]}</script>

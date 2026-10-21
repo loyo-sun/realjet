@@ -11,6 +11,8 @@ Realjet 英文官网、SEO Insights 内容系统和 7 语种预制构件生产�
 - 内容管理：`/admin/`
 - 预制构件生产线：`/marketing/precast-beam-factory/{language}/`
 - PPVC / MiC 英文产线方案：`/marketing/ppvc-mic-production-line/`
+- 混凝土智能试验室：`/solutions/concrete-lab-automation/`，在 Solutions 中紧接 PPVC / MiC 下方。
+- 试验室设备目录：`/products/concrete-laboratory-equipment/`。
 - 隐私政策：`/marketing/privacy/{language}/`
 
 落地页语言代码为 `en` 、`id` 、`ar` 、`ru` 、`cn` 、`fr` 和 `es`。
@@ -67,3 +69,13 @@ npm run build
 - 上传前确认图片已获授权，并使用能准确描述内容的英文文件名和 Alt 文本。
 
 完整设计、内容与操作标准见 `04_官网与网络资产/03_评估执行/4.44_Realjet英文官网与SEO新闻系统设计及操作指南.md`。
+
+## 混凝土智能试验室页面
+
+5个核心页面包括整体解决方案、制样设备、养护系统、抗压检测和工程询价。辅助模块、行业应用及选型内容已并入主体页面；旧10个地址保留本地跳转。页面正文保存在 `site/_data/concreteLab.json`，采用 `layouts/concrete-lab.njk` 共用模板；产品通过 `content/products/lab-*.md` 加入现有目录。静态构建产物保存在 `dist/`。
+
+初次交付在本地完成；2026-10-21 用户随后授权将这套页面提交并推送 GitHub。页面路径和验收结果见 `docs/concrete-lab-delivery.json`。运行既有本地预览命令即可查看整套页面。
+
+`scripts/validate-concrete-lab.mjs` 已接入完整构建，检查5个核心页、10个合并跳转、导航顺序、链接锚点、图片、SEO与询价结构。`scripts/test-concrete-lab-enquiry.mjs` 通过模拟请求验证统一询盘数据、失败重试与成功事件，不向真实邮箱发送测试询盘。
+
+2026-10-21 使用 `coreyhaines31/marketingskills` 的 product-marketing、site-architecture、copywriting、cro、seo-audit、ai-seo 技能重构。应用记录、关键词页面分工与验证边界见 `docs/concrete-lab-marketing-refactor.json`；旧页面数据保存在 `docs/concrete-lab-v1-archive.json`。

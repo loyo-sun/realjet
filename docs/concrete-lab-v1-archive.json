@@ -1,0 +1,1894 @@
+[
+  {
+    "id": "S01",
+    "type": "solution",
+    "label": "Concrete laboratory automation",
+    "name": "Automated Concrete Testing Laboratory",
+    "path": "/solutions/concrete-lab-automation/",
+    "title": "Automated Concrete Cube Testing System | REALJET",
+    "h1": "One connected workflow.\nFrom fresh concrete to test results.",
+    "description": "REALJET integrates concrete cube preparation, curing, robotic handling and compression testing into a coordinated laboratory automation system.",
+    "intro": "Concrete cube preparation, curing and compression testing, engineered as one coordinated system. REALJET plans the layout, integrates the equipment and delivers the laboratory around your workload.",
+    "hero": "/images/concrete-lab/laboratory-hero.webp",
+    "alt": "Concrete specimen preparation, robotic handling, curing cabinets and compression testing arranged in a coordinated laboratory",
+    "cta": "Plan Your Laboratory",
+    "secondary": "Explore the equipment",
+    "secondaryHref": "#equipment",
+    "facts": [
+      [
+        "150 mm",
+        "Cube specimen design basis"
+      ],
+      [
+        "6 modules",
+        "Configured around your workflow"
+      ],
+      [
+        "One team",
+        "REALJET engineering & integration"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "A laboratory that works as a system.",
+        "body": [
+          "The challenge is rarely one machine. It is the handover between making a specimen, finding a curing location, retrieving it at the right age and connecting the test result to the original batch. REALJET brings those operations into one planned workflow."
+        ],
+        "points": [
+          {
+            "title": "Consistent preparation",
+            "text": "Coordinate dosing, compaction, finishing and mould handling around the selected specimen method."
+          },
+          {
+            "title": "Organized curing",
+            "text": "Connect specimen identity, available storage positions and testing ages."
+          },
+          {
+            "title": "Connected testing",
+            "text": "Bring handling, compression testing and records into a coordinated test sequence."
+          }
+        ]
+      },
+      {
+        "heading": "Follow the specimen. Close the mould cycle.",
+        "body": [
+          "From a defined collection point, fresh concrete moves to the preparation cell. Filled moulds enter initial storage; specimens are demoulded, identified and transferred to curing. At the scheduled age, the handling system delivers them to the testing workstation."
+        ],
+        "workflow": true,
+        "image": "/images/concrete-lab/laboratory-layout.webp",
+        "alt": "Overall concrete laboratory configuration with preparation, curing storage, transfer and elevated feeding",
+        "caption": "Preparation, curing and testing planned around a shared material flow."
+      },
+      {
+        "heading": "Six modules. A configuration for your laboratory.",
+        "body": [
+          "Build a new laboratory or focus on the operation that consumes the most time. REALJET coordinates the mechanical, electrical and data interfaces between the selected modules."
+        ],
+        "modules": true
+      },
+      {
+        "heading": "Start with your operation, not a fixed equipment list.",
+        "body": [
+          "A ready-mix producer may need automatic preparation close to the batching plant. A testing center may receive already-cast specimens and start with storage and compression testing. A precast factory needs a clear link between production batches and laboratory records."
+        ],
+        "applications": true
+      },
+      {
+        "heading": "Engineering from layout to commissioning.",
+        "body": [
+          "REALJET leads the project through scope definition, layout development, equipment integration, installation and commissioning. The project specification records the responsibilities, operating conditions and acceptance checks before equipment is finalized."
+        ],
+        "steps": [
+          {
+            "title": "Define the workload",
+            "text": "Record daily and peak intake, specimen geometry, test ages and existing equipment."
+          },
+          {
+            "title": "Plan the configuration",
+            "text": "Balance preparation capacity, curing inventory, transport and testing demand."
+          },
+          {
+            "title": "Verify the interfaces",
+            "text": "Confirm collection points, machine signals, software, utilities and access."
+          },
+          {
+            "title": "Install and hand over",
+            "text": "Commission the agreed sequence, train operators and prepare maintenance and recovery procedures."
+          }
+        ]
+      },
+      {
+        "heading": "Specify the laboratory around measurable inputs.",
+        "body": [
+          "Use consistent units across every part of the project. Specimens per hour describe preparation or testing; storage capacity describes specimens held at the same time. A group count also needs the number of specimens in each group."
+        ],
+        "table": {
+          "heads": [
+            "Project input",
+            "What REALJET evaluates"
+          ],
+          "rows": [
+            [
+              "Specimens",
+              "Geometry, dimensions, group size and concrete types"
+            ],
+            [
+              "Workload",
+              "Daily intake, peak periods, preparation and testing shifts"
+            ],
+            [
+              "Curing",
+              "Required methods, test ages, retained samples and available positions"
+            ],
+            [
+              "Existing equipment",
+              "Pressure machines, moulds, storage and laboratory software"
+            ],
+            [
+              "Site",
+              "Floor plan, access, water, drainage, compressed air and electrical supply"
+            ],
+            [
+              "Acceptance",
+              "Operating sequence, specimen tracking, environmental checks and test interfaces"
+            ]
+          ]
+        }
+      }
+    ],
+    "related": [
+      "P01",
+      "P02",
+      "P03",
+      "K01",
+      "C01"
+    ],
+    "faq": [
+      [
+        "Can we automate only part of our laboratory?",
+        "Yes. REALJET can scope a preparation cell, a curing and handling arrangement, or a robotic testing workstation. The interfaces are planned so the selected module fits the existing operation."
+      ],
+      [
+        "Do we need to replace our pressure testing machines?",
+        "Not necessarily. Send the machine make, model, controller and available interface information. REALJET reviews how loading, guarding, test control and data exchange can be coordinated."
+      ],
+      [
+        "How is curing capacity determined?",
+        "Start with daily specimen intake and split it by test age. Calculate how long each group remains in storage, then allow for retained specimens, operating peaks and usable positions."
+      ],
+      [
+        "Does the system cover cylinders or cores?",
+        "The cube configuration is the starting point for this solution. Cylinder and core requirements need a separate review of gripping, preparation, curing and compression testing."
+      ],
+      [
+        "Who coordinates the complete project?",
+        "REALJET is the solution delivery and integration lead, coordinating the selected equipment, controls, site interfaces and commissioning scope."
+      ]
+    ]
+  },
+  {
+    "id": "P01",
+    "type": "product",
+    "label": "Preparation equipment",
+    "name": "Automatic Concrete Cube Making Machine",
+    "path": "/products/automatic-concrete-cube-making-machine/",
+    "title": "Automatic Concrete Cube Making Machine | REALJET",
+    "h1": "Automatic Concrete Cube\nMaking & Preparation",
+    "description": "REALJET automatic concrete cube preparation cells combine controlled filling, compaction, finishing, demoulding and mould recycling.",
+    "intro": "Turn fresh concrete into identified test specimens through a controlled sequence of filling, compaction and finishing. Connect initial storage, demoulding and mould cleaning within the same preparation cell.",
+    "hero": "/images/concrete-lab/cube-preparation-cell.webp",
+    "alt": "Three-dimensional concrete cube preparation cell showing robots, preparation stations and initial storage racks",
+    "cta": "Request a Preparation Layout",
+    "facts": [
+      [
+        "150 × 150 × 150 mm",
+        "Cube preparation basis"
+      ],
+      [
+        "Closed mould cycle",
+        "Clean, prepare and reuse"
+      ],
+      [
+        "Modular cell",
+        "Configured to your intake"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "A controlled sequence for every mould.",
+        "body": [
+          "The cell coordinates mould positioning, concrete dosing, compaction and surface finishing. The preparation program is agreed around the concrete and test method, with station interlocks confirming each handover."
+        ],
+        "image": "/images/concrete-lab/cube-filling-station.webp",
+        "alt": "Concrete cube mould filling station with hopper and positioning platform",
+        "points": [
+          {
+            "title": "Measured filling",
+            "text": "Use weight feedback and controlled feeding to place concrete in the mould."
+          },
+          {
+            "title": "Compaction and finishing",
+            "text": "Coordinate the selected insertion, vibration and finishing sequence."
+          },
+          {
+            "title": "Initial storage",
+            "text": "Move filled moulds into assigned positions before demoulding."
+          }
+        ]
+      },
+      {
+        "heading": "Bring the mould back ready for the next batch.",
+        "body": [
+          "After the initial curing period, the demoulding station separates the specimen from the mould. The mould returns through cleaning and release-agent preparation; the selected mould design can include a bottom-paper station."
+        ],
+        "image": "/images/concrete-lab/cube-demoulding-station.webp",
+        "alt": "Concrete cube demoulding station with compressed-air connection and specimen platform",
+        "gallery": [
+          {
+            "image": "/images/concrete-lab/mould-cleaning-station.webp",
+            "alt": "Enclosed mould cleaning station"
+          },
+          {
+            "image": "/images/concrete-lab/mould-paper-insertion.webp",
+            "alt": "Bottom-paper insertion station for cube mould preparation"
+          }
+        ]
+      },
+      {
+        "heading": "Designed around your concrete and production rhythm.",
+        "body": [
+          "Concrete behavior affects feeding, compaction, cleaning and the allowable handling time. REALJET reviews the material range and batch-change procedure together with the mechanical configuration."
+        ],
+        "table": {
+          "heads": [
+            "Specification item",
+            "Configuration basis"
+          ],
+          "rows": [
+            [
+              "Specimen geometry",
+              "150 mm cube configuration; other requirements reviewed separately"
+            ],
+            [
+              "Output",
+              "Specified in individual specimens per hour, with group size and operating shift"
+            ],
+            [
+              "Filling",
+              "Weight feedback, feeder arrangement and batch-change sequence"
+            ],
+            [
+              "Initial storage",
+              "Capacity matched to demoulding time and production intake"
+            ],
+            [
+              "Mould management",
+              "Mould quantity, cleaning, release agent and return path"
+            ],
+            [
+              "Utilities",
+              "Electrical supply, compressed air, cleaning water and drainage"
+            ],
+            [
+              "Material review",
+              "Workability, maximum aggregate size and setting behavior"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Keep cleaning and access in the layout.",
+        "body": [
+          "Cleaning is part of the operating cycle. Collection trays, wash points and drainage routes need to remain accessible when the cell is operating. REALJET also plans access for nozzle, feeder and gripping-tool maintenance."
+        ]
+      }
+    ],
+    "related": [
+      "P05",
+      "P02",
+      "P06",
+      "A01",
+      "A02",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Is demoulding included?",
+        "The preparation scope can include initial storage, demoulding and mould recycling. The agreed equipment list identifies which stations are included."
+      ],
+      [
+        "How many cubes can the machine make?",
+        "Capacity is specified for the selected mould, concrete, preparation sequence and operating shift. Send the daily and peak specimen workload so the cell can be sized correctly."
+      ],
+      [
+        "Can the cell handle different concrete mixes?",
+        "The material review covers workability, aggregate size, setting behavior and the required cleaning between batches. Special mixes need a defined validation sequence."
+      ],
+      [
+        "Does it include the fresh concrete supply line?",
+        "Supply can be local or connected through a separate feeding and transfer module. The collection point, transfer time and interface are agreed with the preparation layout."
+      ]
+    ]
+  },
+  {
+    "id": "P02",
+    "type": "product",
+    "label": "Curing & storage equipment",
+    "name": "Concrete Specimen Curing & Storage System",
+    "path": "/products/concrete-specimen-curing-system/",
+    "title": "Automated Concrete Cube Curing System | REALJET",
+    "h1": "Controlled curing.\nOrganized specimen storage.",
+    "description": "REALJET concrete specimen curing systems coordinate environmental control, specimen storage, scheduled retrieval and robotic handling.",
+    "intro": "Keep specimens in the required curing environment and retrieve them at the scheduled test age. REALJET configures the storage arrangement, environmental controls and handling interfaces as one system.",
+    "hero": "/images/concrete-lab/specimen-curing-cabinet.webp",
+    "alt": "Drawer-type concrete specimen curing cabinet with individual storage compartments",
+    "cta": "Plan Your Curing Capacity",
+    "facts": [
+      [
+        "Age-based",
+        "Scheduled storage and retrieval"
+      ],
+      [
+        "Cabinet or room",
+        "Project-specific arrangement"
+      ],
+      [
+        "Traceable positions",
+        "Specimen-to-location records"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Choose the curing environment before the storage format.",
+        "body": [
+          "The project method determines the environment. Cabinet systems and controlled rooms provide different approaches to storage and access; existing water-curing facilities can be assessed for handling integration. REALJET defines the required conditions and monitoring before selecting the arrangement."
+        ],
+        "image": "/images/concrete-lab/curing-robot-system.webp",
+        "alt": "Curing cabinets connected with specimen handling robots",
+        "caption": "Storage and handling coordinated around access to each specimen position."
+      },
+      {
+        "heading": "From receipt to the right test age.",
+        "body": [
+          "Identify the specimen, assign a usable position and schedule retrieval. The same record follows the specimen into testing, including any relocation or authorized manual intervention."
+        ],
+        "steps": [
+          {
+            "title": "Identify",
+            "text": "Record specimen identity, geometry, group and required test ages."
+          },
+          {
+            "title": "Store",
+            "text": "Assign an available position and confirm the transfer."
+          },
+          {
+            "title": "Monitor",
+            "text": "Record environmental conditions and respond to exceptions."
+          },
+          {
+            "title": "Retrieve",
+            "text": "Release the scheduled specimens to the next operation."
+          }
+        ]
+      },
+      {
+        "heading": "Capacity is an inventory calculation.",
+        "body": [
+          "Daily production alone does not determine the number of storage positions. Seven-day, 28-day and retained specimens occupy the system for different periods. The usable capacity must also allow for grouping, access and peak intake."
+        ],
+        "table": {
+          "heads": [
+            "Design item",
+            "What is defined"
+          ],
+          "rows": [
+            [
+              "Storage capacity",
+              "Individual specimens, group size and usable positions"
+            ],
+            [
+              "Specimen range",
+              "Dimensions, mass and arrangement per drawer or rack"
+            ],
+            [
+              "Curing conditions",
+              "Selected method, control range and environmental distribution"
+            ],
+            [
+              "Monitoring",
+              "Sensor locations, logging, alarm handling and calibration access"
+            ],
+            [
+              "Automatic handling",
+              "Transfer arrangement, access clearance and retrieval sequence"
+            ],
+            [
+              "Site services",
+              "Power, water, drainage and maintenance access"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Keep recovery practical.",
+        "body": [
+          "The operating plan includes what happens during power loss, a blocked transfer or a damaged identity mark. Manual access, environmental checks and the return to automatic operation are planned alongside normal storage."
+        ]
+      }
+    ],
+    "related": [
+      "P04",
+      "P03",
+      "P06",
+      "A03",
+      "K01",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Can we use our existing curing room?",
+        "REALJET reviews the room, storage positions, environment, access and handling route to determine what can be retained."
+      ],
+      [
+        "Does the cabinet include automated loading?",
+        "Environmental control and specimen handling are separate scope items. They can be combined, with the selected loading mechanism shown in the configuration."
+      ],
+      [
+        "Is one temperature and humidity setting suitable for every market?",
+        "The project method determines the required conditions. The configuration is specified for that method rather than a universal setting."
+      ],
+      [
+        "How do we size the system?",
+        "Provide daily specimen intake, group size, test ages, retained samples and peak workload. These inputs define the occupied inventory and usable storage requirement."
+      ]
+    ]
+  },
+  {
+    "id": "P03",
+    "type": "product",
+    "label": "Robotic testing equipment",
+    "name": "Robotic Concrete Compression Testing Workstation",
+    "path": "/products/robotic-concrete-compression-testing/",
+    "title": "Robotic Concrete Compression Testing | REALJET",
+    "h1": "Robot-assisted handling.\nCoordinated compression testing.",
+    "description": "REALJET robotic concrete compression testing workstations connect identification, specimen loading, testing, unloading and waste handling.",
+    "intro": "Connect specimen identification, robot loading and compression testing in one coordinated workstation. REALJET integrates the pressure machine, handling equipment and test records around your laboratory workflow.",
+    "hero": "/images/concrete-lab/robotic-compression-cell.webp",
+    "alt": "Robot positioned beside concrete compression testing equipment",
+    "cta": "Configure Your Testing Workstation",
+    "facts": [
+      [
+        "Cube testing",
+        "Specimen-specific tooling"
+      ],
+      [
+        "Machine integration",
+        "New or existing equipment"
+      ],
+      [
+        "Connected records",
+        "Identity, load curve and result"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "More than automatic load control.",
+        "body": [
+          "An automatic pressure machine controls the loading cycle. The workstation also coordinates specimen transfer, placement, guarding, result handover and removal of tested material."
+        ],
+        "steps": [
+          {
+            "title": "Recognize and prepare",
+            "text": "Confirm the specimen identity and required test; include measurement where specified."
+          },
+          {
+            "title": "Position and test",
+            "text": "Place the specimen on the platen, confirm guarding and execute the selected test cycle."
+          },
+          {
+            "title": "Unload and record",
+            "text": "Remove tested material, clear the work area and connect the result to the specimen record."
+          }
+        ]
+      },
+      {
+        "heading": "Specify the machine and robot together.",
+        "body": [
+          "Force capacity, measurement range, platen access and controller interfaces affect the entire cell. REALJET reviews these with the specimen dimensions, end effector and number of machines."
+        ],
+        "image": "/images/concrete-lab/concrete-cube-compression-test.webp",
+        "alt": "Concrete cube positioned inside a compression testing machine",
+        "table": {
+          "heads": [
+            "Technical item",
+            "Engineering review"
+          ],
+          "rows": [
+            [
+              "Pressure machine",
+              "Force capacity, usable measurement range, loading control and calibration"
+            ],
+            [
+              "Specimen",
+              "Shape, dimensions, mass and handling condition"
+            ],
+            [
+              "Robot",
+              "Payload including tooling, reach and guarded working envelope"
+            ],
+            [
+              "Placement",
+              "Centering method, positioning checks and platen access"
+            ],
+            [
+              "Measurement options",
+              "Identity scan, mass and dimensional measurement"
+            ],
+            [
+              "Waste removal",
+              "Unloading, platen cleaning and collection route"
+            ],
+            [
+              "Data exchange",
+              "Test request, machine status, curve and result transfer"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "A defined route for existing pressure machines.",
+        "body": [
+          "Send the make, model, controller, guarding and interface documentation. REALJET checks the physical access and control sequence before specifying a retrofit. An interface review is part of the engineering scope."
+        ]
+      },
+      {
+        "heading": "Plan for residue, wear and manual recovery.",
+        "body": [
+          "Crushed concrete changes the gripping and cleaning task. The configuration includes collection, cleaning access and a recovery process for incomplete tests or failed transfers. Routine checks cover the gripper, platen area and sensing devices."
+        ]
+      }
+    ],
+    "related": [
+      "P02",
+      "P04",
+      "P06",
+      "A03",
+      "K02",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Can one robot serve multiple machines?",
+        "This can be evaluated against reach, guarding, test-cycle duration and access. The layout and handling schedule determine the practical arrangement."
+      ],
+      [
+        "Is dimensional measurement included?",
+        "It is a configurable workstation function. The quotation defines the measuring equipment, calibration and connection to the test record."
+      ],
+      [
+        "Can the workstation test cylinders or cores?",
+        "Those specimens need a separate handling and method review, including end preparation and gripping. They are not assumed to be covered by the cube configuration."
+      ],
+      [
+        "Who issues the test report?",
+        "The workstation supplies the agreed test records. Report review, approval and release remain part of the laboratory's quality process."
+      ]
+    ]
+  },
+  {
+    "id": "P04",
+    "type": "product",
+    "label": "Specimen handling equipment",
+    "name": "Robotic Specimen Handling & Transfer System",
+    "path": "/products/concrete-specimen-handling-system/",
+    "title": "Concrete Specimen Handling System | REALJET",
+    "h1": "Connect every station\nwith the right handling system.",
+    "description": "REALJET specimen handling systems connect preparation, curing and testing with fixed robots, rail transfer and mobile handling configurations.",
+    "intro": "Move moulds and concrete specimens between preparation, curing and testing without losing their identity. REALJET selects the transfer arrangement around your payload, route and station interfaces.",
+    "hero": "/images/concrete-lab/rail-mounted-robot.webp",
+    "alt": "Rail-mounted robot arrangement for concrete specimen transfer",
+    "cta": "Review Your Transfer Layout",
+    "facts": [
+      [
+        "Station-to-station",
+        "Defined handover signals"
+      ],
+      [
+        "Payload-led",
+        "Tooling and specimen review"
+      ],
+      [
+        "Layout-specific",
+        "Fixed, rail or mobile transfer"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Start with the route and the load.",
+        "body": [
+          "A short transfer between fixed stations has different requirements from serving a row of curing cabinets or traveling across a laboratory. REALJET compares fixed robots, linear travel and mobile arrangements against the actual route."
+        ],
+        "image": "/images/concrete-lab/specimen-transfer-trolley.webp",
+        "alt": "Mobile specimen transfer trolley carrying concrete cubes"
+      },
+      {
+        "heading": "Gripping is a specimen-specific task.",
+        "body": [
+          "The handling review considers a single cube, a group, a mould or a loaded carrier. Surface moisture, broken edges, mass and available gripping faces affect the tooling and the transfer checks."
+        ],
+        "points": [
+          {
+            "title": "Confirm the load",
+            "text": "Include the specimen, carrier and tool mass in payload selection."
+          },
+          {
+            "title": "Confirm the handover",
+            "text": "Use readiness and position confirmation at both stations."
+          },
+          {
+            "title": "Keep identity intact",
+            "text": "Record the move and its destination before releasing the next task."
+          }
+        ]
+      },
+      {
+        "heading": "Put floor and access constraints into the specification.",
+        "body": [
+          "Doors, turning space, gradients, charging, shared walkways and network coverage can determine whether mobile handling is practical."
+        ],
+        "image": "/images/concrete-lab/specimen-agv.webp",
+        "alt": "Low-profile mobile transport platform",
+        "table": {
+          "heads": [
+            "Design input",
+            "Review required"
+          ],
+          "rows": [
+            [
+              "Handling unit",
+              "Single specimen, group, mould or carrier"
+            ],
+            [
+              "Working envelope",
+              "Reach, travel, access heights and clearances"
+            ],
+            [
+              "Positioning",
+              "Navigation, station docking and tool positioning"
+            ],
+            [
+              "Route",
+              "Floor quality, doors, gradients and pedestrian interfaces"
+            ],
+            [
+              "Energy",
+              "Power supply, charging and operating schedule"
+            ],
+            [
+              "Exception handling",
+              "Failed grip, unavailable station and manual relocation"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Coordinate movements with the work queue.",
+        "body": [
+          "Specimen storage, test ages and available machines influence the sequence. REALJET coordinates the selected handling controls with the laboratory task system so a blocked destination does not create an unidentified sample."
+        ]
+      }
+    ],
+    "related": [
+      "P02",
+      "P03",
+      "P06",
+      "A03",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Can the robot move an entire group?",
+        "The group mass, spacing, carrier and destination determine the tooling and payload. Single-specimen and group transfers are evaluated separately."
+      ],
+      [
+        "Can a mobile robot open drawers?",
+        "Cabinet access can be part of an engineered handling sequence, subject to the drawer mechanism, locating features, payload and available working space."
+      ],
+      [
+        "Does every laboratory need an AGV?",
+        "No. A fixed or rail-mounted arrangement may suit a compact laboratory better. REALJET selects the route and transfer method together."
+      ]
+    ]
+  },
+  {
+    "id": "P05",
+    "type": "product",
+    "label": "Fresh concrete feeding equipment",
+    "name": "Automatic Concrete Sample Feeding System",
+    "path": "/products/concrete-sample-feeding-system/",
+    "title": "Concrete Sample Feeding & Transfer System | REALJET",
+    "h1": "Fresh concrete, delivered\nto the preparation cell.",
+    "description": "REALJET concrete sample feeding systems coordinate weighed collection, elevated transfer, lowering, discharge and hopper cleaning.",
+    "intro": "Connect a defined concrete collection point to the specimen preparation area. REALJET engineers weighed collection, transfer and lowering around the distance, elevations and existing equipment.",
+    "hero": "/images/concrete-lab/elevated-concrete-feeding.webp",
+    "alt": "Elevated concrete feeding conveyor and lowering arrangement",
+    "cta": "Review Your Feeding Point",
+    "facts": [
+      [
+        "Weighed collection",
+        "Controlled material receipt"
+      ],
+      [
+        "Horizontal + vertical",
+        "Layout-specific transfer"
+      ],
+      [
+        "Return cycle",
+        "Discharge, clean and return"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Connect the collection point to the laboratory.",
+        "body": [
+          "The feeding system receives fresh concrete in a transfer hopper, moves it along the selected route and lowers it to the preparation station. The route can include changes of direction, weighing and an elevated section."
+        ],
+        "image": "/images/concrete-lab/concrete-feed-lift.webp",
+        "alt": "Vertical lifting arrangement for concrete transfer hoppers"
+      },
+      {
+        "heading": "A complete hopper cycle.",
+        "body": [
+          "Receipt and discharge are only part of the cycle. The system also needs a reliable route for the empty hopper, cleaning and the next request."
+        ],
+        "steps": [
+          {
+            "title": "Receive and weigh",
+            "text": "Position the hopper, confirm the outlet and control the collected quantity."
+          },
+          {
+            "title": "Transfer and lower",
+            "text": "Move along the selected conveyor route and lower to the preparation point."
+          },
+          {
+            "title": "Discharge and return",
+            "text": "Release the material, clean the hopper and return it to the waiting position."
+          }
+        ]
+      },
+      {
+        "heading": "Define the upstream interface early.",
+        "body": [
+          "The outlet, flow control and readiness signals belong in the shared interface specification. REALJET coordinates these with the existing distribution equipment and the receiving cell. The sampling method and batch identity are defined separately from the transport mechanism."
+        ],
+        "image": "/images/concrete-lab/weighed-hopper-conveyor.webp",
+        "alt": "Concrete transfer hopper on roller conveyor with weighing position",
+        "table": {
+          "heads": [
+            "Parameter",
+            "Project definition"
+          ],
+          "rows": [
+            [
+              "Collection",
+              "Location, outlet geometry and upstream flow control"
+            ],
+            [
+              "Material",
+              "Concrete type, quantity per cycle and allowable transfer time"
+            ],
+            [
+              "Route",
+              "Horizontal distance, direction changes and vertical travel"
+            ],
+            [
+              "Weighing",
+              "Set quantity, feedback and allowable deviation"
+            ],
+            [
+              "Structure",
+              "Support locations, loads, clearance and maintenance access"
+            ],
+            [
+              "Cleaning",
+              "Wash sequence, collection and wastewater connection"
+            ],
+            [
+              "Control",
+              "Requests, interlocks, batch identification and restart sequence"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Build maintenance access into the structure.",
+        "body": [
+          "Elevated feeding needs access to drives, guide rails, weighing components and hopper discharge parts. Cleaning water and residue need a controlled collection route that keeps surrounding work areas usable."
+        ]
+      }
+    ],
+    "related": [
+      "P01",
+      "P06",
+      "A01",
+      "A02",
+      "S01",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Is transport the same as automatic sampling?",
+        "No. Transport moves material from a defined collection point. The project also needs a specified sampling method, timing and batch identification."
+      ],
+      [
+        "Can it connect to an existing distribution system?",
+        "REALJET reviews the outlet, material control, available signals, elevation and structural access to define the connection."
+      ],
+      [
+        "Is the elevated route a fixed size?",
+        "No. Length, lifting height, support arrangement and number of collection points are engineered for the site."
+      ]
+    ]
+  },
+  {
+    "id": "P06",
+    "type": "product",
+    "label": "Control & traceability",
+    "name": "Concrete Laboratory Control & Traceability Platform",
+    "path": "/products/concrete-lab-control-traceability/",
+    "title": "Concrete Lab Control & Traceability | REALJET",
+    "h1": "One specimen identity.\nA connected laboratory record.",
+    "description": "REALJET laboratory controls connect specimen identity, preparation tasks, curing locations, handling events and compression test records.",
+    "intro": "Coordinate equipment tasks and connect the specimen record from preparation through testing. REALJET defines the control interfaces, operating roles and data handovers with your laboratory team.",
+    "hero": "/images/concrete-lab/laboratory-plan.webp",
+    "alt": "Laboratory plan showing preparation, storage and testing zones",
+    "cta": "Review Your Data Interfaces",
+    "facts": [
+      [
+        "Specimen identity",
+        "Batch and test-age association"
+      ],
+      [
+        "Task coordination",
+        "Equipment and storage events"
+      ],
+      [
+        "System interfaces",
+        "Defined per project"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Keep the specimen record connected.",
+        "body": [
+          "The record links the batch, specimen, location, required test age and result. Each transfer confirms where the specimen came from and where it goes next, including authorized manual intervention."
+        ],
+        "trace": true
+      },
+      {
+        "heading": "Connect the equipment, not just the final report.",
+        "body": [
+          "Preparation cells, robots, environmental sensors, scanners and pressure machines create different kinds of information. REALJET defines the task and status exchange for each connection."
+        ],
+        "table": {
+          "heads": [
+            "Operation",
+            "Typical record or interface"
+          ],
+          "rows": [
+            [
+              "Preparation",
+              "Specimen identifier, batch and station completion"
+            ],
+            [
+              "Curing",
+              "Location, required age and environmental records"
+            ],
+            [
+              "Handling",
+              "Source, destination and transfer confirmation"
+            ],
+            [
+              "Testing",
+              "Request, machine identity, loading curve and result"
+            ],
+            [
+              "Exceptions",
+              "Alarm, operator action and recovery"
+            ],
+            [
+              "External systems",
+              "Agreed sample fields, results and export or API exchange"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "A practical interface review for your existing software.",
+        "body": [
+          "Send the system name, available protocol or API documentation and required fields. The scope identifies which equipment interfaces are available and where engineering is required. Existing LIMS, ERP or MES workflows can be retained where the agreed interface supports them."
+        ]
+      },
+      {
+        "heading": "Data management is part of handover.",
+        "body": [
+          "The project defines user roles, record exports, backups, time synchronization and recovery. The laboratory also confirms who reviews results and signs reports. Equipment control, specimen tracking and report approval remain distinct responsibilities."
+        ],
+        "points": [
+          {
+            "title": "Operating roles",
+            "text": "Define who can run tasks, intervene and review records."
+          },
+          {
+            "title": "Record continuity",
+            "text": "Plan identity replacement, relocation and recovery after interruption."
+          },
+          {
+            "title": "Data access",
+            "text": "Specify exports, retention, backup and handover requirements."
+          }
+        ]
+      }
+    ],
+    "related": [
+      "S01",
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "K03",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Is this a standalone LIMS?",
+        "This page covers the control and traceability functions associated with REALJET laboratory automation. A standalone laboratory information system is not assumed in the equipment scope."
+      ],
+      [
+        "Can data remain local?",
+        "Deployment, connectivity, access and retention requirements are defined with the customer during the system review."
+      ],
+      [
+        "Can it connect to our ERP or MES?",
+        "REALJET reviews the available interfaces and required fields. The final scope records the supported data exchange rather than assuming compatibility with every system."
+      ]
+    ]
+  },
+  {
+    "id": "A01",
+    "type": "application",
+    "label": "Ready-mix producers",
+    "name": "Ready-Mix Concrete Laboratory Automation",
+    "path": "/applications/ready-mix-concrete-lab-automation/",
+    "title": "Ready-Mix Concrete Laboratory Automation | REALJET",
+    "h1": "Connect plant sampling\nwith laboratory testing.",
+    "description": "REALJET plans laboratory automation for ready-mix producers, linking batching plant preparation with centralized curing and testing.",
+    "intro": "Plan specimen preparation at the plant and coordinated curing and testing at the laboratory. REALJET helps ready-mix producers select where automation creates the most useful handover.",
+    "hero": "/images/concrete-lab/concrete-feed-hopper.webp",
+    "alt": "Concrete receiving hopper and feeder for specimen preparation",
+    "cta": "Plan Your Ready-Mix Lab",
+    "facts": [
+      [
+        "Plant-side",
+        "Concrete receipt and preparation"
+      ],
+      [
+        "Central laboratory",
+        "Curing and testing coordination"
+      ],
+      [
+        "Batch records",
+        "Identity across locations"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Choose where each operation belongs.",
+        "body": [
+          "A multi-plant producer does not automatically need a complete laboratory at every batching plant. Plant-side preparation can connect to centralized curing and testing, while a larger individual site may justify an integrated arrangement."
+        ],
+        "table": {
+          "heads": [
+            "Deployment",
+            "Suitable planning focus"
+          ],
+          "rows": [
+            [
+              "Plant preparation + central laboratory",
+              "Collection, preparation, sample identity and transport handover"
+            ],
+            [
+              "Integrated single-site laboratory",
+              "Continuous local preparation, storage and scheduled testing"
+            ],
+            [
+              "Central testing upgrade",
+              "Received specimens, storage peaks, robot handling and existing instruments"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Protect identity across the plant-to-lab handover.",
+        "body": [
+          "Batch and specimen identifiers need to remain connected when specimens change location. The workflow defines who collects, receives, checks and relocates each group, with an agreed process for damaged labels or incomplete information."
+        ],
+        "image": "/images/concrete-lab/specimen-marking-station.webp",
+        "alt": "Specimen marking station for identification before storage"
+      },
+      {
+        "heading": "Configure the first investment around the bottleneck.",
+        "body": [
+          "Review preparation workload, time spent handling moulds, peak curing inventory and testing demand. REALJET can scope the preparation cell first or begin with curing and testing at the central laboratory."
+        ],
+        "points": [
+          {
+            "title": "Preparation",
+            "text": "Controlled filling, compaction, finishing and mould recycling."
+          },
+          {
+            "title": "Curing and transfer",
+            "text": "Storage sized by age profile, with a route to the testing stations."
+          },
+          {
+            "title": "Testing and records",
+            "text": "Machine integration and results linked to the received specimens."
+          }
+        ]
+      },
+      {
+        "heading": "Plan around mix changes and peak intake.",
+        "body": [
+          "The design review covers aggregate size, workability, transfer time, cleaning between batches and the usable operating shift. A high mechanical speed has little value if cleaning or storage becomes the limiting operation."
+        ]
+      },
+      {
+        "heading": "What to send REALJET.",
+        "body": [
+          "Share the number of plants, specimens per day at each site, peak periods, test ages, transport arrangements and a plan of the central laboratory. Add the existing machine models and software interfaces so the proposal can identify what is retained."
+        ]
+      }
+    ],
+    "related": [
+      "P01",
+      "P05",
+      "P02",
+      "P03",
+      "P06",
+      "K01"
+    ],
+    "faq": [
+      [
+        "Does each batching plant need the full system?",
+        "No. REALJET compares site preparation with central laboratory functions and scopes the equipment around the actual distribution of work."
+      ],
+      [
+        "Can the system link to production batches?",
+        "The project defines the required identifiers and the interface available from the production system. The handover must also be maintained during specimen transport."
+      ],
+      [
+        "Can automation be installed in stages?",
+        "A staged scope can target preparation, curing or testing first, while preserving a clear specimen identity and defined expansion interfaces."
+      ]
+    ]
+  },
+  {
+    "id": "A02",
+    "type": "application",
+    "label": "Precast plants & beam yards",
+    "name": "Precast Concrete Laboratory Automation",
+    "path": "/applications/precast-concrete-lab-automation/",
+    "title": "Precast Concrete Laboratory Automation | REALJET",
+    "h1": "Bring specimen records\ninto the precast workflow.",
+    "description": "REALJET integrates concrete specimen preparation, curing and testing with the layout and production-batch records of precast plants.",
+    "intro": "Connect specimen preparation and testing with precast production batches. REALJET plans the laboratory interfaces alongside concrete supply, factory circulation and the required quality checks.",
+    "hero": "/images/concrete-lab/laboratory-layout.webp",
+    "alt": "Precast laboratory layout with elevated fresh-concrete feeding and specimen preparation",
+    "cta": "Plan Your Precast Laboratory",
+    "facts": [
+      [
+        "Production batches",
+        "Connected specimen records"
+      ],
+      [
+        "Plant integration",
+        "Supply and site-layout review"
+      ],
+      [
+        "Method-led",
+        "Defined curing and testing paths"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Link the sample to the production batch.",
+        "body": [
+          "Specimens support the factory's quality process only when their identity remains connected to the correct batch and required test. REALJET defines the batch information and laboratory handover together with the plant team."
+        ]
+      },
+      {
+        "heading": "Fit the laboratory into the plant layout.",
+        "body": [
+          "The concrete supply point, travel route, laboratory access and waste collection affect daily operation. Where distances or elevations require it, a feeding module connects the defined collection point to the preparation area."
+        ],
+        "image": "/images/concrete-lab/elevated-concrete-feeding.webp",
+        "alt": "Elevated conveyor for fresh concrete transfer to a preparation laboratory"
+      },
+      {
+        "heading": "Separate the curing paths that serve different decisions.",
+        "body": [
+          "Standard curing and project-specific early-age checks serve different purposes. The scope identifies which specimens follow which method and where separate facilities or processes are needed. A cube laboratory does not automatically provide temperature-matched or accelerated curing."
+        ]
+      },
+      {
+        "heading": "Choose the equipment around the production rhythm.",
+        "body": [
+          "Repeated batch sampling may make preparation the priority. Large inventories may make curing access the bottleneck. Testing demand depends on the scheduled ages rather than only today's concrete output."
+        ],
+        "table": {
+          "heads": [
+            "Factory input",
+            "Laboratory implication"
+          ],
+          "rows": [
+            [
+              "Batch frequency and sample plan",
+              "Preparation schedule and batch-change cleaning"
+            ],
+            [
+              "Specimen ages and group size",
+              "Storage inventory and retrieval tasks"
+            ],
+            [
+              "Collection-point geometry",
+              "Feeding route, elevation and interface"
+            ],
+            [
+              "Existing test machines",
+              "Access, controller and data integration"
+            ],
+            [
+              "Quality-release workflow",
+              "Review, approvals and retained records"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "REALJET coordinates the plant and laboratory interfaces.",
+        "body": [
+          "Our project scope connects the selected laboratory modules with the agreed upstream and downstream systems. Equipment commissioning verifies the workflow; the factory's technical team retains responsibility for the quality decisions and approvals that use the results."
+        ]
+      }
+    ],
+    "related": [
+      "S01",
+      "P01",
+      "P05",
+      "P02",
+      "P03",
+      "P06",
+      "C01",
+      "K03"
+    ],
+    "faq": [
+      [
+        "Can the feeding route connect to existing distribution equipment?",
+        "REALJET reviews the outlet, flow control, elevation and readiness signals to define a practical interface."
+      ],
+      [
+        "Can test results be associated with precast components?",
+        "The data review defines the relationship between the production batch, specimen and component records, using the interfaces available from the plant system."
+      ],
+      [
+        "Does the system automatically approve demoulding or prestressing?",
+        "No. The laboratory provides the agreed records. Release criteria and approvals belong to the factory's technical and quality procedures."
+      ]
+    ]
+  },
+  {
+    "id": "A03",
+    "type": "application",
+    "label": "Testing centers",
+    "name": "Automation for Concrete Testing Laboratories",
+    "path": "/applications/concrete-testing-lab-automation/",
+    "title": "Concrete Testing Laboratory Automation | REALJET",
+    "h1": "From sample receipt\nto a connected test record.",
+    "description": "REALJET helps concrete testing centers automate specimen storage, handling and compression testing while retaining clear sample custody.",
+    "intro": "Coordinate received specimens, curing inventory and scheduled testing. REALJET plans upgrades around your laboratory's intake, existing machines and reporting workflow.",
+    "hero": "/images/concrete-lab/curing-testing-laboratory.webp",
+    "alt": "Concrete testing laboratory with curing cabinets and robot stations",
+    "cta": "Assess Your Laboratory Upgrade",
+    "facts": [
+      [
+        "Received specimens",
+        "Clear intake and custody"
+      ],
+      [
+        "Age-based queues",
+        "Organized testing workload"
+      ],
+      [
+        "Retrofit review",
+        "Retain suitable equipment"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Start at receipt, not at concrete filling.",
+        "body": [
+          "A testing center may receive already-cast specimens from many customers. The first task is to connect customer information, physical condition, identification, test ages and storage requirements. A preparation cell is only included where the laboratory actually makes specimens."
+        ]
+      },
+      {
+        "heading": "Balance curing inventory with test capacity.",
+        "body": [
+          "Peaks occur when several test ages fall on the same day. REALJET reviews receipt patterns, storage occupancy and machine-cycle availability together, so storage automation does not simply move the bottleneck to testing."
+        ],
+        "image": "/images/concrete-lab/curing-robot-system.webp",
+        "alt": "Curing cabinet system with robotic specimen handling"
+      },
+      {
+        "heading": "Keep existing instruments and reporting workflows where practical.",
+        "body": [
+          "The review identifies machines, software and facilities that can be retained. Mechanical access, controller interfaces and the laboratory's review procedures determine the integration scope."
+        ],
+        "points": [
+          {
+            "title": "Curing access",
+            "text": "Organize storage positions and scheduled retrieval."
+          },
+          {
+            "title": "Specimen transfer",
+            "text": "Confirm identity and destination at station handovers."
+          },
+          {
+            "title": "Compression testing",
+            "text": "Coordinate loading, testing, cleaning and result exchange."
+          }
+        ]
+      },
+      {
+        "heading": "Make exceptions part of the workflow.",
+        "body": [
+          "Mixed specimen dimensions, damaged labels, nonconforming samples and incomplete records require an agreed path. The laboratory defines acceptance and reporting rules; the equipment sequence supports those rules and records authorized interventions."
+        ]
+      },
+      {
+        "heading": "Build the upgrade around your workload.",
+        "body": [
+          "Send daily and peak receipt, specimen sizes, test-age distribution, current curing inventory, pressure machine details and LIMS information. REALJET uses these inputs to scope a phased or integrated upgrade."
+        ]
+      }
+    ],
+    "related": [
+      "P02",
+      "P03",
+      "P04",
+      "P06",
+      "K01",
+      "K03"
+    ],
+    "faq": [
+      [
+        "Do we have to buy the preparation cell?",
+        "No. For a laboratory receiving cast specimens, the project can start with curing, transfer, testing and records."
+      ],
+      [
+        "Can customer labels be used?",
+        "The interface review covers identifier formats, scanners, label condition and the process for linking external and internal sample identities."
+      ],
+      [
+        "Does installing automation provide laboratory accreditation?",
+        "Equipment commissioning and laboratory accreditation are separate. The laboratory must assess method validation, calibration, records and its recognized testing scope."
+      ]
+    ]
+  },
+  {
+    "id": "C01",
+    "type": "project",
+    "label": "REALJET project engineering",
+    "name": "30-Group Concrete Laboratory Configuration",
+    "path": "/case-studies/concrete-laboratory-automation-project/",
+    "title": "30-Group Concrete Laboratory Configuration | REALJET",
+    "h1": "A laboratory configuration\nfor 30 specimen groups per day.",
+    "description": "Explore a REALJET concrete laboratory design configuration connecting cube preparation, 28-day curing storage, transfer and compression testing.",
+    "intro": "A project configuration for a 150 mm cube workflow, connecting preparation, initial storage, demoulding, curing and testing. REALJET develops the equipment and interface scope around the operating basis below.",
+    "hero": "/images/concrete-lab/laboratory-layout.webp",
+    "alt": "Overall concrete laboratory engineering layout with preparation and curing zones",
+    "cta": "Discuss a Similar Configuration",
+    "facts": [
+      [
+        "30 groups/day",
+        "Illustrative intake basis"
+      ],
+      [
+        "28 days",
+        "Storage calculation basis"
+      ],
+      [
+        "840 groups",
+        "Baseline occupied inventory"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "The operating basis.",
+        "body": [
+          "This configuration uses 30 incoming groups per day and a 28-day storage period to explain how the modules are balanced. The operating basis defines the capacity and material-flow discussion for a project. The number of specimens in each group is defined with the sampling plan."
+        ],
+        "table": {
+          "heads": [
+            "Design item",
+            "Basis"
+          ],
+          "rows": [
+            [
+              "Specimen",
+              "150 × 150 × 150 mm concrete cube"
+            ],
+            [
+              "Daily intake",
+              "30 groups"
+            ],
+            [
+              "Storage period",
+              "28 days for this calculation"
+            ],
+            [
+              "Baseline inventory",
+              "30 × 28 = 840 groups"
+            ],
+            [
+              "Final storage allowance",
+              "Adjusted for age splits, retained samples, access and peak intake"
+            ],
+            [
+              "Project lead",
+              "REALJET layout, equipment integration and delivery coordination"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Three connected work areas.",
+        "body": [
+          "The preparation area receives concrete, fills and compacts moulds, then handles initial storage and demoulding. The curing area maintains the selected environment and inventory. The testing area receives scheduled specimens and connects the pressure-test record to their identity."
+        ],
+        "image": "/images/concrete-lab/laboratory-plan.webp",
+        "alt": "Plan view of preparation, curing racks and specimen transfer zones"
+      },
+      {
+        "heading": "Two cycles share the same preparation area.",
+        "body": [
+          "Specimens leave the mould cycle and continue into curing. Empty moulds are cleaned and prepared for reuse. Separating these routes keeps the specimen record and mould availability clear."
+        ],
+        "image": "/images/concrete-lab/cube-preparation-cell.webp",
+        "alt": "Concrete cube preparation cell with robot, processing stations and mould storage"
+      },
+      {
+        "heading": "Size each handover before finalizing the machines.",
+        "body": [
+          "REALJET checks the upstream concrete supply, station rhythm, initial-storage period, available curing positions and daily test queue. A large storage total alone does not define the preparation or testing capacity."
+        ]
+      },
+      {
+        "heading": "From configuration to an executable project.",
+        "body": [
+          "The next step is to replace the design assumptions with the customer's sample schedule, available space, chosen methods and existing equipment. The final proposal records the layout, supply scope, utilities, interfaces and acceptance sequence."
+        ]
+      }
+    ],
+    "related": [
+      "S01",
+      "P01",
+      "P02",
+      "P03",
+      "P05",
+      "A02",
+      "K01"
+    ],
+    "faq": [
+      [
+        "Is 840 groups the final required capacity?",
+        "It is the baseline for the stated 30-groups-per-day, 28-day assumption. Final usable capacity needs the actual age distribution, retained specimens, peak load and access allowances."
+      ],
+      [
+        "Does the configuration require elevated feeding?",
+        "Only if the collection point and site route justify it. A local supply arrangement can be assessed instead."
+      ],
+      [
+        "Can the same arrangement serve a testing center?",
+        "Yes, the workflow can be respecified for received specimens. In that case, the preparation cell may be reduced or omitted."
+      ]
+    ]
+  },
+  {
+    "id": "K01",
+    "type": "resource",
+    "label": "Cost & capacity guide",
+    "name": "Concrete Laboratory Automation Cost & ROI",
+    "path": "/resources/concrete-lab-automation-cost-roi/",
+    "title": "Concrete Lab Automation Cost & ROI Guide | REALJET",
+    "h1": "What determines the cost\nof laboratory automation?",
+    "description": "Understand concrete laboratory automation cost, curing capacity, maintenance and ROI before requesting a project-specific REALJET proposal.",
+    "intro": "Start with the work the system must perform. Preparation workload, curing inventory, existing equipment and site interfaces shape both the investment and the operating return.",
+    "hero": "/images/concrete-lab/laboratory-plan.webp",
+    "alt": "Concrete laboratory floor plan used for scope and capacity evaluation",
+    "cta": "Request a Scope-Based Estimate",
+    "facts": [
+      [
+        "Scope first",
+        "Define the operations"
+      ],
+      [
+        "Whole-life cost",
+        "Include integration and upkeep"
+      ],
+      [
+        "Measured return",
+        "Use your operating baseline"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Define the scope before comparing prices.",
+        "body": [
+          "A preparation cell, a robot-fed pressure machine and an integrated laboratory are different purchases. Compare the same operations, utilities, interfaces and handover responsibilities before comparing equipment prices."
+        ]
+      },
+      {
+        "heading": "Include the costs around the machines.",
+        "body": [
+          "The initial investment can include tooling, moulds, controls, transport, installation, site works, software interfaces and commissioning. Ongoing cost includes energy, water, cleaning materials, wear parts, maintenance and software support."
+        ],
+        "table": {
+          "heads": [
+            "Cost area",
+            "Questions for the estimate"
+          ],
+          "rows": [
+            [
+              "Equipment",
+              "Which preparation, curing, handling and testing operations are included?"
+            ],
+            [
+              "Integration",
+              "Which existing machines and software need interfaces?"
+            ],
+            [
+              "Site",
+              "What power, water, drainage, access or structure is required?"
+            ],
+            [
+              "Commissioning",
+              "What checks, training and method verification are included?"
+            ],
+            [
+              "Operation",
+              "What cleaning, wear parts, maintenance and support will be needed?"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Calculate inventory from the age profile.",
+        "body": [
+          "For each specimen group, multiply its daily intake by the number of days it occupies storage, then add the groups together. Allow separately for retained specimens, access and peaks. The capacity calculator below uses one storage period as a starting scenario."
+        ],
+        "calculator": true
+      },
+      {
+        "heading": "Use net operating savings, not a headline labor percentage.",
+        "body": [
+          "Annual net benefit is the labor cost actually removed or avoided, plus verified extra contribution or reduced rework, less added operating and maintenance cost. Static payback divides initial investment by that annual net benefit."
+        ],
+        "table": {
+          "heads": [
+            "Hypothetical example",
+            "Annual amount"
+          ],
+          "rows": [
+            [
+              "Initial project investment",
+              "US$250,000"
+            ],
+            [
+              "Realized labor saving",
+              "US$70,000"
+            ],
+            [
+              "Additional maintenance and operating cost",
+              "US$20,000"
+            ],
+            [
+              "Net annual benefit",
+              "US$50,000"
+            ],
+            [
+              "Static payback",
+              "5 years"
+            ]
+          ]
+        },
+        "note": "Calculation example only, not a REALJET price or promised return. It excludes finance, tax and the time value of money."
+      },
+      {
+        "heading": "A phased project may be the better first investment.",
+        "body": [
+          "If the workload is small, methods vary frequently or the available operating period is short, assess a single module or an instrument upgrade. The first project should address an identifiable bottleneck and leave a clear route for expansion."
+        ]
+      },
+      {
+        "heading": "Prepare an estimate that can become a project.",
+        "body": [
+          "Send daily and peak specimens, dimensions, group size, test ages, the laboratory plan and existing machines. REALJET uses these inputs to define an equipment and integration scope rather than quoting an unspecified complete line."
+        ]
+      }
+    ],
+    "related": [
+      "S01",
+      "P01",
+      "P02",
+      "P03",
+      "K02",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Why is there no single price for the complete system?",
+        "Storage capacity, preparation operations, machines retained and site interfaces vary between laboratories. A defined scope makes the estimate comparable and useful."
+      ],
+      [
+        "Does a faster robot guarantee more reports per day?",
+        "No. Preparation, curing schedules, machine cycles, cleaning and report review can each limit output."
+      ],
+      [
+        "Can a small laboratory start with one module?",
+        "A phased project can focus on its largest repeatable task. The investment review should include the cost of integration and the actual work saved."
+      ]
+    ]
+  },
+  {
+    "id": "K02",
+    "type": "resource",
+    "label": "Equipment selection guide",
+    "name": "Manual vs Automated Concrete Cube Testing",
+    "path": "/resources/manual-vs-automated-concrete-testing/",
+    "title": "Manual vs Automated Concrete Cube Testing | REALJET",
+    "h1": "Choose the right level\nof laboratory automation.",
+    "description": "Compare manual handling, automatic compression machines and integrated robotic concrete laboratories with REALJET's practical selection guide.",
+    "intro": "Automation can control a test cycle, move a specimen or coordinate the entire laboratory. The right choice depends on where time is spent and how repeatable the workload is.",
+    "hero": "/images/concrete-lab/robotic-compression-cell.webp",
+    "alt": "Robot positioned beside concrete testing stations",
+    "cta": "Compare Options for Your Lab",
+    "facts": [
+      [
+        "Instrument level",
+        "Load control and capture"
+      ],
+      [
+        "Station level",
+        "Handling and testing"
+      ],
+      [
+        "Laboratory level",
+        "Connected operations"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Separate automatic testing from automatic handling.",
+        "body": [
+          "An automatic compression machine controls the test sequence. Operators may still identify, measure, load and remove the specimen. A robot-fed workstation adds those handling steps; laboratory integration connects preparation and curing as well."
+        ]
+      },
+      {
+        "heading": "Compare the operations, not the label.",
+        "body": [
+          "Ask who performs each task and what happens when the normal sequence fails. This exposes the useful difference between an automatic machine and an integrated laboratory."
+        ],
+        "table": {
+          "heads": [
+            "Operation",
+            "Manual flow + instruments",
+            "Automatic test machine",
+            "Integrated laboratory"
+          ],
+          "rows": [
+            [
+              "Specimen preparation",
+              "Operator-managed",
+              "Usually outside scope",
+              "Selected preparation module"
+            ],
+            [
+              "Storage and retrieval",
+              "Operator-managed",
+              "Usually outside scope",
+              "Selected curing/handling arrangement"
+            ],
+            [
+              "Machine loading",
+              "Operator",
+              "Usually operator",
+              "Robot where specified"
+            ],
+            [
+              "Load control",
+              "Instrument/operator dependent",
+              "Machine-controlled",
+              "Machine-controlled"
+            ],
+            [
+              "Transfer identity",
+              "Manual procedure",
+              "Test-machine record",
+              "Agreed cross-station record"
+            ],
+            [
+              "Exceptions",
+              "Operator judgment",
+              "Operator and machine",
+              "Defined operator recovery path"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Choose the first module around a measurable bottleneck.",
+        "body": [
+          "If mould preparation consumes the shift, begin with preparation. If staff spend time finding and carrying stored cubes, examine curing access and transfer. If machine loading dominates a repetitive test queue, review a robotic workstation."
+        ]
+      },
+      {
+        "heading": "Keep maintenance in the comparison.",
+        "body": [
+          "Automatic handling adds gripping tools, position sensors, interfaces and safety systems. Include access, cleaning, wear and recovery in the operating plan. More equipment is valuable only when the workload and service arrangement justify it."
+        ]
+      },
+      {
+        "heading": "Use a staged path when conditions are still changing.",
+        "body": [
+          "Retain suitable instruments, automate one repeatable operation and preserve the specimen identity across handovers. Add modules when the next bottleneck is understood. REALJET can compare the layout and interfaces for both the first stage and later expansion."
+        ]
+      }
+    ],
+    "related": [
+      "P01",
+      "P02",
+      "P03",
+      "P04",
+      "S01",
+      "K01",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Does automatic mean no people are needed?",
+        "No. Even a connected system needs material replenishment, checks, maintenance, exception handling and technical oversight."
+      ],
+      [
+        "Should we replace working instruments first?",
+        "Not necessarily. Review their physical access, controller and data interface before deciding whether to retain, upgrade or replace them."
+      ],
+      [
+        "Is a complete system always the best option?",
+        "No. Workload, operating life, repeatability, available space and maintenance support should determine the useful scope."
+      ]
+    ]
+  },
+  {
+    "id": "K03",
+    "type": "resource",
+    "label": "Technical selection guide",
+    "name": "Specimen Types, Curing & Method Adaptation",
+    "path": "/resources/concrete-specimen-standards-automation/",
+    "title": "Concrete Specimens & Lab Automation Methods | REALJET",
+    "h1": "The specimen and method\ncome before the machinery.",
+    "description": "Plan concrete laboratory automation around cube, cylinder and core geometry, curing methods, testing equipment and laboratory validation.",
+    "intro": "Geometry, curing and the selected test method affect every part of laboratory automation. Define them before choosing moulds, grippers, storage and compression equipment.",
+    "hero": "/images/concrete-lab/concrete-cube-compression-test.webp",
+    "alt": "Concrete cube placed on a compression machine platen",
+    "cta": "Review Your Method Requirements",
+    "facts": [
+      [
+        "Geometry",
+        "Cube, cylinder or core"
+      ],
+      [
+        "Environment",
+        "Method-specific curing"
+      ],
+      [
+        "Verification",
+        "Equipment and workflow checks"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Cube, cylinder and core are different workflows.",
+        "body": [
+          "A 150 mm cube is the starting geometry for this solution. Cylinders and drilled cores introduce different gripping, end preparation, dimensional measurement and test requirements. They need their own engineering review rather than a report-template change."
+        ]
+      },
+      {
+        "heading": "Map the method to the operation.",
+        "body": [
+          "The standards below identify subjects to review during specification. The applicable edition, project specification and laboratory method determine the final procedure; this guide does not replace those documents."
+        ],
+        "table": {
+          "heads": [
+            "Method family",
+            "Subject to map into the workflow"
+          ],
+          "rows": [
+            [
+              "EN 12390-2",
+              "Making and curing specimens for strength tests"
+            ],
+            [
+              "EN 12390-3",
+              "Compressive strength testing"
+            ],
+            [
+              "EN 12390-4",
+              "Requirements for compression testing machines"
+            ],
+            [
+              "ASTM C31/C31M",
+              "Making and curing concrete test specimens in the field"
+            ],
+            [
+              "ASTM C39/C39M",
+              "Compression testing of cylindrical concrete specimens"
+            ],
+            [
+              "ASTM C511",
+              "Mixing rooms, moist storage and water storage facilities"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Select the curing path for its purpose.",
+        "body": [
+          "Standard curing, field-related curing and temperature-matched arrangements do not serve identical purposes. The selected environment, storage period and test age must remain connected to the specimen record. Special curing functions require a defined equipment scope."
+        ]
+      },
+      {
+        "heading": "Validate more than the robot position.",
+        "body": [
+          "Verification covers mould condition, preparation sequence, environmental distribution, machine calibration, specimen placement and records. A correct robot movement alone does not validate a material test."
+        ],
+        "points": [
+          {
+            "title": "Equipment checks",
+            "text": "Force measurement, sensing, access and environment."
+          },
+          {
+            "title": "Workflow checks",
+            "text": "Identification, handover, exception handling and recovery."
+          },
+          {
+            "title": "Record checks",
+            "text": "Original readings, calculated results, user actions and exports."
+          }
+        ]
+      },
+      {
+        "heading": "Laboratory competence remains a separate requirement.",
+        "body": [
+          "ISO/IEC 17025 concerns the competence of testing and calibration laboratories. Installing automated equipment does not automatically provide laboratory accreditation. The laboratory reviews method validation, calibration, records and the effect on its recognized scope."
+        ]
+      },
+      {
+        "heading": "Bring the method into the first discussion.",
+        "body": [
+          "Send the project location, applicable methods, specimen sizes, test ages, curing requirements and existing instruments. REALJET uses these inputs to define the equipment adaptation and acceptance checks."
+        ]
+      }
+    ],
+    "related": [
+      "P01",
+      "P02",
+      "P03",
+      "P06",
+      "A02",
+      "A03",
+      "Q01"
+    ],
+    "faq": [
+      [
+        "Does one cube configuration meet every national method?",
+        "No. The project must define its actual specimen, preparation, curing and test procedure. The equipment is specified around that definition."
+      ],
+      [
+        "Is high humidity at 20°C a universal curing requirement?",
+        "No. The selected method and project procedure determine the required environment and its monitoring."
+      ],
+      [
+        "Who reviews the laboratory's accreditation impact?",
+        "The laboratory's technical and quality team works with its relevant accreditation or approval body. Equipment scope and method acceptance should be reviewed together."
+      ]
+    ]
+  },
+  {
+    "id": "Q01",
+    "type": "enquiry",
+    "label": "Speak with REALJET",
+    "name": "Request a Concrete Laboratory Proposal",
+    "path": "/request-concrete-lab-proposal/",
+    "title": "Request a Concrete Lab Automation Proposal | REALJET",
+    "h1": "Tell us how your\nlaboratory needs to work.",
+    "description": "Request a REALJET concrete laboratory automation proposal. Share specimen type, workload, curing needs and existing equipment.",
+    "intro": "Start with your specimens, daily workload and available space. REALJET will use those details to develop the equipment and integration discussion with your team.",
+    "hero": "/images/concrete-lab/laboratory-hero.webp",
+    "alt": "Connected concrete specimen laboratory",
+    "cta": "Send Your Lab Requirements",
+    "facts": [
+      [
+        "Equipment & integration",
+        "Project enquiries"
+      ],
+      [
+        "Modular scope",
+        "New or existing laboratories"
+      ],
+      [
+        "REALJET",
+        "Your engineering contact"
+      ]
+    ],
+    "sections": [
+      {
+        "heading": "Useful details for the first review.",
+        "body": [
+          "You do not need a finished specification to start. Explain the operation you want to change and share the technical information already available."
+        ],
+        "points": [
+          {
+            "title": "Specimens and workload",
+            "text": "Cube, cylinder or core; dimensions; specimens per day and at peak."
+          },
+          {
+            "title": "Curing and testing",
+            "text": "Required ages, current storage and machine details."
+          },
+          {
+            "title": "Site and schedule",
+            "text": "Project location, available area, utilities and planned timing."
+          }
+        ]
+      },
+      {
+        "heading": "What happens next.",
+        "body": [
+          "REALJET reviews the requested modules and identifies the information needed for layout and interface planning. The proposal scope develops from your sample schedule, site conditions and equipment requirements."
+        ]
+      }
+    ],
+    "related": [
+      "S01",
+      "P01",
+      "P02",
+      "P03",
+      "K01",
+      "K03"
+    ],
+    "faq": [
+      [
+        "Can we enquire about one module?",
+        "Yes. Select the operation you want to automate and describe the equipment already in place."
+      ],
+      [
+        "What if we do not know the required capacity?",
+        "Share the present daily and peak workload, group size and test ages. These inputs support the capacity review."
+      ],
+      [
+        "Where should drawings be sent?",
+        "Send layout drawings and equipment lists to sales@realjetech.com using the same company and project name as your enquiry."
+      ]
+    ]
+  }
+]

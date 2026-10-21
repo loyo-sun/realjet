@@ -63,6 +63,7 @@ async function readHomepageRecommendations(directory) {
       date: readField("date"),
       order: Number(readField("order") || 999),
       productSeries: readField("productSeries"),
+      marketingPath: readField("marketingPath"),
     });
   }
 
@@ -267,11 +268,14 @@ if (visibleInsightTitles.length === 0 && homepage.includes("Latest Insights")) {
   throw new Error("Homepage insight section must be hidden without recommendations.");
 }
 for (const product of catalogueProductRecommendations.filter((item) => !item.draft)) {
-  const productPath = `products/${product.slug}.html`;
+  const productPath = product.marketingPath ? `${product.marketingPath.replace(/^\//, '')}index.html` : `products/${product.slug}.html`;
   await access(join(finalOutput, productPath));
 
   const productDetailPage = await readFile(join(finalOutput, productPath), "utf8");
-  for (const requiredProductDetailContent of [
+  const requiredProductContent = product.productSeries === 'concrete-laboratory' ? [
+    'data-lab-page=', 'id="specifications"', 'data-product-gallery',
+    '/request-concrete-lab-proposal/', 'name="universal-enquiry"', 'name="keyword"',
+  ] : [
     product.title,
     "data-product-gallery",
     "product-detail-content-layout",
@@ -280,7 +284,8 @@ for (const product of catalogueProductRecommendations.filter((item) => !item.dra
     'name="keyword"',
     "Contract Manufacturing",
     "Precast Concrete Production Lines",
-  ]) {
+  ];
+  for (const requiredProductDetailContent of requiredProductContent) {
     if (!productDetailPage.includes(requiredProductDetailContent)) {
       throw new Error(
         `Product detail validation failed: ${requiredProductDetailContent}`,
@@ -564,7 +569,7 @@ for (const requiredLlmsContent of [
   }
 }
 for (const product of catalogueProductRecommendations.filter((item) => !item.draft)) {
-  const productUrl = `https://realjetech.com/products/${product.slug}.html`;
+  const productUrl = `https://realjetech.com${product.marketingPath || `/products/${product.slug}.html`}`;
   if (!sitemap.includes(`<loc>${productUrl}</loc>`)) {
     throw new Error(`Sitemap validation failed: ${productUrl}`);
   }
@@ -593,5 +598,6 @@ await run(process.execPath, ["scripts/validate-site.mjs"]);
 
 await run(process.execPath, ["scripts/validate-product-catalogue.mjs"]);
 await run(process.execPath, ["scripts/validate-pc-equipment.mjs"]);
+await run(process.execPath, ["scripts/validate-concrete-lab.mjs"]);
 
 console.log("Realjet website build merged successfully into dist/.");

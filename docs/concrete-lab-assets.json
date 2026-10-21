@@ -1,0 +1,140 @@
+[
+  {
+    "file": "laboratory-layout.webp",
+    "width": 1117,
+    "height": 577,
+    "internalSource": "preparation-image18.png"
+  },
+  {
+    "file": "laboratory-plan.webp",
+    "width": 1240,
+    "height": 477,
+    "internalSource": "preparation-image21.png"
+  },
+  {
+    "file": "cube-preparation-cell.webp",
+    "width": 771,
+    "height": 575,
+    "internalSource": "preparation-image24.png"
+  },
+  {
+    "file": "concrete-feed-hopper.webp",
+    "width": 903,
+    "height": 375,
+    "internalSource": "preparation-image25.png"
+  },
+  {
+    "file": "cube-filling-station.webp",
+    "width": 468,
+    "height": 597,
+    "internalSource": "preparation-image27.png"
+  },
+  {
+    "file": "cube-compaction-station.webp",
+    "width": 579,
+    "height": 635,
+    "internalSource": "preparation-image29.png"
+  },
+  {
+    "file": "cube-demoulding-station.webp",
+    "width": 674,
+    "height": 593,
+    "internalSource": "preparation-image31.png"
+  },
+  {
+    "file": "mould-cleaning-station.webp",
+    "width": 592,
+    "height": 707,
+    "internalSource": "preparation-image33.png"
+  },
+  {
+    "file": "specimen-marking-station.webp",
+    "width": 528,
+    "height": 641,
+    "internalSource": "preparation-image35.png"
+  },
+  {
+    "file": "mould-paper-insertion.webp",
+    "width": 643,
+    "height": 541,
+    "internalSource": "preparation-image37.png"
+  },
+  {
+    "file": "rail-mounted-robot.webp",
+    "width": 823,
+    "height": 432,
+    "internalSource": "preparation-image39.png"
+  },
+  {
+    "file": "curing-testing-laboratory.webp",
+    "width": 924,
+    "height": 578,
+    "internalSource": "preparation-image44.png"
+  },
+  {
+    "file": "specimen-curing-cabinet.webp",
+    "width": 1021,
+    "height": 816,
+    "internalSource": "preparation-image49.png"
+  },
+  {
+    "file": "curing-robot-system.webp",
+    "width": 807,
+    "height": 354,
+    "internalSource": "preparation-image60.png"
+  },
+  {
+    "file": "specimen-agv.webp",
+    "width": 658,
+    "height": 397,
+    "internalSource": "preparation-image62.png"
+  },
+  {
+    "file": "concrete-cube-compression-test.webp",
+    "width": 1215,
+    "height": 689,
+    "internalSource": "preparation-image63.jpeg"
+  },
+  {
+    "file": "robotic-compression-cell.webp",
+    "width": 1011,
+    "height": 813,
+    "internalSource": "preparation-image64.png"
+  },
+  {
+    "file": "compression-testing-machine.webp",
+    "width": 387,
+    "height": 329,
+    "internalSource": "preparation-image66.png"
+  },
+  {
+    "file": "specimen-transfer-trolley.webp",
+    "width": 567,
+    "height": 396,
+    "internalSource": "preparation-image67.png"
+  },
+  {
+    "file": "elevated-concrete-feeding.webp",
+    "width": 779,
+    "height": 491,
+    "internalSource": "feeding-image12.png"
+  },
+  {
+    "file": "concrete-feed-lift.webp",
+    "width": 379,
+    "height": 819,
+    "internalSource": "feeding-image16.png"
+  },
+  {
+    "file": "weighed-hopper-conveyor.webp",
+    "width": 1306,
+    "height": 584,
+    "internalSource": "feeding-image20.png"
+  },
+  {
+    "file": "concrete-transfer-hopper.webp",
+    "width": 572,
+    "height": 477,
+    "internalSource": "feeding-image24.png"
+  }
+]

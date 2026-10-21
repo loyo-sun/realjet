@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-21",
+  "status": "implemented-local",
+  "repository": "https://github.com/coreyhaines31/marketingskills",
+  "skillFiles": [
+    {
+      "name": "product-marketing",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/product-marketing/SKILL.md"
+    },
+    {
+      "name": "site-architecture",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/site-architecture/SKILL.md"
+    },
+    {
+      "name": "copywriting",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/copywriting/SKILL.md"
+    },
+    {
+      "name": "cro",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/cro/SKILL.md"
+    },
+    {
+      "name": "seo-audit",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/seo-audit/SKILL.md"
+    },
+    {
+      "name": "ai-seo",
+      "source": "https://github.com/coreyhaines31/marketingskills/blob/main/skills/ai-seo/SKILL.md"
+    }
+  ],
+  "appliedReferences": [
+    "cro/references/form.md",
+    "copywriting/references/ai-tells.md",
+    "ai-seo/references/content-patterns.md"
+  ],
+  "context": {
+    "brand": "REALJET",
+    "audience": [
+      "Ready-mix producers casting concrete cubes",
+      "Precast factories casting concrete cubes",
+      "Testing laboratories receiving cast specimens"
+    ],
+    "conversion": "Request a laboratory layout review",
+    "language": "English",
+    "designBasis": "150 mm concrete cubes",
+    "scope": "Preparation, curing and compression testing; optional feeding, handling and record interfaces",
+    "unknowns": [
+      "Published performance guarantees",
+      "Verified commissioned customer case",
+      "Traffic and conversion baseline",
+      "Observed AI-search citation baseline"
+    ],
+    "voice": "Precise engineering language, direct product names, factual scope; no invented outcomes"
+  },
+  "diagnosis": [
+    "Abstract hero copy obscured product category",
+    "Auxiliary functions were presented as independent products",
+    "Application and planning content fragmented across overlapping pages",
+    "Enquiry technical details increased initial effort"
+  ],
+  "changes": [
+    "Five core pages plus existing equipment category",
+    "Ten former URLs consolidated with local meta redirects and noindex",
+    "Direct category headline and one primary layout-review action",
+    "Scope comparison, specimen flow, three equipment choices and integrated application content",
+    "Optional company and expandable specimen details",
+    "Unique titles, descriptions, canonicals, static answer text and consistent REALJET publisher identity",
+    "Sitemap excludes retired URLs; llms.txt describes current scope"
+  ],
+  "factFamilyOwners": [
+    {
+      "page": "/solutions/concrete-lab-automation/",
+      "primaryIntent": "concrete laboratory automation; automated concrete cube testing system; scope and storage planning"
+    },
+    {
+      "page": "/products/automatic-concrete-cube-making-machine/",
+      "primaryIntent": "automatic concrete cube making machine; cube preparation cell"
+    },
+    {
+      "page": "/products/concrete-specimen-curing-system/",
+      "primaryIntent": "concrete specimen curing system; curing storage inventory"
+    },
+    {
+      "page": "/products/robotic-concrete-compression-testing/",
+      "primaryIntent": "robotic concrete compression testing; automatic specimen loading"
+    },
+    {
+      "page": "/request-concrete-lab-proposal/",
+      "primaryIntent": "request concrete laboratory layout and equipment proposal"
+    }
+  ],
+  "claimControls": [
+    "No supplier source attributions in public copy, as requested",
+    "No unverified installed project or fabricated testimonial",
+    "840 groups is an explicit calculator scenario, not equipment capacity",
+    "Cylinders and cores require adaptation review",
+    "No invented throughput, price, ROI or compliance guarantee"
+  ],
+  "validation": {
+    "build": "passed",
+    "enquiryMockTests": "passed",
+    "localLiveSubmission": "Not sent. Local static preview has no Netlify submission backend.",
+    "rankingsOrAIVisibility": "Not measured; local content cannot establish indexing or citations."
+  },
+  "experimentsAfterPublication": [
+    "Compare direct product headline with an outcome headline after obtaining traffic baseline",
+    "Compare required project country with optional project country while measuring lead quality"
+  ],
+  "publication": {
+    "githubCommit": false,
+    "githubPush": false,
+    "deployed": false
+  },
+  "recordScope": "Local verification snapshot before the user authorized GitHub publication on 2026-10-21. Publication status fields describe that snapshot."
+}

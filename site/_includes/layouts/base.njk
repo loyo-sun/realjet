@@ -45,6 +45,10 @@
     <meta name="twitter:image" content="{{ socialImage or site.socialImage }}" />
     <title>{{ seoTitle or title }}</title>
     <link rel="stylesheet" href="/assets/site/site.css" />
+    {% if pageType == "concrete-lab" %}
+    <link rel="stylesheet" href="/assets/site/concrete-lab.css" />
+    <script src="/assets/site/concrete-lab.js" defer></script>
+    {% endif %}
     {% if pageType == "ppvc-line" %}
     <link rel="preload" as="image" href="/images/ppvc-line/hero-panoramic-plant.webp" fetchpriority="high" />
     <link rel="stylesheet" href="/assets/site/ppvc.css" />
