@@ -49,25 +49,11 @@ button, input, textarea, select { font: inherit; }
 .navigation-item-solutions, .navigation-item-moulds { position: static; }
 .solutions-submenu { left: 0; right: 0; width: 100%; min-width: 0; max-width: none; margin: 0; padding: 0 max(22px, calc((100% - var(--container)) / 2)); border-inline: 0; border-radius: 0; max-height: calc(100dvh - 70px); overflow-y: auto; overscroll-behavior: contain; transform: translateY(-7px); }
 .navigation-item-has-submenu.is-open .solutions-submenu { transform: translateY(0); }
-.solutions-menu-intro { padding: 22px 26px 18px; border-bottom: 1px solid rgba(255,255,255,.1); }
-.solutions-menu-label { color: #69d5de; font-size: 10px; font-weight: 800; letter-spacing: .14em; }
-.solutions-menu-intro p { margin: 7px 0 0; color: var(--white); font-size: 17px; line-height: 1.4; font-weight: 650; }
-.moulds-menu-intro { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.moulds-menu-intro > div { min-width: 0; }
-.site-submenu .moulds-menu-intro > a { flex-shrink: 0; padding: 10px 12px; border: 1px solid rgba(105,213,222,.3); color: #69d5de; font-size: 11px; }
-.solutions-menu-groups { display: grid; grid-template-columns: 1.65fr 1fr; }
-.solutions-menu-group { min-width: 0; padding: 22px 18px; }
-.solutions-menu-group h2 { margin: 0 8px; color: var(--white); font-size: 14px; line-height: 1.4; }
-.solutions-group-description { margin: 6px 8px 14px; color: rgba(255,255,255,.55); font-size: 11px; line-height: 1.6; }
-.solutions-production-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px; }
-.solutions-menu-services { border-left: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.025); }
-.solutions-submenu .solutions-menu-group a { padding: 13px 9px; }
+.mega-menu-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 24px; padding: 24px 0; }
+.solutions-submenu .mega-menu-links a { min-width: 0; padding: 18px 20px; }
 .solution-link-title { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; color: rgba(255,255,255,.94); font-size: 13px; font-weight: 750; }
 .solution-link-title > span { color: #69d5de; }
 .solution-link-description { display: block; margin-top: 7px; color: rgba(255,255,255,.6); font-size: 11px; font-weight: 400; line-height: 1.6; }
-.solutions-menu-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 26px; border-top: 1px solid rgba(255,255,255,.1); }
-.solutions-menu-footer > span { color: rgba(255,255,255,.6); font-size: 11px; }
-.solutions-submenu .solutions-menu-footer a { padding: 8px 0; color: #69d5de; font-size: 12px; }
 .menu-toggle { display: none; width: 42px; height: 42px; border: 0; color: var(--white); background: transparent; }
 .menu-toggle > span:not(.sr-only) { display: block; width: 22px; height: 2px; margin: 5px auto; background: currentColor; }
 .mobile-menu-backdrop { display: none; }
@@ -895,17 +881,10 @@ body.has-enquiry-modal { overflow: hidden; }
   .header-inner { position: static; }
   .site-navigation { max-height: calc(100dvh - 62px); overflow-y: auto; overscroll-behavior: contain; }
   .solutions-submenu { width: auto; padding: 0; max-height: none; overflow: visible; border-radius: 8px; }
-  .solutions-menu-intro { padding: 16px 14px; }
-  .solutions-menu-intro p { font-size: 14px; }
-  .solutions-menu-groups { grid-template-columns: 1fr; }
-  .solutions-menu-group { padding: 16px 6px; }
-  .solutions-menu-services { border-left: 0; border-top: 1px solid rgba(255,255,255,.1); }
-  .solutions-production-links { grid-template-columns: 1fr; gap: 0; }
-  .solutions-submenu .solutions-menu-group a { padding: 12px 8px; }
+  .mega-menu-links { grid-template-columns: 1fr; gap: 0; padding: 6px; }
+  .solutions-submenu .mega-menu-links a { padding: 12px 8px; }
   .solution-link-description { margin-top: 4px; }
-  .solutions-menu-footer { align-items: flex-start; flex-direction: column; gap: 4px; padding: 14px; }
   .moulds-submenu { width: auto; }
-  .moulds-menu-intro { align-items: flex-start; flex-direction: column; gap: 12px; }
   .mobile-menu-backdrop { position: fixed; inset: 62px 0 0; z-index: 300; display: block; padding: 0; border: 0; background: rgba(0,0,0,.62); backdrop-filter: blur(2px); }
   body.has-mobile-menu .site-header { z-index: 310; }
   body.has-mobile-menu { overflow: hidden; }
