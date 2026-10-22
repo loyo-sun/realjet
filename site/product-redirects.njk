@@ -1,0 +1,10 @@
+---
+permalink: /_redirects
+eleventyExcludeFromCollections: true
+---
+# Netlify Pretty URLs also serves .html files without their extension.
+# Consolidate only known published product aliases; leave catalogue directories alone.
+{% for product in collections.publishedProducts %}{% if product.url and product.url.endsWith('.html') %}
+/products/{{ product.data.slug }} {{ product.url }} 301!
+/products/{{ product.data.slug }}/ {{ product.url }} 301!
+{% endif %}{% endfor %}
