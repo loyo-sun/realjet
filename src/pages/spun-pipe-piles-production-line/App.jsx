@@ -1,3 +1,4 @@
+import SolutionAnchorBar from "../../components/SolutionAnchorBar.jsx";
 import { Children, cloneElement, isValidElement, useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
@@ -275,18 +276,8 @@ function EnglishVisualAdsPage({ locale = "en" }) {
 
 
   return (
-    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
-        <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
-          <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
-          <nav className={`${menuOpen ? "flex" : "hidden"} absolute top-[70px] right-0 left-0 flex-col gap-1 border-b border-white/10 bg-brand-navy p-5 md:static md:flex md:flex-row md:items-center md:border-0 md:bg-transparent md:p-0`} aria-label="Primary navigation">
-            {[["Advantages", "#advantages"], ["Start", "#start"]].map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-sm font-bold text-white/76 no-underline hover:bg-white/8 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => scrollToReview("header")} className="ml-2 rounded-lg bg-[#e4572e] px-4 py-2.5 text-sm font-[850] text-white rtl:mr-2 rtl:ml-0">Request proposal</button>
-            <LanguageSwitcher current={locale} />
-          </nav>
-          <button type="button" onClick={() => setMenuOpen(!menuOpen)} className="grid h-10 w-10 place-items-center rounded-lg bg-white/8 md:hidden" aria-label="Toggle navigation">{menuOpen ? <X /> : <Menu />}</button>
-        </div>
-      </header>
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-clip bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
+      <SolutionAnchorBar links={[["Advantages", "#advantages"], ["Start", "#start"]]} onEnquiry={() => scrollToReview("header")}><LanguageSwitcher current={locale} /></SolutionAnchorBar>
 
       <main>
         <section className="relative isolate overflow-hidden bg-[#061e34] text-white">
@@ -400,7 +391,7 @@ function AdsPage({ locale = "en" }) {
   ];
 
   return (
-    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-clip bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[70px] items-center justify-between gap-5">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>
@@ -557,7 +548,7 @@ function LegacyLocalizedPage({ locale = "en" }) {
   };
 
   return (
-    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-hidden bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
+    <LocalizedPage locale={locale}><div className="min-h-screen overflow-x-clip bg-white pb-0 max-[720px]:pb-20" dir={locale === "ar" ? "rtl" : "ltr"}>
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#061e34]/96 text-white backdrop-blur-xl">
         <div className="site-container flex min-h-[72px] items-center justify-between gap-6">
           <a href="/" aria-label="Realjet home" className="shrink-0"><img src={logo} alt="REALJET" className="h-9 w-auto brightness-0 invert" /></a>

@@ -1,0 +1,280 @@
+{
+  "gpu-server-sheet-metal-chassis": {
+    "sector": "AI Server Structures",
+    "system": "AI training and inference GPU server",
+    "position": "Encloses the server and provides the common mechanical interface for GPU trays, fans and rack mounting.",
+    "role": "The chassis bottom shell and drawing-defined structural panels.",
+    "buyer": "GPU server OEM and chassis integrator",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI training and inference GPU server"
+      }
+    ]
+  },
+  "gpu-carrier-tray": {
+    "sector": "AI Server Structures",
+    "system": "AI training and inference GPU server",
+    "position": "Supports the specified GPU baseboard assembly inside the server chassis.",
+    "role": "The formed metal carrier tray and drawing-defined reinforcement.",
+    "buyer": "GPU server OEM and chassis integrator",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI training and inference GPU server"
+      }
+    ]
+  },
+  "gpu-retention-bracket": {
+    "sector": "AI Server Structures",
+    "system": "PCIe GPU AI server",
+    "position": "Locates and retains a GPU at its chassis or riser mounting interface.",
+    "role": "One metal GPU retention bracket.",
+    "buyer": "GPU server OEM and chassis integrator",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "PCIe GPU AI server"
+      }
+    ]
+  },
+  "gpu-server-fan-cage": {
+    "sector": "AI Server Structures",
+    "system": "Air-cooled or hybrid-cooled AI GPU server",
+    "position": "Holds serviceable fan modules at the server cooling zone.",
+    "role": "The metal fan cage frame.",
+    "buyer": "GPU server OEM and chassis integrator",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "Air-cooled or hybrid-cooled AI GPU server"
+      }
+    ]
+  },
+  "ai-rack-power-shelf-chassis": {
+    "sector": "Shared Equipment Structures",
+    "system": "Power shelf serving an AI compute rack",
+    "position": "Houses power modules and provides their mechanical slot and rack interfaces.",
+    "role": "The metal chassis and drawing-defined dividers.",
+    "buyer": "Rack and power equipment manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI rack power shelf"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Modular power conversion or charging cabinet"
+      }
+    ]
+  },
+  "ai-server-rack-welded-frame": {
+    "sector": "Shared Equipment Structures",
+    "system": "AI server rack",
+    "position": "Forms the rack skeleton supporting installation rails and equipment modules.",
+    "role": "The welded frame made from specified plate parts and purchased sections.",
+    "buyer": "Rack and power equipment manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI compute rack"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Rack-mounted storage and energy-control equipment"
+      }
+    ]
+  },
+  "ai-cdu-chassis-frame": {
+    "sector": "Shared Equipment Structures",
+    "system": "Coolant distribution unit for AI servers",
+    "position": "Connects the mechanical mounting zones for pumps, heat exchangers, controls and outer panels.",
+    "role": "The CDU chassis skeleton and specified structural connections.",
+    "buyer": "CDU and rack cooling manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI server liquid-cooling CDU"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Energy-storage coolant distribution equipment"
+      }
+    ]
+  },
+  "cdu-pump-mounting-plate": {
+    "sector": "Shared Equipment Structures",
+    "system": "AI liquid-cooling CDU pump assembly",
+    "position": "Sits beneath the pump group and attaches it to the CDU base frame.",
+    "role": "The pump mounting plate.",
+    "buyer": "CDU and rack cooling manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI cooling CDU pump assembly"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Energy-storage temperature-control pump assembly"
+      }
+    ]
+  },
+  "cdu-heat-exchanger-mounting-bracket": {
+    "sector": "Shared Equipment Structures",
+    "system": "AI liquid-cooling CDU heat exchanger",
+    "position": "Connects the heat exchanger mechanically to the CDU frame.",
+    "role": "One non-wetted metal heat-exchanger mounting bracket.",
+    "buyer": "CDU and rack cooling manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI cooling heat exchanger"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Battery-storage thermal management heat exchanger"
+      }
+    ]
+  },
+  "ai-rack-manifold-mounting-bracket": {
+    "sector": "Shared Equipment Structures",
+    "system": "AI server rack liquid-cooling manifold",
+    "position": "Positions the manifold relative to the rack while preserving hose and tool space.",
+    "role": "One non-wetted manifold-to-rack mounting bracket.",
+    "buyer": "CDU and rack cooling manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI server rack cooling manifold"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Energy-storage cooling manifold assembly"
+      }
+    ]
+  },
+  "bess-cabinet-welded-frame": {
+    "sector": "Shared Equipment Structures",
+    "system": "Commercial and industrial battery energy storage cabinet",
+    "position": "Forms the cabinet skeleton connecting battery supports, doors and auxiliary mounting zones.",
+    "role": "The welded BESS cabinet frame.",
+    "buyer": "Battery rack and BESS enclosure manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI infrastructure battery backup cabinet"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Battery energy storage cabinet"
+      }
+    ]
+  },
+  "bess-battery-module-support-tray": {
+    "sector": "Shared Equipment Structures",
+    "system": "Stationary battery energy storage rack",
+    "position": "Supports a specified battery module from below and provides its fixing interface.",
+    "role": "One external module support tray.",
+    "buyer": "Battery rack and BESS enclosure manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI data-center battery backup rack"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Stationary energy storage battery rack"
+      }
+    ]
+  },
+  "bess-battery-module-support-rail": {
+    "sector": "Shared Equipment Structures",
+    "system": "Battery module rack inside a BESS cabinet",
+    "position": "Provides a fixed support interface along the side or bottom of a slide-in battery module.",
+    "role": "One formed support rail.",
+    "buyer": "Battery rack and BESS enclosure manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI data-center battery backup cabinet"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Energy storage module rack"
+      }
+    ]
+  },
+  "bess-cabinet-service-door": {
+    "sector": "Shared Equipment Structures",
+    "system": "Commercial and industrial battery storage cabinet",
+    "position": "Provides the external service opening and the hinge, lock and gasket interfaces.",
+    "role": "One formed service door with specified reinforcement.",
+    "buyer": "Battery rack and BESS enclosure manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI infrastructure auxiliary equipment cabinet"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Battery energy storage cabinet"
+      }
+    ]
+  },
+  "energy-storage-pcs-metal-chassis": {
+    "sector": "Energy Storage Power Conversion",
+    "system": "Battery energy storage power conversion system",
+    "position": "Houses the PCS mechanical package and locates its defined electrical components.",
+    "role": "The drawing-defined metal PCS chassis.",
+    "buyer": "Energy storage PCS manufacturer",
+    "applications": [
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "Battery energy storage power conversion system"
+      }
+    ]
+  },
+  "dc-charger-power-cabinet-frame": {
+    "sector": "EV Charging",
+    "system": "DC charging power cabinet for electric vehicles",
+    "position": "Connects the cabinet panels, power-module zone and mounting base.",
+    "role": "The cabinet frame.",
+    "buyer": "DC charging equipment manufacturer",
+    "applications": [
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "DC charging power cabinet for electric vehicles"
+      }
+    ]
+  },
+  "dc-charger-power-module-carrier": {
+    "sector": "Shared Equipment Structures",
+    "system": "Modular DC charging power cabinet",
+    "position": "Supports and positions one charging power module inside the cabinet.",
+    "role": "One metal module carrier.",
+    "buyer": "DC charging equipment manufacturer",
+    "applications": [
+      {
+        "name": "AI infrastructure",
+        "equipment": "AI infrastructure modular power equipment"
+      },
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "DC charging power cabinet"
+      }
+    ]
+  },
+  "pv-inverter-wall-mounting-bracket": {
+    "sector": "Solar Power",
+    "system": "PV inverter",
+    "position": "Connects the inverter rear interface to the approved wall or installation structure.",
+    "role": "One metal wall mounting bracket.",
+    "buyer": "PV inverter manufacturer and mounting accessory supplier",
+    "applications": [
+      {
+        "name": "Battery storage, EV charging and solar",
+        "equipment": "PV inverter"
+      }
+    ]
+  }
+}

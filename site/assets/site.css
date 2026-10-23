@@ -1172,7 +1172,10 @@ body.has-enquiry-modal { overflow: hidden; }
 .catalogue-toolbar a { color: var(--blue); }
 .catalogue-product-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
 .catalogue-product-grid .product-card { min-width: 0; }
-.catalogue-product-grid .product-image img { object-fit: contain; background: #fff; }
+.catalogue-product-grid .product-card h3 a,
+.catalogue-product-grid .product-card h4 a { text-decoration: none; }
+.catalogue-product-grid .product-image { aspect-ratio: 16 / 9; flex-shrink: 0; }
+.catalogue-product-grid .product-image img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
 @media (max-width: 1000px) { .catalogue-product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 600px) {
   .catalogue-product-grid { grid-template-columns: 1fr; }
@@ -1185,3 +1188,28 @@ body.has-enquiry-modal { overflow: hidden; }
 @media (max-width: 700px) {
   body[data-sheet-metal-product="true"] .site-floating-contact-actions { display: none; }
 }
+
+/* Steel component pages reuse the product template with landscape concept drawings. */
+.product-page-steel-component .product-gallery-stage { aspect-ratio: 16 / 9; background: var(--soft); }
+.steel-component-group { margin-top: 46px; scroll-margin-top: 110px; }
+.steel-component-group > h2 { margin: 0 0 24px; color: var(--navy); font-size: clamp(25px,3vw,34px); }
+
+/* Drawing-based component application context. */
+.steel-application{margin:0 0 48px;padding:32px;background:#f1f5f8;border:1px solid #dce5eb;border-radius:10px}.steel-application h2{margin:8px 0 12px;font-size:clamp(24px,3vw,34px)}.steel-application p{line-height:1.75;color:#485b6a}.steel-application-path{list-style:none;padding:0;margin:26px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.steel-application-path li{padding:20px;background:#fff;border-top:3px solid #49738b;border-radius:4px}.steel-application-path li:last-child{border-color:#c75230}.steel-application-path span{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#607787;margin-bottom:12px}.steel-application-path strong{font-size:17px;line-height:1.5;display:block}.steel-application-role{display:grid;grid-template-columns:2fr 1fr;gap:28px}.steel-application-role h3{font-size:17px}.steel-application-role a{font-weight:600}.steel-reference-section{margin-top:40px}.steel-reference-card{padding:22px;border:1px solid #dce5eb;border-radius:6px;margin:16px 0}.steel-reference-card h3{font-size:18px;margin:8px 0}.steel-reference-card .eyebrow{font-size:11px}.steel-reference-card p{margin-bottom:0}@media(max-width:700px){.steel-application{padding:22px}.steel-application-path,.steel-application-role{grid-template-columns:1fr}.steel-application-path li{padding:16px}}
+.component-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:28px 0}.component-proof-grid>div{padding:22px;background:#f1f5f8;border-radius:6px}.component-proof-grid h3{font-size:18px}.component-proof-grid p{font-size:15px}.product-card-body>.eyebrow{font-size:10px;line-height:1.6;display:block;margin-bottom:8px}@media(max-width:760px){.component-proof-grid{grid-template-columns:1fr}}
+.industry-hero{background:#192d43}.industry-hero h1{max-width:950px}.industry-hero-actions,.industry-selector{display:flex;flex-wrap:wrap;gap:14px;margin:24px 0}.industry-scope{font-size:14px!important;letter-spacing:.03em}.industry-definition{padding:48px 0;background:#fff}.industry-definition>.container>p{max-width:900px;font-size:18px;line-height:1.8}.industry-proof{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:30px 0}.industry-proof p,.industry-faq p{line-height:1.8;color:#485b6a}.industry-faq{margin:35px 0}.industry-faq h3{font-size:20px;margin-top:28px}.product-card h4{font-size:21px;line-height:1.35;margin:10px 0 14px}.component-application-contexts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px;border-top:1px solid #d5e0e6;padding-top:24px}.component-definition{padding:24px;background:#f3f6f8;border-left:3px solid #49738b;margin:24px 0}.component-definition h2{margin-top:10px}.component-update{font-size:13px;color:#5b6e7e;margin-top:32px}.product-page-steel-component .product-gallery-thumbs{margin-top:15px}@media(max-width:700px){.industry-proof,.component-application-contexts{grid-template-columns:1fr}.industry-definition{padding:30px 0}.industry-hero-actions{align-items:stretch}.industry-hero-actions .button{width:100%}}
+
+.solutions-tab-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:28px;padding:24px 0}
+.solutions-tab-list{display:flex;flex-direction:column;gap:8px;border-right:1px solid #ffffff24;padding-right:22px}
+.solutions-tab-list [role="tab"]{padding:16px 14px;border:0;border-radius:7px;background:transparent;color:#c4d1de;text-align:left;font:inherit;font-size:14px;font-weight:400;white-space:nowrap;cursor:pointer}
+.solutions-tab-list [role="tab"][aria-selected="true"]{color:#fff;background:#ffffff12;box-shadow:inset 3px 0 #79d8df}
+.solutions-tab-list [role="tab"]:focus-visible{outline:2px solid #79d8df;outline-offset:2px}
+.solutions-tab-panels{min-width:0;min-height:200px}
+[data-solution-panel][hidden]{display:none!important}
+.solutions-tab-panels .mega-menu-links{grid-template-columns:repeat(2,minmax(0,1fr));padding:0}
+@media(max-width:720px){.solutions-tab-layout{grid-template-columns:minmax(105px,.85fr) minmax(0,1.5fr);gap:8px;padding:12px 0}.solutions-tab-list{padding-right:8px}.solutions-tab-list [role="tab"]{padding:12px 9px;font-size:12px}.solutions-tab-panels .mega-menu-links{grid-template-columns:1fr;padding:0}.solutions-tab-panels{min-height:0}}
+
+.industry-workshop{max-width:760px;margin:24px auto}.industry-workshop img{display:block;width:100%;height:auto;border-radius:12px}.industry-workshop figcaption{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.6}
+
+.solutions-capability-link{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin:24px 12px 0;padding-top:18px;border-top:1px solid #ffffff24;color:#d5e4ed;font-size:13px;font-weight:400;text-decoration:none}.solutions-capability-link:hover{color:#79d8df}.solutions-capability-link:focus-visible{outline:2px solid #79d8df;outline-offset:4px}
+@media(max-width:720px){.solutions-tab-layout{grid-template-columns:minmax(0,1fr);gap:14px}.solutions-tab-list{border-right:0;border-bottom:1px solid #ffffff24;padding:0 0 10px;gap:3px}.solutions-tab-list [role="tab"]{font-size:12px;padding:10px 9px}.solutions-capability-link{margin:16px 8px 0;font-size:12px}}

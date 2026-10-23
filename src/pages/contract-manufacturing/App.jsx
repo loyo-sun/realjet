@@ -1,3 +1,4 @@
+import SolutionAnchorBar from "../../components/SolutionAnchorBar.jsx";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
@@ -159,38 +160,7 @@ function PrimaryButton({ children, onClick, ctaId }) {
 }
 
 function Header({ onLead }) {
-  const [open, setOpen] = useState(false);
-  const navItems = [
-    ["Components", "#products"],
-    ["Quality & references", "#cases"],
-    ["Capabilities", "#capabilities"],
-    ["FAQ", "#faq"],
-  ];
-
-  return (
-    <header className="sticky top-0 z-50 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
-      <div className="site-container flex h-full items-center gap-6">
-        <a href="/" aria-label="Realjet home" className="shrink-0">
-          <img src={logoImage} alt="Realjet" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px]" />
-        </a>
-        <nav className="ml-auto flex items-center gap-6 text-xs font-bold text-white/70 max-[980px]:hidden" aria-label="Primary navigation">
-          {navItems.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
-        </nav>
-        <button type="button" onClick={() => onLead("Request a Manufacturing Quote")} data-cta-id="header" className="rounded-lg bg-[#d94824] px-4 py-2.5 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[980px]:ml-auto max-[640px]:hidden">Request a Manufacturing Quote</button>
-        <button type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} onClick={() => setOpen((value) => !value)} className="hidden rounded-lg border border-white/20 p-2 max-[980px]:block">
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-      {open && (
-        <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-4 py-4 shadow-floating min-[981px]:hidden" aria-label="Mobile navigation">
-          <div className="site-container grid gap-1">
-            {navItems.map(([label, href]) => <a key={href} href={href} onClick={() => setOpen(false)} className="rounded-lg px-3 py-3 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>)}
-            <button type="button" onClick={() => { setOpen(false); onLead("Request a Manufacturing Quote"); }} data-cta-id="mobile_menu" className="mt-2 rounded-lg bg-[#d94824] px-3 py-3 text-center text-sm font-extrabold text-white transition hover:bg-[#b93619] focus-visible:bg-[#b93619]">Request a Manufacturing Quote</button>
-          </div>
-        </nav>
-      )}
-    </header>
-  );
+  return <SolutionAnchorBar links={[["Components", "#products"], ["Quality & references", "#cases"], ["Capabilities", "#capabilities"], ["FAQ", "#faq"]]} onEnquiry={() => onLead("Request a Manufacturing Quote")}></SolutionAnchorBar>;
 }
 
 function LeadModal({ open, onClose, title }) {

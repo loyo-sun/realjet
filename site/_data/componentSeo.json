@@ -1,0 +1,686 @@
+{
+  "gpu-server-sheet-metal-chassis": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you keep the panels aligned after joining?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The drawing review establishes a common shell datum, the panel locating arrangement and a joining sequence. The first article should be measured after joining and again where finishing may affect the mating interfaces. Tooling and measurement equipment are confirmed in the quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I order the shell without the complete chassis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Identify the shell drawing and mating interfaces. Panels, reinforcement and purchased hardware are included only when they are listed in the quotation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "gpu-carrier-tray": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When should support heights be checked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check the formed tray before reinforcement hides the features, then verify the finished support geometry after joining and surface treatment. The agreed report identifies the measurement datums and individual support positions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the tray fit different GPU server configurations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Each tray is made to its approved board and chassis interfaces. Provide the configuration drawing or revision for each variant rather than assuming one tray fits every server."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "gpu-retention-bracket": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does a small bracket need welding or milling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only if those operations are required by its features. For an ordinary formed retention bracket, the review focuses on the blank, bend offset, fixing holes and edge finish. Spring latches need a separate material and forming review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you make a bracket from our PCIe GPU layout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, the metal bracket can be reviewed from your dimensioned drawing and assembly view. Identify the card envelope, attachment points and areas that must not contact electronics."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "gpu-server-fan-cage": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why check every fan slot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A module can fit one slot while another is affected by pitch, forming or joining variation. The first-article plan should record each aperture and position, then check seating in each slot with the nominated module or gauge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you supply the fans with the cage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The standard enquiry scope is the metal frame. List any purchased fan modules or hardware separately if you want them included in the quotation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "ai-rack-power-shelf-chassis": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is the full power-module bay pattern checked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The plan should measure divider positions from one datum and trial-fit each bay after joining and finish. Hardware installation and any electrical contact tests need their own agreed route; dimensional fit alone does not validate the power shelf."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the same chassis serve an AI rack and a charging cabinet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The fabrication approach may be similar, but module envelopes, mounting and electrical clearances differ. Each application needs its own approved chassis drawing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "ai-server-rack-welded-frame": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is a diagonal check enough to accept the rack frame?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Diagonals help describe squareness, but rail location, straightness and base interfaces also need checks. Measurements should identify the support condition and whether the frame is free of assembly-fixture restraint."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the frame be made for our rail spacing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Provide the rail interface drawing, datum scheme and required rack envelope. Include the mating rail specification or checking fixture where available."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "ai-cdu-chassis-frame": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can the frame be checked before pumps and pipework arrive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A nominated dummy or fixture can check the mechanical mounting envelope and service path if it represents the approved equipment interfaces. It cannot validate coolant circulation, cooling duty or pressure integrity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you make the frame for an AI data-center CDU?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we review the metal frame from your equipment and component drawings. Identify the pump, heat exchanger, enclosure and rack or floor interfaces to be included."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "cdu-pump-mounting-plate": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should the seating faces be machined before reinforcement is welded?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The review considers whether joining can change the seating plane. Where the drawing requires a finished plane after welding, the proposed route places the relevant machining and final measurement after the joining operation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you machine the pump seating faces?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Face machining and hole machining can be reviewed from your drawing. Specify the datums, finish and dimensional limits so the machining and inspection scope can be quoted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "cdu-heat-exchanger-mounting-bracket": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you check a handed bracket pair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Identify both parts and establish their common frame-side datums. The inspection plan can check offsets separately and the installed spacing as a pair, using the nominated exchanger interface or fixture."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the bracket in contact with coolant?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The proposed product is a non-wetted mounting bracket. Any coolant-contact or pressure-containing part needs a separate material, joining and test review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "ai-rack-manifold-mounting-bracket": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a rack fit check confirm the manifold side too?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not by itself. Both interfaces and their stand-off need verification. A bracket can fit the rack while placing the manifold outside its required location or hose-clearance envelope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you match an existing rack hole pattern?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Provide the rack interface drawing, hole pitch and required mounting hardware. Include a mating sample or gauge if one is needed for the acceptance check."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "bess-cabinet-welded-frame": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When should the door opening be checked?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check it after frame joining and fixture release, and review it again where finish or installed supports affect fit. A door fitted only while the frame is restrained does not establish the delivered frame condition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you make a frame for our battery module arrangement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Send the cabinet assembly, module-support interfaces and loading requirements. The frame quotation follows that approved design rather than a universal module layout."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "bess-battery-module-support-tray": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What has to be defined for a tray deflection check?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The module mass alone is insufficient. Specify where the load acts, the rack supports and span, measurement positions and acceptance limits. The quotation must confirm the test fixture and measurement route."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a sealed battery pack tray?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. This product supports an enclosed module externally. A sealed pack housing requires its own design, sealing requirements and manufacturing review."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "bess-battery-module-support-rail": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why inspect the rails as a pair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two individually acceptable rails can still leave the installed support heights or spacing incorrect. The paired check should use the cabinet attachment datums and the module insertion envelope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the rails be supplied as a matched pair?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Provide the pair assembly drawing, installed spacing and identification requirements. Agree whether the pair is checked with a module or an approved gauge."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "bess-cabinet-service-door": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can closing the latch hide a door flatness problem?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can pull the panel against the frame. If the drawing controls the free panel shape, measure that condition separately from closing gaps and lock operation. The acceptance plan needs to identify both conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you match the hinges and lock on our cabinet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Provide hardware drawings or part references together with the cabinet opening. Identify whether the hardware is supplied by you or included in the quotation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "energy-storage-pcs-metal-chassis": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does checking the chassis clearances validate the PCS electrically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Dimensional inspection can verify the specified metalwork features. Complete electrical safety and performance require the defined equipment assembly and test scope."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you manufacture only the PCS shell or a mounting panel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Send the part drawing with an assembly view showing the interfaces. The quotation can cover individual metal parts or a defined chassis structure."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "dc-charger-power-cabinet-frame": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should the frame be inspected with its panels pulling it into shape?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The delivered frame condition and panel fit should be distinguished. The review defines where free-state geometry is required, then checks that the specified panels and modules fit without concealing frame misalignment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the frame suit a modular DC charging layout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Provide the power-module arrangement, outer-panel interfaces and service clearances. Each cabinet variant follows its approved drawing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "dc-charger-power-module-carrier": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a loose power module alone prove the carrier fits the cabinet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It can check some module interfaces, but not the full installed access. The first-article plan should represent the cabinet or shelf attachment and service space as well as the module."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the carrier be made for our power module?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Send the module envelope, support and fixing details with the cabinet or shelf interface. Identify any connector zones that the metalwork must keep clear."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  },
+  "pv-inverter-wall-mounting-bracket": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should hook fit be checked before or after coating?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both stages may be useful, but acceptance must address the delivered condition. Where coating build-up affects engagement or locking, use the nominated mating interface for the finished-bracket check."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you make a bracket for a particular inverter model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Provide the approved mounting-interface drawing or a dimensioned design. Include the inverter envelope and hanging details; appearance alone does not establish compatibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I send for the drawing review?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Send the dimensioned PDF, available STEP/DXF/DWG files and assembly view. Include material, finish, quantity, delivery city and drawing revision. Mark the features in the inspection plan that control acceptance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can we approve a sample before ordering repeat quantities?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Request a sample or pilot batch with the agreed dimensional report and any mating checks. Scope, timing and test provision are quoted after review; repeat supply follows the accepted drawing revision and any agreed sample changes."
+        }
+      }
+    ]
+  }
+}

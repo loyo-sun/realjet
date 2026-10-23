@@ -1,7 +1,8 @@
 ---
 layout: layouts/base.njk
 ---
-<article class="product-page{% if sheetMetalProduct %} product-page-sheet-metal{% endif %}{% if productSeries == "spun-pile-equipment" %} product-page-spun-equipment{% endif %}">
+<article class="product-page{% if steelComponentProduct %} product-page-steel-component{% endif %}{% if sheetMetalProduct %} product-page-sheet-metal{% endif %}{% if productSeries == "spun-pile-equipment" %} product-page-spun-equipment{% endif %}">
+  {% set application = steelApplications[slug] %}
   <header class="product-page-heading">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span>{% if productSeries == "precast-concrete-moulds" %}<a href="/precast-concrete-molds/">Precast Concrete Moulds</a>{% else %}<a href="/products/">Products</a>{% endif %}<span aria-hidden="true">/</span>{% if productSeries == "contract-manufacturing" %}<a href="/products/custom-machinery-components/">Custom Machinery Components</a><span aria-hidden="true">/</span>{% endif %}<span aria-current="page">{{ title }}</span></nav>
@@ -10,11 +11,11 @@ layout: layouts/base.njk
   <div class="container product-detail-shell">
     <section class="product-overview">
       <div class="product-gallery" data-product-gallery>
-        <div class="product-gallery-stage"><img src="{{ image }}" alt="{{ imageAlt }}" width="1200" height="675" decoding="async" data-product-gallery-main /></div>
+        <div class="product-gallery-stage"><img src="{{ image }}"{% if imageSmall %} srcset="{{ imageSmall }} 640w, {{ image }} 1200w" sizes="(max-width: 768px) 100vw, 60vw"{% endif %} alt="{{ imageAlt }}" width="1200" height="675" decoding="async" data-product-gallery-main /></div>
         {% if imageCaption %}<p class="product-gallery-note">{{ imageCaption }}</p>{% endif %}
         {% if gallery and gallery.length %}
         <div class="product-gallery-thumbs" aria-label="Product image gallery">
-          <button type="button" class="is-active" aria-pressed="true" aria-label="View main product image" data-product-gallery-thumb data-gallery-src="{{ image }}" data-gallery-alt="{{ imageAlt }}" data-gallery-position="1"><img src="{{ image }}" alt="" width="160" height="90" loading="lazy" decoding="async" /></button>
+          <button type="button" class="is-active" aria-pressed="true" aria-label="View main product image" data-product-gallery-thumb data-gallery-src="{{ image }}"{% if imageSmall %} data-gallery-srcset="{{ imageSmall }} 640w, {{ image }} 1200w"{% endif %} data-gallery-alt="{{ imageAlt }}" data-gallery-position="1"><img src="{{ imageSmall or image }}" alt="" width="160" height="90" loading="lazy" decoding="async" /></button>
           {% for galleryImage in gallery %}
           <button type="button" aria-pressed="false" aria-label="View product image {{ loop.index + 1 }}" data-product-gallery-thumb data-gallery-src="{{ galleryImage.image }}" data-gallery-alt="{{ galleryImage.alt }}" data-gallery-position="{{ loop.index + 1 }}"><img src="{{ galleryImage.image }}" alt="" width="160" height="90" loading="lazy" decoding="async" /></button>
           {% endfor %}
@@ -22,16 +23,17 @@ layout: layouts/base.njk
         {% endif %}
       </div>
       <div class="product-overview-copy">
-        <span class="eyebrow">{% if productSeries == "contract-manufacturing" %}Custom Machinery Components{% elseif productSeries == "precast-concrete-moulds" %}Precast Concrete Moulds{% else %}Precast Production Equipment{% endif %}</span>
+        <span class="eyebrow">{% if application %}{{ application.sector }}{% elseif productSeries == "contract-manufacturing" %}Custom Machinery Components{% elseif productSeries == "precast-concrete-moulds" %}Precast Concrete Moulds{% else %}Precast Production Equipment{% endif %}</span>
         <h1>{{ title }}</h1>
         <p>{{ description }}</p>
         <div class="product-conversion-actions">
-          <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Product enquiry: {{ title }}" data-product-conversion data-conversion-type="enquiry" data-conversion-position="overview">Enquiry <span aria-hidden="true">→</span></button>
+          <button class="button button-dark" type="button" data-universal-enquiry data-enquiry-keyword="Product enquiry: {{ title }}" data-product-conversion data-conversion-type="enquiry" data-conversion-position="overview">{% if aiEnergyProduct %}Request a Quote{% else %}Enquiry{% endif %} <span aria-hidden="true">→</span></button>
           <a class="button product-whatsapp-button" href="https://wa.me/8619310090600?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20this%20product%3A%20{{ title | urlencode }}%0A{{ canonical | urlencode }}%0AChannel%3A%20website" target="_blank" rel="noopener noreferrer" data-product-conversion data-conversion-type="whatsapp" data-conversion-position="overview">WhatsApp <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
 
+    {% if application %}{% include "components/steel-application.njk" %}{% endif %}
     <div class="product-detail-content-layout">
       <div class="product-description article-body">
         {% if solutionUrl %}

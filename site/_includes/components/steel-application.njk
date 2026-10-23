@@ -1,0 +1,6 @@
+<section class="steel-application" aria-labelledby="steel-application-title">
+  <div><span class="eyebrow">Where this component fits</span><h2 id="steel-application-title">{{ application.system }}</h2><p>{{ application.position }}</p></div>
+  <ol class="steel-application-path" aria-label="Component application relationship"><li><span>01 · Application</span><strong>{{ application.sector }}</strong></li><li><span>02 · Equipment</span><strong>{{ application.system }}</strong></li><li><span>03 · Component supply</span><strong>{{ title }}</strong></li></ol>
+  <div class="steel-application-role"><div><h3>What we manufacture</h3><p>{{ application.role }}</p></div><div><h3>Who this is for</h3><p>{{ application.buyer }}</p></div></div>
+  {% if application.applications %}<div class="component-application-contexts">{% for context in application.applications %}<div><span class="eyebrow">{{ context.name }}</span><p>{{ context.equipment }}</p></div>{% endfor %}</div>{% endif %}
+</section>

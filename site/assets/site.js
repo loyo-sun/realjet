@@ -358,6 +358,12 @@ if (productGallery) {
   for (const thumbnail of thumbnails) {
     thumbnail.addEventListener("click", () => {
       mainImage.src = thumbnail.dataset.gallerySrc;
+      // A schematic or other gallery image must replace the responsive hero too.
+      if (thumbnail.dataset.gallerySrcset) {
+        mainImage.srcset = thumbnail.dataset.gallerySrcset;
+      } else {
+        mainImage.removeAttribute("srcset");
+      }
       mainImage.alt = thumbnail.dataset.galleryAlt;
       for (const item of thumbnails) {
         const active = item === thumbnail;
@@ -685,4 +691,35 @@ for (const carousel of document.querySelectorAll(".mould-products-carousel")) {
 
   updateControls();
   window.addEventListener("resize", updateControls);
+}
+
+// Solution categories support pointer hover, touch and keyboard navigation.
+for (const group of document.querySelectorAll('[data-solutions-tabs]')) {
+  const tabs = Array.from(group.querySelectorAll('[role="tab"]'));
+  function activateSolutionTab(tab, focus = false) {
+    for (const candidate of tabs) {
+      const selected = candidate === tab;
+      candidate.setAttribute('aria-selected', String(selected));
+      candidate.tabIndex = selected ? 0 : -1;
+      const panel = document.getElementById(candidate.getAttribute('aria-controls'));
+      if (panel) panel.hidden = !selected;
+    }
+    if (focus) tab.focus();
+  }
+  for (const tab of tabs) {
+    tab.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'mouse') activateSolutionTab(tab);
+    });
+    tab.addEventListener('click', () => activateSolutionTab(tab));
+    tab.addEventListener('keydown', (event) => {
+      let index = tabs.indexOf(tab);
+      if (event.key === 'ArrowDown') index = (index + 1) % tabs.length;
+      else if (event.key === 'ArrowUp') index = (index - 1 + tabs.length) % tabs.length;
+      else if (event.key === 'Home') index = 0;
+      else if (event.key === 'End') index = tabs.length - 1;
+      else return;
+      event.preventDefault();
+      activateSolutionTab(tabs[index], true);
+    });
+  }
 }

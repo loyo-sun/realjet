@@ -16,31 +16,23 @@
           </svg>
         </button>
         <div id="solutions-submenu" class="site-submenu solutions-submenu">
-          <div class="mega-menu-links">
-            <a href="/marketing/precast-beam-factory/en/">
-              <span class="solution-link-title">Precast Beams <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Production lines for bridge beams and girders.</span>
-              </a>
-            <a href="/marketing/spun-pipe-piles-production-line/">
-              <span class="solution-link-title">Spun Concrete Piles <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Production lines for prestressed spun piles.</span>
-              </a>
-            <a href="/solutions/precast-concrete-plant/">
-              <span class="solution-link-title">Walls &amp; Slabs <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Precast plants for wall panels and floor slabs.</span>
-              </a>
-            <a href="/marketing/ppvc-mic-production-line/">
-              <span class="solution-link-title">PPVC / MiC Modules <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Production lines for volumetric concrete modules.</span>
-              </a>
-            <a href="/solutions/concrete-lab-automation/">
-              <span class="solution-link-title">Concrete Testing Laboratory <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Automated specimen preparation, curing and testing.</span>
-              </a>
-            <a href="/marketing/contract_manufacturing/">
-              <span class="solution-link-title">Contract Manufacturing <span aria-hidden="true">↗</span></span>
-              <span class="solution-link-description">Custom metal parts and assemblies to your drawings.</span>
-              </a>
+          <div class="solutions-tab-layout" data-solutions-tabs>
+            <div class="solutions-tab-list" role="tablist" aria-label="Solution types" aria-orientation="vertical">
+              <button type="button" id="solution-tab-manufacturing" role="tab" aria-selected="true" aria-controls="solution-panel-manufacturing" tabindex="0">Contract Manufacturing</button>
+              <button type="button" id="solution-tab-concrete" role="tab" aria-selected="false" aria-controls="solution-panel-concrete" tabindex="-1">Concrete Lines</button>
+            </div>
+            <div class="solutions-tab-panels">
+              <div id="solution-panel-manufacturing" role="tabpanel" aria-labelledby="solution-tab-manufacturing" data-solution-panel>
+                <div class="mega-menu-links">
+                  <a href="/products/ai-infrastructure-components/"><span class="solution-link-title">AI Infrastructure Components <span aria-hidden="true">↗</span></span><span class="solution-link-description">Custom chassis, racks and metal assemblies for servers and data centres.</span></a>
+                  <a href="/products/new-energy-components/"><span class="solution-link-title">Battery &amp; Energy Components <span aria-hidden="true">↗</span></span><span class="solution-link-description">Drawing-based parts for battery equipment, energy storage and EV charging.</span></a>
+                </div>
+                <a class="solutions-capability-link" href="/marketing/contract_manufacturing/">Explore Our Manufacturing Capabilities <span aria-hidden="true">↗</span></a>
+              </div>
+              <div id="solution-panel-concrete" role="tabpanel" aria-labelledby="solution-tab-concrete" data-solution-panel hidden>
+                <div class="mega-menu-links"><a href="/marketing/precast-beam-factory/en/"><span class="solution-link-title">Precast Beams <span aria-hidden="true">↗</span></span><span class="solution-link-description">Production lines for bridge beams and girders.</span></a><a href="/marketing/spun-pipe-piles-production-line/"><span class="solution-link-title">Spun Concrete Piles <span aria-hidden="true">↗</span></span><span class="solution-link-description">Production lines for prestressed spun piles.</span></a><a href="/solutions/precast-concrete-plant/"><span class="solution-link-title">Walls &amp; Slabs <span aria-hidden="true">↗</span></span><span class="solution-link-description">Precast plants for wall panels and floor slabs.</span></a><a href="/marketing/ppvc-mic-production-line/"><span class="solution-link-title">PPVC / MiC Modules <span aria-hidden="true">↗</span></span><span class="solution-link-description">Production lines for volumetric concrete modules.</span></a><a href="/solutions/concrete-lab-automation/"><span class="solution-link-title">Concrete Testing Laboratory <span aria-hidden="true">↗</span></span><span class="solution-link-description">Automated specimen preparation, curing and testing.</span></a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

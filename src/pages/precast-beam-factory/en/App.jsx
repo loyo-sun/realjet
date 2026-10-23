@@ -1,3 +1,4 @@
+import SolutionAnchorBar from "../../../components/SolutionAnchorBar.jsx";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
@@ -557,47 +558,7 @@ function VisualPanel({ icon: Icon, label, index }) {
 }
 
 function Header({ onLead }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const nav = [
-    ["Solution", "#method"],
-    ["Lines", "#lines"],
-    ["Equipment", "#products"],
-    ["Projects", "#projects"],
-    ["Capabilities", "#capabilities"],
-  ];
-
-  return (
-    <header className="sticky top-0 z-40 h-[70px] border-b border-white/10 bg-brand-navy/97 text-white backdrop-blur-xl max-[720px]:h-[62px]">
-      <div className="site-container flex h-full items-center gap-6 max-[720px]:gap-2">
-        <a href="/" aria-label="Realjet home" className="shrink-0">
-          <img src={logoImage} alt="Realjet logo" className="h-8 w-auto max-w-60 object-contain max-[720px]:h-[23px] max-[720px]:max-w-[160px]" />
-        </a>
-        <nav className="ml-auto flex items-center gap-5 text-xs text-white/70 max-[1100px]:hidden" aria-label="Main navigation">
-          {nav.map(([label, href]) => <a key={href} href={href} className="transition hover:text-white">{label}</a>)}
-        </nav>
-        <button onClick={() => onLead("Get a Free Custom Plan")} className="rounded-lg bg-[#d94824] px-3.5 py-2 text-xs font-[850] text-white shadow-[0_8px_22px_rgba(217,72,36,.28)] transition hover:bg-[#b93619] focus-visible:bg-[#b93619] max-[1100px]:ml-auto max-[720px]:hidden">Get a Free Custom Plan</button>
-        <LanguageSwitcher current="en" />
-        <button
-          type="button"
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((value) => !value)}
-          className="hidden rounded-lg border border-white/15 p-2 text-white max-[1100px]:ml-0 max-[1100px]:block"
-        >
-          {menuOpen ? <X size={20} /> : <Menu size={20} />}
-        </button>
-      </div>
-      {menuOpen && (
-        <nav className="absolute inset-x-0 top-full border-t border-white/10 bg-brand-navy px-5 py-4 shadow-floating min-[1101px]:hidden" aria-label="Mobile navigation">
-          <div className="site-container grid gap-1">
-            {nav.map(([label, href]) => (
-              <a key={href} href={href} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2.5 text-sm text-white/75 hover:bg-white/5 hover:text-white">{label}</a>
-            ))}
-          </div>
-        </nav>
-      )}
-    </header>
-  );
+  return <SolutionAnchorBar links={[["Solution", "#method"], ["Lines", "#lines"], ["Equipment", "#products"], ["Projects", "#projects"], ["Capabilities", "#capabilities"]]} onEnquiry={() => onLead("Get a Free Custom Plan")}><LanguageSwitcher current="en" /></SolutionAnchorBar>;
 }
 
 function Hero({ onLead }) {

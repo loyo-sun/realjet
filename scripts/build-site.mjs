@@ -1,3 +1,4 @@
+import { unifySolutionNavigation } from "./unify-solution-navigation.mjs";
 import { prerenderContractManufacturing } from "./prerender-contract-manufacturing.mjs";
 import { spawn } from "node:child_process";
 import { access, cp, mkdir, readFile, readdir, rm, stat } from "node:fs/promises";
@@ -64,6 +65,7 @@ async function readHomepageRecommendations(directory) {
       order: Number(readField("order") || 999),
       productSeries: readField("productSeries"),
       marketingPath: readField("marketingPath"),
+      layout: readField("layout"),
     });
   }
 
@@ -283,7 +285,7 @@ for (const product of catalogueProductRecommendations.filter((item) => !item.dra
     'name="universal-enquiry"',
     'name="keyword"',
     "Contract Manufacturing",
-    "Precast Concrete Production Lines",
+    ...((product.slug === "gpu-server-sheet-metal-chassis" || product.layout === "layouts/component-purchasing.njk") ? ["Email Your Drawings", "id=\"interfaces\"", "id=\"inspection\""] : ["Precast Concrete Production Lines"]),
   ];
   for (const requiredProductDetailContent of requiredProductContent) {
     if (!productDetailPage.includes(requiredProductDetailContent)) {
@@ -599,5 +601,7 @@ await run(process.execPath, ["scripts/validate-site.mjs"]);
 await run(process.execPath, ["scripts/validate-product-catalogue.mjs"]);
 await run(process.execPath, ["scripts/validate-pc-equipment.mjs"]);
 await run(process.execPath, ["scripts/validate-concrete-lab.mjs"]);
+
+await unifySolutionNavigation(projectRoot, finalOutput);
 
 console.log("Realjet website build merged successfully into dist/.");
