@@ -270,6 +270,27 @@
         "context": "AI server liquid-cooling CDU"
       },
       {
+        "slug": "cdu-welded-base-frame",
+        "sector": "AI Liquid Cooling",
+        "system": "Floor-standing data-center coolant distribution unit",
+        "position": "Supports pump, heat exchanger and cabinet mounting interfaces beneath the CDU assembly.",
+        "scope": "Welded base frame with drawing-defined supports, machined mounting pads and floor fixing points.",
+        "interfaces": "Pump seating pads, heat exchanger supports, cabinet fixing holes and floor anchors.",
+        "process": "Cut and weld the frame, then machine specified mounting faces and hole patterns.",
+        "inspection": "Check frame geometry, mounting-pad relationships and datum-based holes under agreed support conditions.",
+        "title": "CDU Welded Base Frame",
+        "cn": "CDU液冷设备焊接底架",
+        "category": "AI",
+        "markets": [
+          "ai"
+        ],
+        "shared": false,
+        "aiUse": "Floor-standing data-center coolant distribution unit",
+        "image": "/images/products/ai-energy-components/cdu-welded-base-frame-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/cdu-welded-base-frame-generated-640.jpg",
+        "context": "Data-center liquid-cooling CDU"
+      },
+      {
         "slug": "cdu-pump-mounting-plate",
         "sector": "AI Liquid Cooling",
         "system": "AI liquid-cooling CDU pump assembly",
@@ -478,6 +499,63 @@
         "image": "/images/products/ai-energy-components/bess-cabinet-service-door.webp",
         "imageSmall": "/images/products/ai-energy-components/bess-cabinet-service-door-640.webp",
         "context": "AI infrastructure auxiliary equipment cabinet"
+      },
+      {
+        "slug": "pump-skid-base",
+        "title": "Machined Pump Skid Base",
+        "cn": "冷却泵组撬装底座",
+        "sector": "Liquid-cooling equipment supports",
+        "scope": "The fabricated skid, pump and motor seating pads, and drawing-defined pipe-support attachments.",
+        "context": "Prefabricated data-center cooling pump sets",
+        "image": "/images/products/ai-energy-components/pump-skid-base-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/pump-skid-base-generated-640.jpg",
+        "markets": [
+          "ai"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "data-center-power-mounting-frame",
+        "title": "Data Center Power Equipment Mounting Frame",
+        "cn": "数据中心配电设备安装框架",
+        "sector": "Rack and power equipment",
+        "scope": "The steel mounting frame, cabinet seating points and specified mechanical connections.",
+        "context": "Mechanical bases for prefabricated electrical equipment",
+        "image": "/images/products/ai-energy-components/data-center-power-mounting-frame-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/data-center-power-mounting-frame-generated-640.jpg",
+        "markets": [
+          "ai"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "server-rack-welded-base",
+        "title": "Welded Server Rack Base",
+        "cn": "服务器机柜焊接底座",
+        "sector": "Rack and power equipment",
+        "scope": "The welded rack base and specified mechanical attachment points.",
+        "context": "A base matched to your server cabinet",
+        "image": "/images/products/ai-energy-components/server-rack-welded-base-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/server-rack-welded-base-generated-640.jpg",
+        "markets": [
+          "ai"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "machine-vision-inspection-frame",
+        "title": "Machine Vision Inspection Frame",
+        "cn": "工业视觉检测设备机架",
+        "sector": "Machine vision inspection equipment",
+        "scope": "The welded station frame, specified camera-support mounting structure and fixture interfaces.",
+        "context": "Mechanical structure for an industrial vision station",
+        "image": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated-640.jpg",
+        "markets": [
+          "ai",
+          "energy"
+        ],
+        "shared": true
       }
     ],
     "checks": [
@@ -724,6 +802,34 @@
             "image": "/images/products/ai-energy-components/dc-charger-power-module-carrier.webp",
             "imageSmall": "/images/products/ai-energy-components/dc-charger-power-module-carrier-640.webp",
             "context": "AI infrastructure modular power equipment"
+          },
+          {
+            "slug": "data-center-power-mounting-frame",
+            "title": "Data Center Power Equipment Mounting Frame",
+            "cn": "数据中心配电设备安装框架",
+            "sector": "Rack and power equipment",
+            "scope": "The steel mounting frame, cabinet seating points and specified mechanical connections.",
+            "context": "Mechanical bases for prefabricated electrical equipment",
+            "image": "/images/products/ai-energy-components/data-center-power-mounting-frame-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/data-center-power-mounting-frame-generated-640.jpg",
+            "markets": [
+              "ai"
+            ],
+            "shared": false
+          },
+          {
+            "slug": "server-rack-welded-base",
+            "title": "Welded Server Rack Base",
+            "cn": "服务器机柜焊接底座",
+            "sector": "Rack and power equipment",
+            "scope": "The welded rack base and specified mechanical attachment points.",
+            "context": "A base matched to your server cabinet",
+            "image": "/images/products/ai-energy-components/server-rack-welded-base-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/server-rack-welded-base-generated-640.jpg",
+            "markets": [
+              "ai"
+            ],
+            "shared": false
           }
         ]
       },
@@ -760,6 +866,27 @@
             "image": "/images/products/ai-energy-components/ai-cdu-chassis-frame.webp",
             "imageSmall": "/images/products/ai-energy-components/ai-cdu-chassis-frame-640.webp",
             "context": "AI server liquid-cooling CDU"
+          },
+          {
+            "slug": "cdu-welded-base-frame",
+            "sector": "AI Liquid Cooling",
+            "system": "Floor-standing data-center coolant distribution unit",
+            "position": "Supports pump, heat exchanger and cabinet mounting interfaces beneath the CDU assembly.",
+            "scope": "Welded base frame with drawing-defined supports, machined mounting pads and floor fixing points.",
+            "interfaces": "Pump seating pads, heat exchanger supports, cabinet fixing holes and floor anchors.",
+            "process": "Cut and weld the frame, then machine specified mounting faces and hole patterns.",
+            "inspection": "Check frame geometry, mounting-pad relationships and datum-based holes under agreed support conditions.",
+            "title": "CDU Welded Base Frame",
+            "cn": "CDU液冷设备焊接底架",
+            "category": "AI",
+            "markets": [
+              "ai"
+            ],
+            "shared": false,
+            "aiUse": "Floor-standing data-center coolant distribution unit",
+            "image": "/images/products/ai-energy-components/cdu-welded-base-frame-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/cdu-welded-base-frame-generated-640.jpg",
+            "context": "Data-center liquid-cooling CDU"
           },
           {
             "slug": "cdu-pump-mounting-plate",
@@ -850,6 +977,20 @@
             "image": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket.webp",
             "imageSmall": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket-640.webp",
             "context": "AI server rack cooling manifold"
+          },
+          {
+            "slug": "pump-skid-base",
+            "title": "Machined Pump Skid Base",
+            "cn": "冷却泵组撬装底座",
+            "sector": "Liquid-cooling equipment supports",
+            "scope": "The fabricated skid, pump and motor seating pads, and drawing-defined pipe-support attachments.",
+            "context": "Prefabricated data-center cooling pump sets",
+            "image": "/images/products/ai-energy-components/pump-skid-base-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/pump-skid-base-generated-640.jpg",
+            "markets": [
+              "ai"
+            ],
+            "shared": false
           }
         ]
       },
@@ -976,6 +1117,27 @@
             "image": "/images/products/ai-energy-components/bess-cabinet-service-door.webp",
             "imageSmall": "/images/products/ai-energy-components/bess-cabinet-service-door-640.webp",
             "context": "AI infrastructure auxiliary equipment cabinet"
+          }
+        ]
+      },
+      {
+        "heading": "Machine vision inspection equipment",
+        "intro": "For camera, fixture and conveyor mounting in customer-designed inspection stations.",
+        "items": [
+          {
+            "slug": "machine-vision-inspection-frame",
+            "title": "Machine Vision Inspection Frame",
+            "cn": "工业视觉检测设备机架",
+            "sector": "Machine vision inspection equipment",
+            "scope": "The welded station frame, specified camera-support mounting structure and fixture interfaces.",
+            "context": "Mechanical structure for an industrial vision station",
+            "image": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated-640.jpg",
+            "markets": [
+              "ai",
+              "energy"
+            ],
+            "shared": true
           }
         ]
       }
@@ -1436,6 +1598,119 @@
         "image": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket.webp",
         "imageSmall": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket-640.webp",
         "context": "Energy-storage cooling manifold assembly"
+      },
+      {
+        "slug": "machine-vision-inspection-frame",
+        "title": "Machine Vision Inspection Frame",
+        "cn": "工业视觉检测设备机架",
+        "sector": "Machine vision inspection equipment",
+        "scope": "The welded station frame, specified camera-support mounting structure and fixture interfaces.",
+        "context": "Mechanical structure for an industrial vision station",
+        "image": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated-640.jpg",
+        "markets": [
+          "ai",
+          "energy"
+        ],
+        "shared": true
+      },
+      {
+        "slug": "battery-module-assembly-frame",
+        "title": "Battery Module Assembly Machine Frame",
+        "cn": "电池模组装配设备焊接机架",
+        "sector": "Battery manufacturing and testing equipment",
+        "scope": "The steel assembly-station frame and specified equipment mounting features.",
+        "context": "Module assembly and handling stations",
+        "image": "/images/products/ai-energy-components/battery-module-assembly-frame-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/battery-module-assembly-frame-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "battery-pack-test-base",
+        "title": "Battery Pack EOL Test Equipment Base",
+        "cn": "电池 PACK 测试设备底座",
+        "sector": "Battery manufacturing and testing equipment",
+        "scope": "The mechanical test-station base, locating seats and approved attachments.",
+        "context": "Mechanical support beneath a pack test station",
+        "image": "/images/products/ai-energy-components/battery-pack-test-base-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/battery-pack-test-base-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "battery-equipment-mounting-plate",
+        "title": "Machined Battery Equipment Mounting Plate",
+        "cn": "电池生产线设备安装板",
+        "sector": "Battery manufacturing and testing equipment",
+        "scope": "The machined mounting plate for equipment actuators, fixtures, guides or sensors.",
+        "context": "An interface plate inside battery assembly equipment",
+        "image": "/images/products/ai-energy-components/battery-equipment-mounting-plate-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/battery-equipment-mounting-plate-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "bess-cabinet-welded-base",
+        "title": "BESS Cabinet Welded Base",
+        "cn": "储能柜焊接底座",
+        "sector": "Battery storage racks and cabinets",
+        "scope": "The cabinet base, foundation attachment points and drawing-defined handling structure.",
+        "context": "The mechanical interface below an energy-storage cabinet",
+        "image": "/images/products/ai-energy-components/bess-cabinet-welded-base-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/bess-cabinet-welded-base-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "battery-module-support-tray-v2",
+        "title": "Battery Module Support Tray",
+        "cn": "储能电池模组支撑托架",
+        "sector": "Battery storage racks and cabinets",
+        "scope": "The external module-support tray and approved metal connections.",
+        "context": "External support within an energy-storage cabinet",
+        "image": "/images/products/ai-energy-components/battery-module-support-tray-v2-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/battery-module-support-tray-v2-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "dc-charger-cabinet-frame-v2",
+        "title": "DC Charger Cabinet Frame",
+        "cn": "直流充电设备柜体骨架",
+        "sector": "EV DC charging equipment",
+        "scope": "The mechanical cabinet skeleton and specified mounting rails.",
+        "context": "The internal structure of a floor-standing DC charger",
+        "image": "/images/products/ai-energy-components/dc-charger-cabinet-frame-v2-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/dc-charger-cabinet-frame-v2-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
+      },
+      {
+        "slug": "solar-inverter-mounting-bracket-v2",
+        "title": "Solar Inverter Mounting Bracket",
+        "cn": "逆变器定制安装支架",
+        "sector": "Solar inverter mounting",
+        "scope": "The custom bracket connecting a specified inverter to the approved wall, post or equipment support.",
+        "context": "A mounting interface for a specified inverter",
+        "image": "/images/products/ai-energy-components/solar-inverter-mounting-bracket-v2-generated.jpg",
+        "imageSmall": "/images/products/ai-energy-components/solar-inverter-mounting-bracket-v2-generated-640.jpg",
+        "markets": [
+          "energy"
+        ],
+        "shared": false
       }
     ],
     "checks": [
@@ -1620,6 +1895,34 @@
             "image": "/images/products/ai-energy-components/ai-server-rack-welded-frame.webp",
             "imageSmall": "/images/products/ai-energy-components/ai-server-rack-welded-frame-640.webp",
             "context": "Rack-mounted storage and energy-control equipment"
+          },
+          {
+            "slug": "bess-cabinet-welded-base",
+            "title": "BESS Cabinet Welded Base",
+            "cn": "储能柜焊接底座",
+            "sector": "Battery storage racks and cabinets",
+            "scope": "The cabinet base, foundation attachment points and drawing-defined handling structure.",
+            "context": "The mechanical interface below an energy-storage cabinet",
+            "image": "/images/products/ai-energy-components/bess-cabinet-welded-base-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/bess-cabinet-welded-base-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
+          },
+          {
+            "slug": "battery-module-support-tray-v2",
+            "title": "Battery Module Support Tray",
+            "cn": "储能电池模组支撑托架",
+            "sector": "Battery storage racks and cabinets",
+            "scope": "The external module-support tray and approved metal connections.",
+            "context": "External support within an energy-storage cabinet",
+            "image": "/images/products/ai-energy-components/battery-module-support-tray-v2-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/battery-module-support-tray-v2-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
           }
         ]
       },
@@ -1750,6 +2053,20 @@
             "image": "/images/products/ai-energy-components/dc-charger-power-module-carrier.webp",
             "imageSmall": "/images/products/ai-energy-components/dc-charger-power-module-carrier-640.webp",
             "context": "DC charging power cabinet"
+          },
+          {
+            "slug": "dc-charger-cabinet-frame-v2",
+            "title": "DC Charger Cabinet Frame",
+            "cn": "直流充电设备柜体骨架",
+            "sector": "EV DC charging equipment",
+            "scope": "The mechanical cabinet skeleton and specified mounting rails.",
+            "context": "The internal structure of a floor-standing DC charger",
+            "image": "/images/products/ai-energy-components/dc-charger-cabinet-frame-v2-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/dc-charger-cabinet-frame-v2-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
           }
         ]
       },
@@ -1785,6 +2102,20 @@
             "image": "/images/products/ai-energy-components/pv-inverter-wall-mounting-bracket.webp",
             "imageSmall": "/images/products/ai-energy-components/pv-inverter-wall-mounting-bracket-640.webp",
             "context": "PV inverter"
+          },
+          {
+            "slug": "solar-inverter-mounting-bracket-v2",
+            "title": "Solar Inverter Mounting Bracket",
+            "cn": "逆变器定制安装支架",
+            "sector": "Solar inverter mounting",
+            "scope": "The custom bracket connecting a specified inverter to the approved wall, post or equipment support.",
+            "context": "A mounting interface for a specified inverter",
+            "image": "/images/products/ai-energy-components/solar-inverter-mounting-bracket-v2-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/solar-inverter-mounting-bracket-v2-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
           }
         ]
       },
@@ -1911,6 +2242,69 @@
             "image": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket.webp",
             "imageSmall": "/images/products/ai-energy-components/ai-rack-manifold-mounting-bracket-640.webp",
             "context": "Energy-storage cooling manifold assembly"
+          }
+        ]
+      },
+      {
+        "heading": "Battery manufacturing and testing equipment",
+        "intro": "For module assembly stations, test equipment and their mechanical mounting interfaces.",
+        "items": [
+          {
+            "slug": "machine-vision-inspection-frame",
+            "title": "Machine Vision Inspection Frame",
+            "cn": "工业视觉检测设备机架",
+            "sector": "Machine vision inspection equipment",
+            "scope": "The welded station frame, specified camera-support mounting structure and fixture interfaces.",
+            "context": "Mechanical structure for an industrial vision station",
+            "image": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/machine-vision-inspection-frame-generated-640.jpg",
+            "markets": [
+              "ai",
+              "energy"
+            ],
+            "shared": true
+          },
+          {
+            "slug": "battery-module-assembly-frame",
+            "title": "Battery Module Assembly Machine Frame",
+            "cn": "电池模组装配设备焊接机架",
+            "sector": "Battery manufacturing and testing equipment",
+            "scope": "The steel assembly-station frame and specified equipment mounting features.",
+            "context": "Module assembly and handling stations",
+            "image": "/images/products/ai-energy-components/battery-module-assembly-frame-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/battery-module-assembly-frame-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
+          },
+          {
+            "slug": "battery-pack-test-base",
+            "title": "Battery Pack EOL Test Equipment Base",
+            "cn": "电池 PACK 测试设备底座",
+            "sector": "Battery manufacturing and testing equipment",
+            "scope": "The mechanical test-station base, locating seats and approved attachments.",
+            "context": "Mechanical support beneath a pack test station",
+            "image": "/images/products/ai-energy-components/battery-pack-test-base-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/battery-pack-test-base-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
+          },
+          {
+            "slug": "battery-equipment-mounting-plate",
+            "title": "Machined Battery Equipment Mounting Plate",
+            "cn": "电池生产线设备安装板",
+            "sector": "Battery manufacturing and testing equipment",
+            "scope": "The machined mounting plate for equipment actuators, fixtures, guides or sensors.",
+            "context": "An interface plate inside battery assembly equipment",
+            "image": "/images/products/ai-energy-components/battery-equipment-mounting-plate-generated.jpg",
+            "imageSmall": "/images/products/ai-energy-components/battery-equipment-mounting-plate-generated-640.jpg",
+            "markets": [
+              "energy"
+            ],
+            "shared": false
           }
         ]
       }

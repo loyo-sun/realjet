@@ -2,6 +2,10 @@
 permalink: /_redirects
 eleventyExcludeFromCollections: true
 ---
+{% for alias in manufacturingRedirects.aliases %}{{ alias }} {{ manufacturingRedirects.target }} 301!
+{% endfor %}
+{% for alias in manufacturingRedirects.serviceAliases %}{{ alias }} {{ manufacturingRedirects.serviceTarget }} 301!
+{% endfor %}
 # Netlify Pretty URLs also serves .html files without their extension.
 # Consolidate only known published product aliases; leave catalogue directories alone.
 {% for product in collections.publishedProducts %}{% if product.url and product.url.endsWith('.html') %}

@@ -16,8 +16,8 @@ for (const [source, target, status] of rules) {
   sources.add(source);
   assert.equal(status, '301!');
   assert.notEqual(source, target);
-  assert(target.startsWith('/products/') && target.endsWith('.html'));
-  const html = await readFile(resolve(output, target.slice(1)), 'utf8');
+  assert((target.startsWith('/products/') && target.endsWith('.html')) || ['/about/manufacturing-capabilities/', '/solutions/contract-manufacturing/'].includes(target));
+  const html = await readFile(resolve(output, target.slice(1) + (target.endsWith('/') ? 'index.html' : '')), 'utf8');
   assert(html.includes(`<link rel="canonical" href="https://realjetech.com${target}"`), `${target}: canonical`);
   assert(!/<meta\b[^>]*name="robots"[^>]*content="[^"]*noindex/i.test(html), `${target}: indexable`);
   assert(urls.includes(`https://realjetech.com${target}`), `${target}: sitemap`);

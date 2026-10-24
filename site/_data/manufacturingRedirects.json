@@ -1,0 +1,14 @@
+{
+  "target": "/about/manufacturing-capabilities/",
+  "aliases": [
+    "/marketing/contract_manufacturing/",
+    "/marketing/contract_manufacturing",
+    "/marketing/contract_manufacturing/index.html"
+  ],
+  "serviceTarget": "/solutions/contract-manufacturing/",
+  "serviceAliases": [
+    "/services/contract-manufacturing/",
+    "/services/contract-manufacturing",
+    "/services/contract-manufacturing/index.html"
+  ]
+}

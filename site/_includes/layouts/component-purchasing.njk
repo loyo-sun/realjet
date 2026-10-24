@@ -55,10 +55,7 @@ layout: layouts/base.njk
         {% endif %}
       </div>
     </div>
-    <div class="product-latest-section">
-      {% if relatedParts and relatedParts.length %}<aside aria-labelledby="component-related-title"><h2 id="component-related-title">Related parts for your equipment</h2><nav class="latest-product-list" aria-label="Related component details">{% for part in relatedParts %}<a href="{{ part.url }}">{{ part.title }} →</a>{% endfor %}</nav></aside>{% endif %}
-    </div>
   </div>
 
-  <section class="container"><p><a href="/marketing/contract_manufacturing/">Explore REALJET Contract Manufacturing Services →</a></p></section>
+  {% include "components/product-topic-band.njk" %}
 </article>

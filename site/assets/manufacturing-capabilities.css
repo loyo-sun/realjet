@@ -1,0 +1,165 @@
+.mh-page--capabilities{--mcap-ink:#17374b;--mcap-paper:#f3f2ed;--mcap-line:#d4dfe1;background:#fff;color:var(--mcap-ink)}
+.mcap-section{padding:90px 0}
+.mcap-eyebrow{display:block;text-transform:uppercase;font-size:10px;letter-spacing:.14em;line-height:1.7;font-weight:600;color:#607f8d;margin-bottom:18px}
+.mcap-hero{background:var(--mcap-paper);padding-bottom:75px}
+.mcap-breadcrumb{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:10px;color:#6a828d;padding:25px 0 40px}
+.mcap-breadcrumb a{color:inherit;text-decoration:none}
+.mcap-hero-grid{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:65px}
+.mcap-hero-copy{padding:20px 0}
+.mh-page--capabilities .mcap-hero h1{font-size:clamp(38px,4.6vw,60px);font-weight:500;letter-spacing:-.045em;line-height:1.07;margin:0 0 28px}
+.mcap-hero-copy>p{font-size:16px;line-height:1.85;color:#496675;margin:0 0 20px;max-width:470px}
+.mcap-hero-copy>p.mcap-hero-detail{font-size:13px;color:#71838b;margin-bottom:27px}
+.mh-page--capabilities .button{border-radius:2px;box-shadow:none;background:#b95a36;border-color:#b95a36;padding:15px 22px;font-size:12px}
+.mcap-location{display:flex;flex-wrap:wrap;gap:13px 23px;padding-top:30px;font-size:10px;color:#6b828d}
+.mcap-location span+span{border-left:1px solid #c5d1d4;padding-left:23px}
+.mcap-hero-visual{position:relative;padding:0 0 95px 30px}
+.mcap-factory{margin:0;position:relative}
+.mcap-factory img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:50%}
+.mcap-factory figcaption{position:absolute;top:20px;left:20px;background:#0d2c43e8;color:#fff;font-size:9px;letter-spacing:.12em;padding:12px 17px;text-transform:uppercase}
+.mcap-workshop-inset{position:absolute;width:65%;bottom:0;left:-25px;margin:0;border:7px solid var(--mcap-paper);background:#fff}
+.mcap-workshop-inset img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.mcap-workshop-inset figcaption{background:#15364b;color:#d0e1e9;padding:12px 16px;font-size:9px;letter-spacing:.06em}
+.mcap-heading{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:38px}
+.mh-page--capabilities .mcap-section h2{font-size:clamp(30px,3.6vw,45px);line-height:1.12;letter-spacing:-.04em;font-weight:500}
+.mcap-heading>p{font-size:14px;line-height:1.9;color:#5d7785;margin:0;max-width:470px}
+.mcap-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #bccbd1;gap:22px;margin-bottom:32px}
+.mcap-tabs button{display:flex;align-items:center;justify-content:space-between;gap:15px;background:transparent;border:0;border-bottom:3px solid transparent;padding:19px 0;color:#5e7a88;font:inherit;font-size:15px;text-align:left;cursor:pointer;margin-bottom:-1px}
+.mcap-tabs button[aria-selected=true]{color:#173a50;border-bottom-color:#bb5835}
+.mcap-tabs button span{color:#aa6448;font-size:17px}
+.mcap-process-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:58px;align-items:start}
+.mcap-process-panel[hidden]{display:none}
+.mcap-process-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mcap-process-photos figure{margin:0;overflow:hidden;background:#dae2e5}
+.mcap-process-photos .mcap-process-primary{grid-column:1/-1}
+.mcap-process-photos img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;transition:transform .35s}
+.mcap-process-primary img{aspect-ratio:16/10}
+.mcap-process-photos figure:hover img{transform:scale(1.025)}
+.mcap-process-copy .mcap-eyebrow{font-size:9px;margin-bottom:12px}
+.mh-page--capabilities .mcap-process-copy h3{font-size:30px;font-weight:500;line-height:1.2;letter-spacing:-.03em;margin:0 0 20px}
+.mcap-process-copy>p{font-size:14px;line-height:1.85;color:#607b89;margin:0 0 20px}
+.mcap-process-copy dl{margin:0 0 22px}
+.mcap-process-copy dl>div{padding:15px 0;border-top:1px solid var(--mcap-line);display:grid;grid-template-columns:130px 1fr;gap:20px}
+.mcap-process-copy dt{font-size:12px;line-height:1.7;font-weight:600}
+.mcap-process-copy dd{font-size:12px;line-height:1.8;color:#687f8d;margin:0}
+.mcap-equipment-note{background:#edf2f3;padding:17px 20px}
+.mcap-equipment-note>span{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#67838f}
+.mcap-equipment-note>p{font-size:12px;line-height:1.85;margin:8px 0 0;color:#365b70}
+.mcap-supply-note{font-size:10px;color:#6b8693;line-height:1.8;padding:17px 0 0}
+.mcap-review-strip{display:grid;grid-template-columns:.8fr 1.2fr auto;align-items:center;gap:35px;padding:27px 0;border-top:1px solid #cddadd;margin-top:35px}
+.mcap-review-strip strong{font-weight:500;font-size:17px;line-height:1.5;letter-spacing:-.01em}
+.mcap-review-strip p{font-size:12px;line-height:1.85;color:#66808c;margin:0}
+.mcap-review-strip button{background:transparent;border:0;color:#264f66;white-space:nowrap;cursor:pointer;font-size:12px;padding:14px 0}
+.mcap-industries{background:#0c2a40;color:#fff}
+.mcap-industries .mcap-eyebrow{color:#a8c4d2}
+.mcap-industries-layout{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:start}
+.mcap-industries-intro{position:sticky;top:85px}
+.mcap-industries-intro>p{color:#c0d1dc;font-size:14px;line-height:1.9;margin:25px 0 30px;max-width:430px}
+.mcap-industries-intro figure{margin:0;position:relative}
+.mcap-industries-intro img{display:block;width:100%;height:auto;aspect-ratio:16/11;object-fit:cover;filter:brightness(.9)}
+.mcap-industries-intro figcaption{position:absolute;bottom:16px;left:17px;color:white;font-size:9px;letter-spacing:.05em}
+.mcap-industry-list article{border-top:1px solid #35556a;padding:25px 0;display:grid;grid-template-columns:26px 1fr;gap:18px}
+.mcap-industry-index{font-size:10px;color:#8fb2c5;padding-top:5px}
+.mh-page--capabilities .mcap-industry-list h3{font-size:23px;font-weight:500;margin:0 0 11px;letter-spacing:-.02em}
+.mcap-industry-parts{color:#a6c9da;font-size:10px;line-height:1.8}
+.mcap-industry-list p{color:#bccfdb;font-size:13px;line-height:1.85;margin:13px 0}
+.mcap-industry-list a,.mcap-industry-list button{font:inherit;font-size:11px;color:#f1f7fa;text-decoration:none;border:0;background:transparent;padding:0;cursor:pointer;line-height:1.8}
+.mcap-materials{background:var(--mcap-paper)}
+.mcap-material-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.mcap-material-grid article{border-top:2px solid #234a60;padding:25px 0 0;min-width:0}
+.mcap-material-tag{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#75878c}
+.mh-page--capabilities .mcap-material-grid h3{font-size:27px;font-weight:500;letter-spacing:-.035em;margin:17px 0}
+.mcap-material-grid article>p{color:#5e7885;font-size:13px;line-height:1.9;min-height:98px;margin:0 0 24px}
+.mcap-material-review{border-top:1px solid #d2ddde;padding-top:17px}
+.mcap-material-review>span{font-size:9px;text-transform:uppercase;letter-spacing:.07em;color:#536f7c}
+.mcap-material-review p{font-size:12px;line-height:1.85;color:#718590;margin:10px 0 0}
+.mcap-material-photo{display:grid;grid-template-columns:1fr 1fr;background:#e5ebeb;margin-top:42px;align-items:center}
+.mcap-material-photo>img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.mcap-material-photo>div{padding:30px 40px}
+.mcap-material-photo .mcap-eyebrow{font-size:9px;margin-bottom:13px}
+.mcap-material-photo strong{font-size:23px;font-weight:500;letter-spacing:-.025em;line-height:1.3}
+.mcap-material-photo p{font-size:13px;line-height:1.85;color:#657f8b;margin:17px 0 0}
+.mcap-quality-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-bottom:40px}
+.mcap-quality-grid article{border-top:1px solid #ccdadd;padding-top:22px}
+.mcap-quality-grid article>span{font-size:11px;color:#a5684c}
+.mh-page--capabilities .mcap-quality-grid h3{font-weight:500;font-size:21px;line-height:1.3;margin:17px 0}
+.mcap-quality-grid p{font-size:13px;line-height:1.85;color:#657f8c}
+.mcap-quality-resources{display:grid;grid-template-columns:1.1fr 1fr;gap:65px;background:#eef3f4;padding:38px}
+.mcap-quality-resources .mcap-eyebrow{font-size:9px;margin-bottom:10px}
+.mh-page--capabilities .mcap-quality-resources h3{font-size:23px;font-weight:500;letter-spacing:-.025em;margin:0 0 17px}
+.mcap-quality-resources p{font-size:13px;line-height:1.9;color:#607a88;margin:0}
+.mcap-records{border-left:1px solid #c4d4db;padding-left:35px}
+.mcap-records ul{padding-left:17px;font-size:12px;line-height:2.1;color:#436577;margin:0 0 17px}
+.mcap-records p{font-size:11px}
+.mcap-close{padding-top:0}
+.mcap-close-panel{display:grid;grid-template-columns:1fr auto;align-items:center;gap:55px;background:#17394e;color:#fff;padding:48px}
+.mcap-close-panel .mcap-eyebrow{color:#abc7d5}
+.mcap-close-panel p{font-size:14px;line-height:1.85;color:#c2d5df;margin:24px 0 0;max-width:600px}
+.mcap-close-actions{display:flex;flex-direction:column;gap:15px}
+.mcap-close-actions>button{background:transparent;border:1px solid #6f91a5;color:#fff;font:inherit;font-size:12px;cursor:pointer;padding:14px 20px}
+@media(max-width:1050px){.mcap-hero-grid{gap:35px}.mcap-hero-visual{padding-left:15px}.mcap-workshop-inset{left:-10px}.mcap-heading{gap:40px}.mcap-process-panel{gap:30px}.mcap-process-copy dl>div{grid-template-columns:110px 1fr;gap:14px}.mcap-industries-layout{gap:45px}.mcap-material-photo>div{padding:27px}.mcap-quality-grid{gap:20px}}
+@media(max-width:800px){.mcap-section{padding:58px 0}.mcap-breadcrumb{padding-bottom:25px}.mcap-hero{padding-bottom:45px}.mcap-hero-grid{grid-template-columns:1fr;gap:35px}.mcap-hero-copy{padding:10px 0 0}.mcap-hero-copy>p{max-width:580px}.mcap-hero-visual{max-width:620px;padding:0 0 65px 35px}.mcap-factory img{aspect-ratio:16/10}.mcap-workshop-inset{left:0;width:48%}.mcap-heading{grid-template-columns:1fr;gap:23px;margin-bottom:28px}.mcap-heading h2 br{display:none}.mcap-process-panel{grid-template-columns:1fr;gap:30px}.mcap-process-photos{grid-template-columns:1.4fr 1fr;grid-template-rows:1fr 1fr;gap:10px}.mcap-process-photos .mcap-process-primary{grid-column:1;grid-row:1/3}.mcap-process-photos img{height:100%;aspect-ratio:16/10;object-fit:cover}.mcap-process-photos .mcap-process-primary img{aspect-ratio:4/5}.mcap-review-strip{grid-template-columns:1fr auto;gap:17px 26px}.mcap-review-strip p{grid-column:1;grid-row:2}.mcap-review-strip button{grid-column:2;grid-row:1/3}.mcap-industries-layout{grid-template-columns:1fr;gap:35px}.mcap-industries-intro{position:static}.mcap-industries-intro figure{max-width:550px}.mcap-industries-intro img{aspect-ratio:16/9}.mcap-material-grid{gap:20px}.mcap-material-grid article>p{min-height:0}.mcap-material-photo{grid-template-columns:1fr}.mcap-material-photo>img{aspect-ratio:16/8}.mcap-quality-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mcap-quality-resources{grid-template-columns:1fr;gap:30px;padding:30px}.mcap-records{border-left:0;border-top:1px solid #c4d4db;padding:27px 0 0}.mcap-close-panel{grid-template-columns:1fr;gap:30px;padding:34px}.mcap-close-actions{flex-direction:row;flex-wrap:wrap}.mcap-close{padding-top:0}}
+@media(max-width:560px){.mcap-section{padding:43px 0}.mcap-breadcrumb{font-size:9px;gap:7px;padding-top:20px}.mh-page--capabilities .mcap-hero h1{font-size:39px;line-height:1.08}.mcap-hero-copy>p{font-size:15px}.mcap-hero-copy>p.mcap-hero-detail{font-size:13px}.mcap-hero-copy .button{width:100%;justify-content:space-between}.mcap-hero-visual{padding-left:20px;padding-bottom:65px}.mcap-workshop-inset{width:60%;border-width:5px}.mcap-workshop-inset figcaption{font-size:8px;padding:9px 10px}.mcap-factory figcaption{left:12px;top:12px;font-size:8px;padding:9px 12px}.mcap-tabs{gap:16px;display:flex;overflow-x:auto;scrollbar-width:none}.mcap-tabs button{font-size:12px;flex:0 0 auto;padding:15px 0;gap:17px;white-space:nowrap}.mcap-process-photos{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto}.mcap-process-photos .mcap-process-primary{grid-column:1/-1;grid-row:1}.mcap-process-photos img,.mcap-process-photos .mcap-process-primary img{height:auto;aspect-ratio:16/10}.mh-page--capabilities .mcap-process-copy h3{font-size:28px}.mcap-process-copy dl>div{grid-template-columns:1fr;gap:7px}.mcap-review-strip{grid-template-columns:1fr;gap:13px}.mcap-review-strip p,.mcap-review-strip button{grid-column:auto;grid-row:auto}.mcap-review-strip button{text-align:left;padding:6px 0}.mcap-material-grid{grid-template-columns:1fr;gap:30px}.mcap-material-grid article{padding-top:20px}.mcap-material-grid article>p{margin-bottom:17px}.mcap-quality-grid{grid-template-columns:1fr;gap:16px}.mcap-quality-grid p{margin-bottom:0}.mcap-quality-resources{padding:24px}.mcap-close-panel{padding:26px}.mcap-close-actions{flex-direction:column}.mcap-close{padding-top:0}}
+@media(prefers-reduced-motion:reduce){.mcap-process-photos img{transition:none}}
+
+.mcap-process-photos figure{position:relative}.mcap-process-photos figcaption{position:absolute;left:0;bottom:0;max-width:100%;background:#0d2e43e8;color:#fff;font-size:9px;line-height:1.6;letter-spacing:.025em;padding:9px 12px}
+.mcap-hero-certificates{display:inline-block;color:#456a7e;font-size:10px;line-height:1.8;margin-top:20px;text-decoration:none;max-width:430px}
+.mcap-credentials{background:#f4f3ef;border-top:1px solid #e4e8e7}
+.mcap-credentials .mcap-heading{align-items:start}
+.mcap-credential-intro>p{font-size:14px;line-height:1.9;color:#5d7785;margin:0 0 22px;max-width:470px}
+.mcap-brief-link{display:inline-flex;gap:24px;align-items:center;border-bottom:1px solid #ac674a;color:#214c63;text-decoration:none;padding:0 0 10px;font-size:12px}
+.mcap-brief-link>span{color:#ab5b3b;font-size:10px}
+.mcap-credential-holder{display:flex;align-items:baseline;gap:20px;border-top:1px solid #d1ddde;padding:18px 0 24px}
+.mcap-credential-holder>span{font-size:9px;text-transform:uppercase;color:#6f8792;letter-spacing:.07em;white-space:nowrap}
+.mcap-credential-holder>p{font-size:12px;color:#31556a;margin:0;line-height:1.8}
+.mcap-credential-holder p>span{display:block;color:#7a8e96;font-size:10px}
+.mcap-certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.mcap-certificate-card{background:#fff;border:1px solid #d5dfe1;min-width:0}
+.mcap-certificate-preview{display:flex;align-items:center;justify-content:center;position:relative;height:280px;width:100%;padding:21px 25px;background:#e9eeeb;border:0;cursor:zoom-in;overflow:hidden}
+.mcap-certificate-preview img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .3s}
+.mcap-certificate-preview:hover img{transform:scale(1.025)}
+.mcap-certificate-preview>span{position:absolute;bottom:12px;right:12px;background:#14364bdc;color:#fff;padding:7px 10px;font-size:9px}
+.mcap-certificate-copy{padding:24px}
+.mh-page--capabilities .mcap-certificate-copy h3{font-size:23px;font-weight:500;letter-spacing:-.02em;margin:0 0 10px}
+.mcap-certificate-name{color:#41667b;font-size:12px;line-height:1.8;min-height:43px;margin:0 0 12px}
+.mcap-certificate-scope{font-size:12px;line-height:1.85;color:#748892;min-height:88px;margin:0 0 18px}
+.mcap-certificate-copy dl{padding-top:16px;margin:0 0 20px;border-top:1px solid #e0e7e9}
+.mcap-certificate-copy dl>div{display:grid;grid-template-columns:78px 1fr;gap:10px;margin-bottom:10px;font-size:10px;line-height:1.7}
+.mcap-certificate-copy dt{color:#7b909b}
+.mcap-certificate-copy dd{margin:0;color:#335c73;overflow-wrap:anywhere}
+.mcap-certificate-copy>a,.mcap-patent-copy>a,.mcap-recognition div>a{font-size:10px;text-decoration:none;color:#335b72;line-height:1.8}
+.mcap-credential-scope-note{font-size:10px;line-height:1.85;color:#7c8d95;margin:20px 0 0;max-width:930px}
+.mcap-patent-heading{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;padding-top:56px;margin-bottom:27px}
+.mcap-patent-heading .mcap-eyebrow{font-size:9px;margin-bottom:12px}
+.mh-page--capabilities .mcap-patent-heading h3{font-size:29px;font-weight:500;line-height:1.25;letter-spacing:-.03em;margin:0}
+.mcap-patent-heading>p{font-size:13px;color:#607b88;line-height:1.9;margin:0}
+.mcap-patent-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:23px}
+.mcap-patent-card{display:grid;grid-template-columns:130px 1fr;gap:24px;background:#fff;border:1px solid #d6e0e1;padding:25px;min-width:0}
+.mcap-patent-preview{padding:0;border:0;background:#f4f5f1;width:130px;height:190px;cursor:zoom-in;align-self:start}
+.mcap-patent-preview img{display:block;width:100%;height:100%;object-fit:contain}
+.mcap-patent-copy{min-width:0}
+.mcap-patent-type{display:block;font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:#ac6244;margin-bottom:12px}
+.mcap-patent-copy h4{font-size:18px;font-weight:500;line-height:1.4;letter-spacing:-.015em;color:#234d65;margin:0 0 15px}
+.mcap-patent-number{font-size:11px;color:#315b72;margin:0 0 8px;overflow-wrap:anywhere}
+.mcap-patent-grant{font-size:10px;color:#7a919c;margin:0 0 13px}
+.mcap-patent-focus{font-size:10px;line-height:1.7;color:#64818f;padding-top:12px;margin:0 0 15px;border-top:1px solid #e0e7e8}
+.mcap-recognition{display:grid;grid-template-columns:210px 1fr auto;gap:32px;align-items:center;padding:28px;border:1px solid #d0dddf;background:#edf1f0;margin-top:36px}
+.mcap-recognition>button{padding:0;background:transparent;border:0;cursor:zoom-in}
+.mcap-recognition img{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain}
+.mcap-recognition .mcap-eyebrow{font-size:9px;margin-bottom:9px}
+.mh-page--capabilities .mcap-recognition h3{font-size:23px;font-weight:500;line-height:1.3;margin:0 0 13px;letter-spacing:-.02em}
+.mcap-recognition p{font-size:11px;line-height:1.9;color:#708795;margin:0 0 10px}
+.mcap-recognition-brief{font-size:11px;text-decoration:none;line-height:1.9;color:#365c71;border-left:1px solid #c5d4d8;padding-left:26px}
+.mcap-document-dialog{width:min(900px,94vw);max-height:94vh;padding:22px;background:#f6f6f2;border:0;color:#1f455c;box-shadow:0 20px 90px #0007}
+.mcap-document-dialog::backdrop{background:#061b2ccc}
+.mcap-document-toolbar{display:flex;align-items:flex-start;gap:25px;justify-content:space-between;margin-bottom:20px}
+.mcap-document-toolbar h2{font-size:16px!important;line-height:1.5!important;letter-spacing:0!important;font-weight:500!important;margin:0!important;max-width:690px}
+.mcap-document-toolbar>button{border:1px solid #c5d1d6;background:#fff;color:#315870;white-space:nowrap;padding:9px 13px;font-size:11px;cursor:pointer}
+.mcap-document-image{background:#e4e9e7;padding:17px}
+.mcap-document-image img{display:block;width:100%;height:auto;max-height:72vh;object-fit:contain}
+.mcap-document-dialog>a{display:inline-block;font-size:12px;line-height:1.7;color:#315b72;text-decoration:none;margin-top:17px}
+body.mcap-document-open{overflow:hidden}
+@media(max-width:1050px){.mcap-certificate-grid{gap:18px}.mcap-certificate-copy{padding:20px}.mcap-certificate-preview{height:250px;padding:18px}.mcap-certificate-copy dl>div{grid-template-columns:1fr;gap:3px}.mcap-patent-card{grid-template-columns:105px 1fr;gap:19px;padding:22px}.mcap-patent-preview{width:105px;height:160px}.mcap-patent-copy h4{font-size:17px}.mcap-recognition{grid-template-columns:175px 1fr;gap:26px}.mcap-recognition-brief{grid-column:2;border-left:0;border-top:1px solid #ccd9db;padding:13px 0 0}.mcap-recognition-brief br{display:none}}
+@media(max-width:800px){.mcap-credential-holder{flex-direction:column;gap:8px}.mcap-certificate-grid{grid-template-columns:1fr}.mcap-certificate-card{display:grid;grid-template-columns:240px 1fr}.mcap-certificate-preview{height:100%;min-height:325px}.mcap-certificate-name,.mcap-certificate-scope{min-height:0}.mcap-certificate-copy dl>div{grid-template-columns:80px 1fr;gap:9px}.mcap-patent-heading{grid-template-columns:1fr;gap:18px;padding-top:38px}.mcap-patent-grid{grid-template-columns:1fr}.mcap-patent-card{grid-template-columns:130px 1fr}.mcap-patent-preview{width:130px;height:190px}.mcap-recognition{grid-template-columns:160px 1fr;gap:22px;padding:23px}.mcap-credential-intro>p{font-size:14px}.mcap-document-dialog{padding:17px}.mcap-document-image{padding:10px}}
+@media(max-width:560px){.mcap-certificate-card{grid-template-columns:1fr}.mcap-certificate-preview{height:270px;min-height:0;padding:20px}.mcap-certificate-copy{padding:23px}.mcap-certificate-copy dl>div{grid-template-columns:80px 1fr}.mcap-patent-card{grid-template-columns:90px 1fr;gap:18px;padding:20px}.mcap-patent-preview{width:90px;height:133px}.mcap-patent-copy h4{font-size:17px}.mcap-patent-type{font-size:8px}.mcap-patent-heading h3{font-size:27px!important}.mcap-recognition{grid-template-columns:1fr}.mcap-recognition>button{max-width:245px}.mcap-recognition-brief{grid-column:1}.mcap-document-toolbar{gap:15px}.mcap-document-toolbar h2{font-size:13px!important}.mcap-hero-certificates{font-size:9px;margin-top:17px}.mcap-credential-holder>p{font-size:11px}}
+
+.mcap-credential-links{display:flex;flex-wrap:wrap;gap:12px 25px;margin:0 0 25px}.mcap-credential-links a{font-size:10px;line-height:1.8;color:#527589;text-decoration:none;border-bottom:1px solid #d0dcdf;padding-bottom:6px}

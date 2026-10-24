@@ -45,6 +45,9 @@
     <meta name="twitter:image" content="{{ socialImage or site.socialImage }}" />
     <title>{{ seoTitle or title }}</title>
     <link rel="stylesheet" href="/assets/site/site.css" />
+    {% if manufacturingHub %}<link rel="stylesheet" href="/assets/site/manufacturing-hub.css" />{% endif %}
+    {% if manufacturingHub == "capabilities" %}<link rel="stylesheet" href="/assets/site/manufacturing-capabilities.css" /><script src="/assets/site/manufacturing-capabilities.js" defer></script>{% endif %}
+    {% if manufacturingHub == "services" %}<link rel="stylesheet" href="/assets/site/manufacturing-services.css" /><script src="/assets/site/manufacturing-services.js" defer></script>{% endif %}
     {% if industryLanding %}<link rel="stylesheet" href="/assets/site/industry-ui.css" /><script src="/assets/site/industry-ui.js" defer></script>{% endif %}
     {% if pageType == "concrete-lab" %}
     <link rel="stylesheet" href="/assets/site/concrete-lab.css" />
@@ -143,7 +146,7 @@
     {% endif %}
     {% if aiEnergyProduct and componentSeo[slug] %}<script type="application/ld+json">{{ componentSeo[slug] | json | safe }}</script>{% endif %}
   </head>
-  <body data-page-type="{{ pageType or 'page' }}"{% if sheetMetalProduct %} data-sheet-metal-product="true"{% endif %}{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}>
+  <body data-page-type="{{ pageType or 'page' }}"{% if manufacturingHub %} data-manufacturing-hub="{{ manufacturingHub }}"{% endif %}{% if sheetMetalProduct %} data-sheet-metal-product="true"{% endif %}{% if pageType == "insight" and slug %} data-article-slug="{{ slug }}"{% endif %}{% if pageType == "product" and slug %} data-product-slug="{{ slug }}"{% endif %}>
     <a class="skip-link" href="#main-content">Skip to content</a>
     {% include "components/header.njk" %}
     <main id="main-content">{{ content | safe }}</main>

@@ -1,0 +1,7 @@
+---
+layout: layouts/base.njk
+---
+<div class="mh-page mh-page--{{ manufacturingHub }}">
+  <nav class="mh-anchorbar" aria-label="On this page"><div class="container mh-anchor-inner"><div class="mh-anchor-links">{% for link in localSections %}<a href="#{{ link.id }}">{{ link.label }}</a>{% endfor %}</div><button type="button" class="mh-anchor-enquiry" data-universal-enquiry data-enquiry-keyword="{{ enquirySubject }}">Enquiry <span aria-hidden="true">↗</span></button></div></nav>
+  {{ content | safe }}
+</div>

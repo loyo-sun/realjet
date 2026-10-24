@@ -1213,3 +1213,36 @@ body.has-enquiry-modal { overflow: hidden; }
 
 .solutions-capability-link{display:flex;justify-content:flex-end;align-items:center;gap:12px;margin:24px 12px 0;padding-top:18px;border-top:1px solid #ffffff24;color:#d5e4ed;font-size:13px;font-weight:400;text-decoration:none}.solutions-capability-link:hover{color:#79d8df}.solutions-capability-link:focus-visible{outline:2px solid #79d8df;outline-offset:4px}
 @media(max-width:720px){.solutions-tab-layout{grid-template-columns:minmax(0,1fr);gap:14px}.solutions-tab-list{border-right:0;border-bottom:1px solid #ffffff24;padding:0 0 10px;gap:3px}.solutions-tab-list [role="tab"]{font-size:12px;padding:10px 9px}.solutions-capability-link{margin:16px 8px 0;font-size:12px}}
+
+/* Application-topic links span the page rather than the article column. */
+.product-topic-bands { margin-top: 0; }
+.product-topic-band { position: relative; padding: 54px 0; color: #fff; background-color: #102b42; background-size: cover; background-position: center; }
+.product-topic-band + .product-topic-band { border-top: 1px solid rgba(255,255,255,.18); }
+.product-topic-band--ai { background-image: linear-gradient(90deg,rgba(7,27,44,.97),rgba(7,27,44,.83) 58%,rgba(7,27,44,.54)),url('/images/industry-heroes/ai-data-center.webp'); }
+.product-topic-band--energy { background-image: linear-gradient(90deg,rgba(7,32,39,.97),rgba(7,32,39,.84) 58%,rgba(7,32,39,.55)),url('/images/industry-heroes/battery-energy-storage.webp'); }
+.product-topic-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+.product-topic-band-copy { max-width: 760px; min-width: 0; }
+.product-topic-band-eyebrow { display: block; margin-bottom: 13px; color: #b8d4df; font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.product-page .product-topic-band h2 { margin: 0; padding: 0; border: 0; color: #fff; font-size: clamp(25px,2.7vw,35px); line-height: 1.2; }
+.product-topic-band-copy p { max-width: 680px; margin: 16px 0 0; color: #d7e4eb; font-size: 15px; line-height: 1.75; }
+.product-topic-band-link { display: inline-flex; flex: 0 0 auto; justify-content: space-between; align-items: center; gap: 28px; min-height: 48px; padding: 13px 19px; border: 1px solid rgba(255,255,255,.6); border-radius: 7px; background: rgba(8,30,45,.32); color: #fff; font-size: 13px; font-weight: 600; line-height: 1.5; text-decoration: none; transition: background .2s,border-color .2s; }
+.product-topic-band-link:hover,.product-topic-band-link:focus-visible { color: #fff; background: #bf4a2d; border-color: #bf4a2d; }
+.product-topic-band-link:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+@media(max-width: 800px) { .product-topic-band-inner { flex-direction: column; align-items: flex-start; gap: 24px; } .product-topic-band { padding: 38px 0; } .product-topic-bands { margin-top: 0; } }
+@media(max-width: 480px) { .product-topic-band-link { width: 100%; } .product-topic-band-copy p { font-size: 14px; } }
+
+/* Keep both application topics in one row when a component serves both. */
+.product-topic-bands--paired { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); }
+.product-topic-bands--paired .product-topic-band { min-width: 0; padding: 40px clamp(22px,3.3vw,52px); }
+.product-topic-bands--paired .product-topic-band + .product-topic-band { border-top: 0; border-left: 1px solid rgba(255,255,255,.2); }
+.product-topic-bands--paired .product-topic-band-inner { width: 100%; height: 100%; padding: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.product-topic-bands--paired .product-topic-band-copy { width: 100%; }
+.product-page .product-topic-bands--paired h2 { font-size: clamp(24px,2.3vw,31px); }
+.product-topic-bands--paired .product-topic-band-link { margin-top: auto; }
+@media(max-width:700px) {
+  .product-topic-bands--paired { grid-template-columns: minmax(0,1fr); }
+  .product-topic-bands--paired .product-topic-band { padding: 34px 22px; }
+  .product-topic-bands--paired .product-topic-band + .product-topic-band { border-left: 0; border-top: 1px solid rgba(255,255,255,.2); }
+}
+
+#solution-panel-manufacturing .mega-menu-links .solution-service-link { grid-column: 1 / -1; }

@@ -32,6 +32,6 @@ for(const record of plan.products){
 const category=await readFile(join(root,'dist/products/custom-machinery-components/index.html'),'utf8');
 assert(category.includes('Custom OEM Parts and Sheet Metal Fabrication | Realjet'));
 assert(category.includes('made to your drawings'));
-const landing=await readFile(join(root,'dist/marketing/contract_manufacturing/index.html'),'utf8');
+const landing=await readFile(join(root,'dist/solutions/contract-manufacturing/index.html'),'utf8');
 assert(landing.includes('Custom Metal Fabrication | OEM Contract Manufacturing | Realjet'));
 console.log(`Validated custom, OEM, contract manufacturing and drawing-based procurement intent on ${plan.products.length} product pages, the category and service landing page; existing URLs preserved.`);

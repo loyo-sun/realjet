@@ -1,0 +1,26 @@
+{% set topics = componentTopics[slug] %}
+{% if topics and topics.length %}
+<div class="product-topic-bands{% if topics.length > 1 %} product-topic-bands--paired{% endif %}">
+  {% for topic in topics %}
+  <section class="product-topic-band product-topic-band--{{ topic }}" aria-labelledby="product-topic-{{ topic }}">
+    <div class="container product-topic-band-inner">
+      <div class="product-topic-band-copy">
+        <span class="product-topic-band-eyebrow">Custom manufacturing</span>
+        {% if topic == 'ai' %}
+        <h2 id="product-topic-ai">Components for AI &amp; data-center equipment</h2>
+        <p>Find custom frames, mounting plates and equipment supports for your server, cooling or inspection assembly.</p>
+        {% else %}
+        <h2 id="product-topic-energy">Components for batteries, EV charging &amp; solar</h2>
+        <p>Find custom metalwork for battery manufacturing, energy storage cabinets, charging equipment and inverter installations.</p>
+        {% endif %}
+      </div>
+      {% if topic == 'ai' %}
+      <a class="product-topic-band-link" href="/products/ai-infrastructure-components/">View AI equipment components <span aria-hidden="true">↗</span></a>
+      {% else %}
+      <a class="product-topic-band-link" href="/products/new-energy-components/">View energy equipment components <span aria-hidden="true">↗</span></a>
+      {% endif %}
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endif %}

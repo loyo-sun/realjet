@@ -1,3 +1,4 @@
+import { finalizeManufacturingSplit } from "./finalize-manufacturing-split.mjs";
 import { unifySolutionNavigation } from "./unify-solution-navigation.mjs";
 import { prerenderContractManufacturing } from "./prerender-contract-manufacturing.mjs";
 import { spawn } from "node:child_process";
@@ -171,7 +172,7 @@ const insightPage = await readFile(
   "utf8",
 );
 const contractManufacturingPage = await readFile(
-  join(finalOutput, "marketing/contract_manufacturing/index.html"),
+  join(finalOutput, "solutions/contract-manufacturing/index.html"),
   "utf8",
 );
 const spunPipePilesPage = await readFile(
@@ -195,7 +196,7 @@ const llms = await readFile(join(finalOutput, "llms.txt"), "utf8");
 const requiredHomepageContent = [
   '<link rel="canonical" href="https://realjetech.com/"',
   'meta name="robots" content="index, follow"',
-  'href="/marketing/contract_manufacturing/"',
+  'href="/solutions/contract-manufacturing/"',
   'href="/marketing/precast-beam-factory/en/"',
   "Custom Machinery Component Manufacturing",
   "Precast Beam Production Lines",
@@ -439,7 +440,7 @@ if (!manufacturingPage.includes("data-manufacturing-inquiry")) {
   throw new Error("Manufacturing construction page is missing its enquiry CTA.");
 }
 for (const requiredContent of [
-  '<link rel="canonical" href="https://realjetech.com/marketing/contract_manufacturing/"',
+  '<link rel="canonical" href="https://realjetech.com/solutions/contract-manufacturing/"',
   'meta name="robots" content="index, follow"',
   "Custom Metal Components for Machinery OEMs",
   "OEM manufacturing questions",
@@ -514,7 +515,8 @@ for (const requiredSitemapUrl of [
   "https://realjetech.com/precast-concrete-molds/accropode-moulds/",
   "https://realjetech.com/precast-concrete-molds/tetrapod-moulds/",
   "https://realjetech.com/precast-concrete-molds/precast-concrete-caisson-moulds/",
-  "https://realjetech.com/marketing/contract_manufacturing/",
+  "https://realjetech.com/solutions/contract-manufacturing/",
+  "https://realjetech.com/about/manufacturing-capabilities/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
@@ -554,7 +556,8 @@ for (const requiredLlmsContent of [
   "# Realjet",
   "https://realjetech.com/products/",
   "https://realjetech.com/precast-concrete-molds/",
-  "https://realjetech.com/marketing/contract_manufacturing/",
+  "https://realjetech.com/solutions/contract-manufacturing/",
+  "https://realjetech.com/about/manufacturing-capabilities/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/id/",
   "https://realjetech.com/marketing/spun-pipe-piles-production-line/vi/",
@@ -603,5 +606,6 @@ await run(process.execPath, ["scripts/validate-pc-equipment.mjs"]);
 await run(process.execPath, ["scripts/validate-concrete-lab.mjs"]);
 
 await unifySolutionNavigation(projectRoot, finalOutput);
+await finalizeManufacturingSplit(projectRoot, finalOutput);
 
 console.log("Realjet website build merged successfully into dist/.");

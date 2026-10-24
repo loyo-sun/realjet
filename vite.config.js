@@ -1,7 +1,24 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+
+const manufacturingRedirects = JSON.parse(readFileSync(new URL('./site/_data/manufacturingRedirects.json', import.meta.url), 'utf8'));
+const manufacturingRedirectMiddleware = (server) => {
+  server.middlewares.use((req, res, next) => {
+    const url = new URL(req.url, 'http://localhost');
+    const target = manufacturingRedirects.aliases.includes(url.pathname) ? manufacturingRedirects.target : manufacturingRedirects.serviceAliases.includes(url.pathname) ? manufacturingRedirects.serviceTarget : null;
+    if (!target) return next();
+    res.writeHead(301, {Location: target + url.search, 'Cache-Control': 'no-store'});
+    res.end();
+  });
+};
+const manufacturingSplitRedirects = {
+  name: 'realjet-manufacturing-split-redirects',
+  configureServer: manufacturingRedirectMiddleware,
+  configurePreviewServer: manufacturingRedirectMiddleware,
+};
 
 const consentModeDefaults = {
   name: "realjet-consent-mode-defaults",
@@ -20,7 +37,7 @@ const consentModeDefaults = {
 export default defineConfig({
   base: "./",
   publicDir: false,
-  plugins: [consentModeDefaults, react(), tailwindcss()],
+  plugins: [manufacturingSplitRedirects, consentModeDefaults, react(), tailwindcss()],
   build: {
     outDir: ".build/vite",
     manifest: true,
